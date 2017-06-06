@@ -3,7 +3,7 @@
 [ext_resource path="res://background.png" type="Texture" id=1]
 [ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=2]
 
-[node name="contractor" type="Node2D"]
+[node name="research" type="Node2D"]
 
 transform/pos = Vector2( 511.609, 299.032 )
 transform/scale = Vector2( 15.988, 9.34513 )
