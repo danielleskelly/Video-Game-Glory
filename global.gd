@@ -1,7 +1,9 @@
 extends Node
 
+#town banner
 var town_select = "hollyhock"
 
+#finance info
 var balance = 100
 var expenses = 10
 var income = 0
@@ -9,6 +11,17 @@ var net_worth = 0
 var sales_made = 0
 var sales_lost = 0
 
+
+#customers
+var happy = 0
+var neutral = 0
+var waited = 0
+var supplies_loss = 0
+var sabatoge = 0
+var shabby = 0
+
+
+#supplies
 var energy_count = 0
 var popcorn_count = 0
 var candy_count = 0

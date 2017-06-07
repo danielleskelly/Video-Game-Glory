@@ -272,7 +272,6 @@ transform/scale = Vector2( 0.667036, 0.410212 )
 
 [node name="customers" parent="." instance=ExtResource( 10 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.32661, 4.52061 )
 transform/scale = Vector2( 0.666168, 0.413116 )
 
