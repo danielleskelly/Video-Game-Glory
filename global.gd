@@ -41,12 +41,15 @@ var two_market_share = 0
 
 
 #supplies
+var purchase_total = 0
+var soda_total = 0
 var energy_count = 0
 var popcorn_count = 0
 var candy_count = 0
 var pizza_count = 0
 var soda_count = 50
 var nachos_count = 0
+var daily_soda_price = 0
 
 var energy_open = false
 var candy_open = false

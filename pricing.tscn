@@ -14,242 +14,422 @@ transform/pos = Vector2( -0.029665, 0.33674 )
 transform/scale = Vector2( 0.0498035, 0.0916558 )
 texture = ExtResource( 1 )
 
-[node name="level_goal" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.1, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -25.0
-margin/top = -27.0
-margin/right = 181.0
-margin/bottom = 25.0
-custom_fonts/normal_font = ExtResource( 2 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Level Goal:"
-visible_characters = -1
-
-[node name="level_goal_output" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.1, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -3.0
-margin/top = -27.0
-margin/right = 317.0
-margin/bottom = 25.0
-custom_fonts/normal_font = ExtResource( 2 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = ""
-visible_characters = -1
-
-[node name="income" type="RichTextLabel" parent="."]
+[node name="game" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -25.0
+margin/left = -16.0
+margin/top = -25.0
+margin/right = 81.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Game"
+visible_characters = -1
+
+[node name="price" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = -26.0
+margin/right = 94.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Price"
+visible_characters = -1
+
+[node name="game_one" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -17.0
+margin/right = 164.0
+margin/bottom = 35.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Game One"
+visible_characters = -1
+
+[node name="game_one_lower_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -19.0
+margin/right = 8.0
+margin/bottom = -5.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_one_output" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = -18.0
+margin/right = 82.0
+margin/bottom = 34.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+
+[node name="game_one_raise_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -19.0
+margin/right = 16.0
+margin/bottom = -5.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_two" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -10.0
+margin/right = 180.0
+margin/bottom = 44.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Game Two"
+visible_characters = -1
+
+[node name="game_two_lower_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -12.0
+margin/right = 8.0
+margin/bottom = 2.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_two_output" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
 margin/top = -11.0
-margin/right = 106.0
+margin/right = 82.0
 margin/bottom = 41.0
 custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Income:"
-visible_characters = -1
-
-[node name="income_output" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.05, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -11.0
-margin/top = -11.0
-margin/right = 171.0
-margin/bottom = 42.0
-custom_fonts/normal_font = ExtResource( 2 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
-[node name="expenses" type="RichTextLabel" parent="."]
+[node name="game_two_raise_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -12.0
+margin/right = 16.0
+margin/bottom = 2.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_three" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -25.0
+margin/left = -19.0
 margin/top = -3.0
-margin/right = 157.0
+margin/right = 204.0
+margin/bottom = 51.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Game Three"
+visible_characters = -1
+
+[node name="game_three_lower_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -4.0
+margin/right = 8.0
+margin/bottom = 10.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_three_output" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = -3.0
+margin/right = 82.0
 margin/bottom = 49.0
 custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Expenses:"
+bbcode/bbcode = ""
 visible_characters = -1
 
-[node name="expenses_output" type="RichTextLabel" parent="."]
+[node name="game_three_raise_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -4.0
+margin/right = 16.0
+margin/bottom = 10.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_four" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -11.0
-margin/top = -3.0
-margin/right = 171.0
-margin/bottom = 49.0
+margin/left = -18.0
+margin/top = 4.0
+margin/right = 205.0
+margin/bottom = 58.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Game Four"
+visible_characters = -1
+
+[node name="game_four_lower_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 3.0
+margin/right = 8.0
+margin/bottom = 17.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_four_output" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = 4.0
+margin/right = 82.0
+margin/bottom = 56.0
 custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
-[node name="cash" type="RichTextLabel" parent="."]
+[node name="game_four_raise_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = 3.0
+margin/right = 16.0
+margin/bottom = 17.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_five" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -25.0
-margin/top = 6.0
-margin/right = 83.0
-margin/bottom = 59.0
+margin/left = -18.0
+margin/top = 11.0
+margin/right = 205.0
+margin/bottom = 65.0
 custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Cash:"
+bbcode/bbcode = "Game Five"
 visible_characters = -1
 
-[node name="cash_output" type="RichTextLabel" parent="."]
+[node name="game_five_lower_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 10.0
+margin/right = 8.0
+margin/bottom = 24.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_five_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -11.0
-margin/top = 6.0
-margin/right = 171.0
-margin/bottom = 59.0
-custom_fonts/normal_font = ExtResource( 2 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = ""
-visible_characters = -1
-
-[node name="net_worth" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.05, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -25.0
-margin/top = 15.0
-margin/right = 186.0
-margin/bottom = 68.0
-custom_fonts/normal_font = ExtResource( 2 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Net Worth:"
-visible_characters = -1
-
-[node name="net_worth_output" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.05, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -11.0
-margin/top = 15.0
-margin/right = 171.0
-margin/bottom = 68.0
+margin/left = 8.0
+margin/top = 11.0
+margin/right = 82.0
+margin/bottom = 63.0
 custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
-[node name="sales_made" type="RichTextLabel" parent="."]
+[node name="game_five_raise_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = 10.0
+margin/right = 16.0
+margin/bottom = 24.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_six" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2.0
-margin/top = -11.0
-margin/right = 232.0
-margin/bottom = 42.0
+margin/left = -18.0
+margin/top = 18.0
+margin/right = 205.0
+margin/bottom = 72.0
 custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Sales Made:"
+bbcode/bbcode = "Game Six"
 visible_characters = -1
 
-[node name="sales_made_output" type="RichTextLabel" parent="."]
+[node name="game_six_lower_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 17.0
+margin/right = 8.0
+margin/bottom = 31.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="game_six_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 17.0
-margin/top = -11.0
-margin/right = 199.0
-margin/bottom = 42.0
-custom_fonts/normal_font = ExtResource( 2 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = ""
-visible_characters = -1
-
-[node name="sales_lost" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.05, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 2.0
-margin/top = 0.0
-margin/right = 232.0
-margin/bottom = 54.0
-custom_fonts/normal_font = ExtResource( 2 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Sales Lost:"
-visible_characters = -1
-
-[node name="sales_lost_output" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.05, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 17.0
-margin/top = 0.0
-margin/right = 199.0
-margin/bottom = 54.0
+margin/left = 8.0
+margin/top = 18.0
+margin/right = 82.0
+margin/bottom = 70.0
 custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
+
+[node name="game_six_raise_price" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = 17.0
+margin/right = 16.0
+margin/bottom = 31.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
 
 

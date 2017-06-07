@@ -13,16 +13,16 @@
 [ext_resource path="res://competition.tscn" type="PackedScene" id=11]
 [ext_resource path="res://news.tscn" type="PackedScene" id=12]
 [ext_resource path="res://supplies_full.tscn" type="PackedScene" id=13]
-[ext_resource path="res://games.tscn" type="PackedScene" id=14]
-[ext_resource path="res://marketing.tscn" type="PackedScene" id=15]
-[ext_resource path="res://storefront.tscn" type="PackedScene" id=16]
-[ext_resource path="res://repairman.tscn" type="PackedScene" id=17]
-[ext_resource path="res://entertainment.tscn" type="PackedScene" id=18]
-[ext_resource path="res://deus_ex_machina.tscn" type="PackedScene" id=19]
-[ext_resource path="res://contractors.tscn" type="PackedScene" id=20]
-[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=21]
-[ext_resource path="res://research.tscn" type="PackedScene" id=22]
-[ext_resource path="res://pricing.tscn" type="PackedScene" id=23]
+[ext_resource path="res://marketing.tscn" type="PackedScene" id=14]
+[ext_resource path="res://storefront.tscn" type="PackedScene" id=15]
+[ext_resource path="res://repairman.tscn" type="PackedScene" id=16]
+[ext_resource path="res://entertainment.tscn" type="PackedScene" id=17]
+[ext_resource path="res://deus_ex_machina.tscn" type="PackedScene" id=18]
+[ext_resource path="res://contractors.tscn" type="PackedScene" id=19]
+[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=20]
+[ext_resource path="res://research.tscn" type="PackedScene" id=21]
+[ext_resource path="res://pricing.tscn" type="PackedScene" id=22]
+[ext_resource path="res://games.tscn" type="PackedScene" id=23]
 
 [node name="strategy" type="Node2D"]
 
@@ -289,69 +289,68 @@ transform/scale = Vector2( 0.661953, 0.408991 )
 
 [node name="supplies_full" parent="." instance=ExtResource( 13 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.18142, 4.4278 )
 transform/scale = Vector2( 0.661541, 0.405036 )
 
-[node name="games" parent="." instance=ExtResource( 14 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.1471, 4.52464 )
-transform/scale = Vector2( 0.659916, 0.399488 )
-
-[node name="marketing" parent="." instance=ExtResource( 15 )]
+[node name="marketing" parent="." instance=ExtResource( 14 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.13787, 4.66261 )
 transform/scale = Vector2( 0.653569, 0.395625 )
 
-[node name="storefront" parent="." instance=ExtResource( 16 )]
+[node name="storefront" parent="." instance=ExtResource( 15 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.12956, 4.58284 )
 transform/scale = Vector2( 0.64739, 0.393174 )
 
-[node name="repairman" parent="." instance=ExtResource( 17 )]
+[node name="repairman" parent="." instance=ExtResource( 16 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.13642, 4.66942 )
 transform/scale = Vector2( 0.649851, 0.393463 )
 
-[node name="entertainment" parent="." instance=ExtResource( 18 )]
+[node name="entertainment" parent="." instance=ExtResource( 17 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.13115, 4.64595 )
 transform/scale = Vector2( 0.648362, 0.387315 )
 
-[node name="deus_ex_machina" parent="." instance=ExtResource( 19 )]
+[node name="deus_ex_machina" parent="." instance=ExtResource( 18 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.12516, 4.67721 )
 transform/scale = Vector2( 0.64545, 0.385575 )
 
-[node name="contractor" parent="." instance=ExtResource( 20 )]
+[node name="contractor" parent="." instance=ExtResource( 19 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.21503, 4.77072 )
 transform/scale = Vector2( 0.646066, 0.384135 )
 
-[node name="loans" parent="." instance=ExtResource( 21 )]
+[node name="loans" parent="." instance=ExtResource( 20 )]
 
 visibility/visible = false
 transform/pos = Vector2( 7.98178, 4.54702 )
 transform/scale = Vector2( 0.648649, 0.390113 )
 
-[node name="research" parent="." instance=ExtResource( 22 )]
+[node name="research" parent="." instance=ExtResource( 21 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.05803, 4.50401 )
 transform/scale = Vector2( 0.646566, 0.388286 )
 
-[node name="pricing" parent="." instance=ExtResource( 23 )]
+[node name="pricing" parent="." instance=ExtResource( 22 )]
 
 visibility/visible = false
-transform/pos = Vector2( 8.13555, 4.55851 )
-transform/scale = Vector2( 0.644438, 0.385418 )
+transform/pos = Vector2( 8.34954, 4.65768 )
+transform/scale = Vector2( 0.663717, 0.413596 )
+
+[node name="games" parent="." instance=ExtResource( 23 )]
+
+visibility/visible = false
+transform/pos = Vector2( 8.37637, 4.72096 )
+transform/scale = Vector2( 0.664251, 0.415947 )
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 
