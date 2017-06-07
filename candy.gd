@@ -1,15 +1,15 @@
 extends Node2D
 
-var soda_purchase = 0
-var soda_price
+var candy_purchase = 0
+var candy_price
 var cash
-var soda_stock
+var candy_stock
 var stock_output
 var purchase_total
 var yesterday_output
 var yesterday_used
 var total_output
-var soda_total
+var candy_total
 var overall_total_output
 
 var buy_output
@@ -26,36 +26,32 @@ func _ready():
 	pass
 
 func _process(delta):
-	var string_soda = str(soda_purchase)
+	var string_candy = str(candy_purchase)
 	buy_output.clear()
-	buy_output.add_text(string_soda)
-	soda_price = global.daily_soda_price
-	soda_stock = str(global.soda_count)
-	yesterday_used = str(global.soda_yesterday_used)
-	soda_total = str(soda_purchase + global.soda_count)
+	buy_output.add_text(string_candy)
+	candy_price = global.daily_candy_price
+	candy_stock = str(global.candy_count)
+	yesterday_used = str(global.candy_yesterday_used)
+	candy_total = str(candy_purchase + global.candy_count)
 	cash = global.balance - global.expenses
 	purchase_total = global.purchase_total
 	price_output.clear()
-	price_output.add_text(str(soda_price))
+	price_output.add_text(str(candy_price))
 	stock_output.clear()
-	stock_output.add_text(soda_stock)
+	stock_output.add_text(candy_stock)
 	yesterday_output.clear()
 	yesterday_output.add_text(yesterday_used)
 	total_output.clear()
-	total_output.add_text(soda_total)
+	total_output.add_text(candy_total)
 	overall_total_output.clear()
 	overall_total_output.add_text(str(purchase_total))
 
 func _on_lower_button_down():
-	if (soda_purchase > 0):
-		soda_purchase = soda_purchase - 1
-		get_node("/root/global").purchase_total = purchase_total - soda_price
+	if (candy_purchase > 0):
+		candy_purchase = candy_purchase - 1
+		get_node("/root/global").purchase_total = purchase_total - candy_price
 
 func _on_raise_button_down():
-	if (cash >= (purchase_total + soda_price)):
-		soda_purchase = soda_purchase + 1
-		get_node("/root/global").purchase_total = purchase_total + soda_price
-
-func _on_supplies_full_clear():
-	print("success")
-	get_node("buy_output").clear()
+	if (cash >= (purchase_total + candy_price)):
+		candy_purchase = candy_purchase + 1
+		get_node("/root/global").purchase_total = purchase_total + candy_price

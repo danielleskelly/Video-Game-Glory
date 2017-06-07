@@ -27,20 +27,11 @@ func _ready():
 	nachos = get_tree().get_current_scene().get_node("nachos")
 	energy_drinks = get_tree().get_current_scene().get_node("energy_drinks")
 	candy = get_tree().get_current_scene().get_node("candy")
-	pizza_key = global.pizza_open
-	nachos_key = global.nachos_open
-	energy_key = global.energy_open
-	candy_key = global.candy_open
-	soda_count = str(global.soda_count)
-	popcorn_count = str(global.popcorn_count)
-	pizza_count = str(global.pizza_count)
-	nachos_count = str(global.nachos_count)
-	energy_count = str(global.energy_count)
-	candy_count = str(global.candy_count)
 	set_process(true)
 	pass
 	
 func _process(delta):
+	get_globals()
 	hide()
 	soda.get_child(2).clear()
 	soda.get_child(2).add_text(soda_count)
@@ -68,6 +59,18 @@ func hide():
 	nachos.set_hidden(true)
 	energy_drinks.set_hidden(true)
 	candy.set_hidden(true)
+	
+func get_globals():
+	soda_count = str(global.soda_count)
+	popcorn_count = str(global.popcorn_count)
+	pizza_count = str(global.pizza_count)
+	nachos_count = str(global.nachos_count)
+	energy_count = str(global.energy_count)
+	candy_count = str(global.candy_count)
+	pizza_key = global.pizza_key
+	nachos_key = global.nachos_key
+	energy_key = global.energy_key
+	candy_key = global.candy_key
 
 func _on_start_day_button_up():
 	get_tree().change_scene("res://time_management.tscn")
