@@ -4,6 +4,10 @@ var town_select = "hollyhock"
 
 var balance = 100
 var expenses = 10
+var income = 0
+var net_worth = 0
+var sales_made = 0
+var sales_lost = 0
 
 var energy_count = 0
 var popcorn_count = 0
