@@ -1,7 +1,11 @@
 extends Node
 
-#town banner
+#player
+var player_name = "dutchess"
+
+#towns
 var town_select = "hollyhock"
+var town_population = 100
 
 #finance info
 var balance = 100
@@ -19,6 +23,21 @@ var waited = 0
 var supplies_loss = 0
 var sabatoge = 0
 var shabby = 0
+
+#competitors
+var competitor_one = "Blickblasters"
+var competitor_two = "Limestop"
+var one_cash = 0
+var two_cash = 0
+var one_networth = 0
+var two_networth = 0
+var one_sales_made = 0
+var two_sales_made = 0
+var one_sales_lost = 0
+var two_sales_lost = 0
+var player_marketshare = 0
+var one_market_share = 0
+var two_market_share = 0
 
 
 #supplies
