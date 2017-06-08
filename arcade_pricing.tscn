@@ -1,0 +1,678 @@
+[gd_scene load_steps=12 format=1]
+
+[ext_resource path="res://arcade_pricing.gd" type="Script" id=1]
+[ext_resource path="res://background.png" type="Texture" id=2]
+[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://zone_one.gd" type="Script" id=4]
+[ext_resource path="res://lower.png" type="Texture" id=5]
+[ext_resource path="res://raise.png" type="Texture" id=6]
+[ext_resource path="res://zone_two.gd" type="Script" id=7]
+[ext_resource path="res://zone_three.gd" type="Script" id=8]
+[ext_resource path="res://zone_four.gd" type="Script" id=9]
+[ext_resource path="res://zone_five.gd" type="Script" id=10]
+[ext_resource path="res://zone_six.gd" type="Script" id=11]
+
+[node name="arcade_pricing" type="Node2D"]
+
+transform/pos = Vector2( 511.609, 299.032 )
+transform/scale = Vector2( 15.988, 9.34513 )
+script/script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+
+transform/pos = Vector2( -0.029665, 0.33674 )
+transform/scale = Vector2( 0.0498035, 0.0916558 )
+texture = ExtResource( 2 )
+
+[node name="goods" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -20.0
+margin/top = -26.0
+margin/right = 94.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Goods"
+visible_characters = -1
+
+[node name="price" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 13.0
+margin/top = -26.0
+margin/right = 99.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Price"
+visible_characters = -1
+
+[node name="range" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = -27.0
+margin/right = 118.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Range"
+visible_characters = -1
+
+[node name="zone_one" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 0.0427612, -13.2251 )
+transform/scale = Vector2( 0.944782, 0.101023 )
+script/script = ExtResource( 4 )
+
+[node name="name" type="RichTextLabel" parent="zone_one"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 193.0
+margin/bottom = 43.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Arcade One"
+visible_characters = -1
+
+[node name="range" type="RichTextLabel" parent="zone_one"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = -15.0
+margin/right = 120.0
+margin/bottom = 47.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0-10"
+visible_characters = -1
+
+[node name="lower" type="TextureButton" parent="zone_one"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -10.0
+margin/right = 14.0
+margin/bottom = 8.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="price_output" type="RichTextLabel" parent="zone_one"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 15.0
+margin/top = -17.0
+margin/right = 64.0
+margin/bottom = 40.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="raise" type="TextureButton" parent="zone_one"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = -12.0
+margin/right = 20.0
+margin/bottom = 6.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="zone_two" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 0.147227, -6.96978 )
+transform/scale = Vector2( 0.944782, 0.101023 )
+script/script = ExtResource( 7 )
+
+[node name="name" type="RichTextLabel" parent="zone_two"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 193.0
+margin/bottom = 43.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Arcade Two"
+visible_characters = -1
+
+[node name="range" type="RichTextLabel" parent="zone_two"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = -15.0
+margin/right = 126.0
+margin/bottom = 45.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0-10"
+visible_characters = -1
+
+[node name="lower" type="TextureButton" parent="zone_two"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -10.0
+margin/right = 14.0
+margin/bottom = 8.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="price_output" type="RichTextLabel" parent="zone_two"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 15.0
+margin/top = -17.0
+margin/right = 64.0
+margin/bottom = 40.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="raise" type="TextureButton" parent="zone_two"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = -12.0
+margin/right = 20.0
+margin/bottom = 6.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="zone_three" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 0.00215071, -0.178344 )
+transform/scale = Vector2( 0.944782, 0.101023 )
+script/script = ExtResource( 8 )
+
+[node name="name" type="RichTextLabel" parent="zone_three"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 240.0
+margin/bottom = 43.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Arcade Three"
+visible_characters = -1
+
+[node name="range" type="RichTextLabel" parent="zone_three"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = -15.0
+margin/right = 139.0
+margin/bottom = 51.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0-10"
+visible_characters = -1
+
+[node name="lower" type="TextureButton" parent="zone_three"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -10.0
+margin/right = 14.0
+margin/bottom = 8.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="price_output" type="RichTextLabel" parent="zone_three"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 15.0
+margin/top = -17.0
+margin/right = 64.0
+margin/bottom = 40.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="raise" type="TextureButton" parent="zone_three"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = -12.0
+margin/right = 20.0
+margin/bottom = 6.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="zone_four" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 0.0646973, 6.07697 )
+transform/scale = Vector2( 0.944782, 0.101023 )
+script/script = ExtResource( 9 )
+
+[node name="name" type="RichTextLabel" parent="zone_four"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 193.0
+margin/bottom = 43.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Arcade Four"
+visible_characters = -1
+
+[node name="range" type="RichTextLabel" parent="zone_four"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = -15.0
+margin/right = 135.0
+margin/bottom = 50.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0-10"
+visible_characters = -1
+
+[node name="lower" type="TextureButton" parent="zone_four"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -10.0
+margin/right = 14.0
+margin/bottom = 8.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="price_output" type="RichTextLabel" parent="zone_four"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 15.0
+margin/top = -17.0
+margin/right = 64.0
+margin/bottom = 40.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="raise" type="TextureButton" parent="zone_four"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = -12.0
+margin/right = 20.0
+margin/bottom = 6.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="zone_five" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 0.168505, 14.1195 )
+transform/scale = Vector2( 0.944782, 0.101023 )
+script/script = ExtResource( 10 )
+
+[node name="name" type="RichTextLabel" parent="zone_five"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 256.0
+margin/bottom = 43.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Arcade Five"
+visible_characters = -1
+
+[node name="range" type="RichTextLabel" parent="zone_five"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = -15.0
+margin/right = 128.0
+margin/bottom = 57.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0-10"
+visible_characters = -1
+
+[node name="lower" type="TextureButton" parent="zone_five"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -10.0
+margin/right = 14.0
+margin/bottom = 8.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="price_output" type="RichTextLabel" parent="zone_five"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 15.0
+margin/top = -17.0
+margin/right = 64.0
+margin/bottom = 40.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="raise" type="TextureButton" parent="zone_five"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = -12.0
+margin/right = 20.0
+margin/bottom = 6.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="zone_six" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 0.356154, 22.3407 )
+transform/scale = Vector2( 0.944782, 0.101023 )
+script/script = ExtResource( 11 )
+
+[node name="name" type="RichTextLabel" parent="zone_six"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 193.0
+margin/bottom = 43.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Arcade Six"
+visible_characters = -1
+
+[node name="range" type="RichTextLabel" parent="zone_six"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = -15.0
+margin/right = 115.0
+margin/bottom = 52.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0-10"
+visible_characters = -1
+
+[node name="lower" type="TextureButton" parent="zone_six"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -10.0
+margin/right = 14.0
+margin/bottom = 8.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="price_output" type="RichTextLabel" parent="zone_six"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 15.0
+margin/top = -17.0
+margin/right = 64.0
+margin/bottom = 40.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="raise" type="TextureButton" parent="zone_six"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = -12.0
+margin/right = 20.0
+margin/bottom = 6.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[connection signal="button_down" from="zone_one/lower" to="zone_one" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="zone_one/raise" to="zone_one" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="zone_two/lower" to="zone_two" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="zone_two/raise" to="zone_two" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="zone_three/lower" to="zone_three" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="zone_three/raise" to="zone_three" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="zone_four/lower" to="zone_four" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="zone_four/raise" to="zone_four" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="zone_five/lower" to="zone_five" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="zone_five/raise" to="zone_five" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="zone_six/lower" to="zone_six" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="zone_six/raise" to="zone_six" method="_on_raise_button_down"]
+
+

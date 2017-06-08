@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://supplies_full.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
 [ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://soda.gd" type="Script" id=4]
+[ext_resource path="res://lower.png" type="Texture" id=5]
+[ext_resource path="res://raise.png" type="Texture" id=6]
+[ext_resource path="res://popcorn.gd" type="Script" id=7]
+[ext_resource path="res://pizza.gd" type="Script" id=8]
+[ext_resource path="res://nachos.gd" type="Script" id=9]
+[ext_resource path="res://energy.gd" type="Script" id=10]
+[ext_resource path="res://candy.gd" type="Script" id=11]
 
 [node name="supplies_full" type="Node2D"]
 
@@ -24,9 +32,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -27.0
-margin/top = -27.0
+margin/top = -29.0
 margin/right = 52.0
-margin/bottom = 25.0
+margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -41,9 +49,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -17.0
-margin/top = -27.0
+margin/top = -29.0
 margin/right = 78.0
-margin/bottom = 25.0
+margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -58,9 +66,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -7.0
-margin/top = -27.0
+margin/top = -29.0
 margin/right = 88.0
-margin/bottom = 25.0
+margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -75,9 +83,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 3.0
-margin/top = -27.0
+margin/top = -29.0
 margin/right = 76.0
-margin/bottom = 25.0
+margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -92,9 +100,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 12.0
-margin/top = -27.0
+margin/top = -29.0
 margin/right = 114.0
-margin/bottom = 25.0
+margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -109,9 +117,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 20.0
-margin/top = -28.0
+margin/top = -30.0
 margin/right = 221.0
-margin/bottom = 67.0
+margin/bottom = 65.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -169,5 +177,1103 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
+
+[node name="soda" type="Node2D" parent="."]
+
+transform/pos = Vector2( -0.345047, -16.8837 )
+transform/scale = Vector2( 0.957029, 0.117766 )
+script/script = ExtResource( 4 )
+
+[node name="background" type="Sprite" parent="soda"]
+
+transform/pos = Vector2( 0.340988, -0.0852509 )
+transform/scale = Vector2( 0.0501505, 0.0851761 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="name" type="RichTextLabel" parent="soda"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -29.0
+margin/top = -15.0
+margin/right = 49.0
+margin/bottom = 29.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Soda"
+visible_characters = -1
+
+[node name="price_output" type="RichTextLabel" parent="soda"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="stock_output" type="RichTextLabel" parent="soda"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = -26.0
+margin/right = 64.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lower" type="TextureButton" parent="soda"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = -8.0
+margin/right = 3.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="buy_output" type="RichTextLabel" parent="soda"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -19.0
+margin/right = 42.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="raise" type="TextureButton" parent="soda"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = -8.0
+margin/right = 10.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="total_output" type="RichTextLabel" parent="soda"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -25.0
+margin/right = 92.0
+margin/bottom = 28.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="yesterday_output" type="RichTextLabel" parent="soda"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = -27.0
+margin/right = 101.0
+margin/bottom = 22.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="popcorn" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -0.345047, -9.73485 )
+transform/scale = Vector2( 0.957029, 0.117766 )
+script/script = ExtResource( 7 )
+
+[node name="background" type="Sprite" parent="popcorn"]
+
+transform/pos = Vector2( 0.340988, -0.0852509 )
+transform/scale = Vector2( 0.0501505, 0.0851761 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="name" type="RichTextLabel" parent="popcorn"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -30.0
+margin/top = -16.0
+margin/right = 117.0
+margin/bottom = 32.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Popcorn"
+visible_characters = -1
+
+[node name="price_output" type="RichTextLabel" parent="popcorn"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="stock_output" type="RichTextLabel" parent="popcorn"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = -26.0
+margin/right = 64.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lower" type="TextureButton" parent="popcorn"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = -8.0
+margin/right = 3.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="buy_output" type="RichTextLabel" parent="popcorn"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -19.0
+margin/right = 42.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="raise" type="TextureButton" parent="popcorn"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = -8.0
+margin/right = 10.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="total_output" type="RichTextLabel" parent="popcorn"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -25.0
+margin/right = 92.0
+margin/bottom = 28.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="yesterday_output" type="RichTextLabel" parent="popcorn"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = -27.0
+margin/right = 101.0
+margin/bottom = 22.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pizza" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -0.428213, -2.58597 )
+transform/scale = Vector2( 0.957029, 0.117766 )
+script/script = ExtResource( 8 )
+
+[node name="background" type="Sprite" parent="pizza"]
+
+transform/pos = Vector2( 0.340988, -0.0852509 )
+transform/scale = Vector2( 0.0501505, 0.0851761 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="name" type="RichTextLabel" parent="pizza"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -29.0
+margin/top = -17.0
+margin/right = 61.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Pizza"
+visible_characters = -1
+
+[node name="price_output" type="RichTextLabel" parent="pizza"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="stock_output" type="RichTextLabel" parent="pizza"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = -26.0
+margin/right = 64.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lower" type="TextureButton" parent="pizza"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = -8.0
+margin/right = 3.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="buy_output" type="RichTextLabel" parent="pizza"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -19.0
+margin/right = 42.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="raise" type="TextureButton" parent="pizza"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = -8.0
+margin/right = 10.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="total_output" type="RichTextLabel" parent="pizza"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -25.0
+margin/right = 92.0
+margin/bottom = 28.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="yesterday_output" type="RichTextLabel" parent="pizza"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = -27.0
+margin/right = 101.0
+margin/bottom = 22.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="nachos" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -0.365662, 5.06379 )
+transform/scale = Vector2( 0.957029, 0.117766 )
+script/script = ExtResource( 9 )
+
+[node name="background" type="Sprite" parent="nachos"]
+
+transform/pos = Vector2( 0.340988, -0.0852509 )
+transform/scale = Vector2( 0.0501505, 0.0851761 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="name" type="RichTextLabel" parent="nachos"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -30.0
+margin/top = -17.0
+margin/right = 102.0
+margin/bottom = 39.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Nachos"
+visible_characters = -1
+
+[node name="price_output" type="RichTextLabel" parent="nachos"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="stock_output" type="RichTextLabel" parent="nachos"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = -26.0
+margin/right = 64.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lower" type="TextureButton" parent="nachos"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = -8.0
+margin/right = 3.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="buy_output" type="RichTextLabel" parent="nachos"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -19.0
+margin/right = 42.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="raise" type="TextureButton" parent="nachos"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = -8.0
+margin/right = 10.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="total_output" type="RichTextLabel" parent="nachos"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -25.0
+margin/right = 92.0
+margin/bottom = 28.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="yesterday_output" type="RichTextLabel" parent="nachos"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = -27.0
+margin/right = 101.0
+margin/bottom = 22.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="energy" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -0.386291, 12.4267 )
+transform/scale = Vector2( 0.957029, 0.117766 )
+script/script = ExtResource( 10 )
+
+[node name="background" type="Sprite" parent="energy"]
+
+transform/pos = Vector2( 0.340988, -0.0852509 )
+transform/scale = Vector2( 0.0501505, 0.0851761 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="name" type="RichTextLabel" parent="energy"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -30.0
+margin/top = -27.0
+margin/right = 112.0
+margin/bottom = 62.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Energy Drink"
+visible_characters = -1
+
+[node name="price_output" type="RichTextLabel" parent="energy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="stock_output" type="RichTextLabel" parent="energy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = -26.0
+margin/right = 64.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lower" type="TextureButton" parent="energy"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = -8.0
+margin/right = 3.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="buy_output" type="RichTextLabel" parent="energy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -19.0
+margin/right = 42.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="raise" type="TextureButton" parent="energy"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = -8.0
+margin/right = 10.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="total_output" type="RichTextLabel" parent="energy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -25.0
+margin/right = 92.0
+margin/bottom = 28.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="yesterday_output" type="RichTextLabel" parent="energy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = -27.0
+margin/right = 101.0
+margin/bottom = 22.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="candy" type="Node2D" parent="."]
+
+transform/pos = Vector2( -0.406914, 19.933 )
+transform/scale = Vector2( 0.957029, 0.117766 )
+script/script = ExtResource( 11 )
+
+[node name="background" type="Sprite" parent="candy"]
+
+transform/pos = Vector2( 0.340988, -0.0852509 )
+transform/scale = Vector2( 0.0501505, 0.0851761 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="name" type="RichTextLabel" parent="candy"]
+
+rect/scale = Vector2( 0.06, 0.6 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -30.0
+margin/top = -14.0
+margin/right = 94.0
+margin/bottom = 47.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Candy"
+visible_characters = -1
+
+[node name="price_output" type="RichTextLabel" parent="candy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="stock_output" type="RichTextLabel" parent="candy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = -26.0
+margin/right = 64.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lower" type="TextureButton" parent="candy"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = -8.0
+margin/right = 3.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="buy_output" type="RichTextLabel" parent="candy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -19.0
+margin/right = 42.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="raise" type="TextureButton" parent="candy"]
+
+rect/scale = Vector2( 1, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = -8.0
+margin/right = 10.0
+margin/bottom = -4.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 0.2 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="total_output" type="RichTextLabel" parent="candy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = -25.0
+margin/right = 92.0
+margin/bottom = 28.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="yesterday_output" type="RichTextLabel" parent="candy"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = -27.0
+margin/right = 101.0
+margin/bottom = 22.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="button_down" from="confirm" to="." method="_on_confirm_button_down"]
+
+[connection signal="button_down" from="soda/lower" to="soda" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="soda/raise" to="soda" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="popcorn/lower" to="popcorn" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="popcorn/raise" to="popcorn" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="pizza/lower" to="pizza" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="pizza/raise" to="pizza" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="nachos/lower" to="nachos" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="nachos/raise" to="nachos" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="energy/lower" to="energy" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="energy/raise" to="energy" method="_on_raise_button_down"]
+
+[connection signal="button_down" from="candy/lower" to="candy" method="_on_lower_button_down"]
+
+[connection signal="button_down" from="candy/raise" to="candy" method="_on_raise_button_down"]
 
 

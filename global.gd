@@ -16,6 +16,48 @@ var sales_made = 0
 var sales_lost = 0
 
 
+#pricing/selling
+var arcade_one_price = 0
+var arcade_two_price = 0
+var arcade_three_price = 0
+var arcade_four_price = 0
+var arcade_five_price = 0
+var arcade_six_price = 0
+var arcade_one_range = "10-20"
+var arcade_two_range = "10-20"
+var arcade_three_range = "10-20"
+var arcade_four_range = "10-20"
+var arcade_five_range = "10-20"
+var arcade_six_range = "10-20"
+var soda_price = 0
+var popcorn_price = 0
+var pizza_price = 0
+var nachos_price = 0
+var energy_price = 0
+var candy_price = 0
+var arcade_range = "10-20"
+var soda_range = "10-20"
+var popcorn_range = "10-20"
+var pizza_range = "10-20"
+var nachos_range = "10-20"
+var energy_range = "10-20"
+var candy_range = "10-20"
+
+
+#keys
+var pizza_key = false
+var nachos_key = false
+var energy_key = false
+var candy_key = false
+var station_three_key = false
+var station_four_key = false
+var station_five_key = false
+var station_six_key = false
+var plumber_key = false
+var yellowdot_key = false
+var vgg_key = true
+
+
 #customers
 var happy = 0
 var neutral = 0
@@ -40,23 +82,34 @@ var one_market_share = 0
 var two_market_share = 0
 
 
-#supplies
+#buying/supplies
 var purchase_total = 0
 var soda_total = 0
+var popcorn_total = 0
+var pizza_total = 0
+var nachos_total = 0
+var energy_total = 0
+var candy_total = 0
 var energy_count = 0
 var popcorn_count = 0
 var candy_count = 0
 var pizza_count = 0
 var soda_count = 50
 var nachos_count = 0
-var daily_soda_price = 0
+var daily_soda_price = 10
+var daily_popcorn_price = 5
+var daily_pizza_price = 0
+var daily_nachos_price = 0
+var daily_energy_price = 30
+var daily_candy_price = 0
+var soda_yesterday_used = 0
+var popcorn_yesterday_used = 0
+var pizza_yesterday_used = 0
+var nachos_yesterday_used = 0
+var energy_yesterday_used = 0
+var candy_yesterday_used = 0
 
-var energy_open = false
-var candy_open = false
-var pizza_open = false
-var nachos_open = false
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	set_process(true)
 	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=1]
+[gd_scene load_steps=25 format=1]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
@@ -21,8 +21,9 @@
 [ext_resource path="res://contractors.tscn" type="PackedScene" id=19]
 [ext_resource path="res://loan_shark.tscn" type="PackedScene" id=20]
 [ext_resource path="res://research.tscn" type="PackedScene" id=21]
-[ext_resource path="res://pricing.tscn" type="PackedScene" id=22]
-[ext_resource path="res://games.tscn" type="PackedScene" id=23]
+[ext_resource path="res://games.tscn" type="PackedScene" id=22]
+[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=23]
+[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=24]
 
 [node name="strategy" type="Node2D"]
 
@@ -264,6 +265,33 @@ button/1/tooltip = ""
 button/1/icon = null
 button/selected = 0
 
+[node name="pricing_buttons" type="VButtonArray" parent="."]
+
+rect/scale = Vector2( 0.048, 0.065 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -2.0
+margin/right = 177.0
+margin/bottom = 108.0
+custom_fonts/font_selected = ExtResource( 3 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+flat = false
+button/count = 2
+button/min_button_size = -1.0
+button/align = 1065353216
+button/0/text = "Concessions"
+button/0/tooltip = ""
+button/0/icon = null
+button/1/text = "Arcades"
+button/1/tooltip = ""
+button/1/icon = null
+button/selected = 0
+
 [node name="finances_full" parent="." instance=ExtResource( 9 )]
 
 visibility/visible = false
@@ -272,6 +300,7 @@ transform/scale = Vector2( 0.667036, 0.410212 )
 
 [node name="customers" parent="." instance=ExtResource( 10 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.32661, 4.52061 )
 transform/scale = Vector2( 0.666168, 0.413116 )
 
@@ -289,12 +318,12 @@ transform/scale = Vector2( 0.661953, 0.408991 )
 
 [node name="supplies_full" parent="." instance=ExtResource( 13 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.18142, 4.4278 )
 transform/scale = Vector2( 0.661541, 0.405036 )
 
 [node name="marketing" parent="." instance=ExtResource( 14 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.13787, 4.66261 )
 transform/scale = Vector2( 0.653569, 0.395625 )
 
@@ -340,17 +369,22 @@ visibility/visible = false
 transform/pos = Vector2( 8.05803, 4.50401 )
 transform/scale = Vector2( 0.646566, 0.388286 )
 
-[node name="pricing" parent="." instance=ExtResource( 22 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.34954, 4.65768 )
-transform/scale = Vector2( 0.663717, 0.413596 )
-
-[node name="games" parent="." instance=ExtResource( 23 )]
+[node name="games" parent="." instance=ExtResource( 22 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.37637, 4.72096 )
 transform/scale = Vector2( 0.664251, 0.415947 )
+
+[node name="arcade_pricing" parent="." instance=ExtResource( 23 )]
+
+visibility/visible = false
+transform/pos = Vector2( 8.12449, 4.79634 )
+transform/scale = Vector2( 0.651311, 0.401223 )
+
+[node name="concessions_pricing" parent="." instance=ExtResource( 24 )]
+
+transform/pos = Vector2( 8.25623, 4.58675 )
+transform/scale = Vector2( 0.64993, 0.403895 )
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 

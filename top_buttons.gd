@@ -4,6 +4,7 @@ var select
 var report_select
 var upgrade_select
 var locals_select
+var pricing_select
 
 var reports
 var upgrade
@@ -23,6 +24,9 @@ var contractor
 var loans
 var research
 var pricing
+var concessions_pricing
+var arcade_pricing
+
 
 
 func _ready():
@@ -30,6 +34,7 @@ func _ready():
 	reports = get_tree().get_current_scene().get_node("report_buttons")
 	upgrade = get_tree().get_current_scene().get_node("upgrade_buttons")
 	locals = get_tree().get_current_scene().get_node("locals_buttons")
+	pricing = get_tree().get_current_scene().get_node("pricing_buttons")
 	finances = get_tree().get_current_scene().get_node("finances_full")
 	customers = get_tree().get_current_scene().get_node("customers")
 	competition = get_tree().get_current_scene().get_node("competition")
@@ -44,7 +49,8 @@ func _ready():
 	contractor = get_tree().get_current_scene().get_node("contractor")
 	loans = get_tree().get_current_scene().get_node("loans")
 	research = get_tree().get_current_scene().get_node("research")
-	pricing = get_tree().get_current_scene().get_node("pricing")
+	concessions_pricing = get_tree().get_current_scene().get_node("concessions_pricing")
+	arcade_pricing = get_tree().get_current_scene().get_node("arcade_pricing")
 	pass
 
 func _process(delta):
@@ -67,6 +73,11 @@ func _process(delta):
 		games.show()
 	if (select == 4):
 		pricing.show()
+		pricing_select = pricing.get_selected()
+		if (pricing_select == 0):
+			concessions_pricing.show()
+		if (pricing_select == 1):
+			arcade_pricing.show()
 	if (select == 5):
 		marketing.show()
 	if (select == 6):
@@ -109,3 +120,5 @@ func hide():
 	loans.set_hidden(true)
 	research.set_hidden(true)
 	pricing.set_hidden(true)
+	concessions_pricing.set_hidden(true)
+	arcade_pricing.set_hidden(true)

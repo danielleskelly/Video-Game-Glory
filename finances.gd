@@ -12,13 +12,11 @@ func _ready():
 	balance = get_node("balance_amount")
 	expenses = get_node("expenses_amount")
 	cash_loc = get_node("cash_amount")
-	glob_expenses = str(global.expenses)
-	glob_balance = str(global.balance)
-	cash = str(global.balance - global.expenses)
 	set_process(true)
 	pass
 
 func _process(delta):
+	get_globals()
 	money()
 	
 func money():
@@ -28,3 +26,8 @@ func money():
 	balance.add_text(glob_balance)
 	expenses.add_text(glob_expenses)
 	cash_loc.add_text(cash)
+	
+func get_globals():
+	glob_expenses = str(global.expenses)
+	glob_balance = str(global.balance)
+	cash = str(global.balance - global.expenses)
