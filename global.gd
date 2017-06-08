@@ -16,6 +16,34 @@ var sales_made = 0
 var sales_lost = 0
 
 
+#pricing/selling
+var arcade_one_price = 0
+var arcade_two_price = 0
+var arcade_three_price = 0
+var arcade_four_price = 0
+var arcade_five_price = 0
+var arcade_six_price = 0
+var arcade_one_range = "10-20"
+var arcade_two_range = "10-20"
+var arcade_three_range = "10-20"
+var arcade_four_range = "10-20"
+var arcade_five_range = "10-20"
+var arcade_six_range = "10-20"
+var soda_price = 0
+var popcorn_price = 0
+var pizza_price = 0
+var nachos_price = 0
+var energy_price = 0
+var candy_price = 0
+var arcade_range = "10-20"
+var soda_range = "10-20"
+var popcorn_range = "10-20"
+var pizza_range = "10-20"
+var nachos_range = "10-20"
+var energy_range = "10-20"
+var candy_range = "10-20"
+
+
 #keys
 var pizza_key = false
 var nachos_key = false
@@ -54,7 +82,7 @@ var one_market_share = 0
 var two_market_share = 0
 
 
-#supplies
+#buying/supplies
 var purchase_total = 0
 var soda_total = 0
 var popcorn_total = 0
