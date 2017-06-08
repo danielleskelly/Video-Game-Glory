@@ -17,10 +17,17 @@ var sales_lost = 0
 
 
 #keys
-var pizza_key = true
-var nachos_key = true
-var energy_key = true
-var candy_key = true
+var pizza_key = false
+var nachos_key = false
+var energy_key = false
+var candy_key = false
+var station_three_key = false
+var station_four_key = false
+var station_five_key = false
+var station_six_key = false
+var plumber_key = false
+var yellowdot_key = false
+var vgg_key = true
 
 
 #customers
@@ -76,6 +83,5 @@ var candy_yesterday_used = 0
 
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	set_process(true)
 	pass
