@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=1]
 
-[ext_resource path="res://entertainment.gd" type="Script" id=1]
+[ext_resource path="res://deus.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
 [ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://meta_genre.png" type="Texture" id=4]
 
-[node name="entertainment" type="Node2D"]
+[node name="deus_ex_machina" type="Node2D"]
 
 transform/pos = Vector2( 511.609, 299.032 )
 transform/scale = Vector2( 15.988, 9.34513 )
@@ -24,14 +24,14 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -11.0
-margin/top = -29.0
-margin/right = 235.0
-margin/bottom = 23.0
+margin/left = -15.0
+margin/top = -30.0
+margin/right = 318.0
+margin/bottom = 22.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Entertainment"
+bbcode/bbcode = "Deus Ex Machina"
 visible_characters = -1
 
 [node name="notifications" type="RichTextLabel" parent="."]

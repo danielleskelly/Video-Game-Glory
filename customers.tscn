@@ -254,4 +254,38 @@ bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
+[node name="wrong_game" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -29.0
+margin/top = 23.0
+margin/right = 265.0
+margin/bottom = 78.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Wrong Game:"
+visible_characters = -1
+
+[node name="wrong_game_output" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.05, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -11.0
+margin/top = 23.0
+margin/right = 171.0
+margin/bottom = 77.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+
 

@@ -18,6 +18,9 @@ var sabatoge_output
 var shabby
 var shabby_output
 
+var wrong_game
+var wrong_game_output
+
 func _ready():
 	happy_output = get_node("happy_output")
 	neutral_output = get_node("neutral_output")
@@ -25,6 +28,7 @@ func _ready():
 	supplies_output = get_node("ran_out_output")
 	sabatoge_output = get_node("sabatoge_output")
 	shabby_output = get_node("shabby_output")
+	wrong_game_output = get_node("wrong_game_output")
 	set_process(true)
 	pass
 
@@ -42,6 +46,8 @@ func _process(delta):
 	sabatoge_output.add_text(sabatoge)
 	shabby_output.clear()
 	shabby_output.add_text(shabby)
+	wrong_game_output.clear()
+	wrong_game_output.add_text(str(wrong_game))
 	
 func get_globals():
 	happy = str(global.happy)
@@ -50,3 +56,4 @@ func get_globals():
 	supplies_loss = str(global.supplies_loss)
 	sabatoge = str(global.sabatoge)
 	shabby = str(global.shabby)
+	wrong_game = global.wrong_game

@@ -15,15 +15,15 @@
 [ext_resource path="res://supplies_full.tscn" type="PackedScene" id=13]
 [ext_resource path="res://marketing.tscn" type="PackedScene" id=14]
 [ext_resource path="res://storefront.tscn" type="PackedScene" id=15]
-[ext_resource path="res://repairman.tscn" type="PackedScene" id=16]
-[ext_resource path="res://entertainment.tscn" type="PackedScene" id=17]
-[ext_resource path="res://deus_ex_machina.tscn" type="PackedScene" id=18]
-[ext_resource path="res://contractors.tscn" type="PackedScene" id=19]
-[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=20]
-[ext_resource path="res://research.tscn" type="PackedScene" id=21]
-[ext_resource path="res://games.tscn" type="PackedScene" id=22]
-[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=23]
-[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=24]
+[ext_resource path="res://contractors.tscn" type="PackedScene" id=16]
+[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=17]
+[ext_resource path="res://research.tscn" type="PackedScene" id=18]
+[ext_resource path="res://games.tscn" type="PackedScene" id=19]
+[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=20]
+[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=21]
+[ext_resource path="res://repairman.tscn" type="PackedScene" id=22]
+[ext_resource path="res://entertainment.tscn" type="PackedScene" id=23]
+[ext_resource path="res://deus.tscn" type="PackedScene" id=24]
 
 [node name="strategy" type="Node2D"]
 
@@ -257,7 +257,7 @@ flat = false
 button/count = 2
 button/min_button_size = -1.0
 button/align = 1065353216
-button/0/text = "Contractors"
+button/0/text = "Sabatoge"
 button/0/tooltip = ""
 button/0/icon = null
 button/1/text = "Loans"
@@ -267,6 +267,7 @@ button/selected = 0
 
 [node name="pricing_buttons" type="VButtonArray" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.048, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -300,7 +301,6 @@ transform/scale = Vector2( 0.667036, 0.410212 )
 
 [node name="customers" parent="." instance=ExtResource( 10 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.32661, 4.52061 )
 transform/scale = Vector2( 0.666168, 0.413116 )
 
@@ -324,6 +324,7 @@ transform/scale = Vector2( 0.661541, 0.405036 )
 
 [node name="marketing" parent="." instance=ExtResource( 14 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.13787, 4.66261 )
 transform/scale = Vector2( 0.653569, 0.395625 )
 
@@ -333,58 +334,59 @@ visibility/visible = false
 transform/pos = Vector2( 8.12956, 4.58284 )
 transform/scale = Vector2( 0.64739, 0.393174 )
 
-[node name="repairman" parent="." instance=ExtResource( 16 )]
+[node name="contractor" parent="." instance=ExtResource( 16 )]
 
 visibility/visible = false
-transform/pos = Vector2( 8.13642, 4.66942 )
-transform/scale = Vector2( 0.649851, 0.393463 )
-
-[node name="entertainment" parent="." instance=ExtResource( 17 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.13115, 4.64595 )
-transform/scale = Vector2( 0.648362, 0.387315 )
-
-[node name="deus_ex_machina" parent="." instance=ExtResource( 18 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.12516, 4.67721 )
-transform/scale = Vector2( 0.64545, 0.385575 )
-
-[node name="contractor" parent="." instance=ExtResource( 19 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.21503, 4.77072 )
+transform/pos = Vector2( 8.21503, 4.55274 )
 transform/scale = Vector2( 0.646066, 0.384135 )
 
-[node name="loans" parent="." instance=ExtResource( 20 )]
+[node name="loans" parent="." instance=ExtResource( 17 )]
 
 visibility/visible = false
 transform/pos = Vector2( 7.98178, 4.54702 )
 transform/scale = Vector2( 0.648649, 0.390113 )
 
-[node name="research" parent="." instance=ExtResource( 21 )]
+[node name="research" parent="." instance=ExtResource( 18 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.05803, 4.50401 )
 transform/scale = Vector2( 0.646566, 0.388286 )
 
-[node name="games" parent="." instance=ExtResource( 22 )]
+[node name="games" parent="." instance=ExtResource( 19 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.37637, 4.72096 )
 transform/scale = Vector2( 0.664251, 0.415947 )
 
-[node name="arcade_pricing" parent="." instance=ExtResource( 23 )]
+[node name="arcade_pricing" parent="." instance=ExtResource( 20 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.12449, 4.79634 )
 transform/scale = Vector2( 0.651311, 0.401223 )
 
-[node name="concessions_pricing" parent="." instance=ExtResource( 24 )]
+[node name="concessions_pricing" parent="." instance=ExtResource( 21 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.25623, 4.58675 )
 transform/scale = Vector2( 0.64993, 0.403895 )
+
+[node name="repairman" parent="." instance=ExtResource( 22 )]
+
+visibility/visible = false
+transform/pos = Vector2( 8.10507, 4.64923 )
+transform/scale = Vector2( 0.64448, 0.387881 )
+
+[node name="entertainment" parent="." instance=ExtResource( 23 )]
+
+visibility/visible = false
+transform/pos = Vector2( 8.15202, 4.72703 )
+transform/scale = Vector2( 0.643449, 0.381172 )
+
+[node name="deus_ex_machina" parent="." instance=ExtResource( 24 )]
+
+visibility/visible = false
+transform/pos = Vector2( 8.07035, 4.66303 )
+transform/scale = Vector2( 0.641662, 0.387969 )
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 
