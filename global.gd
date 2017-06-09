@@ -20,9 +20,9 @@ var sales_lost = 0
 
 
 #predictions
-var meta_prediction = .58
-var classic_prediction = .58
-var strategy_prediction = .58
+var meta_prediction = .55
+var classic_prediction = .15
+var strategy_prediction = .30
 var time_management_prediction = .58
 var platformer_prediction = .58
 var adventure_prediction = .58

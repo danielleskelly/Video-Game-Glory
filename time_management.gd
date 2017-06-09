@@ -14,7 +14,13 @@ var player_marketshare_effect
 var comp_one_marketshare_effect
 var comp_two_marketshare_effect
 
+var new_prediction_one
+var new_prediction_two
+var new_prediction_three
 
+var prediction_one_effect
+var prediction_two_effect
+var prediction_three_effect
 
 func _ready():
 	do_the_math()
@@ -36,8 +42,19 @@ func do_the_math():
 	player_marketing_adjustment = player_marketshare_effect + marketshare_adjustment
 	comp_one_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2
 	comp_two_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2
+
 func get_globals():
 	player_marketshare = global.player_marketshare
 	competitor_one_marketshare = global.one_market_share
 	competitor_two_marketshare = global.two_market_share
 	advertising = global.advertising
+
+
+func _on_day_timer_timeout():
+	randomize()
+	new_prediction_one = rand_range(0, 1)
+	randomize()
+	new_prediction_two = rand_range(0, 1 - new_prediction_one)
+	randomize()
+	new_prediction_three = rand_rand(0, 1 - (new_prediction_one + new_prediction_two))
+	
