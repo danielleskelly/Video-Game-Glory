@@ -1,5 +1,7 @@
 extends Node
 
+
+
 #player
 var player_name = "dutchess"
 
@@ -15,6 +17,15 @@ var income = 0
 var net_worth = 0
 var sales_made = 0
 var sales_lost = 0
+
+
+#predictions
+var meta_prediction = .58
+var classic_prediction = .58
+var strategy_prediction = .58
+var time_management_prediction = .58
+var platformer_prediction = .58
+var adventure_prediction = .58
 
 #pricing/selling
 var arcade_one_price = 0
@@ -75,6 +86,8 @@ var deus_decent_key = false
 var deus_good_key = false
 var deus_great_key = false
 var deus_best_key = false
+var genre_two_key = false
+var genre_three_key = false
 
 #customers
 var happy = 0

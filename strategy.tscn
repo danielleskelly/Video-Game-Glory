@@ -3,27 +3,27 @@
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
 [ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://predictions.tscn" type="PackedScene" id=4]
-[ext_resource path="res://supplies.tscn" type="PackedScene" id=5]
-[ext_resource path="res://town_banner.tscn" type="PackedScene" id=6]
-[ext_resource path="res://finances.tscn" type="PackedScene" id=7]
-[ext_resource path="res://top_buttons.gd" type="Script" id=8]
-[ext_resource path="res://finances_full.tscn" type="PackedScene" id=9]
-[ext_resource path="res://customers.tscn" type="PackedScene" id=10]
-[ext_resource path="res://competition.tscn" type="PackedScene" id=11]
-[ext_resource path="res://news.tscn" type="PackedScene" id=12]
-[ext_resource path="res://supplies_full.tscn" type="PackedScene" id=13]
-[ext_resource path="res://marketing.tscn" type="PackedScene" id=14]
-[ext_resource path="res://storefront.tscn" type="PackedScene" id=15]
-[ext_resource path="res://contractors.tscn" type="PackedScene" id=16]
-[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=17]
-[ext_resource path="res://research.tscn" type="PackedScene" id=18]
-[ext_resource path="res://games.tscn" type="PackedScene" id=19]
-[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=20]
-[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=21]
-[ext_resource path="res://repairman.tscn" type="PackedScene" id=22]
-[ext_resource path="res://entertainment.tscn" type="PackedScene" id=23]
-[ext_resource path="res://deus.tscn" type="PackedScene" id=24]
+[ext_resource path="res://supplies.tscn" type="PackedScene" id=4]
+[ext_resource path="res://town_banner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://finances.tscn" type="PackedScene" id=6]
+[ext_resource path="res://top_buttons.gd" type="Script" id=7]
+[ext_resource path="res://finances_full.tscn" type="PackedScene" id=8]
+[ext_resource path="res://customers.tscn" type="PackedScene" id=9]
+[ext_resource path="res://competition.tscn" type="PackedScene" id=10]
+[ext_resource path="res://news.tscn" type="PackedScene" id=11]
+[ext_resource path="res://supplies_full.tscn" type="PackedScene" id=12]
+[ext_resource path="res://marketing.tscn" type="PackedScene" id=13]
+[ext_resource path="res://storefront.tscn" type="PackedScene" id=14]
+[ext_resource path="res://contractors.tscn" type="PackedScene" id=15]
+[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=16]
+[ext_resource path="res://research.tscn" type="PackedScene" id=17]
+[ext_resource path="res://games.tscn" type="PackedScene" id=18]
+[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=19]
+[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=20]
+[ext_resource path="res://repairman.tscn" type="PackedScene" id=21]
+[ext_resource path="res://entertainment.tscn" type="PackedScene" id=22]
+[ext_resource path="res://deus.tscn" type="PackedScene" id=23]
+[ext_resource path="res://genres.tscn" type="PackedScene" id=24]
 
 [node name="strategy" type="Node2D"]
 
@@ -44,9 +44,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -29.0
+margin/left = -30.0
 margin/top = -25.0
-margin/right = 93.0
+margin/right = 92.0
 margin/bottom = 20.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -56,49 +56,39 @@ shortcut = null
 text = "MENU"
 underline = 2
 
-[node name="predictions0" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 23.1454, -23.5622 )
-transform/scale = Vector2( 0.0644143, 0.0945223 )
-
-[node name="predictions1" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 27.8154, -23.5622 )
-transform/scale = Vector2( 0.0644143, 0.0945223 )
-
-[node name="soda" parent="." instance=ExtResource( 5 )]
+[node name="soda" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -13.1647, 22.9712 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
-[node name="popcorn" parent="." instance=ExtResource( 5 )]
+[node name="popcorn" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -8.36876, 22.9712 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
-[node name="pizza" parent="." instance=ExtResource( 5 )]
+[node name="pizza" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -3.57287, 22.9712 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
-[node name="nachos" parent="." instance=ExtResource( 5 )]
+[node name="nachos" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1.21664, 22.9712 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
-[node name="energy_drinks" parent="." instance=ExtResource( 5 )]
+[node name="energy_drinks" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 5.99001, 22.9712 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
-[node name="candy" parent="." instance=ExtResource( 5 )]
+[node name="candy" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 10.7571, 22.9641 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
-[node name="town_banner" parent="." instance=ExtResource( 6 )]
+[node name="town_banner" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( -0.647411, -23.4998 )
+transform/pos = Vector2( -1.7917, -23.4998 )
 transform/scale = Vector2( 0.644432, 0.179813 )
 
 [node name="start_day" type="LinkButton" parent="."]
@@ -120,7 +110,7 @@ shortcut = null
 text = "Start Day"
 underline = 2
 
-[node name="finances" parent="." instance=ExtResource( 7 )]
+[node name="finances" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( -23.6191, 19.7098 )
 transform/scale = Vector2( 0.201537, 0.293269 )
@@ -171,7 +161,7 @@ button/8/text = "Research"
 button/8/tooltip = ""
 button/8/icon = null
 button/selected = 0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 7 )
 
 [node name="report_buttons" type="VButtonArray" parent="."]
 
@@ -293,100 +283,115 @@ button/1/tooltip = ""
 button/1/icon = null
 button/selected = 0
 
-[node name="finances_full" parent="." instance=ExtResource( 9 )]
+[node name="finances_full" parent="." instance=ExtResource( 8 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.38022, 4.47914 )
 transform/scale = Vector2( 0.667036, 0.410212 )
 
-[node name="customers" parent="." instance=ExtResource( 10 )]
+[node name="customers" parent="." instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 8.32661, 4.52061 )
 transform/scale = Vector2( 0.666168, 0.413116 )
 
-[node name="competition" parent="." instance=ExtResource( 11 )]
+[node name="competition" parent="." instance=ExtResource( 10 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.30167, 4.48758 )
 transform/scale = Vector2( 0.6646, 0.411251 )
 
-[node name="news" parent="." instance=ExtResource( 12 )]
+[node name="news" parent="." instance=ExtResource( 11 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.27121, 4.57416 )
 transform/scale = Vector2( 0.661953, 0.408991 )
 
-[node name="supplies_full" parent="." instance=ExtResource( 13 )]
+[node name="supplies_full" parent="." instance=ExtResource( 12 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.18142, 4.4278 )
 transform/scale = Vector2( 0.661541, 0.405036 )
 
-[node name="marketing" parent="." instance=ExtResource( 14 )]
+[node name="marketing" parent="." instance=ExtResource( 13 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.13787, 4.66261 )
 transform/scale = Vector2( 0.653569, 0.395625 )
 
-[node name="storefront" parent="." instance=ExtResource( 15 )]
+[node name="storefront" parent="." instance=ExtResource( 14 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.12956, 4.58284 )
 transform/scale = Vector2( 0.64739, 0.393174 )
 
-[node name="contractor" parent="." instance=ExtResource( 16 )]
+[node name="contractor" parent="." instance=ExtResource( 15 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.21503, 4.55274 )
 transform/scale = Vector2( 0.646066, 0.384135 )
 
-[node name="loans" parent="." instance=ExtResource( 17 )]
+[node name="loans" parent="." instance=ExtResource( 16 )]
 
 visibility/visible = false
 transform/pos = Vector2( 7.98178, 4.54702 )
 transform/scale = Vector2( 0.648649, 0.390113 )
 
-[node name="research" parent="." instance=ExtResource( 18 )]
+[node name="research" parent="." instance=ExtResource( 17 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.05803, 4.50401 )
 transform/scale = Vector2( 0.646566, 0.388286 )
 
-[node name="games" parent="." instance=ExtResource( 19 )]
+[node name="games" parent="." instance=ExtResource( 18 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.37637, 4.72096 )
 transform/scale = Vector2( 0.664251, 0.415947 )
 
-[node name="arcade_pricing" parent="." instance=ExtResource( 20 )]
+[node name="arcade_pricing" parent="." instance=ExtResource( 19 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.12449, 4.79634 )
 transform/scale = Vector2( 0.651311, 0.401223 )
 
-[node name="concessions_pricing" parent="." instance=ExtResource( 21 )]
+[node name="concessions_pricing" parent="." instance=ExtResource( 20 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.25623, 4.58675 )
 transform/scale = Vector2( 0.64993, 0.403895 )
 
-[node name="repairman" parent="." instance=ExtResource( 22 )]
+[node name="repairman" parent="." instance=ExtResource( 21 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.10507, 4.64923 )
 transform/scale = Vector2( 0.64448, 0.387881 )
 
-[node name="entertainment" parent="." instance=ExtResource( 23 )]
+[node name="entertainment" parent="." instance=ExtResource( 22 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.15202, 4.72703 )
 transform/scale = Vector2( 0.643449, 0.381172 )
 
-[node name="deus_ex_machina" parent="." instance=ExtResource( 24 )]
+[node name="deus_ex_machina" parent="." instance=ExtResource( 23 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.07035, 4.66303 )
 transform/scale = Vector2( 0.641662, 0.387969 )
+
+[node name="genre_one" parent="." instance=ExtResource( 24 )]
+
+transform/pos = Vector2( 21.3631, -23.1414 )
+transform/scale = Vector2( 0.052631, 0.0884332 )
+
+[node name="genre_two" parent="." instance=ExtResource( 24 )]
+
+transform/pos = Vector2( 25.2968, -23.2592 )
+transform/scale = Vector2( 0.052631, 0.0884332 )
+
+[node name="genre_three" parent="." instance=ExtResource( 24 )]
+
+transform/pos = Vector2( 29.0925, -23.2592 )
+transform/scale = Vector2( 0.052631, 0.0884332 )
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 

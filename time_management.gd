@@ -36,8 +36,6 @@ func do_the_math():
 	player_marketing_adjustment = player_marketshare_effect + marketshare_adjustment
 	comp_one_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2
 	comp_two_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2
-	
-
 func get_globals():
 	player_marketshare = global.player_marketshare
 	competitor_one_marketshare = global.one_market_share
