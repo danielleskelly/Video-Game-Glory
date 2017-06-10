@@ -21,7 +21,7 @@ func _process(delta):
 	if (yellowdot_key == false):
 		dropdown.set_item_disabled(2, true)
 	if (plumber_key == false):
-		dropdown.set_item_disabled(3, true)
+		dropdown.set_item_ID(3, true)
 
 func add_items():
 	dropdown.add_item("Make a Selection...")
@@ -35,3 +35,4 @@ func get_globals():
 	vgg_key = global.vgg_key
 	plumber_key = global.plumber_key
 	yellowdot_key = global.yellowdot_key
+	

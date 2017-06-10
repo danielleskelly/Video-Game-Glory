@@ -196,7 +196,6 @@ button/selected = 0
 
 [node name="upgrade_buttons" type="VButtonArray" parent="."]
 
-visibility/visible = false
 rect/scale = Vector2( 0.048, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -230,6 +229,7 @@ button/selected = 0
 
 [node name="locals_buttons" type="VButtonArray" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.048, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -344,7 +344,6 @@ transform/scale = Vector2( 0.646566, 0.388286 )
 
 [node name="games" parent="." instance=ExtResource( 18 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.37637, 4.72096 )
 transform/scale = Vector2( 0.664251, 0.415947 )
 
