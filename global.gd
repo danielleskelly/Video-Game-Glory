@@ -21,7 +21,7 @@ var sales_lost = 0
 
 #predictions
 var meta_prediction = .55
-var classic_prediction = .15
+var classic_prediction = .45
 var strategy_prediction = .30
 var time_management_prediction = .58
 var platformer_prediction = .58
@@ -86,7 +86,7 @@ var deus_decent_key = false
 var deus_good_key = false
 var deus_great_key = false
 var deus_best_key = false
-var genre_two_key = false
+var genre_two_key = true
 var genre_three_key = false
 
 #customers
@@ -109,8 +109,8 @@ var one_sales_made = 0
 var two_sales_made = 0
 var one_sales_lost = 0
 var two_sales_lost = 0
-var player_marketshare = .02
-var one_market_share = .73
+var player_marketshare = .73
+var one_market_share = .02
 var two_market_share = .25
 
 #buying/supplies
@@ -164,6 +164,14 @@ var sabatoge_spending = 0
 var research_fund = 0
 var days_left_research = 10
 var research_spending = 0
+
+#arcades
+var station_one_selection = 1
+var station_two_selection = 2
+var station_three_selection = 0
+var station_four_selection = 0
+var station_five_selection = 0
+var station_six_selection = 0
 
 
 func _ready():

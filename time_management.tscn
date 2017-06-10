@@ -1,60 +1,147 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=20 format=1]
 
 [ext_resource path="res://time_management.gd" type="Script" id=1]
 [ext_resource path="res://floor.png" type="Texture" id=2]
 [ext_resource path="res://queue.png" type="Texture" id=3]
 [ext_resource path="res://arcade_zone.tscn" type="PackedScene" id=4]
-[ext_resource path="res://concessions.tscn" type="PackedScene" id=5]
+[ext_resource path="res://arcade_zone_one.gd" type="Script" id=5]
+[ext_resource path="res://arcade_zone_two.gd" type="Script" id=6]
+[ext_resource path="res://arcade_zone_three.gd" type="Script" id=7]
+[ext_resource path="res://arcade_zone_four.gd" type="Script" id=8]
+[ext_resource path="res://arcade_zone_five.gd" type="Script" id=9]
+[ext_resource path="res://arcade_zone_six.gd" type="Script" id=10]
+[ext_resource path="res://concessions.tscn" type="PackedScene" id=11]
+[ext_resource path="res://customer.tscn" type="PackedScene" id=12]
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -10.6971, -25.3828, 0, 0, 0, 0, -8.00801, -25.6065, 0, 0, 0, 0, -7.68008, -11.293, 0, 0, 0, 0, -7.81125, -5.47821, 0, 0, 0, 0, -2.56427, -5.36639, 0, 0, 0, 0, -2.54515, -26.7879 )
+}
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -27.7428, 26.9301, 0, 0, 0, 0, -27.7428, -22.8138, 0, 0, 0, 0, -21.4972, -22.8138, 0, 0, 0, 0, -21.4972, 22.9749, 0, 0, 0, 0, -14.7162, 23.127, 0, 0, 0, 0, -15.0579, -25.3828, 0, 0, 0, 0, -10.5997, -25.3828 )
+}
+
+[sub_resource type="Curve2D" id=3]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -11.3878, -25.3502, 0, 0, 0, 0, -7.11564, -25.3502, 0, 0, 0, 0, -7.55381, -6.30006, 0, 0, 0, 0, 6.68674, -6.30006, 0, 0, 0, 0, 6.5772, -26.8443 )
+}
+
+[sub_resource type="Curve2D" id=4]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -11.0592, -25.5369, 0, 0, 0, 0, -6.89656, -25.9105, 0, 0, 0, 0, -7.44427, -5.553, 0, 0, 0, 0, 15.012, -7.04712, 0, 0, 0, 0, 14.4643, -22.3619 )
+}
+
+[sub_resource type="Curve2D" id=5]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -12.1546, -25.1634, 0, 0, 0, 0, -7.33473, -25.3502, 0, 0, 0, 0, -7.88244, 5.27942, 0, 0, 0, 0, -1.30988, 5.09266, 0, 0, 0, 0, -1.6385, 16.4854 )
+}
+
+[sub_resource type="Curve2D" id=6]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -11.0592, -25.5369, 0, 0, 0, 0, -7.0061, -25.5369, 0, 0, 0, 0, -7.55381, 3.7853, 0, 0, 0, 0, 5.91994, 4.34559, 0, 0, 0, 0, 6.13903, 21.7148 )
+}
+
+[sub_resource type="Curve2D" id=7]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -11.2783, -25.9105, 0, 0, 0, 0, -6.78701, -25.7237, 0, 0, 0, 0, -7.55381, 4.71912, 0, 0, 0, 0, 14.4643, 4.15883, 0, 0, 0, 0, 15.6693, 16.8589 )
+}
 
 [node name="time_management" type="Node2D"]
 
 transform/pos = Vector2( 515.053, 302.7 )
 transform/scale = Vector2( 16.0493, 9.41331 )
 script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="floor" type="Sprite" parent="."]
 
 transform/pos = Vector2( -0.296053, -0.594974 )
 transform/scale = Vector2( 0.0614688, 0.110265 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="queue" type="Sprite" parent="."]
 
 transform/pos = Vector2( -20.3153, 1.33645 )
 transform/scale = Vector2( 0.0420774, 0.0965532 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="arcade_zone_one" parent="." instance=ExtResource( 4 )]
+[node name="arcade_zone_one" parent="." groups=[
+"free",
+] instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -2.20069, -21.5469 )
 transform/scale = Vector2( 0.119657, 0.346726 )
+script/script = ExtResource( 5 )
 
-[node name="arcade_zone_two" parent="." instance=ExtResource( 4 )]
+[node name="zone_one_path" type="Path2D" parent="."]
+
+curve = SubResource( 2 )
+
+[node name="arcade_zone_two" parent="." groups=[
+"free",
+] instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 6.10149, -21.5469 )
 transform/scale = Vector2( 0.119657, 0.346726 )
+script/script = ExtResource( 6 )
 
-[node name="arcade_zone_three" parent="." instance=ExtResource( 4 )]
+[node name="arcade_zone_three" parent="." groups=[
+"free",
+] instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 14.6343, -21.5469 )
 transform/scale = Vector2( 0.119657, 0.346726 )
+script/script = ExtResource( 7 )
 
-[node name="arcade_zone_four" parent="." instance=ExtResource( 4 )]
+[node name="arcade_zone_four" parent="." groups=[
+"free",
+] instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -2.08538, 20.1314 )
 transform/scale = Vector2( 0.119657, 0.346726 )
+script/script = ExtResource( 8 )
 
-[node name="arcade_zone_five" parent="." instance=ExtResource( 4 )]
+[node name="arcade_zone_five" parent="." groups=[
+"free",
+] instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 6.21679, 20.1314 )
 transform/scale = Vector2( 0.119657, 0.346726 )
+script/script = ExtResource( 9 )
 
-[node name="arcade_zone_six" parent="." instance=ExtResource( 4 )]
+[node name="arcade_zone_six" parent="." groups=[
+"free",
+] instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 15.4415, 19.9348 )
 transform/scale = Vector2( 0.119657, 0.346726 )
+script/script = ExtResource( 10 )
 
-[node name="concessions" parent="." instance=ExtResource( 5 )]
+[node name="concessions" parent="." instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 25.6245, 0.173237 )
 transform/scale = Vector2( 0.146707, 0.801887 )
@@ -66,6 +153,83 @@ wait_time = 180.0
 one_shot = true
 autostart = true
 
+[node name="predic_one_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="predic_two_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="predic_three_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="customer_queue" type="Path2D" parent="."]
+
+curve = SubResource( 1 )
+
+[node name="customer_follow" type="PathFollow2D" parent="customer_queue" groups=[
+"path",
+]]
+
+transform/pos = Vector2( -27.7428, 26.9301 )
+transform/rot = 90.0
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = false
+lookahead = 4.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="customer" parent="." instance=ExtResource( 12 )]
+
+visibility/visible = false
+transform/pos = Vector2( 0, 0 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0584442, 0.13636 )
+continuous_cd = 0
+can_sleep = false
+
+[node name="zone_two_path" type="Path2D" parent="."]
+
+curve = SubResource( 3 )
+
+[node name="zone_three_path" type="Path2D" parent="."]
+
+curve = SubResource( 4 )
+
+[node name="zone_four_path" type="Path2D" parent="."]
+
+curve = SubResource( 5 )
+
+[node name="zone_five_path" type="Path2D" parent="."]
+
+curve = SubResource( 6 )
+
+[node name="zone_six_path" type="Path2D" parent="."]
+
+curve = SubResource( 7 )
+
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
+
+[connection signal="timeout" from="predic_one_timer" to="." method="_on_predic_one_timer_timeout"]
+
+[connection signal="timeout" from="predic_two_timer" to="." method="_on_predic_two_timer_timeout"]
+
+[connection signal="timeout" from="predic_three_timer" to="." method="_on_predic_three_timer_timeout"]
 
 
