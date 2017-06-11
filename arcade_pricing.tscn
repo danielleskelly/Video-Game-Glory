@@ -77,7 +77,6 @@ visible_characters = -1
 
 [node name="zone_one" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 0.0427612, -13.2251 )
 transform/scale = Vector2( 0.944782, 0.101023 )
 script/script = ExtResource( 4 )

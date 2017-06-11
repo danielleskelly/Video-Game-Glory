@@ -714,14 +714,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="nachos" type="Node2D" parent="."]
+[node name="freezie" type="Node2D" parent="."]
 
 editor/display_folded = true
 transform/pos = Vector2( -0.365662, 5.06379 )
 transform/scale = Vector2( 0.957029, 0.117766 )
 script/script = ExtResource( 9 )
 
-[node name="background" type="Sprite" parent="nachos"]
+[node name="background" type="Sprite" parent="freezie"]
 
 transform/pos = Vector2( 0.340988, -0.0852509 )
 transform/scale = Vector2( 0.0501505, 0.0851761 )
@@ -730,7 +730,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="name" type="RichTextLabel" parent="nachos"]
+[node name="name" type="RichTextLabel" parent="freezie"]
 
 rect/scale = Vector2( 0.06, 0.6 )
 focus/ignore_mouse = false
@@ -747,7 +747,7 @@ bbcode/enabled = false
 bbcode/bbcode = "Nachos"
 visible_characters = -1
 
-[node name="price_output" type="RichTextLabel" parent="nachos"]
+[node name="price_output" type="RichTextLabel" parent="freezie"]
 
 rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
@@ -767,7 +767,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="stock_output" type="RichTextLabel" parent="nachos"]
+[node name="stock_output" type="RichTextLabel" parent="freezie"]
 
 rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
@@ -787,7 +787,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="lower" type="TextureButton" parent="nachos"]
+[node name="lower" type="TextureButton" parent="freezie"]
 
 rect/scale = Vector2( 1, 5 )
 focus/ignore_mouse = false
@@ -810,7 +810,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="buy_output" type="RichTextLabel" parent="nachos"]
+[node name="buy_output" type="RichTextLabel" parent="freezie"]
 
 rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
@@ -830,7 +830,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="raise" type="TextureButton" parent="nachos"]
+[node name="raise" type="TextureButton" parent="freezie"]
 
 rect/scale = Vector2( 1, 5 )
 focus/ignore_mouse = false
@@ -853,7 +853,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="total_output" type="RichTextLabel" parent="nachos"]
+[node name="total_output" type="RichTextLabel" parent="freezie"]
 
 rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
@@ -873,7 +873,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="yesterday_output" type="RichTextLabel" parent="nachos"]
+[node name="yesterday_output" type="RichTextLabel" parent="freezie"]
 
 rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
@@ -1264,9 +1264,9 @@ __meta__ = {
 
 [connection signal="button_down" from="pizza/raise" to="pizza" method="_on_raise_button_down"]
 
-[connection signal="button_down" from="nachos/lower" to="nachos" method="_on_lower_button_down"]
+[connection signal="button_down" from="freezie/lower" to="freezie" method="_on_lower_button_down"]
 
-[connection signal="button_down" from="nachos/raise" to="nachos" method="_on_raise_button_down"]
+[connection signal="button_down" from="freezie/raise" to="freezie" method="_on_raise_button_down"]
 
 [connection signal="button_down" from="energy/lower" to="energy" method="_on_lower_button_down"]
 

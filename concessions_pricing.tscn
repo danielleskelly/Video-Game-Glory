@@ -8,7 +8,7 @@
 [ext_resource path="res://raise.png" type="Texture" id=6]
 [ext_resource path="res://popcorn_pricing.gd" type="Script" id=7]
 [ext_resource path="res://pizza_pricing.gd" type="Script" id=8]
-[ext_resource path="res://nachos_pricing.gd" type="Script" id=9]
+[ext_resource path="res://freezie.gd" type="Script" id=9]
 [ext_resource path="res://energy_pricing.gd" type="Script" id=10]
 [ext_resource path="res://candy_pricing.gd" type="Script" id=11]
 
@@ -363,14 +363,14 @@ params/resize_mode = 0
 params/scale = Vector2( 0.1, 1 )
 params/stretch_mode = 0
 
-[node name="nachos" type="Node2D" parent="."]
+[node name="freezie" type="Node2D" parent="."]
 
 editor/display_folded = true
 transform/pos = Vector2( 0.0646973, 6.07697 )
 transform/scale = Vector2( 0.944782, 0.101023 )
 script/script = ExtResource( 9 )
 
-[node name="name" type="RichTextLabel" parent="nachos"]
+[node name="name" type="RichTextLabel" parent="freezie"]
 
 rect/scale = Vector2( 0.06, 0.6 )
 focus/ignore_mouse = false
@@ -384,10 +384,10 @@ margin/bottom = 43.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Nachos"
+bbcode/bbcode = "Freezie"
 visible_characters = -1
 
-[node name="range" type="RichTextLabel" parent="nachos"]
+[node name="range" type="RichTextLabel" parent="freezie"]
 
 rect/scale = Vector2( 0.06, 0.6 )
 focus/ignore_mouse = false
@@ -404,7 +404,7 @@ bbcode/enabled = false
 bbcode/bbcode = "0-10"
 visible_characters = -1
 
-[node name="lower" type="TextureButton" parent="nachos"]
+[node name="lower" type="TextureButton" parent="freezie"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -423,7 +423,7 @@ params/resize_mode = 0
 params/scale = Vector2( 0.1, 1 )
 params/stretch_mode = 0
 
-[node name="price_output" type="RichTextLabel" parent="nachos"]
+[node name="price_output" type="RichTextLabel" parent="freezie"]
 
 rect/scale = Vector2( 0.06, 0.6 )
 focus/ignore_mouse = false
@@ -440,7 +440,7 @@ bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
 
-[node name="raise" type="TextureButton" parent="nachos"]
+[node name="raise" type="TextureButton" parent="freezie"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -663,9 +663,9 @@ params/stretch_mode = 0
 
 [connection signal="button_down" from="pizza/raise" to="pizza" method="_on_raise_button_down"]
 
-[connection signal="button_down" from="nachos/lower" to="nachos" method="_on_lower_button_down"]
+[connection signal="button_down" from="freezie/lower" to="freezie" method="_on_lower_button_down"]
 
-[connection signal="button_down" from="nachos/raise" to="nachos" method="_on_raise_button_down"]
+[connection signal="button_down" from="freezie/raise" to="freezie" method="_on_raise_button_down"]
 
 [connection signal="button_down" from="energy/lower" to="energy" method="_on_lower_button_down"]
 

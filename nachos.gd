@@ -1,15 +1,15 @@
 extends Node2D
 
-var nachos_purchase = 0
-var nachos_price
+var freezie_purchase = 0
+var freezie_price
 var cash
-var nachos_stock
+var freezie_stock
 var stock_output
 var purchase_total
 var yesterday_output
 var yesterday_used
 var total_output
-var nachos_total
+var freezie_total
 var overall_total_output
 
 var buy_output
@@ -26,32 +26,32 @@ func _ready():
 	pass
 
 func _process(delta):
-	var string_nachos = str(nachos_purchase)
+	var string_freezie = str(freezie_purchase)
 	buy_output.clear()
-	buy_output.add_text(string_nachos)
-	nachos_price = global.daily_nachos_price
-	nachos_stock = str(global.nachos_count)
-	yesterday_used = str(global.nachos_yesterday_used)
-	nachos_total = str(nachos_purchase + global.nachos_count)
+	buy_output.add_text(string_freezie)
+	freezie_price = global.daily_freezie_price
+	freezie_stock = str(global.freezie_count)
+	yesterday_used = str(global.freezie_yesterday_used)
+	freezie_total = str(freezie_purchase + global.freezie_count)
 	cash = global.balance - global.expenses
 	purchase_total = global.purchase_total
 	price_output.clear()
-	price_output.add_text(str(nachos_price))
+	price_output.add_text(str(freezie_price))
 	stock_output.clear()
-	stock_output.add_text(nachos_stock)
+	stock_output.add_text(freezie_stock)
 	yesterday_output.clear()
 	yesterday_output.add_text(yesterday_used)
 	total_output.clear()
-	total_output.add_text(nachos_total)
+	total_output.add_text(freezie_total)
 	overall_total_output.clear()
 	overall_total_output.add_text(str(purchase_total))
 
 func _on_lower_button_down():
-	if (nachos_purchase > 0):
-		nachos_purchase = nachos_purchase - 1
-		get_node("/root/global").purchase_total = purchase_total - nachos_price
+	if (freezie_purchase > 0):
+		freezie_purchase = freezie_purchase - 1
+		get_node("/root/global").purchase_total = purchase_total - freezie_price
 
 func _on_raise_button_down():
-	if (cash >= (purchase_total + nachos_price)):
-		nachos_purchase = nachos_purchase + 1
-		get_node("/root/global").purchase_total = purchase_total + nachos_price
+	if (cash >= (purchase_total + freezie_price)):
+		freezie_purchase = freezie_purchase + 1
+		get_node("/root/global").purchase_total = purchase_total + freezie_price

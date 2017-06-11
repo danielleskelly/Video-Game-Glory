@@ -56,34 +56,24 @@ shortcut = null
 text = "MENU"
 underline = 2
 
-[node name="soda" parent="." instance=ExtResource( 4 )]
+[node name="supply_one" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -13.1647, 22.9712 )
+transform/pos = Vector2( -6.73578, 23.2388 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
-[node name="popcorn" parent="." instance=ExtResource( 4 )]
+[node name="supply_two" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -8.36876, 22.9712 )
+transform/pos = Vector2( -1.93984, 23.2388 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
-[node name="pizza" parent="." instance=ExtResource( 4 )]
+[node name="supply_three" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -3.57287, 22.9712 )
+transform/pos = Vector2( 2.85605, 23.2388 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
-[node name="nachos" parent="." instance=ExtResource( 4 )]
+[node name="supply_four" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 1.21664, 22.9712 )
-transform/scale = Vector2( 0.0739624, 0.113695 )
-
-[node name="energy_drinks" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 5.99001, 22.9712 )
-transform/scale = Vector2( 0.0739624, 0.113695 )
-
-[node name="candy" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 10.7571, 22.9641 )
+transform/pos = Vector2( 7.64556, 23.2388 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
 [node name="town_banner" parent="." instance=ExtResource( 5 )]
@@ -196,6 +186,7 @@ button/selected = 0
 
 [node name="upgrade_buttons" type="VButtonArray" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.048, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -285,12 +276,12 @@ button/selected = 0
 
 [node name="finances_full" parent="." instance=ExtResource( 8 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.38022, 4.47914 )
 transform/scale = Vector2( 0.667036, 0.410212 )
 
 [node name="customers" parent="." instance=ExtResource( 9 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.32661, 4.52061 )
 transform/scale = Vector2( 0.666168, 0.413116 )
 
@@ -344,6 +335,7 @@ transform/scale = Vector2( 0.646566, 0.388286 )
 
 [node name="games" parent="." instance=ExtResource( 18 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.37637, 4.72096 )
 transform/scale = Vector2( 0.664251, 0.415947 )
 

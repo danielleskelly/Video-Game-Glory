@@ -1,7 +1,5 @@
 extends Node
 
-
-
 #player
 var player_name = "dutchess"
 
@@ -9,6 +7,12 @@ var player_name = "dutchess"
 var town_select = "hollyhock"
 var hollyhock_town_population = 100
 var hollyhock_advertising_max = 100
+var hollyhock_research_total_one = 500
+var hollyhock_research_total_one_key = false
+var hollyhock_research_total_two = 1000
+var hollyhock_research_total_two_key = false
+var hollyhock_research_one_int = int(500)
+var sabatoge_total = 100
 
 #finance info
 var balance = 1000
@@ -28,43 +32,43 @@ var platformer_prediction = .58
 var adventure_prediction = .58
 
 #pricing/selling
-var arcade_one_price = 0
-var arcade_two_price = 0
-var arcade_three_price = 0
-var arcade_four_price = 0
-var arcade_five_price = 0
-var arcade_six_price = 0
+var arcade_one_price = 20
+var arcade_two_price = 20
+var arcade_three_price = 20
+var arcade_four_price = 20
+var arcade_five_price = 20
+var arcade_six_price = 20
 var arcade_one_range = "10-20"
 var arcade_two_range = "10-20"
 var arcade_three_range = "10-20"
 var arcade_four_range = "10-20"
 var arcade_five_range = "10-20"
 var arcade_six_range = "10-20"
-var soda_price = 0
-var popcorn_price = 0
+var soda_price = 20
+var popcorn_price = 20
 var pizza_price = 0
-var nachos_price = 0
+var freezie_price = 0
 var energy_price = 0
 var candy_price = 0
 var arcade_range = "10-20"
 var soda_range = "10-20"
 var popcorn_range = "10-20"
 var pizza_range = "10-20"
-var nachos_range = "10-20"
+var freezie_range = "10-20"
 var energy_range = "10-20"
 var candy_range = "10-20"
 
 #keys
 var pizza_key = false
-var nachos_key = false
+var freezie_key = false
 var energy_key = false
 var candy_key = false
-var station_three_key = false
-var station_four_key = false
-var station_five_key = false
-var station_six_key = false
+var station_three_key = true
+var station_four_key = true
+var station_five_key = true
+var station_six_key = true
 var plumber_key = false
-var yellowdot_key = false
+var yellowdot_key = true
 var vgg_key = true
 var storefront_worst_key = true
 var storefront_decent_key = false
@@ -118,25 +122,25 @@ var purchase_total = 0
 var soda_total = 0
 var popcorn_total = 0
 var pizza_total = 0
-var nachos_total = 0
+var freezie_total = 0
 var energy_total = 0
 var candy_total = 0
 var energy_count = 0
-var popcorn_count = 0
+var popcorn_count = 50
 var candy_count = 0
 var pizza_count = 0
 var soda_count = 50
-var nachos_count = 0
+var freezie_count = 0
 var daily_soda_price = 10
 var daily_popcorn_price = 5
 var daily_pizza_price = 0
-var daily_nachos_price = 0
+var daily_freezie_price = 0
 var daily_energy_price = 30
 var daily_candy_price = 0
 var soda_yesterday_used = 0
 var popcorn_yesterday_used = 0
 var pizza_yesterday_used = 0
-var nachos_yesterday_used = 0
+var freezie_yesterday_used = 0
 var energy_yesterday_used = 0
 var candy_yesterday_used = 0
 
@@ -157,12 +161,12 @@ var best_price = 1000
 
 #sabatoge
 var sabatoge_fund = 0
-var days_left_sabatoge = 10
-var sabatoge_spending = 0
+var days_left_sabatoge = sabatoge_total
+var sabatoge_spending = 1
 
 #research
 var research_fund = 0
-var days_left_research = 10
+var days_left_research = hollyhock_research_total_one
 var research_spending = 0
 
 #arcades
