@@ -8,6 +8,7 @@ var days_left_output
 var sabatoge_spending
 var sabatoge_spending_output
 var cash
+var sabatoge_total
 
 func _ready():
 	sabatoge_fund_output = get_node("sabatoge_output")
@@ -29,18 +30,21 @@ func get_globals():
 	days_left_sabatoge = global.days_left_sabatoge
 	sabatoge_spending = global.sabatoge_spending
 	cash = global.balance - global.expenses
+	sabatoge_total = global.sabatoge_total
 
 func _on_sabatoge_lower_button_down():
-	if (sabatoge_spending > 0):
+	if (sabatoge_spending > 1):
 		sabatoge_spending = sabatoge_spending - 1
 		global.sabatoge_spending = sabatoge_spending
 		global.expenses = global.expenses - 1
+		global.days_left_sabatoge = sabatoge_total / sabatoge_spending
 
 
 func _on_sabatoge_raise_button_down():
 	get_globals()
-	if (sabatoge_spending <= cash):
+	if (sabatoge_spending + 1 <= cash):
 		sabatoge_spending = sabatoge_spending + 1
 		global.sabatoge_spending = sabatoge_spending
 		global.expenses = global.expenses + 1
+		global.days_left_sabatoge = sabatoge_total / sabatoge_spending
 	

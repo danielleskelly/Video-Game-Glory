@@ -12,8 +12,8 @@ extents = Vector2( 10, 10 )
 
 [node name="customer" type="RigidBody2D"]
 
-transform/pos = Vector2( 88.4118, 105.627 )
-transform/scale = Vector2( 2.79812, 3.17574 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.064858, 0.095712 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 2.64946, 0, 0, 2.53309, 0.811441, -2.63366 )
@@ -45,6 +45,7 @@ texture = ExtResource( 2 )
 
 [node name="genre_pic" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 15.091, -16.6748 )
 transform/scale = Vector2( 0.545482, 0.430134 )
 texture = ExtResource( 3 )
@@ -158,5 +159,23 @@ transform/scale = Vector2( 2.64946, 2.53309 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="waiting_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 30.0
+one_shot = true
+autostart = false
+
+[node name="concessions_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="waiting_timer" to="." method="_on_waiting_timer_timeout"]
+
+[connection signal="timeout" from="concessions_timer" to="." method="_on_concessions_timer_timeout"]
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=1]
+[gd_scene load_steps=35 format=1]
 
 [ext_resource path="res://time_management.gd" type="Script" id=1]
 [ext_resource path="res://floor.png" type="Texture" id=2]
@@ -11,16 +11,17 @@
 [ext_resource path="res://arcade_zone_five.gd" type="Script" id=9]
 [ext_resource path="res://arcade_zone_six.gd" type="Script" id=10]
 [ext_resource path="res://concessions.tscn" type="PackedScene" id=11]
-[ext_resource path="res://customer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://finances.tscn" type="PackedScene" id=12]
+[ext_resource path="res://supplies.tscn" type="PackedScene" id=13]
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
 "points": Vector2Array( 0, 0, 0, 0, -10.6971, -25.3828, 0, 0, 0, 0, -8.00801, -25.6065, 0, 0, 0, 0, -7.68008, -11.293, 0, 0, 0, 0, -7.81125, -5.47821, 0, 0, 0, 0, -2.56427, -5.36639, 0, 0, 0, 0, -2.54515, -26.7879 )
 }
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=2]
 
 bake_interval = 5.0
 _data = {
@@ -62,6 +63,104 @@ _data = {
 "points": Vector2Array( 0, 0, 0, 0, -11.2783, -25.9105, 0, 0, 0, 0, -6.78701, -25.7237, 0, 0, 0, 0, -7.55381, 4.71912, 0, 0, 0, 0, 14.4643, 4.15883, 0, 0, 0, 0, 15.6693, 16.8589 )
 }
 
+[sub_resource type="Curve2D" id=8]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -2.72447, -25.2465, 0, 0, 0, 0, -2.55935, -6.38473, 0, 0, 0, 0, 21.2177, -2.44345 )
+}
+
+[sub_resource type="Curve2D" id=9]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 6.85238, -26.0911, 0, 0, 0, 0, 7.01749, -5.25865, 0, 0, 0, 0, 20.8874, -2.44345 )
+}
+
+[sub_resource type="Curve2D" id=10]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 14.7781, -20.7422, 0, 0, 0, 0, 15.1084, -3.85099, 0, 0, 0, 0, 20.8875, -3.56947 )
+}
+
+[sub_resource type="Curve2D" id=11]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -1.40346, 15.0108, 0, 0, 0, 0, -1.23834, 4.31308, 0, 0, 0, 0, 21.3829, -2.16187 )
+}
+
+[sub_resource type="Curve2D" id=12]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 6.35709, 13.6032, 0, 0, 0, 0, 6.02686, 2.62396, 0, 0, 0, 0, 21.3829, -2.16187 )
+}
+
+[sub_resource type="Curve2D" id=13]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 15.6037, 14.1663, 0, 0, 0, 0, 14.7781, 0.371807, 0, 0, 0, 0, 21.2177, -2.16187 )
+}
+
+[sub_resource type="Curve2D" id=14]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -2.39417, -23.2758, 0, 0, 0, 0, -2.39417, -1.31731, 0, 0, 0, 0, -9.98961, -1.03579, 0, 0, 0, 0, -10.1547, 35.2802 )
+}
+
+[sub_resource type="Curve2D" id=15]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 7.18269, -26.3726, 0, 0, 0, 0, 6.85245, -1.59883, 0, 0, 0, 0, -9.65937, -0.754272, 0, 0, 0, 0, -10.3198, 35.5618 )
+}
+
+[sub_resource type="Curve2D" id=16]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 14.7781, -22.4313, 0, 0, 0, 0, 14.7781, -1.59883, 0, 0, 0, 0, -9.98961, -1.31731, 0, 0, 0, 0, -10.485, 35.8433 )
+}
+
+[sub_resource type="Curve2D" id=17]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -1.23834, 16.9815, 0, 0, 0, 0, -1.23834, -1.03579, 0, 0, 0, 0, -9.49426, -1.31731, 0, 0, 0, 0, -10.3198, 35.2802 )
+}
+
+[sub_resource type="Curve2D" id=18]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 6.02686, 13.6032, 0, 0, 0, 0, 6.02686, -2.16187, 0, 0, 0, 0, -10.1547, -1.31731, 0, 0, 0, 0, -10.3198, 35.8433 )
+}
+
+[sub_resource type="Curve2D" id=19]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 15.4386, 15.5739, 0, 0, 0, 0, 15.1084, -1.59883, 0, 0, 0, 0, -9.82449, -1.03579, 0, 0, 0, 0, -10.1547, 36.4063 )
+}
+
+[sub_resource type="Curve2D" id=20]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 21.2177, -3.28795, 0, 0, 0, 0, 21.1395, 42.2171 )
+}
+
+[sub_resource type="Curve2D" id=21]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -11.52, -25.5998, 0, 0, 0, 0, -7.13826, -25.5998, 0, 0, 0, 0, -10.7532, 37.0492 )
+}
+
 [node name="time_management" type="Node2D"]
 
 transform/pos = Vector2( 515.053, 302.7 )
@@ -97,9 +196,11 @@ transform/pos = Vector2( -2.20069, -21.5469 )
 transform/scale = Vector2( 0.119657, 0.346726 )
 script/script = ExtResource( 5 )
 
-[node name="zone_one_path" type="Path2D" parent="."]
+[node name="zone_one_path" type="Path2D" parent="." groups=[
+"arcade",
+]]
 
-curve = SubResource( 2 )
+curve = SubResource( 1 )
 
 [node name="arcade_zone_two" parent="." groups=[
 "free",
@@ -174,9 +275,11 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="customer_queue" type="Path2D" parent="."]
+[node name="customer_queue" type="Path2D" parent="." groups=[
+"queue",
+]]
 
-curve = SubResource( 1 )
+curve = SubResource( 2 )
 
 [node name="customer_follow" type="PathFollow2D" parent="customer_queue" groups=[
 "path",
@@ -195,34 +298,144 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="customer" parent="." instance=ExtResource( 12 )]
-
-visibility/visible = false
-transform/pos = Vector2( 0, 0 )
-transform/rot = -90.0
-transform/scale = Vector2( 0.0584442, 0.13636 )
-continuous_cd = 0
-can_sleep = false
-
-[node name="zone_two_path" type="Path2D" parent="."]
+[node name="zone_two_path" type="Path2D" parent="." groups=[
+"arcade",
+]]
 
 curve = SubResource( 3 )
 
-[node name="zone_three_path" type="Path2D" parent="."]
+[node name="zone_three_path" type="Path2D" parent="." groups=[
+"arcade",
+]]
 
 curve = SubResource( 4 )
 
-[node name="zone_four_path" type="Path2D" parent="."]
+[node name="zone_four_path" type="Path2D" parent="." groups=[
+"arcade",
+]]
 
 curve = SubResource( 5 )
 
-[node name="zone_five_path" type="Path2D" parent="."]
+[node name="zone_five_path" type="Path2D" parent="." groups=[
+"arcade",
+]]
 
 curve = SubResource( 6 )
 
-[node name="zone_six_path" type="Path2D" parent="."]
+[node name="zone_six_path" type="Path2D" parent="." groups=[
+"arcade",
+]]
 
 curve = SubResource( 7 )
+
+[node name="zone_one_to_conc" type="Path2D" parent="." groups=[
+"concessions",
+]]
+
+curve = SubResource( 8 )
+
+[node name="zone_two_to_conc" type="Path2D" parent="." groups=[
+"concessions",
+]]
+
+curve = SubResource( 9 )
+
+[node name="zone_three_to_conc" type="Path2D" parent="." groups=[
+"concessions",
+]]
+
+curve = SubResource( 10 )
+
+[node name="zone_four_to_conc" type="Path2D" parent="." groups=[
+"concessions",
+]]
+
+curve = SubResource( 11 )
+
+[node name="zone_five_to_conc" type="Path2D" parent="." groups=[
+"concessions",
+]]
+
+curve = SubResource( 12 )
+
+[node name="zone_six_to_conc" type="Path2D" parent="." groups=[
+"concessions",
+]]
+
+curve = SubResource( 13 )
+
+[node name="zone_one_to_exit" type="Path2D" parent="." groups=[
+"exit",
+]]
+
+curve = SubResource( 14 )
+
+[node name="zone_two_to_exit" type="Path2D" parent="." groups=[
+"exit",
+]]
+
+curve = SubResource( 15 )
+
+[node name="zone_three_to_exit" type="Path2D" parent="." groups=[
+"exit",
+]]
+
+curve = SubResource( 16 )
+
+[node name="zone_four_to_exit" type="Path2D" parent="." groups=[
+"exit",
+]]
+
+curve = SubResource( 17 )
+
+[node name="zone_five_to_exit" type="Path2D" parent="." groups=[
+"exit",
+]]
+
+curve = SubResource( 18 )
+
+[node name="zone_six_to_exit" type="Path2D" parent="." groups=[
+"exit",
+]]
+
+curve = SubResource( 19 )
+
+[node name="concessions_to_exit" type="Path2D" parent="." groups=[
+"exit",
+]]
+
+curve = SubResource( 20 )
+
+[node name="finances" parent="." instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 7.41177, -0.974724 )
+transform/scale = Vector2( 0.174372, 0.214095 )
+
+[node name="supply_one" parent="." instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 19.133, -28.7172 )
+transform/scale = Vector2( 0.0555162, 0.0839192 )
+
+[node name="supply_two" parent="." instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 22.7206, -28.7172 )
+transform/scale = Vector2( 0.0555162, 0.0839192 )
+
+[node name="supply_three" parent="." instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 26.3018, -28.7172 )
+transform/scale = Vector2( 0.0555162, 0.0839192 )
+
+[node name="supply_four" parent="." instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 29.8533, -28.7172 )
+transform/scale = Vector2( 0.0555162, 0.0839192 )
+
+[node name="queue_to_exit" type="Path2D" parent="." groups=[
+"exit",
+]]
+
+curve = SubResource( 21 )
 
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 
