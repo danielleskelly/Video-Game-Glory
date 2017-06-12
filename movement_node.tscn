@@ -1,0 +1,15 @@
+[gd_scene format=1]
+
+[node name="movement_node" type="PathFollow2D" groups=[
+"path",
+]]
+
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = false
+lookahead = 4.0
+
+

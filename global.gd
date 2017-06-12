@@ -3,25 +3,53 @@ extends Node
 #player
 var player_name = "dutchess"
 
+#financials
+var balance = 1000
+var expenses = 10
+var cash = balance - expenses
+var income = 0
+var net_worth = 0
+
 #towns
 var town_select = "hollyhock"
+
+#hollyhock
 var hollyhock_town_population = 100
 var hollyhock_advertising_max = 100
 var hollyhock_research_total_one = 500
-var hollyhock_research_total_one_key = false
+var hollyhock_research_one_key = false
 var hollyhock_research_total_two = 1000
-var hollyhock_research_total_two_key = false
-var hollyhock_research_one_int = int(500)
-var sabatoge_total = 100
+var hollyhock_research_two_key = false
+var hollyhock_storefront_worst_key = true
+var hollyhock_storefront_decent_key = false
+var hollyhock_storefront_good_key = false
+var hollyhock_storefront_great_key = false
+var hollyhock_storefront_best_key = false
+var hollyhock_arcade_worst_key = true
+var hollyhock_arcade_decent_key = false
+var hollyhock_arcade_good_key = false
+var hollyhock_arcade_great_key = false
+var hollyhock_arcade_best_key = false
+var hollyhock_entertainment_worst_key = true
+var hollyhock_entertainment_decent_key = false
+var hollyhock_entertainment_good_key = false
+var hollyhock_entertainment_great_key = false
+var hollyhock_entertainment_best_key = false
+var hollyhock_deus_worst_key = true
+var hollyhock_deus_decent_key = false
+var hollyhock_deus_good_key = false
+var hollyhock_deus_great_key = false
+var hollyhock_deus_best_key = false
 
-#finance info
-var balance = 1000
-var expenses = 10
-var income = 0
-var net_worth = 0
-var sales_made = 0
+#customers
 var sales_lost = 0
+var sales_made = 0
+var storefront_loss = 0
+var price_loss = 0
 
+
+#sabatoge
+var sabatoge_total = 100
 
 #predictions
 var meta_prediction = .55
@@ -32,25 +60,30 @@ var platformer_prediction = .58
 var adventure_prediction = .58
 
 #pricing/selling
-var arcade_one_price = 20
-var arcade_two_price = 20
-var arcade_three_price = 20
-var arcade_four_price = 20
-var arcade_five_price = 20
-var arcade_six_price = 20
-var arcade_one_range = "10-20"
-var arcade_two_range = "10-20"
-var arcade_three_range = "10-20"
-var arcade_four_range = "10-20"
-var arcade_five_range = "10-20"
-var arcade_six_range = "10-20"
+var arcade_one_price = 10
+var arcade_two_price = 10
+var arcade_three_price = 10
+var arcade_four_price = 10
+var arcade_five_price = 10
+var arcade_six_price = 10
+var arcade_one_range_low = 10
+var arcade_one_range_high = 20
+var arcade_two_range_low = 10
+var arcade_two_range_high = 20
+var arcade_three_range_low = 10
+var arcade_three_range_high = 20
+var arcade_four_range_low = 10
+var arcade_four_range_high = 20
+var arcade_five_range_low = 10
+var arcade_five_range_high = 20
+var arcade_six_range_low = 10
+var arcade_six_range_high = 20
 var soda_price = 20
 var popcorn_price = 20
 var pizza_price = 0
 var freezie_price = 0
 var energy_price = 0
 var candy_price = 0
-var arcade_range = "10-20"
 var soda_range = "10-20"
 var popcorn_range = "10-20"
 var pizza_range = "10-20"
@@ -70,26 +103,7 @@ var station_six_key = true
 var plumber_key = false
 var yellowdot_key = true
 var vgg_key = true
-var storefront_worst_key = true
-var storefront_decent_key = false
-var storefront_good_key = false
-var storefront_great_key = false
-var storefront_best_key = false
-var repairman_worst_key = true
-var repairman_decent_key = false
-var repairman_good_key = false
-var repairman_great_key = false
-var repairman_best_key = false
-var entertainment_worst_key = true
-var entertainment_decent_key = false
-var entertainment_good_key = false
-var entertainment_great_key = false
-var entertainment_best_key = false
-var deus_worst_key = true
-var deus_decent_key = false
-var deus_good_key = false
-var deus_great_key = false
-var deus_best_key = false
+
 var genre_two_key = true
 var genre_three_key = false
 
@@ -99,8 +113,6 @@ var neutral = 0
 var waited = 0
 var supplies_loss = 0
 var sabatoge = 0
-var shabby = 0
-var wrong_game = 0
 
 #competitors
 var competitor_one = "Blickblasters"
@@ -114,8 +126,8 @@ var two_sales_made = 0
 var one_sales_lost = 0
 var two_sales_lost = 0
 var player_marketshare = .73
-var one_market_share = .02
-var two_market_share = .25
+var competitor_one_marketshare = .02
+var competitor_two_marketshare = .25
 
 #buying/supplies
 var purchase_total = 0
@@ -172,10 +184,10 @@ var research_spending = 0
 #arcades
 var station_one_selection = 1
 var station_two_selection = 2
-var station_three_selection = 0
-var station_four_selection = 0
-var station_five_selection = 0
-var station_six_selection = 0
+var station_three_selection = 1
+var station_four_selection = 2
+var station_five_selection = 1
+var station_six_selection = 2
 
 
 func _ready():
