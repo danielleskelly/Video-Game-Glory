@@ -46,6 +46,21 @@ var sales_lost = 0
 var sales_made = 0
 var storefront_loss = 0
 var price_loss = 0
+var waited_loss = 0
+
+#pricing
+var arcade_one_price = 10
+var arcade_two_price = 10
+var arcade_three_price = 10
+var arcade_four_price = 10
+var arcade_five_price = 10
+var arcade_six_price = 10
+var arcade_one_range_high = 20
+var arcade_two_range_high = 20
+var arcade_three_range_high = 20
+var arcade_four_range_high = 20
+var arcade_five_range_high = 20
+var arcade_six_range_high = 20
 
 
 #sabatoge
@@ -59,25 +74,14 @@ var time_management_prediction = .58
 var platformer_prediction = .58
 var adventure_prediction = .58
 
-#pricing/selling
-var arcade_one_price = 10
-var arcade_two_price = 10
-var arcade_three_price = 10
-var arcade_four_price = 10
-var arcade_five_price = 10
-var arcade_six_price = 10
+
+#selling
 var arcade_one_range_low = 10
-var arcade_one_range_high = 20
 var arcade_two_range_low = 10
-var arcade_two_range_high = 20
 var arcade_three_range_low = 10
-var arcade_three_range_high = 20
 var arcade_four_range_low = 10
-var arcade_four_range_high = 20
 var arcade_five_range_low = 10
-var arcade_five_range_high = 20
 var arcade_six_range_low = 10
-var arcade_six_range_high = 20
 var soda_price = 20
 var popcorn_price = 20
 var pizza_price = 0
@@ -108,10 +112,7 @@ var genre_two_key = true
 var genre_three_key = false
 
 #customers
-var happy = 0
-var neutral = 0
-var waited = 0
-var supplies_loss = 0
+
 var sabatoge = 0
 
 #competitors

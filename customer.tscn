@@ -190,7 +190,7 @@ autostart = false
 [node name="concessions_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 7.5
 one_shot = true
 autostart = false
 

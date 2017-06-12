@@ -10,8 +10,6 @@ onready var prediction_two_timer = get_node("prediction_two_timer")
 onready var prediction_three_timer = get_node("prediction_three_timer")
 onready var supply_one = get_tree().get_current_scene().get_node("supply_one")
 onready var supply_two = get_tree().get_current_scene().get_node("supply_two")
-onready var supply_three = get_tree().get_current_scene().get_node("supply_three")
-onready var supply_four = get_tree().get_current_scene().get_node("supply_four")
 
 # global variables that change based on town
 var town_population
@@ -69,18 +67,6 @@ func _process(delta):
 		supply_one.get_child(2).add_text(str(global.soda_count))
 		supply_two.get_child(2).clear()
 		supply_two.get_child(2).add_text(str(global.popcorn_count))
-		if (global.pizza_key == true):
-			supply_three.show()
-			supply_three.get_child(2).clear()
-			supply_three.get_child(2).add_text(str(global.pizza_count))
-		else:
-			supply_three.set_hidden(true)
-		if (global.freezie_key == true):
-			supply_four.show()
-			supply_four.get_child(2).clear()
-			supply_four.get_child(2).add_text(str(global.freezie_count))
-		else:
-			supply_four.set_hidden(true)
 
 func customer_math():
 	#performs the calculations to determine the number of customers that will enter the store
@@ -169,6 +155,7 @@ func _on_prediction_one_timer_timeout(): #request to create another prediction o
 	var mover = movement_load.instance()
 	entertainment_time_check() #sets the amount of time a customer is willing to wait based on in store entertainment upgrades
 	customer.get_child(3).set_wait_time(wait_time)
+	customer.get_child(3).start()
 	#sets the genre for the first prediction based on town
 	if (global.town_select == "hollyhock"):
 		customer.get_child(1).get_child(0).show()
@@ -186,6 +173,7 @@ func _on_prediction_two_timer_timeout(): #request to create another prediction t
 	var mover = movement_load.instance()
 	entertainment_time_check() #sets the amount of time a customer is willing to wait based on in store entertainment upgrades
 	customer.get_child(3).set_wait_time(wait_time)
+	customer.get_child(3).start()
 	#sets the genre for the second prediction based on town
 	if (global.town_select == "hollyhock"):
 		customer.get_child(1).get_child(0).set_hidden(true)
@@ -203,6 +191,7 @@ func _on_prediction_three_timer_timeout(): #request to create another prediction
 	var mover = movement_load.instance()
 	entertainment_time_check() #sets the amount of time a customer is willing to wait based on in store entertainment upgrades
 	customer.get_child(3).set_wait_time(wait_time)
+	customer.get_child(3).start()
 	#sets the genre for the third prediction based on town
 	if (global.town_select == "hollyhock"):
 		customer.get_child(1).get_child(0).set_hidden(true)
@@ -229,9 +218,9 @@ func entertainment_time_check(): #sets how long a customer is willing to wait in
 			wait_time = 20
 
 func _on_day_timer_timeout(): #day is complete
-	new_prediction_one = randomize(rand_range(0, 1))
-	new_prediction_two = randomize(rand_range(0, 1 - new_prediction_one))
-	new_prediction_three = randomize(rand_range(0, 1 - (new_prediction_one + new_prediction_two)))
+	new_prediction_one = rand_range(0, 1)
+	new_prediction_two = rand_range(0, 1 - new_prediction_one)
+	new_prediction_three = rand_range(0, 1 - (new_prediction_one + new_prediction_two))
 	if (global.town_select == "hollyhock"):
 		global.meta_prediction = new_prediction_one
 		global.classic_prediction = new_prediction_two
