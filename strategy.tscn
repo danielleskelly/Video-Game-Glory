@@ -58,47 +58,19 @@ underline = 2
 
 [node name="supply_one" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -6.73578, 23.2388 )
+transform/pos = Vector2( -1.18835, 23.5357 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
 [node name="supply_two" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -1.93984, 23.2388 )
-transform/scale = Vector2( 0.0739624, 0.113695 )
-
-[node name="supply_three" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 2.85605, 23.2388 )
-transform/scale = Vector2( 0.0739624, 0.113695 )
-
-[node name="supply_four" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 7.64556, 23.2388 )
+transform/pos = Vector2( 3.60759, 23.5357 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
 [node name="town_banner" parent="." instance=ExtResource( 5 )]
 
+editor/display_folded = true
 transform/pos = Vector2( -1.7917, -23.4998 )
 transform/scale = Vector2( 0.644432, 0.179813 )
-
-[node name="start_day" type="LinkButton" parent="."]
-
-rect/scale = Vector2( 0.1, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 14.0
-margin/top = 19.0
-margin/right = 187.0
-margin/bottom = 62.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "Start Day"
-underline = 2
 
 [node name="finances" parent="." instance=ExtResource( 6 )]
 
@@ -341,9 +313,14 @@ transform/scale = Vector2( 0.664251, 0.415947 )
 
 [node name="arcade_pricing" parent="." instance=ExtResource( 19 )]
 
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 8.12449, 4.79634 )
 transform/scale = Vector2( 0.651311, 0.401223 )
+
+[node name="zone_one" parent="arcade_pricing"]
+
+editor/display_folded = true
 
 [node name="concessions_pricing" parent="." instance=ExtResource( 20 )]
 
@@ -384,6 +361,26 @@ transform/scale = Vector2( 0.052631, 0.0884332 )
 transform/pos = Vector2( 29.0925, -23.2592 )
 transform/scale = Vector2( 0.052631, 0.0884332 )
 
+[node name="start_day" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 0.1, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 19.0
+margin/right = 187.0
+margin/bottom = 62.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Start Day"
+underline = 2
+
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 
 
+[editable path="arcade_pricing"]

@@ -47,6 +47,7 @@ var sales_made = 0
 var storefront_loss = 0
 var price_loss = 0
 var waited_loss = 0
+var sabatoge_loss = 0
 
 #pricing
 var arcade_one_price = 10
@@ -96,10 +97,6 @@ var energy_range = "10-20"
 var candy_range = "10-20"
 
 #keys
-var pizza_key = false
-var freezie_key = false
-var energy_key = false
-var candy_key = false
 var station_three_key = true
 var station_four_key = true
 var station_five_key = true
@@ -107,13 +104,8 @@ var station_six_key = true
 var plumber_key = false
 var yellowdot_key = true
 var vgg_key = true
-
 var genre_two_key = true
 var genre_three_key = false
-
-#customers
-
-var sabatoge = 0
 
 #competitors
 var competitor_one = "Blickblasters"

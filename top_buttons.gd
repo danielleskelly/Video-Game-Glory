@@ -1,57 +1,35 @@
 extends HButtonArray
 
-var select
+onready var reports = get_tree().get_current_scene().get_node("report_buttons")
+onready var upgrade = get_tree().get_current_scene().get_node("upgrade_buttons")
+onready var locals = get_tree().get_current_scene().get_node("locals_buttons")
+onready var pricing = get_tree().get_current_scene().get_node("pricing_buttons")
+onready var finances = get_tree().get_current_scene().get_node("finances_full")
+onready var customers = get_tree().get_current_scene().get_node("customers")
+onready var competition = get_tree().get_current_scene().get_node("competition")
+onready var news = get_tree().get_current_scene().get_node("news")
+onready var supplies = get_tree().get_current_scene().get_node("supplies_full")
+onready var games = get_tree().get_current_scene().get_node("games")
+onready var marketing = get_tree().get_current_scene().get_node("marketing")
+onready var storefront = get_tree().get_current_scene().get_node("storefront")
+onready var repairman = get_tree().get_current_scene().get_node("repairman")
+onready var entertainment = get_tree().get_current_scene().get_node("entertainment")
+onready var deus = get_tree().get_current_scene().get_node("deus_ex_machina")
+onready var contractor = get_tree().get_current_scene().get_node("contractor")
+onready var loans = get_tree().get_current_scene().get_node("loans")
+onready var research = get_tree().get_current_scene().get_node("research")
+onready var concessions_pricing = get_tree().get_current_scene().get_node("concessions_pricing")
+onready var arcade_pricing = get_tree().get_current_scene().get_node("arcade_pricing")
+
+#allows for the tabs to change
+var select 
 var report_select
+var pricing_select
 var upgrade_select
 var locals_select
-var pricing_select
-
-var reports
-var upgrade
-var locals
-var finances
-var customers
-var competition
-var news
-var supplies
-var games
-var marketing
-var storefront
-var repairman
-var entertainment
-var deus
-var contractor
-var loans
-var research
-var pricing
-var concessions_pricing
-var arcade_pricing
-
-
 
 func _ready():
 	set_process(true)
-	reports = get_tree().get_current_scene().get_node("report_buttons")
-	upgrade = get_tree().get_current_scene().get_node("upgrade_buttons")
-	locals = get_tree().get_current_scene().get_node("locals_buttons")
-	pricing = get_tree().get_current_scene().get_node("pricing_buttons")
-	finances = get_tree().get_current_scene().get_node("finances_full")
-	customers = get_tree().get_current_scene().get_node("customers")
-	competition = get_tree().get_current_scene().get_node("competition")
-	news = get_tree().get_current_scene().get_node("news")
-	supplies = get_tree().get_current_scene().get_node("supplies_full")
-	games = get_tree().get_current_scene().get_node("games")
-	marketing = get_tree().get_current_scene().get_node("marketing")
-	storefront = get_tree().get_current_scene().get_node("storefront")
-	repairman = get_tree().get_current_scene().get_node("repairman")
-	entertainment = get_tree().get_current_scene().get_node("entertainment")
-	deus = get_tree().get_current_scene().get_node("deus_ex_machina")
-	contractor = get_tree().get_current_scene().get_node("contractor")
-	loans = get_tree().get_current_scene().get_node("loans")
-	research = get_tree().get_current_scene().get_node("research")
-	concessions_pricing = get_tree().get_current_scene().get_node("concessions_pricing")
-	arcade_pricing = get_tree().get_current_scene().get_node("arcade_pricing")
-	pass
 
 func _process(delta):
 	hide()

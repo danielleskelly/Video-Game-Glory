@@ -1,12 +1,5 @@
 extends Node2D
 
-var hollyhock
-var plansey
-var windrow
-var slatten
-var fiyork
-var banlon
-
 var selected = global.town_select
 
 func _ready():

@@ -1,59 +1,23 @@
 extends Node2D
 
-var happy
-var happy_output
+onready var sales_made_output = get_node("sales_made_output")
+onready var waited_loss_output = get_node("waited_loss_output")
+onready var price_loss_output = get_node("price_loss_output")
+onready var sabatoge_loss_output = get_node("sabatoge_loss_output")
+onready var storefront_loss_output = get_node("storefront_loss_output")
 
-var neutral
-var neutral_output
-
-var waited
-var waited_output
-
-var supplies_loss
-var supplies_output
-
-var sabatoge
-var sabatoge_output
-
-var shabby
-var shabby_output
-
-var wrong_game
-var wrong_game_output
 
 func _ready():
-	happy_output = get_node("happy_output")
-	neutral_output = get_node("neutral_output")
-	waited_output = get_node("waited_too_long_output")
-	supplies_output = get_node("ran_out_output")
-	sabatoge_output = get_node("sabatoge_output")
-	shabby_output = get_node("shabby_output")
-	wrong_game_output = get_node("wrong_game_output")
 	set_process(true)
-	pass
 
 func _process(delta):
-	get_globals()
-	happy_output.clear()
-	happy_output.add_text(happy)
-	neutral_output.clear()
-	neutral_output.add_text(neutral)
-	waited_output.clear()
-	waited_output.add_text(waited)
-	supplies_output.clear()
-	supplies_output.add_text(supplies_loss)
-	sabatoge_output.clear()
-	sabatoge_output.add_text(sabatoge)
-	shabby_output.clear()
-	shabby_output.add_text(shabby)
-	wrong_game_output.clear()
-	wrong_game_output.add_text(str(wrong_game))
-	
-func get_globals():
-	happy = str(global.happy)
-	neutral = str(global.neutral)
-	waited = str(global.waited)
-	supplies_loss = str(global.supplies_loss)
-	sabatoge = str(global.sabatoge)
-	shabby = str(global.shabby)
-	wrong_game = global.wrong_game
+	sales_made_output.clear()
+	sales_made_output.add_text(str(global.sales_made))
+	waited_loss_output.clear()
+	waited_loss_output.add_text(str(global.waited_loss))
+	price_loss_output.clear()
+	price_loss_output.add_text(str(global.price_loss))
+	sabatoge_loss_output.clear()
+	sabatoge_loss_output.add_text(str(global.sabatoge_loss))
+	storefront_loss_output.clear()
+	storefront_loss_output.add_text(str(global.storefront_loss))
