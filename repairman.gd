@@ -55,11 +55,6 @@ func get_globals():
 	great_price = global.great_price
 	best_price = global.best_price
 	cash = global.balance - global.expenses
-	worst_key = global.repairman_worst_key
-	decent_key = global.repairman_decent_key
-	good_key = global.repairman_good_key
-	great_key = global.repairman_great_key
-	best_key = global.repairman_best_key
 
 func _on_worst_button_button_down():
 	if (worst_key == true):

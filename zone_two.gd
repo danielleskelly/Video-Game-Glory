@@ -13,11 +13,11 @@ func _ready():
 func _process(delta):
 	get_globals()
 	range_output.clear()
-	range_output.add_text(arcade_two_range)
+	range_output.add_text(str(arcade_two_range))
 
 func get_globals():
 	arcade_two_price = global.arcade_two_price
-	arcade_two_range = global.arcade_two_range
+	arcade_two_range = global.arcade_two_range_high
 	
 func _on_lower_button_down():
 	get_globals()

@@ -38,9 +38,9 @@ var comp_two_sales_lost_output
 
 var player_marketshare
 var player_marketshare_output
-var comp_one_marketshare
+var competitor_one_marketshare
 var comp_one_marketshare_output
-var comp_two_marketshare
+var competitor_two_marketshare
 var comp_two_marketshare_output
 
 func _ready():
@@ -100,9 +100,9 @@ func _process(delta):
 	player_marketshare_output.clear()
 	player_marketshare_output.add_text(player_marketshare)
 	comp_one_marketshare_output.clear()
-	comp_one_marketshare_output.add_text(comp_one_marketshare)
+	comp_one_marketshare_output.add_text(competitor_one_marketshare)
 	comp_two_marketshare_output.clear()
-	comp_two_marketshare_output.add_text(comp_two_marketshare)
+	comp_two_marketshare_output.add_text(competitor_two_marketshare)
 	
 	
 func get_globals():
@@ -122,6 +122,6 @@ func get_globals():
 	comp_one_sales_lost = str(global.one_sales_lost)
 	comp_two_sales_lost = str(global.two_sales_lost)
 	player_marketshare = str(global.player_marketshare)
-	comp_one_marketshare = str(global.one_market_share)
-	comp_two_marketshare = str(global.two_market_share)
+	competitor_one_marketshare = str(global.competitor_one_marketshare)
+	competitor_two_marketshare = str(global.competitor_two_marketshare)
 	

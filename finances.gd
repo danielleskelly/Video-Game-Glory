@@ -1,33 +1,16 @@
 extends Node2D
 
-var balance
-var expenses
-var cash_loc
-var cash
-
-var glob_balance
-var glob_expenses
+onready var balance = get_node("balance_amount")
+onready var expenses = get_node("expenses_amount")
+onready var cash = get_node("cash_amount")
 
 func _ready():
-	balance = get_node("balance_amount")
-	expenses = get_node("expenses_amount")
-	cash_loc = get_node("cash_amount")
 	set_process(true)
-	pass
 
 func _process(delta):
-	get_globals()
-	money()
-	
-func money():
 	balance.clear()
+	balance.add_text(str(global.balance))
 	expenses.clear()
-	cash_loc.clear()
-	balance.add_text(glob_balance)
-	expenses.add_text(glob_expenses)
-	cash_loc.add_text(cash)
-	
-func get_globals():
-	glob_expenses = str(global.expenses)
-	glob_balance = str(global.balance)
-	cash = str(global.balance - global.expenses)
+	expenses.add_text(str(global.expenses))
+	cash.clear()
+	cash.add_text(str(global.cash))

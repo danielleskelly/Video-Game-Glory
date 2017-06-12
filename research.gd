@@ -36,7 +36,7 @@ func get_globals():
 	cash = global.balance - global.expenses
 	town_select = global.town_select
 	hollyhock_research_total_one  = global.hollyhock_research_total_one
-	hollyhock_research_total_one_key = global.hollyhock_research_total_one_key
+	hollyhock_research_total_one_key = global.hollyhock_research_one_key
 
 func _on_research_lower_button_down():
 	if (research_spending > 1):

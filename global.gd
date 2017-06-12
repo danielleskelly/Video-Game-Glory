@@ -46,6 +46,22 @@ var sales_lost = 0
 var sales_made = 0
 var storefront_loss = 0
 var price_loss = 0
+var waited_loss = 0
+var sabatoge_loss = 0
+
+#pricing
+var arcade_one_price = 10
+var arcade_two_price = 10
+var arcade_three_price = 10
+var arcade_four_price = 10
+var arcade_five_price = 10
+var arcade_six_price = 10
+var arcade_one_range_high = 20
+var arcade_two_range_high = 20
+var arcade_three_range_high = 20
+var arcade_four_range_high = 20
+var arcade_five_range_high = 20
+var arcade_six_range_high = 20
 
 
 #sabatoge
@@ -59,25 +75,14 @@ var time_management_prediction = .58
 var platformer_prediction = .58
 var adventure_prediction = .58
 
-#pricing/selling
-var arcade_one_price = 10
-var arcade_two_price = 10
-var arcade_three_price = 10
-var arcade_four_price = 10
-var arcade_five_price = 10
-var arcade_six_price = 10
+
+#selling
 var arcade_one_range_low = 10
-var arcade_one_range_high = 20
 var arcade_two_range_low = 10
-var arcade_two_range_high = 20
 var arcade_three_range_low = 10
-var arcade_three_range_high = 20
 var arcade_four_range_low = 10
-var arcade_four_range_high = 20
 var arcade_five_range_low = 10
-var arcade_five_range_high = 20
 var arcade_six_range_low = 10
-var arcade_six_range_high = 20
 var soda_price = 20
 var popcorn_price = 20
 var pizza_price = 0
@@ -92,10 +97,6 @@ var energy_range = "10-20"
 var candy_range = "10-20"
 
 #keys
-var pizza_key = false
-var freezie_key = false
-var energy_key = false
-var candy_key = false
 var station_three_key = true
 var station_four_key = true
 var station_five_key = true
@@ -103,16 +104,8 @@ var station_six_key = true
 var plumber_key = false
 var yellowdot_key = true
 var vgg_key = true
-
 var genre_two_key = true
 var genre_three_key = false
-
-#customers
-var happy = 0
-var neutral = 0
-var waited = 0
-var supplies_loss = 0
-var sabatoge = 0
 
 #competitors
 var competitor_one = "Blickblasters"

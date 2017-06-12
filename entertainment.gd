@@ -55,11 +55,11 @@ func get_globals():
 	great_price = global.great_price
 	best_price = global.best_price
 	cash = global.balance - global.expenses
-	worst_key = global.entertainment_worst_key
-	decent_key = global.entertainment_decent_key
-	good_key = global.entertainment_good_key
-	great_key = global.entertainment_great_key
-	best_key = global.entertainment_best_key
+	worst_key = global.hollyhock_entertainment_worst_key
+	decent_key = global.hollyhock_entertainment_decent_key
+	good_key = global.hollyhock_entertainment_good_key
+	great_key = global.hollyhock_entertainment_great_key
+	best_key = global.hollyhock_entertainment_best_key
 
 func _on_worst_button_button_down():
 	if (worst_key == true):

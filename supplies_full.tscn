@@ -180,6 +180,7 @@ visible_characters = -1
 
 [node name="soda" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -0.345047, -16.8837 )
 transform/scale = Vector2( 0.957029, 0.117766 )
 script/script = ExtResource( 4 )
