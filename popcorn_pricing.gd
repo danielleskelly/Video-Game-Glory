@@ -11,12 +11,14 @@ func _process(delta):
 	range_output.add_text(str(global.popcorn_range_low) + " - " + str(global.popcorn_range_high))
 	
 func _on_lower_button_down():
-	if (global.popcorn_price > 0):
-		global.popcorn_price = global.popcorn_price - 1
-		price_output.clear()
-		price_output.add_text(str(global.popcorn_price))
+	if (global.town_select == "hollyhock"):
+		if (global.hollyhock_popcorn_price > 0):
+			global.hollyhock_popcorn_price = global.hollyhock_popcorn_price - 1
+			price_output.clear()
+			price_output.add_text(str(global.hollyhock_popcorn_price))
 
 func _on_raise_button_down():
-	global.popcorn_price = global.popcorn_price + 1
-	price_output.clear()
-	price_output.add_text(str(global.popcorn_price))
+	if (global.town_select == "hollyhock"):
+		global.hollyhock_popcorn_price = global.hollyhock_popcorn_price + 1
+		price_output.clear()
+		price_output.add_text(str(global.hollyhock_popcorn_price))

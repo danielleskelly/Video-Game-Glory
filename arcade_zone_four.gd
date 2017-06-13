@@ -15,6 +15,7 @@ var prediction_one
 var prediction_two
 var prediction_three
 
+var check
 
 func _ready():
 	set_genre_type() #sets the prediction based on the town
@@ -24,7 +25,8 @@ func _process(delta):
 	if (old_parent.get_child_count() > 0) and (is_in_group("free") == true): #if there is a customer waiting in line and arcade zone four is available
 		move_node = get_tree().get_current_scene().get_node("customer_queue").get_child(0) #get the first customer in line
 		if (move_node.get_child(0).is_in_group("meta") == true) and (genre_type == "meta") and (move_node.get_unit_offset() > 1): #check to see if the customer wants what the arcade is set to
-			var check = global.arcade_four_range_high - global.arcade_four_price #check if the arcade price is too high
+			if (global.town_select == "hollyhock"):
+				check = global.arcade_four_range_high - global.hollyhock_arcade_four_price #check if the arcade price is too high
 			if ((check <= 0) and (prediction_one < .75)):
 				price_check = false
 			else:
@@ -46,7 +48,8 @@ func _process(delta):
 				global.price_loss = global.price_loss + 1
 		#same story different genre
 		if (move_node.get_child(0).is_in_group("classic") == true) and (genre_type == "classic") and (move_node.get_unit_offset() > 1): #check to see if the customer wants what the arcade is set to
-			var check = global.arcade_four_range_high - global.arcade_four_price #check if the arcade price is too high
+			if (global.town_select == "hollyhock"):
+				check = global.arcade_four_range_high - global.hollyhock_arcade_four_price #check if the arcade price is too high
 			if ((check <= 0) and (prediction_two < .75)):
 				price_check = false
 			else:
@@ -68,7 +71,8 @@ func _process(delta):
 				global.price_loss = global.price_loss + 1
 		#same story different genre
 		if (move_node.get_child(0).is_in_group("platformer") == true) and (genre_type == "platformer") and (move_node.get_unit_offset() > 1): #check to see if the customer wants what the arcade is set to
-			var check = global.arcade_four_range_high - global.arcade_four_price #check if the arcade price is too high
+			if (global.town_select == "hollyhock"):
+				check = global.arcade_four_range_high - global.hollyhock_arcade_four_price #check if the arcade price is too high
 			if ((check <= 0) and (prediction_three < .75)):
 				price_check = false
 			else:
@@ -92,14 +96,14 @@ func _process(delta):
 
 func set_genre_type(): #sets the genre of the games based on the town
 	if global.town_select == "hollyhock":
-		if (global.station_four_selection == 0):
+		if (global.hollyhock_station_four_selection == 0):
 			genre_type = "none"
-		if (global.station_four_selection == 1):
+		if (global.hollyhock_station_four_selection == 1):
 			genre_type = "meta"
 			prediction_one = global.meta_prediction
-		if (global.station_four_selection == 2):
+		if (global.hollyhock_station_four_selection == 2):
 			genre_type = "classic"
 			prediction_two = global.classic_prediction
-		if (global.station_four_selection == 3):
+		if (global.hollyhock_station_four_selection == 3):
 			genre_type = "platformer"
 			prediction_three = global.platformer_prediction

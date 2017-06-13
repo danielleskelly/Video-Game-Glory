@@ -1,35 +1,23 @@
 extends Node2D
 
-var arcade_two_price
-var price_output
-var arcade_two_range
-var range_output
+onready var price_output = get_node("price_output")
+onready var range_output = get_node("range")
 
 func _ready():
-	price_output = get_node("price_output")
-	range_output = get_node("range")
 	set_process(true)
 
 func _process(delta):
-	get_globals()
 	range_output.clear()
-	range_output.add_text(str(arcade_two_range))
-
-func get_globals():
-	arcade_two_price = global.arcade_two_price
-	arcade_two_range = global.arcade_two_range_high
-	
-func _on_lower_button_down():
-	get_globals()
-	if (arcade_two_price > 0):
-		arcade_two_price = arcade_two_price - 1
+	range_output.add_text(str(global.arcade_two_range_low) + " - " + str(global.arcade_two_range_high))
+	if (global.town_select == "hollyhock"):
 		price_output.clear()
-		price_output.add_text(str(arcade_two_price))
-		global.arcade_two_price = arcade_two_price
+		price_output.add_text(str(global.hollyhock_arcade_two_price))
+
+func _on_lower_button_down():
+	if (global.town_select == "hollyhock"):
+		if (global.hollyhock_arcade_two_price > 0):
+			global.hollyhock_arcade_two_price = global.hollyhock_arcade_two_price - 1
 
 func _on_raise_button_down():
-	get_globals()
-	arcade_two_price = arcade_two_price + 1
-	price_output.clear()
-	price_output.add_text(str(arcade_two_price))
-	global.arcade_two_price = arcade_two_price
+	if (global.town_select == "hollyhock"):
+		global.hollyhock_arcade_two_price = global.hollyhock_arcade_two_price + 1

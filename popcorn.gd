@@ -35,6 +35,7 @@ func _on_lower_button_down():
 		global.purchase_total = global.purchase_total - global.daily_popcorn_price
 
 func _on_raise_button_down():
-	if (global.cash >= (global.purchase_total + global.popcorn_price)):
-		popcorn_purchase = popcorn_purchase + 1
-		global.purchase_total = global.purchase_total + global.daily_popcorn_price
+	if (global.town_select == "hollyhock"):
+		if (global.hollyhock_cash >= (global.purchase_total + global.daily_popcorn_price)):
+			popcorn_purchase = popcorn_purchase + 1
+			global.purchase_total = global.purchase_total + global.daily_popcorn_price

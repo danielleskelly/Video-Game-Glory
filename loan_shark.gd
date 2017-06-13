@@ -13,10 +13,11 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	credit_limit_output.clear()
-	credit_limit_output.add_text(str(global.credit_limit))
-	current_loan_output.clear()
-	current_loan_output.add_text(str(global.current_loan))
+	if (global.town_select == "hollyhock"):
+		credit_limit_output.clear()
+		credit_limit_output.add_text(str(global.credit_limit))
+		current_loan_output.clear()
+		current_loan_output.add_text(str(global.hollyhock_current_loan))
 	daily_interest_output.clear()
 	daily_interest_output.add_text(str(global.daily_interest))
 	borrow_output.clear()
@@ -37,15 +38,17 @@ func _on_pack_back_lower_button_down():
 		payback = payback - 1
 
 func _on_pack_back_raise_button_down():
-	if ((payback < global.current_loan) and (global.cash >= payback)):
-		payback = payback + 1
+	if (global.town_select == "hollyhock"):
+		if ((payback < global.hollyhock_current_loan) and (global.hollyhock_cash >= payback)):
+			payback = payback + 1
 
 func _on_confirm_button_down():
-	global.current_loan = global.current_loan - payback
-	global.credit_limit = global.credit_limit + payback
-	global.current_loan = global.current_loan + borrow
-	global.credit_limit = global.credit_limit - borrow
-	global.balance = global.balance + borrow
-	global.balance = global.balance - payback
+	if (global.town_select == "hollyhock"):
+		global.hollyhock_current_loan = global.hollyhock_current_loan - payback
+		global.credit_limit = global.credit_limit + payback
+		global.hollyhock_current_loan = global.hollyhock_current_loan + borrow
+		global.credit_limit = global.credit_limit - borrow
+		global.hollyhock_balance = global.hollyhock_balance + borrow
+		global.hollyhock_balance = global.hollyhock_balance - payback
 	borrow = 0
 	payback = 0
