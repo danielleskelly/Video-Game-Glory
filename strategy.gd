@@ -48,7 +48,8 @@ func _process(delta):
 		genre_three.set_hidden(true)
 
 func _on_start_day_button_up():
-	global.balance = global.balance - global.expenses
+	if (global.town_select == "hollyhock"):
+		global.hollyhock_balance = global.hollyhock_balance - global.hollyhock_expenses
 	global.sales_made = 0
 	global.sales_lost = 0
 	global.storefront_loss = 0

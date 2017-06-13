@@ -15,6 +15,8 @@ var concession_choice #allows the concessions to pass a boolean of choice
 var colliders #stores the colliding bodies
 var price_check #variable to store whether the price is too high
 
+
+
 func _ready():
 	set_process(true)
 	
@@ -150,22 +152,23 @@ func set_parents():
 
 #charges the player when they are done playing the game
 func arcade_purchase():
-	var parent_name = get_parent().get_parent().get_name()
-	if ((parent_name == "zone_one_to_exit") or (parent_name == "zone_one_to_conc")):
-		charge_price = global.arcade_one_price
-	if ((parent_name == "zone_two_to_exit") or (parent_name == "zone_two_to_conc")):
-		charge_price = global.arcade_two_price
-	if ((parent_name == "zone_three_to_exit") or (parent_name == "zone_three_to_conc")):
-		charge_price = global.arcade_three_price
-	if ((parent_name == "zone_four_to_exit") or (parent_name == "zone_four_to_conc")):
-		charge_price = global.arcade_four_price
-	if ((parent_name == "zone_five_to_exit") or (parent_name == "zone_five_to_conc")):
-		charge_price = global.arcade_five_price
-	if ((parent_name == "zone_six_to_exit") or (parent_name == "zone_six_to_conc")):
-		charge_price = global.arcade_six_price
-	global.balance = global.balance + charge_price
-	global.sales_made = global.sales_made + 1
-	global.income = global.income + charge_price
+	if (global.town_select == "hollyhock"):
+		var parent_name = get_parent().get_parent().get_name()
+		if ((parent_name == "zone_one_to_exit") or (parent_name == "zone_one_to_conc")):
+			charge_price = global.hollyhock_arcade_one_price
+		if ((parent_name == "zone_two_to_exit") or (parent_name == "zone_two_to_conc")):
+			charge_price = global.hollyhock_arcade_two_price
+		if ((parent_name == "zone_three_to_exit") or (parent_name == "zone_three_to_conc")):
+			charge_price = global.hollyhock_arcade_three_price
+		if ((parent_name == "zone_four_to_exit") or (parent_name == "zone_four_to_conc")):
+			charge_price = global.hollyhock_arcade_four_price
+		if ((parent_name == "zone_five_to_exit") or (parent_name == "zone_five_to_conc")):
+			charge_price = global.hollyhock_arcade_five_price
+		if ((parent_name == "zone_six_to_exit") or (parent_name == "zone_six_to_conc")):
+			charge_price = global.hollyhock_arcade_six_price
+		global.hollyhock_balance = global.hollyhock_balance + charge_price
+		global.sales_made = global.sales_made + 1
+		global.income = global.income + charge_price
 
 func _on_concessions_timer_timeout():
 	if (get_parent().get_parent().is_in_group("concessions") == true):
@@ -198,15 +201,16 @@ func _on_concessions_timer_timeout():
 #charges the customer for concessions if they go to concessions
 func concessions_purchase():
 	if (global.town_select == "hollyhock"):
-		if ((global.soda_count > 0) and (global.popcorn_count > 0)):
-			var check = global.arcade_one_range_high - global.arcade_one_price #check if the arcade price is too high
-			if (check <= 0):
+		if ((global.hollyhock_soda_count > 0) and (global.hollyhock_popcorn_count > 0)):
+			var check_soda = global.soda_range_high - global.hollyhock_soda_price #check if the soda price is too high
+			var check_popcorn = global.popcorn_range_high - global.hollyhock_popcorn_price #check if the popcorn price is too high
+			if ((check_soda <= 0) or (check_popcorn <= 0)):
 				price_check = false
 			else:
 				price_check = true
 			if (price_check == true): #if the price is not too high
-				charge_price = global.soda_price + global.popcorn_price
-				global.balance = global.balance + charge_price
-				global.soda_count = global.soda_count - 1
-				global.popcorn_count = global.popcorn_count - 1
+				charge_price = global.hollyhock_soda_price + global.hollyhock_popcorn_price
+				global.hollyhock_balance = global.hollyhock_balance + charge_price
+				global.hollyhock_soda_count = global.hollyhock_soda_count - 1
+				global.hollyhock_popcorn_count = global.hollyhock_popcorn_count - 1
 				global.income = global.income + charge_price

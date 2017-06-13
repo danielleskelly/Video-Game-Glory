@@ -32,6 +32,7 @@ func _on_lower_button_down():
 		global.purchase_total = global.purchase_total - global.daily_candy_price
 
 func _on_raise_button_down():
+	print("this must get changed to be town specific")	
 	if (global.cash >= (global.purchase_total + global.candy_price)):
 		candy_purchase = candy_purchase + 1
 		global.purchase_total = global.purchase_total + global.daily_candy_price

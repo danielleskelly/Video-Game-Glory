@@ -45,13 +45,13 @@ func _on_decent_button_button_down():
 			notifications.add_text("You already own that!")
 			notifications.show()
 		if (global.hollyhock_storefront_decent_key == false):
-			if (global.cash >= global.decent_price):
+			if (global.hollyhock_cash >= global.decent_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
 				select_price = global.decent_price
 				key_change = "hollyhock decent"
-			if (global.cash < global.decent_price):
+			if (global.hollyhock_cash < global.decent_price):
 				notifications.clear()
 				notifications.add_text("You can't afford that!")
 				notifications.show()
@@ -64,14 +64,14 @@ func _on_good_button_button_down():
 			notifications.add_text("You already own that!")
 			notifications.show()
 		if (global.hollyhock_storefront_good_key == false):
-			if (global.cash >= global.good_price):
+			if (global.hollyhock_cash >= global.good_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
 				select_price = global.good_price
 				print(select_price)
 				key_change = "hollyhock good"
-			if (global.cash < global.good_price):
+			if (global.hollyhock_cash < global.good_price):
 				notifications.clear()
 				notifications.add_text("You can't afford that!")
 				notifications.show()
@@ -84,13 +84,13 @@ func _on_great_button_button_down():
 			notifications.add_text("You already own that!")
 			notifications.show()
 		if (global.hollyhock_storefront_great_key == false):
-			if (global.cash >= global.great_price):
+			if (global.hollyhock_cash >= global.great_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
 				select_price = global.great_price
 				key_change = "hollyhock great"
-			if (global.cash < global.great_price):
+			if (global.hollyhock_cash < global.great_price):
 				notifications.clear()
 				notifications.add_text("You can't afford that!")
 				notifications.show()
@@ -104,19 +104,20 @@ func _on_best_button_button_down():
 			notifications.add_text("You already own that!")
 			notifications.show()
 		if (global.hollyhock_storefront_best_key == false):
-			if (global.cash >= global.best_price):
+			if (global.hollyhock_cash >= global.best_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
 				select_price = best_price
 				key_change = "hollyhock best"
-			if (global.cash < global.best_price):
+			if (global.hollyhock_cash < global.best_price):
 				notifications.clear()
 				notifications.add_text("You can't afford that!")
 				notifications.show()
 
 func _on_confirm_button_down():
-	global.balance = global.balance - select_price
+	if (global.town_select == "hollyhock"):
+		global.hollyhock_balance = global.hollyhock_balance - select_price
 	if (key_change == "hollyhock decent"):
 		global.hollyhock_storefront_decent_key = true
 	if (key_change == "hollyhock good"):
