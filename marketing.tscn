@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://marketing.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
 [ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://container.gd" type="Script" id=4]
-[ext_resource path="res://lower.png" type="Texture" id=5]
-[ext_resource path="res://raise.png" type="Texture" id=6]
+[ext_resource path="res://lower.png" type="Texture" id=4]
+[ext_resource path="res://raise.png" type="Texture" id=5]
 
 [node name="marketing" type="Node2D"]
 
@@ -57,7 +56,6 @@ visible_characters = -1
 
 transform/pos = Vector2( -0.716807, -8.50085 )
 transform/scale = Vector2( 0.536962, 0.354903 )
-script/script = ExtResource( 4 )
 
 [node name="lower" type="TextureButton" parent="container"]
 
@@ -73,7 +71,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 1, 2 )
 params/stretch_mode = 0
@@ -109,13 +107,13 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 6 )
+textures/normal = ExtResource( 5 )
 params/resize_mode = 0
 params/scale = Vector2( 1, 2 )
 params/stretch_mode = 0
 
-[connection signal="button_down" from="container/lower" to="container" method="_on_lower_button_down"]
+[connection signal="button_down" from="container/lower" to="." method="_on_lower_button_down"]
 
-[connection signal="button_down" from="container/raise" to="container" method="_on_raise_button_down"]
+[connection signal="button_down" from="container/raise" to="." method="_on_raise_button_down"]
 
 
