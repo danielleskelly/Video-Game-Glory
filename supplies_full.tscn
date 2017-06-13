@@ -1075,6 +1075,7 @@ __meta__ = {
 
 [node name="candy" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -0.406914, 19.933 )
 transform/scale = Vector2( 0.957029, 0.117766 )
 script/script = ExtResource( 11 )

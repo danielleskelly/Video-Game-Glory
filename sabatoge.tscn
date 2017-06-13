@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://contractors.gd" type="Script" id=1]
+[ext_resource path="res://sabatoge.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
 [ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://lower.png" type="Texture" id=4]
 [ext_resource path="res://raise.png" type="Texture" id=5]
 
-[node name="contractor" type="Node2D"]
+[node name="sabatoge" type="Node2D"]
 
 transform/pos = Vector2( 511.609, 299.032 )
 transform/scale = Vector2( 15.988, 9.34513 )

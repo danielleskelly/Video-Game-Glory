@@ -6,6 +6,7 @@
 
 [node name="competition" type="Node2D"]
 
+editor/display_folded = true
 transform/pos = Vector2( 511.609, 299.032 )
 transform/scale = Vector2( 15.988, 9.34513 )
 script/script = ExtResource( 1 )
@@ -33,21 +34,21 @@ bbcode/enabled = false
 bbcode/bbcode = "Cash:"
 visible_characters = -1
 
-[node name="net_worth" type="RichTextLabel" parent="."]
+[node name="marketshare" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
+margin/left = -28.0
 margin/top = -8.0
-margin/right = 184.0
+margin/right = 211.0
 margin/bottom = 45.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Net Worth:"
+bbcode/bbcode = "Marketshare:"
 visible_characters = -1
 
 [node name="sales_made" type="RichTextLabel" parent="."]
@@ -84,23 +85,6 @@ bbcode/enabled = false
 bbcode/bbcode = "Sales Lost:"
 visible_characters = -1
 
-[node name="market_share" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.05, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -29.0
-margin/top = 13.0
-margin/right = 230.0
-margin/bottom = 66.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Market Share:"
-visible_characters = -1
-
 [node name="player_name" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
@@ -118,7 +102,7 @@ bbcode/enabled = false
 bbcode/bbcode = "Player's Name"
 visible_characters = -1
 
-[node name="competition_one" type="RichTextLabel" parent="."]
+[node name="competitor_one" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
@@ -135,7 +119,7 @@ bbcode/enabled = false
 bbcode/bbcode = "Competitor #1"
 visible_characters = -1
 
-[node name="competition_two" type="RichTextLabel" parent="."]
+[node name="competitor_two" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
@@ -203,7 +187,7 @@ bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
-[node name="player_net_worth_output" type="RichTextLabel" parent="."]
+[node name="player_marketshare_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
@@ -220,7 +204,7 @@ bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
-[node name="comp_1_net_wort_output" type="RichTextLabel" parent="."]
+[node name="comp_1_marketshare_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
@@ -237,7 +221,7 @@ bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
-[node name="comp_2_net_worth_output" type="RichTextLabel" parent="."]
+[node name="comp_2_marketshare_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.05, 0.1 )
 focus/ignore_mouse = false
@@ -350,57 +334,6 @@ margin/left = 18.0
 margin/top = 6.0
 margin/right = 200.0
 margin/bottom = 58.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = ""
-visible_characters = -1
-
-[node name="player_market_share_output" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.05, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -11.0
-margin/top = 13.0
-margin/right = 171.0
-margin/bottom = 65.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = ""
-visible_characters = -1
-
-[node name="comp_1_market_share_output" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.05, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 3.0
-margin/top = 13.0
-margin/right = 185.0
-margin/bottom = 66.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = ""
-visible_characters = -1
-
-[node name="comp_2_market_share_output" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.05, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 18.0
-margin/top = 13.0
-margin/right = 200.0
-margin/bottom = 65.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false

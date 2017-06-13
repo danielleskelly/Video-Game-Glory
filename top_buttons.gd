@@ -15,7 +15,7 @@ onready var storefront = get_tree().get_current_scene().get_node("storefront")
 onready var repairman = get_tree().get_current_scene().get_node("repairman")
 onready var entertainment = get_tree().get_current_scene().get_node("entertainment")
 onready var deus = get_tree().get_current_scene().get_node("deus_ex_machina")
-onready var contractor = get_tree().get_current_scene().get_node("contractor")
+onready var sabatoge = get_tree().get_current_scene().get_node("sabatoge")
 onready var loans = get_tree().get_current_scene().get_node("loans")
 onready var research = get_tree().get_current_scene().get_node("research")
 onready var concessions_pricing = get_tree().get_current_scene().get_node("concessions_pricing")
@@ -73,7 +73,7 @@ func _process(delta):
 		locals.show()
 		locals_select = locals.get_selected()
 		if (locals_select == 0):
-			contractor.show()
+			sabatoge.show()
 		if (locals_select == 1):
 			loans.show()
 	if (select == 8):
@@ -94,7 +94,7 @@ func hide():
 	repairman.set_hidden(true)
 	entertainment.set_hidden(true)
 	deus.set_hidden(true)
-	contractor.set_hidden(true)
+	sabatoge.set_hidden(true)
 	loans.set_hidden(true)
 	research.set_hidden(true)
 	pricing.set_hidden(true)

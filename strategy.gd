@@ -12,6 +12,8 @@ onready var town_banner = get_tree().get_current_scene().get_node("town_banner")
 var genre_one_count
 var genre_two_count
 var genre_three_count
+var genre_two_key
+var genre_three_key
 
 func _ready():
 	set_process(true)
@@ -20,27 +22,29 @@ func _ready():
 func _process(delta):
 	if (global.town_select == "hollyhock"):
 		supply_one.get_child(2).clear()
-		supply_one.get_child(2).add_text(str(global.soda_count))
+		supply_one.get_child(2).add_text(str(global.hollyhock_soda_count))
 		supply_two.get_child(2).clear()
-		supply_two.get_child(2).add_text(str(global.popcorn_count))
+		supply_two.get_child(2).add_text(str(global.hollyhock_popcorn_count))
 		genre_one_count = global.meta_prediction
 		genre_two_count = global.classic_prediction
+		genre_two_key = global.hollyhock_genre_two_key
 		genre_three_count = global.platformer_prediction
+		genre_three_key = global.hollyhock_genre_three_key
 		town_banner.get_child(1).clear()
 		town_banner.get_child(1).add_text("Hollyhock")
 	genre_one.get_child(2).clear()
 	genre_one.get_child(2).add_text(str(int(genre_one_count * 100)))
-	if (global.genre_two_key == true):
+	if (genre_two_key == true):
 		genre_two.show()
 		genre_two.get_child(2).clear()
 		genre_two.get_child(2).add_text(str(int(genre_two_count * 100)))
-	if (global.genre_two_key == false):
+	if (genre_two_key == false):
 		genre_two.set_hidden(true)
-	if (global.genre_three_key == true):
+	if (genre_three_key == true):
 		genre_three.show()
 		genre_three.get_child(2).clear()
 		genre_three.get_child(2).add_text(str(int(genre_three_count * 100)))
-	if (global.genre_three_key == false):
+	if (genre_three_key == false):
 		genre_three.set_hidden(true)
 
 func _on_start_day_button_up():

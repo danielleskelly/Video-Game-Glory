@@ -1,35 +1,22 @@
 extends Node2D
 
-var energy_price
-var price_output
-var energy_range
-var range_output
+onready var price_output = get_node("price_output")
+onready var range_output = get_node("range")
 
 func _ready():
-	price_output = get_node("price_output")
-	range_output = get_node("range")
 	set_process(true)
 
 func _process(delta):
-	get_globals()
 	range_output.clear()
-	range_output.add_text(energy_range)
-
-func get_globals():
-	energy_price = global.energy_price
-	energy_range = global.energy_range
+	range_output.add_text(str(global.energy_range_low) + " - " + str(global.energy_range_high))
 	
 func _on_lower_button_down():
-	get_globals()
-	if (energy_price > 0):
-		energy_price = energy_price - 1
+	if (global.energy_price > 0):
+		global.energy_price = global.energy_price - 1
 		price_output.clear()
-		price_output.add_text(str(energy_price))
-		global.energy_price = energy_price
+		price_output.add_text(str(global.energy_price))
 
 func _on_raise_button_down():
-	get_globals()
-	energy_price = energy_price + 1
+	global.energy_price = global.energy_price + 1
 	price_output.clear()
-	price_output.add_text(str(energy_price))
-	global.energy_price = energy_price
+	price_output.add_text(str(global.energy_price))

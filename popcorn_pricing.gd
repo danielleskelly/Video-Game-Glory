@@ -1,35 +1,22 @@
 extends Node2D
 
-var popcorn_price
-var price_output
-var popcorn_range
-var range_output
+onready var price_output = get_node("price_output")
+onready var range_output = get_node("range")
 
 func _ready():
-	price_output = get_node("price_output")
-	range_output = get_node("range")
 	set_process(true)
 
 func _process(delta):
-	get_globals()
 	range_output.clear()
-	range_output.add_text(popcorn_range)
-
-func get_globals():
-	popcorn_price = global.popcorn_price
-	popcorn_range = global.popcorn_range
+	range_output.add_text(str(global.popcorn_range_low) + " - " + str(global.popcorn_range_high))
 	
 func _on_lower_button_down():
-	get_globals()
-	if (popcorn_price > 0):
-		popcorn_price = popcorn_price - 1
+	if (global.popcorn_price > 0):
+		global.popcorn_price = global.popcorn_price - 1
 		price_output.clear()
-		price_output.add_text(str(popcorn_price))
-		global.popcorn_price = popcorn_price
+		price_output.add_text(str(global.popcorn_price))
 
 func _on_raise_button_down():
-	get_globals()
-	popcorn_price = popcorn_price + 1
+	global.popcorn_price = global.popcorn_price + 1
 	price_output.clear()
-	price_output.add_text(str(popcorn_price))
-	global.popcorn_price = popcorn_price
+	price_output.add_text(str(global.popcorn_price))

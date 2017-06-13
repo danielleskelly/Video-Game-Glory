@@ -4,11 +4,10 @@ extends Node
 var player_name = "dutchess"
 
 #financials
-var balance = 1000
-var expenses = 10
-var cash = balance - expenses
+var hollyhock_balance = 1000
+var hollyhock_expenses = 10
 var income = 0
-var net_worth = 0
+var hollyhock_cash
 
 #towns
 var town_select = "hollyhock"
@@ -50,22 +49,55 @@ var waited_loss = 0
 var sabatoge_loss = 0
 
 #pricing
-var arcade_one_price = 10
-var arcade_two_price = 10
-var arcade_three_price = 10
-var arcade_four_price = 10
-var arcade_five_price = 10
-var arcade_six_price = 10
+var hollyhock_arcade_one_price = 10
+var hollyhock_arcade_two_price = 10
+var hollyhock_arcade_three_price = 10
+var hollyhock_arcade_four_price = 10
+var hollyhock_arcade_five_price = 10
+var hollyhock_arcade_six_price = 10
 var arcade_one_range_high = 20
 var arcade_two_range_high = 20
 var arcade_three_range_high = 20
 var arcade_four_range_high = 20
 var arcade_five_range_high = 20
 var arcade_six_range_high = 20
+var soda_range_high = 15
+var popcorn_range_high = 15
+var pizza_range_high = 15
+var freezie_range_high = 15
+var energy_range_high = 15
+var candy_range_high = 15
 
+#selling
+var arcade_one_range_low = 10
+var arcade_two_range_low = 10
+var arcade_three_range_low = 10
+var arcade_four_range_low = 10
+var arcade_five_range_low = 10
+var arcade_six_range_low = 10
+var soda_range_low = 5
+var popcorn_range_low = 5
+var pizza_range_low = 5
+var freezie_range_low = 5
+var energy_range_low = 5
+var candy_range_low = 5
+var hollyhock_soda_price = 0
+var hollyhock_popcorn_price = 0
+var pizza_price = 0
+var freezie_price = 0
+var energy_price = 0
+var candy_price = 0
 
-#sabatoge
-var sabatoge_total = 100
+#keys
+var hollyhock_station_three_key = true
+var hollyhock_station_four_key = true
+var hollyhock_station_five_key = true
+var hollyhock_station_six_key = true
+var hollyhock_plumber_key = false
+var hollyhock_yellowdot_key = true
+var hollyhock_vgg_key = true
+var hollyhock_genre_two_key = true
+var hollyhock_genre_three_key = false
 
 #predictions
 var meta_prediction = .55
@@ -75,52 +107,18 @@ var time_management_prediction = .58
 var platformer_prediction = .58
 var adventure_prediction = .58
 
-
-#selling
-var arcade_one_range_low = 10
-var arcade_two_range_low = 10
-var arcade_three_range_low = 10
-var arcade_four_range_low = 10
-var arcade_five_range_low = 10
-var arcade_six_range_low = 10
-var soda_price = 20
-var popcorn_price = 20
-var pizza_price = 0
-var freezie_price = 0
-var energy_price = 0
-var candy_price = 0
-var soda_range = "10-20"
-var popcorn_range = "10-20"
-var pizza_range = "10-20"
-var freezie_range = "10-20"
-var energy_range = "10-20"
-var candy_range = "10-20"
-
-#keys
-var station_three_key = true
-var station_four_key = true
-var station_five_key = true
-var station_six_key = true
-var plumber_key = false
-var yellowdot_key = true
-var vgg_key = true
-var genre_two_key = true
-var genre_three_key = false
-
 #competitors
 var competitor_one = "Blickblasters"
 var competitor_two = "Limestop"
 var one_cash = 0
 var two_cash = 0
-var one_networth = 0
-var two_networth = 0
 var one_sales_made = 0
 var two_sales_made = 0
 var one_sales_lost = 0
 var two_sales_lost = 0
-var player_marketshare = .73
-var competitor_one_marketshare = .02
-var competitor_two_marketshare = .25
+var hollyhock_player_marketshare = .73
+var hollyhock_competitor_one_marketshare = .02
+var hollyhock_competitor_two_marketshare = .25
 
 #buying/supplies
 var purchase_total = 0
@@ -131,10 +129,10 @@ var freezie_total = 0
 var energy_total = 0
 var candy_total = 0
 var energy_count = 0
-var popcorn_count = 50
+var hollyhock_popcorn_count = 50
 var candy_count = 0
 var pizza_count = 0
-var soda_count = 50
+var hollyhock_soda_count = 50
 var freezie_count = 0
 var daily_soda_price = 10
 var daily_popcorn_price = 5
@@ -149,9 +147,6 @@ var freezie_yesterday_used = 0
 var energy_yesterday_used = 0
 var candy_yesterday_used = 0
 
-#advertising
-var advertising = 20
-
 #loans
 var credit_limit = 3000
 var current_loan = 0
@@ -164,25 +159,42 @@ var good_price = 500
 var great_price = 750
 var best_price = 1000
 
+#research
+var hollyhock_research_fund = 0
+var hollyhock_days_left_research = hollyhock_research_total_one
+var hollyhock_research_spending = 1
+
+#advertising
+var hollyhock_advertising = 0
+
+#arcades
+var hollyhock_station_one_selection = 1
+var hollyhock_station_two_selection = 2
+var hollyhock_station_three_selection = 1
+var hollyhock_station_four_selection = 2
+var hollyhock_station_five_selection = 1
+var hollyhock_station_six_selection = 2
+
+
+
+
+#sabatoge
+var sabatoge_total = 100
+
+
+
+
 #sabatoge
 var sabatoge_fund = 0
 var days_left_sabatoge = sabatoge_total
 var sabatoge_spending = 1
 
-#research
-var research_fund = 0
-var days_left_research = hollyhock_research_total_one
-var research_spending = 0
 
-#arcades
-var station_one_selection = 1
-var station_two_selection = 2
-var station_three_selection = 1
-var station_four_selection = 2
-var station_five_selection = 1
-var station_six_selection = 2
+
 
 
 func _ready():
 	set_process(true)
-	pass
+
+func _process(delta):
+    hollyhock_cash = hollyhock_balance - hollyhock_expenses

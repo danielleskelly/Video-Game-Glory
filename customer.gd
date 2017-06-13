@@ -13,6 +13,7 @@ var charge_price #allows the price to adjust with the arcade the customer moves 
 var concession_choice #allows the concessions to pass a boolean of choice
 
 var colliders #stores the colliding bodies
+var price_check #variable to store whether the price is too high
 
 func _ready():
 	set_process(true)
@@ -198,10 +199,14 @@ func _on_concessions_timer_timeout():
 func concessions_purchase():
 	if (global.town_select == "hollyhock"):
 		if ((global.soda_count > 0) and (global.popcorn_count > 0)):
-			charge_price = global.soda_price + global.popcorn_price
-			global.balance = global.balance + charge_price
-			global.soda_count = global.soda_count - 1
-			global.popcorn_count = global.popcorn_count - 1
-			global.income = global.income + charge_price
-		if ((global.soda_count == 0) or (global.popcorn_count == 0)):
-			global.neutral = global.neutral + 1
+			var check = global.arcade_one_range_high - global.arcade_one_price #check if the arcade price is too high
+			if (check <= 0):
+				price_check = false
+			else:
+				price_check = true
+			if (price_check == true): #if the price is not too high
+				charge_price = global.soda_price + global.popcorn_price
+				global.balance = global.balance + charge_price
+				global.soda_count = global.soda_count - 1
+				global.popcorn_count = global.popcorn_count - 1
+				global.income = global.income + charge_price
