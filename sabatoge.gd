@@ -21,12 +21,20 @@ func _on_sabatoge_lower_button_down():
 		if (global.hollyhock_sabatoge_spending > 1):
 			global.hollyhock_sabatoge_spending = global.hollyhock_sabatoge_spending - 1
 			global.hollyhock_expenses = global.hollyhock_expenses - 1
-			global.hollyhock_days_left_sabatoge = global.sabatoge_total / global.hollyhock_sabatoge_spending
+			if (global.hollyhock_sabatoge_spending == 0):
+				var spending_stand_in = 1
+				global.hollyhock_days_left_sabatoge = global.sabatoge_total / spending_stand_in
+			if (global.hollyhock_sabatoge_spending > 0):
+				global.hollyhock_days_left_sabatoge = global.sabatoge_total / global.hollyhock_sabatoge_spending
 			
 func _on_sabatoge_raise_button_down():
 	if (global.town_select == "hollyhock"):
 		if (global.hollyhock_sabatoge_spending + 1 <= global.hollyhock_cash):
 			global.hollyhock_sabatoge_spending = global.hollyhock_sabatoge_spending + 1
 			global.hollyhock_expenses = global.hollyhock_expenses + 1
-			global.hollyhock_days_left_sabatoge = global.sabatoge_total / global.hollyhock_sabatoge_spending
+			if (global.hollyhock_sabatoge_spending == 0):
+				var spending_stand_in = 1
+				global.hollyhock_days_left_sabatoge = global.sabatoge_total / spending_stand_in
+			if (global.hollyhock_sabatoge_spending > 0):
+				global.hollyhock_days_left_sabatoge = global.sabatoge_total / global.hollyhock_sabatoge_spending
 	

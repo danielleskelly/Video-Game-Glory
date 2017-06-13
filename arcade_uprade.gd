@@ -120,10 +120,14 @@ func _on_confirm_button_down():
 		global.hollyhock_balance = global.hollyhock_balance - select_price
 	if (key_change == "hollyhock decent"):
 		global.hollyhock_arcade_decent_key = true
+		global.hollyhock_station_three_key= true
 	if (key_change == "hollyhock good"):
 		global.hollyhock_arcade_good_key = true
+		global.hollyhock_station_four_key= true
 	if (key_change == "hollyhock great"):
 		global.hollyhock_arcade_great_key = true
+		global.hollyhock_station_five_key= true
 	if (key_change == "hollyhock best"):
 		global.hollyhock_arcade_best_key = true
+		global.hollyhock_station_six_key= true
 	notifications.clear()

@@ -65,7 +65,7 @@ func _ready():
 
 
 func _process(delta):
-	if (global.town_select == "hollyhock"): 	#display supplies based on the town and keys
+	if (global.town_select == "hollyhock"):
 		supply_one.get_child(2).clear()
 		supply_one.get_child(2).add_text(str(global.hollyhock_soda_count))
 		supply_two.get_child(2).clear()
@@ -92,7 +92,15 @@ func customer_math():
 	player_marketing_adjustment = player_marketshare_effect + marketshare_adjustment #adjusts player marketshare up for marketing
 	comp_one_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2 #adjusts competitor one marketshare down by half for marketing
 	comp_two_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2 #adjusts competitor one marketshare down by half for marketing
-	print("competitors sales made and sales lost")
+	#sets the competitors sales made and sales lost
+	randomize()
+	global.one_sales_made = range(0, comp_one_adjusted_marketshare + 1)[randi()%range(0, comp_one_adjusted_marketshare + 1).size()]
+	global.one_sales_lost = comp_one_adjusted_marketshare - global.one_sales_made
+	global.one_cash = global.one_sales_made * 10
+	global.two_sales_made = range(0, comp_two_adjusted_marketshare + 1)[randi()%range(0, comp_two_adjusted_marketshare + 1).size()]
+	global.two_sales_lost = comp_two_adjusted_marketshare - global.two_sales_made
+	global.two_cash = global.two_sales_made * 10
+	#completes the player's specific calculations
 	player_prediction_one = player_marketing_adjustment * prediction_one_effect #adjusts the number of customers that will enter the store based on the predicted percentage of the population that is interested in the first available genre
 	#for each potential customer this for-loop will check if the lack of storefront upgrades turns any customers away
 	for x in range(0, player_prediction_one + 1):
@@ -134,24 +142,24 @@ func customer_math():
 	
 func storefront_check(): #checks for upgrades on the storefront and creates an array of success or failure to test against
 	if (storefront_best_key == true):
-		var storefront_chance = [true, true, true, true, true]
-		randomize(storefront_chance)
+		randomize()
+		var storefront_chance = [true, true, true, true, true, true, true, true, true, true, true]
 		storefront_choice = storefront_chance[randi() % storefront_chance.size()]
 	elif (storefront_great_key == true):
-		var storefront_chance = [true, true, true, true, false]
-		randomize(storefront_chance)
+		randomize()
+		var storefront_chance = [true, true, true, true, false, true, true, true, true, false]
 		storefront_choice = storefront_chance[randi() % storefront_chance.size()]
 	elif (storefront_good_key == true):
-		var storefront_chance = [true, true, true, false, false]
-		randomize(storefront_chance)
+		randomize()
+		var storefront_chance = [true, true, true, false, false, true, true, true, false, false]
 		storefront_choice = storefront_chance[randi() % storefront_chance.size()]
 	elif (storefront_decent_key == true):
-		var storefront_chance = [true, true, false, false, false]
-		randomize(storefront_chance)
+		randomize()
+		var storefront_chance = [true, true, false, false, false, true, true, false, false, false]
 		storefront_choice = storefront_chance[randi() % storefront_chance.size()]
 	elif (storefront_worst_key == true):
-		var storefront_chance = [true, false, false, false, false]
-		randomize(storefront_chance)
+		randomize()
+		var storefront_chance = [true, false, false, false, false, true, false, false, false, false, false]
 		storefront_choice = storefront_chance[randi() % storefront_chance.size()]
 
 func _on_prediction_one_timer_timeout(): #request to create another prediction one customer
@@ -226,6 +234,9 @@ func _on_day_timer_timeout(): #day is complete
 	new_prediction_two = rand_range(0, 1 - new_prediction_one)
 	new_prediction_three = rand_range(0, 1 - (new_prediction_one + new_prediction_two))
 	if (global.town_select == "hollyhock"):
+		randomize()
+		global.daily_soda_price = range(global.soda_range_low, global.soda_range_high + 1)[randi()%range(global.soda_range_low, global.soda_range_high + 1).size()]
+		global.daily_popcorn_price = range(global.popcorn_range_low, global.popcorn_range_high + 1)[randi()%range(global.popcorn_range_low, global.popcorn_range_high + 1).size()]
 		global.meta_prediction = new_prediction_one
 		global.classic_prediction = new_prediction_two
 		global.platformer_prediction = new_prediction_three
@@ -233,10 +244,16 @@ func _on_day_timer_timeout(): #day is complete
 			global.hollyhock_days_left_research = global.hollyhock_days_left_research - 1
 			global.hollyhock_research_fund = global.hollyhock_research_fund + global.hollyhock_research_spending
 		if (global.hollyhock_days_left_research - 1 == 0):
-			print("research open success")
-		if (global.hollyhock_days_left_sabatoge - 1 > 0):
-			global.hollyhock_days_left_sabatoge = global.hollyhock_days_left_sabatoge - 1
-			global.hollyhock_sabatoge_fund = global.hollyhock_sabatoge_fund + global.hollyhock_sabatoge_spending
-		if (global.hollyhock_days_left_sabatoge - 1 == 0):
-			print("sabatoge open success")
+			if (global.hollyhock_genre_two_key == false):
+				global.hollyhock_genre_two_key = true
+				global.hollyhock_research_fund = 0
+				global.hollyhock_research_spending = 0
+		if ((global.sales_made > global.sales_lost) and (global.hollyhock_cash > 100)):
+			global.hollyhock_player_marketshare = global.hollyhock_player_marketshare + .2
+			global.hollyhock_competitor_one_marketshare = global.hollyhock_competitor_one_marketshare - .1
+			global.hollyhock_competitor_two_marketshare = global.hollyhock_competitor_two_marketshare - .1
+		if ((global.sales_made > global.sales_lost) or (global.hollyhock_cash > 100)):
+			global.hollyhock_player_marketshare = global.hollyhock_player_marketshare + .1
+			global.hollyhock_competitor_one_marketshare = global.hollyhock_competitor_one_marketshare - .05
+			global.hollyhock_competitor_two_marketshare = global.hollyhock_competitor_two_marketshare - .05
 	get_tree().change_scene("res://strategy.tscn")

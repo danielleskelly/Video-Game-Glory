@@ -3,6 +3,7 @@ extends RigidBody2D
 #get the timer nodes
 onready var waiting_timer = get_node("waiting_timer")
 onready var concessions_timer = get_node("concessions_timer")
+onready var exit_timer = get_node("exit_timer")
 
 #gets the move_node to go from old parent to new parent when changing paths
 var old_parent
@@ -35,7 +36,7 @@ func _process(delta):
 func _on_waiting_timer_timeout():
 	#if the customer is in the arcade this moves them to concessions or the exit
 	if (get_parent().get_parent().is_in_group("arcade") == true):
-		var concession_chance = [true, false, false, false]
+		var concession_chance = [true, true, true, false]
 		randomize(concession_chance)
 		concession_choice = concession_chance[randi() % concession_chance.size()]
 		set_parents()
@@ -54,9 +55,7 @@ func _on_waiting_timer_timeout():
 		new_parent.add_child(move_node)
 		global.sales_lost = global.sales_lost + 1
 		global.waited_loss = global.waited_loss + 1
-	#if the customer is at an exit free them from the game
-	if (get_parent().get_parent().is_in_group("exit") == true):
-		get_parent().queue_free()
+
 
 func set_parents():
 	if ((get_parent().get_parent().get_name() == "zone_one_path") and (concession_choice == true)):
@@ -66,7 +65,7 @@ func set_parents():
 		move_node = get_tree().get_current_scene().get_node("zone_one_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_one").add_to_group("free")
 	if ((get_parent().get_parent().get_name() == "zone_one_path") and (concession_choice == false)):
-		waiting_timer.start()
+		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_one_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_one_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_one_path").get_child(0)
@@ -81,7 +80,7 @@ func set_parents():
 		move_node = get_tree().get_current_scene().get_node("zone_two_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_two").add_to_group("free")
 	if ((get_parent().get_parent().get_name() == "zone_two_path") and (concession_choice == false)):
-		waiting_timer.start()
+		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_two_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_two_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_two_path").get_child(0)
@@ -96,7 +95,7 @@ func set_parents():
 		move_node = get_tree().get_current_scene().get_node("zone_three_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_three").add_to_group("free")
 	if ((get_parent().get_parent().get_name() == "zone_three_path") and (concession_choice == false)):
-		waiting_timer.start()
+		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_three_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_three_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_three_path").get_child(0)
@@ -111,7 +110,7 @@ func set_parents():
 		move_node = get_tree().get_current_scene().get_node("zone_four_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_four").add_to_group("free")
 	if ((get_parent().get_parent().get_name() == "zone_four_path") and (concession_choice == false)):
-		waiting_timer.start()
+		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_four_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_four_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_four_path").get_child(0)
@@ -126,7 +125,7 @@ func set_parents():
 		move_node = get_tree().get_current_scene().get_node("zone_five_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_five").add_to_group("free")
 	if ((get_parent().get_parent().get_name() == "zone_five_path") and (concession_choice == false)):
-		waiting_timer.start()
+		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_five_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_five_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_five_path").get_child(0)
@@ -141,7 +140,7 @@ func set_parents():
 		move_node = get_tree().get_current_scene().get_node("zone_six_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_six").add_to_group("free")
 	if ((get_parent().get_parent().get_name() == "zone_six_path") and (concession_choice == false)):
-		waiting_timer.start()
+		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_six_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_six_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_six_path").get_child(0)
@@ -191,13 +190,12 @@ func _on_concessions_timer_timeout():
 			old_parent = get_tree().get_current_scene().get_node("zone_six_to_conc")
 			move_node = get_tree().get_current_scene().get_node("zone_six_to_conc").get_child(0)
 		new_parent = get_tree().get_current_scene().get_node("concessions_to_exit")
+		exit_timer.start()
 		old_parent.remove_child(old_parent.get_child(0))
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
 		concessions_purchase()
-	if ((get_parent().get_parent().is_in_group("exit") == true) and (get_parent().get_offset() > 1)):
-		get_parent().queue_free()
-
+		
 #charges the customer for concessions if they go to concessions
 func concessions_purchase():
 	if (global.town_select == "hollyhock"):
@@ -213,4 +211,9 @@ func concessions_purchase():
 				global.hollyhock_balance = global.hollyhock_balance + charge_price
 				global.hollyhock_soda_count = global.hollyhock_soda_count - 1
 				global.hollyhock_popcorn_count = global.hollyhock_popcorn_count - 1
+				global.soda_yesterday_used = global.soda_yesterday_used + 1
+				global.popcorn_yesterday_used = global.popcorn_yesterday_used + 1
 				global.income = global.income + charge_price
+
+func _on_exit_timer_timeout():
+	get_parent().queue_free()

@@ -21,6 +21,13 @@ func _ready():
 	
 func _process(delta):
 	if (global.town_select == "hollyhock"):
+		if ((global.hollyhock_cash - global.hollyhock_expenses) < 0):
+			if (global.hollyhock_expenses > 0):
+				print("Lower expenses to save money!")
+			else:
+				print("Game Over!")
+		if (global.hollyhock_player_marketshare >= .75):
+			print("Popup you completed level Hollyhock!")
 		supply_one.get_child(2).clear()
 		supply_one.get_child(2).add_text(str(global.hollyhock_soda_count))
 		supply_two.get_child(2).clear()
@@ -50,6 +57,11 @@ func _process(delta):
 func _on_start_day_button_up():
 	if (global.town_select == "hollyhock"):
 		global.hollyhock_balance = global.hollyhock_balance - global.hollyhock_expenses
+		global.soda_yesterday_used = 0
+		global.popcorn_yesterday_used = 0
+		if (global.hollyhock_current_loan > 0):
+			var daily_interest_charge = global.hollyhock_current_loan * global.daily_interest
+			global.hollyhock_balance = global.hollyhock_balance - int(daily_interest_charge)
 	global.sales_made = 0
 	global.sales_lost = 0
 	global.storefront_loss = 0
@@ -57,4 +69,5 @@ func _on_start_day_button_up():
 	global.waited_loss = 0
 	global.sabatoge_loss= 0
 	global.income = 0
+	print("Pop up asks if player would like to play the day or skip the day. If they skip then do the calculations for them")
 	get_tree().change_scene("res://time_management.tscn")

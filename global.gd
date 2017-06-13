@@ -4,8 +4,8 @@ extends Node
 var player_name = "dutchess"
 
 #financials
-var hollyhock_balance = 1000
-var hollyhock_expenses = 10
+var hollyhock_balance = 500
+var hollyhock_expenses = 0
 var income = 0
 var hollyhock_cash
 
@@ -49,12 +49,12 @@ var waited_loss = 0
 var sabatoge_loss = 0
 
 #pricing
-var hollyhock_arcade_one_price = 10
-var hollyhock_arcade_two_price = 10
-var hollyhock_arcade_three_price = 10
-var hollyhock_arcade_four_price = 10
-var hollyhock_arcade_five_price = 10
-var hollyhock_arcade_six_price = 10
+var hollyhock_arcade_one_price = 0
+var hollyhock_arcade_two_price = 0
+var hollyhock_arcade_three_price = 0
+var hollyhock_arcade_four_price = 0
+var hollyhock_arcade_five_price = 0
+var hollyhock_arcade_six_price = 0
 var arcade_one_range_high = 20
 var arcade_two_range_high = 20
 var arcade_three_range_high = 20
@@ -89,14 +89,14 @@ var energy_price = 0
 var candy_price = 0
 
 #keys
-var hollyhock_station_three_key = true
-var hollyhock_station_four_key = true
-var hollyhock_station_five_key = true
-var hollyhock_station_six_key = true
+var hollyhock_station_three_key = false
+var hollyhock_station_four_key = false
+var hollyhock_station_five_key = false
+var hollyhock_station_six_key = false
 var hollyhock_plumber_key = false
-var hollyhock_yellowdot_key = true
+var hollyhock_yellowdot_key = false
 var hollyhock_vgg_key = true
-var hollyhock_genre_two_key = true
+var hollyhock_genre_two_key = false
 var hollyhock_genre_three_key = false
 
 #predictions
@@ -116,9 +116,9 @@ var one_sales_made = 0
 var two_sales_made = 0
 var one_sales_lost = 0
 var two_sales_lost = 0
-var hollyhock_player_marketshare = .73
-var hollyhock_competitor_one_marketshare = .02
-var hollyhock_competitor_two_marketshare = .25
+var hollyhock_player_marketshare = .1
+var hollyhock_competitor_one_marketshare = .63
+var hollyhock_competitor_two_marketshare = .46
 
 #buying/supplies
 var purchase_total = 0
@@ -129,10 +129,10 @@ var freezie_total = 0
 var energy_total = 0
 var candy_total = 0
 var energy_count = 0
-var hollyhock_popcorn_count = 50
+var hollyhock_popcorn_count = 0
 var candy_count = 0
 var pizza_count = 0
-var hollyhock_soda_count = 50
+var hollyhock_soda_count = 0
 var freezie_count = 0
 var daily_soda_price = 10
 var daily_popcorn_price = 5
@@ -162,7 +162,7 @@ var best_price = 1000
 #research
 var hollyhock_research_fund = 0
 var hollyhock_days_left_research = hollyhock_research_total_one
-var hollyhock_research_spending = 1
+var hollyhock_research_spending = 0
 
 #advertising
 var hollyhock_advertising = 0
@@ -179,7 +179,7 @@ var hollyhock_station_six_selection = 2
 var sabatoge_total = 100
 var hollyhock_sabatoge_fund = 0
 var hollyhock_days_left_sabatoge = sabatoge_total
-var hollyhock_sabatoge_spending = 1
+var hollyhock_sabatoge_spending = 0
 
 func _ready():
 	set_process(true)

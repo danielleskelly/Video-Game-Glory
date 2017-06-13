@@ -194,8 +194,17 @@ wait_time = 7.5
 one_shot = true
 autostart = false
 
+[node name="exit_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 7.5
+one_shot = true
+autostart = false
+
 [connection signal="timeout" from="waiting_timer" to="." method="_on_waiting_timer_timeout"]
 
 [connection signal="timeout" from="concessions_timer" to="." method="_on_concessions_timer_timeout"]
+
+[connection signal="timeout" from="exit_timer" to="." method="_on_exit_timer_timeout"]
 
 

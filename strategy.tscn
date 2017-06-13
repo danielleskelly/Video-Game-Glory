@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=1]
+[gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
@@ -22,8 +22,7 @@
 [ext_resource path="res://entertainment.tscn" type="PackedScene" id=20]
 [ext_resource path="res://deus.tscn" type="PackedScene" id=21]
 [ext_resource path="res://arcade_uprade.tscn" type="PackedScene" id=22]
-[ext_resource path="res://sabatoge.tscn" type="PackedScene" id=23]
-[ext_resource path="res://genres.tscn" type="PackedScene" id=24]
+[ext_resource path="res://genres.tscn" type="PackedScene" id=23]
 
 [node name="strategy" type="Node2D"]
 
@@ -300,11 +299,13 @@ transform/scale = Vector2( 0.646566, 0.388286 )
 
 [node name="games" parent="." instance=ExtResource( 17 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.37637, 4.72096 )
 transform/scale = Vector2( 0.664251, 0.415947 )
 
 [node name="arcade_pricing" parent="." instance=ExtResource( 18 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.12449, 4.79634 )
 transform/scale = Vector2( 0.651311, 0.401223 )
 
@@ -328,26 +329,21 @@ transform/scale = Vector2( 0.641662, 0.387969 )
 
 [node name="arcade_upgrade" parent="." instance=ExtResource( 22 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.44103, 4.77932 )
 transform/scale = Vector2( 0.664878, 0.418243 )
 
-[node name="sabatoge" parent="." instance=ExtResource( 23 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.4278, 4.73673 )
-transform/scale = Vector2( 0.661837, 0.410758 )
-
-[node name="genre_one" parent="." instance=ExtResource( 24 )]
+[node name="genre_one" parent="." instance=ExtResource( 23 )]
 
 transform/pos = Vector2( 21.3631, -23.1414 )
 transform/scale = Vector2( 0.052631, 0.0884332 )
 
-[node name="genre_two" parent="." instance=ExtResource( 24 )]
+[node name="genre_two" parent="." instance=ExtResource( 23 )]
 
 transform/pos = Vector2( 25.2968, -23.2592 )
 transform/scale = Vector2( 0.052631, 0.0884332 )
 
-[node name="genre_three" parent="." instance=ExtResource( 24 )]
+[node name="genre_three" parent="." instance=ExtResource( 23 )]
 
 transform/pos = Vector2( 29.0925, -23.2592 )
 transform/scale = Vector2( 0.052631, 0.0884332 )
