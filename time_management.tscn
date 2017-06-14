@@ -18,7 +18,7 @@
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -27.7428, 26.9301, 0, 0, 0, 0, -27.7428, -22.8138, 0, 0, 0, 0, -21.4972, -22.8138, 0, 0, 0, 0, -21.4972, 22.9749, 0, 0, 0, 0, -14.7162, 23.127, 0, 0, 0, 0, -15.0579, -25.3828, 0, 0, 0, 0, -10.5997, -25.3828 )
+"points": Vector2Array( 0, 0, 0, 0, -29.2748, 33.9415, 0, 0, 0, 0, -29.2748, -26.0326, 0, 0, 0, 0, -21.731, -25.8881, 0, 0, 0, 0, -21.731, 25.9931, 0, 0, 0, 0, -14.1871, 25.9931, 0, 0, 0, 0, -14.1871, -25.4546, 0, 0, 0, 0, -10.6271, -25.4546 )
 }
 
 [sub_resource type="Curve2D" id=2]
@@ -181,12 +181,9 @@ __meta__ = {
 
 [node name="queue" type="Sprite" parent="."]
 
-transform/pos = Vector2( -20.3153, 1.33645 )
-transform/scale = Vector2( 0.0420774, 0.0965532 )
+transform/pos = Vector2( -20.9214, 0.708434 )
+transform/scale = Vector2( 0.0480358, 0.102319 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="arcade_zone_one" parent="." groups=[
 "free",
@@ -259,7 +256,7 @@ transform/scale = Vector2( 0.0555162, 0.0839192 )
 [node name="day_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 240.0
+wait_time = 100.0
 one_shot = true
 autostart = true
 

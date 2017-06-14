@@ -21,8 +21,12 @@ func _process(delta):
 		expenses_output.add_text(str(global.hollyhock_expenses))
 		cash_output.clear()
 		cash_output.add_text(str(global.hollyhock_cash))
-		marketshare_output.clear()
-		marketshare_output.add_text("%" + str(int(global.hollyhock_player_marketshare * 100)))
+		if (global.hollyhock_player_marketshare > 1):
+			marketshare_output.clear()
+			marketshare_output.add_text("%100")
+		else:
+			marketshare_output.clear()
+			marketshare_output.add_text("%" + str(int(global.hollyhock_player_marketshare * 100)))
 		sales_made_output.clear()
 		sales_made_output.add_text(str(global.sales_made))
 		sales_lost_output.clear()

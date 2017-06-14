@@ -19,15 +19,15 @@ func _process(delta):
 		if (global.hollyhock_research_one_key == false):
 			if (global.hollyhock_research_spending == 0):
 				var spending_stand_in = 1
-				global.hollyhock_days_left_research = global.hollyhock_research_total_one / spending_stand_in
+				global.hollyhock_days_left_research = global.hollyhock_research_total_one / (spending_stand_in + global.hollyhock_research_fund)
 			if (global.hollyhock_research_spending > 0):
-				global.hollyhock_days_left_research = global.hollyhock_research_total_one / global.hollyhock_research_spending
+				global.hollyhock_days_left_research = global.hollyhock_research_total_one / (global.hollyhock_research_spending + global.hollyhock_research_fund)
 		if ((global.hollyhock_research_one_key == true) and (global.hollyhock_research_two_key == false)):
 			if (global.hollyhock_research_spending == 0):
 				var spending_stand_in = 1
-				global.hollyhock_days_left_research = global.hollyhock_research_total_two / spending_stand_in
+				global.hollyhock_days_left_research = global.hollyhock_research_total_two / (spending_stand_in + global.hollyhock_research_fund)
 			if (global.hollyhock_research_spending > 0):
-				global.hollyhock_days_left_research = global.hollyhock_research_total_two / global.hollyhock_research_spending
+				global.hollyhock_days_left_research = global.hollyhock_research_total_two / (global.hollyhock_research_spending + global.hollyhock_research_fund)
 		if ((global.hollyhock_research_one_key == true) and (global.hollyhock_research_two_key == true)):
 			block = true
 	days_left_output.clear()

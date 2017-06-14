@@ -34,11 +34,6 @@ var hollyhock_entertainment_decent_key = false
 var hollyhock_entertainment_good_key = false
 var hollyhock_entertainment_great_key = false
 var hollyhock_entertainment_best_key = false
-var hollyhock_deus_worst_key = true
-var hollyhock_deus_decent_key = false
-var hollyhock_deus_good_key = false
-var hollyhock_deus_great_key = false
-var hollyhock_deus_best_key = false
 
 #customers
 var sales_lost = 0
@@ -110,8 +105,8 @@ var adventure_prediction = .58
 #competitors
 var competitor_one = "Blickblasters"
 var competitor_two = "Limestop"
-var one_cash = 0
-var two_cash = 0
+var one_cash = 233
+var two_cash = 484
 var one_sales_made = 0
 var two_sales_made = 0
 var one_sales_lost = 0
@@ -122,8 +117,8 @@ var hollyhock_competitor_two_marketshare = .46
 
 #buying/supplies
 var purchase_total = 0
-var soda_total = 0
-var popcorn_total = 0
+var soda_total = 10
+var popcorn_total = 10
 var pizza_total = 0
 var freezie_total = 0
 var energy_total = 0
@@ -134,8 +129,8 @@ var candy_count = 0
 var pizza_count = 0
 var hollyhock_soda_count = 0
 var freezie_count = 0
-var daily_soda_price = 10
-var daily_popcorn_price = 5
+var daily_soda_price = 4
+var daily_popcorn_price = 4
 var daily_pizza_price = 0
 var daily_freezie_price = 0
 var daily_energy_price = 30
@@ -169,17 +164,23 @@ var hollyhock_advertising = 0
 
 #arcades
 var hollyhock_station_one_selection = 1
-var hollyhock_station_two_selection = 2
-var hollyhock_station_three_selection = 1
-var hollyhock_station_four_selection = 2
-var hollyhock_station_five_selection = 1
-var hollyhock_station_six_selection = 2
+var hollyhock_station_two_selection = 1
+var hollyhock_station_three_selection = 0
+var hollyhock_station_four_selection = 0
+var hollyhock_station_five_selection = 0
+var hollyhock_station_six_selection = 0
 
 #sabatoge
-var sabatoge_total = 100
-var hollyhock_sabatoge_fund = 0
-var hollyhock_days_left_sabatoge = sabatoge_total
-var hollyhock_sabatoge_spending = 0
+
+
+#tutorial
+var tutorial_start = false
+var tutorial_title_box = false
+var tutorial_prediction_box = false
+var tutorial_supplies_box = false
+var tutorial_finances_box = false
+
+
 
 func _ready():
 	set_process(true)

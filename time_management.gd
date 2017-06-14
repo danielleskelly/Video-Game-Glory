@@ -95,10 +95,10 @@ func customer_math():
 	#sets the competitors sales made and sales lost
 	randomize()
 	global.one_sales_made = range(0, comp_one_adjusted_marketshare + 1)[randi()%range(0, comp_one_adjusted_marketshare + 1).size()]
-	global.one_sales_lost = comp_one_adjusted_marketshare - global.one_sales_made
+	global.one_sales_lost = int(comp_one_adjusted_marketshare - global.one_sales_made)
 	global.one_cash = global.one_sales_made * 10
 	global.two_sales_made = range(0, comp_two_adjusted_marketshare + 1)[randi()%range(0, comp_two_adjusted_marketshare + 1).size()]
-	global.two_sales_lost = comp_two_adjusted_marketshare - global.two_sales_made
+	global.two_sales_lost = int(comp_two_adjusted_marketshare - global.two_sales_made)
 	global.two_cash = global.two_sales_made * 10
 	#completes the player's specific calculations
 	player_prediction_one = player_marketing_adjustment * prediction_one_effect #adjusts the number of customers that will enter the store based on the predicted percentage of the population that is interested in the first available genre
@@ -110,7 +110,7 @@ func customer_math():
 		if (storefront_choice == false): #if it does they are added to the count of lost customers
 			global.sales_lost = global.sales_lost + 1
 			global.storefront_loss = global.storefront_loss + 1
-	prediction_one_time = 180 / int(total_customers) #the total number of customers who want the first prediction genre are spread out across the total time for the day
+	prediction_one_time = 60 / int(total_customers) #the total number of customers who want the first prediction genre are spread out across the total time for the day
 	prediction_one_timer.set_wait_time(prediction_one_time)
 	prediction_one_timer.start() #and the timer that will create the customers is started
 	#then if the second genre is available it performs the actions from prediction forward for the second genre
@@ -123,7 +123,7 @@ func customer_math():
 			if (storefront_choice == false):
 				global.sales_lost = global.sales_lost + 1
 				global.storefront_loss = global.storefront_loss + 1
-		prediction_two_time = 180 / int(total_customers)
+		prediction_two_time = 60 / int(total_customers)
 		prediction_two_timer.set_wait_time(prediction_two_time)
 		prediction_two_timer.start()
 	#and again for the third genre
@@ -136,7 +136,7 @@ func customer_math():
 			if (storefront_choice == false):
 				global.sales_lost = global.sales_lost + 1
 				global.storefront_loss = global.storefront_loss + 1
-		prediction_three_time = 180 / int(total_customers)
+		prediction_three_time = 60 / int(total_customers)
 		prediction_three_timer.set_wait_time(prediction_three_time)
 		prediction_three_timer.start()
 	
@@ -230,9 +230,10 @@ func entertainment_time_check(): #sets how long a customer is willing to wait in
 			wait_time = 20
 
 func _on_day_timer_timeout(): #day is complete
-	new_prediction_one = rand_range(0, 1)
-	new_prediction_two = rand_range(0, 1 - new_prediction_one)
-	new_prediction_three = rand_range(0, 1 - (new_prediction_one + new_prediction_two))
+	randomize()
+	new_prediction_one = rand_range(.15, 1)
+	new_prediction_two = rand_range(.15, 1 - new_prediction_one)
+	new_prediction_three = rand_range(.15, 1 - (new_prediction_one + new_prediction_two))
 	if (global.town_select == "hollyhock"):
 		randomize()
 		global.daily_soda_price = range(global.soda_range_low, global.soda_range_high + 1)[randi()%range(global.soda_range_low, global.soda_range_high + 1).size()]
@@ -240,20 +241,91 @@ func _on_day_timer_timeout(): #day is complete
 		global.meta_prediction = new_prediction_one
 		global.classic_prediction = new_prediction_two
 		global.platformer_prediction = new_prediction_three
-		if (global.hollyhock_days_left_research - 1 > 0):
-			global.hollyhock_days_left_research = global.hollyhock_days_left_research - 1
-			global.hollyhock_research_fund = global.hollyhock_research_fund + global.hollyhock_research_spending
-		if (global.hollyhock_days_left_research - 1 == 0):
-			if (global.hollyhock_genre_two_key == false):
-				global.hollyhock_genre_two_key = true
-				global.hollyhock_research_fund = 0
-				global.hollyhock_research_spending = 0
-		if ((global.sales_made > global.sales_lost) and (global.hollyhock_cash > 100)):
-			global.hollyhock_player_marketshare = global.hollyhock_player_marketshare + .2
-			global.hollyhock_competitor_one_marketshare = global.hollyhock_competitor_one_marketshare - .1
-			global.hollyhock_competitor_two_marketshare = global.hollyhock_competitor_two_marketshare - .1
-		if ((global.sales_made > global.sales_lost) or (global.hollyhock_cash > 100)):
-			global.hollyhock_player_marketshare = global.hollyhock_player_marketshare + .1
-			global.hollyhock_competitor_one_marketshare = global.hollyhock_competitor_one_marketshare - .05
-			global.hollyhock_competitor_two_marketshare = global.hollyhock_competitor_two_marketshare - .05
+		if (global.hollyhock_player_marketshare == 1):
+			pass
+		else:
+			if ((global.hollyhock_competitor_one_marketshare > 0) and (global.hollyhock_competitor_two_marketshare > 0)):
+				if ((global.sales_made > global.sales_lost) and (global.hollyhock_cash > 100)):
+					global.hollyhock_player_marketshare = global.hollyhock_player_marketshare + .2
+					global.hollyhock_competitor_one_marketshare = global.hollyhock_competitor_one_marketshare - .1
+					global.hollyhock_competitor_two_marketshare = global.hollyhock_competitor_two_marketshare - .1
+				elif ((global.sales_made > global.sales_lost) or (global.hollyhock_cash > 100)):
+					global.hollyhock_player_marketshare = global.hollyhock_player_marketshare + .1
+					global.hollyhock_competitor_one_marketshare = global.hollyhock_competitor_one_marketshare - .05
+					global.hollyhock_competitor_two_marketshare = global.hollyhock_competitor_two_marketshare - .05
+			elif ((global.hollyhock_competitor_one_marketshare <= 0) and (global.hollyhock_competitor_two_marketshare > 0)):
+				if ((global.sales_made > global.sales_lost) and (global.hollyhock_cash > 100)):
+					global.hollyhock_player_marketshare = global.hollyhock_player_marketshare + .2
+					global.hollyhock_competitor_two_marketshare = global.hollyhock_competitor_two_marketshare - .2
+				elif ((global.sales_made > global.sales_lost) or (global.hollyhock_cash > 100)):
+					global.hollyhock_player_marketshare = global.hollyhock_player_marketshare + .1
+					global.hollyhock_competitor_two_marketshare = global.hollyhock_competitor_two_marketshare - .1
+			elif ((global.hollyhock_competitor_two_marketshare <= 0) and (global.hollyhock_competitor_one_marketshare <= 0)):
+				pass
+	delete_children()
 	get_tree().change_scene("res://strategy.tscn")
+	
+func delete_children():
+	var customer_queue_children = get_node("customer_queue").get_children()
+	for child in customer_queue_children:
+		child.queue_free()
+	var zone_one_path_children = get_node("zone_one_path").get_children()
+	for child in zone_one_path_children:
+		child.queue_free()
+	var zone_two_path_children = get_node("zone_two_path").get_children()
+	for child in zone_two_path_children:
+		child.queue_free()
+	var zone_three_path_children = get_node("zone_three_path").get_children()
+	for child in zone_three_path_children:
+		child.queue_free()
+	var zone_four_path_children = get_node("zone_four_path").get_children()
+	for child in zone_four_path_children:
+		child.queue_free()
+	var zone_five_path_children = get_node("zone_five_path").get_children()
+	for child in zone_five_path_children:
+		child.queue_free()
+	var zone_six_path_children = get_node("zone_six_path").get_children()
+	for child in zone_six_path_children:
+		child.queue_free()
+	var queue_to_exit_children = get_node("queue_to_exit").get_children()
+	for child in queue_to_exit_children:
+		child.queue_free()
+	var zone_one_to_conc_children = get_node("zone_one_to_conc").get_children()
+	for child in zone_one_to_conc_children:
+		child.queue_free()
+	var zone_two_to_conc_children = get_node("zone_two_to_conc").get_children()
+	for child in zone_two_to_conc_children:
+		child.queue_free()
+	var zone_three_to_conc_children = get_node("zone_three_to_conc").get_children()
+	for child in zone_two_to_conc_children:
+		child.queue_free()
+	var zone_four_to_conc_children = get_node("zone_four_to_conc").get_children()
+	for child in zone_four_to_conc_children:
+		child.queue_free()
+	var zone_five_to_conc_children = get_node("zone_five_to_conc").get_children()
+	for child in zone_five_to_conc_children:
+		child.queue_free()
+	var zone_six_to_conc_children = get_node("zone_six_to_conc").get_children()
+	for child in zone_six_to_conc_children:
+		child.queue_free()
+	var zone_one_to_exit_children = get_node("zone_one_to_exit").get_children()
+	for child in zone_one_to_exit_children:
+		child.queue_free()
+	var zone_two_to_exit_children = get_node("zone_two_to_exit").get_children()
+	for child in zone_two_to_exit_children:
+		child.queue_free()
+	var zone_three_to_exit_children = get_node("zone_three_to_exit").get_children()
+	for child in zone_two_to_exit_children:
+		child.queue_free()
+	var zone_four_to_exit_children = get_node("zone_four_to_exit").get_children()
+	for child in zone_four_to_exit_children:
+		child.queue_free()
+	var zone_five_to_exit_children = get_node("zone_five_to_exit").get_children()
+	for child in zone_five_to_exit_children:
+		child.queue_free()
+	var zone_six_to_exit_children = get_node("zone_six_to_exit").get_children()
+	for child in zone_six_to_exit_children:
+		child.queue_free()
+	var concessions_to_exit_children = get_node("concessions_to_exit").get_children()
+	for child in concessions_to_exit_children:
+		child.queue_free()
