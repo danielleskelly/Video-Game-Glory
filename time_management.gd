@@ -56,6 +56,9 @@ var new_prediction_one
 var new_prediction_two
 var new_prediction_three
 
+var genre_two_key
+var genre_three_key
+
 func _ready():
 	customer_math()
 	set_process(true)
@@ -64,15 +67,14 @@ func _ready():
 func _process(delta):
 	if (global.town_select == "hollyhock"): 	#display supplies based on the town and keys
 		supply_one.get_child(2).clear()
-		supply_one.get_child(2).add_text(str(global.soda_count))
+		supply_one.get_child(2).add_text(str(global.hollyhock_soda_count))
 		supply_two.get_child(2).clear()
-		supply_two.get_child(2).add_text(str(global.popcorn_count))
+		supply_two.get_child(2).add_text(str(global.hollyhock_popcorn_count))
 
 func customer_math():
 	#performs the calculations to determine the number of customers that will enter the store
 	if (global.town_select == "hollyhock"): 	#sets the population, advertising max, storefront keys, and predictions based on the town 
 		town_population = global.hollyhock_town_population
-		advertising_max = global.hollyhock_advertising_max
 		prediction_one_effect = global.meta_prediction
 		prediction_two_effect = global.classic_prediction
 		prediction_three_effect = global.platformer_prediction
@@ -81,10 +83,12 @@ func customer_math():
 		storefront_good_key = global.hollyhock_storefront_good_key
 		storefront_great_key = global.hollyhock_storefront_great_key
 		storefront_best_key = global.hollyhock_storefront_best_key
-	player_marketshare_effect = town_population * global.player_marketshare #determines base player marketshare
-	comp_one_marketshare_effect = town_population * global.competitor_one_marketshare #determines base competitor one marketshare
-	comp_two_marketshare_effect = town_population * global.competitor_two_marketshare #determines base competitor two marketshare
-	marketshare_adjustment = .1 * town_population * float(global.advertising) / float(advertising_max) #creates the adjustment number for marketing
+		genre_two_key = global.hollyhock_genre_two_key
+		genre_three_key = global.hollyhock_genre_three_key
+		player_marketshare_effect = town_population * global.hollyhock_player_marketshare #determines base player marketshare
+		comp_one_marketshare_effect = town_population * global.hollyhock_competitor_one_marketshare #determines base competitor one marketshare
+		comp_two_marketshare_effect = town_population * global.hollyhock_competitor_two_marketshare #determines base competitor two marketshare
+		marketshare_adjustment = .1 * town_population * float(global.hollyhock_advertising) / float(global.hollyhock_advertising_max) #creates the adjustment number for marketing
 	player_marketing_adjustment = player_marketshare_effect + marketshare_adjustment #adjusts player marketshare up for marketing
 	comp_one_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2 #adjusts competitor one marketshare down by half for marketing
 	comp_two_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2 #adjusts competitor one marketshare down by half for marketing
@@ -102,7 +106,7 @@ func customer_math():
 	prediction_one_timer.set_wait_time(prediction_one_time)
 	prediction_one_timer.start() #and the timer that will create the customers is started
 	#then if the second genre is available it performs the actions from prediction forward for the second genre
-	if (global.genre_two_key == true):
+	if (genre_two_key == true):
 		player_prediction_two = player_marketing_adjustment * prediction_two_effect
 		for x in range(0, player_prediction_two + 1):
 			storefront_check()
@@ -115,7 +119,7 @@ func customer_math():
 		prediction_two_timer.set_wait_time(prediction_two_time)
 		prediction_two_timer.start()
 	#and again for the third genre
-	if (global.genre_three_key == true):
+	if (genre_three_key == true):
 		player_prediction_three = player_marketing_adjustment * prediction_two_effect
 		for x in range(0, player_prediction_three + 1):
 			storefront_check()
@@ -225,14 +229,14 @@ func _on_day_timer_timeout(): #day is complete
 		global.meta_prediction = new_prediction_one
 		global.classic_prediction = new_prediction_two
 		global.platformer_prediction = new_prediction_three
-	if (global.days_left_research - 1 > 0):
-		global.days_left_research = global.days_left_research - 1
-		global.research_fund = global.research_fund + global.research_spending
-	if (global.days_left_research - 1 == 0):
-		print("research open success")
-	if (global.days_left_sabatoge - 1 > 0):
-		global.days_left_sabatoge = global.days_left_sabatoge - 1
-		global.sabatoge_fund = global.sabatoge_fund + global.sabatoge_spending
-	if (global.days_left_sabatoge - 1 == 0):
-		print("sabatoge open success")
+		if (global.hollyhock_days_left_research - 1 > 0):
+			global.hollyhock_days_left_research = global.hollyhock_days_left_research - 1
+			global.hollyhock_research_fund = global.hollyhock_research_fund + global.hollyhock_research_spending
+		if (global.hollyhock_days_left_research - 1 == 0):
+			print("research open success")
+		if (global.hollyhock_days_left_sabatoge - 1 > 0):
+			global.hollyhock_days_left_sabatoge = global.hollyhock_days_left_sabatoge - 1
+			global.hollyhock_sabatoge_fund = global.hollyhock_sabatoge_fund + global.hollyhock_sabatoge_spending
+		if (global.hollyhock_days_left_sabatoge - 1 == 0):
+			print("sabatoge open success")
 	get_tree().change_scene("res://strategy.tscn")

@@ -31,7 +31,7 @@ func _process(delta):
 
 func _on_worst_button_button_down():
 	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_deus_worst_key == true):
+		if (global.hollyhock_arcade_worst_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
@@ -39,12 +39,12 @@ func _on_worst_button_button_down():
 
 func _on_decent_button_button_down():
 	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_deus_decent_key == true):
+		if (global.hollyhock_arcade_decent_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
 			notifications.show()
-		if (global.hollyhock_deus_decent_key == false):
+		if (global.hollyhock_arcade_decent_key == false):
 			if (global.hollyhock_cash >= global.decent_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
@@ -58,12 +58,12 @@ func _on_decent_button_button_down():
 
 func _on_good_button_button_down():
 	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_deus_good_key == true):
+		if (global.hollyhock_arcade_good_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
 			notifications.show()
-		if (global.hollyhock_deus_good_key == false):
+		if (global.hollyhock_arcade_good_key == false):
 			if (global.hollyhock_cash >= global.good_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
@@ -78,12 +78,12 @@ func _on_good_button_button_down():
 
 func _on_great_button_button_down():
 	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_deus_great_key == true):
+		if (global.hollyhock_arcade_great_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
 			notifications.show()
-		if (global.hollyhock_deus_great_key == false):
+		if (global.hollyhock_arcade_great_key == false):
 			if (global.hollyhock_cash >= global.great_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
@@ -98,17 +98,17 @@ func _on_great_button_button_down():
 
 func _on_best_button_button_down():
 	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_deus_best_key == true):
+		if (global.hollyhock_arcade_best_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
 			notifications.show()
-		if (global.hollyhock_deus_best_key == false):
+		if (global.hollyhock_arcade_best_key == false):
 			if (global.hollyhock_cash >= global.best_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = best_price
+				select_price = global.best_price
 				key_change = "hollyhock best"
 			if (global.hollyhock_cash < global.best_price):
 				notifications.clear()
@@ -119,11 +119,11 @@ func _on_confirm_button_down():
 	if (global.town_select == "hollyhock"):
 		global.hollyhock_balance = global.hollyhock_balance - select_price
 	if (key_change == "hollyhock decent"):
-		global.hollyhock_deus_decent_key = true
+		global.hollyhock_arcade_decent_key = true
 	if (key_change == "hollyhock good"):
-		global.hollyhock_deus_good_key = true
+		global.hollyhock_arcade_good_key = true
 	if (key_change == "hollyhock great"):
-		global.hollyhock_deus_great_key = true
+		global.hollyhock_arcade_great_key = true
 	if (key_change == "hollyhock best"):
-		global.hollyhock_deus_best_key = true
+		global.hollyhock_arcade_best_key = true
 	notifications.clear()

@@ -149,7 +149,7 @@ var candy_yesterday_used = 0
 
 #loans
 var credit_limit = 3000
-var current_loan = 0
+var hollyhock_current_loan = 0
 var daily_interest = .05
 
 #upgrades
@@ -175,23 +175,11 @@ var hollyhock_station_four_selection = 2
 var hollyhock_station_five_selection = 1
 var hollyhock_station_six_selection = 2
 
-
-
-
 #sabatoge
 var sabatoge_total = 100
-
-
-
-
-#sabatoge
-var sabatoge_fund = 0
-var days_left_sabatoge = sabatoge_total
-var sabatoge_spending = 1
-
-
-
-
+var hollyhock_sabatoge_fund = 0
+var hollyhock_days_left_sabatoge = sabatoge_total
+var hollyhock_sabatoge_spending = 1
 
 func _ready():
 	set_process(true)

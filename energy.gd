@@ -32,6 +32,7 @@ func _on_lower_button_down():
 		global.purchase_total = global.purchase_total - global.daily_energy_price
 
 func _on_raise_button_down():
+	print("this must get changed to be town specific")	
 	if (global.cash >= (global.purchase_total + global.energy_price)):
 		energy_purchase = energy_purchase + 1
 		global.purchase_total = global.purchase_total + global.daily_energy_price

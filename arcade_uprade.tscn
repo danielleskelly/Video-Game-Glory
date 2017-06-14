@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=1]
 
-[ext_resource path="res://repairman.gd" type="Script" id=1]
+[ext_resource path="res://arcade_uprade.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
 [ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://meta_genre.png" type="Texture" id=4]
 
-[node name="repairman" type="Node2D"]
+[node name="arcade_upgrade" type="Node2D"]
 
 transform/pos = Vector2( 511.609, 299.032 )
 transform/scale = Vector2( 15.988, 9.34513 )
@@ -31,7 +31,7 @@ margin/bottom = 25.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Repairman"
+bbcode/bbcode = "Arcades"
 visible_characters = -1
 
 [node name="notifications" type="RichTextLabel" parent="."]

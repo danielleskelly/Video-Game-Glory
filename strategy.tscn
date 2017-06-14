@@ -19,9 +19,9 @@
 [ext_resource path="res://games.tscn" type="PackedScene" id=17]
 [ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=18]
 [ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=19]
-[ext_resource path="res://repairman.tscn" type="PackedScene" id=20]
-[ext_resource path="res://entertainment.tscn" type="PackedScene" id=21]
-[ext_resource path="res://deus.tscn" type="PackedScene" id=22]
+[ext_resource path="res://entertainment.tscn" type="PackedScene" id=20]
+[ext_resource path="res://deus.tscn" type="PackedScene" id=21]
+[ext_resource path="res://arcade_uprade.tscn" type="PackedScene" id=22]
 [ext_resource path="res://sabatoge.tscn" type="PackedScene" id=23]
 [ext_resource path="res://genres.tscn" type="PackedScene" id=24]
 
@@ -158,7 +158,6 @@ button/selected = 0
 
 [node name="upgrade_buttons" type="VButtonArray" parent="."]
 
-visibility/visible = false
 rect/scale = Vector2( 0.048, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -179,7 +178,7 @@ button/align = 1065353216
 button/0/text = "Storefront"
 button/0/tooltip = ""
 button/0/icon = null
-button/1/text = "Repairman"
+button/1/text = "Arcades"
 button/1/tooltip = ""
 button/1/icon = null
 button/2/text = "Entertainment"
@@ -306,8 +305,6 @@ transform/scale = Vector2( 0.664251, 0.415947 )
 
 [node name="arcade_pricing" parent="." instance=ExtResource( 18 )]
 
-editor/display_folded = true
-visibility/visible = false
 transform/pos = Vector2( 8.12449, 4.79634 )
 transform/scale = Vector2( 0.651311, 0.401223 )
 
@@ -317,23 +314,22 @@ visibility/visible = false
 transform/pos = Vector2( 8.25623, 4.58675 )
 transform/scale = Vector2( 0.64993, 0.403895 )
 
-[node name="repairman" parent="." instance=ExtResource( 20 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.10507, 4.64923 )
-transform/scale = Vector2( 0.64448, 0.387881 )
-
-[node name="entertainment" parent="." instance=ExtResource( 21 )]
+[node name="entertainment" parent="." instance=ExtResource( 20 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.15202, 4.72703 )
 transform/scale = Vector2( 0.643449, 0.381172 )
 
-[node name="deus_ex_machina" parent="." instance=ExtResource( 22 )]
+[node name="deus_ex_machina" parent="." instance=ExtResource( 21 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.07035, 4.66303 )
 transform/scale = Vector2( 0.641662, 0.387969 )
+
+[node name="arcade_upgrade" parent="." instance=ExtResource( 22 )]
+
+transform/pos = Vector2( 8.44103, 4.77932 )
+transform/scale = Vector2( 0.664878, 0.418243 )
 
 [node name="sabatoge" parent="." instance=ExtResource( 23 )]
 

@@ -32,6 +32,7 @@ func _on_lower_button_down():
 		global.purchase_total = global.purchase_total - global.daily_freezie_price
 
 func _on_raise_button_down():
+	print("this must get changed to be town specific")
 	if (global.cash >= (global.purchase_total + global.freezie_price)):
 		freezie_purchase = freezie_purchase + 1
 		global.purchase_total = global.purchase_total + global.daily_freezie_price
