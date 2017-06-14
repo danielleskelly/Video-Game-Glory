@@ -61,6 +61,7 @@ var genre_three_key
 
 func _ready():
 	customer_math()
+	tutorial_check()
 	set_process(true)
 
 
@@ -219,15 +220,15 @@ func _on_prediction_three_timer_timeout(): #request to create another prediction
 func entertainment_time_check(): #sets how long a customer is willing to wait in line based on in store entertainment upgrades
 	if (global.town_select == "hollyhock"):
 		if (global.hollyhock_entertainment_great_key == true):
-			wait_time == 100
+			wait_time == 30
 		elif (global.hollyhock_entertainment_great_key == true):
-			wait_time = 80
+			wait_time = 25
 		elif (global.hollyhock_entertainment_good_key == true):
-			wait_time = 60
-		elif (global.hollyhock_entertainment_decent_key == true):
-			wait_time = 40
-		elif (global.hollyhock_entertainment_worst_key == true):
 			wait_time = 20
+		elif (global.hollyhock_entertainment_decent_key == true):
+			wait_time = 15
+		elif (global.hollyhock_entertainment_worst_key == true):
+			wait_time = 10
 
 func _on_day_timer_timeout(): #day is complete
 	randomize()
@@ -329,3 +330,13 @@ func delete_children():
 	var concessions_to_exit_children = get_node("concessions_to_exit").get_children()
 	for child in concessions_to_exit_children:
 		child.queue_free()
+		
+func tutorial_check():
+	if (global.tutorial_time_management_side == false):
+		get_node("tutorial").set_hidden(false)
+		get_tree().set_pause(true)
+
+func _on_tutorial_button_button_down():
+	global.tutorial_time_management_side = true
+	get_node("tutorial").set_hidden(true)
+	get_tree().set_pause(false)

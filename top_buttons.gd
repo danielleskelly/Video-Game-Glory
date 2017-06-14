@@ -14,7 +14,7 @@ onready var marketing = get_tree().get_current_scene().get_node("marketing")
 onready var storefront = get_tree().get_current_scene().get_node("storefront")
 onready var arcade_upgrade = get_tree().get_current_scene().get_node("arcade_upgrade")
 onready var entertainment = get_tree().get_current_scene().get_node("entertainment")
-#onready var sabatoge = get_tree().get_current_scene().get_node("sabatoge")
+onready var sabatoge = get_tree().get_current_scene().get_node("sabatoge")
 onready var loans = get_tree().get_current_scene().get_node("loans")
 onready var research = get_tree().get_current_scene().get_node("research")
 onready var concessions_pricing = get_tree().get_current_scene().get_node("concessions_pricing")
@@ -70,8 +70,7 @@ func _process(delta):
 		locals.show()
 		locals_select = locals.get_selected()
 		if (locals_select == 0):
-			#sabatoge.show()
-			pass
+			sabatoge.show()
 		if (locals_select == 1):
 			loans.show()
 	if (select == 8):
@@ -91,7 +90,7 @@ func hide():
 	storefront.set_hidden(true)
 	arcade_upgrade.set_hidden(true)
 	entertainment.set_hidden(true)
-	#sabatoge.set_hidden(true)
+	sabatoge.set_hidden(true)
 	loans.set_hidden(true)
 	research.set_hidden(true)
 	pricing.set_hidden(true)

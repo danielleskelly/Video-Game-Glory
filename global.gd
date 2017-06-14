@@ -4,8 +4,8 @@ extends Node
 var player_name = "dutchess"
 
 #financials
-var hollyhock_balance = 500
-var hollyhock_expenses = 0
+var hollyhock_balance = 200
+var hollyhock_expenses = 20
 var income = 0
 var hollyhock_cash
 
@@ -20,7 +20,7 @@ var hollyhock_research_one_key = false
 var hollyhock_research_total_two = 1000
 var hollyhock_research_two_key = false
 var hollyhock_storefront_worst_key = true
-var hollyhock_storefront_decent_key = false
+var hollyhock_storefront_decent_key = true
 var hollyhock_storefront_good_key = false
 var hollyhock_storefront_great_key = false
 var hollyhock_storefront_best_key = false
@@ -44,8 +44,8 @@ var waited_loss = 0
 var sabatoge_loss = 0
 
 #pricing
-var hollyhock_arcade_one_price = 0
-var hollyhock_arcade_two_price = 0
+var hollyhock_arcade_one_price = 15
+var hollyhock_arcade_two_price = 15
 var hollyhock_arcade_three_price = 0
 var hollyhock_arcade_four_price = 0
 var hollyhock_arcade_five_price = 0
@@ -76,8 +76,8 @@ var pizza_range_low = 5
 var freezie_range_low = 5
 var energy_range_low = 5
 var candy_range_low = 5
-var hollyhock_soda_price = 0
-var hollyhock_popcorn_price = 0
+var hollyhock_soda_price = 8
+var hollyhock_popcorn_price = 8
 var pizza_price = 0
 var freezie_price = 0
 var energy_price = 0
@@ -117,17 +117,17 @@ var hollyhock_competitor_two_marketshare = .46
 
 #buying/supplies
 var purchase_total = 0
-var soda_total = 10
-var popcorn_total = 10
+var soda_total = 0
+var popcorn_total = 0
 var pizza_total = 0
 var freezie_total = 0
 var energy_total = 0
 var candy_total = 0
 var energy_count = 0
-var hollyhock_popcorn_count = 0
+var hollyhock_popcorn_count = 10
 var candy_count = 0
 var pizza_count = 0
-var hollyhock_soda_count = 0
+var hollyhock_soda_count = 10
 var freezie_count = 0
 var daily_soda_price = 4
 var daily_popcorn_price = 4
@@ -160,7 +160,7 @@ var hollyhock_days_left_research = hollyhock_research_total_one
 var hollyhock_research_spending = 0
 
 #advertising
-var hollyhock_advertising = 0
+var hollyhock_advertising = 20
 
 #arcades
 var hollyhock_station_one_selection = 1
@@ -179,6 +179,7 @@ var tutorial_title_box = false
 var tutorial_prediction_box = false
 var tutorial_supplies_box = false
 var tutorial_finances_box = false
+var tutorial_time_management_side = false
 
 
 

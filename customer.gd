@@ -27,9 +27,9 @@ func _process(delta):
 	if (get_parent().is_in_group("path") == true):
 		if (get_parent().get_parent().is_in_group("queue") == true):
 			if ((colliders.size() == 0) or (colliders[0].is_greater_than(self) == true)):
-				get_parent().set_offset(get_parent().get_offset() + (20*delta))
+				get_parent().set_offset(get_parent().get_offset() + (25*delta))
 		if ((get_parent().get_parent().is_in_group("arcade") == true) or (get_parent().get_parent().is_in_group("concessions") == true) or (get_parent().get_parent().is_in_group("exit") == true)):
-				get_parent().set_offset(get_parent().get_offset() + (20*delta))
+				get_parent().set_offset(get_parent().get_offset() + (25*delta))
 
 
 #when the customer has waited in the queue for the timeout period
