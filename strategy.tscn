@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=1]
+[gd_scene load_steps=28 format=1]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
@@ -13,17 +13,20 @@
 [ext_resource path="res://news.tscn" type="PackedScene" id=11]
 [ext_resource path="res://supplies_full.tscn" type="PackedScene" id=12]
 [ext_resource path="res://marketing.tscn" type="PackedScene" id=13]
-[ext_resource path="res://storefront.tscn" type="PackedScene" id=14]
-[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=15]
-[ext_resource path="res://research.tscn" type="PackedScene" id=16]
-[ext_resource path="res://games.tscn" type="PackedScene" id=17]
-[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=18]
-[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=19]
-[ext_resource path="res://entertainment.tscn" type="PackedScene" id=20]
-[ext_resource path="res://deus.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sabatoge.tscn" type="PackedScene" id=14]
+[ext_resource path="res://storefront.tscn" type="PackedScene" id=15]
+[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=16]
+[ext_resource path="res://research.tscn" type="PackedScene" id=17]
+[ext_resource path="res://games.tscn" type="PackedScene" id=18]
+[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=19]
+[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=20]
+[ext_resource path="res://entertainment.tscn" type="PackedScene" id=21]
 [ext_resource path="res://arcade_uprade.tscn" type="PackedScene" id=22]
-[ext_resource path="res://sabatoge.tscn" type="PackedScene" id=23]
-[ext_resource path="res://genres.tscn" type="PackedScene" id=24]
+[ext_resource path="res://genres.tscn" type="PackedScene" id=23]
+[ext_resource path="res://blacker_than_night.png" type="Texture" id=24]
+[ext_resource path="res://rect_border.png" type="Texture" id=25]
+[ext_resource path="res://pointer.png" type="Texture" id=26]
+[ext_resource path="res://border.png" type="Texture" id=27]
 
 [node name="strategy" type="Node2D"]
 
@@ -36,6 +39,9 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 0.123229, -0.137201 )
 transform/scale = Vector2( 0.0498189, 0.0905505 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="menu" type="LinkButton" parent="."]
 
@@ -58,12 +64,12 @@ underline = 2
 
 [node name="supply_one" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -1.18835, 23.5357 )
+transform/pos = Vector2( -1.18835, 25.2262 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
 [node name="supply_two" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 3.60759, 23.5357 )
+transform/pos = Vector2( 3.60759, 25.2262 )
 transform/scale = Vector2( 0.0739624, 0.113695 )
 
 [node name="town_banner" parent="." instance=ExtResource( 5 )]
@@ -158,21 +164,22 @@ button/selected = 0
 
 [node name="upgrade_buttons" type="VButtonArray" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.048, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -30.0
-margin/top = -6.0
+margin/top = -4.0
 margin/right = 289.0
-margin/bottom = 202.0
+margin/bottom = 151.0
 custom_fonts/font_selected = ExtResource( 3 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 flat = false
-button/count = 4
+button/count = 3
 button/min_button_size = -1.0
 button/align = 1065353216
 button/0/text = "Storefront"
@@ -184,14 +191,10 @@ button/1/icon = null
 button/2/text = "Entertainment"
 button/2/tooltip = ""
 button/2/icon = null
-button/3/text = "Deus Ex Machina"
-button/3/tooltip = ""
-button/3/icon = null
 button/selected = 0
 
 [node name="locals_buttons" type="VButtonArray" parent="."]
 
-visibility/visible = false
 rect/scale = Vector2( 0.048, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -247,6 +250,7 @@ button/selected = 0
 
 [node name="finances_full" parent="." instance=ExtResource( 8 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.38022, 4.47914 )
 transform/scale = Vector2( 0.667036, 0.410212 )
 
@@ -280,74 +284,70 @@ visibility/visible = false
 transform/pos = Vector2( 8.13787, 4.66261 )
 transform/scale = Vector2( 0.653569, 0.395625 )
 
-[node name="storefront" parent="." instance=ExtResource( 14 )]
+[node name="sabatoge" parent="." instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 8.18825, 4.40604 )
+transform/scale = Vector2( 0.642682, 0.37759 )
+
+[node name="storefront" parent="." instance=ExtResource( 15 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.12956, 4.58284 )
 transform/scale = Vector2( 0.64739, 0.393174 )
 
-[node name="loans" parent="." instance=ExtResource( 15 )]
+[node name="loans" parent="." instance=ExtResource( 16 )]
 
 visibility/visible = false
 transform/pos = Vector2( 7.98178, 4.54702 )
 transform/scale = Vector2( 0.648649, 0.390113 )
 
-[node name="research" parent="." instance=ExtResource( 16 )]
+[node name="research" parent="." instance=ExtResource( 17 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.05803, 4.50401 )
 transform/scale = Vector2( 0.646566, 0.388286 )
 
-[node name="games" parent="." instance=ExtResource( 17 )]
+[node name="games" parent="." instance=ExtResource( 18 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.37637, 4.72096 )
 transform/scale = Vector2( 0.664251, 0.415947 )
 
-[node name="arcade_pricing" parent="." instance=ExtResource( 18 )]
+[node name="arcade_pricing" parent="." instance=ExtResource( 19 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.12449, 4.79634 )
 transform/scale = Vector2( 0.651311, 0.401223 )
 
-[node name="concessions_pricing" parent="." instance=ExtResource( 19 )]
+[node name="concessions_pricing" parent="." instance=ExtResource( 20 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.25623, 4.58675 )
 transform/scale = Vector2( 0.64993, 0.403895 )
 
-[node name="entertainment" parent="." instance=ExtResource( 20 )]
+[node name="entertainment" parent="." instance=ExtResource( 21 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.15202, 4.72703 )
 transform/scale = Vector2( 0.643449, 0.381172 )
 
-[node name="deus_ex_machina" parent="." instance=ExtResource( 21 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.07035, 4.66303 )
-transform/scale = Vector2( 0.641662, 0.387969 )
-
 [node name="arcade_upgrade" parent="." instance=ExtResource( 22 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.44103, 4.77932 )
 transform/scale = Vector2( 0.664878, 0.418243 )
 
-[node name="sabatoge" parent="." instance=ExtResource( 23 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.4278, 4.73673 )
-transform/scale = Vector2( 0.661837, 0.410758 )
-
-[node name="genre_one" parent="." instance=ExtResource( 24 )]
+[node name="genre_one" parent="." instance=ExtResource( 23 )]
 
 transform/pos = Vector2( 21.3631, -23.1414 )
 transform/scale = Vector2( 0.052631, 0.0884332 )
 
-[node name="genre_two" parent="." instance=ExtResource( 24 )]
+[node name="genre_two" parent="." instance=ExtResource( 23 )]
 
 transform/pos = Vector2( 25.2968, -23.2592 )
 transform/scale = Vector2( 0.052631, 0.0884332 )
 
-[node name="genre_three" parent="." instance=ExtResource( 24 )]
+[node name="genre_three" parent="." instance=ExtResource( 23 )]
 
 transform/pos = Vector2( 29.0925, -23.2592 )
 transform/scale = Vector2( 0.052631, 0.0884332 )
@@ -359,10 +359,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 14.0
-margin/top = 19.0
-margin/right = 187.0
-margin/bottom = 62.0
+margin/left = 11.0
+margin/top = 21.0
+margin/right = 184.0
+margin/bottom = 64.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -371,6 +371,1380 @@ shortcut = null
 text = "Start Day"
 underline = 2
 
+[node name="low_funds_warning" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="low_funds_warning"]
+
+transform/pos = Vector2( -0.12163, 1.6948 )
+transform/scale = Vector2( 0.0505734, 0.0592927 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="low_funds_warning"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -15.0
+margin/top = -8.0
+margin/right = 568.0
+margin/bottom = 207.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Continuing to the next day will put you in the negatives. Reduce your expenses or take out a loan to continue."
+visible_characters = -1
+
+[node name="low_funds_ok" type="LinkButton" parent="low_funds_warning"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = 7.0
+margin/right = 53.0
+margin/bottom = 50.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="game_over" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="game_over"]
+
+transform/pos = Vector2( 0.327393, -0.167065 )
+transform/scale = Vector2( 0.0564646, 0.0607871 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="game_over"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -15.0
+margin/top = -8.0
+margin/right = 568.0
+margin/bottom = 207.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "You have run out of cash and the loan officer at the bank won't even answer your calls. Time to start over!"
+visible_characters = -1
+
+[node name="game_over_ok" type="LinkButton" parent="game_over"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = 7.0
+margin/right = 53.0
+margin/bottom = 50.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="genre_discovery" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="genre_discovery"]
+
+transform/pos = Vector2( 0.327393, -0.167065 )
+transform/scale = Vector2( 0.0564646, 0.0607871 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="genre_discovery"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -15.0
+margin/top = -10.0
+margin/right = 625.0
+margin/bottom = 242.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "You have purchased a new genre of game! Make sure to set some of your arcades so the customers will be able to enjoy it!"
+visible_characters = -1
+
+[node name="genre_discover_ok" type="LinkButton" parent="genre_discovery"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = 7.0
+margin/right = 53.0
+margin/bottom = 50.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="hollyhock_complete" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="hollyhock_complete"]
+
+transform/pos = Vector2( 0.327393, -0.167065 )
+transform/scale = Vector2( 0.0564646, 0.0607871 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="hollyhock_complete"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -16.0
+margin/top = -10.0
+margin/right = 644.0
+margin/bottom = 317.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "You have completed the level goal for the town of Hollyhock! With our 75% marketshare we now have a solid hold on the customers of this city. Let's continue on to the next city I have in store for you!"
+visible_characters = -1
+
+[node name="continue_ok" type="LinkButton" parent="hollyhock_complete"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = 7.0
+margin/right = 53.0
+margin/bottom = 50.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="tutorial_start" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="tutorial_start"]
+
+transform/pos = Vector2( 0.327393, -0.167065 )
+transform/scale = Vector2( 0.0564646, 0.0607871 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="tutorial_start"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -16.0
+margin/top = -10.0
+margin/right = 644.0
+margin/bottom = 317.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Welcome to the first village in our quest, Hollyhock! Or otherwise known as Tutorial-Town. Would you like to use the handy tutorial minions available in this town?"
+visible_characters = -1
+
+[node name="tutorial_start_yes_button" type="LinkButton" parent="tutorial_start"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 6.0
+margin/top = 7.0
+margin/right = 58.0
+margin/bottom = 50.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="tutorial_start_no_button" type="LinkButton" parent="tutorial_start"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -9.0
+margin/top = 7.0
+margin/right = 43.0
+margin/bottom = 50.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "Skip"
+underline = 2
+
+[node name="tutorial_persistent_menu" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 7.541, 4.62772 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="background" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( 0.327393, -0.167065 )
+transform/scale = Vector2( 0.0564646, 0.0607871 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="warning" type="RichTextLabel" parent="tutorial_persistent_menu"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -16.0
+margin/top = -10.0
+margin/right = 644.0
+margin/bottom = 317.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "The first thing you need to know are these info boxes. They will be on all pages while you are setting up the day, and they contain the most important information."
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="persistent_menu_ok" type="LinkButton" parent="tutorial_persistent_menu"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -3.0
+margin/top = 6.0
+margin/right = 49.0
+margin/bottom = 49.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="title_box_border" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( -9.37182, -28.2004 )
+transform/scale = Vector2( 0.214304, 0.117132 )
+texture = ExtResource( 25 )
+
+[node name="title_box_pointer" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( -8.34303, -17.1005 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.109536 )
+texture = ExtResource( 26 )
+
+[node name="prediction_border" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( 13.8551, -27.8042 )
+transform/scale = Vector2( 0.0387837, 0.064286 )
+texture = ExtResource( 27 )
+
+[node name="prediction_pointer" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( 13.4537, -18.3779 )
+transform/rot = -5.0
+transform/scale = Vector2( 0.185157, 0.12949 )
+texture = ExtResource( 26 )
+
+[node name="supplies_border" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( -6.09231, 20.6395 )
+transform/scale = Vector2( 0.103926, 0.0766697 )
+texture = ExtResource( 27 )
+
+[node name="supplies_pointer" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( -5.15833, 14.173 )
+transform/rot = 1.0
+transform/scale = Vector2( 0.272251, 0.0555252 )
+texture = ExtResource( 26 )
+
+[node name="finances_border" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( -31.1715, 15.6328 )
+transform/scale = Vector2( 0.140657, 0.204859 )
+texture = ExtResource( 27 )
+
+[node name="finances_pointer" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( -20.8619, 9.78368 )
+transform/rot = -80.0
+transform/scale = Vector2( 0.115557, 0.0676195 )
+texture = ExtResource( 26 )
+
+[node name="persistent_menu_timer" type="Timer" parent="tutorial_persistent_menu"]
+
+process_mode = 1
+wait_time = 12.0
+one_shot = true
+autostart = false
+
+[node name="tutorial_reports" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( -11.9999, 19.9415 )
+transform/scale = Vector2( 1, 0.806395 )
+
+[node name="background" type="Sprite" parent="tutorial_reports"]
+
+transform/pos = Vector2( 0.327393, -0.167065 )
+transform/scale = Vector2( 0.0564646, 0.0607871 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="warning" type="RichTextLabel" parent="tutorial_reports"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -16.0
+margin/top = -10.0
+margin/right = 644.0
+margin/bottom = 317.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Our first of the tabs is the Finance Reports. As you can see the level goal for Hollyhock is 75% market share. We only have 10% so we have a long way to go. Let's move on."
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="reports_button_ok" type="LinkButton" parent="tutorial_reports"]
+
+visibility/visible = false
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -3.0
+margin/top = 6.0
+margin/right = 49.0
+margin/bottom = 49.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="reports_pointer" type="Sprite" parent="tutorial_reports"]
+
+transform/pos = Vector2( -15.8054, -24.8591 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.261376 )
+texture = ExtResource( 26 )
+
+[node name="finances_pointer" type="Sprite" parent="tutorial_reports"]
+
+transform/pos = Vector2( -9.46579, -18.7939 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.137204 )
+texture = ExtResource( 26 )
+
+[node name="other_pointer" type="Sprite" parent="tutorial_reports"]
+
+transform/pos = Vector2( -9.32078, -14.6413 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.0541027 )
+texture = ExtResource( 26 )
+
+[node name="reports_box" type="Sprite" parent="tutorial_reports"]
+
+transform/pos = Vector2( -14.5281, -41.4985 )
+transform/scale = Vector2( 0.0796892, 0.077871 )
+texture = ExtResource( 27 )
+
+[node name="finances_box" type="Sprite" parent="tutorial_reports"]
+
+transform/pos = Vector2( -10.3451, -27.6976 )
+transform/scale = Vector2( 0.106758, 0.050062 )
+texture = ExtResource( 27 )
+
+[node name="other_box" type="Sprite" parent="tutorial_reports"]
+
+transform/pos = Vector2( -10.3451, -21.1802 )
+transform/scale = Vector2( 0.106758, 0.0850285 )
+texture = ExtResource( 27 )
+
+[node name="reports_menu_timer" type="Timer" parent="tutorial_reports"]
+
+process_mode = 1
+wait_time = 12.0
+one_shot = true
+autostart = false
+
+[node name="tutorial_news" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 4.77667, -23.0095 )
+transform/scale = Vector2( 1, 0.806395 )
+
+[node name="background" type="Sprite" parent="tutorial_news"]
+
+transform/pos = Vector2( -4.966, 1.66074 )
+transform/scale = Vector2( 0.0399227, 0.0525447 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="warning" type="RichTextLabel" parent="tutorial_news"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -17.0
+margin/top = -7.0
+margin/right = 471.0
+margin/bottom = 320.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "The news will provide you with daily chuckle, and a more complete look at the game genre predictions for tomorrow."
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="news_button_ok" type="LinkButton" parent="tutorial_news"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -7.0
+margin/top = 6.0
+margin/right = 45.0
+margin/bottom = 49.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="reports_pointer" type="Sprite" parent="tutorial_news"]
+
+transform/pos = Vector2( -2.86712, 14.1852 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.076901 )
+texture = ExtResource( 26 )
+
+[node name="reports_pointer1" type="Sprite" parent="tutorial_news"]
+
+transform/pos = Vector2( -20.0094, 10.4723 )
+transform/rot = -80.0
+transform/scale = Vector2( 0.185157, 0.05505 )
+texture = ExtResource( 26 )
+
+[node name="reports_pointer2" type="Sprite" parent="tutorial_news"]
+
+transform/pos = Vector2( 11.2189, 3.06258 )
+transform/rot = -80.0
+transform/scale = Vector2( 0.185157, 0.078059 )
+texture = ExtResource( 26 )
+
+[node name="reports_box" type="Sprite" parent="tutorial_news"]
+
+transform/pos = Vector2( -25.5399, 12.1467 )
+transform/scale = Vector2( 0.0584135, 0.072012 )
+texture = ExtResource( 27 )
+
+[node name="reports_box1" type="Sprite" parent="tutorial_news"]
+
+transform/pos = Vector2( 16.6727, -0.227366 )
+transform/scale = Vector2( 0.0384596, 0.0770189 )
+texture = ExtResource( 27 )
+
+[node name="tutorial_supplies" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 0.512787, 10.8623 )
+transform/scale = Vector2( 0.947031, 0.806395 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="first_background" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( 6.31375, 1.28497 )
+transform/scale = Vector2( 0.0780395, 0.0562427 )
+texture = ExtResource( 24 )
+
+[node name="first_warning" type="RichTextLabel" parent="tutorial_supplies"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -17.0
+margin/top = -9.0
+margin/right = 960.0
+margin/bottom = 372.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Now it gets interesting! Here in Hollyhock the customers believe there is nothing better than a soda and some popcorn after a video game, so that is what we have for sale. We currently have 10 of each in stock but if you want to come back and get some more it is a good idea.  I have a little money saved and the for sale price is in the green which means it is a good deal."
+visible_characters = -1
+
+[node name="supplies_button_ok" type="LinkButton" parent="tutorial_supplies"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 13.0
+margin/top = 8.0
+margin/right = 65.0
+margin/bottom = 51.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="supplies_pointer" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( -14.4631, -18.3573 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.170623 )
+texture = ExtResource( 26 )
+
+[node name="buy_to_buy" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( 14.548, -14.6483 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.0207194 )
+texture = ExtResource( 26 )
+
+[node name="finances_to_supplies_pointer" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( -11.4551, 15.4227 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.185157, 0.140033 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="supplies_box" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( -15.9061, -30.2109 )
+transform/scale = Vector2( 0.0871748, 0.0803398 )
+texture = ExtResource( 27 )
+
+[node name="buy_box_one" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( 13.8808, -16.3724 )
+transform/scale = Vector2( 0.0167364, 0.0178709 )
+texture = ExtResource( 27 )
+
+[node name="buy_box_two" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( 13.8652, -12.7669 )
+transform/scale = Vector2( 0.0167364, 0.0178709 )
+texture = ExtResource( 27 )
+
+[node name="supplies_icon_box" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( 0.696037, 17.6817 )
+transform/scale = Vector2( 0.122798, 0.108476 )
+texture = ExtResource( 27 )
+
+[node name="finances_box" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( -25.5965, 10.2073 )
+transform/scale = Vector2( 0.142426, 0.254325 )
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tutorial_games" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 0.512787, 10.8623 )
+transform/scale = Vector2( 0.947031, 0.806395 )
+
+[node name="second_background" type="Sprite" parent="tutorial_games"]
+
+transform/pos = Vector2( -24.2636, -21.3275 )
+transform/scale = Vector2( 0.0264072, 0.095323 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="second_warning" type="RichTextLabel" parent="tutorial_games"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -32.0
+margin/top = -40.0
+margin/right = 277.0
+margin/bottom = 730.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Here we set the games that are available in each arcade. Tomorrow we have a 55% chance of meta games so we have preset the both of the available arcades with out current meta game, Video Game Glory."
+visible_characters = -1
+
+[node name="games_button_ok" type="LinkButton" parent="tutorial_games"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -21.0
+margin/top = -7.0
+margin/right = 31.0
+margin/bottom = 36.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="supplies_pointer" type="Sprite" parent="tutorial_games"]
+
+transform/pos = Vector2( -14.1288, -25.813 )
+transform/rot = -60.0
+transform/scale = Vector2( 0.185157, 0.0532418 )
+texture = ExtResource( 26 )
+
+[node name="supplies_pointer1" type="Sprite" parent="tutorial_games"]
+
+transform/pos = Vector2( -12.1395, -16.8516 )
+transform/rot = 60.0
+transform/scale = Vector2( 0.185157, 0.0879931 )
+texture = ExtResource( 26 )
+
+[node name="second_box_to_confirm" type="Sprite" parent="tutorial_games"]
+
+transform/pos = Vector2( 21.8124, -28.1357 )
+transform/rot = -5.0
+transform/scale = Vector2( 0.185157, 0.209115 )
+texture = ExtResource( 26 )
+
+[node name="supplies_box" type="Sprite" parent="tutorial_games"]
+
+transform/pos = Vector2( -9.29318, -30.2109 )
+transform/scale = Vector2( 0.0652914, 0.0803398 )
+texture = ExtResource( 27 )
+
+[node name="buy_box_one" type="Sprite" parent="tutorial_games"]
+
+transform/pos = Vector2( 9.75224, -13.7207 )
+transform/scale = Vector2( 0.369562, 0.0852454 )
+texture = ExtResource( 27 )
+
+[node name="buy_box_one1" type="Sprite" parent="tutorial_games"]
+
+transform/pos = Vector2( 21.9787, -42.3591 )
+transform/scale = Vector2( 0.0424079, 0.0789573 )
+texture = ExtResource( 27 )
+
+[node name="tutorial_pricing" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 0.512785, 10.8623 )
+transform/scale = Vector2( 0.947031, 0.806395 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="first_background" type="Sprite" parent="tutorial_pricing"]
+
+transform/pos = Vector2( -4.06607, -42.3185 )
+transform/scale = Vector2( 0.0744952, 0.0365855 )
+texture = ExtResource( 24 )
+
+[node name="second_background" type="Sprite" parent="tutorial_pricing"]
+
+visibility/visible = false
+transform/pos = Vector2( -4.06607, -42.3185 )
+transform/scale = Vector2( 0.0744952, 0.0365855 )
+texture = ExtResource( 24 )
+
+[node name="first_warning" type="RichTextLabel" parent="tutorial_pricing"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -48.0
+margin/right = 950.0
+margin/bottom = 333.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Because the forecast is only a 55% chance we will price our concessions at the middle of the range, so we don't turn away our few customers by charging them too much."
+visible_characters = -1
+
+[node name="second_warning" type="RichTextLabel" parent="tutorial_pricing"]
+
+visibility/visible = false
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -48.0
+margin/right = 950.0
+margin/bottom = 333.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "And we will do the same with the two available arcades."
+visible_characters = -1
+
+[node name="pricing_button_one" type="LinkButton" parent="tutorial_pricing"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2.0
+margin/top = -38.0
+margin/right = 54.0
+margin/bottom = 5.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="pricing_button_two" type="LinkButton" parent="tutorial_pricing"]
+
+visibility/visible = false
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2.0
+margin/top = -38.0
+margin/right = 54.0
+margin/bottom = 5.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="pricing_pointer" type="Sprite" parent="tutorial_pricing"]
+
+transform/pos = Vector2( -3.20992, -34.2983 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.0211542 )
+texture = ExtResource( 26 )
+
+[node name="warning_to_prediction" type="Sprite" parent="tutorial_pricing"]
+
+transform/pos = Vector2( 19.9018, -42.2557 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.185157, 0.0127523 )
+texture = ExtResource( 26 )
+
+[node name="concessions_over" type="Sprite" parent="tutorial_pricing"]
+
+transform/pos = Vector2( -14.566, -14.5218 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.185157, 0.0623339 )
+texture = ExtResource( 26 )
+
+[node name="arcades_over" type="Sprite" parent="tutorial_pricing"]
+
+visibility/visible = false
+transform/pos = Vector2( -14.7918, -10.1518 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.185157, 0.0684644 )
+texture = ExtResource( 26 )
+
+[node name="pricing_to_concessions" type="Sprite" parent="tutorial_pricing"]
+
+transform/pos = Vector2( -11.514, -19.967 )
+transform/rot = -40.0
+transform/scale = Vector2( 0.185157, 0.167634 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pricing_to_arcades" type="Sprite" parent="tutorial_pricing"]
+
+visibility/visible = false
+transform/pos = Vector2( -11.5346, -17.8133 )
+transform/rot = -35.0
+transform/scale = Vector2( 0.185157, 0.196507 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pricing_box" type="Sprite" parent="tutorial_pricing"]
+
+transform/pos = Vector2( -3.32662, -29.962 )
+transform/scale = Vector2( 0.0757883, 0.0715747 )
+texture = ExtResource( 27 )
+
+[node name="concessions_box" type="Sprite" parent="tutorial_pricing"]
+
+transform/pos = Vector2( 7.24002, -12.7682 )
+transform/scale = Vector2( 0.370197, 0.0811905 )
+texture = ExtResource( 27 )
+
+[node name="concessions_tab_box" type="Sprite" parent="tutorial_pricing"]
+
+transform/pos = Vector2( -23.6437, -13.9672 )
+transform/scale = Vector2( 0.122798, 0.0555069 )
+texture = ExtResource( 27 )
+
+[node name="arcades_box" type="Sprite" parent="tutorial_pricing"]
+
+visibility/visible = false
+transform/pos = Vector2( -23.8052, -9.27355 )
+transform/scale = Vector2( 0.122798, 0.0555069 )
+texture = ExtResource( 27 )
+
+[node name="prediction_box" type="Sprite" parent="tutorial_pricing"]
+
+transform/pos = Vector2( 22.0698, -42.0859 )
+transform/scale = Vector2( 0.0429954, 0.0803389 )
+texture = ExtResource( 27 )
+
+[node name="tutorial_marketing" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 0.512785, 10.8623 )
+transform/scale = Vector2( 0.947031, 0.806395 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="first_background" type="Sprite" parent="tutorial_marketing"]
+
+transform/pos = Vector2( -4.06607, -42.3185 )
+transform/scale = Vector2( 0.0744952, 0.0365855 )
+texture = ExtResource( 24 )
+
+[node name="first_warning" type="RichTextLabel" parent="tutorial_marketing"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -48.0
+margin/right = 950.0
+margin/bottom = 333.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "We need to get a jump start on taking over the competitors customers. We will set out marketing to $20 a day and see how much that helps."
+visible_characters = -1
+
+[node name="marketing_button" type="LinkButton" parent="tutorial_marketing"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2.0
+margin/top = -38.0
+margin/right = 54.0
+margin/bottom = 5.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="pricing_pointer" type="Sprite" parent="tutorial_marketing"]
+
+transform/pos = Vector2( 5.11742, -34.2983 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.0211542 )
+texture = ExtResource( 26 )
+
+[node name="pricing_box" type="Sprite" parent="tutorial_marketing"]
+
+transform/pos = Vector2( 4.75831, -29.5646 )
+transform/scale = Vector2( 0.106628, 0.0715747 )
+texture = ExtResource( 27 )
+
+[node name="tutorial_upgrades" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 0.512785, 10.8623 )
+transform/scale = Vector2( 0.947031, 0.806395 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="first_background" type="Sprite" parent="tutorial_upgrades"]
+
+transform/pos = Vector2( 0.354671, -42.8521 )
+transform/scale = Vector2( 0.0880002, 0.0401947 )
+texture = ExtResource( 24 )
+
+[node name="first_warning" type="RichTextLabel" parent="tutorial_upgrades"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -50.0
+margin/right = 1092.0
+margin/bottom = 194.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "We can also steal some customers from the competition by upgrading the storefront so I have purchased the decent storefront for you. Other upgrades include more arcade stations, and in store entertainment so the customers will wait longer in line. We can get those later when we have more customers."
+visible_characters = -1
+
+[node name="upgrades_button" type="LinkButton" parent="tutorial_upgrades"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 23.0
+margin/top = -38.0
+margin/right = 75.0
+margin/bottom = 5.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="pricing_pointer" type="Sprite" parent="tutorial_upgrades"]
+
+transform/pos = Vector2( 14.7335, -34.2983 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.0211542 )
+texture = ExtResource( 26 )
+
+[node name="pricing_pointer1" type="Sprite" parent="tutorial_upgrades"]
+
+transform/pos = Vector2( -21.4155, -27.6095 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.184585 )
+texture = ExtResource( 26 )
+
+[node name="tutorial_locals" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 0.512785, 10.8623 )
+transform/scale = Vector2( 0.947031, 0.806395 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="first_background" type="Sprite" parent="tutorial_locals"]
+
+transform/pos = Vector2( 0.255539, -43.4482 )
+transform/scale = Vector2( 0.0880002, 0.0372141 )
+texture = ExtResource( 24 )
+
+[node name="first_warning" type="RichTextLabel" parent="tutorial_locals"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -50.0
+margin/right = 1092.0
+margin/bottom = 222.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "This is the locals tab. You can check here everyday and a local character might be willing to sabatoge a competitor for you. There is nobody available here today."
+visible_characters = -1
+
+[node name="second_warning" type="RichTextLabel" parent="tutorial_locals"]
+
+visibility/visible = false
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -50.0
+margin/right = 1092.0
+margin/bottom = 331.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "If you get into real financial trouble you can check in with the loan officer at the bank and they will be willing to take out a small business loan, but be careful!"
+visible_characters = -1
+
+[node name="locals_button" type="LinkButton" parent="tutorial_locals"]
+
+visibility/visible = false
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = -42.0
+margin/right = 66.0
+margin/bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="pricing_pointer" type="Sprite" parent="tutorial_locals"]
+
+transform/pos = Vector2( 21.4251, -35.1228 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.0495841 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pricing_pointer1" type="Sprite" parent="tutorial_locals"]
+
+transform/pos = Vector2( -21.3913, -26.9182 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.19842 )
+texture = ExtResource( 26 )
+
+[node name="pricing_box" type="Sprite" parent="tutorial_locals"]
+
+transform/pos = Vector2( 20.7803, -29.8612 )
+transform/scale = Vector2( 0.0612665, 0.0715747 )
+texture = ExtResource( 27 )
+
+[node name="pricing_box1" type="Sprite" parent="tutorial_locals"]
+
+transform/pos = Vector2( -23.7987, -11.8897 )
+transform/scale = Vector2( 0.109084, 0.101897 )
+texture = ExtResource( 27 )
+
+[node name="locals_timer" type="Timer" parent="tutorial_locals"]
+
+process_mode = 1
+wait_time = 8.0
+one_shot = true
+autostart = false
+
+[node name="tutorial_research" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 0.512785, 10.8623 )
+transform/scale = Vector2( 0.947031, 0.806395 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="first_background" type="Sprite" parent="tutorial_research"]
+
+transform/pos = Vector2( 0.255539, -43.4482 )
+transform/scale = Vector2( 0.0880002, 0.0372141 )
+texture = ExtResource( 24 )
+
+[node name="first_warning" type="RichTextLabel" parent="tutorial_research"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -50.0
+margin/right = 1092.0
+margin/bottom = 222.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "The last tab is a fund for purchasing a new genre of game. We won't worry about putting anything in there right now."
+visible_characters = -1
+
+[node name="research_button" type="LinkButton" parent="tutorial_research"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 19.0
+margin/top = -41.0
+margin/right = 71.0
+margin/bottom = 2.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="pricing_pointer" type="Sprite" parent="tutorial_research"]
+
+transform/pos = Vector2( 27.5985, -35.4815 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.0495841 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pricing_box" type="Sprite" parent="tutorial_research"]
+
+transform/pos = Vector2( 27.926, -30.2199 )
+transform/scale = Vector2( 0.091448, 0.0715747 )
+texture = ExtResource( 27 )
+
+[node name="locals_timer" type="Timer" parent="tutorial_research"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="finish_up" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 0.512785, 10.8623 )
+transform/scale = Vector2( 0.947031, 0.806395 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="first_background" type="Sprite" parent="finish_up"]
+
+transform/pos = Vector2( 5.07049, -13.0834 )
+transform/scale = Vector2( 0.0731306, 0.0581224 )
+texture = ExtResource( 24 )
+
+[node name="first_warning" type="RichTextLabel" parent="finish_up"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -14.0
+margin/top = -18.0
+margin/right = 748.0
+margin/bottom = 220.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "We are all set up and ready to go! Just click the Start Day button and we will see how the new business plan works out!"
+visible_characters = -1
+
+[node name="pricing_pointer" type="Sprite" parent="finish_up"]
+
+transform/pos = Vector2( 19.5086, 4.79016 )
+transform/rot = 2.0
+transform/scale = Vector2( 0.185157, 0.130546 )
+texture = ExtResource( 26 )
+
+[node name="pricing_box" type="Sprite" parent="finish_up"]
+
+transform/pos = Vector2( 20.2764, 17.4316 )
+transform/scale = Vector2( 0.240862, 0.142267 )
+texture = ExtResource( 27 )
+
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
+
+[connection signal="button_down" from="low_funds_warning/low_funds_ok" to="." method="_on_low_funds_ok_button_down"]
+
+[connection signal="button_down" from="game_over/game_over_ok" to="." method="_on_game_over_ok_button_down"]
+
+[connection signal="button_down" from="genre_discovery/genre_discover_ok" to="." method="_on_genre_discover_ok_button_down"]
+
+[connection signal="button_down" from="hollyhock_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
+
+[connection signal="button_down" from="tutorial_start/tutorial_start_yes_button" to="." method="_on_tutorial_start_yes_button_button_down"]
+
+[connection signal="button_down" from="tutorial_start/tutorial_start_no_button" to="." method="_on_tutorial_start_no_button_button_down"]
+
+[connection signal="button_down" from="tutorial_persistent_menu/persistent_menu_ok" to="." method="_on_persistent_menu_ok_button_down"]
+
+[connection signal="timeout" from="tutorial_persistent_menu/persistent_menu_timer" to="." method="_on_persistent_menu_timer_timeout"]
+
+[connection signal="button_down" from="tutorial_reports/reports_button_ok" to="." method="_on_reports_button_ok_button_down"]
+
+[connection signal="timeout" from="tutorial_reports/reports_menu_timer" to="." method="_on_reports_menu_timer_timeout"]
+
+[connection signal="button_down" from="tutorial_news/news_button_ok" to="." method="_on_news_button_ok_button_down"]
+
+[connection signal="button_down" from="tutorial_supplies/supplies_button_ok" to="." method="_on_supplies_button_ok_button_down"]
+
+[connection signal="button_down" from="tutorial_games/games_button_ok" to="." method="_on_games_button_ok_button_down"]
+
+[connection signal="button_down" from="tutorial_pricing/pricing_button_one" to="." method="_on_pricing_button_one_button_down"]
+
+[connection signal="button_down" from="tutorial_pricing/pricing_button_two" to="." method="_on_pricing_button_two_button_down"]
+
+[connection signal="button_down" from="tutorial_marketing/marketing_button" to="." method="_on_marketing_button_button_down"]
+
+[connection signal="button_down" from="tutorial_upgrades/upgrades_button" to="." method="_on_upgrades_button_button_down"]
+
+[connection signal="button_down" from="tutorial_locals/locals_button" to="." method="_on_locals_button_button_down"]
+
+[connection signal="timeout" from="tutorial_locals/locals_timer" to="." method="_on_locals_timer_timeout"]
+
+[connection signal="button_down" from="tutorial_research/research_button" to="." method="_on_research_button_button_down"]
 
 

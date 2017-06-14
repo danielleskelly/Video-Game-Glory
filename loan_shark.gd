@@ -19,7 +19,7 @@ func _process(delta):
 		current_loan_output.clear()
 		current_loan_output.add_text(str(global.hollyhock_current_loan))
 	daily_interest_output.clear()
-	daily_interest_output.add_text(str(global.daily_interest))
+	daily_interest_output.add_text("%" + str(global.daily_interest * 100))
 	borrow_output.clear()
 	borrow_output.add_text(str(borrow))
 	payback_output.clear()

@@ -14,7 +14,6 @@ onready var marketing = get_tree().get_current_scene().get_node("marketing")
 onready var storefront = get_tree().get_current_scene().get_node("storefront")
 onready var arcade_upgrade = get_tree().get_current_scene().get_node("arcade_upgrade")
 onready var entertainment = get_tree().get_current_scene().get_node("entertainment")
-onready var deus = get_tree().get_current_scene().get_node("deus_ex_machina")
 onready var sabatoge = get_tree().get_current_scene().get_node("sabatoge")
 onready var loans = get_tree().get_current_scene().get_node("loans")
 onready var research = get_tree().get_current_scene().get_node("research")
@@ -67,8 +66,6 @@ func _process(delta):
 			arcade_upgrade.show()
 		if (upgrade_select == 2):
 			entertainment.show()
-		if (upgrade_select == 3):
-			deus.show()
 	if (select == 7):
 		locals.show()
 		locals_select = locals.get_selected()
@@ -93,7 +90,6 @@ func hide():
 	storefront.set_hidden(true)
 	arcade_upgrade.set_hidden(true)
 	entertainment.set_hidden(true)
-	deus.set_hidden(true)
 	sabatoge.set_hidden(true)
 	loans.set_hidden(true)
 	research.set_hidden(true)
