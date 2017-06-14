@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=1]
+[gd_scene load_steps=37 format=1]
 
 [ext_resource path="res://time_management.gd" type="Script" id=1]
 [ext_resource path="res://floor.png" type="Texture" id=2]
@@ -13,12 +13,14 @@
 [ext_resource path="res://finances.tscn" type="PackedScene" id=11]
 [ext_resource path="res://concessions.tscn" type="PackedScene" id=12]
 [ext_resource path="res://supplies.tscn" type="PackedScene" id=13]
+[ext_resource path="res://blacker_than_night.png" type="Texture" id=14]
+[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=15]
 
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -27.7428, 26.9301, 0, 0, 0, 0, -27.7428, -22.8138, 0, 0, 0, 0, -21.4972, -22.8138, 0, 0, 0, 0, -21.4972, 22.9749, 0, 0, 0, 0, -14.7162, 23.127, 0, 0, 0, 0, -15.0579, -25.3828, 0, 0, 0, 0, -10.5997, -25.3828 )
+"points": Vector2Array( 0, 0, 0, 0, -29.2748, 33.9415, 0, 0, 0, 0, -29.2748, -26.0326, 0, 0, 0, 0, -21.731, -25.8881, 0, 0, 0, 0, -21.731, 25.9931, 0, 0, 0, 0, -14.1871, 25.9931, 0, 0, 0, 0, -14.1871, -25.4546, 0, 0, 0, 0, -10.6271, -25.4546 )
 }
 
 [sub_resource type="Curve2D" id=2]
@@ -181,12 +183,9 @@ __meta__ = {
 
 [node name="queue" type="Sprite" parent="."]
 
-transform/pos = Vector2( -20.3153, 1.33645 )
-transform/scale = Vector2( 0.0420774, 0.0965532 )
+transform/pos = Vector2( -20.9214, 0.708434 )
+transform/scale = Vector2( 0.0480358, 0.102319 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="arcade_zone_one" parent="." groups=[
 "free",
@@ -259,7 +258,7 @@ transform/scale = Vector2( 0.0555162, 0.0839192 )
 [node name="day_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 180.0
+wait_time = 160.0
 one_shot = true
 autostart = true
 
@@ -473,6 +472,53 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="tutorial" type="Node2D" parent="."]
+
+process/pause_mode = 2
+
+[node name="background" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -0.367142, -0.932255 )
+transform/scale = Vector2( 0.0925188, 0.153416 )
+texture = ExtResource( 14 )
+
+[node name="popup_dialogue" type="RichTextLabel" parent="tutorial"]
+
+rect/scale = Vector2( 0.07, 0.07 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -28.0
+margin/top = -29.0
+margin/right = 794.0
+margin/bottom = 842.0
+custom_fonts/normal_font = ExtResource( 15 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Hey John,
+	Yeah, that's right I'm talking to you. So.... a couple of things didn't get finished, one you probably won't notice is the sabatoge local character things, but the tutorial level is super easy and doesn't really need them. The other is this section you are about to do. Ideally you would drag and drop the people to the arcades and make the whole day go easier but as you will see my scale is screwed up somewhere and you can't read the genre that they want, thus not a lot of point. It is going to take a while to sort that out, but for now you can just sit back and enjoy as the computer does all the math for you. I hope you enjoy!"
+visible_characters = -1
+
+[node name="tutorial_button" type="LinkButton" parent="tutorial"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 24.0
+margin/right = 72.0
+margin/bottom = 67.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 
 [connection signal="timeout" from="prediction_one_timer" to="." method="_on_prediction_one_timer_timeout"]
@@ -480,5 +526,7 @@ __meta__ = {
 [connection signal="timeout" from="prediction_two_timer" to="." method="_on_prediction_two_timer_timeout"]
 
 [connection signal="timeout" from="prediction_three_timer" to="." method="_on_prediction_three_timer_timeout"]
+
+[connection signal="button_down" from="tutorial/tutorial_button" to="." method="_on_tutorial_button_button_down"]
 
 

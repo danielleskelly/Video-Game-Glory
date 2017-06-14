@@ -180,7 +180,6 @@ visible_characters = -1
 
 [node name="soda" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -0.345047, -16.8837 )
 transform/scale = Vector2( 0.957029, 0.117766 )
 script/script = ExtResource( 4 )
@@ -211,7 +210,7 @@ bbcode/enabled = false
 bbcode/bbcode = "Soda"
 visible_characters = -1
 
-[node name="price_output" type="RichTextLabel" parent="soda"]
+[node name="price_output_black" type="RichTextLabel" parent="soda"]
 
 rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
@@ -224,6 +223,46 @@ margin/right = 34.0
 margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="price_output_red" type="RichTextLabel" parent="soda"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="price_output_green" type="RichTextLabel" parent="soda"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.195312, 1, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
@@ -359,7 +398,6 @@ __meta__ = {
 
 [node name="popcorn" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -0.345047, -9.73485 )
 transform/scale = Vector2( 0.957029, 0.117766 )
 script/script = ExtResource( 7 )
@@ -390,7 +428,7 @@ bbcode/enabled = false
 bbcode/bbcode = "Popcorn"
 visible_characters = -1
 
-[node name="price_output" type="RichTextLabel" parent="popcorn"]
+[node name="price_output_black" type="RichTextLabel" parent="popcorn"]
 
 rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
@@ -403,6 +441,46 @@ margin/right = 34.0
 margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="price_output_red" type="RichTextLabel" parent="popcorn"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="price_output_green" type="RichTextLabel" parent="popcorn"]
+
+rect/scale = Vector2( 0.1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -18.0
+margin/top = -24.0
+margin/right = 34.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 1, 0.109375, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1

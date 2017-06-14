@@ -1,34 +1,50 @@
 extends Node2D
 
-onready var station_three_vis = get_node("station_three")
-onready var station_four_vis = get_node("station_four")
-onready var station_five_vis = get_node("station_five")
-onready var station_six_vis = get_node("station_six")
+onready var station_one = get_node("station_one")
+onready var station_two = get_node("station_two")
+onready var station_three = get_node("station_three")
+onready var station_four = get_node("station_four")
+onready var station_five = get_node("station_five")
+onready var station_six = get_node("station_six")
 
 func _ready():
+	set_games()
 	set_process(true)
 
 func _process(delta):
 	if (global.town_select == "hollyhock"):
 		if (global.hollyhock_station_three_key == true):
-			station_three_vis.show()
+			station_three.show()
 		if (global.hollyhock_station_three_key == false):
-			station_three_vis.set_hidden(true)
+			station_three.set_hidden(true)
 		if (global.hollyhock_station_four_key == true):
-			station_four_vis.show()
+			station_four.show()
 		if (global.hollyhock_station_four_key == false):
-			station_four_vis.set_hidden(true)
+			station_four.set_hidden(true)
 		if (global.hollyhock_station_five_key == true):
-			station_five_vis.show()
+			station_five.show()
 		if (global.hollyhock_station_five_key == false):
-			station_five_vis.set_hidden(true)
+			station_five.set_hidden(true)
 		if (global.hollyhock_station_six_key == true):
-			station_six_vis.show()
+			station_six.show()
 		if (global.hollyhock_station_six_key == false):
-			station_six_vis.set_hidden(true)
+			station_six.set_hidden(true)
 		global.hollyhock_station_one_selection = get_node("station_one/dropdown").get_selected()
 		global.hollyhock_station_two_selection = get_node("station_two/dropdown").get_selected()
 		global.hollyhock_station_three_selection = get_node("station_three/dropdown").get_selected()
 		global.hollyhock_station_four_selection = get_node("station_four/dropdown").get_selected()
 		global.hollyhock_station_five_selection = get_node("station_five/dropdown").get_selected()
 		global.hollyhock_station_six_selection = get_node("station_six/dropdown").get_selected()
+		
+func set_games():
+	if (global.town_select == "hollyhock"):
+		station_one.get_child(1).select(global.hollyhock_station_one_selection)
+		station_two.get_child(1).select(global.hollyhock_station_two_selection)
+		if (global.hollyhock_station_three_key == true):
+			station_three.get_child(1).select(global.hollyhock_station_three_selection)
+		if (global.hollyhock_station_four_key == true):
+			station_four.get_child(1).select(global.hollyhock_station_four_selection)
+		if (global.hollyhock_station_five_key == true):
+			station_five.get_child(1).select(global.hollyhock_station_five_selection)
+		if (global.hollyhock_station_six_key == true):
+			station_six.get_child(1).select(global.hollyhock_station_six_selection)
