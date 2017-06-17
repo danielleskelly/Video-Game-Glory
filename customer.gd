@@ -16,6 +16,7 @@ var concession_choice #allows the concessions to pass a boolean of choice
 var colliders #stores the colliding bodies
 var price_check #variable to store whether the price is too high
 
+var dragging = false
 
 
 func _ready():
@@ -23,6 +24,7 @@ func _ready():
 	
 func _process(delta):
 	#makes the customers move
+	set_scale(Vector2(.2,.2))
 	colliders = get_colliding_bodies()
 	if (get_parent().is_in_group("path") == true):
 		if (get_parent().get_parent().is_in_group("queue") == true):
@@ -30,6 +32,8 @@ func _process(delta):
 				get_parent().set_offset(get_parent().get_offset() + (25*delta))
 		if ((get_parent().get_parent().is_in_group("arcade") == true) or (get_parent().get_parent().is_in_group("concessions") == true) or (get_parent().get_parent().is_in_group("exit") == true)):
 				get_parent().set_offset(get_parent().get_offset() + (25*delta))
+	if (dragging == true):
+		set_global_pos(get_global_mouse_pos())
 
 
 #when the customer has waited in the queue for the timeout period
@@ -199,3 +203,11 @@ func concessions_purchase():
 
 func _on_exit_timer_timeout():
 	get_parent().queue_free()
+
+func _on_customer_pics_button_down():
+	dragging = true
+
+
+func _on_customer_pics_button_up():
+	dragging = false
+	pass
