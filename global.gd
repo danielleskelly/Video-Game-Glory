@@ -146,6 +146,7 @@ var candy_yesterday_used = 0
 var credit_limit = 3000
 var hollyhock_current_loan = 0
 var daily_interest = .05
+var hollyhock_loans_input_key = false
 
 #upgrades
 var worst_price = "Owned"
@@ -158,6 +159,7 @@ var best_price = 1000
 var hollyhock_research_fund = 0
 var hollyhock_days_left_research = hollyhock_research_total_one
 var hollyhock_research_spending = 0
+var hollyhock_research_input_key = false
 
 #advertising
 var hollyhock_advertising = 20
