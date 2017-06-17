@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://customer.gd" type="Script" id=1]
 [ext_resource path="res://customer.png" type="Texture" id=2]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=3]
-[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://hanged_man.png" type="Texture" id=3]
+[ext_resource path="res://genre_bubble.png" type="Texture" id=4]
+[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -12,11 +13,10 @@ extents = Vector2( 10, 10 )
 
 [node name="customer" type="RigidBody2D"]
 
-transform/scale = Vector2( 0.190715, 0.286461 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 2.64946, 0, 0, 2.53309, 0.811441, -2.63366 )
-shapes/0/trigger = false
+shapes/0/trigger = true
 collision/layers = 1
 collision/mask = 1
 mode = 0
@@ -24,7 +24,7 @@ mass = 1.0
 friction = 0.0
 bounce = 0.0
 gravity_scale = 0.0
-custom_integrator = false
+custom_integrator = true
 continuous_cd = 2
 contacts_reported = 10
 contact_monitor = true
@@ -48,9 +48,11 @@ margin/top = -4.0
 margin/right = 28.0
 margin/bottom = 47.0
 toggle_mode = false
+click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 2 )
+textures/pressed = ExtResource( 3 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -59,7 +61,7 @@ params/stretch_mode = 0
 editor/display_folded = true
 transform/pos = Vector2( 10.0123, -13.8069 )
 transform/scale = Vector2( 0.545482, 0.430134 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="meta" type="RichTextLabel" parent="genre_pic"]
 
@@ -72,7 +74,7 @@ margin/left = -9.0
 margin/top = -10.0
 margin/right = 89.0
 margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Meta"
@@ -92,7 +94,7 @@ margin/left = -9.0
 margin/top = -10.0
 margin/right = 89.0
 margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Meta"
@@ -112,7 +114,7 @@ margin/left = -9.0
 margin/top = -10.0
 margin/right = 89.0
 margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Meta"
@@ -132,7 +134,7 @@ margin/left = -9.0
 margin/top = -10.0
 margin/right = 89.0
 margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Meta"
@@ -152,7 +154,7 @@ margin/left = -9.0
 margin/top = -10.0
 margin/right = 89.0
 margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Meta"
@@ -172,7 +174,7 @@ margin/left = -9.0
 margin/top = -10.0
 margin/right = 89.0
 margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Meta"
@@ -186,7 +188,7 @@ __meta__ = {
 transform/pos = Vector2( 0.811441, -2.63366 )
 transform/scale = Vector2( 2.64946, 2.53309 )
 shape = SubResource( 1 )
-trigger = false
+trigger = true
 _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
@@ -202,7 +204,7 @@ autostart = false
 [node name="concessions_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 7.5
+wait_time = 5.0
 one_shot = true
 autostart = false
 
@@ -212,6 +214,10 @@ process_mode = 1
 wait_time = 7.5
 one_shot = true
 autostart = false
+
+[connection signal="button_down" from="customer_pics" to="." method="_on_customer_pics_button_down"]
+
+[connection signal="button_up" from="customer_pics" to="." method="_on_customer_pics_button_up"]
 
 [connection signal="timeout" from="waiting_timer" to="." method="_on_waiting_timer_timeout"]
 

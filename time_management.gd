@@ -46,7 +46,7 @@ var prediction_three_time
 var storefront_choice
 
 #total customers after all calculations
-var total_customers = 0
+var total_customers = 1
 
 #wait time based on entertainment check
 var wait_time
@@ -179,7 +179,10 @@ func _on_prediction_one_timer_timeout(): #request to create another prediction o
 		customer.get_child(1).get_child(5).set_hidden(true)
 		customer.add_to_group("meta")
 	queue_path.add_child(mover)
+	queue_path.get_child(queue_path.get_children().size() - 1).set_scale(Vector2(1,1))
 	mover.add_child(customer)
+	queue_path.get_child(queue_path.get_children().size() - 1).get_child(0).set_scale(Vector2(1,1))
+	queue_path.set_scale(Vector2(1,1))
 
 func _on_prediction_two_timer_timeout(): #request to create another prediction two customer
 	var customer = customer_load.instance()
