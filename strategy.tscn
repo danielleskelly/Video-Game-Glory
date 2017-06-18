@@ -306,6 +306,10 @@ transform/scale = Vector2( 0.648649, 0.390113 )
 transform/pos = Vector2( 8.05803, 4.50401 )
 transform/scale = Vector2( 0.646566, 0.388286 )
 
+[node name="debounce" parent="research"]
+
+wait_time = 0.3
+
 [node name="games" parent="." instance=ExtResource( 18 )]
 
 visibility/visible = false
@@ -1751,3 +1755,4 @@ texture = ExtResource( 27 )
 [connection signal="button_down" from="tutorial_research/research_button" to="." method="_on_research_button_button_down"]
 
 
+[editable path="research"]

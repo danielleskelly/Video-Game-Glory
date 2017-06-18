@@ -10,6 +10,8 @@ onready var prediction_two_timer = get_node("prediction_two_timer")
 onready var prediction_three_timer = get_node("prediction_three_timer")
 onready var supply_one = get_tree().get_current_scene().get_node("supply_one")
 onready var supply_two = get_tree().get_current_scene().get_node("supply_two")
+onready var countdown_timer = get_node("countdown_timer")
+
 
 # global variables that change based on town
 var town_population
@@ -59,6 +61,9 @@ var new_prediction_three
 var genre_two_key
 var genre_three_key
 
+var countdown_time
+
+
 func _ready():
 	customer_math()
 	tutorial_check()
@@ -66,6 +71,9 @@ func _ready():
 
 
 func _process(delta):
+	countdown_time = get_node("day_timer").get_time_left()
+	countdown_timer.clear()
+	countdown_timer.add_text(str(int(countdown_time)))
 	if (global.town_select == "hollyhock"):
 		supply_one.get_child(2).clear()
 		supply_one.get_child(2).add_text(str(global.hollyhock_soda_count))
@@ -182,7 +190,6 @@ func _on_prediction_one_timer_timeout(): #request to create another prediction o
 	queue_path.get_child(queue_path.get_children().size() - 1).set_scale(Vector2(1,1))
 	mover.add_child(customer)
 	queue_path.get_child(queue_path.get_children().size() - 1).get_child(0).set_scale(Vector2(1,1))
-	queue_path.set_scale(Vector2(1,1))
 
 func _on_prediction_two_timer_timeout(): #request to create another prediction two customer
 	var customer = customer_load.instance()

@@ -183,10 +183,8 @@ var tutorial_supplies_box = false
 var tutorial_finances_box = false
 var tutorial_time_management_side = false
 
-
-
 func _ready():
-	set_process(true)
+    set_process(true)
 
 func _process(delta):
     hollyhock_cash = hollyhock_balance - hollyhock_expenses

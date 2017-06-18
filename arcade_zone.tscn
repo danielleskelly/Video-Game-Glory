@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://arcade_zone.png" type="Texture" id=1]
+[ext_resource path="res://game_background.png" type="Texture" id=2]
+[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
 
 [node name="arcade_zone" type="Node2D"]
 
@@ -9,8 +11,135 @@ transform/scale = Vector2( 2.08905, 3.18977 )
 
 [node name="arcade" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.130804, -1.34376 )
+transform/pos = Vector2( -0.389473, -1.34376 )
 transform/scale = Vector2( 1.73634, 0.941755 )
 texture = ExtResource( 1 )
+
+[node name="genre_display" type="Sprite" parent="."]
+
+transform/pos = Vector2( -0.568805, 0.0826427 )
+transform/scale = Vector2( 0.0465299, 0.0246616 )
+texture = ExtResource( 2 )
+
+[node name="meta" type="RichTextLabel" parent="genre_display"]
+
+visibility/visible = false
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -177.0
+margin/top = -101.0
+margin/right = -64.0
+margin/bottom = -55.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Meta"
+visible_characters = -1
+
+[node name="classic" type="RichTextLabel" parent="genre_display"]
+
+visibility/visible = false
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -177.0
+margin/top = -101.0
+margin/right = -64.0
+margin/bottom = -55.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Classic"
+visible_characters = -1
+
+[node name="platformer" type="RichTextLabel" parent="genre_display"]
+
+visibility/visible = false
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -294.0
+margin/top = -101.0
+margin/right = -102.0
+margin/bottom = -55.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Platformer"
+visible_characters = -1
+
+[node name="strategy" type="RichTextLabel" parent="genre_display"]
+
+visibility/visible = false
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -247.0
+margin/top = -101.0
+margin/right = -79.0
+margin/bottom = -55.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Strategy"
+visible_characters = -1
+
+[node name="time_management" type="RichTextLabel" parent="genre_display"]
+
+visibility/visible = false
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -356.0
+margin/top = -141.0
+margin/right = -117.0
+margin/bottom = -46.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Time Management"
+visible_characters = -1
+
+[node name="adventure" type="RichTextLabel" parent="genre_display"]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -269.0
+margin/top = -84.0
+margin/right = -80.0
+margin/bottom = -38.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Adventure"
+visible_characters = -1
+
+[node name="arcade_button" type="LinkButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -28.0
+margin/right = 22.0
+margin/bottom = 24.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
 
 

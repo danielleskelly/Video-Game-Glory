@@ -245,6 +245,20 @@ transform/scale = Vector2( 0.174372, 0.214095 )
 transform/pos = Vector2( 25.6245, 0.173237 )
 transform/scale = Vector2( 0.146707, 0.801887 )
 
+[node name="button" type="LinkButton" parent="concessions"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -31.0
+margin/right = 21.0
+margin/bottom = 15.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
 [node name="supply_one" parent="." instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 23.0321, -29.0062 )
@@ -519,6 +533,23 @@ click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
 text = "OK"
+
+[node name="countdown_timer" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 23.0
+margin/top = 25.0
+margin/right = 86.0
+margin/bottom = 92.0
+custom_fonts/normal_font = ExtResource( 15 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
 
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 

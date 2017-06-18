@@ -58,7 +58,6 @@ params/stretch_mode = 0
 
 [node name="genre_pic" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 10.0123, -13.8069 )
 transform/scale = Vector2( 0.545482, 0.430134 )
 texture = ExtResource( 4 )
