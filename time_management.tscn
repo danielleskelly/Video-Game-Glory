@@ -489,6 +489,7 @@ __meta__ = {
 [node name="tutorial" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="tutorial"]
