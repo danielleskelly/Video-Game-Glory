@@ -15,7 +15,19 @@ var prediction_one
 var prediction_two
 var prediction_three
 
+var where
+var store_offset
 var check
+var impenetrable = false
+var where_from
+
+var in_arcade_one = false
+var in_arcade_two = false
+var in_arcade_three = false
+var in_arcade_four = false
+var in_arcade_five = false
+var in_arcade_six = false
+var in_concessions = false
 
 func _ready():
 	set_genre_type() #sets the prediction based on the town
@@ -98,12 +110,80 @@ func set_genre_type(): #sets the genre of the games based on the town
 	if global.town_select == "hollyhock":
 		if (global.hollyhock_station_one_selection == 0):
 			genre_type = "none"
+			get_node("genre_display/meta").set_hidden(true)
+			get_node("genre_display/classic").set_hidden(true)
+			get_node("genre_display/platformer").set_hidden(true)
+			get_node("genre_display/strategy").set_hidden(true)
+			get_node("genre_display/time_management").set_hidden(true)
+			get_node("genre_display/adventure").set_hidden(true)
 		if (global.hollyhock_station_one_selection == 1):
 			genre_type = "meta"
+			get_node("genre_display/meta").show()
+			get_node("genre_display/classic").set_hidden(true)
+			get_node("genre_display/platformer").set_hidden(true)
+			get_node("genre_display/strategy").set_hidden(true)
+			get_node("genre_display/time_management").set_hidden(true)
+			get_node("genre_display/adventure").set_hidden(true)
 			prediction_one = global.meta_prediction
 		if (global.hollyhock_station_one_selection == 2):
 			genre_type = "classic"
+			get_node("genre_display/meta").set_hidden(true)
+			get_node("genre_display/classic").show()
+			get_node("genre_display/platformer").set_hidden(true)
+			get_node("genre_display/strategy").set_hidden(true)
+			get_node("genre_display/time_management").set_hidden(true)
+			get_node("genre_display/adventure").set_hidden(true)
 			prediction_two = global.classic_prediction
 		if (global.hollyhock_station_one_selection == 3):
 			genre_type = "platformer"
+			get_node("genre_display/meta").set_hidden(true)
+			get_node("genre_display/classic").set_hidden(true)
+			get_node("genre_display/platformer").show()
+			get_node("genre_display/strategy").set_hidden(true)
+			get_node("genre_display/time_management").set_hidden(true)
+			get_node("genre_display/adventure").set_hidden(true)
 			prediction_three = global.platformer_prediction
+
+
+func _on_arcade_button_button_up():
+	set_genre_type()
+	figure_out_where()
+	if (global.town_select == "hollyhock"):
+		if (where_from == "queue"):
+			if (in_arcade_one == true):
+				move_node = get_parent()
+				if ((is_in_group("meta") == true) and (get_tree().get_current_scene().get_node("arcade_zone_one").get_child(1).get_child(0).is_visible() == true) and (get_tree().get_current_scene().get_node("arcade_zone_one").is_in_group("free") == true)):
+					check = global.arcade_one_range_high - global.hollyhock_arcade_one_price #check if the arcade price is too high
+			if ((check <= 0) and (prediction_two < .75)):
+				price_check = false
+			else:
+				price_check = true
+			if (price_check == true): #if the price is not too high
+				impenetrable = true
+				timer = move_node.get_child(0).get_child(3)
+				timer.set_wait_time(20) #get the timer and set it to the arcade play time (20 secs)
+				move_node.get_child(0).get_child(3).start() #start it
+				old_parent.remove_child(old_parent.get_child(0)) #and move the customer through the system
+				move_node.set_offset(0) 
+				new_parent.add_child(move_node)
+				remove_from_group("free") #set arcade as occupied
+			if (price_check == false): # if the price is too high
+				new_parent = get_tree().get_current_scene().get_node("queue_to_exit") #customer leaves
+				old_parent.remove_child(old_parent.get_child(0))
+				move_node.set_offset(0)
+				new_parent.add_child(move_node)
+				global.sales_lost = global.sales_lost + 1 #and it is counted as a lost sale
+				global.price_loss = global.price_loss + 1
+			if (in_arcade_two == true):
+				print("true_two")
+			if (in_arcade_three == true):
+				print("true_three")
+			if (in_arcade_four == true):
+				print("true_four")
+			if (in_arcade_five == true):
+				print("true_five")
+			if (in_arcade_six == true):
+				print("true_six")
+		if (where_from == "arcade"):
+			if (in_concessions == true):
+				print("true_conc")

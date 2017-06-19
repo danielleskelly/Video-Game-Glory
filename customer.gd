@@ -4,20 +4,26 @@ extends RigidBody2D
 onready var waiting_timer = get_node("waiting_timer")
 onready var concessions_timer = get_node("concessions_timer")
 onready var exit_timer = get_node("exit_timer")
+onready var arcade_one = get_tree().get_current_scene().get_node("arcade_zone_one/arcade_button")
+onready var arcade_two = get_tree().get_current_scene().get_node("arcade_zone_two/arcade_button")
+onready var arcade_three = get_tree().get_current_scene().get_node("arcade_zone_three/arcade_button")
+onready var arcade_four = get_tree().get_current_scene().get_node("arcade_zone_four/arcade_button")
+onready var arcade_five = get_tree().get_current_scene().get_node("arcade_zone_five/arcade_button")
+onready var arcade_six = get_tree().get_current_scene().get_node("arcade_zone_six/arcade_button")
+onready var concessions = get_tree().get_current_scene().get_node("concessions/button")
 
 #gets the move_node to go from old parent to new parent when changing paths
 var old_parent
 var new_parent
 var move_node
 
+var dragging = false
+
 var charge_price #allows the price to adjust with the arcade the customer moves from
 var concession_choice #allows the concessions to pass a boolean of choice
 
 var colliders #stores the colliding bodies
 var price_check #variable to store whether the price is too high
-
-var dragging = false
-
 
 func _ready():
 	set_process(true)
@@ -27,12 +33,14 @@ func _process(delta):
 	set_scale(Vector2(.2,.2))
 	colliders = get_colliding_bodies()
 	if (get_parent().is_in_group("path") == true):
-		if (get_parent().get_parent().is_in_group("queue") == true):
+		if ((get_parent().get_parent().is_in_group("queue") == true) and (arcade_zone_one.impenetrable == false)):
 			if ((colliders.size() == 0) or (colliders[0].is_greater_than(self) == true)):
 				get_parent().set_offset(get_parent().get_offset() + (25*delta))
+		if ((get_parent().get_parent().is_in_group("queue") == true) and (impenetrable == true)):
+			get_parent().set_offset(get_parent().get_offset() + (25*delta))
 		if ((get_parent().get_parent().is_in_group("arcade") == true) or (get_parent().get_parent().is_in_group("concessions") == true) or (get_parent().get_parent().is_in_group("exit") == true)):
 				get_parent().set_offset(get_parent().get_offset() + (25*delta))
-	if (dragging == true):
+	if (arcade_zone_one.dragging == true):
 		set_global_pos(get_global_mouse_pos())
 
 
@@ -181,6 +189,31 @@ func _on_concessions_timer_timeout():
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
 		concessions_purchase()
+	if (get_parent().get_parent().is_in_group("arcade") == true):
+		if (get_parent().get_parent().get_name() == "zone_one_to_conc"):
+			old_parent = get_tree().get_current_scene().get_node("zone_one_to_conc")
+			move_node = get_tree().get_current_scene().get_node("zone_one_to_conc").get_child(0)
+		if (get_parent().get_parent().get_name() == "zone_two_to_conc"):
+			old_parent = get_tree().get_current_scene().get_node("zone_two_to_conc")
+			move_node = get_tree().get_current_scene().get_node("zone_two_to_conc").get_child(0)
+		if (get_parent().get_parent().get_name() == "zone_three_to_conc"):
+			old_parent = get_tree().get_current_scene().get_node("zone_three_to_conc")
+			move_node = get_tree().get_current_scene().get_node("zone_three_to_conc").get_child(0)
+		if (get_parent().get_parent().get_name() == "zone_four_to_conc"):
+			old_parent = get_tree().get_current_scene().get_node("zone_four_to_conc")
+			move_node = get_tree().get_current_scene().get_node("zone_four_to_conc").get_child(0)
+		if (get_parent().get_parent().get_name() == "zone_five_to_conc"):
+			old_parent = get_tree().get_current_scene().get_node("zone_five_to_conc")
+			move_node = get_tree().get_current_scene().get_node("zone_five_to_conc").get_child(0)
+		if (get_parent().get_parent().get_name() == "zone_six_to_conc"):
+			old_parent = get_tree().get_current_scene().get_node("zone_six_to_conc")
+			move_node = get_tree().get_current_scene().get_node("zone_six_to_conc").get_child(0)
+		new_parent = get_tree().get_current_scene().get_node("concessions_to_exit")
+		exit_timer.start()
+		old_parent.remove_child(old_parent.get_child(0))
+		move_node.set_offset(0)
+		new_parent.add_child(move_node)
+		concessions_purchase()
 		
 #charges the customer for concessions if they go to concessions
 func concessions_purchase():
@@ -206,8 +239,65 @@ func _on_exit_timer_timeout():
 
 func _on_customer_pics_button_down():
 	dragging = true
+	where = get_global_mouse_pos()
+	store_offset = get_parent().get_offset()
+	print(where)
+	if (get_parent().get_parent().is_in_group("queue")):
+		where_from = "queue"
+	if (get_parent().get_parent().is_in_group("arcade")):
+		where_from = "arcade"
 
 
 func _on_customer_pics_button_up():
-	dragging = false
 	pass
+
+func figure_out_where():
+	var arcade_one_pos = arcade_one.get_global_pos()
+	var arcade_one_size = arcade_one.get_size()
+	var arcade_two_pos = arcade_two.get_global_pos()
+	var arcade_two_size = arcade_two.get_size()
+	var arcade_three_pos = arcade_three.get_global_pos()
+	var arcade_three_size = arcade_three.get_size()
+	var arcade_four_pos = arcade_four.get_global_pos()
+	var arcade_four_size = arcade_four.get_size()
+	var arcade_five_pos = arcade_five.get_global_pos()
+	var arcade_five_size = arcade_five.get_size()
+	var arcade_six_pos = arcade_six.get_global_pos()
+	var arcade_six_size = arcade_six.get_size()
+	var concessions_pos = concessions.get_global_pos()
+	var concessions_size = concessions.get_size()
+	var in_x_one = where.x > arcade_one_pos.x and where.x < (arcade_one_pos.x + (arcade_one_size.x *2))
+	var in_y_one = where.y > arcade_one_pos.y and where.y < (arcade_one_pos.y + (arcade_one_size.y *2))
+	var in_x_two = where.x > arcade_two_pos.x and where.x < (arcade_two_pos.x + (arcade_two_size.x *2))
+	var in_y_two = where.y > arcade_two_pos.y and where.y < (arcade_two_pos.y + (arcade_two_size.y *2))
+	var in_x_three = where.x > arcade_three_pos.x and where.x < (arcade_three_pos.x + (arcade_three_size.x *2))
+	var in_y_three = where.y > arcade_three_pos.y and where.y < (arcade_three_pos.y + (arcade_three_size.y *2))
+	var in_x_four = where.x > arcade_four_pos.x and where.x < (arcade_four_pos.x + (arcade_four_size.x *2))
+	var in_y_four = where.y > arcade_four_pos.y and where.y < (arcade_four_pos.y + (arcade_four_size.y *2))
+	var in_x_five = where.x > arcade_five_pos.x and where.x < (arcade_five_pos.x + (arcade_five_size.x *2))
+	var in_y_five = where.y > arcade_five_pos.y and where.y < (arcade_five_pos.y + (arcade_five_size.y *2))
+	var in_x_six = where.x > arcade_six_pos.x and where.x < (arcade_six_pos.x + (arcade_six_size.x *2))
+	var in_y_six = where.y > arcade_six_pos.y and where.y < (arcade_six_pos.y + (arcade_six_size.y *2))
+	var in_x_conc = where.x > concessions_pos.x and where.x < (concessions_pos.x + (concessions_size.x *2))
+	var in_y_conc = where.y > concessions_pos.y and where.y < (concessions_pos.y + (concessions_size.y *2))
+	in_arcade_one = in_x_one and in_y_one
+	in_arcade_two = in_x_two and in_y_two
+	in_arcade_three = in_x_three and in_y_three
+	in_arcade_four = in_x_four and in_y_four
+	in_arcade_five = in_x_five and in_y_five
+	in_arcade_six = in_x_six and in_y_six
+	in_concessions = in_x_conc and in_y_conc
+	
+func set_genre_type(): #sets the genre of the games based on the town
+	if global.town_select == "hollyhock":
+		if (global.hollyhock_station_one_selection == 0):
+			genre_type = "none"
+		if (global.hollyhock_station_one_selection == 1):
+			genre_type = "meta"
+			prediction_one = global.meta_prediction
+		if (global.hollyhock_station_one_selection == 2):
+			genre_type = "classic"
+			prediction_two = global.classic_prediction
+		if (global.hollyhock_station_one_selection == 3):
+			genre_type = "platformer"
+			prediction_three = global.platformer_prediction
