@@ -59,6 +59,7 @@ func _on_waiting_timer_timeout():
 	#if the customer is still in the queue this is a lost sale for waiting too long
 	if (get_parent().get_parent().is_in_group("queue") == true):
 		get_node("non_genre_pic").set_texture(wait_too_long)
+		get_node("non_genre_pic").set_scale(Vector2(.5,.5))
 		old_parent = get_parent().get_parent()
 		new_parent = get_tree().get_current_scene().get_node("queue_to_exit")
 		move_node = get_parent()
