@@ -4,26 +4,27 @@ extends RigidBody2D
 onready var waiting_timer = get_node("waiting_timer")
 onready var concessions_timer = get_node("concessions_timer")
 onready var exit_timer = get_node("exit_timer")
-onready var arcade_one = get_tree().get_current_scene().get_node("arcade_zone_one/arcade_button")
-onready var arcade_two = get_tree().get_current_scene().get_node("arcade_zone_two/arcade_button")
-onready var arcade_three = get_tree().get_current_scene().get_node("arcade_zone_three/arcade_button")
-onready var arcade_four = get_tree().get_current_scene().get_node("arcade_zone_four/arcade_button")
-onready var arcade_five = get_tree().get_current_scene().get_node("arcade_zone_five/arcade_button")
-onready var arcade_six = get_tree().get_current_scene().get_node("arcade_zone_six/arcade_button")
-onready var concessions = get_tree().get_current_scene().get_node("concessions/button")
 
 #gets the move_node to go from old parent to new parent when changing paths
-var old_parent
-var new_parent
+onready var old_parent
+onready var new_parent
 var move_node
 
 var dragging = false
+var where
+var offset
+var where_to
+var timer
+
+var all_genres
+
+var wait_too_long = load("res://wait_too_long.png")
+var price_fail = load("res://failed_sale.png")
 
 var charge_price #allows the price to adjust with the arcade the customer moves from
 var concession_choice #allows the concessions to pass a boolean of choice
 
 var colliders #stores the colliding bodies
-var price_check #variable to store whether the price is too high
 
 func _ready():
 	set_process(true)
@@ -33,14 +34,12 @@ func _process(delta):
 	set_scale(Vector2(.2,.2))
 	colliders = get_colliding_bodies()
 	if (get_parent().is_in_group("path") == true):
-		if ((get_parent().get_parent().is_in_group("queue") == true) and (arcade_zone_one.impenetrable == false)):
+		if (get_parent().get_parent().is_in_group("queue") == true):
 			if ((colliders.size() == 0) or (colliders[0].is_greater_than(self) == true)):
 				get_parent().set_offset(get_parent().get_offset() + (25*delta))
-		if ((get_parent().get_parent().is_in_group("queue") == true) and (impenetrable == true)):
-			get_parent().set_offset(get_parent().get_offset() + (25*delta))
 		if ((get_parent().get_parent().is_in_group("arcade") == true) or (get_parent().get_parent().is_in_group("concessions") == true) or (get_parent().get_parent().is_in_group("exit") == true)):
 				get_parent().set_offset(get_parent().get_offset() + (25*delta))
-	if (arcade_zone_one.dragging == true):
+	if (dragging == true):
 		set_global_pos(get_global_mouse_pos())
 
 
@@ -56,17 +55,18 @@ func _on_waiting_timer_timeout():
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
 		arcade_purchase()
-		global.sales_made = global.sales_made + 1
+		customer_globals.sales_made = customer_globals.sales_made + 1
 	#if the customer is still in the queue this is a lost sale for waiting too long
 	if (get_parent().get_parent().is_in_group("queue") == true):
-		old_parent = get_tree().get_current_scene().get_node("customer_queue")
+		get_node("non_genre_pic").set_texture(wait_too_long)
+		old_parent = get_parent().get_parent()
 		new_parent = get_tree().get_current_scene().get_node("queue_to_exit")
-		move_node = get_tree().get_current_scene().get_node("customer_queue").get_child(1)
-		old_parent.remove_child(old_parent.get_child(1))
+		move_node = get_parent()
+		old_parent.remove_child(move_node)
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
-		global.sales_lost = global.sales_lost + 1
-		global.waited_loss = global.waited_loss + 1
+		customer_globals.sales_lost = customer_globals.sales_lost + 1
+		customer_globals.waited_loss = customer_globals.waited_loss + 1
 
 
 func set_parents():
@@ -148,19 +148,19 @@ func arcade_purchase():
 	if (global.town_select == "hollyhock"):
 		var parent_name = get_parent().get_parent().get_name()
 		if ((parent_name == "zone_one_to_exit") or (parent_name == "zone_one_to_conc")):
-			charge_price = global.hollyhock_arcade_one_price
+			charge_price = price_check.hollyhock_arcade_one_price
 		if ((parent_name == "zone_two_to_exit") or (parent_name == "zone_two_to_conc")):
-			charge_price = global.hollyhock_arcade_two_price
+			charge_price = price_check.hollyhock_arcade_two_price
 		if ((parent_name == "zone_three_to_exit") or (parent_name == "zone_three_to_conc")):
-			charge_price = global.hollyhock_arcade_three_price
+			charge_price = price_check.hollyhock_arcade_three_price
 		if ((parent_name == "zone_four_to_exit") or (parent_name == "zone_four_to_conc")):
-			charge_price = global.hollyhock_arcade_four_price
+			charge_price = price_check.hollyhock_arcade_four_price
 		if ((parent_name == "zone_five_to_exit") or (parent_name == "zone_five_to_conc")):
-			charge_price = global.hollyhock_arcade_five_price
+			charge_price = price_check.hollyhock_arcade_five_price
 		if ((parent_name == "zone_six_to_exit") or (parent_name == "zone_six_to_conc")):
-			charge_price = global.hollyhock_arcade_six_price
+			charge_price = price_check.hollyhock_arcade_six_price
 		global.hollyhock_balance = global.hollyhock_balance + charge_price
-		global.sales_made = global.sales_made + 1
+		customer_globals.sales_made = customer_globals.sales_made + 1
 		global.income = global.income + charge_price
 
 func _on_concessions_timer_timeout():
@@ -188,7 +188,7 @@ func _on_concessions_timer_timeout():
 		old_parent.remove_child(old_parent.get_child(0))
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
-		concessions_purchase()
+		concessions_purchase.concessions_purchase()
 	if (get_parent().get_parent().is_in_group("arcade") == true):
 		if (get_parent().get_parent().get_name() == "zone_one_to_conc"):
 			old_parent = get_tree().get_current_scene().get_node("zone_one_to_conc")
@@ -213,91 +213,266 @@ func _on_concessions_timer_timeout():
 		old_parent.remove_child(old_parent.get_child(0))
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
-		concessions_purchase()
-		
-#charges the customer for concessions if they go to concessions
-func concessions_purchase():
-	if (global.town_select == "hollyhock"):
-		if ((global.hollyhock_soda_count > 0) and (global.hollyhock_popcorn_count > 0)):
-			var check_soda = global.soda_range_high - global.hollyhock_soda_price #check if the soda price is too high
-			var check_popcorn = global.popcorn_range_high - global.hollyhock_popcorn_price #check if the popcorn price is too high
-			if ((check_soda <= 0) or (check_popcorn <= 0)):
-				price_check = false
-			else:
-				price_check = true
-			if (price_check == true): #if the price is not too high
-				charge_price = global.hollyhock_soda_price + global.hollyhock_popcorn_price
-				global.hollyhock_balance = global.hollyhock_balance + charge_price
-				global.hollyhock_soda_count = global.hollyhock_soda_count - 1
-				global.hollyhock_popcorn_count = global.hollyhock_popcorn_count - 1
-				global.soda_yesterday_used = global.soda_yesterday_used + 1
-				global.popcorn_yesterday_used = global.popcorn_yesterday_used + 1
-				global.income = global.income + charge_price
+		concessions_purchase.concessions_purchase()
 
 func _on_exit_timer_timeout():
 	get_parent().queue_free()
 
 func _on_customer_pics_button_down():
+	where = get_global_pos()
+	offset = get_parent().get_offset()
 	dragging = true
-	where = get_global_mouse_pos()
-	store_offset = get_parent().get_offset()
-	print(where)
-	if (get_parent().get_parent().is_in_group("queue")):
-		where_from = "queue"
-	if (get_parent().get_parent().is_in_group("arcade")):
-		where_from = "arcade"
-
 
 func _on_customer_pics_button_up():
-	pass
+	was_click_good.where_to = get_global_mouse_pos()
+	get_parent().set_offset(offset)
+	dragging = false
+	set_global_pos(where)
+	was_click_good.figure_out_where_to()
+	if (was_click_good.in_arcade_one == true):
+		customer_test_one()
+	if (was_click_good.in_arcade_two == true):
+		customer_test_two()
+	if (was_click_good.in_arcade_three == true):
+		customer_test_three()
+	if (was_click_good.in_arcade_four == true):
+		customer_test_four()
+	if (was_click_good.in_arcade_five == true):
+		customer_test_five()
+	if (was_click_good.in_arcade_six == true):
+		customer_test_six()
 
-func figure_out_where():
-	var arcade_one_pos = arcade_one.get_global_pos()
-	var arcade_one_size = arcade_one.get_size()
-	var arcade_two_pos = arcade_two.get_global_pos()
-	var arcade_two_size = arcade_two.get_size()
-	var arcade_three_pos = arcade_three.get_global_pos()
-	var arcade_three_size = arcade_three.get_size()
-	var arcade_four_pos = arcade_four.get_global_pos()
-	var arcade_four_size = arcade_four.get_size()
-	var arcade_five_pos = arcade_five.get_global_pos()
-	var arcade_five_size = arcade_five.get_size()
-	var arcade_six_pos = arcade_six.get_global_pos()
-	var arcade_six_size = arcade_six.get_size()
-	var concessions_pos = concessions.get_global_pos()
-	var concessions_size = concessions.get_size()
-	var in_x_one = where.x > arcade_one_pos.x and where.x < (arcade_one_pos.x + (arcade_one_size.x *2))
-	var in_y_one = where.y > arcade_one_pos.y and where.y < (arcade_one_pos.y + (arcade_one_size.y *2))
-	var in_x_two = where.x > arcade_two_pos.x and where.x < (arcade_two_pos.x + (arcade_two_size.x *2))
-	var in_y_two = where.y > arcade_two_pos.y and where.y < (arcade_two_pos.y + (arcade_two_size.y *2))
-	var in_x_three = where.x > arcade_three_pos.x and where.x < (arcade_three_pos.x + (arcade_three_size.x *2))
-	var in_y_three = where.y > arcade_three_pos.y and where.y < (arcade_three_pos.y + (arcade_three_size.y *2))
-	var in_x_four = where.x > arcade_four_pos.x and where.x < (arcade_four_pos.x + (arcade_four_size.x *2))
-	var in_y_four = where.y > arcade_four_pos.y and where.y < (arcade_four_pos.y + (arcade_four_size.y *2))
-	var in_x_five = where.x > arcade_five_pos.x and where.x < (arcade_five_pos.x + (arcade_five_size.x *2))
-	var in_y_five = where.y > arcade_five_pos.y and where.y < (arcade_five_pos.y + (arcade_five_size.y *2))
-	var in_x_six = where.x > arcade_six_pos.x and where.x < (arcade_six_pos.x + (arcade_six_size.x *2))
-	var in_y_six = where.y > arcade_six_pos.y and where.y < (arcade_six_pos.y + (arcade_six_size.y *2))
-	var in_x_conc = where.x > concessions_pos.x and where.x < (concessions_pos.x + (concessions_size.x *2))
-	var in_y_conc = where.y > concessions_pos.y and where.y < (concessions_pos.y + (concessions_size.y *2))
-	in_arcade_one = in_x_one and in_y_one
-	in_arcade_two = in_x_two and in_y_two
-	in_arcade_three = in_x_three and in_y_three
-	in_arcade_four = in_x_four and in_y_four
-	in_arcade_five = in_x_five and in_y_five
-	in_arcade_six = in_x_six and in_y_six
-	in_concessions = in_x_conc and in_y_conc
-	
-func set_genre_type(): #sets the genre of the games based on the town
-	if global.town_select == "hollyhock":
-		if (global.hollyhock_station_one_selection == 0):
-			genre_type = "none"
-		if (global.hollyhock_station_one_selection == 1):
-			genre_type = "meta"
-			prediction_one = global.meta_prediction
-		if (global.hollyhock_station_one_selection == 2):
-			genre_type = "classic"
-			prediction_two = global.classic_prediction
-		if (global.hollyhock_station_one_selection == 3):
-			genre_type = "platformer"
-			prediction_three = global.platformer_prediction
+func customer_test_one():
+	set_genre.set_genre_type()
+	if (get_tree().get_current_scene().get_node("arcade_zone_one").is_in_group("free") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_one").remove_from_group("free")
+		add_to_group("arcade_one")
+		price_check.check_one()
+		if (global.town_select == "hollyhock"):
+			old_parent = get_parent().get_parent()
+			move_node = get_parent()
+			#check to see if the customer wants what the arcade is set to
+			if ((is_in_group("meta") == true) and (set_genre.genre_type_one == "meta")):
+				new_parent = get_tree().get_current_scene().get_node("zone_one_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("classic") == true) and (set_genre.genre_type_one == "classic")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_one_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("platformer") == true) and (set_genre.genre_type_one == "platformer")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_one_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+
+func customer_test_two():
+	set_genre.set_genre_type()
+	if (get_tree().get_current_scene().get_node("arcade_zone_two").is_in_group("free") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_two").remove_from_group("free")
+		add_to_group("arcade_two")
+		price_check.check_two()
+		if (global.town_select == "hollyhock"):
+			old_parent = get_parent().get_parent()
+			move_node = get_parent()
+			#check to see if the customer wants what the arcade is set to
+			if ((is_in_group("meta") == true) and (set_genre.genre_type_two == "meta")):
+				new_parent = get_tree().get_current_scene().get_node("zone_two_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("classic") == true) and (set_genre.genre_type_two == "classic")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_two_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("platformer") == true) and (set_genre.genre_type_two == "platformer")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_two_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+
+func customer_test_three():
+	set_genre.set_genre_type()
+	if (get_tree().get_current_scene().get_node("arcade_zone_three").is_in_group("free") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_three").remove_from_group("free")
+		add_to_group("arcade_three")
+		price_check.check_three()
+		if (global.town_select == "hollyhock"):
+			old_parent = get_parent().get_parent()
+			move_node = get_parent()
+			#check to see if the customer wants what the arcade is set to
+			if ((is_in_group("meta") == true) and (set_genre.genre_type_three == "meta")):
+				new_parent = get_tree().get_current_scene().get_node("zone_three_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("classic") == true) and (set_genre.genre_type_three == "classic")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_three_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("platformer") == true) and (set_genre.genre_type_three == "platformer")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_three_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+
+func customer_test_four():
+	set_genre.set_genre_type()
+	if (get_tree().get_current_scene().get_node("arcade_zone_four").is_in_group("free") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_four").remove_from_group("free")
+		add_to_group("arcade_four")
+		price_check.check_four()
+		if (global.town_select == "hollyhock"):
+			old_parent = get_parent().get_parent()
+			move_node = get_parent()
+			#check to see if the customer wants what the arcade is set to
+			if ((is_in_group("meta") == true) and (set_genre.genre_type_four == "meta")):
+				new_parent = get_tree().get_current_scene().get_node("zone_four_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("classic") == true) and (set_genre.genre_type_four == "classic")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_four_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("platformer") == true) and (set_genre.genre_type_four == "platformer")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_four_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+
+func customer_test_five():
+	set_genre.set_genre_type()
+	if (get_tree().get_current_scene().get_node("arcade_zone_five").is_in_group("free") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_five").remove_from_group("free")
+		add_to_group("arcade_five")
+		price_check.check_five()
+		if (global.town_select == "hollyhock"):
+			old_parent = get_parent().get_parent()
+			move_node = get_parent()
+			#check to see if the customer wants what the arcade is set to
+			if ((is_in_group("meta") == true) and (set_genre.genre_type_five == "meta")):
+				new_parent = get_tree().get_current_scene().get_node("zone_five_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("classic") == true) and (set_genre.genre_type_five == "classic")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_five_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("platformer") == true) and (set_genre.genre_type_five == "platformer")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_five_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+
+func customer_test_six():
+	set_genre.set_genre_type()
+	if (get_tree().get_current_scene().get_node("arcade_zone_six").is_in_group("free") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_six").remove_from_group("free")
+		add_to_group("arcade_six")
+		price_check.check_six()
+		if (global.town_select == "hollyhock"):
+			old_parent = get_parent().get_parent()
+			move_node = get_parent()
+			#check to see if the customer wants what the arcade is set to
+			if ((is_in_group("meta") == true) and (set_genre.genre_type_six == "meta")):
+				new_parent = get_tree().get_current_scene().get_node("zone_six_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("classic") == true) and (set_genre.genre_type_six == "classic")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_six_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+			#same story different genre
+			if ((is_in_group("platformer") == true) and (set_genre.genre_type_six == "platformer")): #check to see if the customer wants what the arcade is set to
+				new_parent = get_tree().get_current_scene().get_node("zone_six_path")
+				if (get_parent().get_offset() < 1):
+					get_node("check_timer").start()
+				if (get_parent().get_offset() > 1):
+					move_along_clicked()
+
+func _on_check_timer_timeout():
+	if (get_parent().get_offset() < 1):
+		get_node("check_timer").start()
+	if (get_parent().get_offset() > 1):
+		move_along_clicked()
+
+func move_along_clicked():
+	old_parent = get_tree().get_current_scene().get_node("customer_queue")
+	if (price_check.price_check == true): #if the price is not too high
+		timer = move_node.get_child(0).get_child(3)
+		timer.set_wait_time(20) #get the timer and set it to the arcade play time (20 secs)
+		move_node.get_child(0).get_child(3).start() #start it
+		old_parent.remove_child(move_node) #and move the customer through the system
+		move_node.set_offset(0)
+		new_parent.add_child(move_node)
+	if (price_check.price_check == false): # if the price is too high
+		refree_arcade()
+		all_genres = get_node("genre_pic").get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(price_fail)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+		new_parent = get_tree().get_current_scene().get_node("queue_to_exit") #customer leaves
+		old_parent.remove_child(old_parent.get_child(0))
+		move_node.set_offset(0)
+		new_parent.add_child(move_node)
+		customer_globals.sales_lost = customer_globals.sales_lost + 1 #and it is counted as a lost sale
+		customer_globals.price_loss = customer_globals.price_loss + 1
+		
+func refree_arcade():
+	if (is_in_group("arcade_one") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_one").add_to_group("free")
+		remove_from_group("arcade_one")
+	if (is_in_group("arcade_two") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_two").add_to_group("free")
+		remove_from_group("arcade_two")
+	if (is_in_group("arcade_three") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_three").add_to_group("free")
+		remove_from_group("arcade_three")
+	if (is_in_group("arcade_four") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_four").add_to_group("free")
+		remove_from_group("arcade_four")
+	if (is_in_group("arcade_five") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_five").add_to_group("free")
+		remove_from_group("arcade_five")
+	if (is_in_group("arcade_six") == true):
+		get_tree().get_current_scene().get_node("arcade_zone_six").add_to_group("free")
+		remove_from_group("arcade_six")

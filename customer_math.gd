@@ -93,7 +93,7 @@ func new_predictions():
 
 func daily_marketshare_adjustment():
 	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_player_marketshare == 1):
+		if (customer_math.hollyhock_player_marketshare == 1):
 			pass
 		else:
 			if ((hollyhock_competitor_one_marketshare > 0) and (hollyhock_competitor_two_marketshare > 0)):

@@ -34,8 +34,8 @@ func set_supply():
 	if (global.town_select == "hollyhock"):
 		get_tree().get_current_scene().get_node("supply_one").get_child(2).clear()
 		get_tree().get_current_scene().get_node("supply_one").get_child(2).add_text(str(hollyhock_soda_count))
-		get_tree().get_current_scene().get_node("supply_one").get_child(2).clear()
-		get_tree().get_current_scene().get_node("supply_one").get_child(2).add_text(str(hollyhock_popcorn_count))
+		get_tree().get_current_scene().get_node("supply_two").get_child(2).clear()
+		get_tree().get_current_scene().get_node("supply_two").get_child(2).add_text(str(hollyhock_popcorn_count))
 
 
 func new_supply_prices():

@@ -29,28 +29,7 @@ var price_loss = 0
 var waited_loss = 0
 var sabatoge_loss = 0
 
-#pricing
-var hollyhock_arcade_one_price = 15
-var hollyhock_arcade_two_price = 15
-var hollyhock_arcade_three_price = 0
-var hollyhock_arcade_four_price = 0
-var hollyhock_arcade_five_price = 0
-var hollyhock_arcade_six_price = 0
-var arcade_one_range_high = 20
-var arcade_two_range_high = 20
-var arcade_three_range_high = 20
-var arcade_four_range_high = 20
-var arcade_five_range_high = 20
-var arcade_six_range_high = 20
-
-
 #selling
-var arcade_one_range_low = 10
-var arcade_two_range_low = 10
-var arcade_three_range_low = 10
-var arcade_four_range_low = 10
-var arcade_five_range_low = 10
-var arcade_six_range_low = 10
 var hollyhock_soda_price = 8
 var hollyhock_popcorn_price = 8
 var pizza_price = 0
@@ -70,8 +49,6 @@ var hollyhock_vgg_key = true
 #competitors
 var competitor_one = "Blickblasters"
 var competitor_two = "Limestop"
-
-
 
 #buying/supplies
 var purchase_total = 0
@@ -109,28 +86,15 @@ var hollyhock_days_left_research = hollyhock_research_total_one
 var hollyhock_research_spending = 0
 var hollyhock_research_input_key = false
 
-
-#arcades
-var hollyhock_station_one_selection = 1
-var hollyhock_station_two_selection = 1
-var hollyhock_station_three_selection = 0
-var hollyhock_station_four_selection = 0
-var hollyhock_station_five_selection = 0
-var hollyhock_station_six_selection = 0
-
 #tutorial
 var tutorial_start = false
 var tutorial_title_box = false
 var tutorial_prediction_box = false
 var tutorial_supplies_box = false
 var tutorial_finances_box = false
-var test = false
 
 func _ready():
     set_process(true)
 
 func _process(delta):
     hollyhock_cash = hollyhock_balance - hollyhock_expenses
-
-func tester():
-    test = true

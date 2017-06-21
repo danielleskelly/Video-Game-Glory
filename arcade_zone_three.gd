@@ -8,126 +8,51 @@ onready var old_parent = get_tree().get_current_scene().get_node("customer_queue
 onready var new_parent = get_tree().get_current_scene().get_node("zone_three_path")
 var move_node
 
-var price_check #used to pass a boolean for the price_check
+var all_genres
 
-#used as placeholders so the genres may change with the town
-var prediction_one
-var prediction_two
-var prediction_three
-
-var check
+var price_fail = load("res://failed_sale.png")
 
 func _ready():
-	set_genre_type() #sets the prediction based on the town
 	set_process(true)
 	
 func _process(delta):
-	if (old_parent.get_child_count() > 0) and (is_in_group("free") == true): #if there is a customer waiting in line and arcade zone three is available
-		move_node = get_tree().get_current_scene().get_node("customer_queue").get_child(0) #get the first customer in line
-		if (move_node.get_child(0).is_in_group("meta") == true) and (genre_type == "meta") and (move_node.get_unit_offset() > 1): #check to see if the customer wants what the arcade is set to
+	set_genre.set_genre_type()
+	#if there is a customer waiting in line and arcade zone three is available
+	if (old_parent.get_child_count() > 0):
+		if (is_in_group("free") == true):
+			price_check.check_three()
 			if (global.town_select == "hollyhock"):
-				check = global.arcade_three_range_high - global.hollyhock_arcade_three_price #check if the arcade price is too high
-			if ((check <= 0) and (prediction_one < .75)):
-				price_check = false
-			else:
-				price_check = true
-			if (price_check == true): #if the price is not too high
-				timer = move_node.get_child(0).get_child(3)
-				timer.set_wait_time(20) #get the timer and set it to the arcade play time (20 secs)
-				move_node.get_child(0).get_child(3).start() #start it
-				old_parent.remove_child(old_parent.get_child(0)) #and move the customer through the system
-				move_node.set_offset(0) 
-				new_parent.add_child(move_node)
-				remove_from_group("free") #set arcade as occupied
-			if (price_check == false): # if the price is too high
-				new_parent = get_tree().get_current_scene().get_node("queue_to_exit") #customer leaves
-				old_parent.remove_child(old_parent.get_child(0))
-				move_node.set_offset(0)
-				new_parent.add_child(move_node)
-				global.sales_lost = global.sales_lost + 1 #and it is counted as a lost sale
-				global.price_loss = global.price_loss + 1
-		#same story different genre
-		if (move_node.get_child(0).is_in_group("classic") == true) and (genre_type == "classic") and (move_node.get_unit_offset() > 1): #check to see if the customer wants what the arcade is set to
-			if (global.town_select == "hollyhock"):
-				check = global.arcade_three_range_high - global.hollyhock_arcade_three_price #check if the arcade price is too high
-			if ((check <= 0) and (prediction_two < .75)):
-				price_check = false
-			else:
-				price_check = true
-			if (price_check == true): #if the price is not too high
-				timer = move_node.get_child(0).get_child(3)
-				timer.set_wait_time(20) #get the timer and set it to the arcade play time (20 secs)
-				move_node.get_child(0).get_child(3).start() #start it
-				old_parent.remove_child(old_parent.get_child(0)) #and move the customer through the system
-				move_node.set_offset(0) 
-				new_parent.add_child(move_node)
-				remove_from_group("free") #set arcade as occupied
-			if (price_check == false): # if the price is too high
-				new_parent = get_tree().get_current_scene().get_node("queue_to_exit") #customer leaves
-				old_parent.remove_child(old_parent.get_child(0))
-				move_node.set_offset(0)
-				new_parent.add_child(move_node)
-				global.sales_lost = global.sales_lost + 1 #and it is counted as a lost sale
-				global.price_loss = global.price_loss + 1
-		#same story different genre
-		if (move_node.get_child(0).is_in_group("platformer") == true) and (genre_type == "platformer") and (move_node.get_unit_offset() > 1): #check to see if the customer wants what the arcade is set to
-			if (global.town_select == "hollyhock"):
-				check = global.arcade_three_range_high - global.hollyhock_arcade_three_price #check if the arcade price is too high
-			if ((check <= 0) and (prediction_three < .75)):
-				price_check = false
-			else:
-				price_check = true
-			if (price_check == true): #if the price is not too high
-				timer = move_node.get_child(0).get_child(3)
-				timer.set_wait_time(20) #get the timer and set it to the arcade play time (20 secs)
-				move_node.get_child(0).get_child(3).start() #start it
-				old_parent.remove_child(old_parent.get_child(0)) #and move the customer through the system
-				move_node.set_offset(0) 
-				new_parent.add_child(move_node)
-				remove_from_group("free") #set arcade as occupied
-			if (price_check == false): # if the price is too high
-				new_parent = get_tree().get_current_scene().get_node("queue_to_exit") #customer leaves
-				old_parent.remove_child(old_parent.get_child(0))
-				move_node.set_offset(0)
-				new_parent.add_child(move_node)
-				global.sales_lost = global.sales_lost + 1 #and it is counted as a lost sale
-				global.price_loss = global.price_loss + 1
+				move_node = get_tree().get_current_scene().get_node("customer_queue").get_child(0)
+				#check to see if the customer wants what the arcade is set to
+				if (move_node.get_child(0).is_in_group("meta") == true) and (set_genre.genre_type_three == "meta") and (move_node.get_unit_offset() > 1): 
+					move_along_first_in_line()
+				#same story different genre
+				if (move_node.get_child(0).is_in_group("classic") == true) and (set_genre.genre_type_three == "classic") and (move_node.get_unit_offset() > 1): #check to see if the customer wants what the arcade is set to
+					move_along_first_in_line()
+				#same story different genre
+				if (move_node.get_child(0).is_in_group("platformer") == true) and (set_genre.genre_type_three == "platformer") and (move_node.get_unit_offset() > 1): #check to see if the customer wants what the arcade is set to
+					move_along_first_in_line()
 		
-
-func set_genre_type(): #sets the genre of the games based on the town
-	if global.town_select == "hollyhock":
-		if (global.hollyhock_station_three_selection == 0):
-			genre_type = "none"
-			get_node("genre_display/meta").set_hidden(true)
-			get_node("genre_display/classic").set_hidden(true)
-			get_node("genre_display/platformer").set_hidden(true)
-			get_node("genre_display/strategy").set_hidden(true)
-			get_node("genre_display/time_management").set_hidden(true)
-			get_node("genre_display/adventure").set_hidden(true)
-		if (global.hollyhock_station_three_selection == 1):
-			genre_type = "meta"
-			get_node("genre_display/meta").show()
-			get_node("genre_display/classic").set_hidden(true)
-			get_node("genre_display/platformer").set_hidden(true)
-			get_node("genre_display/strategy").set_hidden(true)
-			get_node("genre_display/time_management").set_hidden(true)
-			get_node("genre_display/adventure").set_hidden(true)
-			prediction_one = global.meta_prediction
-		if (global.hollyhock_station_three_selection == 2):
-			genre_type = "classic"
-			get_node("genre_display/meta").set_hidden(true)
-			get_node("genre_display/classic").show()
-			get_node("genre_display/platformer").set_hidden(true)
-			get_node("genre_display/strategy").set_hidden(true)
-			get_node("genre_display/time_management").set_hidden(true)
-			get_node("genre_display/adventure").set_hidden(true)
-			prediction_two = global.classic_prediction
-		if (global.hollyhock_station_three_selection == 3):
-			genre_type = "platformer"
-			get_node("genre_display/meta").set_hidden(true)
-			get_node("genre_display/classic").set_hidden(true)
-			get_node("genre_display/platformer").show()
-			get_node("genre_display/strategy").set_hidden(true)
-			get_node("genre_display/time_management").set_hidden(true)
-			get_node("genre_display/adventure").set_hidden(true)
-			prediction_three = global.platformer_prediction
+func move_along_first_in_line():
+	#get the first customer in line
+	if (price_check.price_check == true): #if the price is not too high
+		timer = move_node.get_child(0).get_child(3)
+		timer.set_wait_time(20) #get the timer and set it to the arcade play time (20 secs)
+		move_node.get_child(0).get_child(3).start() #start it
+		old_parent.remove_child(old_parent.get_child(0)) #and move the customer through the system
+		move_node.set_offset(0) 
+		new_parent.add_child(move_node)
+		remove_from_group("free") #set arcade as occupied
+	if (price_check.price_check == false): # if the price is too high
+		all_genres = move_node.get_child(0).get_child(1).get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(price_fail)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+		
+		new_parent = get_tree().get_current_scene().get_node("queue_to_exit") #customer leaves
+		old_parent.remove_child(old_parent.get_child(0))
+		move_node.set_offset(0)
+		new_parent.add_child(move_node)
+		customer_globals.sales_lost = customer_globals.sales_lost + 1 #and it is counted as a lost sale
+		customer_globals.price_loss = customer_globals.price_loss + 1
