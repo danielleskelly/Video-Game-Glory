@@ -196,7 +196,7 @@ __meta__ = {
 [node name="waiting_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 15.0
+wait_time = 20.0
 one_shot = true
 autostart = false
 
@@ -214,6 +214,18 @@ wait_time = 7.5
 one_shot = true
 autostart = false
 
+[node name="check_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="non_genre_pic" type="Sprite" parent="."]
+
+transform/pos = Vector2( 10.267, -15.2363 )
+transform/scale = Vector2( 1.56635, 1.89668 )
+
 [connection signal="button_down" from="customer_pics" to="." method="_on_customer_pics_button_down"]
 
 [connection signal="button_up" from="customer_pics" to="." method="_on_customer_pics_button_up"]
@@ -223,5 +235,7 @@ autostart = false
 [connection signal="timeout" from="concessions_timer" to="." method="_on_concessions_timer_timeout"]
 
 [connection signal="timeout" from="exit_timer" to="." method="_on_exit_timer_timeout"]
+
+[connection signal="timeout" from="check_timer" to="." method="_on_check_timer_timeout"]
 
 

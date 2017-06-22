@@ -110,5 +110,5 @@ func _on_day_timer_timeout(): #day is complete
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
-	customer_create.delete_children()
+	customer_math.delete_children()
 	get_tree().change_scene("res://strategy.tscn")
