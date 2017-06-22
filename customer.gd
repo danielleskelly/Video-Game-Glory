@@ -5,26 +5,31 @@ onready var waiting_timer = get_node("waiting_timer")
 onready var concessions_timer = get_node("concessions_timer")
 onready var exit_timer = get_node("exit_timer")
 
+var wait_too_long = load("res://wait_too_long.png")
+var price_fail = load("res://failed_sale.png")
+var price_success = load("res://successful_sale.png")
+var concessions_want = load("res://concessions_want.png")
+var concessions_no_product = load("res://concessions_no_product.png")
+
+var colliders #stores the colliding bodies
+var dragging = false #drag customer with mouse when clicked
+var concession_choice #allows the concessions to pass a boolean of choice
+var charge_price #allows the price to adjust with the arcade the customer moves from
+
 #gets the move_node to go from old parent to new parent when changing paths
-onready var old_parent
-onready var new_parent
+var old_parent
+var new_parent
 var move_node
 
-var dragging = false
+var concessions_desire
 var where
 var offset
 var where_to
 var timer
 
 var all_genres
+var concessions_price_check
 
-var wait_too_long = load("res://wait_too_long.png")
-var price_fail = load("res://failed_sale.png")
-
-var charge_price #allows the price to adjust with the arcade the customer moves from
-var concession_choice #allows the concessions to pass a boolean of choice
-
-var colliders #stores the colliding bodies
 
 func _ready():
 	set_process(true)
@@ -47,8 +52,8 @@ func _process(delta):
 func _on_waiting_timer_timeout():
 	#if the customer is in the arcade this moves them to concessions or the exit
 	if (get_parent().get_parent().is_in_group("arcade") == true):
+		randomize()
 		var concession_chance = [true, true, true, false]
-		randomize(concession_chance)
 		concession_choice = concession_chance[randi() % concession_chance.size()]
 		set_parents()
 		old_parent.remove_child(old_parent.get_child(0))
@@ -58,8 +63,11 @@ func _on_waiting_timer_timeout():
 		customer_globals.sales_made = customer_globals.sales_made + 1
 	#if the customer is still in the queue this is a lost sale for waiting too long
 	if (get_parent().get_parent().is_in_group("queue") == true):
-		get_node("non_genre_pic").set_texture(wait_too_long)
-		get_node("non_genre_pic").set_scale(Vector2(.5,.5))
+		all_genres = get_node("genre_pic").get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(wait_too_long)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.5, .5))
 		old_parent = get_parent().get_parent()
 		new_parent = get_tree().get_current_scene().get_node("queue_to_exit")
 		move_node = get_parent()
@@ -77,72 +85,127 @@ func set_parents():
 		new_parent = get_tree().get_current_scene().get_node("zone_one_to_conc")
 		move_node = get_tree().get_current_scene().get_node("zone_one_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_one").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(concessions_want)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.2, .2))
 	if ((get_parent().get_parent().get_name() == "zone_one_path") and (concession_choice == false)):
 		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_one_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_one_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_one_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_one").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(price_success)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
 	if ((get_parent().get_parent().get_name() == "zone_two_path") and (concession_choice == true)):
 		concessions_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_two_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_two_to_conc")
 		move_node = get_tree().get_current_scene().get_node("zone_two_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_two").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(concessions_want)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.2, .2))
 	if ((get_parent().get_parent().get_name() == "zone_two_path") and (concession_choice == false)):
 		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_two_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_two_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_two_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_two").add_to_group("free")
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(price_success)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
 	if ((get_parent().get_parent().get_name() == "zone_three_path") and (concession_choice == true)):
 		concessions_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_three_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_three_to_conc")
 		move_node = get_tree().get_current_scene().get_node("zone_three_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_three").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(concessions_want)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.2, .2))
 	if ((get_parent().get_parent().get_name() == "zone_three_path") and (concession_choice == false)):
 		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_three_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_three_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_three_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_three").add_to_group("free")
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(price_success)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
 	if ((get_parent().get_parent().get_name() == "zone_four_path") and (concession_choice == true)):
 		concessions_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_four_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_four_to_conc")
 		move_node = get_tree().get_current_scene().get_node("zone_four_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_four").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(concessions_want)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.2, .2))
 	if ((get_parent().get_parent().get_name() == "zone_four_path") and (concession_choice == false)):
 		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_four_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_four_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_four_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_four").add_to_group("free")
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(price_success)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
 	if ((get_parent().get_parent().get_name() == "zone_five_path") and (concession_choice == true)):
 		concessions_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_five_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_five_to_conc")
 		move_node = get_tree().get_current_scene().get_node("zone_five_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_five").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(concessions_want)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.2, .2))
 	if ((get_parent().get_parent().get_name() == "zone_five_path") and (concession_choice == false)):
 		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_five_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_five_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_five_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_five").add_to_group("free")
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(price_success)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
 	if ((get_parent().get_parent().get_name() == "zone_six_path") and (concession_choice == true)):
 		concessions_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_six_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_six_to_conc")
 		move_node = get_tree().get_current_scene().get_node("zone_six_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_six").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(concessions_want)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.2, .2))
 	if ((get_parent().get_parent().get_name() == "zone_six_path") and (concession_choice == false)):
 		exit_timer.start()
 		old_parent = get_tree().get_current_scene().get_node("zone_six_path")
 		new_parent = get_tree().get_current_scene().get_node("zone_six_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_six_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_six").add_to_group("free")
+		for x in all_genres:
+			x.set_hidden(true)
+		move_node.get_child(0).get_child(7).set_texture(price_success)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
 
 #charges the player when they are done playing the game
 func arcade_purchase():
@@ -189,7 +252,7 @@ func _on_concessions_timer_timeout():
 		old_parent.remove_child(old_parent.get_child(0))
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
-		concessions_purchase.concessions_purchase()
+		concessions_purchase()
 	if (get_parent().get_parent().is_in_group("arcade") == true):
 		if (get_parent().get_parent().get_name() == "zone_one_to_conc"):
 			old_parent = get_tree().get_current_scene().get_node("zone_one_to_conc")
@@ -214,7 +277,7 @@ func _on_concessions_timer_timeout():
 		old_parent.remove_child(old_parent.get_child(0))
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
-		concessions_purchase.concessions_purchase()
+		concessions_purchase()
 
 func _on_exit_timer_timeout():
 	get_parent().queue_free()
@@ -477,3 +540,102 @@ func refree_arcade():
 	if (is_in_group("arcade_six") == true):
 		get_tree().get_current_scene().get_node("arcade_zone_six").add_to_group("free")
 		remove_from_group("arcade_six")
+		
+func concessions_purchase():
+	if (global.town_select == "hollyhock"):
+		randomize()
+		var concession_options = ["soda", "popcorn", "both"]
+		concessions_desire = concession_options[randi() % concession_options.size()]
+		if (concessions_desire == "soda"):
+			if (supplies.hollyhock_soda_count > 0):
+				var check_soda = supplies.soda_range_high - global.hollyhock_soda_price #check if the soda price is too high
+				if (check_soda <= 0):
+					concessions_price_check = false
+				else:
+					concessions_price_check = true
+				if (concessions_price_check == true): #if the price is not too high
+					var charge_price = global.hollyhock_soda_price
+					global.hollyhock_balance = global.hollyhock_balance + charge_price
+					supplies.hollyhock_soda_count = supplies.hollyhock_soda_count - 1
+					global.soda_yesterday_used = global.soda_yesterday_used + 1
+					global.income = global.income + charge_price
+					all_genres = get_node("genre_pic").get_children()
+					for x in all_genres:
+						x.set_hidden(true)
+					move_node.get_child(0).get_child(7).set_texture(price_success)
+					move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+				if (concessions_price_check == false):
+					all_genres = get_node("genre_pic").get_children()
+					for x in all_genres:
+						x.set_hidden(true)
+					move_node.get_child(0).get_child(7).set_texture(price_fail)
+					move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+			elif (supplies.hollyhock_soda_count <= 0):
+				all_genres = get_node("genre_pic").get_children()
+				for x in all_genres:
+					x.set_hidden(true)
+				move_node.get_child(0).get_child(7).set_texture(concessions_no_product)
+				move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+		if (concessions_desire == "popcorn"):
+			if (supplies.hollyhock_popcorn_count > 0):
+				var check_popcorn = supplies.popcorn_range_high - global.hollyhock_popcorn_price #check if the soda price is too high
+				if (check_popcorn <= 0):
+					concessions_price_check = false
+				else:
+					concessions_price_check = true
+				if (concessions_price_check == true): #if the price is not too high
+					var charge_price = global.hollyhock_popcorn_price
+					global.hollyhock_balance = global.hollyhock_balance + charge_price
+					supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
+					global.popcorn_yesterday_used = global.popcorn_yesterday_used + 1
+					global.income = global.income + charge_price
+					all_genres = get_node("genre_pic").get_children()
+					for x in all_genres:
+						x.set_hidden(true)
+					move_node.get_child(0).get_child(7).set_texture(price_success)
+					move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+				if (concessions_price_check == false):
+					all_genres = get_node("genre_pic").get_children()
+					for x in all_genres:
+						x.set_hidden(true)
+					move_node.get_child(0).get_child(7).set_texture(price_fail)
+					move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+			elif (supplies.hollyhock_soda_count <= 0):
+				all_genres = get_node("genre_pic").get_children()
+				for x in all_genres:
+					x.set_hidden(true)
+				move_node.get_child(0).get_child(7).set_texture(concessions_no_product)
+				move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+		if (concessions_desire == "both"):
+			if ((supplies.hollyhock_soda_count > 0) and (supplies.hollyhock_popcorn_count > 0)):
+				var check_soda = supplies.soda_range_high - global.hollyhock_soda_price #check if the soda price is too high
+				var check_popcorn = supplies.popcorn_range_high - global.hollyhock_popcorn_price #check if the popcorn price is too high
+				if ((check_soda <= 0) or (check_popcorn <= 0)):
+					concessions_price_check = false
+				else:
+					concessions_price_check = true
+				if (concessions_price_check == true): #if the price is not too high
+					var charge_price = global.hollyhock_soda_price + global.hollyhock_popcorn_price
+					global.hollyhock_balance = global.hollyhock_balance + charge_price
+					supplies.hollyhock_soda_count = supplies.hollyhock_soda_count - 1
+					supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
+					global.soda_yesterday_used = global.soda_yesterday_used + 1
+					global.popcorn_yesterday_used = global.popcorn_yesterday_used + 1
+					global.income = global.income + charge_price
+					all_genres = get_node("genre_pic").get_children()
+					for x in all_genres:
+						x.set_hidden(true)
+					move_node.get_child(0).get_child(7).set_texture(price_success)
+					move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+				if (concessions_price_check == false):
+					all_genres = get_node("genre_pic").get_children()
+					for x in all_genres:
+						x.set_hidden(true)
+					move_node.get_child(0).get_child(7).set_texture(price_fail)
+					move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
+			elif ((supplies.hollyhock_soda_count <= 0) or (supplies.hollyhock_popcorn_count <= 0)):
+				all_genres = get_node("genre_pic").get_children()
+				for x in all_genres:
+					x.set_hidden(true)
+				move_node.get_child(0).get_child(7).set_texture(concessions_no_product)
+				move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))

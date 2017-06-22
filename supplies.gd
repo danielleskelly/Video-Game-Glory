@@ -6,8 +6,8 @@ var daily_pizza_purchase_price = 0
 var daily_freezie_purchase_price = 0
 var daily_energy_purchase_price = 30
 
-var hollyhock_popcorn_count = 10
-var hollyhock_soda_count = 10
+var hollyhock_popcorn_count = 1
+var hollyhock_soda_count = 1
 var candy_count = 0
 var energy_count = 0
 var pizza_count = 0

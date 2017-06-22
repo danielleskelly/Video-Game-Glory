@@ -1,7 +1,6 @@
 extends Node
 
-var charge_price
-var price_check
+
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -25,3 +24,5 @@ func concessions_purchase():
 				global.soda_yesterday_used = global.soda_yesterday_used + 1
 				global.popcorn_yesterday_used = global.popcorn_yesterday_used + 1
 				global.income = global.income + charge_price
+			if (price_check == false):
+				get_node("non_genre_pic").set_texture(price_fail)
