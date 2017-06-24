@@ -38,13 +38,13 @@ func _process(delta):
 		
 func set_games():
 	if (global.town_select == "hollyhock"):
-		station_one.get_child(1).select(global.hollyhock_station_one_selection)
-		station_two.get_child(1).select(global.hollyhock_station_two_selection)
+		station_one.get_child(1).select(set_genre.hollyhock_station_one_selection)
+		station_two.get_child(1).select(set_genre.hollyhock_station_two_selection)
 		if (global.hollyhock_station_three_key == true):
-			station_three.get_child(1).select(global.hollyhock_station_three_selection)
+			station_three.get_child(1).select(set_genre.hollyhock_station_three_selection)
 		if (global.hollyhock_station_four_key == true):
-			station_four.get_child(1).select(global.hollyhock_station_four_selection)
+			station_four.get_child(1).select(set_genre.hollyhock_station_four_selection)
 		if (global.hollyhock_station_five_key == true):
-			station_five.get_child(1).select(global.hollyhock_station_five_selection)
+			station_five.get_child(1).select(set_genre.hollyhock_station_five_selection)
 		if (global.hollyhock_station_six_key == true):
-			station_six.get_child(1).select(global.hollyhock_station_six_selection)
+			station_six.get_child(1).select(set_genre.hollyhock_station_six_selection)

@@ -29,9 +29,10 @@ func _ready():
 	pass
 	
 func _process(delta):
-	set_genre.set_genre_type()
+	pass
 
 func check_one():
+	set_genre.set_genre_type()
 	if (global.town_select == "hollyhock"):
 		check = arcade_one_range_high - hollyhock_arcade_one_price #check if the arcade price is too high
 		if (set_genre.genre_type_one == "meta"):
@@ -46,6 +47,7 @@ func check_one():
 			price_check = true
 			
 func check_two():
+	set_genre.set_genre_type()
 	if (global.town_select == "hollyhock"):
 		check = arcade_two_range_high - hollyhock_arcade_two_price #check if the arcade price is too high
 		if (set_genre.genre_type_two == "meta"):
@@ -60,6 +62,7 @@ func check_two():
 			price_check = true
 			
 func check_three():
+	set_genre.set_genre_type()
 	if (global.town_select == "hollyhock"):
 		check = arcade_three_range_high - hollyhock_arcade_three_price #check if the arcade price is too high
 		if (set_genre.genre_type_three == "meta"):
@@ -74,6 +77,7 @@ func check_three():
 			price_check = true
 			
 func check_four():
+	set_genre.set_genre_type()
 	if (global.town_select == "hollyhock"):
 		check = arcade_four_range_high - hollyhock_arcade_four_price #check if the arcade price is too high
 		if (set_genre.genre_type_four == "meta"):
@@ -88,6 +92,7 @@ func check_four():
 			price_check = true
 
 func check_five():
+	set_genre.set_genre_type()
 	if (global.town_select == "hollyhock"):
 		check = arcade_five_range_high - hollyhock_arcade_five_price #check if the arcade price is too high
 		if (set_genre.genre_type_five == "meta"):
@@ -102,6 +107,7 @@ func check_five():
 			price_check = true
 			
 func check_six():
+	set_genre.set_genre_type()
 	if (global.town_select == "hollyhock"):
 		check = arcade_six_range_high - hollyhock_arcade_six_price #check if the arcade price is too high
 		if (set_genre.genre_type_six == "meta"):

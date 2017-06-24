@@ -12,22 +12,23 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	hollyhock_cash = hollyhock_balance - hollyhock_expenses
 	if (global.town_select == "hollyhock"):
 		goal_output.clear()
 		goal_output.add_text("Market Share of 75%")
 		income_output.clear()
-		income_output.add_text(str(global.income))
+		income_output.add_text(str(income))
 		expenses_output.clear()
-		expenses_output.add_text(str(global.hollyhock_expenses))
+		expenses_output.add_text(str(hollyhock_expenses))
 		cash_output.clear()
-		cash_output.add_text(str(global.hollyhock_cash))
-		if (global.hollyhock_player_marketshare > 1):
+		cash_output.add_text(str(hollyhock_cash))
+		if (customer_math.hollyhock_player_marketshare > 1):
 			marketshare_output.clear()
 			marketshare_output.add_text("%100")
 		else:
 			marketshare_output.clear()
-			marketshare_output.add_text("%" + str(int(global.hollyhock_player_marketshare * 100)))
+			marketshare_output.add_text("%" + str(int(customer_math.hollyhock_player_marketshare * 100)))
 		sales_made_output.clear()
-		sales_made_output.add_text(str(global.sales_made))
+		sales_made_output.add_text(str(customer_globals.sales_made))
 		sales_lost_output.clear()
-		sales_lost_output.add_text(str(global.sales_lost))
+		sales_lost_output.add_text(str(customer_globals.sales_lost))
