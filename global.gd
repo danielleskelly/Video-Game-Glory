@@ -3,12 +3,6 @@ extends Node
 #player
 var player_name = "dutchess"
 
-#financials
-var hollyhock_balance = 200
-var hollyhock_expenses = 20
-var income = 0
-var hollyhock_cash
-
 #towns
 var town_select = "hollyhock"
 
@@ -180,11 +174,3 @@ var tutorial_prediction_box = false
 var tutorial_supplies_box = false
 var tutorial_finances_box = false
 var tutorial_time_management_side = false
-
-
-
-func _ready():
-	set_process(true)
-
-func _process(delta):
-    hollyhock_cash = hollyhock_balance - hollyhock_expenses
