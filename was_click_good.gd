@@ -2,12 +2,12 @@ extends Node
 
 var where_to
 
-onready var arcade_one = get_tree().get_current_scene().get_node("arcade_zone_one/arcade_button")
-onready var arcade_two = get_tree().get_current_scene().get_node("arcade_zone_two/arcade_button")
-onready var arcade_three = get_tree().get_current_scene().get_node("arcade_zone_three/arcade_button")
-onready var arcade_four = get_tree().get_current_scene().get_node("arcade_zone_four/arcade_button")
-onready var arcade_five = get_tree().get_current_scene().get_node("arcade_zone_five/arcade_button")
-onready var arcade_six = get_tree().get_current_scene().get_node("arcade_zone_six/arcade_button")
+var arcade_one
+var arcade_two
+var arcade_three
+var arcade_four
+var arcade_five
+var arcade_six
 
 var in_arcade_one
 var in_arcade_two
@@ -17,11 +17,15 @@ var in_arcade_five
 var in_arcade_six
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
 	pass
 
 func figure_out_where_to():
+	arcade_one = get_tree().get_current_scene().get_node("arcade_zone_one/arcade_button")
+	arcade_two = get_tree().get_current_scene().get_node("arcade_zone_two/arcade_button")
+	arcade_three = get_tree().get_current_scene().get_node("arcade_zone_three/arcade_button")
+	arcade_four = get_tree().get_current_scene().get_node("arcade_zone_four/arcade_button")
+	arcade_five = get_tree().get_current_scene().get_node("arcade_zone_five/arcade_button")
+	arcade_six = get_tree().get_current_scene().get_node("arcade_zone_six/arcade_button")
 	var arcade_one_pos = arcade_one.get_global_pos()
 	var arcade_one_size = arcade_one.get_size()
 	var arcade_two_pos = arcade_two.get_global_pos()
