@@ -12,7 +12,7 @@ func _ready():
 
 #checks for upgrades on the storefront and creates an array of success or failure to test against
 func storefront_check():
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		if (hollyhock_storefront_best_key == true):
 			randomize()
 			var storefront_chance = [true, true, true, true, true, true, true, true, true, true, true]

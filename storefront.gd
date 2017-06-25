@@ -8,7 +8,7 @@ onready var best_output = get_node("best/price")
 onready var notifications = get_node("notifications")
 
 var key_change
-var select_price
+var select_price = 0
 var decent_price
 var good_price
 var great_price
@@ -19,111 +19,112 @@ func _ready():
 	
 func _process(delta):
 	worst_output.clear()
-	worst_output.add_text(global.worst_price)
+	worst_output.add_text(upgrade_prices.worst_price)
 	decent_output.clear()
-	decent_output.add_text(str(global.decent_price))
+	decent_output.add_text(str(upgrade_prices.decent_price))
 	good_output.clear()
-	good_output.add_text(str(global.good_price))
+	good_output.add_text(str(upgrade_prices.good_price))
 	great_output.clear()
-	great_output.add_text(str(global.great_price))
+	great_output.add_text(str(upgrade_prices.great_price))
 	best_output.clear()
-	best_output.add_text(str(global.best_price))
+	best_output.add_text(str(upgrade_prices.best_price))
 
 func _on_worst_button_button_down():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_storefront_worst_key == true):
+	if (towns.town_select == "hollyhock"):
+		if (hollyhock.hollyhock_storefront_worst_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
 			notifications.show()
 
 func _on_decent_button_button_down():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_storefront_decent_key == true):
+	if (towns.town_select == "hollyhock"):
+		if (hollyhock.hollyhock_storefront_decent_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
 			notifications.show()
-		if (global.hollyhock_storefront_decent_key == false):
-			if (global.hollyhock_cash >= global.decent_price):
+		if (hollyhock.hollyhock_storefront_decent_key == false):
+			if (money.hollyhock_cash >= upgrade_prices.decent_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = global.decent_price
+				select_price = upgrade_prices.decent_price
 				key_change = "hollyhock decent"
-			if (global.hollyhock_cash < global.decent_price):
+			if (money.hollyhock_cash < upgrade_prices.decent_price):
 				notifications.clear()
 				notifications.add_text("You can't afford that!")
 				notifications.show()
 
 func _on_good_button_button_down():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_storefront_good_key == true):
+	if (towns.town_select == "hollyhock"):
+		if (hollyhock.hollyhock_storefront_good_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
 			notifications.show()
-		if (global.hollyhock_storefront_good_key == false):
-			if (global.hollyhock_cash >= global.good_price):
+		if (hollyhock.hollyhock_storefront_good_key == false):
+			if (money.hollyhock_cash >= upgrade_prices.good_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = global.good_price
+				select_price = upgrade_prices.good_price
 				print(select_price)
 				key_change = "hollyhock good"
-			if (global.hollyhock_cash < global.good_price):
+			if (money.hollyhock_cash < upgrade_prices.good_price):
 				notifications.clear()
 				notifications.add_text("You can't afford that!")
 				notifications.show()
 
 func _on_great_button_button_down():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_storefront_great_key == true):
+	if (towns.town_select == "hollyhock"):
+		if (hollyhock.hollyhock_storefront_great_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
 			notifications.show()
-		if (global.hollyhock_storefront_great_key == false):
-			if (global.hollyhock_cash >= global.great_price):
+		if (hollyhock.hollyhock_storefront_great_key == false):
+			if (money.hollyhock_cash >= upgrade_prices.great_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = global.great_price
+				select_price = upgrade_prices.great_price
 				key_change = "hollyhock great"
-			if (global.hollyhock_cash < global.great_price):
+			if (money.hollyhock_cash < upgrade_prices.great_price):
 				notifications.clear()
 				notifications.add_text("You can't afford that!")
 				notifications.show()
 
 
 func _on_best_button_button_down():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_storefront_best_key == true):
+	if (towns.town_select == "hollyhock"):
+		if (hollyhock.hollyhock_storefront_best_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
 			notifications.show()
-		if (global.hollyhock_storefront_best_key == false):
-			if (global.hollyhock_cash >= global.best_price):
+		if (hollyhock.hollyhock_storefront_best_key == false):
+			if (money.hollyhock_cash >= upgrade_prices.best_price):
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
 				select_price = best_price
 				key_change = "hollyhock best"
-			if (global.hollyhock_cash < global.best_price):
+			if (money.hollyhock_cash < upgrade_prices.best_price):
 				notifications.clear()
 				notifications.add_text("You can't afford that!")
 				notifications.show()
 
 func _on_confirm_button_down():
-	if (global.town_select == "hollyhock"):
-		global.hollyhock_balance = global.hollyhock_balance - select_price
-	if (key_change == "hollyhock decent"):
-		global.hollyhock_storefront_decent_key = true
-	if (key_change == "hollyhock good"):
-		global.hollyhock_storefront_good_key = true
-	if (key_change == "hollyhock great"):
-		global.hollyhock_storefront_great_key = true
-	if (key_change == "hollyhock best"):
-		global.hollyhock_storefront_best_key = true
-	notifications.clear()
+	if (select_price != 0):
+		if (towns.town_select == "hollyhock"):
+			money.hollyhock_balance = money.hollyhock_balance - select_price
+			if (key_change == "hollyhock decent"):
+				hollyhock.hollyhock_storefront_decent_key = true
+			if (key_change == "hollyhock good"):
+				hollyhock.hollyhock_storefront_good_key = true
+			if (key_change == "hollyhock great"):
+				hollyhock.hollyhock_storefront_great_key = true
+			if (key_change == "hollyhock best"):
+				hollyhock.hollyhock_storefront_best_key = true
+		notifications.clear()

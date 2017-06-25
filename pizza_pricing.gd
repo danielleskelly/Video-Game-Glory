@@ -8,11 +8,11 @@ func _ready():
 
 func _process(delta):
 	range_output.clear()
-	range_output.add_text(str(global.pizza_range_low) + " - " + str(global.pizza_range_high))
+	range_output.add_text(str(supplies.pizza_range_low) + " - " + str(supplies.pizza_range_high))
 	
 func _on_lower_button_down():
-	if (global.pizza_price > 0):
-		global.pizza_price = global.pizza_price - 1
+	if (supplies.pizza_price > 0):
+		supplies.pizza_price = supplies.pizza_price - 1
 		price_output.clear()
 		price_output.add_text(str(global.pizza_price))
 

@@ -8,15 +8,15 @@ func _ready():
 
 func _process(delta):
 	range_output.clear()
-	range_output.add_text(str(global.energy_range_low) + " - " + str(global.energy_range_high))
+	range_output.add_text(str(supplies.energy_range_low) + " - " + str(supplies.energy_range_high))
 	
 func _on_lower_button_down():
-	if (global.energy_price > 0):
-		global.energy_price = global.energy_price - 1
+	if (supplies.energy_price > 0):
+		supplies.energy_price = supplies.energy_price - 1
 		price_output.clear()
-		price_output.add_text(str(global.energy_price))
+		price_output.add_text(str(supplies.energy_price))
 
 func _on_raise_button_down():
-	global.energy_price = global.energy_price + 1
+	supplies.energy_price = supplies.energy_price + 1
 	price_output.clear()
-	price_output.add_text(str(global.energy_price))
+	price_output.add_text(str(supplies.energy_price))

@@ -9,20 +9,20 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_station_three_key == true):
+	if (towns.town_select == "hollyhock"):
+		if (keys.hollyhock_station_three_key == true):
 			station_three_vis.show()
-		if (global.hollyhock_station_three_key == false):
+		if (keys.hollyhock_station_three_key == false):
 			station_three_vis.set_hidden(true)
-		if (global.hollyhock_station_four_key == true):
+		if (keys.hollyhock_station_four_key == true):
 			station_four_vis.show()
-		if (global.hollyhock_station_four_key == false):
+		if (keys.hollyhock_station_four_key == false):
 			station_four_vis.set_hidden(true)
-		if (global.hollyhock_station_five_key == true):
+		if (keys.hollyhock_station_five_key == true):
 			station_five_vis.show()
-		if (global.hollyhock_station_five_key == false):
+		if (keys.hollyhock_station_five_key == false):
 			station_five_vis.set_hidden(true)
-		if (global.hollyhock_station_six_key == true):
+		if (keys.hollyhock_station_six_key == true):
 			station_six_vis.show()
-		if (global.hollyhock_station_six_key == false):
+		if (keys.hollyhock_station_six_key == false):
 			station_six_vis.set_hidden(true)

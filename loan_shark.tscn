@@ -273,7 +273,7 @@ bbcode/enabled = false
 bbcode/bbcode = "Pay Back:"
 visible_characters = -1
 
-[node name="pack_back_lower" type="TextureButton" parent="."]
+[node name="payback_lower" type="TextureButton" parent="."]
 
 rect/scale = Vector2( 0.2, 0.3 )
 focus/ignore_mouse = false
@@ -292,7 +292,7 @@ textures/normal = ExtResource( 6 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
-[node name="pack_back_raise" type="TextureButton" parent="."]
+[node name="payback_raise" type="TextureButton" parent="."]
 
 rect/scale = Vector2( 0.2, 0.3 )
 focus/ignore_mouse = false
@@ -383,9 +383,9 @@ underline = 2
 
 [connection signal="button_down" from="borrow_raise" to="." method="_on_borrow_raise_button_down"]
 
-[connection signal="button_down" from="pack_back_lower" to="." method="_on_pack_back_lower_button_down"]
+[connection signal="button_down" from="payback_lower" to="." method="_on_payback_lower_button_down"]
 
-[connection signal="button_down" from="pack_back_raise" to="." method="_on_pack_back_raise_button_down"]
+[connection signal="button_down" from="payback_raise" to="." method="_on_payback_raise_button_down"]
 
 [connection signal="button_down" from="confirm" to="." method="_on_confirm_button_down"]
 

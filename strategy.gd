@@ -38,22 +38,22 @@ func _ready():
 	pass
 	
 func _process(delta):
-	if (global.town_select == "hollyhock"):
-		if (((finances_full.hollyhock_cash - finances_full.hollyhock_expenses) < 0) and (finances_full.hollyhock_expenses == 0) and (finances_full.hollyhock_current_loan == finances_full.credit_limit)):
+	if (towns.town_select == "hollyhock"):
+		if (((money.hollyhock_cash - money.hollyhock_expenses) < 0) and (money.hollyhock_expenses == 0) and (loans.hollyhock_current_loan == loans.credit_limit)):
 			game_over.set_hidden(false)
 			get_tree().set_pause(true)
-		if (global.hollyhock_player_marketshare >= .75):
+		if (customer_math.hollyhock_player_marketshare >= .75):
 			hollyhock_complete.set_hidden(false)
 			get_tree().set_pause(true)
 		supply_one.get_child(2).clear()
-		supply_one.get_child(2).add_text(str(global.hollyhock_soda_count))
+		supply_one.get_child(2).add_text(str(supplies.hollyhock_soda_count))
 		supply_two.get_child(2).clear()
-		supply_two.get_child(2).add_text(str(global.hollyhock_popcorn_count))
-		genre_one_count = global.meta_prediction
-		genre_two_count = global.classic_prediction
-		genre_two_key = global.hollyhock_genre_two_key
-		genre_three_count = global.platformer_prediction
-		genre_three_key = global.hollyhock_genre_three_key
+		supply_two.get_child(2).add_text(str(supplies.hollyhock_popcorn_count))
+		genre_one_count = customer_math.meta_prediction
+		genre_two_count = customer_math.classic_prediction
+		genre_two_key = customer_math.hollyhock_genre_two_key
+		genre_three_count = customer_math.platformer_prediction
+		genre_three_key = customer_math.hollyhock_genre_three_key
 		town_banner.get_child(1).clear()
 		town_banner.get_child(1).add_text("Hollyhock")
 	genre_one.get_child(2).clear()
@@ -72,101 +72,97 @@ func _process(delta):
 		genre_three.set_hidden(true)
 
 func research_countdown():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_days_left_research - 1 > 0):
-			global.hollyhock_days_left_research = global.hollyhock_days_left_research - 1
-			global.hollyhock_research_fund = global.hollyhock_research_fund + global.hollyhock_research_spending
-		if (global.hollyhock_days_left_research - 1 == 0):
-			if (global.hollyhock_genre_two_key == false):
-				global.hollyhock_genre_two_key = true
-				global.hollyhock_research_fund = 0
-				global.hollyhock_research_spending = 0
+	if (towns.town_select == "hollyhock"):
+		if (hollyhock.hollyhock_days_left_research - 1 > 0):
+			hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_days_left_research - 1
+			hollyhock.hollyhock_research_fund = hollyhock.hollyhock_research_fund + hollyhock.hollyhock_research_spending
+		if (hollyhock.hollyhock_days_left_research - 1 == 0):
+			if (hollyhock.hollyhock_genre_two_key == false):
+				hollyhock.hollyhock_genre_two_key = true
+				hollyhock.hollyhock_research_fund = 0
+				hollyhock.hollyhock_research_spending = 0
 				genre_discovery.set_hidden(false)
 				get_tree().set_pause(true)
-			if ((global.hollyhock_genre_two_key == true) and (global.hollyhock_genre_three_key == false)):
-				global.hollyhock_genre_three_key = true
-				global.hollyhock_research_fund = 0
-				global.hollyhock_research_spending = 0
+			if ((keys.hollyhock_genre_two_key == true) and (keys.hollyhock_genre_three_key == false)):
+				keys.hollyhock_genre_three_key = true
+				hollyhock.hollyhock_research_fund = 0
+				hollyhock.hollyhock_research_spending = 0
 				genre_discovery.set_hidden(false)
 				get_tree().set_pause(true)
 
 func _on_start_day_button_up():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_balance - global.hollyhock_expenses < 0):
+	if (towns.town_select == "hollyhock"):
+		if (money.hollyhock_balance - money.hollyhock_expenses < 0):
 			low_funds_warning.set_hidden(false)
 			get_tree().set_pause(true)
 		else:
-			global.hollyhock_balance = global.hollyhock_balance - global.hollyhock_expenses
-			global.soda_yesterday_used = 0
-			global.popcorn_yesterday_used = 0
-			if (global.hollyhock_current_loan > 0):
-				var daily_interest_charge = global.hollyhock_current_loan * global.daily_interest
-				global.hollyhock_balance = global.hollyhock_balance - int(daily_interest_charge)
-			global.sales_made = 0
-			global.sales_lost = 0
-			global.storefront_loss = 0
-			global.price_loss = 0
-			global.waited_loss = 0
-			global.sabatoge_loss= 0
-			global.income = 0
+			money.hollyhock_balance = money.hollyhock_balance - money.hollyhock_expenses
+			supplies.soda_yesterday_used = 0
+			supplies.popcorn_yesterday_used = 0
+			if (hollyhock.hollyhock_current_loan > 0):
+				var daily_interest_charge = hollyhock.hollyhock_current_loan * loans.daily_interest
+				money.hollyhock_balance = money.hollyhock_balance - int(daily_interest_charge)
+			customer_globals.sales_made = 0
+			customer_globals.sales_lost = 0
+			customer_globals.storefront_loss = 0
+			customer_globals.price_loss = 0
+			customer_globals.waited_loss = 0
+			customer_globals.sabatoge_loss= 0
+			money.income = 0
 			print("Pop up asks if player would like to play the day or skip the day. If they skip then do the calculations for them")
 			get_tree().change_scene("res://time_management.tscn")
 
 func _on_low_funds_ok_button_down():
 	low_funds_warning.set_hidden(true)
 	get_tree().set_pause(false)
-	
-
 
 func _on_game_over_ok_button_down():
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		game_over.game_over_hollyhock()
 
 func _on_genre_discover_ok_button_down():
 	genre_discovery.set_hidden(true)
 	get_tree().set_pause(false)
 
-
 func _on_continue_ok_button_down():
 	hollyhock_complete.set_hidden(true)
 	get_tree().set_pause(false)
-	global.town_select = "fiyork"
-	global.income = 0
-	global.sales_lost = 0
-	global.sales_made = 0
-	global.storefront_loss = 0
-	global.price_loss = 0
-	global.waited_loss = 0
-	global.sabatoge_loss = 0
-	global.one_cash = 0
-	global.two_cash = 0
-	global.one_sales_made = 0
-	global.two_sales_made = 0
-	global.one_sales_lost = 0
-	global.two_sales_lost = 0
+	towns.town_select = "fiyork"
+	money.income = 0
+	customer_globals.sales_lost = 0
+	customer_globals.sales_made = 0
+	customer_globals.storefront_loss = 0
+	customer_globals.price_loss = 0
+	customer_globals.waited_loss = 0
+	customer_globals.sabatoge_loss = 0
+	customer_math.one_cash = 0
+	customer_math.two_cash = 0
+	customer_math.one_sales_made = 0
+	customer_math.two_sales_made = 0
+	customer_math.one_sales_lost = 0
+	customer_math.two_sales_lost = 0
 	
 func tutorial_start():
-	if (global.tutorial_start == false):
+	if (tutorial.tutorial_start == false):
 		tutorial_start.show()
-	if (global.tutorial_start == true):
+	if (tutorial.tutorial_start == true):
 		pass
 
 func _on_tutorial_start_yes_button_button_down():
-	global.tutorial_start = true
+	tutorial.tutorial_start = true
 	tutorial_start.set_hidden(true)
 	tutorial_persistent_menu.set_hidden(false)
 	get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_timer").start()
 	get_tree().set_pause(true)
 
 func _on_tutorial_start_no_button_button_down():
-	global.tutorial_start = true
+	tutorial.tutorial_start = true
 	tutorial_start.set_hidden(true)
-	print("set all tutorial phases as true")
 	get_tree().set_pause(false)
-
+	tutorial.time_management_start = true
 
 func _on_persistent_menu_timer_timeout():
-	if (global.tutorial_title_box == false):
+	if (tutorial.tutorial_title_box == false):
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_border").set_hidden(false)
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_pointer").set_hidden(false)
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_border").set_hidden(true)
@@ -178,8 +174,8 @@ func _on_persistent_menu_timer_timeout():
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").clear()
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").add_text("This is the town name, so you can always know which village you are working in.")
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_timer").start()
-		global.tutorial_title_box = true
-	elif ((global.tutorial_title_box == true) and (global.tutorial_prediction_box == false)):
+		tutorial.tutorial_title_box = true
+	elif ((tutorial.tutorial_title_box == true) and (tutorial.tutorial_prediction_box == false)):
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_border").set_hidden(true)
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_pointer").set_hidden(true)
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_border").set_hidden(false)
@@ -191,8 +187,8 @@ func _on_persistent_menu_timer_timeout():
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").clear()
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").add_text("This is the prediction meter. It will tell you how popular a certain genre of game will be for the next day. We will purchase supplies and price according to these numbers.")
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_timer").start()
-		global.tutorial_prediction_box = true
-	elif ((global.tutorial_prediction_box == true) and (global.tutorial_supplies_box == false)):
+		tutorial.tutorial_prediction_box = true
+	elif ((tutorial.tutorial_prediction_box == true) and (tutorial.tutorial_supplies_box == false)):
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_border").set_hidden(true)
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_pointer").set_hidden(true)
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_border").set_hidden(true)
@@ -204,8 +200,8 @@ func _on_persistent_menu_timer_timeout():
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").clear()
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").add_text("These boxes will tell us our current stock of supplies. There will always be two supplies for each town and they are sold as a set so it is best to purchase an equal number of each..")
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_timer").start()
-		global.tutorial_supplies_box = true
-	elif ((global.tutorial_supplies_box == true) and (global.tutorial_finances_box == false)):
+		tutorial.tutorial_supplies_box = true
+	elif ((tutorial.tutorial_supplies_box == true) and (tutorial.tutorial_finances_box == false)):
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_border").set_hidden(true)
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_pointer").set_hidden(true)
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_border").set_hidden(true)
@@ -217,7 +213,7 @@ func _on_persistent_menu_timer_timeout():
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_ok").set_hidden(false)
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").clear()
 		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").add_text("And this is the most important box of all, our current finances. Lots of things will effect this so we will get to that as we go along.")
-		global.tutorial_finances_box = true
+		tutorial.tutorial_finances_box = true
 
 
 func _on_persistent_menu_ok_button_down():

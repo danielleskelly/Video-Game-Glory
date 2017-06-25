@@ -29,120 +29,125 @@ func _input(event):
 		if (get_tree().get_current_scene().get_node("locals_buttons").get_selected() == 1):
 			var mouse_pos = get_global_mouse_pos()
 			var borrow_background_pos = get_node("borrow_input_background_black").get_global_pos()
-			var bbh = get_node("borrow_input_background_black").get_texture().get_height()
-			var bbw = get_node("borrow_input_background_black").get_texture().get_width()
+			var borrow_background_offset = get_node("borrow_input_background_black").get_relative_transform_to_parent(self) * borrow_background_pos
+			var borrow_scale = get_node("borrow_input_background_black").get_global_scale()
+			var bbh = get_node("borrow_input_background_black").get_texture().get_height() * borrow_scale.y
+			var bbw = get_node("borrow_input_background_black").get_texture().get_width() * borrow_scale.x
 			var payback_background_pos = get_node("payback_input_background_black").get_global_pos()
-			var pbh = get_node("payback_input_background_black").get_texture().get_height()
-			var pbw = get_node("payback_input_background_black").get_texture().get_width()
-			if ((mouse_pos.x > borrow_background_pos.x) and (mouse_pos.x < borrow_background_pos.x + bbw) and (mouse_pos.y > borrow_background_pos.y) and (mouse_pos.y < borrow_background_pos.y + bbh)):
+			var payback_background_offset = get_node("payback_input_background_black").get_relative_transform_to_parent(self) * payback_background_pos
+			var payback_scale = get_node("payback_input_background_black").get_global_scale()
+			var pbh = get_node("payback_input_background_black").get_texture().get_height() * payback_scale.y
+			var pbw = get_node("payback_input_background_black").get_texture().get_width() * payback_scale.x
+			
+			if ((mouse_pos.x > borrow_background_pos.x - borrow_background_offset.x) and (mouse_pos.x < borrow_background_pos.x - borrow_background_offset.x + bbw) and (mouse_pos.y > borrow_background_pos.y - borrow_background_offset.y) and (mouse_pos.y < borrow_background_pos.y - borrow_background_offset.y + bbh)):
 				borrow_input_is_selected = true
-			elif ((mouse_pos.x > payback_background_pos.x) and (mouse_pos.x < payback_background_pos.x + pbw) and (mouse_pos.y > payback_background_pos.y) and (mouse_pos.y < payback_background_pos.y + pbh)):
+			elif ((mouse_pos.x > payback_background_pos.x - payback_background_offset.x) and (mouse_pos.x < payback_background_pos.x - payback_background_offset.x + pbw) and (mouse_pos.y > payback_background_pos.y - payback_background_offset.y) and (mouse_pos.y < payback_background_pos.y - payback_background_offset.y + pbh)):
 				payback_input_is_selected = true
 			else:
 				borrow_input_is_selected = false
 				payback_input_is_selected = false
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		if (borrow_input_is_selected == true):
 			if (get_tree().get_current_scene().get_node("locals_buttons").get_selected() == 1):
 				if (get_node("debounce_borrow").get_time_left() == 0):
 					if (event.type == InputEvent.KEY):
-						if (global.hollyhock_loans_input_key == true):
+						if (keys.hollyhock_loans_input_key == true):
 							borrow = 0
 						if (event.scancode == 48):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "0")
 							get_node("debounce_borrow").start()
 						if (event.scancode == 49):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "1")
 							get_node("debounce_borrow").start()
 						if (event.scancode == 50):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "2")
 							get_node("debounce_borrow").start()
 						if (event.scancode == 51):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "3")
 							get_node("debounce_borrow").start()
 						if (event.scancode == 52):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "4")
 							get_node("debounce_borrow").start()
 						if (event.scancode == 53):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "5")
 							get_node("debounce_borrow").start()
 						if (event.scancode == 54):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "6")
 							get_node("debounce_borrow").start()
 						if (event.scancode == 55):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "7")
 							get_node("debounce_borrow").start()
 						if (event.scancode == 56):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "8")
 							get_node("debounce_borrow").start()
 						if (event.scancode == 57):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							borrow = int(str(borrow) + "9")
 							get_node("debounce_borrow").start()
 		if (payback_input_is_selected == true):
 			if (get_tree().get_current_scene().get_node("locals_buttons").get_selected() == 1):
 				if (get_node("debounce_payback").get_time_left() == 0):
 					if (event.type == InputEvent.KEY):
-						if (global.hollyhock_loans_input_key == true):
+						if (keys.hollyhock_loans_input_key == true):
 							payback = 0
 						if (event.scancode == 48):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "0")
 							get_node("debounce_payback").start()
 						if (event.scancode == 49):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "1")
 							get_node("debounce_payback").start()
 						if (event.scancode == 50):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "2")
 							get_node("debounce_payback").start()
 						if (event.scancode == 51):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "3")
 							get_node("debounce_payback").start()
 						if (event.scancode == 52):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "4")
 							get_node("debounce_payback").start()
 						if (event.scancode == 53):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "5")
 							get_node("debounce_payback").start()
 						if (event.scancode == 54):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "6")
 							get_node("debounce_payback").start()
 						if (event.scancode == 55):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "7")
 							get_node("debounce_payback").start()
 						if (event.scancode == 56):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "8")
 							get_node("debounce_payback").start()
 						if (event.scancode == 57):
-							global.hollyhock_loans_input_key = false
+							keys.hollyhock_loans_input_key = false
 							payback = int(str(payback) + "9")
 							get_node("debounce_payback").start()
 
 func _process(delta):
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		credit_limit_output.clear()
-		credit_limit_output.add_text(str(global.credit_limit))
+		credit_limit_output.add_text(str(loans.credit_limit))
 		current_loan_output.clear()
-		current_loan_output.add_text(str(global.hollyhock_current_loan))
+		current_loan_output.add_text(str(hollyhock.hollyhock_current_loan))
 	daily_interest_output.clear()
-	daily_interest_output.add_text("%" + str(global.daily_interest * 100))
+	daily_interest_output.add_text("%" + str(loans.daily_interest * 100))
 	borrow_output_black.clear()
 	borrow_output_gray.clear()
 	if (borrow_input_is_selected == true):
@@ -177,26 +182,28 @@ func _on_borrow_lower_button_down():
 		borrow = borrow - 1
 
 func _on_borrow_raise_button_down():
-	if (borrow + 1 < global.credit_limit):
+	if (borrow + 1 < loans.credit_limit):
 		borrow = borrow + 1
 
-func _on_pack_back_lower_button_down():
+func _on_payback_lower_button_down():
 	if (payback > 0):
 		payback = payback - 1
 
-func _on_pack_back_raise_button_down():
-	if (global.town_select == "hollyhock"):
-		if ((payback < global.hollyhock_current_loan) and (global.hollyhock_cash >= payback)):
+func _on_payback_raise_button_down():
+	if (towns.town_select == "hollyhock"):
+		if ((payback < hollyhock.hollyhock_current_loan) and (money.hollyhock_cash >= payback)):
 			payback = payback + 1
 
 func _on_confirm_button_down():
-	if (global.town_select == "hollyhock"):
-		global.hollyhock_current_loan = global.hollyhock_current_loan - payback
-		global.credit_limit = global.credit_limit + payback
-		global.hollyhock_current_loan = global.hollyhock_current_loan + borrow
-		global.credit_limit = global.credit_limit - borrow
-		global.hollyhock_balance = global.hollyhock_balance + borrow
-		global.hollyhock_balance = global.hollyhock_balance - payback
+	if (borrow > loans.credit_limit):
+		borrow = loans.credit_limit
+	if (towns.town_select == "hollyhock"):
+		hollyhock.hollyhock_current_loan = hollyhock.hollyhock_current_loan - payback
+		loans.credit_limit = loans.credit_limit + payback
+		hollyhock.hollyhock_current_loan = hollyhock.hollyhock_current_loan + borrow
+		loans.credit_limit = loans.credit_limit - borrow
+		money.hollyhock_balance = money.hollyhock_balance + borrow
+		money.hollyhock_balance = money.hollyhock_balance - payback
 	borrow = 0
 	payback = 0
 	borrow_input_is_selected = false

@@ -8,15 +8,15 @@ func _ready():
 
 func _process(delta):
 	range_output.clear()
-	range_output.add_text(str(global.candy_range_low) + " - " + str(global.candy_range_high))
+	range_output.add_text(str(supplies.candy_range_low) + " - " + str(supplies.candy_range_high))
 	
 func _on_lower_button_down():
-	if (global.candy_price > 0):
-		global.candy_price = global.candy_price - 1
+	if (supplies.candy_price > 0):
+		supplies.candy_price = supplies.candy_price - 1
 		price_output.clear()
-		price_output.add_text(str(global.candy_price))
+		price_output.add_text(str(supplies.candy_price))
 
 func _on_raise_button_down():
-	global.candy_price = global.candy_price + 1
+	supplies.candy_price = supplies.candy_price + 1
 	price_output.clear()
-	price_output.add_text(str(global.candy_price))
+	price_output.add_text(str(supplies.candy_price))

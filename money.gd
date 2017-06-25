@@ -9,4 +9,4 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
-	
+	hollyhock_cash = hollyhock_balance - hollyhock_expenses

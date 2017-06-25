@@ -20,7 +20,7 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		soda_vis.show()
 		popcorn_vis.show()
 		pizza_vis.set_hidden(true)
@@ -30,13 +30,13 @@ func _process(delta):
 
 
 func _on_confirm_button_down():
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		soda_purchase = get_node("soda").soda_purchase
 		popcorn_purchase = get_node("popcorn").popcorn_purchase
-		global.hollyhock_soda_count = global.hollyhock_soda_count + soda_purchase
+		supplies.hollyhock_soda_count = supplies.hollyhock_soda_count + soda_purchase
 		get_node("soda").soda_purchase = 0
-		global.hollyhock_popcorn_count = global.hollyhock_popcorn_count + popcorn_purchase
+		supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count + popcorn_purchase
 		get_node("popcorn").popcorn_purchase = 0
 		var total_deduc = get_node("overall_total_output").get_text()
-		global.hollyhock_balance = global.hollyhock_balance - int(total_deduc)
-	global.purchase_total = 0
+		money.hollyhock_balance = money.hollyhock_balance - int(total_deduc)
+	supplies.purchase_total = 0

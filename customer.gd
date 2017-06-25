@@ -1,7 +1,6 @@
 extends RigidBody2D
 
 #get the timer nodes
-onready var waiting_timer = get_node("waiting_timer")
 onready var concessions_timer = get_node("concessions_timer")
 onready var exit_timer = get_node("exit_timer")
 
@@ -66,11 +65,11 @@ func _on_waiting_timer_timeout():
 		all_genres = get_node("genre_pic").get_children()
 		for x in all_genres:
 			x.set_hidden(true)
-		move_node.get_child(0).get_child(7).set_texture(wait_too_long)
-		move_node.get_child(0).get_child(7).set_scale(Vector2(.5, .5))
 		old_parent = get_parent().get_parent()
 		new_parent = get_tree().get_current_scene().get_node("queue_to_exit")
 		move_node = get_parent()
+		move_node.get_child(0).get_child(7).set_texture(wait_too_long)
+		move_node.get_child(0).get_child(7).set_scale(Vector2(.5, .5))
 		old_parent.remove_child(move_node)
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
@@ -118,6 +117,7 @@ func set_parents():
 		new_parent = get_tree().get_current_scene().get_node("zone_two_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_two_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_two").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
 		for x in all_genres:
 			x.set_hidden(true)
 		move_node.get_child(0).get_child(7).set_texture(price_success)
@@ -139,6 +139,7 @@ func set_parents():
 		new_parent = get_tree().get_current_scene().get_node("zone_three_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_three_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_three").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
 		for x in all_genres:
 			x.set_hidden(true)
 		move_node.get_child(0).get_child(7).set_texture(price_success)
@@ -181,6 +182,7 @@ func set_parents():
 		new_parent = get_tree().get_current_scene().get_node("zone_five_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_five_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_five").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
 		for x in all_genres:
 			x.set_hidden(true)
 		move_node.get_child(0).get_child(7).set_texture(price_success)
@@ -202,6 +204,7 @@ func set_parents():
 		new_parent = get_tree().get_current_scene().get_node("zone_six_to_exit")
 		move_node = get_tree().get_current_scene().get_node("zone_six_path").get_child(0)
 		get_tree().get_current_scene().get_node("arcade_zone_six").add_to_group("free")
+		all_genres = get_node("genre_pic").get_children()
 		for x in all_genres:
 			x.set_hidden(true)
 		move_node.get_child(0).get_child(7).set_texture(price_success)
@@ -209,7 +212,7 @@ func set_parents():
 
 #charges the player when they are done playing the game
 func arcade_purchase():
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		var parent_name = get_parent().get_parent().get_name()
 		if ((parent_name == "zone_one_to_exit") or (parent_name == "zone_one_to_conc")):
 			charge_price = price_check.hollyhock_arcade_one_price
@@ -223,9 +226,9 @@ func arcade_purchase():
 			charge_price = price_check.hollyhock_arcade_five_price
 		if ((parent_name == "zone_six_to_exit") or (parent_name == "zone_six_to_conc")):
 			charge_price = price_check.hollyhock_arcade_six_price
-		global.hollyhock_balance = global.hollyhock_balance + charge_price
+		money.hollyhock_balance = money.hollyhock_balance + charge_price
 		customer_globals.sales_made = customer_globals.sales_made + 1
-		global.income = global.income + charge_price
+		money.income = money.income + charge_price
 
 func _on_concessions_timer_timeout():
 	if (get_parent().get_parent().is_in_group("concessions") == true):
@@ -312,7 +315,7 @@ func customer_test_one():
 		get_tree().get_current_scene().get_node("arcade_zone_one").remove_from_group("free")
 		add_to_group("arcade_one")
 		price_check.check_one()
-		if (global.town_select == "hollyhock"):
+		if (towns.town_select == "hollyhock"):
 			old_parent = get_parent().get_parent()
 			move_node = get_parent()
 			#check to see if the customer wants what the arcade is set to
@@ -343,7 +346,7 @@ func customer_test_two():
 		get_tree().get_current_scene().get_node("arcade_zone_two").remove_from_group("free")
 		add_to_group("arcade_two")
 		price_check.check_two()
-		if (global.town_select == "hollyhock"):
+		if (towns.town_select == "hollyhock"):
 			old_parent = get_parent().get_parent()
 			move_node = get_parent()
 			#check to see if the customer wants what the arcade is set to
@@ -374,7 +377,7 @@ func customer_test_three():
 		get_tree().get_current_scene().get_node("arcade_zone_three").remove_from_group("free")
 		add_to_group("arcade_three")
 		price_check.check_three()
-		if (global.town_select == "hollyhock"):
+		if (towns.town_select == "hollyhock"):
 			old_parent = get_parent().get_parent()
 			move_node = get_parent()
 			#check to see if the customer wants what the arcade is set to
@@ -405,7 +408,7 @@ func customer_test_four():
 		get_tree().get_current_scene().get_node("arcade_zone_four").remove_from_group("free")
 		add_to_group("arcade_four")
 		price_check.check_four()
-		if (global.town_select == "hollyhock"):
+		if (towns.town_select == "hollyhock"):
 			old_parent = get_parent().get_parent()
 			move_node = get_parent()
 			#check to see if the customer wants what the arcade is set to
@@ -436,7 +439,7 @@ func customer_test_five():
 		get_tree().get_current_scene().get_node("arcade_zone_five").remove_from_group("free")
 		add_to_group("arcade_five")
 		price_check.check_five()
-		if (global.town_select == "hollyhock"):
+		if (towns.town_select == "hollyhock"):
 			old_parent = get_parent().get_parent()
 			move_node = get_parent()
 			#check to see if the customer wants what the arcade is set to
@@ -467,7 +470,7 @@ func customer_test_six():
 		get_tree().get_current_scene().get_node("arcade_zone_six").remove_from_group("free")
 		add_to_group("arcade_six")
 		price_check.check_six()
-		if (global.town_select == "hollyhock"):
+		if (towns.town_select == "hollyhock"):
 			old_parent = get_parent().get_parent()
 			move_node = get_parent()
 			#check to see if the customer wants what the arcade is set to
@@ -542,23 +545,23 @@ func refree_arcade():
 		remove_from_group("arcade_six")
 		
 func concessions_purchase():
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		randomize()
 		var concession_options = ["soda", "popcorn", "both"]
 		concessions_desire = concession_options[randi() % concession_options.size()]
 		if (concessions_desire == "soda"):
 			if (supplies.hollyhock_soda_count > 0):
-				var check_soda = supplies.soda_range_high - global.hollyhock_soda_price #check if the soda price is too high
+				var check_soda = supplies.soda_range_high - supplies.hollyhock_soda_price #check if the soda price is too high
 				if (check_soda <= 0):
 					concessions_price_check = false
 				else:
 					concessions_price_check = true
 				if (concessions_price_check == true): #if the price is not too high
-					var charge_price = global.hollyhock_soda_price
-					global.hollyhock_balance = global.hollyhock_balance + charge_price
+					var charge_price = supplies.hollyhock_soda_price
+					money.hollyhock_balance = money.hollyhock_balance + charge_price
 					supplies.hollyhock_soda_count = supplies.hollyhock_soda_count - 1
-					global.soda_yesterday_used = global.soda_yesterday_used + 1
-					global.income = global.income + charge_price
+					supplies.soda_yesterday_used = supplies.soda_yesterday_used + 1
+					money.income = money.income + charge_price
 					all_genres = get_node("genre_pic").get_children()
 					for x in all_genres:
 						x.set_hidden(true)
@@ -578,17 +581,17 @@ func concessions_purchase():
 				move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
 		if (concessions_desire == "popcorn"):
 			if (supplies.hollyhock_popcorn_count > 0):
-				var check_popcorn = supplies.popcorn_range_high - global.hollyhock_popcorn_price #check if the soda price is too high
+				var check_popcorn = supplies.popcorn_range_high - supplies.hollyhock_popcorn_price #check if the soda price is too high
 				if (check_popcorn <= 0):
 					concessions_price_check = false
 				else:
 					concessions_price_check = true
 				if (concessions_price_check == true): #if the price is not too high
-					var charge_price = global.hollyhock_popcorn_price
-					global.hollyhock_balance = global.hollyhock_balance + charge_price
+					var charge_price = supplies.hollyhock_popcorn_price
+					money.hollyhock_balance = money.hollyhock_balance + charge_price
 					supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
-					global.popcorn_yesterday_used = global.popcorn_yesterday_used + 1
-					global.income = global.income + charge_price
+					supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
+					money.income = money.income + charge_price
 					all_genres = get_node("genre_pic").get_children()
 					for x in all_genres:
 						x.set_hidden(true)
@@ -608,20 +611,20 @@ func concessions_purchase():
 				move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
 		if (concessions_desire == "both"):
 			if ((supplies.hollyhock_soda_count > 0) and (supplies.hollyhock_popcorn_count > 0)):
-				var check_soda = supplies.soda_range_high - global.hollyhock_soda_price #check if the soda price is too high
-				var check_popcorn = supplies.popcorn_range_high - global.hollyhock_popcorn_price #check if the popcorn price is too high
+				var check_soda = supplies.soda_range_high - supplies.hollyhock_soda_price #check if the soda price is too high
+				var check_popcorn = supplies.popcorn_range_high - supplies.hollyhock_popcorn_price #check if the popcorn price is too high
 				if ((check_soda <= 0) or (check_popcorn <= 0)):
 					concessions_price_check = false
 				else:
 					concessions_price_check = true
 				if (concessions_price_check == true): #if the price is not too high
-					var charge_price = global.hollyhock_soda_price + global.hollyhock_popcorn_price
-					global.hollyhock_balance = global.hollyhock_balance + charge_price
+					var charge_price = supplies.hollyhock_soda_price + supplies.hollyhock_popcorn_price
+					money.hollyhock_balance = money.hollyhock_balance + charge_price
 					supplies.hollyhock_soda_count = supplies.hollyhock_soda_count - 1
 					supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
-					global.soda_yesterday_used = global.soda_yesterday_used + 1
-					global.popcorn_yesterday_used = global.popcorn_yesterday_used + 1
-					global.income = global.income + charge_price
+					supplies.soda_yesterday_used = supplies.soda_yesterday_used + 1
+					supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
+					money.income = money.income + charge_price
 					all_genres = get_node("genre_pic").get_children()
 					for x in all_genres:
 						x.set_hidden(true)

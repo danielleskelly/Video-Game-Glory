@@ -8,16 +8,16 @@ func _ready():
 
 func _process(delta):
 	range_output.clear()
-	range_output.add_text(str(global.arcade_five_range_low) + " - " + str(global.arcade_five_range_high))
-	if (global.town_select == "hollyhock"):
+	range_output.add_text(str(price_check.arcade_five_range_low) + " - " + str(price_check.arcade_five_range_high))
+	if (towns.town_select == "hollyhock"):
 		price_output.clear()
-		price_output.add_text(str(global.hollyhock_arcade_five_price))
+		price_output.add_text(str(price_check.hollyhock_arcade_five_price))
 
 func _on_lower_button_down():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_arcade_five_price > 0):
-			global.hollyhock_arcade_five_price = global.hollyhock_arcade_five_price - 1
+	if (towns.town_select == "hollyhock"):
+		if (price_check.hollyhock_arcade_five_price > 0):
+			price_check.hollyhock_arcade_five_price = price_check.hollyhock_arcade_five_price - 1
 
 func _on_raise_button_down():
-	if (global.town_select == "hollyhock"):
-		global.hollyhock_arcade_five_price = global.hollyhock_arcade_five_price + 1
+	if (towns.town_select == "hollyhock"):
+		price_check.hollyhock_arcade_five_price = price_check.hollyhock_arcade_five_price + 1

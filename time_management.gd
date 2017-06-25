@@ -41,10 +41,10 @@ func disperse_customers():
 		if (storefront_check.storefront_choice == false):
 			customer_globals.sales_lost = customer_globals.sales_lost + 1
 			customer_globals.storefront_loss = customer_globals.storefront_loss + 1
-	#spread the customers out evenly
-	prediction_one_time = 60 / int(total_customers) 
-	prediction_one_timer.set_wait_time(prediction_one_time)
-	prediction_one_timer.start() #and the timer that will create the customers is started
+		#spread the customers out evenly
+		prediction_one_time = (get_node("day_timer").get_time_left() - 40) / int(total_customers) 
+		prediction_one_timer.set_wait_time(prediction_one_time)
+		prediction_one_timer.start() #and the timer that will create the customers is started
 	
 	#prediction two customers
 	total_customers = 1
@@ -60,10 +60,10 @@ func disperse_customers():
 			if (storefront_check.storefront_choice == false):
 				customer_globals.sales_lost = customer_globals.sales_lost + 1
 				customer_globals.storefront_loss = customer_globals.storefront_loss + 1
-		#spread the customers out evenly
-		prediction_two_time = 60 / int(total_customers)
-		prediction_two_timer.set_wait_time(prediction_two_time)
-		prediction_two_timer.start()
+			#spread the customers out evenly
+			prediction_two_time = (get_node("day_timer").get_time_left() - 40) / int(total_customers)
+			prediction_two_timer.set_wait_time(prediction_two_time)
+			prediction_two_timer.start()
 
 	#prediction three customers
 	total_customers = 1
@@ -79,10 +79,10 @@ func disperse_customers():
 			if (storefront_check.storefront_choice == false):
 				customer_globals.sales_lost = customer_globals.sales_lost + 1
 				customer_globals.storefront_loss = customer_globals.storefront_loss + 1
-		#spread the customers out evenly
-		prediction_three_time = 60 / int(total_customers)
-		prediction_three_timer.set_wait_time(prediction_three_time)
-		prediction_three_timer.start()
+			#spread the customers out evenly
+			prediction_three_time = (get_node("day_timer").get_time_left() - 40) / int(total_customers)
+			prediction_three_timer.set_wait_time(prediction_three_time)
+			prediction_three_timer.start()
 
 func _process(delta):
 	tutorial.tutorial_check()
