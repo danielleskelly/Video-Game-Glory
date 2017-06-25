@@ -20,7 +20,7 @@ func _ready():
 	pass
 
 func set_genre_type(): #sets the genre of the games based on the town
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		if (hollyhock_station_one_selection == 0):
 			genre_type_one = "none"
 			get_tree().get_current_scene().get_node("arcade_zone_one/genre_display/meta").set_hidden(true)

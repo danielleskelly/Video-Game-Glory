@@ -15,43 +15,43 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		stock_output.clear()
-		stock_output.add_text(str(global.hollyhock_popcorn_count))
+		stock_output.add_text(str(supplies.hollyhock_popcorn_count))
 		total_output.clear()
-		total_output.add_text(str(popcorn_purchase + global.hollyhock_popcorn_count))
-		if (global.daily_popcorn_price > (global.popcorn_range_high / 2)):
+		total_output.add_text(str(popcorn_purchase + supplies.hollyhock_popcorn_count))
+		if (supplies.daily_popcorn_purchase_price > (supplies.popcorn_range_high / 2)):
 			price_output_black.set_hidden(true)
 			price_output_red.show()
 			price_output_green.set_hidden(true)
-		if (global.daily_popcorn_price < (global.popcorn_range_high / 2)):
+		if (supplies.daily_popcorn_purchase_price < (supplies.popcorn_range_high / 2)):
 			price_output_black.set_hidden(true)
 			price_output_red.set_hidden(true)
 			price_output_green.show()
-		if (global.daily_popcorn_price == (global.popcorn_range_high / 2)):
+		if (supplies.daily_popcorn_purchase_price == (supplies.popcorn_range_high / 2)):
 			price_output_black.show()
 			price_output_red.set_hidden(true)
 			price_output_green.set_hidden(true)
 	buy_output.clear()
 	buy_output.add_text(str(popcorn_purchase))
 	price_output_black.clear()
-	price_output_black.add_text(str(global.daily_popcorn_price))
+	price_output_black.add_text(str(supplies.daily_popcorn_purchase_price))
 	price_output_green.clear()
-	price_output_green.add_text(str(global.daily_popcorn_price))
+	price_output_green.add_text(str(supplies.daily_popcorn_purchase_price))
 	price_output_red.clear()
-	price_output_red.add_text(str(global.daily_popcorn_price))
+	price_output_red.add_text(str(supplies.daily_popcorn_purchase_price))
 	yesterday_output.clear()
-	yesterday_output.add_text(str(global.popcorn_yesterday_used))
+	yesterday_output.add_text(str(supplies.popcorn_yesterday_used))
 	overall_total_output.clear()
-	overall_total_output.add_text(str(global.purchase_total))
+	overall_total_output.add_text(str(supplies.purchase_total))
 
 func _on_lower_button_down():
 	if (popcorn_purchase > 0):
 		popcorn_purchase = popcorn_purchase - 1
-		global.purchase_total = global.purchase_total - global.daily_popcorn_price
+		supplies.purchase_total = supplies.purchase_total - supplies.daily_popcorn_purchase_price
 
 func _on_raise_button_down():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_cash >= (global.purchase_total + global.daily_popcorn_price)):
+	if (towns.town_select == "hollyhock"):
+		if (money.hollyhock_cash >= (supplies.purchase_total + supplies.daily_popcorn_purchase_price)):
 			popcorn_purchase = popcorn_purchase + 1
-			global.purchase_total = global.purchase_total + global.daily_popcorn_price
+			supplies.purchase_total = supplies.purchase_total + supplies.daily_popcorn_purchase_price

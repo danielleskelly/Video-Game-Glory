@@ -12,12 +12,12 @@ func _ready():
 
 func _process(delta):
 	sales_made_output.clear()
-	sales_made_output.add_text(str(global.sales_made))
+	sales_made_output.add_text(str(customer_globals.sales_made))
 	waited_loss_output.clear()
-	waited_loss_output.add_text(str(global.waited_loss))
+	waited_loss_output.add_text(str(customer_globals.waited_loss))
 	price_loss_output.clear()
-	price_loss_output.add_text(str(global.price_loss))
+	price_loss_output.add_text(str(customer_globals.price_loss))
 	sabatoge_loss_output.clear()
-	sabatoge_loss_output.add_text(str(global.sabatoge_loss))
+	sabatoge_loss_output.add_text(str(customer_globals.sabatoge_loss))
 	storefront_loss_output.clear()
-	storefront_loss_output.add_text(str(global.storefront_loss))
+	storefront_loss_output.add_text(str(customer_globals.storefront_loss))

@@ -8,10 +8,10 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		balance.clear()
-		balance.add_text(str(global.hollyhock_balance))
+		balance.add_text(str(money.hollyhock_balance))
 		expenses.clear()
-		expenses.add_text(str(global.hollyhock_expenses))
+		expenses.add_text(str(money.hollyhock_expenses))
 		cash.clear()
-		cash.add_text(str(global.hollyhock_cash))
+		cash.add_text(str(money.hollyhock_cash))

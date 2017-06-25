@@ -11,7 +11,7 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		soda_vis.show()
 		popcorn_vis.show()
 		pizza_vis.set_hidden(true)

@@ -8,21 +8,21 @@ func _ready():
 
 func _process(delta):
 	range_output.clear()
-	range_output.add_text(str(global.popcorn_range_low) + " - " + str(global.popcorn_range_high))
-	if (global.town_select == "hollyhock"):
+	range_output.add_text(str(supplies.popcorn_range_low) + " - " + str(supplies.popcorn_range_high))
+	if (towns.town_select == "hollyhock"):
 		price_output.clear()
-		price_output.add_text(str(global.hollyhock_popcorn_price))
+		price_output.add_text(str(supplies.hollyhock_popcorn_price))
 	
 	
 func _on_lower_button_down():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_popcorn_price > 0):
-			global.hollyhock_popcorn_price = global.hollyhock_popcorn_price - 1
+	if (towns.town_select == "hollyhock"):
+		if (supplies.hollyhock_popcorn_price > 0):
+			supplies.hollyhock_popcorn_price = supplies.hollyhock_popcorn_price - 1
 			price_output.clear()
-			price_output.add_text(str(global.hollyhock_popcorn_price))
+			price_output.add_text(str(supplies.hollyhock_popcorn_price))
 
 func _on_raise_button_down():
-	if (global.town_select == "hollyhock"):
-		global.hollyhock_popcorn_price = global.hollyhock_popcorn_price + 1
+	if (towns.town_select == "hollyhock"):
+		supplies.hollyhock_popcorn_price = supplies.hollyhock_popcorn_price + 1
 		price_output.clear()
-		price_output.add_text(str(global.hollyhock_popcorn_price))
+		price_output.add_text(str(supplies.hollyhock_popcorn_price))

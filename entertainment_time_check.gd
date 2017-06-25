@@ -15,7 +15,7 @@ func _ready():
 
 #in store entertainment upgrades effect on waiting
 func entertainment_time_check(): 
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		if (hollyhock_entertainment_best_key == true):
 			wait_time == 45
 		elif (hollyhock_entertainment_great_key == true):

@@ -21,7 +21,7 @@ func _process(delta):
 	if (old_parent.get_child_count() > 0):
 		if (is_in_group("free") == true):
 			price_check.check_two()
-			if (global.town_select == "hollyhock"):
+			if (towns.town_select == "hollyhock"):
 				move_node = get_tree().get_current_scene().get_node("customer_queue").get_child(0)
 				#check to see if the customer wants what the arcade is set to
 				if (move_node.get_child(0).is_in_group("meta") == true) and (set_genre.genre_type_two == "meta") and (move_node.get_unit_offset() > 1): 

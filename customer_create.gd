@@ -14,7 +14,7 @@ func prediction_one_customer_create():
 	customer.get_child(3).set_wait_time(entertainment_time_check.wait_time)
 	customer.get_child(3).start()
 	#sets the genre for the first prediction based on town
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		customer.get_child(1).get_child(0).show()
 		customer.get_child(1).get_child(1).set_hidden(true)
 		customer.get_child(1).get_child(2).set_hidden(true)

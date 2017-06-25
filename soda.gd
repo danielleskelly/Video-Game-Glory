@@ -15,43 +15,43 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		stock_output.clear()
-		stock_output.add_text(str(global.hollyhock_soda_count))
+		stock_output.add_text(str(supplies.hollyhock_soda_count))
 		total_output.clear()
-		total_output.add_text(str(soda_purchase + global.hollyhock_soda_count))
-		if (global.daily_soda_price > (global.soda_range_high / 2)):
+		total_output.add_text(str(soda_purchase + supplies.hollyhock_soda_count))
+		if (supplies.daily_soda_purchase_price > (supplies.soda_range_high / 2)):
 			price_output_black.set_hidden(true)
 			price_output_red.show()
 			price_output_green.set_hidden(true)
-		if (global.daily_soda_price < (global.soda_range_high / 2)):
+		if (supplies.daily_soda_purchase_price < (supplies.soda_range_high / 2)):
 			price_output_black.set_hidden(true)
 			price_output_red.set_hidden(true)
 			price_output_green.show()
-		if (global.daily_soda_price == (global.soda_range_high / 2)):
+		if (supplies.daily_soda_purchase_price == (supplies.soda_range_high / 2)):
 			price_output_black.show()
 			price_output_red.set_hidden(true)
 			price_output_green.set_hidden(true)
 	buy_output.clear()
 	buy_output.add_text(str(soda_purchase))
 	price_output_black.clear()
-	price_output_black.add_text(str(global.daily_soda_price))
+	price_output_black.add_text(str(supplies.daily_soda_purchase_price))
 	price_output_green.clear()
-	price_output_green.add_text(str(global.daily_soda_price))
+	price_output_green.add_text(str(supplies.daily_soda_purchase_price))
 	price_output_red.clear()
-	price_output_red.add_text(str(global.daily_soda_price))
+	price_output_red.add_text(str(supplies.daily_soda_purchase_price))
 	yesterday_output.clear()
-	yesterday_output.add_text(str(global.soda_yesterday_used))
+	yesterday_output.add_text(str(supplies.soda_yesterday_used))
 	overall_total_output.clear()
-	overall_total_output.add_text(str(global.purchase_total))
+	overall_total_output.add_text(str(supplies.purchase_total))
 
 func _on_lower_button_down():
 	if (soda_purchase > 0):
 		soda_purchase = soda_purchase - 1
-		global.purchase_total = global.purchase_total - global.daily_soda_price
+		supplies.purchase_total = supplies.purchase_total - supplies.daily_soda_purchase_price
 
 func _on_raise_button_down():
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_cash >= (global.purchase_total + global.daily_soda_price)):
+	if (towns.town_select == "hollyhock"):
+		if (money.hollyhock_cash >= (supplies.purchase_total + supplies.daily_soda_purchase_price)):
 			soda_purchase = soda_purchase + 1
-			global.purchase_total = global.purchase_total + global.daily_soda_price
+			supplies.purchase_total = supplies.purchase_total + supplies.daily_soda_purchase_price

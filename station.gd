@@ -8,17 +8,17 @@ func _ready():
 	pass
 
 func _process(delta):
-	if (global.town_select == "hollyhock"):
-		if (global.hollyhock_vgg_key == false):
+	if (towns.town_select == "hollyhock"):
+		if (keys.hollyhock_vgg_key == false):
 			dropdown.set_item_disabled(1, true)
-		if (global.hollyhock_yellowdot_key == false):
+		if (keys.hollyhock_yellowdot_key == false):
 			dropdown.set_item_disabled(2, true)
-		if (global.hollyhock_plumber_key == false):
+		if (keys.hollyhock_plumber_key == false):
 			dropdown.set_item_disabled(3, true)
 
 func add_items():
 		dropdown.add_item("Make a Selection...")
-		if (global.town_select == "hollyhock"):
+		if (towns.town_select == "hollyhock"):
 			dropdown.add_item("Video Game Glory")
 			dropdown.add_item("Yellow Eating Dot")
 			dropdown.add_item("A Plumber and his Brother")

@@ -12,13 +12,13 @@ func _process(delta):
 	random_news()
 	todays_news_output.clear()
 	todays_news_output.add_text(random_news_piece)
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		game_forecast_output.clear()
-		game_forecast_output.add_text("Meta %" + str(int(global.meta_prediction * 100)) + "\n")
-		if (global.hollyhock_genre_two_key == true):
-			game_forecast_output.add_text("Classic %" + str(int(global.classic_prediction * 100)) + "\n")
-		if (global.hollyhock_genre_three_key == true):
-			game_forecast_output.add_text("Platformer %" + str(int(global.platformer_prediction * 100)))
+		game_forecast_output.add_text("Meta %" + str(int(customer_math.meta_prediction * 100)) + "\n")
+		if (customer_math.hollyhock_genre_two_key == true):
+			game_forecast_output.add_text("Classic %" + str(int(customer_math.classic_prediction * 100)) + "\n")
+		if (customer_math.hollyhock_genre_three_key == true):
+			game_forecast_output.add_text("Platformer %" + str(int(customer_math.platformer_prediction * 100)))
 	
 	
 func random_news():

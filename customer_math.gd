@@ -48,7 +48,7 @@ func _ready():
 
 func customer_math():
 	#performs the calculations to determine the number of customers that will enter the store
-	if (global.town_select == "hollyhock"): 	
+	if (towns.town_select == "hollyhock"): 	
 		#sets the population, advertising max, storefront keys, and predictions based on the town
 		#determines base player marketshare
 		player_marketshare_effect = hollyhock_town_population * hollyhock_player_marketshare
@@ -83,7 +83,7 @@ func customer_math():
 			player_prediction_three = player_marketing_adjustment * platformer_prediction
 			
 func new_predictions():
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		randomize()
 		meta_prediction = rand_range(.15, 1)
 		randomize()
@@ -92,24 +92,24 @@ func new_predictions():
 		platformer_prediction = rand_range(.15, 1 - (meta_prediction + classic_prediction))
 
 func daily_marketshare_adjustment():
-	if (global.town_select == "hollyhock"):
+	if (towns.town_select == "hollyhock"):
 		if (customer_math.hollyhock_player_marketshare == 1):
 			pass
 		else:
 			if ((hollyhock_competitor_one_marketshare > 0) and (hollyhock_competitor_two_marketshare > 0)):
-				if ((customer_globals.sales_made > customer_globals.sales_lost) and (global.hollyhock_cash > 100)):
+				if ((customer_globals.sales_made > customer_globals.sales_lost) and (money.hollyhock_cash > 100)):
 					hollyhock_player_marketshare = hollyhock_player_marketshare + .2
 					hollyhock_competitor_one_marketshare = hollyhock_competitor_one_marketshare - .1
 					hollyhock_competitor_two_marketshare = hollyhock_competitor_two_marketshare - .1
-				elif ((customer_globals.sales_made > customer_globals.sales_lost) or (global.hollyhock_cash > 100)):
+				elif ((customer_globals.sales_made > customer_globals.sales_lost) or (money.hollyhock_cash > 100)):
 					hollyhock_player_marketshare = hollyhock_player_marketshare + .1
 					hollyhock_competitor_one_marketshare = hollyhock_competitor_one_marketshare - .05
 					hollyhock_competitor_two_marketshare = hollyhock_competitor_two_marketshare - .05
 			elif ((hollyhock_competitor_one_marketshare <= 0) and (hollyhock_competitor_two_marketshare > 0)):
-				if ((customer_globals.sales_made > customer_globals.sales_lost) and (global.hollyhock_cash > 100)):
+				if ((customer_globals.sales_made > customer_globals.sales_lost) and (money.hollyhock_cash > 100)):
 					hollyhock_player_marketshare = hollyhock_player_marketshare + .2
 					hollyhock_competitor_two_marketshare = hollyhock_competitor_two_marketshare - .2
-				elif ((customer_globals.sales_made > customer_globals.sales_lost) or (global.hollyhock_cash > 100)):
+				elif ((customer_globals.sales_made > customer_globals.sales_lost) or (money.hollyhock_cash > 100)):
 					hollyhock_player_marketshare = hollyhock_player_marketshare + .1
 					hollyhock_competitor_two_marketshare = hollyhock_competitor_two_marketshare - .1
 			elif ((hollyhock_competitor_two_marketshare <= 0) and (hollyhock_competitor_one_marketshare <= 0)):

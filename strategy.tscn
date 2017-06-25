@@ -1411,6 +1411,7 @@ texture = ExtResource( 27 )
 [node name="tutorial_upgrades" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
