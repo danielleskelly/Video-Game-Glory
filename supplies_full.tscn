@@ -25,7 +25,7 @@ texture = ExtResource( 2 )
 
 [node name="food" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.125, 0.2 )
+rect/scale = Vector2( 0.1, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -35,14 +35,14 @@ margin/top = -27.0
 margin/right = 29.0
 margin/bottom = 9.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Food"
 visible_characters = -1
 
 [node name="price" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.125, 0.2 )
+rect/scale = Vector2( 0.1, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -52,75 +52,75 @@ margin/top = -27.0
 margin/right = 47.0
 margin/bottom = 10.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Price"
 visible_characters = -1
 
 [node name="stock" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.125, 0.2 )
+rect/scale = Vector2( 0.1, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -11.0
+margin/left = -12.0
 margin/top = -27.0
-margin/right = 62.0
+margin/right = 61.0
 margin/bottom = 6.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Stock"
 visible_characters = -1
 
 [node name="buy" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.125, 0.2 )
+rect/scale = Vector2( 0.1, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2.0
+margin/left = -1.0
 margin/top = -27.0
-margin/right = 57.0
+margin/right = 54.0
 margin/bottom = 9.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Buy"
 visible_characters = -1
 
 [node name="total" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.125, 0.2 )
+rect/scale = Vector2( 0.1, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 11.0
+margin/left = 9.0
 margin/top = -27.0
-margin/right = 80.0
+margin/right = 78.0
 margin/bottom = 10.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Total"
 visible_characters = -1
 
 [node name="used_yesterday" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.08, 0.2 )
+rect/scale = Vector2( 0.1, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 20.0
+margin/left = 17.0
 margin/top = -27.0
-margin/right = 166.0
+margin/right = 163.0
 margin/bottom = 14.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Yesterday"
 visible_characters = -1
@@ -150,9 +150,6 @@ visibility/behind_parent = true
 transform/pos = Vector2( 51.5093, 12.7554 )
 transform/scale = Vector2( 0.581686, 0.535037 )
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="total_background" type="Sprite" parent="."]
 
@@ -162,7 +159,7 @@ texture = ExtResource( 5 )
 
 [node name="overall_total" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.1, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -172,24 +169,24 @@ margin/top = 22.0
 margin/right = 68.0
 margin/bottom = 79.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Total:"
 visible_characters = -1
 
 [node name="overall_total_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.2, 0.2 )
+rect/scale = Vector2( 0.1, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = 21.0
-margin/right = 63.0
-margin/bottom = 65.0
+margin/left = -14.0
+margin/top = 23.0
+margin/right = 116.0
+margin/bottom = 67.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
@@ -208,32 +205,32 @@ texture = ExtResource( 7 )
 
 [node name="name" type="RichTextLabel" parent="supply_one"]
 
-rect/scale = Vector2( 0.1, 2 )
+rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -31.0
-margin/top = -28.0
-margin/right = 47.0
-margin/bottom = 7.0
+margin/left = -30.0
+margin/top = -10.0
+margin/right = 48.0
+margin/bottom = 25.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Soda"
 visible_characters = -1
 
 [node name="price_output_black" type="RichTextLabel" parent="supply_one"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -22.0
-margin/top = -37.0
-margin/right = 30.0
-margin/bottom = -2.0
+margin/left = -20.0
+margin/top = -10.0
+margin/right = 24.0
+margin/bottom = 26.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.211765, 0.858824, 0.121569, 1 )
 bbcode/enabled = false
@@ -256,9 +253,6 @@ custom_colors/default_color = Color( 1, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="price_output_green" type="RichTextLabel" parent="supply_one"]
 
@@ -267,32 +261,29 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -22.0
-margin/top = -28.0
-margin/right = 31.0
-margin/bottom = 5.0
+margin/left = -21.0
+margin/top = -30.0
+margin/right = 32.0
+margin/bottom = 3.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.195312, 1, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="stock_output" type="RichTextLabel" parent="supply_one"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -10.0
-margin/top = -31.0
-margin/right = 31.0
-margin/bottom = 2.0
+margin/left = -11.0
+margin/top = -10.0
+margin/right = 33.0
+margin/bottom = 26.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
@@ -304,10 +295,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = -23.0
-margin/right = 1.0
-margin/bottom = -19.0
+margin/left = -4.0
+margin/top = -10.0
+margin/right = -2.0
+margin/bottom = -6.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -319,15 +310,15 @@ params/stretch_mode = 0
 
 [node name="buy_output" type="RichTextLabel" parent="supply_one"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 3.0
-margin/top = -30.0
-margin/right = 40.0
-margin/bottom = 4.0
+margin/left = 1.0
+margin/top = -14.0
+margin/right = 45.0
+margin/bottom = 22.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.8, 0.8, 0.870588, 1 )
 bbcode/enabled = false
@@ -341,10 +332,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 9.0
-margin/top = -21.0
-margin/right = 11.0
-margin/bottom = -17.0
+margin/left = 6.0
+margin/top = -10.0
+margin/right = 8.0
+margin/bottom = -6.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -356,34 +347,34 @@ params/stretch_mode = 0
 
 [node name="total_output" type="RichTextLabel" parent="supply_one"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 14.0
-margin/top = -25.0
+margin/left = 13.0
+margin/top = -20.0
 margin/right = 57.0
-margin/bottom = 12.0
+margin/bottom = 16.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="yesterday_output" type="RichTextLabel" parent="supply_one"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 23.0
-margin/top = -24.0
-margin/right = 71.0
-margin/bottom = 11.0
+margin/top = -20.0
+margin/right = 67.0
+margin/bottom = 16.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
@@ -396,38 +387,38 @@ script/script = ExtResource( 10 )
 
 [node name="background" type="Sprite" parent="supply_two"]
 
-transform/pos = Vector2( 0.340988, -0.0852509 )
-transform/scale = Vector2( 0.0501505, 0.0851761 )
+transform/pos = Vector2( 0.239423, -0.085251 )
+transform/scale = Vector2( 0.0503424, 0.085176 )
 texture = ExtResource( 7 )
 
 [node name="name" type="RichTextLabel" parent="supply_two"]
 
-rect/scale = Vector2( 0.1, 2 )
+rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -30.0
-margin/top = -33.0
+margin/top = -20.0
 margin/right = 80.0
-margin/bottom = 1.0
+margin/bottom = 14.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Popcorn"
 visible_characters = -1
 
 [node name="price_output_black" type="RichTextLabel" parent="supply_two"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -20.0
-margin/top = -33.0
+margin/top = -30.0
 margin/right = 24.0
-margin/bottom = 3.0
+margin/bottom = 6.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -450,9 +441,6 @@ custom_colors/default_color = Color( 1, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="price_output_green" type="RichTextLabel" parent="supply_two"]
 
@@ -470,23 +458,20 @@ custom_colors/default_color = Color( 0, 1, 0.109375, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="stock_output" type="RichTextLabel" parent="supply_two"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -10.0
-margin/top = -24.0
-margin/right = 31.0
-margin/bottom = 15.0
+margin/left = -11.0
+margin/top = -30.0
+margin/right = 33.0
+margin/bottom = 6.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
@@ -498,10 +483,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = -8.0
-margin/right = 1.0
-margin/bottom = -4.0
+margin/left = -4.0
+margin/top = -20.0
+margin/right = -2.0
+margin/bottom = -16.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -513,15 +498,15 @@ params/stretch_mode = 0
 
 [node name="buy_output" type="RichTextLabel" parent="supply_two"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 3.0
-margin/top = -24.0
-margin/right = 40.0
-margin/bottom = 10.0
+margin/left = 1.0
+margin/top = -23.0
+margin/right = 45.0
+margin/bottom = 13.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.8, 0.8, 0.870588, 1 )
 bbcode/enabled = false
@@ -535,10 +520,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 9.0
-margin/top = -8.0
-margin/right = 11.0
-margin/bottom = -4.0
+margin/left = 6.0
+margin/top = -20.0
+margin/right = 8.0
+margin/bottom = -16.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -550,34 +535,34 @@ params/stretch_mode = 0
 
 [node name="total_output" type="RichTextLabel" parent="supply_two"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 13.0
-margin/top = -25.0
-margin/right = 55.0
-margin/bottom = 13.0
+margin/left = 12.0
+margin/top = -30.0
+margin/right = 56.0
+margin/bottom = 6.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="yesterday_output" type="RichTextLabel" parent="supply_two"]
 
-rect/scale = Vector2( 0.2, 2 )
+rect/scale = Vector2( 0.2, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 22.0
-margin/top = -25.0
-margin/right = 72.0
-margin/bottom = 12.0
+margin/top = -30.0
+margin/right = 66.0
+margin/bottom = 6.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1

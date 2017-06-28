@@ -1,8 +1,8 @@
 [gd_scene load_steps=37 format=1]
 
 [ext_resource path="res://time_management.gd" type="Script" id=1]
-[ext_resource path="res://floor.png" type="Texture" id=2]
-[ext_resource path="res://queue.png" type="Texture" id=3]
+[ext_resource path="res://inner_background.png" type="Texture" id=2]
+[ext_resource path="res://queue_short.png" type="Texture" id=3]
 [ext_resource path="res://arcade_zone.tscn" type="PackedScene" id=4]
 [ext_resource path="res://arcade_zone_one.gd" type="Script" id=5]
 [ext_resource path="res://arcade_zone_two.gd" type="Script" id=6]
@@ -168,11 +168,14 @@ _data = {
 transform/pos = Vector2( 515.053, 302.7 )
 transform/scale = Vector2( 16.0493, 9.41331 )
 script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="floor" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.296053, -0.594974 )
-transform/scale = Vector2( 0.0614688, 0.110265 )
+transform/pos = Vector2( -0.338126, 0.546435 )
+transform/scale = Vector2( 0.0495938, 0.0631183 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
@@ -180,8 +183,8 @@ __meta__ = {
 
 [node name="queue" type="Sprite" parent="."]
 
-transform/pos = Vector2( -20.9214, 0.708434 )
-transform/scale = Vector2( 0.0480358, 0.102319 )
+transform/pos = Vector2( -17.3001, 0.222883 )
+transform/scale = Vector2( 0.0333971, 0.0821985 )
 texture = ExtResource( 3 )
 
 [node name="arcade_zone_one" parent="." groups=[
@@ -234,8 +237,8 @@ script/script = ExtResource( 10 )
 
 [node name="finances" parent="." instance=ExtResource( 11 )]
 
-transform/pos = Vector2( 7.41177, -0.974724 )
-transform/scale = Vector2( 0.174372, 0.214095 )
+transform/pos = Vector2( -15.8331, -3.38767 )
+transform/scale = Vector2( 0.164289, 0.254918 )
 
 [node name="concessions" parent="." instance=ExtResource( 12 )]
 
@@ -284,6 +287,7 @@ autostart = false
 "queue",
 ]]
 
+transform/pos = Vector2( 1.21377, 0 )
 curve = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true

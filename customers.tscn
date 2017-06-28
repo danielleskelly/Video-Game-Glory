@@ -18,7 +18,7 @@ texture = ExtResource( 2 )
 
 [node name="completed_sales" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -28,14 +28,14 @@ margin/top = -28.0
 margin/right = 198.0
 margin/bottom = 8.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Completed Sales"
 visible_characters = -1
 
 [node name="sales_made" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -45,14 +45,14 @@ margin/top = -19.0
 margin/right = 212.0
 margin/bottom = 20.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Happy Players:"
 visible_characters = -1
 
 [node name="sales_made_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -62,14 +62,14 @@ margin/top = -19.0
 margin/right = 82.0
 margin/bottom = 35.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="lost_sales" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -79,14 +79,14 @@ margin/top = -5.0
 margin/right = 127.0
 margin/bottom = 30.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Lost Sales"
 visible_characters = -1
 
 [node name="waited_loss" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -96,14 +96,14 @@ margin/top = 5.0
 margin/right = 53.0
 margin/bottom = 57.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Wait:"
 visible_characters = -1
 
 [node name="waited_loss_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -113,14 +113,14 @@ margin/top = 5.0
 margin/right = 69.0
 margin/bottom = 57.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="price_loss" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -130,14 +130,14 @@ margin/top = 5.0
 margin/right = 82.0
 margin/bottom = 58.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Price:"
 visible_characters = -1
 
 [node name="price_loss_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -147,14 +147,14 @@ margin/top = 5.0
 margin/right = 100.0
 margin/bottom = 58.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="sabatoge_loss" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -164,14 +164,14 @@ margin/top = 18.0
 margin/right = 100.0
 margin/bottom = 71.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sabatoge:"
 visible_characters = -1
 
 [node name="sabatoge_loss_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -181,14 +181,14 @@ margin/top = 18.0
 margin/right = 58.0
 margin/bottom = 71.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="storefront_loss" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -198,14 +198,14 @@ margin/top = 16.0
 margin/right = 83.0
 margin/bottom = 99.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Storefront:"
 visible_characters = -1
 
 [node name="storefront_loss_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.18 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -215,7 +215,7 @@ margin/top = 18.0
 margin/right = 97.0
 margin/bottom = 72.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://loan_shark.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
@@ -6,9 +6,8 @@
 [ext_resource path="res://game_background.png" type="Texture" id=4]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=5]
 [ext_resource path="res://lower.png" type="Texture" id=6]
-[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=7]
-[ext_resource path="res://raise.png" type="Texture" id=8]
-[ext_resource path="res://button.png" type="Texture" id=9]
+[ext_resource path="res://raise.png" type="Texture" id=7]
+[ext_resource path="res://button.png" type="Texture" id=8]
 
 [node name="loans" type="Node2D"]
 
@@ -24,8 +23,8 @@ texture = ExtResource( 2 )
 
 [node name="borrow_input_background_black" type="Sprite" parent="."]
 
-transform/pos = Vector2( 11.4478, 5.65135 )
-transform/scale = Vector2( 0.015581, 0.0134649 )
+transform/pos = Vector2( 11.0631, 5.65135 )
+transform/scale = Vector2( 0.0165818, 0.0134649 )
 texture = ExtResource( 3 )
 
 [node name="borrow_input_background_gray" type="Sprite" parent="."]
@@ -48,7 +47,7 @@ texture = ExtResource( 4 )
 
 [node name="label" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.2, 0.2 )
+rect/scale = Vector2( 0.2, 0.25 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -58,14 +57,14 @@ margin/top = -30.0
 margin/right = 128.0
 margin/bottom = 8.0
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Bank Loan"
 visible_characters = -1
 
 [node name="credit_limit" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -75,14 +74,14 @@ margin/top = -22.0
 margin/right = 145.0
 margin/bottom = 14.0
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Credit Limit:"
 visible_characters = -1
 
 [node name="credit_limit_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -92,14 +91,14 @@ margin/top = -23.0
 margin/right = 149.0
 margin/bottom = 29.0
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="current_loan" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -109,14 +108,14 @@ margin/top = -15.0
 margin/right = 152.0
 margin/bottom = 37.0
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Current Loan:"
 visible_characters = -1
 
 [node name="current_loan_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -126,14 +125,14 @@ margin/top = -16.0
 margin/right = 146.0
 margin/bottom = 36.0
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="daily_interest" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -143,14 +142,14 @@ margin/top = -7.0
 margin/right = 159.0
 margin/bottom = 32.0
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Daily Interest:"
 visible_characters = -1
 
 [node name="daily_interest_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -160,14 +159,14 @@ margin/top = -7.0
 margin/right = 145.0
 margin/bottom = 45.0
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="borrow" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -177,7 +176,7 @@ margin/top = 3.0
 margin/right = 94.0
 margin/bottom = 56.0
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Borrow:"
 visible_characters = -1
@@ -203,16 +202,16 @@ params/stretch_mode = 0
 
 [node name="borrow_output_black" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 8.0
+margin/left = 10.0
 margin/top = 4.0
-margin/right = 79.0
+margin/right = 81.0
 margin/bottom = 57.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -220,16 +219,16 @@ visible_characters = -1
 
 [node name="borrow_output_gray" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 8.0
+margin/left = 10.0
 margin/top = 4.0
-margin/right = 79.0
+margin/right = 81.0
 margin/bottom = 57.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0.800781, 0.800781, 0.800781, 1 )
 custom_colors/selection_color = Color( 0.867188, 0.867188, 0.867188, 1 )
 bbcode/enabled = false
@@ -251,13 +250,13 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 8 )
+textures/normal = ExtResource( 7 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
 [node name="pay_back" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -267,7 +266,7 @@ margin/top = 13.0
 margin/right = 181.0
 margin/bottom = 67.0
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Pay Back:"
 visible_characters = -1
@@ -306,22 +305,22 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 8 )
+textures/normal = ExtResource( 7 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
 [node name="pay_back_output_black" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 8.0
+margin/left = 10.0
 margin/top = 14.0
-margin/right = 78.0
+margin/right = 80.0
 margin/bottom = 67.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -329,16 +328,16 @@ visible_characters = -1
 
 [node name="pay_back_output_gray" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 8.0
+margin/left = 10.0
 margin/top = 14.0
-margin/right = 78.0
+margin/right = 80.0
 margin/bottom = 67.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0.828125, 0.828125, 0.828125, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -382,7 +381,7 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 49.542, 13.7208 )
 transform/scale = Vector2( 0.551803, 0.452361 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
