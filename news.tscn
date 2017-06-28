@@ -1,86 +1,227 @@
 [gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://news.gd" type="Script" id=1]
-[ext_resource path="res://background.png" type="Texture" id=2]
-[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://potential_background.png" type="Texture" id=2]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
 
 [node name="news" type="Node2D"]
 
-editor/display_folded = true
 transform/pos = Vector2( 511.609, 299.032 )
 transform/scale = Vector2( 15.988, 9.34513 )
 script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="background" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.029665, 0.33674 )
-transform/scale = Vector2( 0.0498035, 0.0916558 )
+transform/pos = Vector2( 0.0110708, 0.745682 )
+transform/scale = Vector2( 0.0500776, 0.0638111 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="todays_news" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.1, 0.2 )
+rect/scale = Vector2( 0.15, 0.18 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -14.0
-margin/top = -29.0
-margin/right = 322.0
-margin/bottom = 18.0
+margin/left = -19.0
+margin/top = -28.0
+margin/right = 255.0
+margin/bottom = 8.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "News from Today"
+bbcode/bbcode = "Pixel & Player Daily"
+visible_characters = -1
+
+[node name="ascii" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -23.0
+margin/top = -21.0
+margin/right = 487.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\"
+visible_characters = -1
+
+[node name="ascii2" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -23.0
+margin/top = -21.0
+margin/right = 484.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\"
+visible_characters = -1
+
+[node name="ascii3" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -23.0
+margin/top = -21.0
+margin/right = 466.0
+margin/bottom = 31.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\"
+visible_characters = -1
+
+[node name="ascii4" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -23.0
+margin/top = -21.0
+margin/right = 483.0
+margin/bottom = 29.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\"
+visible_characters = -1
+
+[node name="ascii1" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = 8.0
+margin/right = 486.0
+margin/bottom = 56.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\"
+visible_characters = -1
+
+[node name="ascii5 2" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = 8.0
+margin/right = 483.0
+margin/bottom = 56.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\"
+visible_characters = -1
+
+[node name="ascii5" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = 8.0
+margin/right = 465.0
+margin/bottom = 60.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\"
+visible_characters = -1
+
+[node name="ascii5 3" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = 8.0
+margin/right = 482.0
+margin/bottom = 58.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\_//\\\\"
 visible_characters = -1
 
 [node name="todays_news_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.06, 0.1 )
+rect/scale = Vector2( 0.15, 0.18 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -11.0
+margin/left = -26.0
 margin/top = -17.0
-margin/right = 445.0
-margin/bottom = 138.0
+margin/right = 320.0
+margin/bottom = 84.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="game_forecast" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.1, 0.2 )
+rect/scale = Vector2( 0.15, 0.18 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -13.0
-margin/top = 1.0
-margin/right = 291.0
-margin/bottom = 49.0
+margin/left = -17.0
+margin/top = 2.0
+margin/right = 228.0
+margin/bottom = 37.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Game Predictions"
+bbcode/bbcode = "Player Predictions"
 visible_characters = -1
 
 [node name="game_forecast_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.06, 0.1 )
+rect/scale = Vector2( 0.15, 0.18 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -7.0
+margin/left = -10.0
 margin/top = 13.0
-margin/right = 263.0
-margin/bottom = 176.0
+margin/right = 128.0
+margin/bottom = 117.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1

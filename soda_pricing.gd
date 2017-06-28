@@ -7,9 +7,9 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	range_output.clear()
-	range_output.add_text(str(supplies.soda_range_low) + " - " + str(supplies.soda_range_high))
 	if (towns.town_select == "hollyhock"):
+		range_output.clear()
+		range_output.add_text(str(supplies.soda_range_low) + " - " + str(supplies.soda_range_high))
 		price_output.clear()
 		price_output.add_text(str(supplies.hollyhock_soda_price))
 	

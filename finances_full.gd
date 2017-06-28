@@ -14,7 +14,7 @@ func _ready():
 func _process(delta):
 	if (towns.town_select == "hollyhock"):
 		goal_output.clear()
-		goal_output.add_text("Market Share of 75%")
+		goal_output.add_text("Hollyhock Player Satisfaction of 75%")
 		income_output.clear()
 		income_output.add_text(str(money.income))
 		expenses_output.clear()

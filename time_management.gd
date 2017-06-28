@@ -5,8 +5,6 @@ onready var queue_path = get_node("customer_queue")
 onready var prediction_one_timer = get_node("prediction_one_timer")
 onready var prediction_two_timer = get_node("prediction_two_timer")
 onready var prediction_three_timer = get_node("prediction_three_timer")
-onready var supply_one = get_tree().get_current_scene().get_node("supply_one")
-onready var supply_two = get_tree().get_current_scene().get_node("supply_two")
 onready var countdown_timer = get_node("countdown_timer")
 
 #total customer count start
