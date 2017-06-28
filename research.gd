@@ -6,6 +6,7 @@ onready var research_spending_output_black = get_node("daily_research_output_bla
 onready var research_spending_output_gray = get_node("daily_research_output_gray")
 onready var research_spending_background_black = get_node("input_background_black")
 onready var research_spending_background_gray = get_node("input_background_gray")
+onready var research_goal_output = get_node("research_goal_output")
 
 var block = false
 var input_is_selected = false
@@ -97,18 +98,24 @@ func _process(delta):
 			research_spending_output_gray.show()
 			research_spending_output_black.set_hidden(true)
 		if (hollyhock.hollyhock_research_one_key == false):
+			research_goal_output.clear()
+			research_goal_output.add_text("Genre Two -- Classic")
 			if (hollyhock.hollyhock_research_spending == 0):
 				var spending_stand_in = 1
 				hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_one / (spending_stand_in + hollyhock.hollyhock_research_fund)
 			if (hollyhock.hollyhock_research_spending > 0):
 				hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_one / (hollyhock.hollyhock_research_spending + hollyhock.hollyhock_research_fund)
 		if ((hollyhock.hollyhock_research_one_key == true) and (hollyhock.hollyhock_research_two_key == false)):
+			research_goal_output.clear()
+			research_goal_output.add_text("Genre Three -- Platformer")
 			if (hollyhock.hollyhock_research_spending == 0):
 				var spending_stand_in = 1
 				hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_two / (spending_stand_in + hollyhock.hollyhock_research_fund)
 			if (hollyhock.hollyhock_research_spending > 0):
 				hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_two / (hollyhock.hollyhock_research_spending + hollyhock.hollyhock_research_fund)
 		if ((hollyhock.hollyhock_research_one_key == true) and (hollyhock.hollyhock_research_two_key == true)):
+			research_goal_output.clear()
+			research_goal_output.add_text("All Genres Available")
 			block = true
 	days_left_output.clear()
 	days_left_output.add_text(str(hollyhock.hollyhock_days_left_research))

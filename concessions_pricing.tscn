@@ -1,130 +1,163 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=8 format=1]
 
-[ext_resource path="res://concessions_pricing.gd" type="Script" id=1]
-[ext_resource path="res://background.png" type="Texture" id=2]
-[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://soda_pricing.gd" type="Script" id=4]
-[ext_resource path="res://lower.png" type="Texture" id=5]
-[ext_resource path="res://raise.png" type="Texture" id=6]
+[ext_resource path="res://background.png" type="Texture" id=1]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://soda_pricing.gd" type="Script" id=3]
+[ext_resource path="res://lower.png" type="Texture" id=4]
+[ext_resource path="res://raise.png" type="Texture" id=5]
+[ext_resource path="res://potential_background.png" type="Texture" id=6]
 [ext_resource path="res://popcorn_pricing.gd" type="Script" id=7]
-[ext_resource path="res://pizza_pricing.gd" type="Script" id=8]
-[ext_resource path="res://freezie.gd" type="Script" id=9]
-[ext_resource path="res://energy_pricing.gd" type="Script" id=10]
-[ext_resource path="res://candy_pricing.gd" type="Script" id=11]
 
 [node name="concessions_pricing" type="Node2D"]
 
 transform/pos = Vector2( 511.609, 299.032 )
 transform/scale = Vector2( 15.988, 9.34513 )
-script/script = ExtResource( 1 )
 
 [node name="background" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.029665, 0.33674 )
-transform/scale = Vector2( 0.0498035, 0.0916558 )
-texture = ExtResource( 2 )
+transform/pos = Vector2( 0.152069, 0.96681 )
+transform/scale = Vector2( 0.0500352, 0.0639504 )
+texture = ExtResource( 1 )
 
 [node name="goods" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.05, 0.1 )
+rect/scale = Vector2( 0.2, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -20.0
-margin/top = -26.0
-margin/right = 94.0
-margin/bottom = 26.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -27.0
+margin/top = -28.0
+margin/right = 51.0
+margin/bottom = 6.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Goods"
 visible_characters = -1
 
 [node name="price" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.05, 0.1 )
+rect/scale = Vector2( 0.2, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 13.0
-margin/top = -26.0
-margin/right = 99.0
-margin/bottom = 27.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/top = -28.0
+margin/right = 90.0
+margin/bottom = 16.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Price"
 visible_characters = -1
 
 [node name="range" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.05, 0.1 )
+rect/scale = Vector2( 0.2, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -2.0
-margin/top = -27.0
-margin/right = 118.0
-margin/bottom = 26.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -9.0
+margin/top = -28.0
+margin/right = 83.0
+margin/bottom = 12.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Range"
 visible_characters = -1
 
-[node name="soda" type="Node2D" parent="."]
+[node name="supply_one" type="Node2D" parent="."]
 
-transform/pos = Vector2( 0.0427612, -13.2251 )
-transform/scale = Vector2( 0.944782, 0.101023 )
-script/script = ExtResource( 4 )
+transform/pos = Vector2( 0.0427628, -5.58634 )
+transform/scale = Vector2( 0.944782, 0.147738 )
+script/script = ExtResource( 3 )
 
-[node name="name" type="RichTextLabel" parent="soda"]
+[node name="name" type="RichTextLabel" parent="supply_one"]
 
-rect/scale = Vector2( 0.06, 0.6 )
+rect/scale = Vector2( 0.2, 2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 193.0
-margin/bottom = 43.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -29.0
+margin/top = -29.0
+margin/right = 46.0
+margin/bottom = 18.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Soda"
 visible_characters = -1
 
-[node name="range" type="RichTextLabel" parent="soda"]
+[node name="range" type="RichTextLabel" parent="supply_one"]
 
-rect/scale = Vector2( 0.06, 0.6 )
+rect/scale = Vector2( 0.2, 2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -2.0
-margin/top = -15.0
-margin/right = 120.0
-margin/bottom = 47.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -9.0
+margin/top = -24.0
+margin/right = 92.0
+margin/bottom = 38.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0-10"
 visible_characters = -1
 
-[node name="lower" type="TextureButton" parent="soda"]
+[node name="lower" type="TextureButton" parent="supply_one"]
 
+rect/scale = Vector2( 2, 2.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 12.0
-margin/top = -10.0
-margin/right = 14.0
-margin/bottom = 8.0
+margin/left = 14.0
+margin/top = -23.0
+margin/right = 16.0
+margin/bottom = -5.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="price_output" type="RichTextLabel" parent="supply_one"]
+
+rect/scale = Vector2( 0.2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 19.0
+margin/top = -24.0
+margin/right = 68.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0.761719, 0.761719, 0.761719, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="raise" type="TextureButton" parent="supply_one"]
+
+rect/scale = Vector2( 2, 2.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 27.0
+margin/top = -23.0
+margin/right = 29.0
+margin/bottom = -5.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -134,93 +167,108 @@ params/resize_mode = 0
 params/scale = Vector2( 0.1, 1 )
 params/stretch_mode = 0
 
-[node name="price_output" type="RichTextLabel" parent="soda"]
+[node name="decorative" type="Sprite" parent="supply_one"]
 
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 15.0
-margin/top = -17.0
-margin/right = 64.0
-margin/bottom = 40.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
-visible_characters = -1
+visibility/behind_parent = true
+transform/pos = Vector2( 0.114068, 2.40363 )
+transform/scale = Vector2( 0.0529607, 0.0797726 )
+texture = ExtResource( 6 )
 
-[node name="raise" type="TextureButton" parent="soda"]
+[node name="supply_two" type="Node2D" parent="."]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 18.0
-margin/top = -12.0
-margin/right = 20.0
-margin/bottom = 6.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 6 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[node name="popcorn" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( 0.147227, -6.96978 )
-transform/scale = Vector2( 0.944782, 0.101023 )
+transform/pos = Vector2( 0.0189743, 15.6438 )
+transform/scale = Vector2( 0.944782, 0.156282 )
 script/script = ExtResource( 7 )
 
-[node name="name" type="RichTextLabel" parent="popcorn"]
+[node name="decorative1" type="Sprite" parent="supply_two"]
 
-rect/scale = Vector2( 0.06, 0.6 )
+visibility/behind_parent = true
+transform/pos = Vector2( 0.147411, 2.60544 )
+transform/scale = Vector2( 0.0529607, 0.0754114 )
+texture = ExtResource( 6 )
+
+[node name="name" type="RichTextLabel" parent="supply_two"]
+
+rect/scale = Vector2( 0.2, 2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 193.0
-margin/bottom = 43.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -30.0
+margin/top = -32.0
+margin/right = 72.0
+margin/bottom = 12.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Popcorn"
 visible_characters = -1
 
-[node name="range" type="RichTextLabel" parent="popcorn"]
+[node name="range" type="RichTextLabel" parent="supply_two"]
 
-rect/scale = Vector2( 0.06, 0.6 )
+rect/scale = Vector2( 0.2, 2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -2.0
-margin/top = -15.0
-margin/right = 126.0
-margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -8.0
+margin/top = -29.0
+margin/right = 91.0
+margin/bottom = 28.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0-10"
 visible_characters = -1
 
-[node name="lower" type="TextureButton" parent="popcorn"]
+[node name="lower" type="TextureButton" parent="supply_two"]
 
+rect/scale = Vector2( 2, 2.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 12.0
-margin/top = -10.0
-margin/right = 14.0
-margin/bottom = 8.0
+margin/left = 14.0
+margin/top = -23.0
+margin/right = 16.0
+margin/bottom = -5.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 0
+params/scale = Vector2( 0.1, 1 )
+params/stretch_mode = 0
+
+[node name="price_output" type="RichTextLabel" parent="supply_two"]
+
+rect/scale = Vector2( 0.2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 19.0
+margin/top = -22.0
+margin/right = 60.0
+margin/bottom = 16.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0.769531, 0.769531, 0.769531, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="raise" type="TextureButton" parent="supply_two"]
+
+rect/scale = Vector2( 2, 2.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 27.0
+margin/top = -20.0
+margin/right = 29.0
+margin/bottom = -2.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -230,448 +278,12 @@ params/resize_mode = 0
 params/scale = Vector2( 0.1, 1 )
 params/stretch_mode = 0
 
-[node name="price_output" type="RichTextLabel" parent="popcorn"]
+[connection signal="button_down" from="supply_one/lower" to="supply_one" method="_on_lower_button_down"]
 
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 15.0
-margin/top = -17.0
-margin/right = 64.0
-margin/bottom = 40.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
-visible_characters = -1
+[connection signal="button_down" from="supply_one/raise" to="supply_one" method="_on_raise_button_down"]
 
-[node name="raise" type="TextureButton" parent="popcorn"]
+[connection signal="button_down" from="supply_two/lower" to="supply_two" method="_on_lower_button_down"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 18.0
-margin/top = -12.0
-margin/right = 20.0
-margin/bottom = 6.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 6 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[node name="pizza" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( 0.00215071, -0.178344 )
-transform/scale = Vector2( 0.944782, 0.101023 )
-script/script = ExtResource( 8 )
-
-[node name="name" type="RichTextLabel" parent="pizza"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 193.0
-margin/bottom = 43.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Pizza"
-visible_characters = -1
-
-[node name="range" type="RichTextLabel" parent="pizza"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -2.0
-margin/top = -15.0
-margin/right = 139.0
-margin/bottom = 51.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0-10"
-visible_characters = -1
-
-[node name="lower" type="TextureButton" parent="pizza"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 12.0
-margin/top = -10.0
-margin/right = 14.0
-margin/bottom = 8.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 5 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[node name="price_output" type="RichTextLabel" parent="pizza"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 15.0
-margin/top = -17.0
-margin/right = 64.0
-margin/bottom = 40.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
-visible_characters = -1
-
-[node name="raise" type="TextureButton" parent="pizza"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 18.0
-margin/top = -12.0
-margin/right = 20.0
-margin/bottom = 6.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 6 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[node name="freezie" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( 0.0646973, 6.07697 )
-transform/scale = Vector2( 0.944782, 0.101023 )
-script/script = ExtResource( 9 )
-
-[node name="name" type="RichTextLabel" parent="freezie"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 193.0
-margin/bottom = 43.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Freezie"
-visible_characters = -1
-
-[node name="range" type="RichTextLabel" parent="freezie"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -2.0
-margin/top = -15.0
-margin/right = 135.0
-margin/bottom = 50.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0-10"
-visible_characters = -1
-
-[node name="lower" type="TextureButton" parent="freezie"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 12.0
-margin/top = -10.0
-margin/right = 14.0
-margin/bottom = 8.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 5 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[node name="price_output" type="RichTextLabel" parent="freezie"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 15.0
-margin/top = -17.0
-margin/right = 64.0
-margin/bottom = 40.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
-visible_characters = -1
-
-[node name="raise" type="TextureButton" parent="freezie"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 18.0
-margin/top = -12.0
-margin/right = 20.0
-margin/bottom = 6.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 6 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[node name="energy" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( 0.168505, 14.1195 )
-transform/scale = Vector2( 0.944782, 0.101023 )
-script/script = ExtResource( 10 )
-
-[node name="name" type="RichTextLabel" parent="energy"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 256.0
-margin/bottom = 43.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Energy Drinks"
-visible_characters = -1
-
-[node name="range" type="RichTextLabel" parent="energy"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -2.0
-margin/top = -15.0
-margin/right = 128.0
-margin/bottom = 57.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0-10"
-visible_characters = -1
-
-[node name="lower" type="TextureButton" parent="energy"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 12.0
-margin/top = -10.0
-margin/right = 14.0
-margin/bottom = 8.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 5 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[node name="price_output" type="RichTextLabel" parent="energy"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 15.0
-margin/top = -17.0
-margin/right = 64.0
-margin/bottom = 40.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
-visible_characters = -1
-
-[node name="raise" type="TextureButton" parent="energy"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 18.0
-margin/top = -12.0
-margin/right = 20.0
-margin/bottom = 6.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 6 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[node name="candy" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( 0.356154, 22.3407 )
-transform/scale = Vector2( 0.944782, 0.101023 )
-script/script = ExtResource( 11 )
-
-[node name="name" type="RichTextLabel" parent="candy"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 193.0
-margin/bottom = 43.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Candy"
-visible_characters = -1
-
-[node name="range" type="RichTextLabel" parent="candy"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -2.0
-margin/top = -15.0
-margin/right = 115.0
-margin/bottom = 52.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0-10"
-visible_characters = -1
-
-[node name="lower" type="TextureButton" parent="candy"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 12.0
-margin/top = -10.0
-margin/right = 14.0
-margin/bottom = 8.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 5 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[node name="price_output" type="RichTextLabel" parent="candy"]
-
-rect/scale = Vector2( 0.06, 0.6 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 15.0
-margin/top = -17.0
-margin/right = 64.0
-margin/bottom = 40.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
-visible_characters = -1
-
-[node name="raise" type="TextureButton" parent="candy"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 18.0
-margin/top = -12.0
-margin/right = 20.0
-margin/bottom = 6.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 6 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 1 )
-params/stretch_mode = 0
-
-[connection signal="button_down" from="soda/lower" to="soda" method="_on_lower_button_down"]
-
-[connection signal="button_down" from="soda/raise" to="soda" method="_on_raise_button_down"]
-
-[connection signal="button_down" from="popcorn/lower" to="popcorn" method="_on_lower_button_down"]
-
-[connection signal="button_down" from="popcorn/raise" to="popcorn" method="_on_raise_button_down"]
-
-[connection signal="button_down" from="pizza/lower" to="pizza" method="_on_lower_button_down"]
-
-[connection signal="button_down" from="pizza/raise" to="pizza" method="_on_raise_button_down"]
-
-[connection signal="button_down" from="freezie/lower" to="freezie" method="_on_lower_button_down"]
-
-[connection signal="button_down" from="freezie/raise" to="freezie" method="_on_raise_button_down"]
-
-[connection signal="button_down" from="energy/lower" to="energy" method="_on_lower_button_down"]
-
-[connection signal="button_down" from="energy/raise" to="energy" method="_on_raise_button_down"]
-
-[connection signal="button_down" from="candy/lower" to="candy" method="_on_lower_button_down"]
-
-[connection signal="button_down" from="candy/raise" to="candy" method="_on_raise_button_down"]
+[connection signal="button_down" from="supply_two/raise" to="supply_two" method="_on_raise_button_down"]
 
 

@@ -1,5 +1,8 @@
 extends Node
 
+onready var supply_one = get_tree().get_current_scene().get_node("supply_one")
+onready var supply_two = get_tree().get_current_scene().get_node("supply_two")
+
 var daily_candy_price = 0
 var soda_yesterday_used = 0
 var popcorn_yesterday_used = 0
@@ -50,16 +53,42 @@ var freezie_range_high = 15
 var energy_range_high = 15
 var candy_range_high = 15
 
+var supply_one_count
+var supply_one_name
+var supply_two_count
+var supply_two_name
 
 func _ready():
 	pass
 
 func set_supply():
 	if (towns.town_select == "hollyhock"):
-		get_tree().get_current_scene().get_node("supply_one").get_child(2).clear()
-		get_tree().get_current_scene().get_node("supply_one").get_child(2).add_text(str(hollyhock_soda_count))
-		get_tree().get_current_scene().get_node("supply_two").get_child(2).clear()
-		get_tree().get_current_scene().get_node("supply_two").get_child(2).add_text(str(hollyhock_popcorn_count))
+		supply_one_count = supplies.hollyhock_soda_count
+		supply_one_name = "Soda"
+		supply_two_count = supplies.hollyhock_popcorn_count
+		supply_two_name = "Popcorn"
+		get_tree().get_current_scene().get_node("supply_one").get_child(2).get_child(0).clear()
+		get_tree().get_current_scene().get_node("supply_one").get_child(3).get_child(0).clear()
+		get_tree().get_current_scene().get_node("supply_one").get_child(4).get_child(0).clear()
+		var one_ones_digit = supply_one_count % 10
+		var one_tens_digit = (supply_one_count / 10) % 10
+		var one_hunds_digit = (supply_one_count / 100) % 10
+		get_tree().get_current_scene().get_node("supply_one").get_child(4).get_child(0).add_text(str(one_ones_digit))
+		get_tree().get_current_scene().get_node("supply_one").get_child(3).get_child(0).add_text(str(one_tens_digit))
+		get_tree().get_current_scene().get_node("supply_one").get_child(2).get_child(0).add_text(str(one_hunds_digit))
+		get_tree().get_current_scene().get_node("supply_one").get_child(1).clear()
+		get_tree().get_current_scene().get_node("supply_one").get_child(1).add_text(str(supply_one_name))
+		get_tree().get_current_scene().get_node("supply_two").get_child(2).get_child(0).clear()
+		get_tree().get_current_scene().get_node("supply_two").get_child(3).get_child(0).clear()
+		get_tree().get_current_scene().get_node("supply_two").get_child(4).get_child(0).clear()
+		var two_ones_digit = supply_two_count % 10
+		var two_tens_digit = (supply_two_count / 10) % 10
+		var two_hunds_digit = (supply_two_count / 100) % 10
+		get_tree().get_current_scene().get_node("supply_two").get_child(4).get_child(0).add_text(str(two_ones_digit))
+		get_tree().get_current_scene().get_node("supply_two").get_child(3).get_child(0).add_text(str(two_tens_digit))
+		get_tree().get_current_scene().get_node("supply_two").get_child(2).get_child(0).add_text(str(two_hunds_digit))
+		get_tree().get_current_scene().get_node("supply_two").get_child(1).clear()
+		get_tree().get_current_scene().get_node("supply_two").get_child(1).add_text(str(supply_two_name))
 
 
 func new_supply_prices():

@@ -20,14 +20,31 @@ func _ready():
 func _process(delta):
 	worst_output.clear()
 	worst_output.add_text(upgrade_prices.worst_price)
-	decent_output.clear()
-	decent_output.add_text(str(upgrade_prices.decent_price))
-	good_output.clear()
-	good_output.add_text(str(upgrade_prices.good_price))
-	great_output.clear()
-	great_output.add_text(str(upgrade_prices.great_price))
-	best_output.clear()
-	best_output.add_text(str(upgrade_prices.best_price))
+	if (towns.town_select == "hollyhock"):
+		if (hollyhock.hollyhock_storefront_decent_key == true):
+			decent_output.clear()
+			decent_output.add_text("Owned")
+		elif (hollyhock.hollyhock_storefront_decent_key == false):
+			decent_output.clear()
+			decent_output.add_text(str(upgrade_prices.decent_price))
+		if (hollyhock.hollyhock_storefront_good_key == true):
+			good_output.clear()
+			good_output.add_text("Owned")
+		elif (hollyhock.hollyhock_storefront_good_key == false):
+			good_output.clear()
+			good_output.add_text(str(upgrade_prices.good_price))
+		if (hollyhock.hollyhock_storefront_great_key == true):
+			great_output.clear()
+			great_output.add_text("Owned")
+		elif (hollyhock.hollyhock_storefront_great_key == false):
+			great_output.clear()
+			great_output.add_text(str(upgrade_prices.great_price))
+		if (hollyhock.hollyhock_storefront_best_key == true):
+			best_output.clear()
+			best_output.add_text("Owned")
+		elif (hollyhock.hollyhock_storefront_best_key == false):
+			best_output.clear()
+			best_output.add_text(str(upgrade_prices.best_price))
 
 func _on_worst_button_button_down():
 	if (towns.town_select == "hollyhock"):
