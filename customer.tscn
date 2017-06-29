@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://customer.gd" type="Script" id=1]
-[ext_resource path="res://customer.png" type="Texture" id=2]
-[ext_resource path="res://hanged_man.png" type="Texture" id=3]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=4]
-[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://customer_five.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -13,9 +10,10 @@ extents = Vector2( 10, 10 )
 
 [node name="customer" type="RigidBody2D"]
 
+transform/scale = Vector2( 1.42095, 1.23128 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.64946, 0, 0, 2.53309, 0.811441, -2.63366 )
+shapes/0/transform = Matrix32( 1.88101, 0, 0, 1.7512, -0.639023, -2.92219 )
 shapes/0/trigger = true
 collision/layers = 1
 collision/mask = 1
@@ -38,160 +36,30 @@ script/script = ExtResource( 1 )
 
 [node name="customer_pics" type="TextureButton" parent="."]
 
-rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -22.0
-margin/top = -4.0
-margin/right = 28.0
-margin/bottom = 47.0
+margin/left = -31.0
+margin/top = -35.0
+margin/right = 44.0
+margin/bottom = 40.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
 params/resize_mode = 0
+params/scale = Vector2( 0.25, 0.25 )
 params/stretch_mode = 0
-
-[node name="genre_pic" type="Sprite" parent="."]
-
-transform/pos = Vector2( 10.0123, -13.8069 )
-transform/scale = Vector2( 0.545482, 0.430134 )
-texture = ExtResource( 4 )
-
-[node name="meta" type="RichTextLabel" parent="genre_pic"]
-
-rect/scale = Vector2( 0.2, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -9.0
-margin/top = -10.0
-margin/right = 89.0
-margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Meta"
-visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="classic" type="RichTextLabel" parent="genre_pic"]
-
-rect/scale = Vector2( 0.2, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -9.0
-margin/top = -10.0
-margin/right = 89.0
-margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Meta"
-visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="platformer" type="RichTextLabel" parent="genre_pic"]
-
-rect/scale = Vector2( 0.2, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -9.0
-margin/top = -10.0
-margin/right = 89.0
-margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Meta"
-visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="strategy" type="RichTextLabel" parent="genre_pic"]
-
-rect/scale = Vector2( 0.2, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -9.0
-margin/top = -10.0
-margin/right = 89.0
-margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Meta"
-visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="time_management" type="RichTextLabel" parent="genre_pic"]
-
-rect/scale = Vector2( 0.2, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -9.0
-margin/top = -10.0
-margin/right = 89.0
-margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Meta"
-visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="adventure" type="RichTextLabel" parent="genre_pic"]
-
-rect/scale = Vector2( 0.2, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -9.0
-margin/top = -10.0
-margin/right = 89.0
-margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Meta"
-visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="collision_shape" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 0.811441, -2.63366 )
-transform/scale = Vector2( 2.64946, 2.53309 )
+transform/pos = Vector2( -0.639023, -2.92219 )
+transform/scale = Vector2( 1.88101, 1.7512 )
 shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="waiting_timer" type="Timer" parent="."]
 
@@ -203,7 +71,7 @@ autostart = false
 [node name="concessions_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 5.0
+wait_time = 1.0
 one_shot = true
 autostart = false
 
@@ -220,15 +88,6 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
-
-[node name="non_genre_pic" type="Sprite" parent="."]
-
-transform/pos = Vector2( 10.267, -15.2363 )
-transform/scale = Vector2( 1.56635, 1.89668 )
-
-[connection signal="button_down" from="customer_pics" to="." method="_on_customer_pics_button_down"]
-
-[connection signal="button_up" from="customer_pics" to="." method="_on_customer_pics_button_up"]
 
 [connection signal="timeout" from="waiting_timer" to="." method="_on_waiting_timer_timeout"]
 

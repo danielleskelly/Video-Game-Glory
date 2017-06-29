@@ -1,6 +1,6 @@
 extends Node
 
-var hollyhock_town_population = 100
+var hollyhock_town_population = 500
 var hollyhock_genre_two_key = false
 var hollyhock_genre_three_key = false
 var hollyhock_advertising_max = 100

@@ -1,0 +1,325 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=1]
+[ext_resource path="res://genre_bubble.png" type="Texture" id=2]
+
+[node name="pleasure_bubble" type="Node2D"]
+
+transform/pos = Vector2( 57.464, 56.5353 )
+transform/scale = Vector2( 1.79664, 1.69994 )
+
+[node name="meta" type="RichTextLabel" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+rect/scale = Vector2( 0.25, 0.25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -5.0
+margin/top = 3.0
+margin/right = 70.0
+margin/bottom = 36.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Meta"
+visible_characters = -1
+
+[node name="meta1" type="RichTextLabel" parent="meta"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 75.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Meta"
+visible_characters = -1
+
+[node name="meta2" type="RichTextLabel" parent="meta"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 75.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Meta"
+visible_characters = -1
+
+[node name="meta3" type="RichTextLabel" parent="meta"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 75.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Meta"
+visible_characters = -1
+
+[node name="meta4" type="RichTextLabel" parent="meta"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 75.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Meta"
+visible_characters = -1
+
+[node name="meta5" type="RichTextLabel" parent="meta"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 75.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Meta"
+visible_characters = -1
+
+[node name="meta6" type="RichTextLabel" parent="meta"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 75.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Meta"
+visible_characters = -1
+
+[node name="classic" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.25, 0.25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -10.0
+margin/top = 1.0
+margin/right = 124.0
+margin/bottom = 34.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Classic"
+visible_characters = -1
+
+[node name="classic1" type="RichTextLabel" parent="classic"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 134.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Classic"
+visible_characters = -1
+
+[node name="classic2" type="RichTextLabel" parent="classic"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 134.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Classic"
+visible_characters = -1
+
+[node name="classic3" type="RichTextLabel" parent="classic"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 134.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Classic"
+visible_characters = -1
+
+[node name="classic4" type="RichTextLabel" parent="classic"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 134.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Classic"
+visible_characters = -1
+
+[node name="classic5" type="RichTextLabel" parent="classic"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 134.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Classic"
+visible_characters = -1
+
+[node name="classic6" type="RichTextLabel" parent="classic"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 134.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Classic"
+visible_characters = -1
+
+[node name="platformer" type="RichTextLabel" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.2, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -15.0
+margin/top = -7.0
+margin/right = 154.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Platformer"
+visible_characters = -1
+
+[node name="strategy" type="RichTextLabel" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.2, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -15.0
+margin/top = -7.0
+margin/right = 154.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Platformer"
+visible_characters = -1
+
+[node name="time_management" type="RichTextLabel" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.2, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -15.0
+margin/top = -13.0
+margin/right = 154.0
+margin/bottom = 56.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Time Managment"
+visible_characters = -1
+
+[node name="adventure" type="RichTextLabel" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.2, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -15.0
+margin/top = -7.0
+margin/right = 154.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Platformer"
+visible_characters = -1
+
+[node name="pleasure_bubble" type="Sprite" parent="."]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 3.27174, 3.00261 )
+transform/scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 2 )
+
+[node name="others" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3.16048, 7.03017 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+

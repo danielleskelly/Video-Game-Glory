@@ -469,7 +469,6 @@ texture = ExtResource( 5 )
 
 [node name="finances_full" parent="." instance=ExtResource( 10 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -543,6 +542,7 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="entertainment" parent="." instance=ExtResource( 22 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
