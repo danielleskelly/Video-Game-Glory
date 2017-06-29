@@ -20,8 +20,8 @@ texture = ExtResource( 2 )
 
 [node name="decorative" type="Sprite" parent="."]
 
-transform/pos = Vector2( -18.0434, 0.832117 )
-transform/scale = Vector2( 0.0175418, 0.0638389 )
+transform/pos = Vector2( -17.1782, 0.832117 )
+transform/scale = Vector2( 0.0153408, 0.0638389 )
 texture = ExtResource( 3 )
 
 [node name="decorative1" type="Sprite" parent="."]
@@ -32,34 +32,34 @@ texture = ExtResource( 3 )
 
 [node name="station" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.2, 0.2 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -28.0
-margin/top = -28.0
-margin/right = 104.0
-margin/bottom = 24.0
+margin/left = -25.0
+margin/top = -29.0
+margin/right = 107.0
+margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station"
 visible_characters = -1
 
 [node name="game" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.2, 0.2 )
+rect/scale = Vector2( 0.15, 0.2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 4.0
+margin/left = 7.0
 margin/top = -30.0
-margin/right = 97.0
+margin/right = 100.0
 margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Game"
 visible_characters = -1
@@ -72,17 +72,17 @@ script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_one"]
 
-rect/scale = Vector2( 0.15, 1.5 )
+rect/scale = Vector2( 0.125, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -41.0
+margin/left = -38.0
 margin/top = -49.0
-margin/right = 109.0
+margin/right = 112.0
 margin/bottom = -4.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station One"
 visible_characters = -1
@@ -118,17 +118,17 @@ script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_two"]
 
-rect/scale = Vector2( 0.15, 1.5 )
+rect/scale = Vector2( 0.125, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -41.0
+margin/left = -38.0
 margin/top = -35.0
-margin/right = 119.0
+margin/right = 122.0
 margin/bottom = 10.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Two"
 visible_characters = -1
@@ -163,17 +163,17 @@ script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_three"]
 
-rect/scale = Vector2( 0.15, 1.5 )
+rect/scale = Vector2( 0.125, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -41.0
+margin/left = -38.0
 margin/top = -27.0
-margin/right = 143.0
+margin/right = 146.0
 margin/bottom = 18.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Three"
 visible_characters = -1
@@ -208,17 +208,17 @@ script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_four"]
 
-rect/scale = Vector2( 0.15, 1.5 )
+rect/scale = Vector2( 0.125, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -41.0
+margin/left = -38.0
 margin/top = -15.0
-margin/right = 120.0
+margin/right = 123.0
 margin/bottom = 30.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Four"
 visible_characters = -1
@@ -253,17 +253,17 @@ script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_five"]
 
-rect/scale = Vector2( 0.15, 1.5 )
+rect/scale = Vector2( 0.125, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -41.0
+margin/left = -38.0
 margin/top = 0.0
-margin/right = 121.0
+margin/right = 124.0
 margin/bottom = 45.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Five"
 visible_characters = -1
@@ -298,17 +298,17 @@ script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_six"]
 
-rect/scale = Vector2( 0.15, 1.5 )
+rect/scale = Vector2( 0.125, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -41.0
+margin/left = -38.0
 margin/top = 12.0
-margin/right = 103.0
+margin/right = 106.0
 margin/bottom = 57.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 0.576471, 0.235294, 1 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Six"
 visible_characters = -1

@@ -49,13 +49,13 @@ __meta__ = {
 
 [node name="decorative4" type="Sprite" parent="."]
 
-transform/pos = Vector2( -4.97413, 21.0916 )
+transform/pos = Vector2( -5.31281, 21.0916 )
 transform/scale = Vector2( 0.0117489, 0.0204544 )
 texture = ExtResource( 3 )
 
 [node name="decorative5" type="Sprite" parent="."]
 
-transform/pos = Vector2( 16.2173, 21.0723 )
+transform/pos = Vector2( 17.572, 21.0723 )
 transform/scale = Vector2( 0.0173717, 0.0204544 )
 texture = ExtResource( 3 )
 
@@ -68,9 +68,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -27.0
-margin/top = -26.0
+margin/top = -27.0
 margin/right = 46.0
-margin/bottom = 7.0
+margin/bottom = 6.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -91,36 +91,35 @@ __meta__ = {
 
 [node name="supply_one" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( -8.67612, 24.1143 )
+transform/pos = Vector2( -9.0148, 24.1143 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="supply_two" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( -1.42311, 24.1884 )
+transform/pos = Vector2( -1.76179, 24.1884 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="town_banner" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( -0.561625, -24.5823 )
-transform/scale = Vector2( 0.471053, 0.153744 )
+transform/pos = Vector2( -0.561625, -25.0427 )
+transform/scale = Vector2( 0.471053, 0.139357 )
 
 [node name="finances" parent="." instance=ExtResource( 8 )]
 
-transform/pos = Vector2( -23.0717, 20.2329 )
-transform/scale = Vector2( 0.213352, 0.319472 )
+transform/pos = Vector2( -23.0485, 19.8575 )
+transform/scale = Vector2( 0.214076, 0.331204 )
 
 [node name="top_buttons" type="HButtonArray" parent="."]
 
-editor/display_folded = true
-rect/scale = Vector2( 0.09, 0.1 )
+rect/scale = Vector2( 0.09, 0.12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -30.0
-margin/top = -18.0
+margin/top = -19.0
 margin/right = 644.0
-margin/bottom = 41.0
+margin/bottom = 40.0
 custom_fonts/font_selected = ExtResource( 4 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_selected = Color( 0.933594, 0.864304, 0.864304, 1 )
@@ -154,57 +153,55 @@ script/script = ExtResource( 9 )
 [node name="button" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 55.5707, 29.7387 )
-transform/scale = Vector2( 0.548089, 0.578921 )
+transform/pos = Vector2( 55.252, 29.7387 )
+transform/scale = Vector2( 0.545591, 0.578921 )
 texture = ExtResource( 5 )
 
 [node name="button1" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 160.739, 29.5126 )
-transform/scale = Vector2( 0.429955, 0.503497 )
+transform/pos = Vector2( 159.83, 29.622 )
+transform/scale = Vector2( 0.461972, 0.575821 )
 texture = ExtResource( 5 )
 
 [node name="button2" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 263.924, 29.5126 )
-transform/scale = Vector2( 0.514673, 0.503497 )
+transform/pos = Vector2( 263.362, 29.5704 )
+transform/scale = Vector2( 0.543674, 0.556226 )
 texture = ExtResource( 5 )
 
 [node name="button3" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 385.424, 29.8717 )
-transform/scale = Vector2( 0.643938, 0.496315 )
+transform/pos = Vector2( 387.02, 29.9225 )
+transform/scale = Vector2( 0.655957, 0.563267 )
 texture = ExtResource( 5 )
 
 [node name="button4" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 499.057, 28.0992 )
-transform/scale = Vector2( 0.430131, 0.496315 )
+transform/pos = Vector2( 499.683, 29.9225 )
+transform/scale = Vector2( 0.441565, 0.549185 )
 texture = ExtResource( 5 )
 
 [node name="button5" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 611.794, 28.2584 )
-transform/scale = Vector2( 0.597571, 0.485772 )
+transform/pos = Vector2( 609.78, 29.9257 )
+transform/scale = Vector2( 0.635433, 0.552829 )
 texture = ExtResource( 5 )
 
 [node name="report_buttons" type="VButtonArray" parent="."]
 
-editor/display_folded = true
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -29.0
+margin/left = -30.0
 margin/top = -6.0
-margin/right = 133.0
+margin/right = 165.0
 margin/bottom = 116.0
 custom_fonts/font_selected = ExtResource( 4 )
 custom_fonts/font = ExtResource( 4 )
@@ -228,49 +225,43 @@ button/selected = 0
 [node name="decorative" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 117.144, 63.0918 )
-transform/scale = Vector2( 0.19863, 0.152013 )
+transform/pos = Vector2( 117.144, 65.3645 )
+transform/scale = Vector2( 0.19863, 0.147574 )
 texture = ExtResource( 3 )
 
-[node name="button9" type="Sprite" parent="report_buttons"]
+[node name="button12" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 80.8638, 19.2869 )
-transform/scale = Vector2( 0.805768, 0.364477 )
+transform/pos = Vector2( 97.6314, 61.3262 )
+transform/scale = Vector2( 0.97248, 0.371663 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="button10" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 81.9774, 61.3262 )
-transform/scale = Vector2( 0.799782, 0.371663 )
+transform/pos = Vector2( 97.6314, 18.8745 )
+transform/scale = Vector2( 0.97248, 0.371663 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="button11" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 81.9774, 103.454 )
-transform/scale = Vector2( 0.799782, 0.371663 )
+transform/pos = Vector2( 97.5777, 103.454 )
+transform/scale = Vector2( 0.971943, 0.371663 )
 texture = ExtResource( 5 )
 
 [node name="supply_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -29.0
+margin/left = -30.0
 margin/top = -6.0
-margin/right = 133.0
+margin/right = 165.0
 margin/bottom = 74.0
 custom_fonts/font_selected = ExtResource( 4 )
 custom_fonts/font = ExtResource( 4 )
@@ -291,42 +282,36 @@ button/selected = 0
 [node name="decorative" type="Sprite" parent="supply_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 117.144, 38.4407 )
-transform/scale = Vector2( 0.19863, 0.103866 )
+transform/pos = Vector2( 119.238, 40.7133 )
+transform/scale = Vector2( 0.201636, 0.0994273 )
 texture = ExtResource( 3 )
 
-[node name="button9" type="Sprite" parent="supply_buttons"]
+[node name="button11" type="Sprite" parent="supply_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 80.8638, 19.2869 )
-transform/scale = Vector2( 0.805768, 0.364477 )
+transform/pos = Vector2( 98.0639, 19.4014 )
+transform/scale = Vector2( 0.966828, 0.371663 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="button10" type="Sprite" parent="supply_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 81.9774, 61.3262 )
-transform/scale = Vector2( 0.799782, 0.371663 )
+transform/pos = Vector2( 97.5677, 61.3262 )
+transform/scale = Vector2( 0.971791, 0.371663 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="upgrade_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
 visibility/visible = false
-rect/scale = Vector2( 0.08, 0.08 )
+rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -29.0
+margin/left = -30.0
 margin/top = -6.0
-margin/right = 166.0
+margin/right = 165.0
 margin/bottom = 116.0
 custom_fonts/font_selected = ExtResource( 4 )
 custom_fonts/font = ExtResource( 4 )
@@ -350,8 +335,8 @@ button/selected = 0
 [node name="decorative1" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 146.43, 61.0473 )
-transform/scale = Vector2( 0.248287, 0.160722 )
+transform/pos = Vector2( 148.903, 64.9901 )
+transform/scale = Vector2( 0.248287, 0.145814 )
 texture = ExtResource( 3 )
 
 [node name="button12" type="Sprite" parent="upgrade_buttons"]
@@ -360,42 +345,41 @@ visibility/behind_parent = true
 transform/pos = Vector2( 97.0986, 19.2869 )
 transform/scale = Vector2( 0.962699, 0.364477 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="button13" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.875, 61.3234 )
-transform/scale = Vector2( 0.962699, 0.364477 )
+transform/pos = Vector2( 97.5053, 61.3234 )
+transform/scale = Vector2( 0.966396, 0.364477 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
+
+[node name="button15" type="Sprite" parent="upgrade_buttons"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 97.5053, 61.3234 )
+transform/scale = Vector2( 0.966396, 0.364477 )
+texture = ExtResource( 5 )
 
 [node name="button14" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.875, 102.382 )
-transform/scale = Vector2( 0.962699, 0.364477 )
+transform/pos = Vector2( 97.5053, 102.382 )
+transform/scale = Vector2( 0.966396, 0.364477 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="locals_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
-rect/scale = Vector2( 0.1, 0.1 )
+visibility/visible = false
+rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
+margin/left = -30.0
 margin/top = -6.0
-margin/right = 111.0
-margin/bottom = 116.0
+margin/right = 165.0
+margin/bottom = 83.0
 custom_fonts/font_selected = ExtResource( 4 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
@@ -415,36 +399,36 @@ button/selected = 0
 [node name="decorative2" type="Sprite" parent="locals_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 101.68, 40.9927 )
-transform/scale = Vector2( 0.175917, 0.108034 )
+transform/pos = Vector2( 138.666, 40.3986 )
+transform/scale = Vector2( 0.230306, 0.0954084 )
 texture = ExtResource( 3 )
 
 [node name="button15" type="Sprite" parent="locals_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 66.7211, 19.4933 )
-transform/scale = Vector2( 0.659194, 0.355558 )
+transform/pos = Vector2( 97.8896, 19.4933 )
+transform/scale = Vector2( 0.968572, 0.355558 )
 texture = ExtResource( 5 )
 
 [node name="button16" type="Sprite" parent="locals_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 67.0525, 60.3457 )
-transform/scale = Vector2( 0.650107, 0.364477 )
+transform/pos = Vector2( 97.7092, 60.3457 )
+transform/scale = Vector2( 0.965718, 0.364477 )
 texture = ExtResource( 5 )
 
 [node name="demand_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -29.0
+margin/left = -30.0
 margin/top = -6.0
-margin/right = 133.0
+margin/right = 166.0
 margin/bottom = 74.0
 custom_fonts/font_selected = ExtResource( 4 )
 custom_fonts/font = ExtResource( 4 )
@@ -465,138 +449,129 @@ button/selected = 0
 [node name="decorative3" type="Sprite" parent="demand_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 117.144, 40.5981 )
-transform/scale = Vector2( 0.19863, 0.104512 )
+transform/pos = Vector2( 111.62, 40.4583 )
+transform/scale = Vector2( 0.187774, 0.0952068 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="button17" type="Sprite" parent="demand_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 80.7878, 19.2869 )
-transform/scale = Vector2( 0.806024, 0.364477 )
+transform/pos = Vector2( 97.7628, 19.2869 )
+transform/scale = Vector2( 0.975774, 0.364477 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="button18" type="Sprite" parent="demand_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 80.7878, 60.3458 )
-transform/scale = Vector2( 0.806024, 0.364477 )
+transform/pos = Vector2( 97.8064, 60.3458 )
+transform/scale = Vector2( 0.979542, 0.364477 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="finances_full" parent="." instance=ExtResource( 10 )]
 
-visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="customers" parent="." instance=ExtResource( 11 )]
 
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="news" parent="." instance=ExtResource( 12 )]
 
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="supplies_full" parent="." instance=ExtResource( 13 )]
 
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="marketing" parent="." instance=ExtResource( 14 )]
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="storefront" parent="." instance=ExtResource( 15 )]
 
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="loans" parent="." instance=ExtResource( 16 )]
 
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="research" parent="." instance=ExtResource( 17 )]
 
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="games" parent="." instance=ExtResource( 18 )]
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="arcade_pricing" parent="." instance=ExtResource( 19 )]
 
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="concessions_pricing" parent="." instance=ExtResource( 20 )]
 
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="arcade_upgrade" parent="." instance=ExtResource( 21 )]
 
 visibility/visible = false
-transform/pos = Vector2( 7.95353, 2.83404 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="entertainment" parent="." instance=ExtResource( 22 )]
 
-transform/pos = Vector2( 7.37761, 2.63763 )
-transform/scale = Vector2( 0.64321, 0.440466 )
+visibility/visible = false
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="genre_one" parent="." instance=ExtResource( 23 )]
 
-transform/pos = Vector2( 8.98402, 24.0289 )
+transform/pos = Vector2( 10.3387, 24.0289 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="genre_two" parent="." instance=ExtResource( 23 )]
 
-transform/pos = Vector2( 16.1716, 24.0813 )
+transform/pos = Vector2( 17.5263, 24.0813 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="genre_three" parent="." instance=ExtResource( 23 )]
 
-transform/pos = Vector2( 23.3427, 24.0996 )
+transform/pos = Vector2( 24.6974, 24.0996 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="start_day" type="LinkButton" parent="."]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 17.0
-margin/top = -26.0
+margin/top = -28.0
 margin/right = 143.0
-margin/bottom = 6.0
+margin/bottom = 4.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
