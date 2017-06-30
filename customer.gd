@@ -15,7 +15,6 @@ var concessions_want = load("res://concessions_want.png")
 var concessions_no_product = load("res://concessions_no_product.png")
 
 var colliders #stores the colliding bodies
-var dragging = false #drag customer with mouse when clicked
 var concession_choice #allows the concessions to pass a boolean of choice
 var charge_price #allows the price to adjust with the arcade the customer moves from
 
@@ -49,7 +48,7 @@ func _process(delta):
 				x.set_hidden(true)
 			pleasure_bubble.get_child(6).show()
 			pleasure_bubble.get_child(7).set_texture(price_success)
-			pleasure_bubble.get_child(7).set_scale(Vector2(.3, .3))
+			pleasure_bubble.get_child(7).set_scale(Vector2(.5, .5))
 			
 		if (collider.is_in_group("popcorn") == true):
 			pleasure_bubble = get_node("pleasure_bubble")
@@ -60,7 +59,7 @@ func _process(delta):
 			pleasure_bubble.get_child(6).show()
 			pleasure_bubble.get_child(7).show()
 			pleasure_bubble.get_child(7).set_texture(price_success)
-			pleasure_bubble.get_child(7).set_scale(Vector2(.3, .3))
+			pleasure_bubble.get_child(7).set_scale(Vector2(.5, .5))
 	if (get_parent().is_in_group("path") == true):
 		if (get_parent().get_parent().is_in_group("queue") == true):
 			if ((colliders.size() == 0) or (colliders[0].is_greater_than(self) == true)):
@@ -113,7 +112,7 @@ func set_parents():
 		pleasure_bubble.get_child(6).show()
 		pleasure_bubble.get_child(7).show()
 		pleasure_bubble.get_child(7).set_texture(concessions_want)
-		pleasure_bubble.get_child(7).set_scale(Vector2(.2, .2))
+		pleasure_bubble.get_child(7).set_scale(Vector2(.35, .35))
 		get_node("concessions_timer").set_wait_time(1)
 		get_node("concessions_timer").start()
 	if ((get_parent().get_parent().get_name() == "zone_one_path") and (concession_choice == false)):
@@ -140,7 +139,7 @@ func set_parents():
 		pleasure_bubble.get_child(6).show()
 		pleasure_bubble.get_child(7).show()
 		pleasure_bubble.get_child(7).set_texture(concessions_want)
-		pleasure_bubble.get_child(7).set_scale(Vector2(.2, .2))
+		pleasure_bubble.get_child(7).set_scale(Vector2(.35, .35))
 		get_node("concessions_timer").set_wait_time(1)
 		get_node("concessions_timer").start()
 	if ((get_parent().get_parent().get_name() == "zone_two_path") and (concession_choice == false)):
@@ -167,7 +166,7 @@ func set_parents():
 		pleasure_bubble.get_child(6).show()
 		pleasure_bubble.get_child(7).show()
 		pleasure_bubble.get_child(7).set_texture(concessions_want)
-		pleasure_bubble.get_child(7).set_scale(Vector2(.2, .2))
+		pleasure_bubble.get_child(7).set_scale(Vector2(.35, .35))
 		get_node("concessions_timer").set_wait_time(1)
 		get_node("concessions_timer").start()
 	if ((get_parent().get_parent().get_name() == "zone_three_path") and (concession_choice == false)):
@@ -194,7 +193,7 @@ func set_parents():
 		pleasure_bubble.get_child(6).show()
 		pleasure_bubble.get_child(7).show()
 		pleasure_bubble.get_child(7).set_texture(concessions_want)
-		pleasure_bubble.get_child(7).set_scale(Vector2(.2, .2))
+		pleasure_bubble.get_child(7).set_scale(Vector2(.35, .35))
 		get_node("concessions_timer").set_wait_time(1)
 		get_node("concessions_timer").start()
 	if ((get_parent().get_parent().get_name() == "zone_four_path") and (concession_choice == false)):
@@ -221,7 +220,7 @@ func set_parents():
 		pleasure_bubble.get_child(6).show()
 		pleasure_bubble.get_child(7).show()
 		pleasure_bubble.get_child(7).set_texture(concessions_want)
-		pleasure_bubble.get_child(7).set_scale(Vector2(.2, .2))
+		pleasure_bubble.get_child(7).set_scale(Vector2(.35, .35))
 		get_node("concessions_timer").set_wait_time(1)
 		get_node("concessions_timer").start()
 	if ((get_parent().get_parent().get_name() == "zone_five_path") and (concession_choice == false)):
@@ -248,7 +247,7 @@ func set_parents():
 		pleasure_bubble.get_child(6).show()
 		pleasure_bubble.get_child(7).show()
 		pleasure_bubble.get_child(7).set_texture(concessions_want)
-		pleasure_bubble.get_child(7).set_scale(Vector2(.2, .2))
+		pleasure_bubble.get_child(7).set_scale(Vector2(.35, .35))
 		get_node("concessions_timer").set_wait_time(1)
 		get_node("concessions_timer").start()
 	if ((get_parent().get_parent().get_name() == "zone_six_path") and (concession_choice == false)):
@@ -340,15 +339,6 @@ func _on_concessions_timer_timeout():
 func _on_exit_timer_timeout():
 	get_parent().queue_free()
 
-func _on_customer_pics_button_down():
-	where = get_global_pos()
-	offset = get_parent().get_offset()
-	dragging = true
-	keep_old_parent = get_parent().get_parent()
-	move_node = get_parent()
-	keep_new_parent = get_tree().get_current_scene().get_node("dragging")
-	keep_old_parent.remove_child(move_node)
-	keep_new_parent.add_child(move_node)
 
 func concessions_purchase():
 	pleasure_bubble = get_node("pleasure_bubble")

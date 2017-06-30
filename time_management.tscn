@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=1]
+[gd_scene load_steps=45 format=1]
 
 [ext_resource path="res://time_management.gd" type="Script" id=1]
 [ext_resource path="res://time_management_background.png" type="Texture" id=2]
@@ -17,9 +17,10 @@
 [ext_resource path="res://supplies.tscn" type="PackedScene" id=15]
 [ext_resource path="res://concession_walls.png" type="Texture" id=16]
 [ext_resource path="res://concessions_want.png" type="Texture" id=17]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=18]
-[ext_resource path="res://blacker_than_night.png" type="Texture" id=19]
-[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=20]
+[ext_resource path="res://popcorn.png" type="Texture" id=18]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=19]
+[ext_resource path="res://blacker_than_night.png" type="Texture" id=20]
+[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -35,42 +36,42 @@ extents = Vector2( 10, 10.908 )
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -8.53771, -3.00312, 0, 0, 0, 0, 2.31523, -3.00312, 0, 0, 0, 0, 2.29663, -15.7459 )
+"points": Vector2Array( 0, 0, 0, 0, -8.53516, -2.99005, 0, 0, 0, 0, 2.31523, -3.00312, 0, 0, 0, 0, 2.29663, -15.7459 )
 }
 
 [sub_resource type="Curve2D" id=4]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -8.45931, -2.99021, 0, 0, 0, 0, 8.91865, -3.01521, 0, 0, 0, 0, 8.87635, -26.4236 )
+"points": Vector2Array( 0, 0, 0, 0, -8.53393, -2.989, 0, 0, 0, 0, 8.91865, -3.01521, 0, 0, 0, 0, 8.87635, -26.4236 )
 }
 
 [sub_resource type="Curve2D" id=5]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -8.46089, -2.98967, 0, 0, 0, 0, 14.9503, -2.99379, 0, 0, 0, 0, 14.9437, -15.5597 )
+"points": Vector2Array( 0, 0, 0, 0, -8.53455, -2.989, 0, 0, 0, 0, 14.9503, -2.99379, 0, 0, 0, 0, 14.9437, -15.5597 )
 }
 
 [sub_resource type="Curve2D" id=6]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -8.4808, -2.99196, 0, 0, 0, 0, -2.34004, -2.99196, 0, 0, 0, 0, -2.34004, 14.8326 )
+"points": Vector2Array( 0, 0, 0, 0, -8.53393, -2.9911, 0, 0, 0, 0, -2.34004, -2.99196, 0, 0, 0, 0, -2.34004, 14.8326 )
 }
 
 [sub_resource type="Curve2D" id=7]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -8.48842, -2.98895, 0, 0, 0, 0, 3.82464, -2.94584, 0, 0, 0, 0, 3.82464, 24.3784 )
+"points": Vector2Array( 0, 0, 0, 0, -8.53393, -2.99005, 0, 0, 0, 0, 3.82464, -2.94584, 0, 0, 0, 0, 3.82464, 24.3784 )
 }
 
 [sub_resource type="Curve2D" id=8]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -8.51553, -2.99069, 0, 0, 0, 0, 9.99605, -2.86346, 0, 0, 0, 0, 9.96101, 15.064 )
+"points": Vector2Array( 0, 0, 0, 0, -8.53455, -2.9911, 0, 0, 0, 0, 9.99605, -2.86346, 0, 0, 0, 0, 9.96101, 15.064 )
 }
 
 [sub_resource type="Curve2D" id=9]
@@ -161,21 +162,21 @@ _data = {
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -17.2683, 81.1681, 0, 0, 0, 0, -17.304, 19.5158, 0, 0, 0, 0, -28.4773, 19.5158, 0, 0, 0, 0, -28.4773, -26.2418, 0, 0, 0, 0, -8.10238, -26.2418, 0, 0, 0, 0, -8.10238, -15.5962, 0, 0, 0, 0, -23.4384, -15.5962, 0, 0, 0, 0, -23.4384, 9.05691, 0, 0, 0, 0, -7.1165, 9.05691, 0, 0, 0, 0, -7.1165, -3.82992, 0, 0, 0, 0, -3.50159, -3.82992 )
+"points": Vector2Array( 0, 0, 0, 0, -17.2683, 81.1681, 0, 0, 0, 0, -17.304, 19.5158, 0, 0, 0, 0, -28.4773, 19.5158, 0, 0, 0, 0, -28.4773, -26.2418, 0, 0, 0, 0, -8.10238, -26.2418, 0, 0, 0, 0, -8.10238, -15.5962, 0, 0, 0, 0, -23.4384, -15.5962, 0, 0, 0, 0, -23.4384, 9.05691, 0, 0, 0, 0, -7.1165, 9.05691, 0, 0, 0, 0, -7.1165, -3.82992, 0, 0, 0, 0, -3.57753, -3.82957 )
 }
 
 [sub_resource type="Curve2D" id=22]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, -8.47226, -2.97785, 0, 0, 0, 0, -4.66701, -2.97834, 0, 0, 0, 0, -4.54184, -60.5011 )
+"points": Vector2Array( 0, 0, 0, 0, -8.5327, -2.99005, 0, 0, 0, 0, -4.66701, -2.97834, 0, 0, 0, 0, -4.54184, -60.5011 )
 }
 
 [sub_resource type="Curve2D" id=23]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, 14.9134, -3.06665, 0, 0, 0, 0, 17.2844, -3.06665, 0, 0, 0, 0, 17.3048, 10.7148, 0, 0, 0, 0, 21.8512, 10.689, 0, 0, 0, 0, 21.8171, -17.4738, 0, 0, 0, 0, 27.9987, -17.5554, 0, 0, 0, 0, 27.9987, 19.2375, 0, 0, 0, 0, 21.1927, 19.6085, 0, 0, 0, 0, 21.2565, 57.162 )
+"points": Vector2Array( 0, 0, 0, 0, 14.9134, -3.06665, 0, 0, 0, 0, 17.2844, -3.06665, 0, 0, 0, 0, 17.3048, 10.7148, 0, 0, 0, 0, 21.8512, 10.689, 0, 0, 0, 0, 21.8171, -17.4738, 0, 0, 0, 0, 26.1, -17.5228, 0, 0, 0, 0, 26.1, 19.717, 0, 0, 0, 0, 20.9503, 19.717, 0, 0, 0, 0, 20.9503, 57.2268 )
 }
 
 [node name="time_management" type="Node2D"]
@@ -183,9 +184,6 @@ _data = {
 transform/pos = Vector2( 515.053, 302.7 )
 transform/scale = Vector2( 16.0493, 9.41331 )
 script/script = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="floor" type="Sprite" parent="."]
 
@@ -249,7 +247,7 @@ script/script = ExtResource( 10 )
 "free",
 ] instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 0.868145, -13.6896 )
+transform/pos = Vector2( 0.868145, -13.8965 )
 transform/scale = Vector2( 0.063757, 0.142374 )
 script/script = ExtResource( 11 )
 
@@ -346,17 +344,16 @@ autostart = false
 
 [node name="concession_walls" type="Sprite" parent="."]
 
-transform/pos = Vector2( 22.4252, 4.96325 )
-transform/scale = Vector2( 0.0469667, 0.0890541 )
+transform/pos = Vector2( 21.8227, 4.96325 )
+transform/scale = Vector2( 0.0410186, 0.0890541 )
 texture = ExtResource( 16 )
 
 [node name="soda" type="RigidBody2D" parent="." groups=[
 "soda",
 ]]
 
-editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 27.6494, -10.166 )
+transform/pos = Vector2( 26.3472, -10.0651 )
 transform/scale = Vector2( 0.0599893, 0.109548 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -396,14 +393,16 @@ transform/scale = Vector2( 1.2349, 1.52077 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="popcorn" type="RigidBody2D" parent="." groups=[
 "popcorn",
 ]]
 
-editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 27.5505, -4.94081 )
+transform/pos = Vector2( 26.3075, -3.72976 )
 transform/scale = Vector2( 0.0599893, 0.109548 )
 input/pickable = false
 shapes/0/shape = SubResource( 2 )
@@ -429,12 +428,9 @@ damp_override/angular = -1.0
 
 [node name="popcorn" type="Sprite" parent="popcorn"]
 
-transform/pos = Vector2( 2.90466, 0.309204 )
-transform/scale = Vector2( 0.677807, 0.694692 )
-texture = ExtResource( 17 )
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( -5.4812, 1.23014 )
+transform/scale = Vector2( 0.353725, 0.406213 )
+texture = ExtResource( 18 )
 
 [node name="popcorn_shape" type="CollisionShape2D" parent="popcorn"]
 
@@ -443,6 +439,9 @@ transform/scale = Vector2( 1.1685, 1.50332 )
 shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="zone_one_path" type="Path2D" parent="." groups=[
 "arcade",
@@ -646,7 +645,7 @@ margin/left = -17.0
 margin/top = 15.0
 margin/right = 30.0
 margin/bottom = 52.0
-custom_fonts/normal_font = ExtResource( 18 )
+custom_fonts/normal_font = ExtResource( 19 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -661,7 +660,7 @@ visibility/visible = false
 
 transform/pos = Vector2( -0.367142, -0.932255 )
 transform/scale = Vector2( 0.0925188, 0.153416 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 
 [node name="popup_dialogue" type="RichTextLabel" parent="tutorial"]
 
@@ -674,7 +673,7 @@ margin/left = -28.0
 margin/top = -29.0
 margin/right = 794.0
 margin/bottom = 842.0
-custom_fonts/normal_font = ExtResource( 20 )
+custom_fonts/normal_font = ExtResource( 21 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Hey John,
@@ -692,15 +691,13 @@ margin/left = 20.0
 margin/top = 24.0
 margin/right = 72.0
 margin/bottom = 67.0
-custom_fonts/font = ExtResource( 20 )
+custom_fonts/font = ExtResource( 21 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
 text = "OK"
-
-[node name="dragging" type="Node2D" parent="."]
 
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 

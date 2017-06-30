@@ -31,12 +31,17 @@ var genre_three_count
 var genre_two_key
 var genre_three_key
 var genre_one_name
+var genre_one_icon
 var genre_two_name
+var genre_two_icon
 var genre_three_name
+var genre_three_icon
 var supply_one_count
 var supply_one_name
+var supply_one_icon
 var supply_two_count
 var supply_two_name
+var supply_two_icon
 
 func _ready():
 	tutorial_start()
@@ -54,10 +59,13 @@ func _process(delta):
 			get_tree().set_pause(true)
 		supply_one_count = supplies.hollyhock_soda_count
 		supply_one_name = "Soda"
+		supply_one_icon = load("res://concessions_want.png")
 		supply_two_count = supplies.hollyhock_popcorn_count
 		supply_two_name = "Popcorn"
+		supply_two_icon = load("res://popcorn.png")
 		genre_one_count = customer_math.meta_prediction
 		genre_one_name = "Meta"
+		genre_one_icon = load("res://meta_genre.png")
 		genre_two_count = customer_math.classic_prediction
 		genre_two_key = customer_math.hollyhock_genre_two_key
 		genre_three_name = "Classic"
@@ -83,6 +91,7 @@ func _process(delta):
 	supply_one.get_child(2).get_child(0).add_text(str(one_hunds_digit))
 	supply_one.get_child(1).clear()
 	supply_one.get_child(1).add_text(str(supply_one_name))
+	supply_one.get_child(5).set_texture(supply_one_icon)
 	supply_two.get_child(2).get_child(0).clear()
 	supply_two.get_child(3).get_child(0).clear()
 	supply_two.get_child(4).get_child(0).clear()
@@ -94,6 +103,7 @@ func _process(delta):
 	supply_two.get_child(2).get_child(0).add_text(str(two_hunds_digit))
 	supply_two.get_child(1).clear()
 	supply_two.get_child(1).add_text(str(supply_two_name))
+	supply_two.get_child(5).set_texture(supply_two_icon)
 	genre_one.get_child(3).get_child(0).clear()
 	genre_one.get_child(4).get_child(0).clear()
 	genre_one.get_child(5).get_child(0).clear()
@@ -105,6 +115,7 @@ func _process(delta):
 	genre_one.get_child(3).get_child(0).add_text(str(one_hunds_digit))
 	genre_one.get_child(1).clear()
 	genre_one.get_child(1).add_text(str(genre_one_name))
+	genre_one.get_child(6).set_texture(genre_one_icon)
 	if (genre_two_key == true):
 		genre_two.show()
 		genre_two.get_child(3).get_child(0).clear()

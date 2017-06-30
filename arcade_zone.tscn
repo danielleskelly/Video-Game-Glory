@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://town_background.png" type="Texture" id=1]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://meta_genre.png" type="Texture" id=2]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
 
 [node name="arcade_zone" type="Node2D"]
 
@@ -31,22 +32,11 @@ params/stretch_mode = 0
 transform/pos = Vector2( 17.7599, -12.3154 )
 transform/scale = Vector2( 0.0861107, 0.104636 )
 
-[node name="meta" type="RichTextLabel" parent="genre_display"]
+[node name="meta" type="Sprite" parent="genre_display"]
 
-rect/scale = Vector2( 5, 5 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -213.0
-margin/top = -78.0
-margin/right = -110.0
-margin/bottom = -43.0
-custom_fonts/normal_font = ExtResource( 2 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Meta"
-visible_characters = -1
+transform/pos = Vector2( -21.7398, -4.5526 )
+transform/scale = Vector2( 24.8831, 11.1285 )
+texture = ExtResource( 2 )
 
 [node name="classic" type="RichTextLabel" parent="genre_display"]
 
@@ -60,7 +50,7 @@ margin/left = -195.0
 margin/top = -51.0
 margin/right = -72.0
 margin/bottom = -16.0
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Classic"
@@ -81,7 +71,7 @@ margin/left = -300.0
 margin/top = -55.0
 margin/right = -143.0
 margin/bottom = -21.0
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Platformer"
@@ -102,7 +92,7 @@ margin/left = -262.0
 margin/top = -57.0
 margin/right = -131.0
 margin/bottom = -23.0
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Strategy"
@@ -123,7 +113,7 @@ margin/left = -326.0
 margin/top = -40.0
 margin/right = -87.0
 margin/bottom = 10.0
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Time Management"
@@ -144,7 +134,7 @@ margin/left = -317.0
 margin/top = -59.0
 margin/right = -128.0
 margin/bottom = -13.0
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Adventure"

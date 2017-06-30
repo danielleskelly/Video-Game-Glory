@@ -1,13 +1,11 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://research.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
-[ext_resource path="res://blacker_than_night.png" type="Texture" id=3]
-[ext_resource path="res://game_background.png" type="Texture" id=4]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=5]
-[ext_resource path="res://lower.png" type="Texture" id=6]
-[ext_resource path="res://raise.png" type="Texture" id=7]
-[ext_resource path="res://button.png" type="Texture" id=8]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://lower.png" type="Texture" id=4]
+[ext_resource path="res://raise.png" type="Texture" id=5]
+[ext_resource path="res://button.png" type="Texture" id=6]
 
 [node name="research" type="Node2D"]
 
@@ -21,21 +19,6 @@ transform/pos = Vector2( 0.0230291, 0.748969 )
 transform/scale = Vector2( 0.0500376, 0.0639588 )
 texture = ExtResource( 2 )
 
-[node name="input_background_black" type="Sprite" parent="."]
-
-transform/pos = Vector2( 15.9916, 3.66959 )
-transform/scale = Vector2( 0.012843, 0.0132944 )
-texture = ExtResource( 3 )
-
-[node name="input_background_gray" type="Sprite" parent="."]
-
-transform/pos = Vector2( 16.0103, 3.66959 )
-transform/scale = Vector2( 0.00909121, 0.0177259 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="label" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.125, 0.175 )
@@ -47,7 +30,7 @@ margin/left = -30.0
 margin/top = -23.0
 margin/right = 145.0
 margin/bottom = 28.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Researching:"
@@ -64,7 +47,7 @@ margin/left = -8.0
 margin/top = -23.0
 margin/right = 287.0
 margin/bottom = 44.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Current Research Goal."
@@ -81,7 +64,7 @@ margin/left = -29.0
 margin/top = -9.0
 margin/right = 167.0
 margin/bottom = 26.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Research Fund:"
@@ -98,7 +81,7 @@ margin/left = 15.0
 margin/top = -9.0
 margin/right = 159.0
 margin/bottom = 47.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
@@ -115,7 +98,7 @@ margin/left = -29.0
 margin/top = 0.0
 margin/right = 163.0
 margin/bottom = 52.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Daily Spending:"
@@ -136,7 +119,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 6 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -151,26 +134,8 @@ margin/left = 15.0
 margin/top = 2.0
 margin/right = 81.0
 margin/bottom = 54.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.777344, 0.777344, 0.777344, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "0"
-visible_characters = -1
-
-[node name="daily_research_output_black" type="RichTextLabel" parent="."]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 17.0
-margin/top = -1.0
-margin/right = 138.0
-margin/bottom = 51.0
-custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -190,7 +155,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 7 )
+textures/normal = ExtResource( 5 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -205,7 +170,7 @@ margin/left = -22.0
 margin/top = 10.0
 margin/right = 128.0
 margin/bottom = 61.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Days Left:"
@@ -218,22 +183,15 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 13.0
+margin/left = 14.0
 margin/top = 10.0
-margin/right = 159.0
+margin/right = 160.0
 margin/bottom = 62.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
-
-[node name="debounce" type="Timer" parent="."]
-
-process_mode = 1
-wait_time = 0.4
-one_shot = true
-autostart = false
 
 [node name="confirm" type="LinkButton" parent="."]
 
@@ -246,7 +204,7 @@ margin/left = -9.0
 margin/top = 20.0
 margin/right = 99.0
 margin/bottom = 52.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -259,7 +217,7 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 51.5508, 13.6423 )
 transform/scale = Vector2( 0.547186, 0.390622 )
-texture = ExtResource( 8 )
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }

@@ -20,18 +20,35 @@ func _ready():
 func _process(delta):
 	worst_output.clear()
 	worst_output.add_text(upgrade_prices.worst_price)
-	decent_output.clear()
-	decent_output.add_text(str(upgrade_prices.decent_price))
-	good_output.clear()
-	good_output.add_text(str(upgrade_prices.good_price))
-	great_output.clear()
-	great_output.add_text(str(upgrade_prices.great_price))
-	best_output.clear()
-	best_output.add_text(str(upgrade_prices.best_price))
+	if (towns.town_select == "hollyhock"):
+		if (hollyhock.hollyhock_entertainment_decent_key == true):
+			decent_output.clear()
+			decent_output.add_text("Owned")
+		elif (hollyhock.hollyhock_entertainment_decent_key == false):
+			decent_output.clear()
+			decent_output.add_text(str(upgrade_prices.decent_price))
+		if (hollyhock.hollyhock_entertainment_good_key == true):
+			good_output.clear()
+			good_output.add_text("Owned")
+		elif (hollyhock.hollyhock_entertainment_good_key == false):
+			good_output.clear()
+			good_output.add_text(str(upgrade_prices.good_price))
+		if (hollyhock.hollyhock_entertainment_great_key == true):
+			great_output.clear()
+			great_output.add_text("Owned")
+		elif (hollyhock.hollyhock_entertainment_great_key == false):
+			great_output.clear()
+			great_output.add_text(str(upgrade_prices.great_price))
+		if (hollyhock.hollyhock_entertainment_best_key == true):
+			best_output.clear()
+			best_output.add_text("Owned")
+		elif (hollyhock.hollyhock_entertainment_best_key == false):
+			best_output.clear()
+			best_output.add_text(str(upgrade_prices.best_price))
 
 func _on_worst_button_button_down():
 	if (towns.town_select == "hollyhock"):
-		if (upgrade_prices.hollyhock_entertainment_worst_key == true):
+		if (hollyhock.hollyhock_entertainment_worst_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
@@ -53,7 +70,7 @@ func _on_decent_button_button_down():
 				key_change = "hollyhock decent"
 			if (money.hollyhock_cash < upgrade_prices.decent_price):
 				notifications.clear()
-				notifications.add_text("You can't afford that!")
+				notifications.add_text("You cannot afford that!")
 				notifications.show()
 
 func _on_good_button_button_down():
@@ -73,7 +90,7 @@ func _on_good_button_button_down():
 				key_change = "hollyhock good"
 			if (money.hollyhock_cash < upgrade_prices.good_price):
 				notifications.clear()
-				notifications.add_text("You can't afford that!")
+				notifications.add_text("You cannot afford that!")
 				notifications.show()
 
 func _on_great_button_button_down():
@@ -92,7 +109,7 @@ func _on_great_button_button_down():
 				key_change = "hollyhock great"
 			if (money.hollyhock_cash < upgrade_prices.great_price):
 				notifications.clear()
-				notifications.add_text("You can't afford that!")
+				notifications.add_text("You cannot afford that!")
 				notifications.show()
 
 
@@ -112,10 +129,11 @@ func _on_best_button_button_down():
 				key_change = "hollyhock best"
 			if (money.hollyhock_cash < upgrade_prices.best_price):
 				notifications.clear()
-				notifications.add_text("You can't afford that!")
+				notifications.add_text("You cannot afford that!")
 				notifications.show()
 
 func _on_confirm_button_down():
+	get_node("notifications").set_hidden(true)
 	if (select_price != 0):
 		if (towns.town_select == "hollyhock"):
 			money.hollyhock_balance = money.hollyhock_balance - select_price
@@ -127,4 +145,4 @@ func _on_confirm_button_down():
 				hollyhock.hollyhock_entertainment_great_key = true
 			if (key_change == "hollyhock best"):
 				hollyhock.hollyhock_entertainment_best_key = true
-			notifications.clear()
+		notifications.clear()

@@ -111,6 +111,7 @@ transform/scale = Vector2( 0.214076, 0.331204 )
 
 [node name="top_buttons" type="HButtonArray" parent="."]
 
+editor/display_folded = true
 rect/scale = Vector2( 0.09, 0.12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -194,6 +195,7 @@ texture = ExtResource( 5 )
 
 [node name="report_buttons" type="VButtonArray" parent="."]
 
+editor/display_folded = true
 rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true

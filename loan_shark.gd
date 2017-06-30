@@ -191,12 +191,14 @@ func _on_payback_lower_button_down():
 
 func _on_payback_raise_button_down():
 	if (towns.town_select == "hollyhock"):
-		if ((payback < hollyhock.hollyhock_current_loan) and (money.hollyhock_cash >= payback)):
+		if ((payback <= hollyhock.hollyhock_current_loan) and (money.hollyhock_cash >= payback)):
 			payback = payback + 1
 
 func _on_confirm_button_down():
 	if (borrow > loans.credit_limit):
 		borrow = loans.credit_limit
+	if (payback > hollyhock.hollyhock_current_loan):
+		payback = hollyhock.hollyhock_current_loan
 	if (towns.town_select == "hollyhock"):
 		hollyhock.hollyhock_current_loan = hollyhock.hollyhock_current_loan - payback
 		loans.credit_limit = loans.credit_limit + payback

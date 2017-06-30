@@ -55,8 +55,10 @@ var candy_range_high = 15
 
 var supply_one_count
 var supply_one_name
+var supply_one_icon
 var supply_two_count
 var supply_two_name
+var supply_two_icon
 
 func _ready():
 	pass
@@ -65,8 +67,10 @@ func set_supply():
 	if (towns.town_select == "hollyhock"):
 		supply_one_count = supplies.hollyhock_soda_count
 		supply_one_name = "Soda"
+		supply_one_icon = load("res://concessions_want.png")
 		supply_two_count = supplies.hollyhock_popcorn_count
 		supply_two_name = "Popcorn"
+		supply_two_icon = load("res://popcorn.png")
 		get_tree().get_current_scene().get_node("supply_one").get_child(2).get_child(0).clear()
 		get_tree().get_current_scene().get_node("supply_one").get_child(3).get_child(0).clear()
 		get_tree().get_current_scene().get_node("supply_one").get_child(4).get_child(0).clear()
@@ -78,6 +82,7 @@ func set_supply():
 		get_tree().get_current_scene().get_node("supply_one").get_child(2).get_child(0).add_text(str(one_hunds_digit))
 		get_tree().get_current_scene().get_node("supply_one").get_child(1).clear()
 		get_tree().get_current_scene().get_node("supply_one").get_child(1).add_text(str(supply_one_name))
+		get_tree().get_current_scene().get_node("supply_one").get_child(5).set_texture(supply_one_icon)
 		get_tree().get_current_scene().get_node("supply_two").get_child(2).get_child(0).clear()
 		get_tree().get_current_scene().get_node("supply_two").get_child(3).get_child(0).clear()
 		get_tree().get_current_scene().get_node("supply_two").get_child(4).get_child(0).clear()
@@ -89,7 +94,7 @@ func set_supply():
 		get_tree().get_current_scene().get_node("supply_two").get_child(2).get_child(0).add_text(str(two_hunds_digit))
 		get_tree().get_current_scene().get_node("supply_two").get_child(1).clear()
 		get_tree().get_current_scene().get_node("supply_two").get_child(1).add_text(str(supply_two_name))
-
+		get_tree().get_current_scene().get_node("supply_two").get_child(5).set_texture(supply_two_icon)
 
 func new_supply_prices():
 	randomize()
