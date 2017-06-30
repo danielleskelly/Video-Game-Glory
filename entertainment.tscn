@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://entertainment.gd" type="Script" id=1]
 [ext_resource path="res://potential_background.png" type="Texture" id=2]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=4]
-[ext_resource path="res://meta_genre.png" type="Texture" id=5]
-[ext_resource path="res://button.png" type="Texture" id=6]
+[ext_resource path="res://meta_genre.png" type="Texture" id=4]
+[ext_resource path="res://button.png" type="Texture" id=5]
 
 [node name="entertainment" type="Node2D"]
 
@@ -56,19 +55,19 @@ visible_characters = -1
 [node name="notifications" type="RichTextLabel" parent="."]
 
 visibility/visible = false
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.15, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -10.0
-margin/top = 20.0
-margin/right = 486.0
-margin/bottom = 71.0
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 0.894118, 0.0156863, 1 )
+margin/left = -22.0
+margin/top = -1.0
+margin/right = 474.0
+margin/bottom = 50.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "You can't afford that!"
+bbcode/bbcode = "You cannot afford that!"
 visible_characters = -1
 
 [node name="worst" type="Node2D" parent="."]
@@ -107,7 +106,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -165,7 +164,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -223,7 +222,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -281,7 +280,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -339,7 +338,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -386,7 +385,7 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 57.699, 13.531 )
 transform/scale = Vector2( 0.606007, 0.460791 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [connection signal="button_down" from="worst/worst_button" to="." method="_on_worst_button_button_down"]
 

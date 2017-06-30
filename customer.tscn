@@ -13,7 +13,7 @@ extents = Vector2( 10, 10 )
 transform/scale = Vector2( 1.42095, 1.23128 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.88101, 0, 0, 1.7512, -0.639023, -2.92219 )
+shapes/0/transform = Matrix32( 1.88101, 0, 0, 1.7512, 0, 0 )
 shapes/0/trigger = true
 collision/layers = 1
 collision/mask = 1
@@ -41,9 +41,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -31.0
-margin/top = -35.0
+margin/top = -33.0
 margin/right = 44.0
-margin/bottom = 40.0
+margin/bottom = 42.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -55,7 +55,6 @@ params/stretch_mode = 0
 
 [node name="collision_shape" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( -0.639023, -2.92219 )
 transform/scale = Vector2( 1.88101, 1.7512 )
 shape = SubResource( 1 )
 trigger = true
@@ -64,14 +63,14 @@ _update_shape_index = 0
 [node name="waiting_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 15.0
+wait_time = 25.0
 one_shot = true
 autostart = false
 
 [node name="concessions_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 1.2
 one_shot = true
 autostart = false
 

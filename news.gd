@@ -1,27 +1,28 @@
 extends Node2D
-
-onready var todays_news_output = get_node("todays_news_output")
-onready var game_forecast_output = get_node("game_forecast_output")
+onready var game_forecast_output_one = get_node("game_forecast_output_one")
+onready var game_forecast_output_two = get_node("game_forecast_output_two")
+onready var game_forecast_output_three = get_node("game_forecast_output_three")
 
 var random_news_piece
+
+var meta_icon = load("res://meta_genre.png")
 
 func _ready():
 	set_process(true)
 
 func _process(delta):
-	random_news()
-	todays_news_output.clear()
-	todays_news_output.add_text(random_news_piece)
 	if (towns.town_select == "hollyhock"):
-		game_forecast_output.clear()
-		game_forecast_output.add_text("Meta %" + str(int(customer_math.meta_prediction * 100)) + "\n")
-		if (customer_math.hollyhock_genre_two_key == true):
-			game_forecast_output.add_text("Classic %" + str(int(customer_math.classic_prediction * 100)) + "\n")
-		if (customer_math.hollyhock_genre_three_key == true):
-			game_forecast_output.add_text("Platformer %" + str(int(customer_math.platformer_prediction * 100)))
-	
-	
-func random_news():
-	randomize()
-	var random_newsies = ["This is a silly thing to make people giggle."]
-	random_news_piece = random_newsies[randi() % random_newsies.size()]
+		game_forecast_output_one.clear()
+		game_forecast_output_one.add_text("Meta %" + str(int(customer_math.meta_prediction * 100)) + "\n\n")
+		get_node("genre_one_icon").set_texture(meta_icon)
+		get_node("genre_one_icon").set_scale(Vector2(.35,.5))
+		if (customer_math.hollyhock_genre_two_key == false):
+			game_forecast_output_two.clear()
+			game_forecast_output_two.add_text("Classic %" + str(int(customer_math.classic_prediction * 100)) + "\n\n")
+			get_node("genre_two_icon").set_texture(meta_icon)
+			get_node("genre_two_icon").set_scale(Vector2(.35,.5))
+		if (customer_math.hollyhock_genre_three_key == false):
+			game_forecast_output_three.clear()
+			game_forecast_output_three.add_text("Platformer %" + str(int(customer_math.platformer_prediction * 100)))
+			get_node("genre_three_icon").set_texture(meta_icon)
+			get_node("genre_three_icon").set_scale(Vector2(.35,.5))
