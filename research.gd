@@ -2,7 +2,6 @@ extends Node2D
 
 onready var research_fund_output = get_node("research_output")
 onready var days_left_output = get_node("days_left_output")
-onready var research_spending_output_gray = get_node("daily_research_output_gray")
 onready var research_goal_output = get_node("research_goal_output")
 
 var block = false
@@ -15,8 +14,6 @@ func _process(delta):
 	if (towns.town_select == "hollyhock"):
 		research_fund_output.clear()
 		research_fund_output.add_text(str(hollyhock.hollyhock_research_fund))
-		research_spending_output_gray.clear()
-		research_spending_output_gray.add_text(str(hollyhock.hollyhock_research_spending))
 		if (hollyhock.hollyhock_research_one_key == false):
 			research_goal_output.clear()
 			research_goal_output.add_text("Genre Two -- Classic")
