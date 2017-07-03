@@ -1,7 +1,7 @@
 extends Node
 
-onready var supply_one = get_tree().get_current_scene().get_node("supply_one")
-onready var supply_two = get_tree().get_current_scene().get_node("supply_two")
+onready var supply_one
+onready var supply_two
 
 var daily_candy_price = 0
 var soda_yesterday_used = 0
@@ -64,6 +64,8 @@ func _ready():
 	pass
 
 func set_supply():
+	supply_one = get_tree().get_current_scene().get_node("supply_one")
+	supply_two = get_tree().get_current_scene().get_node("supply_two")
 	if (towns.town_select == "hollyhock"):
 		supply_one_count = supplies.hollyhock_soda_count
 		supply_one_name = "Soda"

@@ -111,9 +111,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 8.0
+margin/left = 7.0
 margin/top = 1.0
-margin/right = 28.0
+margin/right = 27.0
 margin/bottom = 19.0
 toggle_mode = false
 click_on_press = true
@@ -123,23 +123,6 @@ textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
-[node name="daily_research_output_gray" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.1, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 15.0
-margin/top = 2.0
-margin/right = 81.0
-margin/bottom = 54.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.777344, 0.777344, 0.777344, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "0"
-visible_characters = -1
-
 [node name="research_raise" type="TextureButton" parent="."]
 
 rect/scale = Vector2( 0.2, 0.3 )
@@ -147,9 +130,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 20.0
+margin/left = 25.0
 margin/top = 1.0
-margin/right = 40.0
+margin/right = 45.0
 margin/bottom = 19.0
 toggle_mode = false
 click_on_press = true

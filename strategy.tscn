@@ -471,6 +471,7 @@ texture = ExtResource( 5 )
 
 [node name="finances_full" parent="." instance=ExtResource( 10 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -513,8 +514,7 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="research" parent="." instance=ExtResource( 17 )]
 
-visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
+transform/pos = Vector2( 8.00721, 2.74136 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="games" parent="." instance=ExtResource( 18 )]
@@ -1633,7 +1633,6 @@ texture = ExtResource( 28 )
 [node name="tutorial_upgrades" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -1937,6 +1936,25 @@ process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = false
+
+[node name="research_spending_edit" type="LineEdit" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.08, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 15.0
+margin/top = 3.0
+margin/right = 145.0
+margin/bottom = 45.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 

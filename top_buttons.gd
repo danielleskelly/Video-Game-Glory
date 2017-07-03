@@ -18,6 +18,7 @@ onready var research = get_tree().get_current_scene().get_node("research")
 onready var concessions_pricing = get_tree().get_current_scene().get_node("concessions_pricing")
 onready var arcade_pricing = get_tree().get_current_scene().get_node("arcade_pricing")
 onready var supply = get_tree().get_current_scene().get_node("supply_buttons")
+onready var research_spending_edit = get_tree().get_current_scene().get_node("research_spending_edit")
 
 #allows for the tabs to change
 var select 
@@ -74,6 +75,7 @@ func _process(delta):
 			loans.show()
 	if (select == 5):
 		research.show()
+		research_spending_edit.show()
 	
 func hide():
 	reports.set_hidden(true)
@@ -94,3 +96,4 @@ func hide():
 	concessions_pricing.set_hidden(true)
 	arcade_pricing.set_hidden(true)
 	supply.set_hidden(true)
+	research_spending_edit.set_hidden(true)
