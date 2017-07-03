@@ -11,7 +11,7 @@
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=9]
 [ext_resource path="res://arrow_northeast.png" type="Texture" id=10]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 
 resource/name = "piece_three"
 length = 10.0
@@ -535,9 +535,8 @@ tracks/26/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=3]
 
-resource/name = "story_piece_one"
 length = 4.5
 loop = false
 step = 0.1
@@ -811,8 +810,18 @@ tracks/26/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/27/type = "value"
+tracks/27/path = NodePath("skip:visibility/visible")
+tracks/27/interp = 1
+tracks/27/imported = false
+tracks/27/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[node name="story_act_one" type="Node2D"]
+[node name="story_piece_one" type="Node2D"]
 
 transform/pos = Vector2( 514.031, 308.254 )
 transform/scale = Vector2( 16.0103, 9.58789 )
@@ -823,9 +832,9 @@ script/script = ExtResource( 1 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/piece_three = SubResource( 3 )
+anims/piece_three = SubResource( 1 )
 anims/piece_two = SubResource( 2 )
-anims/story_piece_one = SubResource( 1 )
+anims/story_piece_one = SubResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -874,7 +883,6 @@ shortcut = null
 [node name="skip" type="Sprite" parent="."]
 
 editor/display_folded = true
-visibility/visible = false
 transform/pos = Vector2( -21.227, -22.0367 )
 transform/scale = Vector2( 0.0363945, 0.0486233 )
 texture = ExtResource( 6 )
@@ -1497,7 +1505,6 @@ __meta__ = {
 [node name="Sprite1" type="Sprite" parent="fade_out"]
 
 transform/pos = Vector2( -4.3559, 422.337 )
-transform/scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
@@ -1506,11 +1513,12 @@ __meta__ = {
 [node name="Sprite2" type="Sprite" parent="fade_out"]
 
 transform/pos = Vector2( -3.26694, 979.587 )
-transform/scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
 
 [connection signal="button_down" from="tv_desktop/email_icon/email_button" to="." method="_on_email_button_button_down"]
 
