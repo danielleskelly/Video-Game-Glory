@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=15 format=1]
 
 [ext_resource path="res://story_piece_one.gd" type="Script" id=1]
 [ext_resource path="res://town_background.png" type="Texture" id=2]
@@ -10,11 +10,12 @@
 [ext_resource path="res://genre_bubble.png" type="Texture" id=8]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=9]
 [ext_resource path="res://arrow_northeast.png" type="Texture" id=10]
+[ext_resource path="res://storyline_one.ogg" type="AudioStream" id=11]
 
 [sub_resource type="Animation" id=1]
 
 resource/name = "piece_three"
-length = 10.0
+length = 22.0
 loop = false
 step = 0.01
 tracks/0/type = "value"
@@ -32,7 +33,7 @@ tracks/1/path = NodePath("skip:visibility/visible")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0, 9.2 ),
+"times": FloatArray( 0, 16.7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -42,7 +43,7 @@ tracks/2/path = NodePath("speaking_bubble:visibility/visible")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 9 ),
+"times": FloatArray( 0, 21.06 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -88,7 +89,7 @@ tracks/6/keys = {
 "values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("speaking_bubble/hornhub:visibility/visible")
+tracks/7/path = NodePath("speaking_bubble/hornbub:visibility/visible")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
@@ -142,7 +143,7 @@ tracks/12/path = NodePath("tv_desktop:visibility/visible")
 tracks/12/interp = 1
 tracks/12/imported = false
 tracks/12/keys = {
-"times": FloatArray( 0, 9.2 ),
+"times": FloatArray( 0, 21.26 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -152,7 +153,7 @@ tracks/13/path = NodePath("acceptance_email:visibility/visible")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
-"times": FloatArray( 0, 9.5 ),
+"times": FloatArray( 0, 21.55 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -162,7 +163,7 @@ tracks/14/path = NodePath("acceptance_email:transform/pos")
 tracks/14/interp = 1
 tracks/14/imported = false
 tracks/14/keys = {
-"times": FloatArray( 0, 1, 9, 9.2 ),
+"times": FloatArray( 0, 1, 21.06, 21.26 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 13.795, -22.2089 ), Vector2( -0.142092, -0.224169 ), Vector2( -0.142092, -0.224169 ), Vector2( -1.23496, -1.30171 ) ]
@@ -172,7 +173,7 @@ tracks/15/path = NodePath("acceptance_email:transform/scale")
 tracks/15/interp = 1
 tracks/15/imported = false
 tracks/15/keys = {
-"times": FloatArray( 0, 1, 9, 9.2 ),
+"times": FloatArray( 0, 1, 21.06, 21.26 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.0381013, 0.0693155 ), Vector2( 0.318595, 0.637457 ), Vector2( 0.318595, 0.637457 ), Vector2( 0.0115833, 0.0290135 ) ]
@@ -182,7 +183,7 @@ tracks/16/path = NodePath("speaking_bubble/no_way:visibility/visible")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 0, 1, 3 ),
+"times": FloatArray( 0, 1, 6.03 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -192,7 +193,7 @@ tracks/17/path = NodePath("speaking_bubble/start_date:visibility/visible")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
-"times": FloatArray( 0, 3, 5 ),
+"times": FloatArray( 0, 6.03, 11.05 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -202,7 +203,7 @@ tracks/18/path = NodePath("speaking_bubble/now:visibility/visible")
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
-"times": FloatArray( 0, 5, 7 ),
+"times": FloatArray( 0, 11.05, 16.08 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -212,7 +213,7 @@ tracks/19/path = NodePath("speaking_bubble/gotta_go:visibility/visible")
 tracks/19/interp = 1
 tracks/19/imported = false
 tracks/19/keys = {
-"times": FloatArray( 0, 7 ),
+"times": FloatArray( 0, 16.08 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -222,7 +223,7 @@ tracks/20/path = NodePath("speaking_bubble:transform/pos")
 tracks/20/interp = 1
 tracks/20/imported = false
 tracks/20/keys = {
-"times": FloatArray( 0, 5, 5.1 ),
+"times": FloatArray( 0, 11.05, 11.15 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1.10936, 17.891 ), Vector2( 1.10936, 17.891 ), Vector2( 1.10936, 17.891 ) ]
@@ -232,17 +233,17 @@ tracks/21/path = NodePath("speaking_bubble:transform/scale")
 tracks/21/interp = 1
 tracks/21/imported = false
 tracks/21/keys = {
-"times": FloatArray( 0, 5, 5.1, 5.2, 5.3, 5.4 ),
+"times": FloatArray( 0, 11.05, 11.15, 11.25, 11.35, 11.45 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1.01093, 0.564423 ), Vector2( 1.01093, 0.564423 ), Vector2( 1.3, 0.864423 ), Vector2( 1.01093, 0.564423 ), Vector2( 1.3, 0.864423 ), Vector2( 1.3, 0.564423 ) ]
+"values": [ Vector2( 0.035889, 0.017917 ), Vector2( 0.035889, 0.017917 ), Vector2( 0.039421, 0.020853 ), Vector2( 0.035889, 0.017917 ), Vector2( 0.039421, 0.020853 ), Vector2( 0.035889, 0.017917 ) ]
 }
 tracks/22/type = "value"
 tracks/22/path = NodePath("fade_out:visibility/visible")
 tracks/22/interp = 1
 tracks/22/imported = false
 tracks/22/keys = {
-"times": FloatArray( 0, 9, 9.2 ),
+"times": FloatArray( 0, 21.06, 21.26 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -252,7 +253,7 @@ tracks/23/path = NodePath("fade_out:transform/pos")
 tracks/23/interp = 1
 tracks/23/imported = false
 tracks/23/keys = {
-"times": FloatArray( 0, 9, 9.05, 9.1, 9.15 ),
+"times": FloatArray( 0, 21.06, 21.11, 21.16, 21.21 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 8.33088, -28.2963 ), Vector2( 8.33088, -28.2963 ), Vector2( 8.33088, -33.4542 ), Vector2( 8.71698, -20.8817 ), Vector2( 9.10309, -14.7566 ) ]
@@ -375,7 +376,7 @@ tracks/10/keys = {
 "values": [ false, true, false ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("speaking_bubble/hornhub:visibility/visible")
+tracks/11/path = NodePath("speaking_bubble/hornbub:visibility/visible")
 tracks/11/interp = 1
 tracks/11/imported = false
 tracks/11/keys = {
@@ -512,7 +513,7 @@ tracks/24/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1.01093, 0.564423 ) ]
+"values": [ Vector2( 0.035889, 0.017917 ) ]
 }
 tracks/25/type = "value"
 tracks/25/path = NodePath("fade_out:visibility/visible")
@@ -537,7 +538,7 @@ tracks/26/keys = {
 
 [sub_resource type="Animation" id=3]
 
-length = 4.5
+length = 6.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -575,7 +576,7 @@ tracks/3/path = NodePath("speaking_bubble/almost_done:visibility/visible")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0, 2, 3.5 ),
+"times": FloatArray( 0, 2, 5 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -585,7 +586,7 @@ tracks/4/path = NodePath("speaking_bubble/instructions:visibility/visible")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
-"times": FloatArray( 0, 3.5 ),
+"times": FloatArray( 0, 5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -595,7 +596,7 @@ tracks/5/path = NodePath("name_input_background:visibility/visible")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
-"times": FloatArray( 0, 4 ),
+"times": FloatArray( 0, 5.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ false, true ]
@@ -605,7 +606,7 @@ tracks/6/path = NodePath("send_button:visibility/visible")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
-"times": FloatArray( 0, 4 ),
+"times": FloatArray( 0, 5.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -631,7 +632,7 @@ tracks/8/keys = {
 "values": [ false ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("speaking_bubble/hornhub:visibility/visible")
+tracks/9/path = NodePath("speaking_bubble/hornbub:visibility/visible")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
@@ -778,7 +779,7 @@ tracks/23/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1.10936, 17.891 ) ]
+"values": [ Vector2( -1.55968, 19.8016 ) ]
 }
 tracks/24/type = "value"
 tracks/24/path = NodePath("speaking_bubble:transform/scale")
@@ -788,7 +789,7 @@ tracks/24/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1.01093, 0.564423 ) ]
+"values": [ Vector2( 0.0358891, 0.0179167 ) ]
 }
 tracks/25/type = "value"
 tracks/25/path = NodePath("fade_out:visibility/visible")
@@ -842,7 +843,7 @@ autoplay = "story_piece_one"
 
 [node name="tv_desktop" type="Sprite" parent="."]
 
-editor/display_folded = true
+visibility/visible = false
 transform/pos = Vector2( 0.0375862, -0.301159 )
 transform/scale = Vector2( 0.319121, 0.640069 )
 texture = ExtResource( 2 )
@@ -861,7 +862,6 @@ texture = ExtResource( 4 )
 
 [node name="email_icon" type="Sprite" parent="tv_desktop"]
 
-editor/display_folded = true
 transform/pos = Vector2( 42.4458, -33.6186 )
 transform/scale = Vector2( 0.61373, 0.384137 )
 texture = ExtResource( 5 )
@@ -873,9 +873,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -21.0
-margin/top = -19.0
+margin/top = -20.0
 margin/right = 21.0
-margin/bottom = 13.0
+margin/bottom = 12.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -883,6 +883,7 @@ shortcut = null
 [node name="skip" type="Sprite" parent="."]
 
 editor/display_folded = true
+visibility/visible = false
 transform/pos = Vector2( -21.227, -22.0367 )
 transform/scale = Vector2( 0.0363945, 0.0486233 )
 texture = ExtResource( 6 )
@@ -929,7 +930,9 @@ __meta__ = {
 [node name="tv_background" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/scale = Vector2( 1.04925, 2.69369 )
+visibility/visible = false
+transform/pos = Vector2( 13.795, -22.2089 )
+transform/scale = Vector2( 0.0381013, 0.0693155 )
 texture = ExtResource( 2 )
 
 [node name="job_application" type="RichTextLabel" parent="tv_background"]
@@ -1009,8 +1012,8 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -75.0
 margin/top = 41.0
-margin/right = 313.0
-margin/bottom = 116.0
+margin/right = 314.0
+margin/bottom = 62.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -1164,225 +1167,194 @@ visible_characters = -1
 
 visibility/visible = false
 transform/pos = Vector2( 1.10936, 17.891 )
-transform/scale = Vector2( 1.01093, 0.564423 )
+transform/scale = Vector2( 0.035889, 0.017917 )
 texture = ExtResource( 8 )
 flip_v = true
 
 [node name="almost_done" type="RichTextLabel" parent="speaking_bubble"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -8.0
-margin/top = -9.0
-margin/right = 253.0
-margin/bottom = 97.0
+margin/left = -446.0
+margin/top = -227.0
+margin/right = -265.0
+margin/bottom = -95.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Almost done..."
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="instructions" type="RichTextLabel" parent="speaking_bubble"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -12.0
-margin/top = -14.0
-margin/right = 249.0
-margin/bottom = 92.0
+margin/left = -402.0
+margin/top = -355.0
+margin/right = -156.0
+margin/bottom = -249.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I just need to type in my name and click send!"
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="done" type="RichTextLabel" parent="speaking_bubble"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -12.0
-margin/top = -14.0
-margin/right = 249.0
-margin/bottom = 92.0
+margin/left = -378.0
+margin/top = -383.0
+margin/right = -180.0
+margin/bottom = -277.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Done! I really hope I get this job..."
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="well" type="RichTextLabel" parent="speaking_bubble"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -12.0
-margin/top = -14.0
-margin/right = 249.0
-margin/bottom = 92.0
+margin/left = -439.0
+margin/top = -277.0
+margin/right = -178.0
+margin/bottom = -171.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Well... what to do while I wait?"
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="hornhub" type="RichTextLabel" parent="speaking_bubble"]
+[node name="hornbub" type="RichTextLabel" parent="speaking_bubble"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -12.0
-margin/top = -14.0
-margin/right = 249.0
-margin/bottom = 92.0
+margin/left = -463.0
+margin/top = -510.0
+margin/right = -222.0
+margin/bottom = -358.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Maybe I have time to take a little trip over to hornhub..."
+bbcode/bbcode = "Maybe I have time to take a little trip over to hornbub..."
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="wow" type="RichTextLabel" parent="speaking_bubble"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -12.0
-margin/top = -14.0
-margin/right = 249.0
-margin/bottom = 92.0
+margin/left = -431.0
+margin/top = -335.0
+margin/right = -170.0
+margin/bottom = -229.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Wow! That was fast! I guess I should click that..."
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="no_way" type="RichTextLabel" parent="speaking_bubble"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -12.0
-margin/top = -14.0
-margin/right = 249.0
-margin/bottom = 92.0
+margin/left = -433.0
+margin/top = -296.0
+margin/right = -172.0
+margin/bottom = -190.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "No way! I got the job!"
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="start_date" type="RichTextLabel" parent="speaking_bubble"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -12.0
-margin/top = -14.0
-margin/right = 249.0
-margin/bottom = 92.0
+margin/left = -335.0
+margin/top = -286.0
+margin/right = -74.0
+margin/bottom = -180.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Start date...."
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="now" type="RichTextLabel" parent="speaking_bubble"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -5.0
-margin/top = -9.0
-margin/right = 256.0
-margin/bottom = 97.0
+margin/left = -229.0
+margin/top = -165.0
+margin/right = 32.0
+margin/bottom = -59.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "NOW?!?!"
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="gotta_go" type="RichTextLabel" parent="speaking_bubble"]
 
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.25 )
+rect/scale = Vector2( 4, 6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -7.0
-margin/top = -9.0
-margin/right = 254.0
-margin/bottom = 97.0
+margin/left = -303.0
+margin/top = -184.0
+margin/right = -42.0
+margin/bottom = -78.0
 custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I gotta go!"
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="name_input_background" type="Sprite" parent="."]
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 9.75439, -2.1778 )
+transform/pos = Vector2( 15.0829, -22.4872 )
 transform/scale = Vector2( 0.0570628, 0.0325374 )
 texture = ExtResource( 9 )
 flip_v = true
@@ -1412,8 +1384,8 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 24.7055, 11.2299 )
-transform/scale = Vector2( 0.0363945, 0.0486233 )
+transform/pos = Vector2( 16.226, -20.9574 )
+transform/scale = Vector2( 0.00474596, 0.0095456 )
 texture = ExtResource( 6 )
 flip_v = true
 
@@ -1517,6 +1489,17 @@ texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="StreamPlayer" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 11 )
+stream/play = false
+stream/loop = false
+stream/volume_db = 0.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
 
 [connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
 

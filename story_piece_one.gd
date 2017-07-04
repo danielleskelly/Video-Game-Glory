@@ -28,4 +28,5 @@ func _on_email_button_button_down():
 
 func _on_AnimationPlayer_finished():
 	if (get_node("AnimationPlayer").get_current_animation() == "piece_three"):
+		get_node("StreamPlayer").stop()
 		get_tree().change_scene("res://story_piece_two.tscn")
