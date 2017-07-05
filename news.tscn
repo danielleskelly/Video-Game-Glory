@@ -162,20 +162,20 @@ visible_characters = -1
 
 [node name="genre_one_background" type="Sprite" parent="."]
 
-transform/pos = Vector2( -17.2282, -8.71959 )
-transform/scale = Vector2( 0.239765, 0.355292 )
+transform/pos = Vector2( -17.1437, -8.76491 )
+transform/scale = Vector2( 0.00703348, 0.00970793 )
 texture = ExtResource( 4 )
 
 [node name="genre_one_background1" type="Sprite" parent="."]
 
-transform/pos = Vector2( -17.2282, 5.14251 )
-transform/scale = Vector2( 0.239765, 0.355292 )
+transform/pos = Vector2( -16.7502, 5.78243 )
+transform/scale = Vector2( 0.00717702, 0.0101124 )
 texture = ExtResource( 4 )
 
 [node name="genre_one_background2" type="Sprite" parent="."]
 
-transform/pos = Vector2( -17.1125, 20.1928 )
-transform/scale = Vector2( 0.239765, 0.355292 )
+transform/pos = Vector2( -16.6712, 21.138 )
+transform/scale = Vector2( 0.00674641, 0.0101124 )
 texture = ExtResource( 4 )
 
 [node name="genre_one_icon" type="Sprite" parent="."]
