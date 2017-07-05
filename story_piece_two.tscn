@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://story_piece_two.gd" type="Script" id=1]
 [ext_resource path="res://Screen Shot 2017-07-03 at 7.08.15 PM.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=19]
 [ext_resource path="res://genre_bubble.png" type="Texture" id=20]
 [ext_resource path="res://bubble_green.png" type="Texture" id=21]
+[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=22]
 
 [sub_resource type="Animation" id=1]
 
@@ -1268,6 +1269,17 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "...! *whew* Great! Alright then, if you will come sit down we can complete a little training session while we wait for Sam."
 visible_characters = -1
+
+[node name="StreamPlayer" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 22 )
+stream/play = false
+stream/loop = true
+stream/volume_db = -10.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
 
 [connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
 

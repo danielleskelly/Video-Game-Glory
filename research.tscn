@@ -130,9 +130,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 25.0
+margin/left = 24.0
 margin/top = 1.0
-margin/right = 45.0
+margin/right = 44.0
 margin/bottom = 19.0
 toggle_mode = false
 click_on_press = true
@@ -205,10 +205,34 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="research_spending_output" type="LineEdit" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 11.0
+margin/top = 1.0
+margin/right = 141.0
+margin/bottom = 57.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
+
 [connection signal="button_down" from="research_lower" to="." method="_on_research_lower_button_down"]
 
 [connection signal="button_down" from="research_raise" to="." method="_on_research_raise_button_down"]
 
 [connection signal="button_down" from="confirm" to="." method="_on_confirm_button_down"]
+
+[connection signal="focus_enter" from="research_spending_output" to="." method="_on_research_spending_output_focus_enter"]
+
+[connection signal="input_event" from="research_spending_output" to="." method="_on_research_spending_output_input_event"]
+
+[connection signal="mouse_enter" from="research_spending_output" to="." method="_on_research_spending_output_mouse_enter"]
 
 

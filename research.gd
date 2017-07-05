@@ -3,11 +3,14 @@ extends Node2D
 onready var research_fund_output = get_node("research_output")
 onready var days_left_output = get_node("days_left_output")
 onready var research_goal_output = get_node("research_goal_output")
+onready var research_spending_output = get_node("research_spending_output")
 
 var block = false
 var research_spending
 
 func _ready():
+	research_spending_output.clear()
+	research_spending_output.set_text(str(hollyhock.hollyhock_research_spending))
 	set_process(true)
 
 func _process(delta):
@@ -54,15 +57,36 @@ func _on_research_raise_button_down():
 			pass
 
 func _on_confirm_button_down():
-	hollyhock.hollyhock_research_input_key = true
 	if (towns.town_select == "hollyhock"):
-		research_spending = int(get_node("daily_research_output_gray").get_text())
-		money.hollyhock_expenses = money.hollyhock_expenses + research_spending
+		var temp_spending = research_spending_output.get_text()
 		if (hollyhock.hollyhock_research_one_key == false):
-			if (hollyhock.hollyhock_research_spending > hollyhock.hollyhock_research_total_one):
-				hollyhock.hollyhock_research_spending = hollyhock.hollyhock_research_total_one
+			if (int(temp_spending) > hollyhock.hollyhock_research_total_one):
+				temp_spending = hollyhock.hollyhock_research_total_one
+			if (money.hollyhock_cash < (money.hollyhock_expenses + int(temp_spending))):
+				temp_spending = money.hollyhock_cash
+			hollyhock.hollyhock_research_spending = int(temp_spending)
+			research_spending_output.clear()
+			research_spending_output.set_text(str(hollyhock.hollyhock_research_spending))
 			if ((hollyhock.hollyhock_research_one_key == true) and (hollyhock.hollyhock_research_two_key == false)):
-				if (hollyhock.hollyhock_research_spending > hollyhock.hollyhock_research_total_two):
-					hollyhock.hollyhock_research_spending = hollyhock.hollyhock_research_total_two
-				if ((hollyhock.hollyhock_research_one_key == true) and (hollyhock.hollyhock_research_two_key == true)):
-					hollyhock.hollyhock_research_spending = 0
+				if (int(temp_spending) > hollyhock.hollyhock_research_total_two):
+					temp_spending = hollyhock.hollyhock_research_total_two
+				if (money.hollyhock_cash < (money.hollyhock_expenses + int(temp_spending))):
+					temp_spending = money.hollyhock_cash
+				hollyhock.hollyhock_research_spending = int(temp_spending)
+				research_spending_output.clear()
+				research_spending_output.set_text(str(hollyhock.hollyhock_research_spending))
+			if ((hollyhock.hollyhock_research_one_key == true) and (hollyhock.hollyhock_research_two_key == true)):
+				hollyhock.hollyhock_research_spending = 0
+				research_spending_output.clear()
+				research_spending_output.set_text(str(hollyhock.hollyhock_research_spending))
+
+func _on_research_spending_output_focus_enter():
+	print("focus enter true")
+
+func _on_research_spending_output_input_event( ev ):
+	#print("input_event true")
+	pass
+
+func _on_research_spending_output_mouse_enter():
+	#print("mouse enter true")
+	pass
