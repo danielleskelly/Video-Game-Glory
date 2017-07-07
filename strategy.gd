@@ -8,13 +8,12 @@ onready var supply_one = get_tree().get_current_scene().get_node("supply_one")
 onready var supply_two = get_tree().get_current_scene().get_node("supply_two")
 onready var town_banner = get_tree().get_current_scene().get_node("town_banner")
 onready var low_funds_warning = get_tree().get_current_scene().get_node("low_funds_warning")
-onready var game_over = get_tree().get_current_scene().get_node("game_over")
+onready var game_over_alert = get_tree().get_current_scene().get_node("game_over_alert")
 onready var genre_discovery = get_node("genre_discovery")
 onready var hollyhock_complete = get_node("hollyhock_complete")
 onready var tutorial_start = get_node("tutorial_start")
 onready var tutorial_persistent_menu = get_node("tutorial_persistent_menu")
 onready var tutorial_reports = get_node("tutorial_reports")
-onready var tutorial_news = get_node("tutorial_news")
 onready var tutorial_supplies = get_node("tutorial_supplies")
 onready var tutorial_games = get_node("tutorial_games")
 onready var tutorial_pricing = get_node("tutorial_pricing")
@@ -23,6 +22,7 @@ onready var tutorial_upgrades = get_node("tutorial_upgrades")
 onready var tutorial_locals = get_node("tutorial_locals")
 onready var tutorial_research = get_node("tutorial_research")
 onready var finish_up = get_node("finish_up")
+onready var pixel = get_node("pixel")
 
 #allows the prediction genres to change with the town
 var genre_one_count
@@ -51,11 +51,15 @@ func _ready():
 	
 func _process(delta):
 	if (towns.town_select == "hollyhock"):
+		if ((get_node("AnimationPlayer").get_current_animation() == "tutorial") and (set_genre.hollyhock_station_one_selection == 1) and (set_genre.hollyhock_station_two_selection == 1)):
+			get_node("AnimationPlayer").play("tutorial_pt2")
 		if (((money.hollyhock_cash - money.hollyhock_expenses) < 0) and (money.hollyhock_expenses == 0) and (loans.hollyhock_current_loan == loans.credit_limit)):
-			game_over.set_hidden(false)
+			game_over_alert.set_hidden(false)
+			pixel.set_hidden(false)
 			get_tree().set_pause(true)
 		if (customer_math.hollyhock_player_marketshare >= .75):
 			hollyhock_complete.set_hidden(false)
+			pixel.set_hidden(false)
 			get_tree().set_pause(true)
 		supply_one_count = supplies.hollyhock_soda_count
 		supply_one_name = "Soda"
@@ -160,18 +164,21 @@ func research_countdown():
 				hollyhock.hollyhock_research_fund = 0
 				hollyhock.hollyhock_research_spending = 0
 				genre_discovery.set_hidden(false)
+				pixel.set_hidden(false)
 				get_tree().set_pause(true)
 			if ((keys.hollyhock_genre_two_key == true) and (keys.hollyhock_genre_three_key == false)):
 				keys.hollyhock_genre_three_key = true
 				hollyhock.hollyhock_research_fund = 0
 				hollyhock.hollyhock_research_spending = 0
 				genre_discovery.set_hidden(false)
+				pixel.set_hidden(false)
 				get_tree().set_pause(true)
 
 func _on_start_day_button_up():
 	if (towns.town_select == "hollyhock"):
 		if (money.hollyhock_balance - money.hollyhock_expenses < 0):
 			low_funds_warning.set_hidden(false)
+			pixel.set_hidden(false)
 			get_tree().set_pause(true)
 		else:
 			money.hollyhock_balance = money.hollyhock_balance - money.hollyhock_expenses
@@ -192,18 +199,18 @@ func _on_start_day_button_up():
 
 func _on_low_funds_ok_button_down():
 	low_funds_warning.set_hidden(true)
+	pixel.set_hidden(true)
 	get_tree().set_pause(false)
 
-func _on_game_over_ok_button_down():
-	if (towns.town_select == "hollyhock"):
-		game_over.game_over_hollyhock()
 
 func _on_genre_discover_ok_button_down():
 	genre_discovery.set_hidden(true)
+	pixel.set_hidden(true)
 	get_tree().set_pause(false)
 
 func _on_continue_ok_button_down():
 	hollyhock_complete.set_hidden(true)
+	pixel.set_hidden(true)
 	get_tree().set_pause(false)
 	towns.town_select = "fiyork"
 	money.income = 0
@@ -223,378 +230,23 @@ func _on_continue_ok_button_down():
 func tutorial_start():
 	if (tutorial.tutorial_start == false):
 		tutorial_start.show()
+		pixel.show()
 	if (tutorial.tutorial_start == true):
 		pass
-
-func _on_tutorial_start_yes_button_button_down():
-	tutorial.tutorial_start = true
-	tutorial_start.set_hidden(true)
-	tutorial_persistent_menu.set_hidden(false)
-	get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_timer").start()
-	get_tree().set_pause(true)
 
 func _on_tutorial_start_no_button_button_down():
 	tutorial.tutorial_start = true
 	tutorial_start.set_hidden(true)
-	get_tree().set_pause(false)
+	pixel.set_hidden(true)
 	tutorial.time_management_start = true
-
-func _on_persistent_menu_timer_timeout():
-	if (tutorial.tutorial_title_box == false):
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_border").set_hidden(false)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_pointer").set_hidden(false)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/supplies_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/supplies_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/finances_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/finances_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").clear()
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").add_text("This is the town name, so you can always know which village you are working in.")
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_timer").start()
-		tutorial.tutorial_title_box = true
-	elif ((tutorial.tutorial_title_box == true) and (tutorial.tutorial_prediction_box == false)):
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_border").set_hidden(false)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_pointer").set_hidden(false)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/supplies_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/supplies_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/finances_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/finances_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").clear()
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").add_text("This is the prediction meter. It will tell you how popular a certain genre of game will be for the next day. We will purchase supplies and price according to these numbers.")
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_timer").start()
-		tutorial.tutorial_prediction_box = true
-	elif ((tutorial.tutorial_prediction_box == true) and (tutorial.tutorial_supplies_box == false)):
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/supplies_border").set_hidden(false)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/supplies_pointer").set_hidden(false)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/finances_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/finances_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").clear()
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").add_text("These boxes will tell us our current stock of supplies. There will always be two supplies for each town and they are sold as a set so it is best to purchase an equal number of each..")
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_timer").start()
-		tutorial.tutorial_supplies_box = true
-	elif ((tutorial.tutorial_supplies_box == true) and (tutorial.tutorial_finances_box == false)):
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/title_box_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/prediction_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/supplies_border").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/supplies_pointer").set_hidden(true)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/finances_border").set_hidden(false)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/finances_pointer").set_hidden(false)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/persistent_menu_ok").set_hidden(false)
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").clear()
-		get_tree().get_current_scene().get_node("tutorial_persistent_menu/warning").add_text("And this is the most important box of all, our current finances. Lots of things will effect this so we will get to that as we go along.")
-		tutorial.tutorial_finances_box = true
-
-
-func _on_persistent_menu_ok_button_down():
-	tutorial_persistent_menu.set_hidden(true)
-	tutorial_reports.set_hidden(false)
-	get_node("report_buttons").set_hidden(false)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(true)
-	get_node("finances_full").set_hidden(false)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("supplies_full").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-	get_node("tutorial_reports/reports_button_ok").set_hidden(true)
-	get_node("tutorial_reports/reports_menu_timer").start()
-	get_node("tutorial_reports/reports_pointer").set_hidden(false)
-	get_node("tutorial_reports/finances_pointer").set_hidden(false)
-	get_node("tutorial_reports/reports_box").set_hidden(false)
-	get_node("tutorial_reports/finances_box").set_hidden(false)
-	get_node("tutorial_reports/other_pointer").set_hidden(true)
-	get_node("tutorial_reports/other_box").set_hidden(true)
-
-
-func _on_reports_menu_timer_timeout():
-	get_node("report_buttons").set_hidden(false)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(true)
-	get_node("finances_full").set_hidden(false)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("supplies_full").set_hidden(true)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-	get_node("tutorial_reports/reports_button_ok").set_hidden(false)
-	get_node("tutorial_reports/reports_pointer").set_hidden(true)
-	get_node("tutorial_reports/finances_pointer").set_hidden(true)
-	get_node("tutorial_reports/reports_box").set_hidden(true)
-	get_node("tutorial_reports/finances_box").set_hidden(true)
-	get_node("tutorial_reports/other_pointer").set_hidden(false)
-	get_node("tutorial_reports/other_box").set_hidden(false)
-	get_node("tutorial_reports/warning").clear()
-	get_node("tutorial_reports/warning").add_text("These tabs will tell you about our customers and our competition, but you look at it after we are done. I can already tell you the situation is grim.")
 	
+func _on_tutorial_start_yes_button_button_down():
+	tutorial.tutorial_start = true
+	get_tree().get_current_scene().get_node("AnimationPlayer").play("tutorial")
 
 
-func _on_reports_button_ok_button_down():
-	tutorial_reports.set_hidden(true)
-	tutorial_news.set_hidden(false)
-	get_node("report_buttons").set_hidden(true)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(true)
-	get_node("finances_full").set_hidden(true)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(false)
-	get_node("supplies_full").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-
-func _on_news_button_ok_button_down():
-	tutorial_news.set_hidden(true)
-	tutorial_supplies.set_hidden(false)
-	get_node("report_buttons").set_hidden(true)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(true)
-	get_node("finances_full").set_hidden(true)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("supplies_full").set_hidden(false)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-
-func _on_supplies_button_ok_button_down():
-	tutorial_supplies.set_hidden(true)
-	tutorial_games.set_hidden(false)
-	get_node("report_buttons").set_hidden(true)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(true)
-	get_node("finances_full").set_hidden(true)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("supplies_full").set_hidden(true)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(false)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-
-
-func _on_games_button_ok_button_down():
-	tutorial_games.set_hidden(true)
-	tutorial_pricing.set_hidden(false)
-	get_node("report_buttons").set_hidden(true)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(false)
-	get_node("finances_full").set_hidden(true)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("supplies_full").set_hidden(true)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(false)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-	
-
-func _on_pricing_button_one_button_down():
-	get_node("report_buttons").set_hidden(true)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(false)
-	get_node("finances_full").set_hidden(true)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("supplies_full").set_hidden(true)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(false)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-	get_node("tutorial_pricing/first_background").set_hidden(true)
-	get_node("tutorial_pricing/second_background").set_hidden(false)
-	get_node("tutorial_pricing/first_warning").set_hidden(true)
-	get_node("tutorial_pricing/second_warning").set_hidden(false)
-	get_node("tutorial_pricing/pricing_button_one").set_hidden(true)
-	get_node("tutorial_pricing/pricing_button_two").set_hidden(false)
-	get_node("tutorial_pricing/pricing_pointer").set_hidden(true)
-	get_node("tutorial_pricing/warning_to_prediction").set_hidden(true)
-	get_node("tutorial_pricing/concessions_over").set_hidden(true)
-	get_node("tutorial_pricing/arcades_over").set_hidden(false)
-	get_node("tutorial_pricing/pricing_to_concessions").set_hidden(true)
-	get_node("tutorial_pricing/pricing_to_arcades").set_hidden(false)
-	get_node("tutorial_pricing/concessions_tab_box").set_hidden(true)
-	get_node("tutorial_pricing/arcades_box").set_hidden(false)
-	get_node("tutorial_pricing/prediction_box").set_hidden(true)
-	
-
-func _on_pricing_button_two_button_down():
-	tutorial_pricing.set_hidden(true)
-	tutorial_marketing.set_hidden(false)
-	get_node("report_buttons").set_hidden(true)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(true)
-	get_node("finances_full").set_hidden(true)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("supplies_full").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("marketing").set_hidden(false)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-
-
-func _on_marketing_button_button_down():
-	tutorial_marketing.set_hidden(true)
-	tutorial_upgrades.set_hidden(false)
-	get_node("report_buttons").set_hidden(true)
-	get_node("upgrade_buttons").set_hidden(false)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(true)
-	get_node("finances_full").set_hidden(true)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("supplies_full").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(false)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-
-
-func _on_upgrades_button_button_down():
-	tutorial_upgrades.set_hidden(true)
-	tutorial_locals.set_hidden(false)
-	get_node("tutorial_locals/locals_timer").start()
-	get_node("report_buttons").set_hidden(true)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("locals_buttons").set_hidden(false)
-	get_node("pricing_buttons").set_hidden(true)
-	get_node("finances_full").set_hidden(true)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("supplies_full").set_hidden(true)
-	get_node("sabatoge").set_hidden(false)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(true)
-	get_node("games").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-
-
-func _on_locals_timer_timeout():
-	get_node("tutorial_locals/second_warning").set_hidden(false)
-	get_node("tutorial_locals/first_warning").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("tutorial_locals/locals_button").set_hidden(false)
-
-func _on_locals_button_button_down():
-	tutorial_locals.set_hidden(true)
-	tutorial_research.set_hidden(false)
-	get_node("tutorial_locals/locals_timer").start()
-	get_node("report_buttons").set_hidden(true)
-	get_node("upgrade_buttons").set_hidden(true)
-	get_node("locals_buttons").set_hidden(true)
-	get_node("pricing_buttons").set_hidden(true)
-	get_node("finances_full").set_hidden(true)
-	get_node("customers").set_hidden(true)
-	get_node("competition").set_hidden(true)
-	get_node("news").set_hidden(true)
-	get_node("supplies_full").set_hidden(true)
-	get_node("sabatoge").set_hidden(true)
-	get_node("marketing").set_hidden(true)
-	get_node("storefront").set_hidden(true)
-	get_node("loans").set_hidden(true)
-	get_node("research").set_hidden(false)
-	get_node("games").set_hidden(true)
-	get_node("arcade_pricing").set_hidden(true)
-	get_node("concessions_pricing").set_hidden(true)
-	get_node("entertainment").set_hidden(true)
-	get_node("arcade_upgrade").set_hidden(true)
-
-
-func _on_research_button_button_down():
-	tutorial_research.set_hidden(true)
-	finish_up.show()
-	get_tree().set_pause(false)
+func _on_game_over_ok_button_down():
+	if (towns.town_select == "hollyhock"):
+		pixel.set_hidden(true)
+		game_over_alert.set_hidden(true)
+		game_over.game_over_hollyhock()

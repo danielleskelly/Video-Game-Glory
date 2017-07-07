@@ -1,6 +1,6 @@
 extends Node
 
-var hollyhock_balance = 200
+var hollyhock_balance = 500
 var hollyhock_expenses = 20
 var income = 0
 var hollyhock_cash

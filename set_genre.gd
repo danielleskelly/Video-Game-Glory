@@ -7,8 +7,8 @@ var genre_type_four
 var genre_type_five
 var genre_type_six
 
-var hollyhock_station_one_selection = 1
-var hollyhock_station_two_selection = 1
+var hollyhock_station_one_selection = 0
+var hollyhock_station_two_selection = 0
 var hollyhock_station_three_selection = 0
 var hollyhock_station_four_selection = 0
 var hollyhock_station_five_selection = 0
