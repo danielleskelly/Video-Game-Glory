@@ -78,7 +78,7 @@ func game_over_hollyhock():
 	supplies.daily_popcorn_purchase_price = 4
 	supplies.soda_yesterday_used = 0
 	supplies.popcorn_yesterday_used = 0
-	loans.hollyhock_current_loan = 0
+	hollyhock.hollyhock_current_loan = 0
 	hollyhock.hollyhock_research_fund = 0
 	hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_one
 	hollyhock.hollyhock_research_spending = 0
