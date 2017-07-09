@@ -104,6 +104,19 @@ func _on_tutorial_button_button_down():
 	get_tree().get_current_scene().get_node("tutorial").set_hidden(true)
 	get_tree().set_pause(false)
 
+func buy_soda():
+	var charge_price = supplies.hollyhock_soda_price
+	money.hollyhock_balance = money.hollyhock_balance + charge_price
+	supplies.hollyhock_soda_count = supplies.hollyhock_soda_count - 1
+	supplies.soda_yesterday_used = supplies.soda_yesterday_used + 1
+	money.income = money.income + charge_price
+	
+func buy_popcorn():
+	var charge_price = supplies.hollyhock_popcorn_price
+	money.hollyhock_balance = money.hollyhock_balance + charge_price
+	supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
+	supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
+	money.income = money.income + charge_price
 func _on_day_timer_timeout(): #day is complete
 	customer_math.new_predictions()
 	supplies.new_supply_prices()

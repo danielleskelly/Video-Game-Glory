@@ -6,60 +6,76 @@ onready var spending_output = get_node("container/spending_output")
 var advertising
 
 func _ready():
+	spending()
 	set_process(true)
 
 func _process(delta):
 	if (towns.town_select == "hollyhock"):
 		advertising = customer_math.hollyhock_advertising
-	if (advertising == 0):
+	if (int(advertising) == 0):
 		ad_output.clear()
 		ad_output.add_text("None")
-	if ((advertising >= 0) and (advertising < 10)):
+	if ((int(advertising) >= 0) and (int(advertising) < 10)):
 		ad_output.clear()
 		ad_output.add_text("Windshield Love Notes")
-	if ((advertising >= 10) and (advertising < 20)):
+	if ((int(advertising) >= 10) and (int(advertising) < 20)):
 		ad_output.clear()
 		ad_output.add_text("Decent Word of Mouth")
-	if ((advertising >= 20) and (advertising < 30)):
+	if ((int(advertising) >= 20) and (int(advertising) < 30)):
 		ad_output.clear()
 		ad_output.add_text("Agressive Street Team")
-	if ((advertising >= 30) and (advertising < 40)):
+	if ((int(advertising) >= 30) and (int(advertising) < 40)):
 		ad_output.clear()
 		ad_output.add_text("Dancing Penguin Hand Outs")
-	if ((advertising >= 40) and (advertising < 50)):
+	if ((int(advertising) >= 40) and (int(advertising) < 50)):
 		ad_output.clear()
 		ad_output.add_text("Top 40 DJ Shout Out")
-	if ((advertising >= 50) and (advertising < 60)):
+	if ((int(advertising) >= 50) and (int(advertising) < 60)):
 		ad_output.clear()
 		ad_output.add_text("Cheap Celebrity Endorsement Tweet")
-	if ((advertising >= 60) and (advertising < 70)):
+	if ((int(advertising) >= 60) and (int(advertising) < 70)):
 		ad_output.clear()
 		ad_output.add_text("Kindly Grandma Commercial")
-	if ((advertising >= 70) and (advertising < 80)):
+	if ((int(advertising) >= 70) and (int(advertising) < 80)):
 		ad_output.clear()
 		ad_output.add_text("Forcible Store Delivery")
-	if ((advertising >= 80) and (advertising < 90)):
+	if ((int(advertising) >= 80) and (int(advertising) < 90)):
 		ad_output.clear()
 		ad_output.add_text("Big Brother 24 Hour Broadcast")
-	if ((advertising >= 90) and (advertising < 100)):
+	if ((int(advertising) >= 90) and (int(advertising) <= 100)):
 		ad_output.clear()
 		ad_output.add_text("Sandman Endorsement Bribe")
-	spending_output.clear()
-	spending_output.add_text(str(advertising))
 
 func _on_lower_button_down():
 	if (towns.town_select == "hollyhock"):
 		if (customer_math.hollyhock_advertising > 0):
 			customer_math.hollyhock_advertising = customer_math.hollyhock_advertising - 1
-			spending_output.clear()
-			spending_output.add_text(str(customer_math.hollyhock_advertising))
 			money.hollyhock_expenses = money.hollyhock_expenses - 1
-
+			spending()
 
 func _on_raise_button_down():
 	if (towns.town_select == "hollyhock"):
 		if ((customer_math.hollyhock_advertising + 1 <= money.hollyhock_cash) and (customer_math.hollyhock_advertising + 1 <= customer_math.hollyhock_advertising_max)):
 			customer_math.hollyhock_advertising = customer_math.hollyhock_advertising + 1
-			spending_output.clear()
-			spending_output.add_text(str(customer_math.hollyhock_advertising))
+			spending()
 			money.hollyhock_expenses = money.hollyhock_expenses + 1
+			
+
+
+func _on_confirm_button_down():
+	if (towns.town_select == "hollyhock"):
+		if (get_tree().get_current_scene().get_node("AnimationPlayer").get_current_animation() == "tutorial_pt5"):
+			if (customer_math.hollyhock_advertising >= 20):
+				get_tree().get_current_scene().get_node("AnimationPlayer").play("tutorial_pt6")
+		var temp_spending = get_node("container/spending_output").get_text()
+		if (int(temp_spending) > money.hollyhock_cash):
+			temp_spending = money.hollyhock_cash
+		if (int(temp_spending) > customer_math.hollyhock_advertising_max):
+			temp_spending = customer_math.hollyhock_advertising_max
+		customer_math.hollyhock_advertising = temp_spending
+		spending()
+		
+func spending():
+	if (towns.town_select == "hollyhock"):
+		spending_output.clear()
+		spending_output.set_text(str(customer_math.hollyhock_advertising))

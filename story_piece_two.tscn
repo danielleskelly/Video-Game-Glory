@@ -579,6 +579,7 @@ autoplay = "two_one"
 
 [node name="strategy" type="Sprite" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( -0.37561, 0.0704174 )
 transform/scale = Vector2( 0.0448001, 0.0752878 )
 texture = ExtResource( 2 )

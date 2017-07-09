@@ -19,8 +19,8 @@ var freezie_total = 0
 var energy_total = 0
 var candy_total = 0
 
-var hollyhock_soda_price = 8
-var hollyhock_popcorn_price = 8
+var hollyhock_soda_price = 0
+var hollyhock_popcorn_price = 0
 var pizza_price = 0
 var freezie_price = 0
 var energy_price = 0
@@ -33,8 +33,8 @@ var daily_pizza_purchase_price = 0
 var daily_freezie_purchase_price = 0
 var daily_energy_purchase_price = 30
 
-var hollyhock_popcorn_count = 10
-var hollyhock_soda_count = 10
+var hollyhock_popcorn_count = 0
+var hollyhock_soda_count = 0
 var candy_count = 0
 var energy_count = 0
 var pizza_count = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=1]
+[gd_scene load_steps=53 format=1]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://inner_background.png" type="Texture" id=2]
@@ -16,16 +16,4261 @@
 [ext_resource path="res://storefront.tscn" type="PackedScene" id=14]
 [ext_resource path="res://games.tscn" type="PackedScene" id=15]
 [ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=16]
-[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=17]
-[ext_resource path="res://arcade_upgrade.tscn" type="PackedScene" id=18]
-[ext_resource path="res://entertainment.tscn" type="PackedScene" id=19]
-[ext_resource path="res://genres.tscn" type="PackedScene" id=20]
-[ext_resource path="res://blacker_than_night.png" type="Texture" id=21]
-[ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=22]
-[ext_resource path="res://rect_border.png" type="Texture" id=23]
-[ext_resource path="res://pointer.png" type="Texture" id=24]
-[ext_resource path="res://border.png" type="Texture" id=25]
-[ext_resource path="res://strategy.ogg" type="AudioStream" id=26]
+[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=17]
+[ext_resource path="res://research.tscn" type="PackedScene" id=18]
+[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=19]
+[ext_resource path="res://arcade_upgrade.tscn" type="PackedScene" id=20]
+[ext_resource path="res://entertainment.tscn" type="PackedScene" id=21]
+[ext_resource path="res://marketing.tscn" type="PackedScene" id=22]
+[ext_resource path="res://genres.tscn" type="PackedScene" id=23]
+[ext_resource path="res://bubble_green.png" type="Texture" id=24]
+[ext_resource path="res://rect_border.png" type="Texture" id=25]
+[ext_resource path="res://arrow_northeast.png" type="Texture" id=26]
+[ext_resource path="res://border.png" type="Texture" id=27]
+[ext_resource path="res://strategy.ogg" type="AudioStream" id=28]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=29]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=30]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=31]
+[ext_resource path="res://pixel.png" type="Texture" id=32]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "arcade_pricing"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "arcade_upgrades"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "concessions_pricing"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=4]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource/name = "entertainment"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=7]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=8]
+
+resource/name = "loans"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=9]
+
+resource/name = "marketing"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=10]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=11]
+
+resource/name = "research"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=12]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=13]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=14]
+
+resource/name = "tutorial"
+length = 90.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("pixel:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 16.7842, 24.6996 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("pixel:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.443099, 0.357029 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("pixel/left_arm:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16.3609, -4.97596 ), Vector2( 18.3179, 3.10948 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("pixel/left_arm:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 40.6334, -22.4228 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tutorial_start:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("tutorial_persistent_menu:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.5, 34 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("tutorial_reports:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 34, 62 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("tutorial_supplies:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 62 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("tutorial_pricing:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("tutorial_upgrades:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0, 5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("tutorial_locals:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0, 5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("tutorial_research:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("pixel/left_arm:flip_v")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("tutorial_persistent_menu/warning:bbcode/bbcode")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0, 5, 10, 17, 26 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "The first thing you need to learn about are these info boxes. They will be on all pages while you are setting up each day, and they contain the most important information.", "We have the town banner, to let you know which town you are working in.", "And a quick peek at your financial situation. We only have a little bit of money saved so we will need to spend it wisely to get Hollyhock back on its feet.", "Here we have some slimmed down information on your concession's stock. The Players in Hollyhock are mad for soda and popcorn so we will make sure you have plenty of stock in another tab.", "And finally we have the genre prediction for tomorrow. Most of the Players in Hollyhock prefer the Meta genre so we will focus there until we start attracting tourists with wider interests." ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("tutorial_persistent_menu/title_box_border:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 5, 10 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("tutorial_persistent_menu/title_box_pointer:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0.5, 5, 10 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("tutorial_persistent_menu/supplies_border:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0.5, 5, 10, 17, 26 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, false, true, false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("tutorial_persistent_menu/supplies_border1:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0.5, 5, 26 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("tutorial_persistent_menu/supplies_pointer:visibility/visible")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 0.5, 5, 10, 17, 26 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, false, true, false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("tutorial_persistent_menu/supplies_pointer1:visibility/visible")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
+"times": FloatArray( 0.5, 5, 26 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("tutorial_persistent_menu/finances_border:visibility/visible")
+tracks/20/interp = 1
+tracks/20/imported = false
+tracks/20/keys = {
+"times": FloatArray( 0.5, 5, 10, 17 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("tutorial_persistent_menu/finances_pointer:visibility/visible")
+tracks/21/interp = 1
+tracks/21/imported = false
+tracks/21/keys = {
+"times": FloatArray( 0.5, 5, 10, 17 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("tutorial_persistent_menu/arcade_border:visibility/visible")
+tracks/22/interp = 1
+tracks/22/imported = false
+tracks/22/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("tutorial_persistent_menu/warning:rect/pos")
+tracks/23/interp = 1
+tracks/23/imported = false
+tracks/23/keys = {
+"times": FloatArray( 0.5 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( -15, -12 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("tutorial_persistent_menu/warning:rect/size")
+tracks/24/interp = 1
+tracks/24/imported = false
+tracks/24/keys = {
+"times": FloatArray( 0.5 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 433, 236 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("tutorial_persistent_menu/background:transform/pos")
+tracks/25/interp = 1
+tracks/25/imported = false
+tracks/25/keys = {
+"times": FloatArray( 0.5 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.950006, -2.49925 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("tutorial_persistent_menu/background:transform/scale")
+tracks/26/interp = 1
+tracks/26/imported = false
+tracks/26/keys = {
+"times": FloatArray( 0.5 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.03429, 0.0181352 ) ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("tutorial_reports/warning:bbcode/bbcode")
+tracks/27/interp = 1
+tracks/27/imported = false
+tracks/27/keys = {
+"times": FloatArray( 34, 40, 48, 55 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "The first tab across the top is Reports.", "Across the side we start with finances. Most of the field will look empty here until you start the town running again. The most important thing is the level goal: Customer statisfaction of 75%. Right now we are only at 10% so we have a way to go.", "This customers tab looks pretty empty too. It has gotten so bad we had to put in a section just to keep track of all the sabatoges happening! Later on if you find a lot of your sales are lost try buying some upgrades.", "And last in the Reports tab is the News. It is mostly just an expanded version of the genre predictions." ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("tutorial_reports/finances_box:visibility/visible")
+tracks/28/interp = 1
+tracks/28/imported = false
+tracks/28/keys = {
+"times": FloatArray( 34, 40, 48 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("tutorial_reports/other_box:visibility/visible")
+tracks/29/interp = 1
+tracks/29/imported = false
+tracks/29/keys = {
+"times": FloatArray( 34, 48, 55 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("tutorial_reports/other_box1:visibility/visible")
+tracks/30/interp = 1
+tracks/30/imported = false
+tracks/30/keys = {
+"times": FloatArray( 34, 55 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("tutorial_reports/finances_pointer:visibility/visible")
+tracks/31/interp = 1
+tracks/31/imported = false
+tracks/31/keys = {
+"times": FloatArray( 40 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/32/type = "value"
+tracks/32/path = NodePath("finances_full:visibility/visible")
+tracks/32/interp = 1
+tracks/32/imported = false
+tracks/32/keys = {
+"times": FloatArray( 0, 48 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/33/type = "value"
+tracks/33/path = NodePath("customers:visibility/visible")
+tracks/33/interp = 1
+tracks/33/imported = false
+tracks/33/keys = {
+"times": FloatArray( 0, 48, 55 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/34/type = "value"
+tracks/34/path = NodePath("news:visibility/visible")
+tracks/34/interp = 1
+tracks/34/imported = false
+tracks/34/keys = {
+"times": FloatArray( 0, 55, 62 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/35/type = "value"
+tracks/35/path = NodePath("supplies_full:visibility/visible")
+tracks/35/interp = 1
+tracks/35/imported = false
+tracks/35/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/36/type = "value"
+tracks/36/path = NodePath("storefront:visibility/visible")
+tracks/36/interp = 1
+tracks/36/imported = false
+tracks/36/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/37/type = "value"
+tracks/37/path = NodePath("games:visibility/visible")
+tracks/37/interp = 1
+tracks/37/imported = false
+tracks/37/keys = {
+"times": FloatArray( 0, 62 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/38/type = "value"
+tracks/38/path = NodePath("arcade_pricing:visibility/visible")
+tracks/38/interp = 1
+tracks/38/imported = false
+tracks/38/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/39/type = "value"
+tracks/39/path = NodePath("loans:visibility/visible")
+tracks/39/interp = 1
+tracks/39/imported = false
+tracks/39/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/40/type = "value"
+tracks/40/path = NodePath("research:visibility/visible")
+tracks/40/interp = 1
+tracks/40/imported = false
+tracks/40/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/41/type = "value"
+tracks/41/path = NodePath("concessions_pricing:visibility/visible")
+tracks/41/interp = 1
+tracks/41/imported = false
+tracks/41/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/42/type = "value"
+tracks/42/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/42/interp = 1
+tracks/42/imported = false
+tracks/42/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/43/type = "value"
+tracks/43/path = NodePath("entertainment:visibility/visible")
+tracks/43/interp = 1
+tracks/43/imported = false
+tracks/43/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/44/type = "value"
+tracks/44/path = NodePath("marketing:visibility/visible")
+tracks/44/interp = 1
+tracks/44/imported = false
+tracks/44/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/45/type = "value"
+tracks/45/path = NodePath("tutorial_reports/warning:rect/pos")
+tracks/45/interp = 1
+tracks/45/imported = false
+tracks/45/keys = {
+"times": FloatArray( 34 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( -14, -3 ) ]
+}
+tracks/46/type = "value"
+tracks/46/path = NodePath("tutorial_reports/warning:rect/size")
+tracks/46/interp = 1
+tracks/46/imported = false
+tracks/46/keys = {
+"times": FloatArray( 34 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 611, 209 ) ]
+}
+tracks/47/type = "value"
+tracks/47/path = NodePath("tutorial_reports/background:transform/pos")
+tracks/47/interp = 1
+tracks/47/imported = false
+tracks/47/keys = {
+"times": FloatArray( 34 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 6.03098, 4.72945 ) ]
+}
+tracks/48/type = "value"
+tracks/48/path = NodePath("report_buttons:visibility/visible")
+tracks/48/interp = 1
+tracks/48/imported = false
+tracks/48/keys = {
+"times": FloatArray( 0, 62 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/49/type = "value"
+tracks/49/path = NodePath("supply_buttons:visibility/visible")
+tracks/49/interp = 1
+tracks/49/imported = false
+tracks/49/keys = {
+"times": FloatArray( 0, 62 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/50/type = "value"
+tracks/50/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/50/interp = 1
+tracks/50/imported = false
+tracks/50/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/51/type = "value"
+tracks/51/path = NodePath("locals_buttons:visibility/visible")
+tracks/51/interp = 1
+tracks/51/imported = false
+tracks/51/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/52/type = "value"
+tracks/52/path = NodePath("demand_buttons:visibility/visible")
+tracks/52/interp = 1
+tracks/52/imported = false
+tracks/52/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/53/type = "value"
+tracks/53/path = NodePath("tutorial_supplies/first_warning:bbcode/bbcode")
+tracks/53/interp = 1
+tracks/53/imported = false
+tracks/53/keys = {
+"times": FloatArray( 62, 69, 76, 85 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "Next across the top is the supply button, and it is by far one of the most important.", "The first button along the side is where we set the arcades, and there are a few things that we need to consider here.", "From the genre prediction at the bottom we know that we need to offer a Meta genre game, and Video Game Glory is our most popular Meta genre game.", "There are only two working machines in the Hollyhock arcade right now, but you can unlock more in the upgrades tab. For now, set these two to Video Game Arcade and we will move on to the next section!" ]
+}
+tracks/54/type = "value"
+tracks/54/path = NodePath("tutorial_supplies/supplies_box:visibility/visible")
+tracks/54/interp = 1
+tracks/54/imported = false
+tracks/54/keys = {
+"times": FloatArray( 62 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/55/type = "value"
+tracks/55/path = NodePath("tutorial_supplies/supplies_box1:visibility/visible")
+tracks/55/interp = 1
+tracks/55/imported = false
+tracks/55/keys = {
+"times": FloatArray( 62, 69 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/56/type = "value"
+tracks/56/path = NodePath("tutorial_supplies/supplies_box2:visibility/visible")
+tracks/56/interp = 1
+tracks/56/imported = false
+tracks/56/keys = {
+"times": FloatArray( 62 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/57/type = "value"
+tracks/57/path = NodePath("tutorial_supplies/supplies_icon_box:visibility/visible")
+tracks/57/interp = 1
+tracks/57/imported = false
+tracks/57/keys = {
+"times": FloatArray( 62 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/58/type = "value"
+tracks/58/path = NodePath("tutorial_supplies/finances_box:visibility/visible")
+tracks/58/interp = 1
+tracks/58/imported = false
+tracks/58/keys = {
+"times": FloatArray( 62 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/59/type = "value"
+tracks/59/path = NodePath("tutorial_supplies/supplies_icon_box1:visibility/visible")
+tracks/59/interp = 1
+tracks/59/imported = false
+tracks/59/keys = {
+"times": FloatArray( 0, 76 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/60/type = "value"
+tracks/60/path = NodePath("tutorial_supplies/click:visibility/visible")
+tracks/60/interp = 1
+tracks/60/imported = false
+tracks/60/keys = {
+"times": FloatArray( 62, 85 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/61/type = "value"
+tracks/61/path = NodePath("tutorial_supplies/arrow1:visibility/visible")
+tracks/61/interp = 1
+tracks/61/imported = false
+tracks/61/keys = {
+"times": FloatArray( 62, 85 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/62/type = "value"
+tracks/62/path = NodePath("tutorial_supplies/supplies_icon_box3:visibility/visible")
+tracks/62/interp = 1
+tracks/62/imported = false
+tracks/62/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/63/type = "value"
+tracks/63/path = NodePath("pixel/right_arm:flip_v")
+tracks/63/interp = 1
+tracks/63/imported = false
+tracks/63/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/64/type = "value"
+tracks/64/path = NodePath("pixel/right_arm:transform/pos")
+tracks/64/interp = 1
+tracks/64/imported = false
+tracks/64/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 27.4486, 3.21306 ) ]
+}
+tracks/65/type = "value"
+tracks/65/path = NodePath("pixel/right_arm:transform/rot")
+tracks/65/interp = 1
+tracks/65/imported = false
+tracks/65/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 19.8776 ]
+}
+
+[sub_resource type="Animation" id=15]
+
+resource/name = "tutorial_finish"
+length = 0.1
+loop = false
+step = 0.1
+
+[sub_resource type="Animation" id=16]
+
+length = 15.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("report_buttons:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("supply_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("locals_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("finances_full:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("customers:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("news:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("supplies_full:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("storefront:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("games:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("arcade_pricing:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("loans:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("research:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("concessions_pricing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("entertainment:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("marketing:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("tutorial_start:visibility/visible")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("tutorial_persistent_menu:visibility/visible")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("tutorial_reports:visibility/visible")
+tracks/20/interp = 1
+tracks/20/imported = false
+tracks/20/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("tutorial_supplies:visibility/visible")
+tracks/21/interp = 1
+tracks/21/imported = false
+tracks/21/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("tutorial_supplies/first_warning:bbcode/bbcode")
+tracks/22/interp = 1
+tracks/22/imported = false
+tracks/22/keys = {
+"times": FloatArray( 0, 7, 14 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "Now that we have our arcades set, we can move on to our concessions stock.", "The price will show up in different colors depending on whether it is a cheap price (green) or an expensive one (red).", "We don't have any stock, and both soda and popcorn are in green so we should get at least 10 of each. Don't forget to click the confirm button! Then we can move on to the next section." ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("tutorial_supplies/supplies_box:visibility/visible")
+tracks/23/interp = 1
+tracks/23/imported = false
+tracks/23/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("tutorial_supplies/supplies_box2:visibility/visible")
+tracks/24/interp = 1
+tracks/24/imported = false
+tracks/24/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("tutorial_supplies/click:visibility/visible")
+tracks/25/interp = 1
+tracks/25/imported = false
+tracks/25/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("tutorial_supplies/arrow1:visibility/visible")
+tracks/26/interp = 1
+tracks/26/imported = false
+tracks/26/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("tutorial_supplies/supplies_icon_box1:visibility/visible")
+tracks/27/interp = 1
+tracks/27/imported = false
+tracks/27/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("tutorial_supplies/supplies_icon_box:visibility/visible")
+tracks/28/interp = 1
+tracks/28/imported = false
+tracks/28/keys = {
+"times": FloatArray( 0, 14 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("tutorial_supplies/supplies_icon_box2:visibility/visible")
+tracks/29/interp = 1
+tracks/29/imported = false
+tracks/29/keys = {
+"times": FloatArray( 0, 7, 14 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("tutorial_supplies/supplies_box1:visibility/visible")
+tracks/30/interp = 1
+tracks/30/imported = false
+tracks/30/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("tutorial_supplies/supplies_icon_box3:visibility/visible")
+tracks/31/interp = 1
+tracks/31/imported = false
+tracks/31/keys = {
+"times": FloatArray( 0, 14 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/32/type = "value"
+tracks/32/path = NodePath("pixel:visibility/visible")
+tracks/32/interp = 1
+tracks/32/imported = false
+tracks/32/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/33/type = "value"
+tracks/33/path = NodePath("tutorial_pricing:visibility/visible")
+tracks/33/interp = 1
+tracks/33/imported = false
+tracks/33/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=17]
+
+length = 8.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("tutorial_supplies:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("tutorial_pricing:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("supplies_full:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("supply_buttons:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("demand_buttons:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("tutorial_pricing/pricing_box:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("tutorial_pricing/pricing_box1:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("tutorial_pricing/concessions_tab_box:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("tutorial_pricing/prediction_box:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("tutorial_pricing/prediction_box1:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("tutorial_pricing/first_warning:bbcode/bbcode")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0, 7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "Now that we have dealt with our supply, we can work out our demand. In this case that means how much we will price our products. ", "The tabs along the side are the same as in supplies. Feel free to set the concessions price to whatever you want as long as it is within the range and we will move to the next section." ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("tutorial_pricing/ok:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0, 7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("concessions_pricing:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("tutorial_pricing/ok_button_background:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0, 7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=18]
+
+length = 8.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("concessions_pricing:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arcade_pricing:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("tutorial_pricing/ok:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("tutorial_pricing/ok_button_background:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tutorial_pricing/pricing_box:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("tutorial_pricing/concessions_tab_box:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("tutorial_pricing/first_warning:bbcode/bbcode")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "And now we set the price for the arcades. Since our prediction for tomorrow is only 55% we should stay near the middle of the suggested price range so we don't turn away any customers with our price.", "Click okay when you are happy with the prices you have set and we will move on to the next section." ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("tutorial_pricing/prediction_box:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=19]
+
+length = 43.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("arcade_pricing:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("demand_buttons:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("upgrade_buttons:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 35 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("storefront:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 14 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tutorial_pricing:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("tutorial_upgrades:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 35 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("tutorial_upgrades/pricing_box1:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 5, 14 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("tutorial_upgrades/pricing_box2:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 14, 20 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("tutorial_upgrades/pricing_box3:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 20, 28 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("tutorial_upgrades/first_warning:bbcode/bbcode")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0, 5, 14, 20, 28 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "Here we have our upgrades.", "First along the side is the Storefront upgrades. Use these to help the look of the arcades and draw more customers in.", "Next is the Arcade upgrades. Purchasing these will pay for the repairs on the other four available machines and make them usable again.", "And last is the In Store Entertainment. The better your entertainment the longer your customers will be willing to wait in line.", "You can come back to the upgrades tab after we are done if you feel like you have enough money to buy one." ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("arcade_upgrade:visibility/visible")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0, 14, 20 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("entertainment:visibility/visible")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0, 20, 35 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("tutorial_locals:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0, 35 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("loans:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("marketing:visibility/visible")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0, 35 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("locals_buttons:visibility/visible")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0, 35 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("tutorial_locals/pricing_box3:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0, 35 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("tutorial_locals/pricing_box1:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0, 35 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("tutorial_locals/pricing_box2:visibility/visible")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("tutorial_locals/first_warning:bbcode/bbcode")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
+"times": FloatArray( 35, 42, 43 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "Here we have the locals tab, and first along the side is Marketing. This can have a huge impact on drawing customers to the arcade.", "So we are going to want to spend at least $20 here to kick start things along. Make sure to click the confirm button and we will move on to the next section.", "So we are going to want to spend at least $20 here to get things moving along. Make sure to click the confirm button and we will move on to the next section." ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("finances_full:visibility/visible")
+tracks/20/interp = 1
+tracks/20/imported = false
+tracks/20/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("customers:visibility/visible")
+tracks/21/interp = 1
+tracks/21/imported = false
+tracks/21/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("news:visibility/visible")
+tracks/22/interp = 1
+tracks/22/imported = false
+tracks/22/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("supplies_full:visibility/visible")
+tracks/23/interp = 1
+tracks/23/imported = false
+tracks/23/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("games:visibility/visible")
+tracks/24/interp = 1
+tracks/24/imported = false
+tracks/24/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("research:visibility/visible")
+tracks/25/interp = 1
+tracks/25/imported = false
+tracks/25/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("concessions_pricing:visibility/visible")
+tracks/26/interp = 1
+tracks/26/imported = false
+tracks/26/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=20]
+
+length = 43.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("marketing:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("tutorial_locals/pricing_box1:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("loans:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 8 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("tutorial_research:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 8, 43 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tutorial_locals/pricing_box2:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("tutorial_locals/first_warning:bbcode/bbcode")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "Here we have the loans available from the local bank. If you find yourself in a spot you can come get a loan, but as with all loans you should be careful!" ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("tutorial_locals:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 8 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("research:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 8 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("locals_buttons:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 8 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("tutorial_research/first_warning:bbcode/bbcode")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 8, 16, 26, 34 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "And last but not least is the Research tab. You will pay into this for however many days it takes to reach a goal. When this goal is reached you will unlock a new genre to offer in the arcade!", "Feel free to spend whatever you want but know that it isn't a priority right now.", "And that is all of it! I know it seems like a lot but I am sure you will have the hang of it by the end of this exercise!", "I will go while you get everything ready just how you want it. Whenever you are ready to open the arcade just click on the Start Day button right above my head!" ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("pixel:transform/pos")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 24.9, 26 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16.7842, 24.6996 ), Vector2( 0.0705814, 0.619905 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("pixel:transform/scale")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 24.9, 26 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.443099, 0.357029 ), Vector2( 0.996334, 1.01366 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("tutorial_research/first_background:transform/pos")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 24.9, 26 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.6758, 15.7684 ), Vector2( -6.2008, -13.4731 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("tutorial_research/first_background:transform/scale")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 24.9, 26 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.0165665, 0.0373426 ), Vector2( 0.0278675, 0.0373426 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("tutorial_research/first_warning:rect/pos")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 24.9, 26, 33.9, 34 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -22, 10 ), Vector2( -28, -23 ), Vector2( -28, -24 ), Vector2( -28, -24 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("tutorial_research/first_warning:rect/size")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 24.9, 26, 33.9, 34 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 534, 170 ), Vector2( 394, 203 ), Vector2( 394, 203 ), Vector2( 394, 243 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("tutorial_research/first_warning:rect/scale")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 24.9, 26 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.075, 0.075 ), Vector2( 0.1, 0.1 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("tutorial_research/pricing_box:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0, 26 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("pixel/right_arm:transform/pos")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 33.9, 34, 42.8, 42.9 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 27.7197, 3.29371 ), Vector2( 27.8616, -5.74587 ), Vector2( 27.8577, -5.6479 ), Vector2( 27.5148, 2.97323 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("pixel/right_arm:transform/rot")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
+"times": FloatArray( 33.9, 34, 42.8, 42.9 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 23.5586, -22.8644, -22.3366, 24.1075 ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("pixel/right_arm:transform/scale")
+tracks/20/interp = 1
+tracks/20/imported = false
+tracks/20/keys = {
+"times": FloatArray( 33.9, 34, 42.8, 42.9 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.0909543, 0.147603 ), Vector2( 0.0909543, 0.147603 ), Vector2( 0.0909543, 0.147603 ), Vector2( 0.0909543, 0.147603 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("pixel/right_arm:flip_h")
+tracks/21/interp = 1
+tracks/21/imported = false
+tracks/21/keys = {
+"times": FloatArray( 33.9 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("pixel/right_arm:flip_v")
+tracks/22/interp = 1
+tracks/22/imported = false
+tracks/22/keys = {
+"times": FloatArray( 33.9, 34, 42.9 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("tutorial_research/pricing_box1:visibility/visible")
+tracks/23/interp = 1
+tracks/23/imported = false
+tracks/23/keys = {
+"times": FloatArray( 0, 34 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("pixel:visibility/visible")
+tracks/24/interp = 1
+tracks/24/imported = false
+tracks/24/keys = {
+"times": FloatArray( 0, 43 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("tutorial_upgrades:visibility/visible")
+tracks/25/interp = 1
+tracks/25/imported = false
+tracks/25/keys = {
+"times": FloatArray( 43 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("tutorial_research/first_warning:visibility/visible")
+tracks/26/interp = 1
+tracks/26/imported = false
+tracks/26/keys = {
+"times": FloatArray( 0, 25, 26 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("tutorial_research/first_background:visibility/visible")
+tracks/27/interp = 1
+tracks/27/imported = false
+tracks/27/keys = {
+"times": FloatArray( 0, 25, 26 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
 
 [node name="strategy" type="Node2D"]
 
@@ -56,6 +4301,9 @@ texture = ExtResource( 3 )
 transform/pos = Vector2( 17.572, 21.0723 )
 transform/scale = Vector2( 0.0173717, 0.0204544 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="menu" type="LinkButton" parent="."]
 
@@ -109,7 +4357,6 @@ transform/scale = Vector2( 0.214076, 0.331204 )
 
 [node name="top_buttons" type="HButtonArray" parent="."]
 
-editor/display_folded = true
 rect/scale = Vector2( 0.09, 0.12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -193,6 +4440,8 @@ texture = ExtResource( 5 )
 
 [node name="report_buttons" type="VButtonArray" parent="."]
 
+editor/display_folded = true
+visibility/visible = false
 rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -474,11 +4723,13 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="customers" parent="." instance=ExtResource( 11 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="news" parent="." instance=ExtResource( 12 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -504,44 +4755,63 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 [node name="arcade_pricing" parent="." instance=ExtResource( 16 )]
 
 visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
+transform/pos = Vector2( 7.97685, 2.5514 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="concessions_pricing" parent="." instance=ExtResource( 17 )]
+[node name="loans" parent="." instance=ExtResource( 17 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="arcade_upgrade" parent="." instance=ExtResource( 18 )]
+[node name="research" parent="." instance=ExtResource( 18 )]
+
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
+
+[node name="concessions_pricing" parent="." instance=ExtResource( 19 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="entertainment" parent="." instance=ExtResource( 19 )]
+[node name="arcade_upgrade" parent="." instance=ExtResource( 20 )]
+
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
+
+[node name="entertainment" parent="." instance=ExtResource( 21 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="genre_one" parent="." instance=ExtResource( 20 )]
+[node name="marketing" parent="." instance=ExtResource( 22 )]
+
+visibility/visible = false
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
+
+[node name="genre_one" parent="." instance=ExtResource( 23 )]
 
 transform/pos = Vector2( 10.3387, 24.0289 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="genre_two" parent="." instance=ExtResource( 20 )]
+[node name="genre_two" parent="." instance=ExtResource( 23 )]
 
+visibility/visible = false
 transform/pos = Vector2( 17.5263, 24.0813 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="genre_three" parent="." instance=ExtResource( 20 )]
+[node name="genre_three" parent="." instance=ExtResource( 23 )]
 
+visibility/visible = false
 transform/pos = Vector2( 24.6974, 24.0996 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="start_day" type="LinkButton" parent="."]
 
+editor/display_folded = true
 rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -577,40 +4847,43 @@ visibility/visible = false
 
 [node name="background" type="Sprite" parent="low_funds_warning"]
 
-transform/pos = Vector2( -0.12163, 1.6948 )
-transform/scale = Vector2( 0.0505734, 0.0592927 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -11.3545, -9.8186 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.033031, 0.0275206 )
+texture = ExtResource( 24 )
 
 [node name="warning" type="RichTextLabel" parent="low_funds_warning"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = -8.0
-margin/right = 568.0
-margin/bottom = 207.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -26.0
+margin/top = -23.0
+margin/right = 251.0
+margin/bottom = 236.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Continuing to the next day will put you in the negatives. Reduce your expenses or take out a loan to continue."
 visible_characters = -1
 
 [node name="low_funds_ok" type="LinkButton" parent="low_funds_warning"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1.0
-margin/top = 7.0
-margin/right = 53.0
-margin/bottom = 50.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin/left = -4.0
+margin/top = 4.0
+margin/right = 31.0
+margin/bottom = 36.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -618,48 +4891,51 @@ shortcut = null
 text = "OK"
 underline = 2
 
-[node name="game_over" type="Node2D" parent="."]
+[node name="game_over_alert" type="Node2D" parent="."]
 
 process/pause_mode = 2
 editor/display_folded = true
 visibility/visible = false
 
-[node name="background" type="Sprite" parent="game_over"]
+[node name="background" type="Sprite" parent="game_over_alert"]
 
-transform/pos = Vector2( 0.327393, -0.167065 )
-transform/scale = Vector2( 0.0564646, 0.0607871 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -10.6751, -7.09967 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0323249, 0.0255163 )
+texture = ExtResource( 24 )
 
-[node name="warning" type="RichTextLabel" parent="game_over"]
+[node name="warning" type="RichTextLabel" parent="game_over_alert"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = -8.0
-margin/right = 568.0
-margin/bottom = 207.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -25.0
+margin/top = -18.0
+margin/right = 263.0
+margin/bottom = 197.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have run out of cash and the loan officer at the bank won't even answer your calls. Time to start over!"
 visible_characters = -1
 
-[node name="game_over_ok" type="LinkButton" parent="game_over"]
+[node name="game_over_ok" type="LinkButton" parent="game_over_alert"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1.0
+margin/left = -6.0
 margin/top = 7.0
-margin/right = 53.0
-margin/bottom = 50.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin/right = 29.0
+margin/bottom = 39.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -675,40 +4951,43 @@ visibility/visible = false
 
 [node name="background" type="Sprite" parent="genre_discovery"]
 
-transform/pos = Vector2( 0.327393, -0.167065 )
-transform/scale = Vector2( 0.0564646, 0.0607871 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -9.67806, -9.59794 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0406631, 0.0293596 )
+texture = ExtResource( 24 )
 
 [node name="warning" type="RichTextLabel" parent="genre_discovery"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = -10.0
-margin/right = 625.0
-margin/bottom = 242.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -26.0
+margin/top = -22.0
+margin/right = 276.0
+margin/bottom = 230.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "You have purchased a new genre of game! Make sure to set some of your arcades so the customers will be able to enjoy it!"
+bbcode/bbcode = "You have purchased a binary infusion from the Muse Pixels! You can now satisfy the needs of the growing desires of the townspeople. Good job!"
 visible_characters = -1
 
 [node name="genre_discover_ok" type="LinkButton" parent="genre_discovery"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1.0
-margin/top = 7.0
-margin/right = 53.0
-margin/bottom = 50.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin/left = -1.0
+margin/top = 6.0
+margin/right = 51.0
+margin/bottom = 49.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -719,50 +4998,125 @@ underline = 2
 [node name="hollyhock_complete" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="hollyhock_complete"]
 
-transform/pos = Vector2( 0.327393, -0.167065 )
-transform/scale = Vector2( 0.0564646, 0.0607871 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -10.1723, -2.71569 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0436669, 0.0276812 )
+texture = ExtResource( 24 )
 
 [node name="warning" type="RichTextLabel" parent="hollyhock_complete"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -16.0
-margin/top = -10.0
-margin/right = 644.0
-margin/bottom = 317.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -26.0
+margin/top = -21.0
+margin/right = 266.0
+margin/bottom = 349.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have completed the level goal for the town of Hollyhock! With our 75% marketshare we now have a solid hold on the customers of this city. Let's continue on to the next city I have in store for you!"
 visible_characters = -1
 
 [node name="continue_ok" type="LinkButton" parent="hollyhock_complete"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1.0
-margin/top = 7.0
-margin/right = 53.0
-margin/bottom = 50.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin/left = -1.0
+margin/top = 18.0
+margin/right = 51.0
+margin/bottom = 61.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
 text = "OK"
+underline = 2
+
+[node name="skip_or_play" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="skip_or_play"]
+
+transform/pos = Vector2( -10.1723, -2.71569 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0436669, 0.0276812 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -26.0
+margin/top = -14.0
+margin/right = 266.0
+margin/bottom = 215.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Would you like to watch the next day's play through or do you want to skip it?"
+visible_characters = -1
+
+[node name="skip" type="LinkButton" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -7.0
+margin/top = 16.0
+margin/right = 45.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "SKIP"
+underline = 2
+
+[node name="play" type="LinkButton" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -23.0
+margin/top = 16.0
+margin/right = 46.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "PLAY"
 underline = 2
 
 [node name="tutorial_start" type="Node2D" parent="."]
@@ -773,65 +5127,71 @@ visibility/visible = false
 
 [node name="background" type="Sprite" parent="tutorial_start"]
 
-transform/pos = Vector2( 0.327393, -0.167065 )
-transform/scale = Vector2( 0.0564646, 0.0607871 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -7.42649, 1.68678 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0387354, 0.0352096 )
+texture = ExtResource( 24 )
 
 [node name="warning" type="RichTextLabel" parent="tutorial_start"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -16.0
-margin/top = -10.0
-margin/right = 644.0
-margin/bottom = 317.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -29.0
+margin/top = -13.0
+margin/right = 362.0
+margin/bottom = 269.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Welcome to the first village in our quest, Hollyhock! Or otherwise known as Tutorial-Town. Would you like to use the handy tutorial minions available in this town?"
+bbcode/bbcode = "This is Hollyhock, and it is the capital city of our kingdom so it is the perfect place for you to start. I have enough time to help you through your first few days if you would like.
+Do you want me to help you?"
 visible_characters = -1
 
 [node name="tutorial_start_yes_button" type="LinkButton" parent="tutorial_start"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 6.0
-margin/top = 7.0
-margin/right = 58.0
-margin/bottom = 50.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin/left = -7.0
+margin/top = 19.0
+margin/right = 62.0
+margin/bottom = 51.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "OK"
+text = "Yes"
 underline = 2
 
 [node name="tutorial_start_no_button" type="LinkButton" parent="tutorial_start"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -9.0
-margin/top = 7.0
-margin/right = 43.0
-margin/bottom = 50.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin/left = -21.0
+margin/top = 19.0
+margin/right = 29.0
+margin/bottom = 51.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "Skip"
+text = "No"
 underline = 2
 
 [node name="tutorial_persistent_menu" type="Node2D" parent="."]
@@ -846,114 +5206,94 @@ __meta__ = {
 
 [node name="background" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( 0.327393, -0.167065 )
-transform/scale = Vector2( 0.0564646, 0.0607871 )
-texture = ExtResource( 21 )
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( -0.950006, -2.49925 )
+transform/scale = Vector2( 0.03429, 0.0181352 )
+texture = ExtResource( 24 )
+flip_v = true
 
 [node name="warning" type="RichTextLabel" parent="tutorial_persistent_menu"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -16.0
-margin/top = -10.0
-margin/right = 644.0
-margin/bottom = 317.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -15.0
+margin/top = -12.0
+margin/right = 418.0
+margin/bottom = 224.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "The first thing you need to know are these info boxes. They will be on all pages while you are setting up the day, and they contain the most important information."
+bbcode/bbcode = "And finally we have the genre prediction for tomorrow. Most of the Players in Hollyhock prefer the Meta genre so we will focus there until we start attracting tourists with wider interests."
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="persistent_menu_ok" type="LinkButton" parent="tutorial_persistent_menu"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -3.0
-margin/top = 6.0
-margin/right = 49.0
-margin/bottom = 49.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="title_box_border" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( -9.37182, -28.2004 )
-transform/scale = Vector2( 0.214304, 0.117132 )
-texture = ExtResource( 23 )
+visibility/visible = false
+transform/pos = Vector2( -7.9548, -29.4049 )
+transform/scale = Vector2( 0.158585, 0.100571 )
+texture = ExtResource( 25 )
+
+[node name="arcade_border" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( -7.9548, -29.4049 )
+transform/scale = Vector2( 0.158585, 0.100571 )
+texture = ExtResource( 25 )
 
 [node name="title_box_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( -8.34303, -17.1005 )
+visibility/visible = false
+transform/pos = Vector2( -1.24679, -18.5425 )
 transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.109536 )
-texture = ExtResource( 24 )
-
-[node name="prediction_border" type="Sprite" parent="tutorial_persistent_menu"]
-
-transform/pos = Vector2( 13.8551, -27.8042 )
-transform/scale = Vector2( 0.0387837, 0.064286 )
-texture = ExtResource( 25 )
-
-[node name="prediction_pointer" type="Sprite" parent="tutorial_persistent_menu"]
-
-transform/pos = Vector2( 13.4537, -18.3779 )
-transform/rot = -5.0
-transform/scale = Vector2( 0.185157, 0.12949 )
-texture = ExtResource( 24 )
+transform/scale = Vector2( 0.125946, 0.237902 )
+texture = ExtResource( 26 )
+flip_h = true
 
 [node name="supplies_border" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( -6.09231, 20.6395 )
-transform/scale = Vector2( 0.103926, 0.0766697 )
-texture = ExtResource( 25 )
+visibility/visible = false
+transform/pos = Vector2( -12.8365, 19.5481 )
+transform/scale = Vector2( 0.170763, 0.165702 )
+texture = ExtResource( 27 )
+
+[node name="supplies_border1" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( 2.75931, 19.7026 )
+transform/scale = Vector2( 0.085168, 0.160784 )
+texture = ExtResource( 27 )
 
 [node name="supplies_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( -5.15833, 14.173 )
-transform/rot = 1.0
-transform/scale = Vector2( 0.272251, 0.0555252 )
-texture = ExtResource( 24 )
+visibility/visible = false
+transform/pos = Vector2( -5.59278, 9.96005 )
+transform/rot = -86.0875
+transform/scale = Vector2( 0.0813651, 0.0395302 )
+texture = ExtResource( 26 )
+flip_v = true
+
+[node name="supplies_pointer1" type="Sprite" parent="tutorial_persistent_menu"]
+
+transform/pos = Vector2( 3.71953, 10.1337 )
+transform/rot = -86.0875
+transform/scale = Vector2( 0.104003, 0.0352382 )
+texture = ExtResource( 26 )
 
 [node name="finances_border" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( -31.1715, 15.6328 )
-transform/scale = Vector2( 0.140657, 0.204859 )
-texture = ExtResource( 25 )
+visibility/visible = false
+transform/pos = Vector2( -29.7574, 14.6899 )
+transform/scale = Vector2( 0.180433, 0.223718 )
+texture = ExtResource( 27 )
 
 [node name="finances_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( -20.8619, 9.78368 )
-transform/rot = -80.0
-transform/scale = Vector2( 0.115557, 0.0676195 )
-texture = ExtResource( 24 )
-
-[node name="persistent_menu_timer" type="Timer" parent="tutorial_persistent_menu"]
-
-process_mode = 1
-wait_time = 12.0
-one_shot = true
-autostart = false
+visibility/visible = false
+transform/pos = Vector2( -18.7358, 7.54088 )
+transform/rot = -111.178
+transform/scale = Vector2( 0.0764177, 0.0593957 )
+texture = ExtResource( 26 )
+flip_v = true
 
 [node name="tutorial_reports" type="Node2D" parent="."]
 
@@ -965,195 +5305,61 @@ transform/scale = Vector2( 1, 0.806395 )
 
 [node name="background" type="Sprite" parent="tutorial_reports"]
 
-transform/pos = Vector2( 0.327393, -0.167065 )
-transform/scale = Vector2( 0.0564646, 0.0607871 )
-texture = ExtResource( 21 )
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( 6.03098, 4.72945 )
+transform/scale = Vector2( 0.047212, 0.0154151 )
+texture = ExtResource( 24 )
+flip_v = true
 
 [node name="warning" type="RichTextLabel" parent="tutorial_reports"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -16.0
-margin/top = -10.0
-margin/right = 644.0
-margin/bottom = 317.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -14.0
+margin/top = -3.0
+margin/right = 597.0
+margin/bottom = 206.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Our first of the tabs is the Finance Reports. As you can see the level goal for Hollyhock is 75% market share. We only have 10% so we have a long way to go. Let's move on."
+bbcode/bbcode = "And last in the Reports tab is the News. It is mostly just an expanded version of the genre predictions."
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="reports_button_ok" type="LinkButton" parent="tutorial_reports"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -3.0
-margin/top = 6.0
-margin/right = 49.0
-margin/bottom = 49.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="reports_pointer" type="Sprite" parent="tutorial_reports"]
-
-transform/pos = Vector2( -15.8054, -24.8591 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.261376 )
-texture = ExtResource( 24 )
 
 [node name="finances_pointer" type="Sprite" parent="tutorial_reports"]
 
-transform/pos = Vector2( -9.46579, -18.7939 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.137204 )
-texture = ExtResource( 24 )
-
-[node name="other_pointer" type="Sprite" parent="tutorial_reports"]
-
-transform/pos = Vector2( -9.32078, -14.6413 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.0541027 )
-texture = ExtResource( 24 )
+transform/pos = Vector2( -12.1785, -35.4509 )
+transform/rot = -37.0565
+transform/scale = Vector2( 0.0813669, 0.0671947 )
+texture = ExtResource( 26 )
+flip_h = true
 
 [node name="reports_box" type="Sprite" parent="tutorial_reports"]
 
-transform/pos = Vector2( -14.5281, -41.4985 )
-transform/scale = Vector2( 0.0796892, 0.077871 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( -12.7833, -43.3353 )
+transform/scale = Vector2( 0.114586, 0.114607 )
+texture = ExtResource( 27 )
 
 [node name="finances_box" type="Sprite" parent="tutorial_reports"]
 
-transform/pos = Vector2( -10.3451, -27.6976 )
-transform/scale = Vector2( 0.106758, 0.050062 )
-texture = ExtResource( 25 )
+visibility/visible = false
+transform/pos = Vector2( -10.2576, -30.511 )
+transform/scale = Vector2( 0.183335, 0.0641346 )
+texture = ExtResource( 27 )
 
 [node name="other_box" type="Sprite" parent="tutorial_reports"]
 
-transform/pos = Vector2( -10.3451, -21.1802 )
-transform/scale = Vector2( 0.106758, 0.0850285 )
-texture = ExtResource( 25 )
-
-[node name="reports_menu_timer" type="Timer" parent="tutorial_reports"]
-
-process_mode = 1
-wait_time = 12.0
-one_shot = true
-autostart = false
-
-[node name="tutorial_news" type="Node2D" parent="."]
-
-process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 4.77667, -23.0095 )
-transform/scale = Vector2( 1, 0.806395 )
+transform/pos = Vector2( -10.2497, -24.6665 )
+transform/scale = Vector2( 0.183335, 0.0527548 )
+texture = ExtResource( 27 )
 
-[node name="background" type="Sprite" parent="tutorial_news"]
+[node name="other_box1" type="Sprite" parent="tutorial_reports"]
 
-transform/pos = Vector2( -4.966, 1.66074 )
-transform/scale = Vector2( 0.0399227, 0.0525447 )
-texture = ExtResource( 21 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="warning" type="RichTextLabel" parent="tutorial_news"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -17.0
-margin/top = -7.0
-margin/right = 471.0
-margin/bottom = 320.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "The news will provide you with daily chuckle, and a more complete look at the game genre predictions for tomorrow."
-visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="news_button_ok" type="LinkButton" parent="tutorial_news"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -7.0
-margin/top = 6.0
-margin/right = 45.0
-margin/bottom = 49.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="reports_pointer" type="Sprite" parent="tutorial_news"]
-
-transform/pos = Vector2( -2.86712, 14.1852 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.076901 )
-texture = ExtResource( 24 )
-
-[node name="reports_pointer1" type="Sprite" parent="tutorial_news"]
-
-transform/pos = Vector2( -20.0094, 10.4723 )
-transform/rot = -80.0
-transform/scale = Vector2( 0.185157, 0.05505 )
-texture = ExtResource( 24 )
-
-[node name="reports_pointer2" type="Sprite" parent="tutorial_news"]
-
-transform/pos = Vector2( 11.2189, 3.06258 )
-transform/rot = -80.0
-transform/scale = Vector2( 0.185157, 0.078059 )
-texture = ExtResource( 24 )
-
-[node name="reports_box" type="Sprite" parent="tutorial_news"]
-
-transform/pos = Vector2( -25.5399, 12.1467 )
-transform/scale = Vector2( 0.0584135, 0.072012 )
-texture = ExtResource( 25 )
-
-[node name="reports_box1" type="Sprite" parent="tutorial_news"]
-
-transform/pos = Vector2( 16.6727, -0.227366 )
-transform/scale = Vector2( 0.0384596, 0.0770189 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( -10.2497, -19.0207 )
+transform/scale = Vector2( 0.183335, 0.0633752 )
+texture = ExtResource( 27 )
 
 [node name="tutorial_supplies" type="Node2D" parent="."]
 
@@ -1168,201 +5374,111 @@ __meta__ = {
 
 [node name="first_background" type="Sprite" parent="tutorial_supplies"]
 
-transform/pos = Vector2( 6.31375, 1.28497 )
-transform/scale = Vector2( 0.0780395, 0.0562427 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -10.2833, -44.3957 )
+transform/scale = Vector2( 0.044365, 0.0112446 )
+texture = ExtResource( 24 )
+flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_supplies"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -17.0
-margin/top = -9.0
-margin/right = 960.0
-margin/bottom = 372.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -30.0
+margin/top = -51.0
+margin/right = 556.0
+margin/bottom = 119.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Now it gets interesting! Here in Hollyhock the customers believe there is nothing better than a soda and some popcorn after a video game, so that is what we have for sale. We currently have 10 of each in stock but if you want to come back and get some more it is a good idea.  I have a little money saved and the for sale price is in the green which means it is a good deal."
+bbcode/bbcode = "Now that we have our arcades set, we can move on to our concessions stock."
 visible_characters = -1
-
-[node name="supplies_button_ok" type="LinkButton" parent="tutorial_supplies"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 13.0
-margin/top = 8.0
-margin/right = 65.0
-margin/bottom = 51.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-
-[node name="supplies_pointer" type="Sprite" parent="tutorial_supplies"]
-
-transform/pos = Vector2( -14.4631, -18.3573 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.170623 )
-texture = ExtResource( 24 )
-
-[node name="buy_to_buy" type="Sprite" parent="tutorial_supplies"]
-
-transform/pos = Vector2( 14.548, -14.6483 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.0207194 )
-texture = ExtResource( 24 )
-
-[node name="finances_to_supplies_pointer" type="Sprite" parent="tutorial_supplies"]
-
-transform/pos = Vector2( -11.4551, 15.4227 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.185157, 0.140033 )
-texture = ExtResource( 24 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="supplies_box" type="Sprite" parent="tutorial_supplies"]
 
-transform/pos = Vector2( -15.9061, -30.2109 )
-transform/scale = Vector2( 0.0871748, 0.0803398 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( -16.9707, -32.9594 )
+transform/scale = Vector2( 0.106464, 0.118743 )
+texture = ExtResource( 27 )
 
-[node name="buy_box_one" type="Sprite" parent="tutorial_supplies"]
+[node name="click" type="RichTextLabel" parent="tutorial_supplies"]
 
-transform/pos = Vector2( 13.8808, -16.3724 )
-transform/scale = Vector2( 0.0167364, 0.0178709 )
-texture = ExtResource( 25 )
+visibility/visible = false
+rect/scale = Vector2( 0.2, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = 0.0
+margin/right = 101.0
+margin/bottom = 38.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "CLICK!"
+visible_characters = -1
 
-[node name="buy_box_two" type="Sprite" parent="tutorial_supplies"]
+[node name="arrow1" type="Sprite" parent="tutorial_supplies"]
 
-transform/pos = Vector2( 13.8652, -12.7669 )
-transform/scale = Vector2( 0.0167364, 0.0178709 )
-texture = ExtResource( 25 )
+visibility/visible = false
+transform/pos = Vector2( 17.6866, -5.67668 )
+transform/rot = 39.4335
+transform/scale = Vector2( 0.17106, 0.170149 )
+texture = ExtResource( 26 )
+
+[node name="supplies_box1" type="Sprite" parent="tutorial_supplies"]
+
+visibility/visible = false
+transform/pos = Vector2( -23.8998, -18.5358 )
+transform/scale = Vector2( 0.186269, 0.0570795 )
+texture = ExtResource( 27 )
+
+[node name="supplies_box2" type="Sprite" parent="tutorial_supplies"]
+
+transform/pos = Vector2( -23.9321, -13.1181 )
+transform/scale = Vector2( 0.193584, 0.0570795 )
+texture = ExtResource( 27 )
 
 [node name="supplies_icon_box" type="Sprite" parent="tutorial_supplies"]
 
-transform/pos = Vector2( 0.696037, 17.6817 )
-transform/scale = Vector2( 0.122798, 0.108476 )
-texture = ExtResource( 25 )
+visibility/visible = false
+transform/pos = Vector2( -6.05738, 16.7831 )
+transform/scale = Vector2( 0.171906, 0.183603 )
+texture = ExtResource( 27 )
+
+[node name="supplies_icon_box3" type="Sprite" parent="tutorial_supplies"]
+
+visibility/visible = false
+transform/pos = Vector2( 20.4226, 3.0562 )
+transform/scale = Vector2( 0.194382, 0.0849141 )
+texture = ExtResource( 27 )
+
+[node name="supplies_icon_box2" type="Sprite" parent="tutorial_supplies"]
+
+visibility/visible = false
+transform/pos = Vector2( -5.55873, -14.2396 )
+transform/scale = Vector2( 0.192668, 0.290151 )
+texture = ExtResource( 27 )
+
+[node name="supplies_icon_box1" type="Sprite" parent="tutorial_supplies"]
+
+visibility/visible = false
+transform/pos = Vector2( 10.3237, 17.2227 )
+transform/scale = Vector2( 0.090009, 0.183603 )
+texture = ExtResource( 27 )
 
 [node name="finances_box" type="Sprite" parent="tutorial_supplies"]
 
-transform/pos = Vector2( -25.5965, 10.2073 )
-transform/scale = Vector2( 0.142426, 0.254325 )
-texture = ExtResource( 25 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="tutorial_games" type="Node2D" parent="."]
-
-process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 0.512787, 10.8623 )
-transform/scale = Vector2( 0.947031, 0.806395 )
-
-[node name="second_background" type="Sprite" parent="tutorial_games"]
-
-transform/pos = Vector2( -24.2636, -21.3275 )
-transform/scale = Vector2( 0.0264072, 0.095323 )
-texture = ExtResource( 21 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="second_warning" type="RichTextLabel" parent="tutorial_games"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -32.0
-margin/top = -40.0
-margin/right = 277.0
-margin/bottom = 730.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Here we set the games that are available in each arcade. Tomorrow we have a 55% chance of meta games so we have preset the both of the available arcades with out current meta game, Video Game Glory."
-visible_characters = -1
-
-[node name="games_button_ok" type="LinkButton" parent="tutorial_games"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -21.0
-margin/top = -7.0
-margin/right = 31.0
-margin/bottom = 36.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-
-[node name="supplies_pointer" type="Sprite" parent="tutorial_games"]
-
-transform/pos = Vector2( -14.1288, -25.813 )
-transform/rot = -60.0
-transform/scale = Vector2( 0.185157, 0.0532418 )
-texture = ExtResource( 24 )
-
-[node name="supplies_pointer1" type="Sprite" parent="tutorial_games"]
-
-transform/pos = Vector2( -12.1395, -16.8516 )
-transform/rot = 60.0
-transform/scale = Vector2( 0.185157, 0.0879931 )
-texture = ExtResource( 24 )
-
-[node name="second_box_to_confirm" type="Sprite" parent="tutorial_games"]
-
-transform/pos = Vector2( 21.8124, -28.1357 )
-transform/rot = -5.0
-transform/scale = Vector2( 0.185157, 0.209115 )
-texture = ExtResource( 24 )
-
-[node name="supplies_box" type="Sprite" parent="tutorial_games"]
-
-transform/pos = Vector2( -9.29318, -30.2109 )
-transform/scale = Vector2( 0.0652914, 0.0803398 )
-texture = ExtResource( 25 )
-
-[node name="buy_box_one" type="Sprite" parent="tutorial_games"]
-
-transform/pos = Vector2( 9.75224, -13.7207 )
-transform/scale = Vector2( 0.369562, 0.0852454 )
-texture = ExtResource( 25 )
-
-[node name="buy_box_one1" type="Sprite" parent="tutorial_games"]
-
-transform/pos = Vector2( 21.9787, -42.3591 )
-transform/scale = Vector2( 0.0424079, 0.0789573 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( -24.0716, 10.6118 )
+transform/scale = Vector2( 0.190928, 0.284684 )
+texture = ExtResource( 27 )
 
 [node name="tutorial_pricing" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -1370,242 +5486,104 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="first_background" type="Sprite" parent="tutorial_pricing"]
+[node name="first_background1" type="Sprite" parent="tutorial_pricing"]
 
-transform/pos = Vector2( -4.06607, -42.3185 )
-transform/scale = Vector2( 0.0744952, 0.0365855 )
-texture = ExtResource( 21 )
-
-[node name="second_background" type="Sprite" parent="tutorial_pricing"]
-
-visibility/visible = false
-transform/pos = Vector2( -4.06607, -42.3185 )
-transform/scale = Vector2( 0.0744952, 0.0365855 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -10.2833, -44.3957 )
+transform/scale = Vector2( 0.044365, 0.0112446 )
+texture = ExtResource( 24 )
+flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_pricing"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
-margin/top = -48.0
-margin/right = 950.0
-margin/bottom = 333.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -30.0
+margin/top = -51.0
+margin/right = 563.0
+margin/bottom = 119.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Because the forecast is only a 55% chance we will price our concessions at the middle of the range, so we don't turn away our few customers by charging them too much."
+bbcode/bbcode = "Click okay when you are happy with the prices you have set and we will move on to the next section."
 visible_characters = -1
 
-[node name="second_warning" type="RichTextLabel" parent="tutorial_pricing"]
+[node name="ok_button_background" type="Sprite" parent="tutorial_pricing"]
 
-visibility/visible = false
-rect/scale = Vector2( 0.05, 0.05 )
+visibility/behind_parent = true
+transform/pos = Vector2( 19.6296, 13.2642 )
+transform/rot = 180.0
+transform/scale = Vector2( 0.0383662, 0.0455973 )
+texture = ExtResource( 5 )
+
+[node name="ok" type="RichTextLabel" parent="tutorial_pricing"]
+
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
-margin/top = -48.0
-margin/right = 950.0
-margin/bottom = 333.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = 16.0
+margin/top = 12.0
+margin/right = 92.0
+margin/bottom = 46.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "And we will do the same with the two available arcades."
+bbcode/bbcode = "OKAY"
 visible_characters = -1
 
-[node name="pricing_button_one" type="LinkButton" parent="tutorial_pricing"]
+[node name="ok_button" type="LinkButton" parent="tutorial_pricing/ok"]
 
-rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2.0
-margin/top = -38.0
-margin/right = 54.0
-margin/bottom = 5.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 72.0
+margin/bottom = 30.0
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "OK"
-underline = 2
-
-[node name="pricing_button_two" type="LinkButton" parent="tutorial_pricing"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 2.0
-margin/top = -38.0
-margin/right = 54.0
-margin/bottom = 5.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-
-[node name="pricing_pointer" type="Sprite" parent="tutorial_pricing"]
-
-transform/pos = Vector2( -3.20992, -34.2983 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.0211542 )
-texture = ExtResource( 24 )
-
-[node name="warning_to_prediction" type="Sprite" parent="tutorial_pricing"]
-
-transform/pos = Vector2( 19.9018, -42.2557 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.185157, 0.0127523 )
-texture = ExtResource( 24 )
-
-[node name="concessions_over" type="Sprite" parent="tutorial_pricing"]
-
-transform/pos = Vector2( -14.566, -14.5218 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.185157, 0.0623339 )
-texture = ExtResource( 24 )
-
-[node name="arcades_over" type="Sprite" parent="tutorial_pricing"]
-
-visibility/visible = false
-transform/pos = Vector2( -14.7918, -10.1518 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.185157, 0.0684644 )
-texture = ExtResource( 24 )
-
-[node name="pricing_to_concessions" type="Sprite" parent="tutorial_pricing"]
-
-transform/pos = Vector2( -11.514, -19.967 )
-transform/rot = -40.0
-transform/scale = Vector2( 0.185157, 0.167634 )
-texture = ExtResource( 24 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pricing_to_arcades" type="Sprite" parent="tutorial_pricing"]
-
-visibility/visible = false
-transform/pos = Vector2( -11.5346, -17.8133 )
-transform/rot = -35.0
-transform/scale = Vector2( 0.185157, 0.196507 )
-texture = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="pricing_box" type="Sprite" parent="tutorial_pricing"]
 
-transform/pos = Vector2( -3.32662, -29.962 )
-transform/scale = Vector2( 0.0757883, 0.0715747 )
-texture = ExtResource( 25 )
+visibility/visible = false
+transform/pos = Vector2( -23.7773, -19.6038 )
+transform/scale = Vector2( 0.189266, 0.0589262 )
+texture = ExtResource( 27 )
 
-[node name="concessions_box" type="Sprite" parent="tutorial_pricing"]
+[node name="pricing_box1" type="Sprite" parent="tutorial_pricing"]
 
-transform/pos = Vector2( 7.24002, -12.7682 )
-transform/scale = Vector2( 0.370197, 0.0811905 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( -7.17912, -32.4628 )
+transform/scale = Vector2( 0.129525, 0.109483 )
+texture = ExtResource( 27 )
 
 [node name="concessions_tab_box" type="Sprite" parent="tutorial_pricing"]
 
-transform/pos = Vector2( -23.6437, -13.9672 )
-transform/scale = Vector2( 0.122798, 0.0555069 )
-texture = ExtResource( 25 )
-
-[node name="arcades_box" type="Sprite" parent="tutorial_pricing"]
-
-visibility/visible = false
-transform/pos = Vector2( -23.8052, -9.27355 )
-transform/scale = Vector2( 0.122798, 0.0555069 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( -23.8227, -13.4361 )
+transform/scale = Vector2( 0.187425, 0.0515142 )
+texture = ExtResource( 27 )
 
 [node name="prediction_box" type="Sprite" parent="tutorial_pricing"]
 
-transform/pos = Vector2( 22.0698, -42.0859 )
-transform/scale = Vector2( 0.0429954, 0.0803389 )
-texture = ExtResource( 25 )
-
-[node name="tutorial_marketing" type="Node2D" parent="."]
-
-process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 0.512785, 10.8623 )
-transform/scale = Vector2( 0.947031, 0.806395 )
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( 10.4318, 16.6486 )
+transform/scale = Vector2( 0.0846538, 0.186745 )
+texture = ExtResource( 27 )
 
-[node name="first_background" type="Sprite" parent="tutorial_marketing"]
+[node name="prediction_box1" type="Sprite" parent="tutorial_pricing"]
 
-transform/pos = Vector2( -4.06607, -42.3185 )
-transform/scale = Vector2( 0.0744952, 0.0365855 )
-texture = ExtResource( 21 )
-
-[node name="first_warning" type="RichTextLabel" parent="tutorial_marketing"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -27.0
-margin/top = -48.0
-margin/right = 950.0
-margin/bottom = 333.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "We need to get a jump start on taking over the competitors customers. We will set out marketing to $20 a day and see how much that helps."
-visible_characters = -1
-
-[node name="marketing_button" type="LinkButton" parent="tutorial_marketing"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 2.0
-margin/top = -38.0
-margin/right = 54.0
-margin/bottom = 5.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-
-[node name="pricing_pointer" type="Sprite" parent="tutorial_marketing"]
-
-transform/pos = Vector2( 5.11742, -34.2983 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.0211542 )
-texture = ExtResource( 24 )
-
-[node name="pricing_box" type="Sprite" parent="tutorial_marketing"]
-
-transform/pos = Vector2( 4.75831, -29.5646 )
-transform/scale = Vector2( 0.106628, 0.0715747 )
-texture = ExtResource( 25 )
+visibility/visible = false
+transform/pos = Vector2( -5.81369, 16.7585 )
+transform/scale = Vector2( 0.176858, 0.197736 )
+texture = ExtResource( 27 )
 
 [node name="tutorial_upgrades" type="Node2D" parent="."]
 
@@ -1613,71 +5591,60 @@ process/pause_mode = 2
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="first_background" type="Sprite" parent="tutorial_upgrades"]
 
-transform/pos = Vector2( 0.354671, -42.8521 )
-transform/scale = Vector2( 0.0880002, 0.0401947 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -10.8486, -44.4195 )
+transform/scale = Vector2( 0.046027, 0.010089 )
+texture = ExtResource( 24 )
+flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_upgrades"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
+margin/left = -31.0
 margin/top = -50.0
-margin/right = 1092.0
-margin/bottom = 194.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/right = 583.0
+margin/bottom = 94.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "We can also steal some customers from the competition by upgrading the storefront so I have purchased the decent storefront for you. Other upgrades include more arcade stations, and in store entertainment so the customers will wait longer in line. We can get those later when we have more customers."
+bbcode/bbcode = "First along the side is the Storefront upgrades. Use these to help the look of the arcades and draw more customers in."
 visible_characters = -1
 
-[node name="upgrades_button" type="LinkButton" parent="tutorial_upgrades"]
+[node name="pricing_box" type="Sprite" parent="tutorial_upgrades"]
 
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 23.0
-margin/top = -38.0
-margin/right = 75.0
-margin/bottom = 5.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
+transform/pos = Vector2( 4.74189, -32.3209 )
+transform/scale = Vector2( 0.14385, 0.0988061 )
+texture = ExtResource( 27 )
 
-[node name="pricing_pointer" type="Sprite" parent="tutorial_upgrades"]
+[node name="pricing_box1" type="Sprite" parent="tutorial_upgrades"]
 
-transform/pos = Vector2( 14.7335, -34.2983 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.0211542 )
-texture = ExtResource( 24 )
+visibility/visible = false
+transform/pos = Vector2( -23.716, -19.1296 )
+transform/scale = Vector2( 0.189387, 0.0724809 )
+texture = ExtResource( 27 )
 
-[node name="pricing_pointer1" type="Sprite" parent="tutorial_upgrades"]
+[node name="pricing_box2" type="Sprite" parent="tutorial_upgrades"]
 
-transform/pos = Vector2( -21.4155, -27.6095 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.184585 )
-texture = ExtResource( 24 )
+transform/pos = Vector2( -23.716, -13.1947 )
+transform/scale = Vector2( 0.189387, 0.0548959 )
+texture = ExtResource( 27 )
+
+[node name="pricing_box3" type="Sprite" parent="tutorial_upgrades"]
+
+visibility/visible = false
+transform/pos = Vector2( -23.716, -8.10811 )
+transform/scale = Vector2( 0.189387, 0.05134 )
+texture = ExtResource( 27 )
 
 [node name="tutorial_locals" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -1687,106 +5654,51 @@ __meta__ = {
 
 [node name="first_background" type="Sprite" parent="tutorial_locals"]
 
-transform/pos = Vector2( 0.255539, -43.4482 )
-transform/scale = Vector2( 0.0880002, 0.0372141 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -9.46886, -44.4189 )
+transform/scale = Vector2( 0.0478571, 0.00992204 )
+texture = ExtResource( 24 )
+flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_locals"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
+margin/left = -30.0
 margin/top = -50.0
-margin/right = 1092.0
-margin/bottom = 222.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/right = 596.0
+margin/bottom = 84.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "This is the locals tab. You can check here everyday and a local character might be willing to sabatoge a competitor for you. There is nobody available here today."
+bbcode/bbcode = "Here we have the loans available from the local bank. If you find yourself in a spot you can come get a loan, but as with all loans you should be careful!"
 visible_characters = -1
 
-[node name="second_warning" type="RichTextLabel" parent="tutorial_locals"]
+[node name="pricing_box3" type="Sprite" parent="tutorial_locals"]
 
 visibility/visible = false
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -27.0
-margin/top = -50.0
-margin/right = 1092.0
-margin/bottom = 331.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "If you get into real financial trouble you can check in with the loan officer at the bank and they will be willing to take out a small business loan, but be careful!"
-visible_characters = -1
-
-[node name="locals_button" type="LinkButton" parent="tutorial_locals"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 14.0
-margin/top = -42.0
-margin/right = 66.0
-margin/bottom = 1.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-
-[node name="pricing_pointer" type="Sprite" parent="tutorial_locals"]
-
-transform/pos = Vector2( 21.4251, -35.1228 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.0495841 )
-texture = ExtResource( 24 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pricing_pointer1" type="Sprite" parent="tutorial_locals"]
-
-transform/pos = Vector2( -21.3913, -26.9182 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.19842 )
-texture = ExtResource( 24 )
-
-[node name="pricing_box" type="Sprite" parent="tutorial_locals"]
-
-transform/pos = Vector2( 20.7803, -29.8612 )
-transform/scale = Vector2( 0.0612665, 0.0715747 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( 15.3053, -32.409 )
+transform/scale = Vector2( 0.0970986, 0.101696 )
+texture = ExtResource( 27 )
 
 [node name="pricing_box1" type="Sprite" parent="tutorial_locals"]
 
-transform/pos = Vector2( -23.7987, -11.8897 )
-transform/scale = Vector2( 0.109084, 0.101897 )
-texture = ExtResource( 25 )
+visibility/visible = false
+transform/pos = Vector2( -23.9591, -18.9561 )
+transform/scale = Vector2( 0.195409, 0.0755639 )
+texture = ExtResource( 27 )
 
-[node name="locals_timer" type="Timer" parent="tutorial_locals"]
+[node name="pricing_box2" type="Sprite" parent="tutorial_locals"]
 
-process_mode = 1
-wait_time = 8.0
-one_shot = true
-autostart = false
+transform/pos = Vector2( -23.6922, -13.5579 )
+transform/scale = Vector2( 0.186622, 0.0685323 )
+texture = ExtResource( 27 )
 
 [node name="tutorial_research" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -1796,116 +5708,40 @@ __meta__ = {
 
 [node name="first_background" type="Sprite" parent="tutorial_research"]
 
-transform/pos = Vector2( 0.255539, -43.4482 )
-transform/scale = Vector2( 0.0880002, 0.0372141 )
-texture = ExtResource( 21 )
+transform/pos = Vector2( -6.2008, -13.4731 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0278675, 0.0373426 )
+texture = ExtResource( 24 )
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_research"]
 
-rect/scale = Vector2( 0.05, 0.05 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
-margin/top = -50.0
-margin/right = 1092.0
-margin/bottom = 222.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -28.0
+margin/top = -24.0
+margin/right = 366.0
+margin/bottom = 219.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "The last tab is a fund for purchasing a new genre of game. We won't worry about putting anything in there right now."
+bbcode/bbcode = "I will go while you get everything ready just how you want it. Whenever you are ready to open the arcade just click on the Start Day button right above my head!"
 visible_characters = -1
-
-[node name="research_button" type="LinkButton" parent="tutorial_research"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 19.0
-margin/top = -41.0
-margin/right = 71.0
-margin/bottom = 2.0
-custom_fonts/font = ExtResource( 22 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-
-[node name="pricing_pointer" type="Sprite" parent="tutorial_research"]
-
-transform/pos = Vector2( 27.5985, -35.4815 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.0495841 )
-texture = ExtResource( 24 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="pricing_box" type="Sprite" parent="tutorial_research"]
 
-transform/pos = Vector2( 27.926, -30.2199 )
-transform/scale = Vector2( 0.091448, 0.0715747 )
-texture = ExtResource( 25 )
-
-[node name="locals_timer" type="Timer" parent="tutorial_research"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = true
-autostart = false
-
-[node name="finish_up" type="Node2D" parent="."]
-
-process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 0.512785, 10.8623 )
-transform/scale = Vector2( 0.947031, 0.806395 )
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( 25.8918, -32.4093 )
+transform/scale = Vector2( 0.131399, 0.0935725 )
+texture = ExtResource( 27 )
 
-[node name="first_background" type="Sprite" parent="finish_up"]
+[node name="pricing_box1" type="Sprite" parent="tutorial_research"]
 
-transform/pos = Vector2( 5.07049, -13.0834 )
-transform/scale = Vector2( 0.0731306, 0.0581224 )
-texture = ExtResource( 21 )
-
-[node name="first_warning" type="RichTextLabel" parent="finish_up"]
-
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -14.0
-margin/top = -18.0
-margin/right = 748.0
-margin/bottom = 220.0
-custom_fonts/normal_font = ExtResource( 22 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "We are all set up and ready to go! Just click the Start Day button and we will see how the new business plan works out!"
-visible_characters = -1
-
-[node name="pricing_pointer" type="Sprite" parent="finish_up"]
-
-transform/pos = Vector2( 19.5086, 4.79016 )
-transform/rot = 2.0
-transform/scale = Vector2( 0.185157, 0.130546 )
-texture = ExtResource( 24 )
-
-[node name="pricing_box" type="Sprite" parent="finish_up"]
-
-transform/pos = Vector2( 20.2764, 17.4316 )
-transform/scale = Vector2( 0.240862, 0.142267 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( 23.9526, -45.2894 )
+transform/scale = Vector2( 0.179223, 0.11064 )
+texture = ExtResource( 27 )
 
 [node name="cursor_blink" type="Timer" parent="."]
 
@@ -1914,76 +5750,121 @@ wait_time = 2.0
 one_shot = true
 autostart = false
 
-[node name="research_spending_edit" type="LineEdit" parent="."]
-
-visibility/visible = false
-rect/scale = Vector2( 0.08, 0.08 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 15.0
-margin/top = 3.0
-margin/right = 145.0
-margin/bottom = 45.0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-placeholder/alpha = 0.6
-focus_mode = 2
-caret/caret_blink = false
-caret/caret_blink_speed = 0.65
-
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 26 )
+stream/stream = ExtResource( 28 )
 stream/play = false
 stream/loop = true
 stream/volume_db = 0.0
-stream/autoplay = false
+stream/autoplay = true
 stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/arcade_pricing = SubResource( 1 )
+anims/arcade_upgrades = SubResource( 2 )
+anims/concessions_pricing = SubResource( 3 )
+anims/customers = SubResource( 4 )
+anims/entertainment = SubResource( 5 )
+anims/finances = SubResource( 6 )
+anims/games = SubResource( 7 )
+anims/loans = SubResource( 8 )
+anims/marketing = SubResource( 9 )
+anims/news = SubResource( 10 )
+anims/research = SubResource( 11 )
+anims/storefront = SubResource( 12 )
+anims/supplies = SubResource( 13 )
+anims/tutorial = SubResource( 14 )
+anims/tutorial_finish = SubResource( 15 )
+anims/tutorial_pt2 = SubResource( 16 )
+anims/tutorial_pt3 = SubResource( 17 )
+anims/tutorial_pt4 = SubResource( 18 )
+anims/tutorial_pt5 = SubResource( 19 )
+anims/tutorial_pt6 = SubResource( 20 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="pixel" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 0.0705814, 0.619905 )
+transform/scale = Vector2( 0.996334, 1.01366 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="crotch" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 22.2317, 10.9105 )
+transform/scale = Vector2( 0.0909543, 0.147603 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="left_arm" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 18.3179, 3.10948 )
+transform/rot = -22.4228
+transform/scale = Vector2( 0.0909543, 0.147603 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="right_arm" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 27.5148, 2.97323 )
+transform/rot = 24.1075
+transform/scale = Vector2( 0.0909543, 0.147603 )
+texture = ExtResource( 30 )
+flip_h = true
+
+[node name="torso" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 22.4082, 2.93272 )
+transform/scale = Vector2( 0.122058, 0.233854 )
+texture = ExtResource( 31 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="head" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 22.9738, -10.8119 )
+transform/scale = Vector2( 0.122058, 0.233854 )
+texture = ExtResource( 32 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 
 [connection signal="button_down" from="low_funds_warning/low_funds_ok" to="." method="_on_low_funds_ok_button_down"]
 
-[connection signal="button_down" from="game_over/game_over_ok" to="." method="_on_game_over_ok_button_down"]
+[connection signal="button_down" from="game_over_alert/game_over_ok" to="." method="_on_game_over_ok_button_down"]
 
 [connection signal="button_down" from="genre_discovery/genre_discover_ok" to="." method="_on_genre_discover_ok_button_down"]
 
 [connection signal="button_down" from="hollyhock_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
 
+[connection signal="button_down" from="skip_or_play/skip" to="." method="_on_skip_button_down"]
+
+[connection signal="button_down" from="skip_or_play/play" to="." method="_on_play_button_down"]
+
 [connection signal="button_down" from="tutorial_start/tutorial_start_yes_button" to="." method="_on_tutorial_start_yes_button_button_down"]
 
 [connection signal="button_down" from="tutorial_start/tutorial_start_no_button" to="." method="_on_tutorial_start_no_button_button_down"]
 
-[connection signal="button_down" from="tutorial_persistent_menu/persistent_menu_ok" to="." method="_on_persistent_menu_ok_button_down"]
+[connection signal="button_down" from="tutorial_pricing/ok/ok_button" to="." method="_on_ok_button_button_down"]
 
-[connection signal="timeout" from="tutorial_persistent_menu/persistent_menu_timer" to="." method="_on_persistent_menu_timer_timeout"]
-
-[connection signal="button_down" from="tutorial_reports/reports_button_ok" to="." method="_on_reports_button_ok_button_down"]
-
-[connection signal="timeout" from="tutorial_reports/reports_menu_timer" to="." method="_on_reports_menu_timer_timeout"]
-
-[connection signal="button_down" from="tutorial_news/news_button_ok" to="." method="_on_news_button_ok_button_down"]
-
-[connection signal="button_down" from="tutorial_supplies/supplies_button_ok" to="." method="_on_supplies_button_ok_button_down"]
-
-[connection signal="button_down" from="tutorial_games/games_button_ok" to="." method="_on_games_button_ok_button_down"]
-
-[connection signal="button_down" from="tutorial_pricing/pricing_button_one" to="." method="_on_pricing_button_one_button_down"]
-
-[connection signal="button_down" from="tutorial_pricing/pricing_button_two" to="." method="_on_pricing_button_two_button_down"]
-
-[connection signal="button_down" from="tutorial_marketing/marketing_button" to="." method="_on_marketing_button_button_down"]
-
-[connection signal="button_down" from="tutorial_upgrades/upgrades_button" to="." method="_on_upgrades_button_button_down"]
-
-[connection signal="button_down" from="tutorial_locals/locals_button" to="." method="_on_locals_button_button_down"]
-
-[connection signal="timeout" from="tutorial_locals/locals_timer" to="." method="_on_locals_timer_timeout"]
-
-[connection signal="button_down" from="tutorial_research/research_button" to="." method="_on_research_button_button_down"]
+[connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
 
 

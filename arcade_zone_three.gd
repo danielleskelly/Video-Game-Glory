@@ -49,7 +49,6 @@ func move_along_first_in_line():
 			x.set_hidden(true)
 		move_node.get_child(0).get_child(7).set_texture(price_fail)
 		move_node.get_child(0).get_child(7).set_scale(Vector2(.3, .3))
-		
 		new_parent = get_tree().get_current_scene().get_node("queue_to_exit") #customer leaves
 		old_parent.remove_child(old_parent.get_child(0))
 		move_node.set_offset(0)

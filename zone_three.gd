@@ -7,9 +7,9 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	range_output.clear()
-	range_output.add_text(str(price_check.arcade_three_range_low) + " - " + str(price_check.arcade_three_range_high))
 	if (towns.town_select == "hollyhock"):
+		range_output.clear()
+		range_output.add_text(str(price_check.hollyhock_arcade_range_low) + " - " + str(price_check.hollyhock_arcade_range_high))
 		price_output.clear()
 		price_output.add_text(str(price_check.hollyhock_arcade_three_price))
 

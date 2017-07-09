@@ -11,7 +11,8 @@ transform/scale = Vector2( 1.79664, 1.69994 )
 
 [node name="meta" type="Sprite" parent="."]
 
-transform/pos = Vector2( 3.68231, 6.05389 )
+transform/pos = Vector2( 3.75446, 7.23164 )
+transform/scale = Vector2( 1.33846, 1.25488 )
 texture = ExtResource( 1 )
 
 [node name="classic" type="RichTextLabel" parent="."]
@@ -202,12 +203,9 @@ visible_characters = -1
 [node name="pleasure_bubble" type="Sprite" parent="."]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 3.27174, 3.00261 )
-transform/scale = Vector2( 0.95, 0.95 )
+transform/pos = Vector2( 4.63404, 6.1821 )
+transform/scale = Vector2( 0.0326477, 0.0273381 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="others" type="Sprite" parent="."]
 
