@@ -4,7 +4,7 @@ var hollyhock_town_population = 500
 var hollyhock_genre_two_key = false
 var hollyhock_genre_three_key = false
 var hollyhock_advertising_max = 100
-var hollyhock_advertising = 20
+var hollyhock_advertising = 0
 
 var hollyhock_player_marketshare = .1
 var hollyhock_competitor_one_marketshare = .63
@@ -53,26 +53,9 @@ func customer_math():
 		#determines base player marketshare
 		player_marketshare_effect = hollyhock_town_population * hollyhock_player_marketshare
 		#determines base competitor one marketshare
-		comp_one_marketshare_effect = hollyhock_town_population * hollyhock_competitor_one_marketshare
-		#determines base competitor two marketshare
-		comp_two_marketshare_effect = hollyhock_town_population * hollyhock_competitor_two_marketshare
-		#creates the adjustment number for marketing
 		marketshare_adjustment = .1 * hollyhock_town_population * float(hollyhock_advertising) / float(hollyhock_advertising_max)
 		#adjusts player marketshare up for marketing
 		player_marketing_adjustment = player_marketshare_effect + marketshare_adjustment
-		#adjusts competitor one marketshare down by half for marketing
-		comp_one_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2
-		#adjusts competitor one marketshare down by half for marketing
-		comp_two_adjusted_marketshare = comp_two_marketshare_effect - float(marketshare_adjustment) / 2
-		#sets the competitors sales made and sales lost
-		randomize()
-		one_sales_made = range(0, comp_one_adjusted_marketshare + 1)[randi()%range(0, comp_one_adjusted_marketshare + 1).size()]
-		one_sales_lost = int(comp_one_adjusted_marketshare - one_sales_made)
-		one_cash = one_sales_made * 10
-		two_sales_made = range(0, comp_two_adjusted_marketshare + 1)[randi()%range(0, comp_two_adjusted_marketshare + 1).size()]
-		two_sales_lost = int(comp_two_adjusted_marketshare - two_sales_made)
-		two_cash = two_sales_made * 10
-		#completes the player's specific calculations
 		#total number of customers interested in the first genre
 		player_prediction_one = player_marketing_adjustment * meta_prediction
 		#then if the second genre is available it performs the actions from prediction forward for the second genre
@@ -96,24 +79,11 @@ func daily_marketshare_adjustment():
 		if (customer_math.hollyhock_player_marketshare == 1):
 			pass
 		else:
-			if ((hollyhock_competitor_one_marketshare > 0) and (hollyhock_competitor_two_marketshare > 0)):
-				if ((customer_globals.sales_made > customer_globals.sales_lost) and (money.hollyhock_cash > 100)):
-					hollyhock_player_marketshare = hollyhock_player_marketshare + .2
-					hollyhock_competitor_one_marketshare = hollyhock_competitor_one_marketshare - .1
-					hollyhock_competitor_two_marketshare = hollyhock_competitor_two_marketshare - .1
-				elif ((customer_globals.sales_made > customer_globals.sales_lost) or (money.hollyhock_cash > 100)):
-					hollyhock_player_marketshare = hollyhock_player_marketshare + .1
-					hollyhock_competitor_one_marketshare = hollyhock_competitor_one_marketshare - .05
-					hollyhock_competitor_two_marketshare = hollyhock_competitor_two_marketshare - .05
-			elif ((hollyhock_competitor_one_marketshare <= 0) and (hollyhock_competitor_two_marketshare > 0)):
-				if ((customer_globals.sales_made > customer_globals.sales_lost) and (money.hollyhock_cash > 100)):
-					hollyhock_player_marketshare = hollyhock_player_marketshare + .2
-					hollyhock_competitor_two_marketshare = hollyhock_competitor_two_marketshare - .2
-				elif ((customer_globals.sales_made > customer_globals.sales_lost) or (money.hollyhock_cash > 100)):
-					hollyhock_player_marketshare = hollyhock_player_marketshare + .1
-					hollyhock_competitor_two_marketshare = hollyhock_competitor_two_marketshare - .1
-			elif ((hollyhock_competitor_two_marketshare <= 0) and (hollyhock_competitor_one_marketshare <= 0)):
-				pass
+			if ((customer_globals.sales_made > customer_globals.sales_lost) and (money.hollyhock_cash > 100)):
+				hollyhock_player_marketshare = hollyhock_player_marketshare + .2
+			elif ((customer_globals.sales_made > customer_globals.sales_lost) or (money.hollyhock_cash > 100)):
+				hollyhock_player_marketshare = hollyhock_player_marketshare + .1
+
 
 func delete_children():
 	var customer_queue_children = get_tree().get_current_scene().get_node("customer_queue").get_children()

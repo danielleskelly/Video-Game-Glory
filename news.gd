@@ -16,13 +16,19 @@ func _process(delta):
 		game_forecast_output_one.add_text("Meta %" + str(int(customer_math.meta_prediction * 100)) + "\n\n")
 		get_node("genre_one_icon").set_texture(meta_icon)
 		get_node("genre_one_icon").set_scale(Vector2(.35,.5))
-		if (customer_math.hollyhock_genre_two_key == false):
+		if (customer_math.hollyhock_genre_two_key == true):
 			game_forecast_output_two.clear()
 			game_forecast_output_two.add_text("Classic %" + str(int(customer_math.classic_prediction * 100)) + "\n\n")
 			get_node("genre_two_icon").set_texture(meta_icon)
 			get_node("genre_two_icon").set_scale(Vector2(.35,.5))
-		if (customer_math.hollyhock_genre_three_key == false):
+		elif (customer_math.hollyhock_genre_two_key == false):
+			get_node("genre_two_icon").set_hidden(true)
+			get_node("genre_one_background1").set_hidden(true)
+		if (customer_math.hollyhock_genre_three_key == true):
 			game_forecast_output_three.clear()
 			game_forecast_output_three.add_text("Platformer %" + str(int(customer_math.platformer_prediction * 100)))
 			get_node("genre_three_icon").set_texture(meta_icon)
 			get_node("genre_three_icon").set_scale(Vector2(.35,.5))
+		elif (customer_math.hollyhock_genre_three_key == false):
+			get_node("genre_three_icon").set_hidden(true)
+			get_node("genre_one_background2").set_hidden(true)

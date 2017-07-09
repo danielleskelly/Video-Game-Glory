@@ -64,6 +64,9 @@ func _on_raise_button_down():
 
 func _on_confirm_button_down():
 	if (towns.town_select == "hollyhock"):
+		if (get_tree().get_current_scene().get_node("AnimationPlayer").get_current_animation() == "tutorial_pt5"):
+			if (customer_math.hollyhock_advertising >= 20):
+				get_tree().get_current_scene().get_node("AnimationPlayer").play("tutorial_pt6")
 		var temp_spending = get_node("container/spending_output").get_text()
 		if (int(temp_spending) > money.hollyhock_cash):
 			temp_spending = money.hollyhock_cash
