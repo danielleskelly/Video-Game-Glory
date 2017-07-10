@@ -48,7 +48,7 @@ func _ready():
 
 func customer_math():
 	#performs the calculations to determine the number of customers that will enter the store
-	if (towns.town_select == "hollyhock"): 	
+	if (towns.town_select == "hollyhock"):
 		#sets the population, advertising max, storefront keys, and predictions based on the town
 		#determines base player marketshare
 		player_marketshare_effect = hollyhock_town_population * hollyhock_player_marketshare

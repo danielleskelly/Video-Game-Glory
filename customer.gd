@@ -88,7 +88,7 @@ func _on_waiting_timer_timeout():
 		for x in all_genres:
 			x.set_hidden(true)
 		pleasure_bubble.get_child(6).show()
-		pleasure_bubble.get_child(7).set_texture(wait_too_long)
+		pleasure_bubble.get_child(7).set_texture(price_success)
 		pleasure_bubble.get_child(7).set_scale(Vector2(.5, .5))
 		old_parent = get_parent().get_parent()
 		new_parent = get_tree().get_current_scene().get_node("queue_to_exit")
@@ -331,7 +331,7 @@ func _on_concessions_timer_timeout():
 			move_node = get_tree().get_current_scene().get_node("zone_six_to_conc").get_child(0)
 		new_parent = get_tree().get_current_scene().get_node("concessions_to_exit")
 		exit_timer.start()
-		old_parent.remove_child(old_parent.get_child(0))
+		old_parent.remove_child(move_node)
 		move_node.set_offset(0)
 		new_parent.add_child(move_node)
 		concessions_purchase()
@@ -420,15 +420,17 @@ func concessions_purchase():
 				pleasure_bubble.get_child(7).set_scale(Vector2(.3, .3))
 				
 func buy_soda():
-	var charge_price = supplies.hollyhock_soda_price
-	money.hollyhock_balance = money.hollyhock_balance + charge_price
-	supplies.hollyhock_soda_count = supplies.hollyhock_soda_count - 1
-	supplies.soda_yesterday_used = supplies.soda_yesterday_used + 1
-	money.income = money.income + charge_price
+	if (towns.town_select == "hollyhock"):
+		var charge_price = supplies.hollyhock_soda_price
+		money.hollyhock_balance = money.hollyhock_balance + charge_price
+		supplies.hollyhock_soda_count = supplies.hollyhock_soda_count - 1
+		supplies.soda_yesterday_used = supplies.soda_yesterday_used + 1
+		money.income = money.income + charge_price
 	
 func buy_popcorn():
-	var charge_price = supplies.hollyhock_popcorn_price
-	money.hollyhock_balance = money.hollyhock_balance + charge_price
-	supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
-	supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
-	money.income = money.income + charge_price
+	if (towns.town_select == "hollyhock"):
+		var charge_price = supplies.hollyhock_popcorn_price
+		money.hollyhock_balance = money.hollyhock_balance + charge_price
+		supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
+		supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
+		money.income = money.income + charge_price

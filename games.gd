@@ -13,21 +13,21 @@ func _ready():
 
 func _process(delta):
 	if (towns.town_select == "hollyhock"):
-		if (keys.hollyhock_station_three_key == true):
+		if (hollyhock.hollyhock_arcade_decent_key == true):
 			station_three.show()
-		if (keys.hollyhock_station_three_key == false):
+		if (hollyhock.hollyhock_arcade_decent_key == false):
 			station_three.set_hidden(true)
-		if (keys.hollyhock_station_four_key == true):
+		if (hollyhock.hollyhock_arcade_good_key == true):
 			station_four.show()
-		if (keys.hollyhock_station_four_key == false):
+		if (hollyhock.hollyhock_arcade_good_key == false):
 			station_four.set_hidden(true)
-		if (keys.hollyhock_station_five_key == true):
+		if (hollyhock.hollyhock_arcade_great_key == true):
 			station_five.show()
-		if (keys.hollyhock_station_five_key == false):
+		if (hollyhock.hollyhock_arcade_great_key == false):
 			station_five.set_hidden(true)
-		if (keys.hollyhock_station_six_key == true):
+		if (hollyhock.hollyhock_arcade_best_key == true):
 			station_six.show()
-		if (keys.hollyhock_station_six_key == false):
+		if (hollyhock.hollyhock_arcade_best_key == false):
 			station_six.set_hidden(true)
 		set_genre.hollyhock_station_one_selection = get_node("station_one/dropdown").get_selected()
 		set_genre.hollyhock_station_two_selection = get_node("station_two/dropdown").get_selected()

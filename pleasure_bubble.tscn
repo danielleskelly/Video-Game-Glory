@@ -210,8 +210,5 @@ texture = ExtResource( 3 )
 [node name="others" type="Sprite" parent="."]
 
 transform/pos = Vector2( 3.16048, 7.03017 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 

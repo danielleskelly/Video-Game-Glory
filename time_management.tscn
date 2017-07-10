@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=1]
+[gd_scene load_steps=46 format=1]
 
 [ext_resource path="res://time_management.gd" type="Script" id=1]
 [ext_resource path="res://time_management_background.png" type="Texture" id=2]
@@ -11,8 +11,8 @@
 [ext_resource path="res://arcade_zone_five.gd" type="Script" id=9]
 [ext_resource path="res://arcade_zone_six.gd" type="Script" id=10]
 [ext_resource path="res://arcade_zone_one.gd" type="Script" id=11]
-[ext_resource path="res://arcade_walls.png" type="Texture" id=12]
-[ext_resource path="res://arcade_zone_two.gd" type="Script" id=13]
+[ext_resource path="res://arcade_zone_two.gd" type="Script" id=12]
+[ext_resource path="res://arcade_walls.png" type="Texture" id=13]
 [ext_resource path="res://arcade_walls_long.png" type="Texture" id=14]
 [ext_resource path="res://supplies.tscn" type="PackedScene" id=15]
 [ext_resource path="res://concession_walls.png" type="Texture" id=16]
@@ -21,6 +21,7 @@
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=19]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=20]
 [ext_resource path="res://dani_alpha.fnt" type="BitmapFont" id=21]
+[ext_resource path="res://strategy.ogg" type="AudioStream" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -251,11 +252,19 @@ transform/pos = Vector2( 0.868145, -13.8965 )
 transform/scale = Vector2( 0.063757, 0.142374 )
 script/script = ExtResource( 11 )
 
+[node name="arcade_zone_two" parent="." groups=[
+"free",
+] instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 7.54973, -23.673 )
+transform/scale = Vector2( 0.0703447, 0.189429 )
+script/script = ExtResource( 12 )
+
 [node name="arcade_walls" type="Sprite" parent="."]
 
 transform/pos = Vector2( 1.94576, -12.9076 )
 transform/scale = Vector2( 0.0362956, 0.0636792 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -264,7 +273,7 @@ __meta__ = {
 
 transform/pos = Vector2( -2.73432, 12.1855 )
 transform/scale = Vector2( 0.0363136, -0.0635652 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -273,15 +282,7 @@ __meta__ = {
 
 transform/pos = Vector2( 10.0649, 12.3821 )
 transform/scale = Vector2( 0.0363136, -0.0635652 )
-texture = ExtResource( 12 )
-
-[node name="arcade_zone_two" parent="." groups=[
-"free",
-] instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 7.54973, -23.673 )
-transform/scale = Vector2( 0.0703447, 0.189429 )
-script/script = ExtResource( 13 )
+texture = ExtResource( 13 )
 
 [node name="arcade_walls1" type="Sprite" parent="."]
 
@@ -302,7 +303,7 @@ texture = ExtResource( 14 )
 
 transform/pos = Vector2( 15.5208, -13.0549 )
 transform/scale = Vector2( 0.0362956, 0.0647863 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="supply_one" parent="." instance=ExtResource( 15 )]
 
@@ -698,6 +699,17 @@ click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
 text = "OK"
+
+[node name="StreamPlayer" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 22 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
 
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 

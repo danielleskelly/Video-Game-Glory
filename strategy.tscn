@@ -27,7 +27,7 @@
 [ext_resource path="res://rect_border.png" type="Texture" id=25]
 [ext_resource path="res://arrow_northeast.png" type="Texture" id=26]
 [ext_resource path="res://border.png" type="Texture" id=27]
-[ext_resource path="res://strategy.ogg" type="AudioStream" id=28]
+[ext_resource path="res://time_management_hollyhock.ogg" type="AudioStream" id=28]
 [ext_resource path="res://pixel_crotch.png" type="Texture" id=29]
 [ext_resource path="res://pixel_arm.png" type="Texture" id=30]
 [ext_resource path="res://pixel_torso.png" type="Texture" id=31]
@@ -4357,6 +4357,7 @@ transform/scale = Vector2( 0.214076, 0.331204 )
 
 [node name="top_buttons" type="HButtonArray" parent="."]
 
+editor/display_folded = true
 rect/scale = Vector2( 0.09, 0.12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -4668,7 +4669,6 @@ texture = ExtResource( 5 )
 [node name="demand_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
-visibility/visible = false
 rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -4686,10 +4686,10 @@ flat = true
 button/count = 2
 button/min_button_size = -1.0
 button/align = 1065353216
-button/0/text = "Concessions"
+button/0/text = "Arcade"
 button/0/tooltip = ""
 button/0/icon = null
-button/1/text = "Arcades"
+button/1/text = "Concessions"
 button/1/tooltip = ""
 button/1/icon = null
 button/selected = 0
@@ -4735,7 +4735,6 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="supplies_full" parent="." instance=ExtResource( 13 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -4754,7 +4753,6 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="arcade_pricing" parent="." instance=ExtResource( 16 )]
 
-visibility/visible = false
 transform/pos = Vector2( 7.97685, 2.5514 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -4766,6 +4764,7 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="research" parent="." instance=ExtResource( 18 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -4777,6 +4776,7 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="arcade_upgrade" parent="." instance=ExtResource( 20 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -4998,6 +4998,7 @@ underline = 2
 [node name="hollyhock_complete" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="hollyhock_complete"]
@@ -5049,6 +5050,7 @@ underline = 2
 [node name="skip_or_play" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="skip_or_play"]
@@ -5479,6 +5481,7 @@ texture = ExtResource( 27 )
 [node name="tutorial_pricing" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -5520,6 +5523,7 @@ texture = ExtResource( 5 )
 
 [node name="ok" type="RichTextLabel" parent="tutorial_pricing"]
 
+editor/display_folded = true
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -5588,6 +5592,7 @@ texture = ExtResource( 27 )
 [node name="tutorial_upgrades" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -5645,6 +5650,7 @@ texture = ExtResource( 27 )
 [node name="tutorial_locals" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -5699,6 +5705,7 @@ texture = ExtResource( 27 )
 [node name="tutorial_research" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -5755,7 +5762,7 @@ autostart = false
 stream/stream = ExtResource( 28 )
 stream/play = false
 stream/loop = true
-stream/volume_db = 0.0
+stream/volume_db = -10.0
 stream/autoplay = true
 stream/paused = false
 stream/loop_restart_time = 0.0
@@ -5793,6 +5800,7 @@ autoplay = ""
 
 [node name="pixel" type="Node2D" parent="."]
 
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.0705814, 0.619905 )
 transform/scale = Vector2( 0.996334, 1.01366 )

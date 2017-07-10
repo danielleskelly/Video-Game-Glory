@@ -48,30 +48,30 @@ func _process(delta):
 
 func _on_lower_button_down():
 	if (towns.town_select == "hollyhock"):
-		if (customer_math.hollyhock_advertising > 0):
-			customer_math.hollyhock_advertising = customer_math.hollyhock_advertising - 1
-			money.hollyhock_expenses = money.hollyhock_expenses - 1
+		if (int(customer_math.hollyhock_advertising) > 0):
+			customer_math.hollyhock_advertising = int(customer_math.hollyhock_advertising) - 1
+			money.hollyhock_expenses = int(money.hollyhock_expenses) - 1
 			spending()
 
 func _on_raise_button_down():
 	if (towns.town_select == "hollyhock"):
-		if ((customer_math.hollyhock_advertising + 1 <= money.hollyhock_cash) and (customer_math.hollyhock_advertising + 1 <= customer_math.hollyhock_advertising_max)):
-			customer_math.hollyhock_advertising = customer_math.hollyhock_advertising + 1
+		if ((int(customer_math.hollyhock_advertising) + 1 <= int(money.hollyhock_cash)) and (int(customer_math.hollyhock_advertising) + 1 <= int(customer_math.hollyhock_advertising_max))):
+			customer_math.hollyhock_advertising = int(customer_math.hollyhock_advertising) + 1
 			spending()
-			money.hollyhock_expenses = money.hollyhock_expenses + 1
+			money.hollyhock_expenses = int(money.hollyhock_expenses) + 1
 			
 
 
 func _on_confirm_button_down():
 	if (towns.town_select == "hollyhock"):
 		if (get_tree().get_current_scene().get_node("AnimationPlayer").get_current_animation() == "tutorial_pt5"):
-			if (customer_math.hollyhock_advertising >= 20):
+			if (int(customer_math.hollyhock_advertising) >= 20):
 				get_tree().get_current_scene().get_node("AnimationPlayer").play("tutorial_pt6")
 		var temp_spending = get_node("container/spending_output").get_text()
-		if (int(temp_spending) > money.hollyhock_cash):
+		if (int(temp_spending) > int(money.hollyhock_cash)):
 			temp_spending = money.hollyhock_cash
-		if (int(temp_spending) > customer_math.hollyhock_advertising_max):
-			temp_spending = customer_math.hollyhock_advertising_max
+		if (int(temp_spending) > int(customer_math.hollyhock_advertising_max)):
+			temp_spending = int(customer_math.hollyhock_advertising_max)
 		customer_math.hollyhock_advertising = temp_spending
 		spending()
 		
