@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=1]
+[gd_scene load_steps=55 format=1]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://inner_background.png" type="Texture" id=2]
@@ -2472,7 +2472,7 @@ tracks/0/keys = {
 "times": FloatArray( 0, 0.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 16.7842, 24.6996 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 18.0038, 24.6996 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("pixel:transform/scale")
@@ -2742,7 +2742,7 @@ tracks/27/keys = {
 "times": FloatArray( 34, 40, 48, 55 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "The first tab across the top is Reports.", "Across the side we start with finances. Most of the field will look empty here until you start the town running again. The most important thing is the level goal: Customer statisfaction of 75%. Right now we are only at 10% so we have a way to go.", "This customers tab looks pretty empty too. It has gotten so bad we had to put in a section just to keep track of all the sabatoges happening! Later on if you find a lot of your sales are lost try buying some upgrades.", "And last in the Reports tab is the News. It is mostly just an expanded version of the genre predictions." ]
+"values": [ "The first tab across the top is Reports.", "Across the side we start with finances. Most of the field will look empty here until you start the town running again. The most important thing is the level goal: Player Satisfaction of 75%. Right now we are only at 10% so we have a ways to go.", "This customers tab looks pretty empty too. It has gotten so bad we had to put in a section just to keep track of all the sabatoges happening! Later on if you find a lot of your sales are lost try buying some upgrades.", "And last in the Reports tab is the News. It is mostly just an expanded version of the genre predictions." ]
 }
 tracks/28/type = "value"
 tracks/28/path = NodePath("tutorial_reports/finances_box:visibility/visible")
@@ -3124,6 +3124,16 @@ tracks/65/keys = {
 "update": 0,
 "values": [ 19.8776 ]
 }
+tracks/66/type = "value"
+tracks/66/path = NodePath("pixel/left_arm:flip_h")
+tracks/66/interp = 1
+tracks/66/imported = false
+tracks/66/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=15]
 
@@ -3131,6 +3141,103 @@ resource/name = "tutorial_finish"
 length = 0.1
 loop = false
 step = 0.1
+
+[sub_resource type="Animation" id=21]
+
+resource/name = "tutorial_pass"
+length = 8.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("pixel:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 7, 7.1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 18.1615, 24.6749 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("pixel:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 7, 7.1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.432453, 0.368554 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("tutorial_start:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("tutorial_passover:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5, 7 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("pixel/left_arm:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16.3609, -4.97596 ), Vector2( 18.336, 2.2915 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("pixel/left_arm:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 40.6334, 151.884 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("pixel/left_arm:transform/scale")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.0909543, 0.147603 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("pixel/left_arm:flip_h")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("pixel/left_arm:flip_v")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=16]
 
@@ -3480,7 +3587,7 @@ tracks/33/keys = {
 
 [sub_resource type="Animation" id=17]
 
-length = 8.0
+length = 24.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -3588,10 +3695,10 @@ tracks/10/path = NodePath("tutorial_pricing/first_warning:bbcode/bbcode")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
-"times": FloatArray( 0, 7 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0, 7, 16 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
-"values": [ "Now that we have dealt with our supply, we can work out our demand. In this case that means how much we will price our products. ", "The tabs along the side are the same as in supplies. Feel free to set the concessions price to whatever you want as long as it is within the range and we will move to the next section." ]
+"values": [ "Now that we have dealt with our supply, we can work out our demand. In this case that means how much we will price our products. ", "The tabs along the side are the same as in supplies, so just the same we will start with the arcades.", "We only have two arcades working right now, so set them both to a price within the given range, click okay, and we will move on to the next section." ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("tutorial_pricing/ok:visibility/visible")
@@ -3604,24 +3711,81 @@ tracks/11/keys = {
 "values": [ false, true ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("concessions_pricing:visibility/visible")
+tracks/12/path = NodePath("tutorial_pricing/ok_button_background:visibility/visible")
 tracks/12/interp = 1
 tracks/12/imported = false
 tracks/12/keys = {
+"times": FloatArray( 0, 7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("arcade_pricing:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
-tracks/13/type = "value"
-tracks/13/path = NodePath("tutorial_pricing/ok_button_background:visibility/visible")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0, 7 ),
-"transitions": FloatArray( 1, 1 ),
+
+[sub_resource type="Animation" id=22]
+
+resource/name = "tutorial_pt3half"
+length = 8.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("tutorial_pricing/concessions_tab_box:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("tutorial_pricing/pricing_box:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("arcade_pricing:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("concessions_pricing:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tutorial_pricing/first_warning:bbcode/bbcode")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "And the same for concessions. Feel free to set them to whatever you want, as long as it is within the range, click okay, and we will move on to the next section." ]
 }
 
 [sub_resource type="Animation" id=18]
@@ -3637,7 +3801,7 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("arcade_pricing:visibility/visible")
@@ -3647,14 +3811,14 @@ tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("tutorial_pricing/ok:visibility/visible")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 7 ),
+"times": FloatArray( 0, 0.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -3697,7 +3861,7 @@ tracks/6/keys = {
 "times": FloatArray( 0, 7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
-"values": [ "And now we set the price for the arcades. Since our prediction for tomorrow is only 55% we should stay near the middle of the suggested price range so we don't turn away any customers with our price.", "Click okay when you are happy with the prices you have set and we will move on to the next section." ]
+"values": [ "And now we have concessions. The idea is the same as the arcades. Feel free to set them to whatever you want, as long as it is within the range.", "Click okay when you are happy with the prices you have set and we will move on to the next section." ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("tutorial_pricing/prediction_box:visibility/visible")
@@ -3707,7 +3871,7 @@ tracks/7/keys = {
 "times": FloatArray( 0, 7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false, false ]
 }
 
 [sub_resource type="Animation" id=19]
@@ -3988,7 +4152,7 @@ tracks/26/keys = {
 
 [sub_resource type="Animation" id=20]
 
-length = 43.1
+length = 44.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -4096,20 +4260,20 @@ tracks/10/path = NodePath("pixel:transform/pos")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
-"times": FloatArray( 24.9, 26 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0, 24.9, 26, 42.9, 43.8 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 16.7842, 24.6996 ), Vector2( 0.0705814, 0.619905 ) ]
+"values": [ Vector2( 17.91, 24.5396 ), Vector2( 17.91, 24.6996 ), Vector2( 0.0705814, 0.619905 ), Vector2( 0.17552, 0.761547 ), Vector2( 17.91, 24.699 ) ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("pixel:transform/scale")
 tracks/11/interp = 1
 tracks/11/imported = false
 tracks/11/keys = {
-"times": FloatArray( 24.9, 26 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 24.9, 26, 42.9, 43.8 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.443099, 0.357029 ), Vector2( 0.996334, 1.01366 ) ]
+"values": [ Vector2( 0.443099, 0.357029 ), Vector2( 0.996334, 1.01366 ), Vector2( 0.99308, 1.0098 ), Vector2( 0.443099, 0.357029 ) ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("tutorial_research/first_background:transform/pos")
@@ -4236,10 +4400,10 @@ tracks/24/path = NodePath("pixel:visibility/visible")
 tracks/24/interp = 1
 tracks/24/imported = false
 tracks/24/keys = {
-"times": FloatArray( 0, 43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ true ]
 }
 tracks/25/type = "value"
 tracks/25/path = NodePath("tutorial_upgrades:visibility/visible")
@@ -4298,12 +4462,9 @@ texture = ExtResource( 3 )
 
 [node name="decorative5" type="Sprite" parent="."]
 
-transform/pos = Vector2( 17.572, 21.0723 )
+transform/pos = Vector2( 13.9131, 21.0723 )
 transform/scale = Vector2( 0.0173717, 0.0204544 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="menu" type="LinkButton" parent="."]
 
@@ -4735,6 +4896,7 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="supplies_full" parent="." instance=ExtResource( 13 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -4753,6 +4915,7 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="arcade_pricing" parent="." instance=ExtResource( 16 )]
 
+visibility/visible = false
 transform/pos = Vector2( 7.97685, 2.5514 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -4770,7 +4933,6 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="concessions_pricing" parent="." instance=ExtResource( 19 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -4794,19 +4956,19 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="genre_one" parent="." instance=ExtResource( 23 )]
 
-transform/pos = Vector2( 10.3387, 24.0289 )
+transform/pos = Vector2( 6.67982, 24.0289 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="genre_two" parent="." instance=ExtResource( 23 )]
 
 visibility/visible = false
-transform/pos = Vector2( 17.5263, 24.0813 )
+transform/pos = Vector2( 13.94, 24.0813 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="genre_three" parent="." instance=ExtResource( 23 )]
 
 visibility/visible = false
-transform/pos = Vector2( 24.6974, 24.0996 )
+transform/pos = Vector2( 21.1111, 24.0996 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="start_day" type="LinkButton" parent="."]
@@ -4890,6 +5052,37 @@ enabled_focus_mode = 0
 shortcut = null
 text = "OK"
 underline = 2
+
+[node name="tutorial_passover" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 4.46997, 7.26745 )
+
+[node name="background" type="Sprite" parent="tutorial_passover"]
+
+transform/pos = Vector2( -11.3545, -9.8186 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.033031, 0.0275206 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="tutorial_passover"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -24.0
+margin/right = 262.0
+margin/bottom = 280.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "No problem! I see you are a pro! I am always available, so just give me a click if you need something (even if it is just regular settings)."
+visible_characters = -1
 
 [node name="game_over_alert" type="Node2D" parent="."]
 
@@ -5055,9 +5248,9 @@ visibility/visible = false
 
 [node name="background" type="Sprite" parent="skip_or_play"]
 
-transform/pos = Vector2( -10.1723, -2.71569 )
+transform/pos = Vector2( -9.6778, -2.71569 )
 transform/rot = -90.0
-transform/scale = Vector2( 0.0436669, 0.0276812 )
+transform/scale = Vector2( 0.0436669, 0.0307134 )
 texture = ExtResource( 24 )
 
 [node name="warning" type="RichTextLabel" parent="skip_or_play"]
@@ -5067,14 +5260,82 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -26.0
-margin/top = -14.0
-margin/right = 266.0
-margin/bottom = 215.0
+margin/left = -28.0
+margin/top = -22.0
+margin/right = 321.0
+margin/bottom = 116.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Would you like to watch the next day's play through or do you want to skip it?"
+visible_characters = -1
+
+[node name="perk" type="RichTextLabel" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -28.0
+margin/top = -8.0
+margin/right = 306.0
+margin/bottom = 36.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "If you play you could win:"
+visible_characters = -1
+
+[node name="perk_goal" type="RichTextLabel" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -28.0
+margin/top = 4.0
+margin/right = 303.0
+margin/bottom = 72.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "But only if you get this many points:"
+visible_characters = -1
+
+[node name="perk_output" type="RichTextLabel" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -3.0
+margin/right = 227.0
+margin/bottom = 41.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+
+[node name="perk_goal_output" type="RichTextLabel" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -14.0
+margin/top = 11.0
+margin/right = 89.0
+margin/bottom = 65.0
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="skip" type="LinkButton" parent="skip_or_play"]
@@ -5085,9 +5346,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -7.0
-margin/top = 16.0
-margin/right = 45.0
-margin/bottom = 59.0
+margin/top = 18.0
+margin/right = 49.0
+margin/bottom = 50.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5106,10 +5367,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
-margin/top = 16.0
-margin/right = 46.0
-margin/bottom = 59.0
+margin/left = -22.0
+margin/top = 18.0
+margin/right = 47.0
+margin/bottom = 50.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5148,7 +5409,7 @@ margin/bottom = 269.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "This is Hollyhock, and it is the capital city of our kingdom so it is the perfect place for you to start. I have enough time to help you through your first few days if you would like.
+bbcode/bbcode = "This is Hollyhock, and it is the capital city of our kingdom so it is the perfect place for you to start. I am available if you need some help getting started.
 Do you want me to help you?"
 visible_characters = -1
 
@@ -5227,7 +5488,7 @@ margin/bottom = 224.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "And finally we have the genre prediction for tomorrow. Most of the Players in Hollyhock prefer the Meta genre so we will focus there until we start attracting tourists with wider interests."
+bbcode/bbcode = "Here we have some slimmed down information on your concession's stock. The Players in Hollyhock are mad for soda and popcorn so we will make sure you have plenty of stock in another tab."
 visible_characters = -1
 
 [node name="title_box_border" type="Sprite" parent="tutorial_persistent_menu"]
@@ -5254,20 +5515,19 @@ flip_h = true
 
 [node name="supplies_border" type="Sprite" parent="tutorial_persistent_menu"]
 
-visibility/visible = false
 transform/pos = Vector2( -12.8365, 19.5481 )
 transform/scale = Vector2( 0.170763, 0.165702 )
 texture = ExtResource( 27 )
 
 [node name="supplies_border1" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( 2.75931, 19.7026 )
+visibility/visible = false
+transform/pos = Vector2( -0.805752, 19.8626 )
 transform/scale = Vector2( 0.085168, 0.160784 )
 texture = ExtResource( 27 )
 
 [node name="supplies_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
-visibility/visible = false
 transform/pos = Vector2( -5.59278, 9.96005 )
 transform/rot = -86.0875
 transform/scale = Vector2( 0.0813651, 0.0395302 )
@@ -5276,7 +5536,8 @@ flip_v = true
 
 [node name="supplies_pointer1" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( 3.71953, 10.1337 )
+visibility/visible = false
+transform/pos = Vector2( -3.50441, 9.49381 )
 transform/rot = -86.0875
 transform/scale = Vector2( 0.104003, 0.0352382 )
 texture = ExtResource( 26 )
@@ -5395,7 +5656,7 @@ margin/bottom = 119.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Now that we have our arcades set, we can move on to our concessions stock."
+bbcode/bbcode = "We don't have any stock, and both soda and popcorn are in green so we should get at least 10 of each. Don't forget to click the confirm button! Then we can move on to the next section."
 visible_characters = -1
 
 [node name="supplies_box" type="Sprite" parent="tutorial_supplies"]
@@ -5445,14 +5706,12 @@ texture = ExtResource( 27 )
 
 [node name="supplies_icon_box" type="Sprite" parent="tutorial_supplies"]
 
-visibility/visible = false
 transform/pos = Vector2( -6.05738, 16.7831 )
 transform/scale = Vector2( 0.171906, 0.183603 )
 texture = ExtResource( 27 )
 
 [node name="supplies_icon_box3" type="Sprite" parent="tutorial_supplies"]
 
-visibility/visible = false
 transform/pos = Vector2( 20.4226, 3.0562 )
 transform/scale = Vector2( 0.194382, 0.0849141 )
 texture = ExtResource( 27 )
@@ -5467,7 +5726,7 @@ texture = ExtResource( 27 )
 [node name="supplies_icon_box1" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
-transform/pos = Vector2( 10.3237, 17.2227 )
+transform/pos = Vector2( 6.6583, 16.826 )
 transform/scale = Vector2( 0.090009, 0.183603 )
 texture = ExtResource( 27 )
 
@@ -5510,11 +5769,12 @@ margin/bottom = 119.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Click okay when you are happy with the prices you have set and we will move on to the next section."
+bbcode/bbcode = "And now we have concessions. The idea is the same as the arcades. Feel free to set them to whatever you want, as long as it is within the range."
 visible_characters = -1
 
 [node name="ok_button_background" type="Sprite" parent="tutorial_pricing"]
 
+visibility/visible = false
 visibility/behind_parent = true
 transform/pos = Vector2( 19.6296, 13.2642 )
 transform/rot = 180.0
@@ -5524,6 +5784,7 @@ texture = ExtResource( 5 )
 [node name="ok" type="RichTextLabel" parent="tutorial_pricing"]
 
 editor/display_folded = true
+visibility/visible = false
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -5578,7 +5839,7 @@ texture = ExtResource( 27 )
 [node name="prediction_box" type="Sprite" parent="tutorial_pricing"]
 
 visibility/visible = false
-transform/pos = Vector2( 10.4318, 16.6486 )
+transform/pos = Vector2( 6.46921, 16.6486 )
 transform/scale = Vector2( 0.0846538, 0.186745 )
 texture = ExtResource( 27 )
 
@@ -5618,7 +5879,7 @@ margin/bottom = 94.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "First along the side is the Storefront upgrades. Use these to help the look of the arcades and draw more customers in."
+bbcode/bbcode = "Here we have our upgrades."
 visible_characters = -1
 
 [node name="pricing_box" type="Sprite" parent="tutorial_upgrades"]
@@ -5636,6 +5897,7 @@ texture = ExtResource( 27 )
 
 [node name="pricing_box2" type="Sprite" parent="tutorial_upgrades"]
 
+visibility/visible = false
 transform/pos = Vector2( -23.716, -13.1947 )
 transform/scale = Vector2( 0.189387, 0.0548959 )
 texture = ExtResource( 27 )
@@ -5679,7 +5941,7 @@ margin/bottom = 84.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Here we have the loans available from the local bank. If you find yourself in a spot you can come get a loan, but as with all loans you should be careful!"
+bbcode/bbcode = "Here we have the locals tab, and first along the side is Marketing. This can have a huge impact on drawing customers to the arcade."
 visible_characters = -1
 
 [node name="pricing_box3" type="Sprite" parent="tutorial_locals"]
@@ -5698,6 +5960,7 @@ texture = ExtResource( 27 )
 
 [node name="pricing_box2" type="Sprite" parent="tutorial_locals"]
 
+visibility/visible = false
 transform/pos = Vector2( -23.6922, -13.5579 )
 transform/scale = Vector2( 0.186622, 0.0685323 )
 texture = ExtResource( 27 )
@@ -5788,8 +6051,10 @@ anims/storefront = SubResource( 12 )
 anims/supplies = SubResource( 13 )
 anims/tutorial = SubResource( 14 )
 anims/tutorial_finish = SubResource( 15 )
+anims/tutorial_pass = SubResource( 21 )
 anims/tutorial_pt2 = SubResource( 16 )
 anims/tutorial_pt3 = SubResource( 17 )
+anims/tutorial_pt3half = SubResource( 22 )
 anims/tutorial_pt4 = SubResource( 18 )
 anims/tutorial_pt5 = SubResource( 19 )
 anims/tutorial_pt6 = SubResource( 20 )
@@ -5801,9 +6066,8 @@ autoplay = ""
 [node name="pixel" type="Node2D" parent="."]
 
 editor/display_folded = true
-visibility/visible = false
-transform/pos = Vector2( 0.0705814, 0.619905 )
-transform/scale = Vector2( 0.996334, 1.01366 )
+transform/pos = Vector2( 18.0038, 24.6996 )
+transform/scale = Vector2( 0.443099, 0.357029 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -5823,17 +6087,17 @@ transform/pos = Vector2( 18.3179, 3.10948 )
 transform/rot = -22.4228
 transform/scale = Vector2( 0.0909543, 0.147603 )
 texture = ExtResource( 30 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="right_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 27.5148, 2.97323 )
-transform/rot = 24.1075
+transform/pos = Vector2( 27.4486, 3.21306 )
+transform/rot = 19.8776
 transform/scale = Vector2( 0.0909543, 0.147603 )
 texture = ExtResource( 30 )
 flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="torso" type="Sprite" parent="pixel"]
 

@@ -174,6 +174,7 @@ func research_countdown():
 				hollyhock.hollyhock_research_fund = 0
 				hollyhock.hollyhock_research_spending = 0
 				genre_discovery.set_hidden(false)
+				pixel_big()
 				pixel.set_hidden(false)
 				get_tree().set_pause(true)
 			if ((keys.hollyhock_genre_two_key == true) and (keys.hollyhock_genre_three_key == false)):
@@ -181,6 +182,7 @@ func research_countdown():
 				hollyhock.hollyhock_research_fund = 0
 				hollyhock.hollyhock_research_spending = 0
 				genre_discovery.set_hidden(false)
+				pixel_big()
 				pixel.set_hidden(false)
 				get_tree().set_pause(true)
 
@@ -188,6 +190,7 @@ func _on_start_day_button_up():
 	if (towns.town_select == "hollyhock"):
 		if (money.hollyhock_balance - money.hollyhock_expenses < 0):
 			low_funds_warning.set_hidden(false)
+			pixel_big()
 			pixel.set_hidden(false)
 			get_tree().set_pause(true)
 		else:
@@ -204,23 +207,30 @@ func _on_start_day_button_up():
 			customer_globals.waited_loss = 0
 			customer_globals.sabatoge_loss= 0
 			money.income = 0
+			perks.perks()
+			get_node("skip_or_play/perk_output").clear()
+			get_node("skip_or_play/perk_output").add_text(perks.perk)
+			get_node("skip_or_play/perk_goal_output").clear()
+			get_node("skip_or_play/perk_goal_output").add_text(str(perks.perk_goal))
 			get_node("skip_or_play").show()
+			pixel_big()
 			get_node("pixel").show()
 
 func _on_low_funds_ok_button_down():
 	low_funds_warning.set_hidden(true)
+	pixel_big()
 	pixel.set_hidden(true)
 	get_tree().set_pause(false)
 
 
 func _on_genre_discover_ok_button_down():
 	genre_discovery.set_hidden(true)
-	pixel.set_hidden(true)
+	pixel_small()
 	get_tree().set_pause(false)
 
 func _on_continue_ok_button_down():
 	hollyhock_complete.set_hidden(true)
-	pixel.set_hidden(true)
+	pixel_small()
 	get_tree().set_pause(false)
 	towns.town_select = "fiyork"
 	money.income = 0
@@ -234,6 +244,7 @@ func _on_continue_ok_button_down():
 func tutorial_start():
 	if (tutorial.tutorial_start == false):
 		tutorial_start.show()
+		pixel_big()
 		pixel.show()
 	if (tutorial.tutorial_start == true):
 		pass
@@ -241,8 +252,7 @@ func tutorial_start():
 func _on_tutorial_start_no_button_button_down():
 	tutorial.tutorial_start = true
 	tutorial_start.set_hidden(true)
-	pixel.set_hidden(true)
-	get_node("AnimationPlayer").play("tutorial_finish")
+	get_node("AnimationPlayer").play("tutorial_pass")
 	tutorial.time_management_start = true
 	
 func _on_tutorial_start_yes_button_button_down():
@@ -251,18 +261,20 @@ func _on_tutorial_start_yes_button_button_down():
 
 func _on_game_over_ok_button_down():
 	if (towns.town_select == "hollyhock"):
-		pixel.set_hidden(true)
+		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_hollyhock()
 
 func _on_ok_button_button_down():
 	if (get_node("AnimationPlayer").get_current_animation() == "tutorial_pt3"):
 		get_node("AnimationPlayer").play("tutorial_pt4")
-	if (get_node("AnimationPlayer").get_current_animation() == "tutorial_pt4"):
+	elif (get_node("AnimationPlayer").get_current_animation() == "tutorial_pt4"):
 		get_node("AnimationPlayer").play("tutorial_pt5")
 
 func _on_AnimationPlayer_finished():
 	if (get_node("AnimationPlayer").get_current_animation() == "tutorial_pt6"):
+		get_node("AnimationPlayer").play("tutorial_finish")
+	if (get_node("AnimationPlayer").get_current_animation() == "tutorial_pass"):
 		get_node("AnimationPlayer").play("tutorial_finish")
 
 func _on_skip_button_down():
@@ -468,13 +480,14 @@ func _on_skip_button_down():
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
+	pixel_small()
 	get_tree().change_scene("res://strategy.tscn")
 
-
 func _on_play_button_down():
-	get_node("pixel").set_hidden(true)
+	pixel_small()
 	get_node("skip_or_play").set_hidden(true)
-	get_tree().change_scene("res://time_management.tscn")
+	if (towns.town_select == "hollyhock"):
+		get_tree().change_scene("res://hollyhock_time_management.tscn")
 	
 func quick_wait_check():
 	if (towns.town_select == "hollyhock"):
@@ -504,3 +517,11 @@ func buy_popcorn():
 		supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
 		supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
 		money.income = money.income + charge_price
+		
+func pixel_big():
+	pixel.set_pos(Vector2(0.17552, 0.761547))
+	pixel.set_scale(Vector2(0.99308, 1.009797))
+	
+func pixel_small():
+	pixel.set_pos(Vector2(17.910009, 24.698957))
+	pixel.set_scale(Vector2(0.443099, 0.357029))

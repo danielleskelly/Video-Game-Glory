@@ -108,7 +108,7 @@ func _process(delta):
 					
 func check():
 	ignore = false
-	var ignore_array = ["tutorial", "tutorial_pt2", "tutorial_pt3", "tutorial_pt4", "tutorial_pt5", "tutorial_pt6"]
+	var ignore_array = ["tutorial", "tutorial_pt2", "tutorial_pt3", "tutorial_pt4", "tutorial_pt5", "tutorial_pt6", "tutorial_pass"]
 	for x in ignore_array:
 		if (animator.get_current_animation() == x):
 			ignore = true
