@@ -3,6 +3,7 @@ extends Node
 var perk_num
 var perk_goal
 var perk
+var success = 0
 
 func _ready():
 	pass
@@ -15,7 +16,7 @@ func perks():
 		perk = "Five of each supply!"
 		perk_goal = 5
 	if (perk_num == 2):
-		perk = "Free 10% customer satisfaction!"
+		perk = "Free 10% player satisfaction!"
 		perk_goal = 20
 	if (perk_num == 3):
 		perk = "$50"

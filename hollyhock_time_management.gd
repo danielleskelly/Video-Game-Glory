@@ -11,14 +11,17 @@ var concession_choice
 var concessions_desire
 var concessions_price_check
 
+var pixel
+
 func _ready():
 	set_process(true)
 
 func _process(delta):
+	set_sound()
 	countdown_timer.clear()
 	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
 	success_counter.clear()
-	success_counter.add_text(str(customer_create.success))
+	success_counter.add_text(str(perks.success))
 	
 
 func _on_day_timer_timeout():
@@ -221,6 +224,7 @@ func _on_day_timer_timeout():
 				else: 
 					customer_globals.sales_lost = customer_globals.sales_lost + 1
 					customer_globals.storefront_loss = customer_globals.storefront_loss + 1
+	perk_check()
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
@@ -254,3 +258,39 @@ func buy_popcorn():
 		supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
 		supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
 		money.income = money.income + charge_price
+
+func perk_check():
+	if (towns.town_select == "hollyhock"):
+		if (int(perks.perk_goal) <= int(perks.success)):
+			if (perks.perk_num == 1):
+				supplies.hollyhock_soda_count = supplies.hollyhock_soda_count + 5
+				supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count + 5
+			elif (perks.perk_num == 2):
+				customer_math.hollyhock_player_marketshare = int(customer_math.hollyhock_player_marketshare) + .1
+			elif (perks.perk_num == 3):
+				money.hollyhock_balance = money.hollyhock_balance + 50
+			elif (perks.perk_num == 4):
+				supplies.hollyhock_soda_count = supplies.hollyhock_soda_count + 10
+				supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count + 10
+			elif (perks.perk_num == 5):
+				supplies.hollyhock_soda_count = supplies.hollyhock_soda_count + 20
+				supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count + 20
+			elif (perks.perk_num == 6):
+				money.hollyhock_balance = money.hollyhock_balance + 25
+				
+func pixel_small():
+	pixel.set_pos(Vector2(0,0))
+	pixel.set_scale(Vector2(1,1))
+	
+func pixel_big():
+	pixel.set_pos(Vector2(17.404663, 71.34024))
+	pixel.set_scale(Vector2(2.601525, 3.259631))
+
+func _on_pixel_button_button_down():
+	get_tree().set_pause(true)
+	pixel_big()
+	get_node("menu").set_hidden(false)
+	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
+
+func set_sound():
+	get_node("StreamPlayer").set_volume(sound.volume)

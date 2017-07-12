@@ -48,7 +48,10 @@ var concession_choice
 var concessions_desire
 var concessions_price_check
 
+var new_volume
+
 func _ready():
+	set_sound()
 	tutorial_start()
 	research_countdown()
 	set_process(true)
@@ -525,3 +528,50 @@ func pixel_big():
 func pixel_small():
 	pixel.set_pos(Vector2(17.910009, 24.698957))
 	pixel.set_scale(Vector2(0.443099, 0.357029))
+
+func _on_pixel_button_button_down():
+	get_tree().set_pause(true)
+	pixel_big()
+	get_node("menu").set_hidden(false)
+	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
+
+func _on_sound_slider_value_changed( value ):
+	new_volume = value / 100
+	sound.volume = new_volume
+	get_node("StreamPlayer").set_volume(new_volume)
+
+func _on_return_to_game_button_down():
+	get_tree().set_pause(false)
+	pixel_small()
+	get_node("menu").set_hidden(true)
+
+
+func _on_restart_village_button_down():
+	get_node("menu").set_hidden(true)
+	get_node("are_you_sure").set_hidden(false)
+
+func _on_yes_restart_button_down():
+	get_tree().set_pause(false)
+	if (towns.town_select == "hollyhock"):
+		pixel_small()
+		game_over.game_over_hollyhock()
+
+func _on_no_restart_button_down():
+	get_node("are_you_sure").set_hidden(true)
+	get_node("menu").set_hidden(false)
+
+func _on_quit_to_main_button_down():
+	get_node("menu").set_hidden(true)
+	get_node("are_you_sure_2").set_hidden(false)
+
+
+func _on_yes_main_menu_button_down():
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://player_selection.tscn")
+
+func _on_no_main_menu_button_down():
+	get_node("are_you_sure_2").set_hidden(true)
+	get_node("menu").set_hidden(false)
+
+func set_sound():
+	get_node("StreamPlayer").set_volume(sound.volume)

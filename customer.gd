@@ -25,10 +25,10 @@ func _process(delta):
 	colliders = get_node("RigidBody2D").get_colliding_bodies()
 	if (colliders.size() > 0):
 		for x in colliders:
-			if (x.get_name() == "queue"):
+			if ((x.get_name() == "queue") or (x.get_name() == "queue_right_half")):
 				reset()
 			if (x.get_name() == "goal"):
-				customer_create.success = int(customer_create.success) + 1
+				perks.success = int(perks.success) + 1
 				change_avatar()
 	where = get_pos()
 	if (Input.is_action_pressed("move_up")):
