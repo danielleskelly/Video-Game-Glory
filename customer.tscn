@@ -1,26 +1,18 @@
 [gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://customer.gd" type="Script" id=1]
-[ext_resource path="res://customer_five.png" type="Texture" id=2]
+[ext_resource path="res://customer_four.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="customer" type="Node2D"]
+[node name="customer" type="RigidBody2D"]
 
-transform/pos = Vector2( 7.69704, 8.71414 )
-transform/scale = Vector2( 0.227357, 0.259142 )
-script/script = ExtResource( 1 )
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-transform/pos = Vector2( -0.346345, -3.88897 )
-transform/scale = Vector2( 0.667543, 0.602883 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.43162, 0, 0, 2.49397, -0.491742, -0.0467361 )
+shapes/0/transform = Matrix32( 1.49363, 0, 0, 1.72947, 1.9144, -1.38776 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -30,8 +22,8 @@ friction = 0.0
 bounce = 0.0
 gravity_scale = 0.0
 custom_integrator = false
-continuous_cd = 2
-contacts_reported = 10
+continuous_cd = 0
+contacts_reported = 100
 contact_monitor = true
 sleeping = false
 can_sleep = true
@@ -39,22 +31,20 @@ velocity/linear = Vector2( 0, 0 )
 velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
+script/script = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.491742, -0.0467361 )
-transform/scale = Vector2( 2.43162, 2.49397 )
+transform/pos = Vector2( 0.791466, -0.85356 )
+transform/scale = Vector2( 0.188673, 0.188673 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 1.9144, -1.38776 )
+transform/scale = Vector2( 1.49363, 1.72947 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pic" type="Sprite" parent="."]
-
-transform/pos = Vector2( 4.69259, -0.915567 )
-transform/scale = Vector2( 0.217649, 0.221159 )
-texture = ExtResource( 2 )
 
 

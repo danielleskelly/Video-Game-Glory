@@ -5263,7 +5263,6 @@ focus_mode = 2
 
 [node name="return_to_game" type="LinkButton" parent="menu"]
 
-editor/display_folded = true
 rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true

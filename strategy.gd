@@ -51,6 +51,7 @@ var concessions_price_check
 var new_volume
 
 func _ready():
+	pixel_small()
 	set_sound()
 	tutorial_start()
 	research_countdown()
@@ -574,4 +575,10 @@ func _on_no_main_menu_button_down():
 	get_node("menu").set_hidden(false)
 
 func set_sound():
+	if (sound.music_mute == false):
+		sound.volume = 1
+	if (sound.music_mute == true):
+		sound.volume = 0
 	get_node("StreamPlayer").set_volume(sound.volume)
+	
+	

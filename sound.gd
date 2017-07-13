@@ -1,7 +1,7 @@
 extends Node
 
-var volume
+var music_mute = false
+var volume = 1
 
 func _ready():
-	if (get_tree().get_current_scene().get_name() == "strategy"):
-		volume = get_tree().get_current_scene().get_node("StreamPlayer").get_volume()
+	pass

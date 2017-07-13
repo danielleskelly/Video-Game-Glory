@@ -3,7 +3,8 @@ extends Node
 var perk_num
 var perk_goal
 var perk
-var success = 0
+var success = 000
+var perk_final_count = 0
 
 func _ready():
 	pass
