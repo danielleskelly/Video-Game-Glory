@@ -86,7 +86,6 @@ func _on_good_button_button_down():
 				notifications.add_text("Available for purchase.")
 				notifications.show()
 				select_price = upgrade_prices.good_price
-				print(select_price)
 				key_change = "hollyhock good"
 			if (money.hollyhock_cash < upgrade_prices.good_price):
 				notifications.clear()

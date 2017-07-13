@@ -10,19 +10,19 @@ func _ready():
 
 func _process(delta):
 	if (towns.town_select == "hollyhock"):
-		if (keys.hollyhock_station_three_key == true):
+		if (hollyhock.hollyhock_arcade_decent_key == true):
 			station_three_vis.show()
-		if (keys.hollyhock_station_three_key == false):
+		if (hollyhock.hollyhock_arcade_decent_key == false):
 			station_three_vis.set_hidden(true)
-		if (keys.hollyhock_station_four_key == true):
+		if (hollyhock.hollyhock_arcade_good_key == true):
 			station_four_vis.show()
-		if (keys.hollyhock_station_four_key == false):
+		if (hollyhock.hollyhock_arcade_good_key == false):
 			station_four_vis.set_hidden(true)
-		if (keys.hollyhock_station_five_key == true):
+		if (hollyhock.hollyhock_arcade_great_key == true):
 			station_five_vis.show()
-		if (keys.hollyhock_station_five_key == false):
+		if (hollyhock.hollyhock_arcade_great_key == false):
 			station_five_vis.set_hidden(true)
-		if (keys.hollyhock_station_six_key == true):
+		if (hollyhock.hollyhock_arcade_best_key == true):
 			station_six_vis.show()
-		if (keys.hollyhock_station_six_key == false):
+		if (hollyhock.hollyhock_arcade_best_key == false):
 			station_six_vis.set_hidden(true)

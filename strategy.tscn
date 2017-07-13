@@ -1,14 +1,14 @@
-[gd_scene load_steps=53 format=1]
+[gd_scene load_steps=55 format=1]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://inner_background.png" type="Texture" id=2]
 [ext_resource path="res://potential_background.png" type="Texture" id=3]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=4]
-[ext_resource path="res://button.png" type="Texture" id=5]
-[ext_resource path="res://supplies.tscn" type="PackedScene" id=6]
-[ext_resource path="res://town_banner.tscn" type="PackedScene" id=7]
-[ext_resource path="res://finances.tscn" type="PackedScene" id=8]
-[ext_resource path="res://top_buttons.gd" type="Script" id=9]
+[ext_resource path="res://supplies.tscn" type="PackedScene" id=4]
+[ext_resource path="res://town_banner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://finances.tscn" type="PackedScene" id=6]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://top_buttons.gd" type="Script" id=8]
+[ext_resource path="res://button.png" type="Texture" id=9]
 [ext_resource path="res://finances_full.tscn" type="PackedScene" id=10]
 [ext_resource path="res://customers.tscn" type="PackedScene" id=11]
 [ext_resource path="res://news.tscn" type="PackedScene" id=12]
@@ -27,7 +27,7 @@
 [ext_resource path="res://rect_border.png" type="Texture" id=25]
 [ext_resource path="res://arrow_northeast.png" type="Texture" id=26]
 [ext_resource path="res://border.png" type="Texture" id=27]
-[ext_resource path="res://strategy.ogg" type="AudioStream" id=28]
+[ext_resource path="res://time_management_hollyhock.ogg" type="AudioStream" id=28]
 [ext_resource path="res://pixel_crotch.png" type="Texture" id=29]
 [ext_resource path="res://pixel_arm.png" type="Texture" id=30]
 [ext_resource path="res://pixel_torso.png" type="Texture" id=31]
@@ -2472,7 +2472,7 @@ tracks/0/keys = {
 "times": FloatArray( 0, 0.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 16.7842, 24.6996 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 18.0038, 24.6996 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("pixel:transform/scale")
@@ -2742,7 +2742,7 @@ tracks/27/keys = {
 "times": FloatArray( 34, 40, 48, 55 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "The first tab across the top is Reports.", "Across the side we start with finances. Most of the field will look empty here until you start the town running again. The most important thing is the level goal: Customer statisfaction of 75%. Right now we are only at 10% so we have a way to go.", "This customers tab looks pretty empty too. It has gotten so bad we had to put in a section just to keep track of all the sabatoges happening! Later on if you find a lot of your sales are lost try buying some upgrades.", "And last in the Reports tab is the News. It is mostly just an expanded version of the genre predictions." ]
+"values": [ "The first tab across the top is Reports.", "Across the side we start with finances. Most of the field will look empty here until you start the town running again. The most important thing is the level goal: Player Satisfaction of 75%. Right now we are only at 10% so we have a ways to go.", "This customers tab looks pretty empty too. It has gotten so bad we had to put in a section just to keep track of all the sabatoges happening! Later on if you find a lot of your sales are lost try buying some upgrades.", "And last in the Reports tab is the News. It is mostly just an expanded version of the genre predictions." ]
 }
 tracks/28/type = "value"
 tracks/28/path = NodePath("tutorial_reports/finances_box:visibility/visible")
@@ -3124,6 +3124,16 @@ tracks/65/keys = {
 "update": 0,
 "values": [ 19.8776 ]
 }
+tracks/66/type = "value"
+tracks/66/path = NodePath("pixel/left_arm:flip_h")
+tracks/66/interp = 1
+tracks/66/imported = false
+tracks/66/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=15]
 
@@ -3133,6 +3143,103 @@ loop = false
 step = 0.1
 
 [sub_resource type="Animation" id=16]
+
+resource/name = "tutorial_pass"
+length = 8.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("pixel:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 7, 7.1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 18.1615, 24.6749 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("pixel:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 7, 7.1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.432453, 0.368554 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("tutorial_start:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("tutorial_passover:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5, 7 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("pixel/left_arm:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16.3609, -4.97596 ), Vector2( 18.336, 2.2915 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("pixel/left_arm:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 40.6334, 151.884 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("pixel/left_arm:transform/scale")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.0909543, 0.147603 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("pixel/left_arm:flip_h")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("pixel/left_arm:flip_v")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=17]
 
 length = 15.0
 loop = false
@@ -3478,9 +3585,9 @@ tracks/33/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=18]
 
-length = 8.0
+length = 24.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -3588,10 +3695,10 @@ tracks/10/path = NodePath("tutorial_pricing/first_warning:bbcode/bbcode")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
-"times": FloatArray( 0, 7 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0, 7, 16 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
-"values": [ "Now that we have dealt with our supply, we can work out our demand. In this case that means how much we will price our products. ", "The tabs along the side are the same as in supplies. Feel free to set the concessions price to whatever you want as long as it is within the range and we will move to the next section." ]
+"values": [ "Now that we have dealt with our supply, we can work out our demand. In this case that means how much we will price our products. ", "The tabs along the side are the same as in supplies, so just the same we will start with the arcades.", "We only have two arcades working right now, so set them both to a price within the given range, click okay, and we will move on to the next section." ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("tutorial_pricing/ok:visibility/visible")
@@ -3604,27 +3711,84 @@ tracks/11/keys = {
 "values": [ false, true ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("concessions_pricing:visibility/visible")
+tracks/12/path = NodePath("tutorial_pricing/ok_button_background:visibility/visible")
 tracks/12/interp = 1
 tracks/12/imported = false
 tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("tutorial_pricing/ok_button_background:visibility/visible")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
 "times": FloatArray( 0, 7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
 }
+tracks/13/type = "value"
+tracks/13/path = NodePath("arcade_pricing:visibility/visible")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=19]
+
+resource/name = "tutorial_pt3half"
+length = 8.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("tutorial_pricing/concessions_tab_box:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("tutorial_pricing/pricing_box:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("arcade_pricing:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("concessions_pricing:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tutorial_pricing/first_warning:bbcode/bbcode")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "And the same for concessions. Feel free to set them to whatever you want, as long as it is within the range, click okay, and we will move on to the next section." ]
+}
+
+[sub_resource type="Animation" id=20]
 
 length = 8.0
 loop = false
@@ -3637,7 +3801,7 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("arcade_pricing:visibility/visible")
@@ -3647,14 +3811,14 @@ tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("tutorial_pricing/ok:visibility/visible")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 7 ),
+"times": FloatArray( 0, 0.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -3697,7 +3861,7 @@ tracks/6/keys = {
 "times": FloatArray( 0, 7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
-"values": [ "And now we set the price for the arcades. Since our prediction for tomorrow is only 55% we should stay near the middle of the suggested price range so we don't turn away any customers with our price.", "Click okay when you are happy with the prices you have set and we will move on to the next section." ]
+"values": [ "And now we have concessions. The idea is the same as the arcades. Feel free to set them to whatever you want, as long as it is within the range.", "Click okay when you are happy with the prices you have set and we will move on to the next section." ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("tutorial_pricing/prediction_box:visibility/visible")
@@ -3707,10 +3871,10 @@ tracks/7/keys = {
 "times": FloatArray( 0, 7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false, false ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=21]
 
 length = 43.0
 loop = false
@@ -3986,9 +4150,9 @@ tracks/26/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=22]
 
-length = 43.1
+length = 44.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -4096,20 +4260,20 @@ tracks/10/path = NodePath("pixel:transform/pos")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
-"times": FloatArray( 24.9, 26 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0, 24.9, 26, 42.9, 43.8 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 16.7842, 24.6996 ), Vector2( 0.0705814, 0.619905 ) ]
+"values": [ Vector2( 17.91, 24.5396 ), Vector2( 17.91, 24.6996 ), Vector2( 0.0705814, 0.619905 ), Vector2( 0.17552, 0.761547 ), Vector2( 17.91, 24.699 ) ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("pixel:transform/scale")
 tracks/11/interp = 1
 tracks/11/imported = false
 tracks/11/keys = {
-"times": FloatArray( 24.9, 26 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 24.9, 26, 42.9, 43.8 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.443099, 0.357029 ), Vector2( 0.996334, 1.01366 ) ]
+"values": [ Vector2( 0.443099, 0.357029 ), Vector2( 0.996334, 1.01366 ), Vector2( 0.99308, 1.0098 ), Vector2( 0.443099, 0.357029 ) ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("tutorial_research/first_background:transform/pos")
@@ -4236,10 +4400,10 @@ tracks/24/path = NodePath("pixel:visibility/visible")
 tracks/24/interp = 1
 tracks/24/imported = false
 tracks/24/keys = {
-"times": FloatArray( 0, 43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ true ]
 }
 tracks/25/type = "value"
 tracks/25/path = NodePath("tutorial_upgrades:visibility/visible")
@@ -4298,65 +4462,33 @@ texture = ExtResource( 3 )
 
 [node name="decorative5" type="Sprite" parent="."]
 
-transform/pos = Vector2( 17.572, 21.0723 )
+transform/pos = Vector2( 13.9131, 21.0723 )
 transform/scale = Vector2( 0.0173717, 0.0204544 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="menu" type="LinkButton" parent="."]
-
-editor/display_folded = true
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -27.0
-margin/top = -27.0
-margin/right = 46.0
-margin/bottom = 6.0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "MENU"
-underline = 2
-
-[node name="button10" type="Sprite" parent="menu"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 37.6445, 12.9627 )
-transform/scale = Vector2( 0.387564, 0.444805 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="supply_one" parent="." instance=ExtResource( 6 )]
+[node name="supply_one" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -9.0148, 24.1143 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="supply_two" parent="." instance=ExtResource( 6 )]
+[node name="supply_two" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -1.76179, 24.1884 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="town_banner" parent="." instance=ExtResource( 7 )]
+[node name="town_banner" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -0.561625, -25.0427 )
 transform/scale = Vector2( 0.471053, 0.139357 )
 
-[node name="finances" parent="." instance=ExtResource( 8 )]
+[node name="finances" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( -23.0485, 19.8575 )
 transform/scale = Vector2( 0.214076, 0.331204 )
 
 [node name="top_buttons" type="HButtonArray" parent="."]
 
+editor/display_folded = true
 rect/scale = Vector2( 0.09, 0.12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -4366,8 +4498,8 @@ margin/left = -30.0
 margin/top = -19.0
 margin/right = 644.0
 margin/bottom = 40.0
-custom_fonts/font_selected = ExtResource( 4 )
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font_selected = ExtResource( 7 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color_selected = Color( 0.933594, 0.864304, 0.864304, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/button_separator = 2
@@ -4394,49 +4526,49 @@ button/5/text = "Research"
 button/5/tooltip = ""
 button/5/icon = null
 button/selected = 0
-script/script = ExtResource( 9 )
+script/script = ExtResource( 8 )
 
 [node name="button" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 55.252, 29.7387 )
 transform/scale = Vector2( 0.545591, 0.578921 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button1" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 159.83, 29.622 )
 transform/scale = Vector2( 0.461972, 0.575821 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button2" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 263.362, 29.5704 )
 transform/scale = Vector2( 0.543674, 0.556226 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button3" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 387.02, 29.9225 )
 transform/scale = Vector2( 0.655957, 0.563267 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button4" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 499.683, 29.9225 )
 transform/scale = Vector2( 0.441565, 0.549185 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button5" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 609.78, 29.9257 )
 transform/scale = Vector2( 0.635433, 0.552829 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="report_buttons" type="VButtonArray" parent="."]
 
@@ -4451,8 +4583,8 @@ margin/left = -30.0
 margin/top = -6.0
 margin/right = 165.0
 margin/bottom = 116.0
-custom_fonts/font_selected = ExtResource( 4 )
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font_selected = ExtResource( 7 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
@@ -4482,21 +4614,21 @@ texture = ExtResource( 3 )
 visibility/behind_parent = true
 transform/pos = Vector2( 97.6314, 61.3262 )
 transform/scale = Vector2( 0.97248, 0.371663 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button10" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.6314, 18.8745 )
 transform/scale = Vector2( 0.97248, 0.371663 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button11" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5777, 103.454 )
 transform/scale = Vector2( 0.971943, 0.371663 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="supply_buttons" type="VButtonArray" parent="."]
 
@@ -4511,8 +4643,8 @@ margin/left = -30.0
 margin/top = -6.0
 margin/right = 165.0
 margin/bottom = 74.0
-custom_fonts/font_selected = ExtResource( 4 )
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font_selected = ExtResource( 7 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
@@ -4539,14 +4671,14 @@ texture = ExtResource( 3 )
 visibility/behind_parent = true
 transform/pos = Vector2( 98.0639, 19.4014 )
 transform/scale = Vector2( 0.966828, 0.371663 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button10" type="Sprite" parent="supply_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5677, 61.3262 )
 transform/scale = Vector2( 0.971791, 0.371663 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="upgrade_buttons" type="VButtonArray" parent="."]
 
@@ -4561,8 +4693,8 @@ margin/left = -30.0
 margin/top = -6.0
 margin/right = 165.0
 margin/bottom = 116.0
-custom_fonts/font_selected = ExtResource( 4 )
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font_selected = ExtResource( 7 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
@@ -4592,28 +4724,28 @@ texture = ExtResource( 3 )
 visibility/behind_parent = true
 transform/pos = Vector2( 97.0986, 19.2869 )
 transform/scale = Vector2( 0.962699, 0.364477 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button13" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5053, 61.3234 )
 transform/scale = Vector2( 0.966396, 0.364477 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button15" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5053, 61.3234 )
 transform/scale = Vector2( 0.966396, 0.364477 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button14" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5053, 102.382 )
 transform/scale = Vector2( 0.966396, 0.364477 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="locals_buttons" type="VButtonArray" parent="."]
 
@@ -4628,8 +4760,8 @@ margin/left = -30.0
 margin/top = -6.0
 margin/right = 165.0
 margin/bottom = 83.0
-custom_fonts/font_selected = ExtResource( 4 )
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font_selected = ExtResource( 7 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
@@ -4656,19 +4788,18 @@ texture = ExtResource( 3 )
 visibility/behind_parent = true
 transform/pos = Vector2( 97.8896, 19.4933 )
 transform/scale = Vector2( 0.968572, 0.355558 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button16" type="Sprite" parent="locals_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.7092, 60.3457 )
 transform/scale = Vector2( 0.965718, 0.364477 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="demand_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
-visibility/visible = false
 rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -4678,18 +4809,18 @@ margin/left = -30.0
 margin/top = -6.0
 margin/right = 166.0
 margin/bottom = 74.0
-custom_fonts/font_selected = ExtResource( 4 )
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font_selected = ExtResource( 7 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
 button/count = 2
 button/min_button_size = -1.0
 button/align = 1065353216
-button/0/text = "Concessions"
+button/0/text = "Arcade"
 button/0/tooltip = ""
 button/0/icon = null
-button/1/text = "Arcades"
+button/1/text = "Concessions"
 button/1/tooltip = ""
 button/1/icon = null
 button/selected = 0
@@ -4706,14 +4837,14 @@ texture = ExtResource( 3 )
 visibility/behind_parent = true
 transform/pos = Vector2( 97.7628, 19.2869 )
 transform/scale = Vector2( 0.975774, 0.364477 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="button18" type="Sprite" parent="demand_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.8064, 60.3458 )
 transform/scale = Vector2( 0.979542, 0.364477 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="finances_full" parent="." instance=ExtResource( 10 )]
 
@@ -4766,17 +4897,18 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="research" parent="." instance=ExtResource( 18 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="concessions_pricing" parent="." instance=ExtResource( 19 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="arcade_upgrade" parent="." instance=ExtResource( 20 )]
 
+visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -4794,19 +4926,19 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="genre_one" parent="." instance=ExtResource( 23 )]
 
-transform/pos = Vector2( 10.3387, 24.0289 )
+transform/pos = Vector2( 6.67982, 24.0289 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="genre_two" parent="." instance=ExtResource( 23 )]
 
 visibility/visible = false
-transform/pos = Vector2( 17.5263, 24.0813 )
+transform/pos = Vector2( 13.94, 24.0813 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="genre_three" parent="." instance=ExtResource( 23 )]
 
 visibility/visible = false
-transform/pos = Vector2( 24.6974, 24.0996 )
+transform/pos = Vector2( 21.1111, 24.0996 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="start_day" type="LinkButton" parent="."]
@@ -4821,7 +4953,7 @@ margin/left = 17.0
 margin/top = -28.0
 margin/right = 143.0
 margin/bottom = 4.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -4834,7 +4966,7 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 62.6953, 15.7067 )
 transform/scale = Vector2( 0.675488, 0.394836 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -4863,7 +4995,7 @@ margin/left = -26.0
 margin/top = -23.0
 margin/right = 251.0
 margin/bottom = 236.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Continuing to the next day will put you in the negatives. Reduce your expenses or take out a loan to continue."
@@ -4880,7 +5012,7 @@ margin/left = -4.0
 margin/top = 4.0
 margin/right = 31.0
 margin/bottom = 36.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -4890,6 +5022,37 @@ enabled_focus_mode = 0
 shortcut = null
 text = "OK"
 underline = 2
+
+[node name="tutorial_passover" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 4.46997, 7.26745 )
+
+[node name="background" type="Sprite" parent="tutorial_passover"]
+
+transform/pos = Vector2( -11.3545, -9.8186 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.033031, 0.0275206 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="tutorial_passover"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -24.0
+margin/right = 262.0
+margin/bottom = 280.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "No problem! I see you are a pro! I am always available, so just give me a click if you need something (even if it is just regular settings)."
+visible_characters = -1
 
 [node name="game_over_alert" type="Node2D" parent="."]
 
@@ -4915,7 +5078,7 @@ margin/left = -25.0
 margin/top = -18.0
 margin/right = 263.0
 margin/bottom = 197.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have run out of cash and the loan officer at the bank won't even answer your calls. Time to start over!"
@@ -4932,7 +5095,7 @@ margin/left = -6.0
 margin/top = 7.0
 margin/right = 29.0
 margin/bottom = 39.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -4967,7 +5130,7 @@ margin/left = -26.0
 margin/top = -22.0
 margin/right = 276.0
 margin/bottom = 230.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have purchased a binary infusion from the Muse Pixels! You can now satisfy the needs of the growing desires of the townspeople. Good job!"
@@ -4984,7 +5147,7 @@ margin/left = -1.0
 margin/top = 6.0
 margin/right = 51.0
 margin/bottom = 49.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -4998,6 +5161,7 @@ underline = 2
 [node name="hollyhock_complete" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="hollyhock_complete"]
@@ -5018,7 +5182,7 @@ margin/left = -26.0
 margin/top = -21.0
 margin/right = 266.0
 margin/bottom = 349.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have completed the level goal for the town of Hollyhock! With our 75% marketshare we now have a solid hold on the customers of this city. Let's continue on to the next city I have in store for you!"
@@ -5035,7 +5199,7 @@ margin/left = -1.0
 margin/top = 18.0
 margin/right = 51.0
 margin/bottom = 61.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5046,6 +5210,291 @@ shortcut = null
 text = "OK"
 underline = 2
 
+[node name="menu" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( -10.1723, -2.71569 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0436669, 0.0276812 )
+texture = ExtResource( 24 )
+
+[node name="warning1" type="RichTextLabel" parent="menu"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -16.0
+margin/top = -22.0
+margin/right = 75.0
+margin/bottom = 17.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Sound"
+visible_characters = -1
+
+[node name="sound_slider" type="HSlider" parent="menu"]
+
+rect/scale = Vector2( 0.2, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -25.0
+margin/top = -18.0
+margin/right = 110.0
+margin/bottom = -2.0
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 50.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 100
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="return_to_game" type="LinkButton" parent="menu"]
+
+rect/scale = Vector2( 0.1, 0.15 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -22.0
+margin/top = -10.0
+margin/right = 183.0
+margin/bottom = 22.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return to Game"
+underline = 2
+
+[node name="button9" type="Sprite" parent="menu/return_to_game"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 104.222, 15.7067 )
+transform/scale = Vector2( 1.09076, 0.394836 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="restart_village" type="LinkButton" parent="menu"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.1, 0.15 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -22.0
+margin/top = -1.0
+margin/right = 183.0
+margin/bottom = 31.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Restart Village"
+underline = 2
+
+[node name="button9" type="Sprite" parent="menu/restart_village"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 104.222, 15.7067 )
+transform/scale = Vector2( 1.09076, 0.394836 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="quit_to_main" type="LinkButton" parent="menu"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.1, 0.15 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = 8.0
+margin/right = 209.0
+margin/bottom = 40.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Quit to Main Menu"
+underline = 2
+
+[node name="button9" type="Sprite" parent="menu/quit_to_main"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 119.382, 15.7067 )
+transform/scale = Vector2( 1.24236, 0.394836 )
+texture = ExtResource( 9 )
+
+[node name="are_you_sure" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="are_you_sure"]
+
+transform/pos = Vector2( -11.0683, -2.78012 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0246812, 0.0207212 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="are_you_sure"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -21.0
+margin/top = -11.0
+margin/right = 160.0
+margin/bottom = 128.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Do you really want to restart the level?"
+visible_characters = -1
+
+[node name="yes_restart" type="LinkButton" parent="are_you_sure"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = 7.0
+margin/right = 48.0
+margin/bottom = 39.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "YES"
+underline = 2
+
+[node name="no_restart" type="LinkButton" parent="are_you_sure"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -20.0
+margin/top = 7.0
+margin/right = 36.0
+margin/bottom = 39.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "NO"
+underline = 2
+
+[node name="are_you_sure_2" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="are_you_sure_2"]
+
+transform/pos = Vector2( -11.0683, -2.78012 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0246812, 0.0207212 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="are_you_sure_2"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -21.0
+margin/top = -11.0
+margin/right = 160.0
+margin/bottom = 128.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Do you really want to go back to the main menu?"
+visible_characters = -1
+
+[node name="yes_main_menu" type="LinkButton" parent="are_you_sure_2"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = 7.0
+margin/right = 48.0
+margin/bottom = 39.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "YES"
+underline = 2
+
+[node name="no_main_menu" type="LinkButton" parent="are_you_sure_2"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -20.0
+margin/top = 7.0
+margin/right = 36.0
+margin/bottom = 39.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "NO"
+underline = 2
+
 [node name="skip_or_play" type="Node2D" parent="."]
 
 process/pause_mode = 2
@@ -5053,9 +5502,9 @@ visibility/visible = false
 
 [node name="background" type="Sprite" parent="skip_or_play"]
 
-transform/pos = Vector2( -10.1723, -2.71569 )
+transform/pos = Vector2( -7.88107, -2.71569 )
 transform/rot = -90.0
-transform/scale = Vector2( 0.0436669, 0.0276812 )
+transform/scale = Vector2( 0.0436669, 0.0332089 )
 texture = ExtResource( 24 )
 
 [node name="warning" type="RichTextLabel" parent="skip_or_play"]
@@ -5065,14 +5514,82 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -26.0
-margin/top = -14.0
-margin/right = 266.0
-margin/bottom = 215.0
-custom_fonts/normal_font = ExtResource( 4 )
+margin/left = -28.0
+margin/top = -22.0
+margin/right = 340.0
+margin/bottom = 116.0
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Would you like to watch the next day's play through or do you want to skip it?"
+visible_characters = -1
+
+[node name="perk" type="RichTextLabel" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -11.0
+margin/right = 307.0
+margin/bottom = 33.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "If you play you could win:"
+visible_characters = -1
+
+[node name="perk_goal" type="RichTextLabel" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -28.0
+margin/top = 3.0
+margin/right = 337.0
+margin/bottom = 71.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "But only if you get this many points:"
+visible_characters = -1
+
+[node name="perk_output" type="RichTextLabel" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -28.0
+margin/top = -6.0
+margin/right = 339.0
+margin/bottom = 54.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+
+[node name="perk_goal_output" type="RichTextLabel" parent="skip_or_play"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -14.0
+margin/top = 11.0
+margin/right = 89.0
+margin/bottom = 65.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
 visible_characters = -1
 
 [node name="skip" type="LinkButton" parent="skip_or_play"]
@@ -5083,10 +5600,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -7.0
-margin/top = 16.0
-margin/right = 45.0
-margin/bottom = 59.0
-custom_fonts/font = ExtResource( 4 )
+margin/top = 18.0
+margin/right = 49.0
+margin/bottom = 50.0
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5104,11 +5621,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
-margin/top = 16.0
-margin/right = 46.0
-margin/bottom = 59.0
-custom_fonts/font = ExtResource( 4 )
+margin/left = -22.0
+margin/top = 18.0
+margin/right = 47.0
+margin/bottom = 50.0
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5143,10 +5660,10 @@ margin/left = -29.0
 margin/top = -13.0
 margin/right = 362.0
 margin/bottom = 269.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "This is Hollyhock, and it is the capital city of our kingdom so it is the perfect place for you to start. I have enough time to help you through your first few days if you would like.
+bbcode/bbcode = "This is Hollyhock, and it is the capital city of our kingdom so it is the perfect place for you to start. I am available if you need some help getting started.
 Do you want me to help you?"
 visible_characters = -1
 
@@ -5161,7 +5678,7 @@ margin/left = -7.0
 margin/top = 19.0
 margin/right = 62.0
 margin/bottom = 51.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5183,7 +5700,7 @@ margin/left = -21.0
 margin/top = 19.0
 margin/right = 29.0
 margin/bottom = 51.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5222,10 +5739,10 @@ margin/left = -15.0
 margin/top = -12.0
 margin/right = 418.0
 margin/bottom = 224.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "And finally we have the genre prediction for tomorrow. Most of the Players in Hollyhock prefer the Meta genre so we will focus there until we start attracting tourists with wider interests."
+bbcode/bbcode = "Here we have some slimmed down information on your concession's stock. The Players in Hollyhock are mad for soda and popcorn so we will make sure you have plenty of stock in another tab."
 visible_characters = -1
 
 [node name="title_box_border" type="Sprite" parent="tutorial_persistent_menu"]
@@ -5252,20 +5769,19 @@ flip_h = true
 
 [node name="supplies_border" type="Sprite" parent="tutorial_persistent_menu"]
 
-visibility/visible = false
 transform/pos = Vector2( -12.8365, 19.5481 )
 transform/scale = Vector2( 0.170763, 0.165702 )
 texture = ExtResource( 27 )
 
 [node name="supplies_border1" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( 2.75931, 19.7026 )
+visibility/visible = false
+transform/pos = Vector2( -0.805752, 19.8626 )
 transform/scale = Vector2( 0.085168, 0.160784 )
 texture = ExtResource( 27 )
 
 [node name="supplies_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
-visibility/visible = false
 transform/pos = Vector2( -5.59278, 9.96005 )
 transform/rot = -86.0875
 transform/scale = Vector2( 0.0813651, 0.0395302 )
@@ -5274,7 +5790,8 @@ flip_v = true
 
 [node name="supplies_pointer1" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( 3.71953, 10.1337 )
+visibility/visible = false
+transform/pos = Vector2( -3.50441, 9.49381 )
 transform/rot = -86.0875
 transform/scale = Vector2( 0.104003, 0.0352382 )
 texture = ExtResource( 26 )
@@ -5321,7 +5838,7 @@ margin/left = -14.0
 margin/top = -3.0
 margin/right = 597.0
 margin/bottom = 206.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "And last in the Reports tab is the News. It is mostly just an expanded version of the genre predictions."
@@ -5390,10 +5907,10 @@ margin/left = -30.0
 margin/top = -51.0
 margin/right = 556.0
 margin/bottom = 119.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Now that we have our arcades set, we can move on to our concessions stock."
+bbcode/bbcode = "We don't have any stock, and both soda and popcorn are in green so we should get at least 10 of each. Don't forget to click the confirm button! Then we can move on to the next section."
 visible_characters = -1
 
 [node name="supplies_box" type="Sprite" parent="tutorial_supplies"]
@@ -5414,7 +5931,7 @@ margin/left = 8.0
 margin/top = 0.0
 margin/right = 101.0
 margin/bottom = 38.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "CLICK!"
@@ -5443,14 +5960,12 @@ texture = ExtResource( 27 )
 
 [node name="supplies_icon_box" type="Sprite" parent="tutorial_supplies"]
 
-visibility/visible = false
 transform/pos = Vector2( -6.05738, 16.7831 )
 transform/scale = Vector2( 0.171906, 0.183603 )
 texture = ExtResource( 27 )
 
 [node name="supplies_icon_box3" type="Sprite" parent="tutorial_supplies"]
 
-visibility/visible = false
 transform/pos = Vector2( 20.4226, 3.0562 )
 transform/scale = Vector2( 0.194382, 0.0849141 )
 texture = ExtResource( 27 )
@@ -5465,7 +5980,7 @@ texture = ExtResource( 27 )
 [node name="supplies_icon_box1" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
-transform/pos = Vector2( 10.3237, 17.2227 )
+transform/pos = Vector2( 6.6583, 16.826 )
 transform/scale = Vector2( 0.090009, 0.183603 )
 texture = ExtResource( 27 )
 
@@ -5479,6 +5994,7 @@ texture = ExtResource( 27 )
 [node name="tutorial_pricing" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -5504,22 +6020,25 @@ margin/left = -30.0
 margin/top = -51.0
 margin/right = 563.0
 margin/bottom = 119.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Click okay when you are happy with the prices you have set and we will move on to the next section."
+bbcode/bbcode = "And now we have concessions. The idea is the same as the arcades. Feel free to set them to whatever you want, as long as it is within the range."
 visible_characters = -1
 
 [node name="ok_button_background" type="Sprite" parent="tutorial_pricing"]
 
+visibility/visible = false
 visibility/behind_parent = true
 transform/pos = Vector2( 19.6296, 13.2642 )
 transform/rot = 180.0
 transform/scale = Vector2( 0.0383662, 0.0455973 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="ok" type="RichTextLabel" parent="tutorial_pricing"]
 
+editor/display_folded = true
+visibility/visible = false
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -5529,7 +6048,7 @@ margin/left = 16.0
 margin/top = 12.0
 margin/right = 92.0
 margin/bottom = 46.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "OKAY"
@@ -5574,7 +6093,7 @@ texture = ExtResource( 27 )
 [node name="prediction_box" type="Sprite" parent="tutorial_pricing"]
 
 visibility/visible = false
-transform/pos = Vector2( 10.4318, 16.6486 )
+transform/pos = Vector2( 6.46921, 16.6486 )
 transform/scale = Vector2( 0.0846538, 0.186745 )
 texture = ExtResource( 27 )
 
@@ -5588,6 +6107,7 @@ texture = ExtResource( 27 )
 [node name="tutorial_upgrades" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -5610,10 +6130,10 @@ margin/left = -31.0
 margin/top = -50.0
 margin/right = 583.0
 margin/bottom = 94.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "First along the side is the Storefront upgrades. Use these to help the look of the arcades and draw more customers in."
+bbcode/bbcode = "Here we have our upgrades."
 visible_characters = -1
 
 [node name="pricing_box" type="Sprite" parent="tutorial_upgrades"]
@@ -5631,6 +6151,7 @@ texture = ExtResource( 27 )
 
 [node name="pricing_box2" type="Sprite" parent="tutorial_upgrades"]
 
+visibility/visible = false
 transform/pos = Vector2( -23.716, -13.1947 )
 transform/scale = Vector2( 0.189387, 0.0548959 )
 texture = ExtResource( 27 )
@@ -5645,6 +6166,7 @@ texture = ExtResource( 27 )
 [node name="tutorial_locals" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -5670,10 +6192,10 @@ margin/left = -30.0
 margin/top = -50.0
 margin/right = 596.0
 margin/bottom = 84.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Here we have the loans available from the local bank. If you find yourself in a spot you can come get a loan, but as with all loans you should be careful!"
+bbcode/bbcode = "Here we have the locals tab, and first along the side is Marketing. This can have a huge impact on drawing customers to the arcade."
 visible_characters = -1
 
 [node name="pricing_box3" type="Sprite" parent="tutorial_locals"]
@@ -5692,6 +6214,7 @@ texture = ExtResource( 27 )
 
 [node name="pricing_box2" type="Sprite" parent="tutorial_locals"]
 
+visibility/visible = false
 transform/pos = Vector2( -23.6922, -13.5579 )
 transform/scale = Vector2( 0.186622, 0.0685323 )
 texture = ExtResource( 27 )
@@ -5699,6 +6222,7 @@ texture = ExtResource( 27 )
 [node name="tutorial_research" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512785, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -5724,7 +6248,7 @@ margin/left = -28.0
 margin/top = -24.0
 margin/right = 366.0
 margin/bottom = 219.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I will go while you get everything ready just how you want it. Whenever you are ready to open the arcade just click on the Start Day button right above my head!"
@@ -5781,11 +6305,13 @@ anims/storefront = SubResource( 12 )
 anims/supplies = SubResource( 13 )
 anims/tutorial = SubResource( 14 )
 anims/tutorial_finish = SubResource( 15 )
-anims/tutorial_pt2 = SubResource( 16 )
-anims/tutorial_pt3 = SubResource( 17 )
-anims/tutorial_pt4 = SubResource( 18 )
-anims/tutorial_pt5 = SubResource( 19 )
-anims/tutorial_pt6 = SubResource( 20 )
+anims/tutorial_pass = SubResource( 16 )
+anims/tutorial_pt2 = SubResource( 17 )
+anims/tutorial_pt3 = SubResource( 18 )
+anims/tutorial_pt3half = SubResource( 19 )
+anims/tutorial_pt4 = SubResource( 20 )
+anims/tutorial_pt5 = SubResource( 21 )
+anims/tutorial_pt6 = SubResource( 22 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -5793,9 +6319,9 @@ autoplay = ""
 
 [node name="pixel" type="Node2D" parent="."]
 
-visibility/visible = false
-transform/pos = Vector2( 0.0705814, 0.619905 )
-transform/scale = Vector2( 0.996334, 1.01366 )
+editor/display_folded = true
+transform/pos = Vector2( 18.0038, 24.6996 )
+transform/scale = Vector2( 0.443099, 0.357029 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -5815,17 +6341,17 @@ transform/pos = Vector2( 18.3179, 3.10948 )
 transform/rot = -22.4228
 transform/scale = Vector2( 0.0909543, 0.147603 )
 texture = ExtResource( 30 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="right_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 27.5148, 2.97323 )
-transform/rot = 24.1075
+transform/pos = Vector2( 27.4486, 3.21306 )
+transform/rot = 19.8776
 transform/scale = Vector2( 0.0909543, 0.147603 )
 texture = ExtResource( 30 )
 flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="torso" type="Sprite" parent="pixel"]
 
@@ -5845,6 +6371,21 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="pixel_button" type="LinkButton" parent="pixel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = -18.0
+margin/right = 29.0
+margin/bottom = 18.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 
 [connection signal="button_down" from="low_funds_warning/low_funds_ok" to="." method="_on_low_funds_ok_button_down"]
@@ -5854,6 +6395,22 @@ __meta__ = {
 [connection signal="button_down" from="genre_discovery/genre_discover_ok" to="." method="_on_genre_discover_ok_button_down"]
 
 [connection signal="button_down" from="hollyhock_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
+
+[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
+
+[connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
+
+[connection signal="button_down" from="menu/restart_village" to="." method="_on_restart_village_button_down"]
+
+[connection signal="button_down" from="menu/quit_to_main" to="." method="_on_quit_to_main_button_down"]
+
+[connection signal="button_down" from="are_you_sure/yes_restart" to="." method="_on_yes_restart_button_down"]
+
+[connection signal="button_down" from="are_you_sure/no_restart" to="." method="_on_no_restart_button_down"]
+
+[connection signal="button_down" from="are_you_sure_2/yes_main_menu" to="." method="_on_yes_main_menu_button_down"]
+
+[connection signal="button_down" from="are_you_sure_2/no_main_menu" to="." method="_on_no_main_menu_button_down"]
 
 [connection signal="button_down" from="skip_or_play/skip" to="." method="_on_skip_button_down"]
 
@@ -5866,5 +6423,7 @@ __meta__ = {
 [connection signal="button_down" from="tutorial_pricing/ok/ok_button" to="." method="_on_ok_button_button_down"]
 
 [connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
+
+[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 
 

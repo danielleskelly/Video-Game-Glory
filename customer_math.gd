@@ -48,7 +48,7 @@ func _ready():
 
 func customer_math():
 	#performs the calculations to determine the number of customers that will enter the store
-	if (towns.town_select == "hollyhock"): 	
+	if (towns.town_select == "hollyhock"):
 		#sets the population, advertising max, storefront keys, and predictions based on the town
 		#determines base player marketshare
 		player_marketshare_effect = hollyhock_town_population * hollyhock_player_marketshare
@@ -83,69 +83,3 @@ func daily_marketshare_adjustment():
 				hollyhock_player_marketshare = hollyhock_player_marketshare + .2
 			elif ((customer_globals.sales_made > customer_globals.sales_lost) or (money.hollyhock_cash > 100)):
 				hollyhock_player_marketshare = hollyhock_player_marketshare + .1
-
-
-func delete_children():
-	var customer_queue_children = get_tree().get_current_scene().get_node("customer_queue").get_children()
-	for child in customer_queue_children:
-		child.queue_free()
-	var zone_one_path_children = get_tree().get_current_scene().get_node("zone_one_path").get_children()
-	for child in zone_one_path_children:
-		child.queue_free()
-	var zone_two_path_children = get_tree().get_current_scene().get_node("zone_two_path").get_children()
-	for child in zone_two_path_children:
-		child.queue_free()
-	var zone_three_path_children = get_tree().get_current_scene().get_node("zone_three_path").get_children()
-	for child in zone_three_path_children:
-		child.queue_free()
-	var zone_four_path_children = get_tree().get_current_scene().get_node("zone_four_path").get_children()
-	for child in zone_four_path_children:
-		child.queue_free()
-	var zone_five_path_children = get_tree().get_current_scene().get_node("zone_five_path").get_children()
-	for child in zone_five_path_children:
-		child.queue_free()
-	var zone_six_path_children = get_tree().get_current_scene().get_node("zone_six_path").get_children()
-	for child in zone_six_path_children:
-		child.queue_free()
-	var queue_to_exit_children = get_tree().get_current_scene().get_node("queue_to_exit").get_children()
-	for child in queue_to_exit_children:
-		child.queue_free()
-	var zone_one_to_conc_children = get_tree().get_current_scene().get_node("zone_one_to_conc").get_children()
-	for child in zone_one_to_conc_children:
-		child.queue_free()
-	var zone_two_to_conc_children = get_tree().get_current_scene().get_node("zone_two_to_conc").get_children()
-	for child in zone_two_to_conc_children:
-		child.queue_free()
-	var zone_three_to_conc_children = get_tree().get_current_scene().get_node("zone_three_to_conc").get_children()
-	for child in zone_two_to_conc_children:
-		child.queue_free()
-	var zone_four_to_conc_children = get_tree().get_current_scene().get_node("zone_four_to_conc").get_children()
-	for child in zone_four_to_conc_children:
-		child.queue_free()
-	var zone_five_to_conc_children = get_tree().get_current_scene().get_node("zone_five_to_conc").get_children()
-	for child in zone_five_to_conc_children:
-		child.queue_free()
-	var zone_six_to_conc_children = get_tree().get_current_scene().get_node("zone_six_to_conc").get_children()
-	for child in zone_six_to_conc_children:
-		child.queue_free()
-	var zone_one_to_exit_children = get_tree().get_current_scene().get_node("zone_one_to_exit").get_children()
-	for child in zone_one_to_exit_children:
-		child.queue_free()
-	var zone_two_to_exit_children = get_tree().get_current_scene().get_node("zone_two_to_exit").get_children()
-	for child in zone_two_to_exit_children:
-		child.queue_free()
-	var zone_three_to_exit_children = get_tree().get_current_scene().get_node("zone_three_to_exit").get_children()
-	for child in zone_two_to_exit_children:
-		child.queue_free()
-	var zone_four_to_exit_children = get_tree().get_current_scene().get_node("zone_four_to_exit").get_children()
-	for child in zone_four_to_exit_children:
-		child.queue_free()
-	var zone_five_to_exit_children = get_tree().get_current_scene().get_node("zone_five_to_exit").get_children()
-	for child in zone_five_to_exit_children:
-		child.queue_free()
-	var zone_six_to_exit_children = get_tree().get_current_scene().get_node("zone_six_to_exit").get_children()
-	for child in zone_six_to_exit_children:
-		child.queue_free()
-	var concessions_to_exit_children = get_tree().get_current_scene().get_node("concessions_to_exit").get_children()
-	for child in concessions_to_exit_children:
-		child.queue_free()
