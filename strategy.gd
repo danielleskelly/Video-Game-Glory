@@ -67,7 +67,7 @@ func _process(delta):
 			if ((supplies.hollyhock_popcorn_count >= 10) and (supplies.hollyhock_soda_count >= 10)):
 				get_node("AnimationPlayer").play("tutorial_pt3")
 		if ((money.hollyhock_cash - money.hollyhock_expenses) < 0):
-			if ((money.hollyhock_expenses == 0) and (loans.hollyhock_current_loan == loans.credit_limit)):
+			if ((money.hollyhock_expenses == 0) and (hollyhock.hollyhock_current_loan == loans.credit_limit)):
 				game_over_alert.set_hidden(false)
 				pixel.set_hidden(false)
 				get_tree().set_pause(true)
@@ -96,6 +96,41 @@ func _process(delta):
 		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
 			town_banner.get_child(1).clear()
 			town_banner.get_child(1).add_text("Hollyhock...l")
+		elif (get_node("cursor_blink").get_time_left() == 0):
+			get_node("cursor_blink").start()
+	if (towns.town_select == "fiyork"):
+		if ((money.fiyork_cash - money.fiyork_expenses) < 0):
+			if ((money.fiyork_expenses == 0) and (fiyork.fiyork_current_loan == loans.credit_limit)):
+				game_over_alert.set_hidden(false)
+				pixel.set_hidden(false)
+				get_tree().set_pause(true)
+		if ((fiyork.fiyork_advertising_sabatoge_key == false) and (fiyork.fiyork_storefront_sabatoge_key == false) and (fiyork.fiyork_entertainment_sabatoge_key == false) and (fiyork.fiyork_arcade_sabatoge_key == false)):
+			fiyork_complete.set_hidden(false)
+			pixel.set_hidden(false)
+			get_tree().set_pause(true)
+		supply_one_count = supplies.fiyork_freezie_count
+		supply_one_name = "Freezie"
+		supply_one_icon = load("res://concessions_want.png")
+		supply_two_count = supplies.fiyork_pizza_count
+		supply_two_name = "Pizza"
+		supply_two_icon = load("res://pizza.png")
+		genre_one_count = customer_math.shooter_prediction
+		genre_one_name = "Shooter"
+		genre_one_icon = load("res://meta_genre.png")
+		genre_two_count = customer_math.adventure_prediction
+		genre_two_key = customer_math.fiyork_genre_two_key
+		genre_two_name = "Adventure"
+		genre_two_icon = load("res://meta_genre.png")
+		genre_three_count = customer_math.casual_prediction
+		genre_three_name = "Casual"
+		genre_three_key = customer_math.fiyork_genre_three_key
+		genre_three_icon = load("res://meta_genre.png")
+		if (get_node("cursor_blink").get_time_left() > 1):
+			town_banner.get_child(1).clear()
+			town_banner.get_child(1).add_text("Fiyork...")
+		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
+			town_banner.get_child(1).clear()
+			town_banner.get_child(1).add_text("Fiyork...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 	supply_one.get_child(2).get_child(0).clear()
@@ -189,6 +224,27 @@ func research_countdown():
 				pixel_big()
 				pixel.set_hidden(false)
 				get_tree().set_pause(true)
+	if (towns.town_select == "fiyork"):
+		if (fiyork.fiyork_days_left_research - 1 > 0):
+			fiyork.fiyork_days_left_research = fiyork.fiyork_days_left_research - 1
+			fiyork.fiyork_research_fund = fiyork.fiyork_research_fund + fiyork.fiyork_research_spending
+		if (fiyork.fiyork_days_left_research - 1 == 0):
+			if (fiyork.fiyork_genre_two_key == false):
+				fiyork.fiyork_genre_two_key = true
+				fiyork.fiyork_research_fund = 0
+				fiyork.fiyork_research_spending = 0
+				genre_discovery.set_hidden(false)
+				pixel_big()
+				pixel.set_hidden(false)
+				get_tree().set_pause(true)
+			if ((keys.fiyork_genre_two_key == true) and (keys.fiyork_genre_three_key == false)):
+				keys.fiyork_genre_three_key = true
+				fiyork.fiyork_research_fund = 0
+				fiyork.fiyork_research_spending = 0
+				genre_discovery.set_hidden(false)
+				pixel_big()
+				pixel.set_hidden(false)
+				get_tree().set_pause(true)
 
 func _on_start_day_button_up():
 	if (towns.town_select == "hollyhock"):
@@ -219,6 +275,35 @@ func _on_start_day_button_up():
 			get_node("skip_or_play").show()
 			pixel_big()
 			get_node("pixel").show()
+	if (towns.town_select == "fiyork"):
+		if (money.fiyork_balance - money.fiyork_expenses < 0):
+			low_funds_warning.set_hidden(false)
+			pixel_big()
+			pixel.set_hidden(false)
+			get_tree().set_pause(true)
+		else:
+			money.fiyork_balance = money.fiyork_balance - money.fiyork_expenses
+			supplies.freezie_yesterday_used = 0
+			supplies.pizza_yesterday_used = 0
+			if (fiyork.fiyork_current_loan > 0):
+				var daily_interest_charge = fiyork.fiyork_current_loan * loans.daily_interest
+				money.fiyork_balance = money.fiyork_balance - int(daily_interest_charge)
+			customer_globals.sales_made = 0
+			customer_globals.sales_lost = 0
+			customer_globals.storefront_loss = 0
+			customer_globals.price_loss = 0
+			customer_globals.waited_loss = 0
+			customer_globals.sabatoge_loss= 0
+			money.income = 0
+			perks.perks()
+			get_node("skip_or_play/perk_output").clear()
+			get_node("skip_or_play/perk_output").add_text(perks.perk)
+			get_node("skip_or_play/perk_goal_output").clear()
+			get_node("skip_or_play/perk_goal_output").add_text(str(perks.perk_goal))
+			get_node("skip_or_play").show()
+			pixel_big()
+			get_node("pixel").show()
+
 
 func _on_low_funds_ok_button_down():
 	low_funds_warning.set_hidden(true)
@@ -233,10 +318,15 @@ func _on_genre_discover_ok_button_down():
 	get_tree().set_pause(false)
 
 func _on_continue_ok_button_down():
-	hollyhock_complete.set_hidden(true)
+	if (towns.town_select == "hollyhock"):
+		hollyhock_complete.set_hidden(true)
+		get_tree().change_scene("res://story_piece_three.tscn")
+	if (towns.town_select == "fiyork"):
+		print("story piece four")
+		fiyork_complete.set_hidden(true)
+		#get_tree().change_scene("res://story_piece_three.tscn")
 	pixel_small()
 	get_tree().set_pause(false)
-	towns.town_select = "fiyork"
 	money.income = 0
 	customer_globals.sales_lost = 0
 	customer_globals.sales_made = 0
@@ -245,11 +335,14 @@ func _on_continue_ok_button_down():
 	customer_globals.waited_loss = 0
 	customer_globals.sabatoge_loss = 0
 	
+	
 func tutorial_start():
 	if (tutorial.tutorial_start == false):
-		tutorial_start.show()
-		pixel_big()
-		pixel.show()
+		pass
+		print("undo this in strategy tutorial") 
+		#tutorial_start.show()
+		#pixel_big()
+		#pixel.show()
 	if (tutorial.tutorial_start == true):
 		pass
 
@@ -268,6 +361,10 @@ func _on_game_over_ok_button_down():
 		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_hollyhock()
+	if (towns.town_select == "fiyork"):
+		pixel_small()
+		game_over_alert.set_hidden(true)
+		game_over.game_over_fiyork()
 
 func _on_ok_button_button_down():
 	if (get_node("AnimationPlayer").get_current_animation() == "tutorial_pt3"):
@@ -481,6 +578,204 @@ func _on_skip_button_down():
 				else: 
 					customer_globals.sales_lost = customer_globals.sales_lost + 1
 					customer_globals.storefront_loss = customer_globals.storefront_loss + 1
+	if (towns.town_select == "fiyork"):
+		for x in range(0, customer_math.player_prediction_one + 1):
+			storefront_check.storefront_check()
+			if (storefront_check.storefront_choice == true):
+				quick_wait_check()
+				customer_choice = randomness[randi() % randomness.size()]
+				if (customer_choice == true):
+					rand_arcade_price = [price_check.fiyork_arcade_one_price]
+					if (set_genre.fiyork_station_two_selection == 1):
+						rand_arcade_price.append(price_check.fiyork_arcade_two_price)
+					if (set_genre.fiyork_station_three_selection == 1):
+						rand_arcade_price.append(price_check.fiyork_arcade_three_price)
+					if (set_genre.fiyork_station_four_selection == 1):
+						rand_arcade_price.append(price_check.fiyork_arcade_four_price)
+					if (set_genre.fiyork_station_five_selection == 1):
+						rand_arcade_price.append(price_check.fiyork_arcade_five_price)
+					if (set_genre.fiyork_station_six_selection == 1):
+						rand_arcade_price.append(price_check.fiyork_arcade_six_price)
+					price_choice = rand_arcade_price[randi() % rand_arcade_price.size()]
+					if (price_choice < price_check.fiyork_arcade_range_high):
+						money.fiyork_balance = money.fiyork_balance + price_choice
+						money.income = money.income + price_choice
+						customer_globals.sales_made = customer_globals.sales_made + 1
+						var concession_rand = [true, true, false]
+						concession_choice = concession_rand[randi() % concession_rand.size()]
+						if (concession_choice == true):
+							var concession_options = ["freezie", "pizza", "both"]
+							concessions_desire = concession_options[randi() % concession_options.size()]
+							if (concessions_desire == "freezie"):
+								if (supplies.fiyork_freezie_count > 0):
+									var check_freezie = supplies.freezie_range_high - supplies.fiyork_freezie_price #check if the soda price is too high
+									if (check_freezie <= 0):
+										concessions_price_check = false
+									else:
+										concessions_price_check = true
+									if (concessions_price_check == true): #if the price is not too high
+										buy_freezie()
+							if (concessions_desire == "pizza"):
+								if (supplies.fiyork_pizza_count > 0):
+									var check_pizza = supplies.pizza_range_high - supplies.fiyork_pizza_price #check if the soda price is too high
+									if (check_pizza <= 0):
+										concessions_price_check = false
+									else:
+										concessions_price_check = true
+									if (concessions_price_check == true): #if the price is not too high
+										buy_pizza()
+							if (concessions_desire == "both"):
+								if ((supplies.fiyork_freezie_count > 0) and (supplies.fiyork_pizza_count > 0)):
+									var check_freezie = supplies.freezie_range_high - supplies.fiyork_freezie_price #check if the soda price is too high
+									var check_pizza = supplies.pizza_range_high - supplies.fiyork_pizza_price #check if the popcorn price is too high
+									if ((check_freezie <= 0) or (check_pizza <= 0)):
+										concessions_price_check = false
+									else:
+										concessions_price_check = true
+									if (concessions_price_check == true): #if the price is not too high
+										buy_freezie()
+										buy_pizza()
+					else:
+						customer_globals.sales_lost = customer_globals.sales_lost + 1
+						customer_globals.price_loss = customer_globals.price_loss + 1
+				else:
+					customer_globals.sales_lost = customer_globals.sales_lost + 1
+					customer_globals.waited_loss = customer_globals.waited_loss + 1
+			else: 
+				customer_globals.sales_lost = customer_globals.sales_lost + 1
+				customer_globals.storefront_loss = customer_globals.storefront_loss + 1
+		if (customer_math.fiyork_genre_two_key == true):
+			for x in range(0, customer_math.player_prediction_two + 1):
+				storefront_check.storefront_check()
+				if (storefront_check.storefront_choice == true):
+					quick_wait_check()
+					customer_choice = randomness[randi() % randomness.size()]
+					if (customer_choice == true):
+						rand_arcade_price = [price_check.fiyork_arcade_one_price]
+						if (set_genre.fiyork_station_two_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_two_price)
+						if (set_genre.fiyork_station_three_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_three_price)
+						if (set_genre.fiyork_station_four_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_four_price)
+						if (set_genre.fiyork_station_five_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_five_price)
+						if (set_genre.fiyork_station_six_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_six_price)
+						price_choice = rand_arcade_price[randi() % rand_arcade_price.size()]
+						if (price_choice < price_check.fiyork_arcade_range_high):
+							money.fiyork_balance = money.fiyork_balance + price_choice
+							money.income = money.income + price_choice
+							customer_globals.sales_made = customer_globals.sales_made + 1
+							var concession_rand = [true, true, false]
+							concession_choice = concession_rand[randi() % concession_rand.size()]
+							if (concession_choice == true):
+								var concession_options = ["freezie", "pizza", "both"]
+								concessions_desire = concession_options[randi() % concession_options.size()]
+								if (concessions_desire == "soda"):
+									if (supplies.fiyork_freezie_count > 0):
+										var check_freezie = supplies.freezie_range_high - supplies.fiyork_freezie_price #check if the soda price is too high
+										if (check_freezie <= 0):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_freezie()
+								if (concessions_desire == "pizza"):
+									if (supplies.fiyork_pizza_count > 0):
+										var check_pizza = supplies.pizza_range_high - supplies.fiyork_pizza_price #check if the soda price is too high
+										if (check_pizza <= 0):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_pizza()
+								if (concessions_desire == "both"):
+									if ((supplies.fiyork_freezie_count > 0) and (supplies.fiyork_pizza_count > 0)):
+										var check_freezie = supplies.freezie_range_high - supplies.fiyork_freezie_price #check if the soda price is too high
+										var check_pizza = supplies.pizza_range_high - supplies.fiyork_pizza_price #check if the popcorn price is too high
+										if ((check_freezie <= 0) or (check_pizza <= 0)):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_freezie()
+											buy_pizza()
+						else:
+							customer_globals.sales_lost = customer_globals.sales_lost + 1
+							customer_globals.price_loss = customer_globals.price_loss + 1
+					else:
+						customer_globals.sales_lost = customer_globals.sales_lost + 1
+						customer_globals.waited_loss = customer_globals.waited_loss + 1
+				else: 
+					customer_globals.sales_lost = customer_globals.sales_lost + 1
+					customer_globals.storefront_loss = customer_globals.storefront_loss + 1
+		if (customer_math.fiyork_genre_three_key == true):
+			for x in range(0, customer_math.player_prediction_three + 1):
+				storefront_check.storefront_check()
+				if (storefront_check.storefront_choice == true):
+					quick_wait_check()
+					customer_choice = randomness[randi() % randomness.size()]
+					if (customer_choice == true):
+						rand_arcade_price = [price_check.fiyork_arcade_one_price]
+						if (set_genre.fiyork_station_two_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_two_price)
+						if (set_genre.fiyork_station_three_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_three_price)
+						if (set_genre.fiyork_station_four_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_four_price)
+						if (set_genre.fiyork_station_five_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_five_price)
+						if (set_genre.fiyork_station_six_selection == 1):
+							rand_arcade_price.append(price_check.fiyork_arcade_six_price)
+						price_choice = rand_arcade_price[randi() % rand_arcade_price.size()]
+						if (price_choice < price_check.fiyork_arcade_range_high):
+							money.fiyork_balance = money.fiyork_balance + price_choice
+							money.income = money.income + price_choice
+							customer_globals.sales_made = customer_globals.sales_made + 1
+							var concession_rand = [true, true, false]
+							concession_choice = concession_rand[randi() % concession_rand.size()]
+							if (concession_choice == true):
+								var concession_options = ["freezie", "pizza", "both"]
+								concessions_desire = concession_options[randi() % concession_options.size()]
+								if (concessions_desire == "soda"):
+									if (supplies.fiyork_freezie_count > 0):
+										var check_freezie = supplies.freezie_range_high - supplies.fiyork_freezie_price #check if the soda price is too high
+										if (check_freezie <= 0):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_freezie()
+								if (concessions_desire == "pizza"):
+									if (supplies.fiyork_pizza_count > 0):
+										var check_pizza = supplies.pizza_range_high - supplies.fiyork_pizza_price #check if the soda price is too high
+										if (check_pizza <= 0):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_pizza()
+								if (concessions_desire == "both"):
+									if ((supplies.fiyork_freezie_count > 0) and (supplies.fiyork_pizza_count > 0)):
+										var check_freezie = supplies.freezie_range_high - supplies.fiyork_freezie_price #check if the soda price is too high
+										var check_pizza = supplies.pizza_range_high - supplies.fiyork_pizza_price #check if the popcorn price is too high
+										if ((check_freezie <= 0) or (check_pizza <= 0)):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_freezie()
+											buy_pizza()
+						else:
+							customer_globals.sales_lost = customer_globals.sales_lost + 1
+							customer_globals.price_loss = customer_globals.price_loss + 1
+					else:
+						customer_globals.sales_lost = customer_globals.sales_lost + 1
+						customer_globals.waited_loss = customer_globals.waited_loss + 1
+				else: 
+					customer_globals.sales_lost = customer_globals.sales_lost + 1
+					customer_globals.storefront_loss = customer_globals.storefront_loss + 1
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
@@ -492,6 +787,8 @@ func _on_play_button_down():
 	get_node("skip_or_play").set_hidden(true)
 	if (towns.town_select == "hollyhock"):
 		get_tree().change_scene("res://hollyhock_time_management.tscn")
+	if (towns.town_select == "fiyork"):
+		get_tree().change_scene("res://fiyork_time_management.tscn")
 	
 func quick_wait_check():
 	if (towns.town_select == "hollyhock"):
@@ -505,6 +802,17 @@ func quick_wait_check():
 			randomness = [true, true, true, false]
 		if (hollyhock.hollyhock_entertainment_decent_key == false) and (hollyhock.hollyhock_entertainment_worst_key == true):
 			randomness = [true, true, false]
+	if (towns.town_select == "fiyork"):
+		if (fiyork.fiyork_entertainment_best_key == true):
+			randomness = [true, true, true, true, true]
+		if (fiyork.fiyork_entertainment_best_key == false) and (fiyork.fiyork_entertainment_great_key == true):
+			randomness = [true, true, true, true, false]
+		if (fiyork.fiyork_entertainment_great_key == false) and (fiyork.fiyork_entertainment_good_key == true):
+			randomness = [true, true, true, false]
+		if (fiyork.fiyork_entertainment_good_key == false) and (fiyork.fiyork_entertainment_decent_key == true):
+			randomness = [true, true, true, false]
+		if (fiyork.fiyork_entertainment_decent_key == false) and (fiyork.fiyork_entertainment_worst_key == true):
+			randomness = [true, true, false]
 		
 func buy_soda():
 	if (towns.town_select == "hollyhock"):
@@ -513,6 +821,14 @@ func buy_soda():
 		supplies.hollyhock_soda_count = supplies.hollyhock_soda_count - 1
 		supplies.soda_yesterday_used = supplies.soda_yesterday_used + 1
 		money.income = money.income + charge_price
+		
+func buy_freezie():
+	if (towns.town_select == "fiyork"):
+		var charge_price = supplies.fiyork_freezie_price
+		money.fiyork_balance = money.fiyork_balance + charge_price
+		supplies.fiyork_freezie_count = supplies.fiyork_freezie_count - 1
+		supplies.freezie_yesterday_used = supplies.freezie_yesterday_used + 1
+		money.income = money.income + charge_price
 	
 func buy_popcorn():
 	if (towns.town_select == "hollyhock"):
@@ -520,6 +836,14 @@ func buy_popcorn():
 		money.hollyhock_balance = money.hollyhock_balance + charge_price
 		supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
 		supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
+		money.income = money.income + charge_price
+		
+func buy_pizza():
+	if (towns.town_select == "fiyork"):
+		var charge_price = supplies.fiyork_pizza_price
+		money.fiyork_balance = money.fiyork_balance + charge_price
+		supplies.fiyork_pizza_count = supplies.fiyork_pizza_count - 1
+		supplies.pizza_yesterday_used = supplies.pizza_yesterday_used + 1
 		money.income = money.income + charge_price
 		
 func pixel_big():
@@ -556,6 +880,9 @@ func _on_yes_restart_button_down():
 	if (towns.town_select == "hollyhock"):
 		pixel_small()
 		game_over.game_over_hollyhock()
+	if (towns.town_select == "fiyork"):
+		pixel_small()
+		game_over.game_over_fiyork()
 
 func _on_no_restart_button_down():
 	get_node("are_you_sure").set_hidden(true)

@@ -4799,7 +4799,6 @@ texture = ExtResource( 9 )
 
 [node name="demand_buttons" type="VButtonArray" parent="."]
 
-editor/display_folded = true
 rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -5189,6 +5188,58 @@ bbcode/bbcode = "You have completed the level goal for the town of Hollyhock! Wi
 visible_characters = -1
 
 [node name="continue_ok" type="LinkButton" parent="hollyhock_complete"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -1.0
+margin/top = 18.0
+margin/right = 51.0
+margin/bottom = 61.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="fiyork_complete" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="fiyork_complete"]
+
+transform/pos = Vector2( -10.1723, -2.71569 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0436669, 0.0276812 )
+texture = ExtResource( 24 )
+
+[node name="warning" type="RichTextLabel" parent="fiyork_complete"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -26.0
+margin/top = -21.0
+margin/right = 266.0
+margin/bottom = 349.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
+visible_characters = -1
+
+[node name="continue_ok" type="LinkButton" parent="fiyork_complete"]
 
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false

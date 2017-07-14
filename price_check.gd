@@ -13,6 +13,14 @@ var hollyhock_arcade_three_price = 0
 var hollyhock_arcade_four_price = 0
 var hollyhock_arcade_five_price = 0
 var hollyhock_arcade_six_price = 0
+var fiyork_arcade_range_low = 8
+var fiyork_arcade_range_high = 18
+var fiyork_arcade_one_price = 0
+var fiyork_arcade_two_price = 0
+var fiyork_arcade_three_price = 0
+var fiyork_arcade_four_price = 0
+var fiyork_arcade_five_price = 0
+var fiyork_arcade_six_price = 0
 
 func _ready():
 	set_process(true)
@@ -35,7 +43,19 @@ func check_one():
 			price_check = false
 		else:
 			price_check = true
-			
+	if (towns.town_select == "fiyork"):
+		check = fiyork_arcade_range_high - fiyork_arcade_one_price #check if the arcade price is too high
+		if (set_genre.genre_type_one == "shooter"):
+			type_pass = customer_math.shooter_prediction
+		if (set_genre.genre_type_one == "adventure"):
+			type_pass = customer_math.adventure_prediction
+		if (set_genre.genre_type_two == "casual"):
+			type_pass = customer_math.casual_prediction
+		if ((check <= 0) and (type_pass < .75)):
+			price_check = false
+		else:
+			price_check = true
+
 func check_two():
 	set_genre.set_genre_type()
 	if (towns.town_select == "hollyhock"):
@@ -46,6 +66,18 @@ func check_two():
 			type_pass = customer_math.classic_prediction
 		if (set_genre.genre_type_two == "platformer"):
 			type_pass = customer_math.platformer_prediction
+		if ((check <= 0) and (type_pass < .75)):
+			price_check = false
+		else:
+			price_check = true
+	if (towns.town_select == "fiyork"):
+		check = fiyork_arcade_range_high - fiyork_arcade_two_price #check if the arcade price is too high
+		if (set_genre.genre_type_one == "shooter"):
+			type_pass = customer_math.shooter_prediction
+		if (set_genre.genre_type_one == "adventure"):
+			type_pass = customer_math.adventure_prediction
+		if (set_genre.genre_type_two == "casual"):
+			type_pass = customer_math.casual_prediction
 		if ((check <= 0) and (type_pass < .75)):
 			price_check = false
 		else:
@@ -65,7 +97,20 @@ func check_three():
 			price_check = false
 		else:
 			price_check = true
-			
+	if (towns.town_select == "fiyork"):
+		check = fiyork_arcade_range_high - fiyork_arcade_three_price #check if the arcade price is too high
+		if (set_genre.genre_type_one == "shooter"):
+			type_pass = customer_math.shooter_prediction
+		if (set_genre.genre_type_one == "adventure"):
+			type_pass = customer_math.adventure_prediction
+		if (set_genre.genre_type_two == "casual"):
+			type_pass = customer_math.casual_prediction
+		if ((check <= 0) and (type_pass < .75)):
+			price_check = false
+		else:
+			price_check = true
+
+
 func check_four():
 	set_genre.set_genre_type()
 	if (towns.town_select == "hollyhock"):
@@ -80,6 +125,19 @@ func check_four():
 			price_check = false
 		else:
 			price_check = true
+	if (towns.town_select == "fiyork"):
+		check = fiyork_arcade_range_high - fiyork_arcade_four_price #check if the arcade price is too high
+		if (set_genre.genre_type_one == "shooter"):
+			type_pass = customer_math.shooter_prediction
+		if (set_genre.genre_type_one == "adventure"):
+			type_pass = customer_math.adventure_prediction
+		if (set_genre.genre_type_two == "casual"):
+			type_pass = customer_math.casual_prediction
+		if ((check <= 0) and (type_pass < .75)):
+			price_check = false
+		else:
+			price_check = true
+
 
 func check_five():
 	set_genre.set_genre_type()
@@ -95,7 +153,20 @@ func check_five():
 			price_check = false
 		else:
 			price_check = true
-			
+	if (towns.town_select == "fiyork"):
+		check = fiyork_arcade_range_high - fiyork_arcade_five_price #check if the arcade price is too high
+		if (set_genre.genre_type_one == "shooter"):
+			type_pass = customer_math.shooter_prediction
+		if (set_genre.genre_type_one == "adventure"):
+			type_pass = customer_math.adventure_prediction
+		if (set_genre.genre_type_two == "casual"):
+			type_pass = customer_math.casual_prediction
+		if ((check <= 0) and (type_pass < .75)):
+			price_check = false
+		else:
+			price_check = true
+
+
 func check_six():
 	set_genre.set_genre_type()
 	if (towns.town_select == "hollyhock"):
@@ -106,6 +177,18 @@ func check_six():
 			type_pass = customer_math.classic_prediction
 		if (set_genre.genre_type_six == "platformer"):
 			type_pass = customer_math.platformer_prediction
+		if ((check <= 0) and (type_pass < .75)):
+			price_check = false
+		else:
+			price_check = true
+	if (towns.town_select == "fiyork"):
+		check = fiyork_arcade_range_high - fiyork_arcade_six_price #check if the arcade price is too high
+		if (set_genre.genre_type_one == "shooter"):
+			type_pass = customer_math.shooter_prediction
+		if (set_genre.genre_type_one == "adventure"):
+			type_pass = customer_math.adventure_prediction
+		if (set_genre.genre_type_two == "casual"):
+			type_pass = customer_math.casual_prediction
 		if ((check <= 0) and (type_pass < .75)):
 			price_check = false
 		else:

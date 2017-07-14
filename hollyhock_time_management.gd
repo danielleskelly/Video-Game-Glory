@@ -298,6 +298,7 @@ func pixel_big():
 
 func _on_pixel_button_button_down():
 	pixel_big()
+	get_tree().set_pause(true)
 	get_node("menu").set_hidden(false)
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 	
@@ -320,6 +321,7 @@ func point_display():
 
 func _on_return_to_game_button_down():
 	pixel_small()
+	get_tree().set_pause(false)
 	get_node("menu").set_hidden(true)
 
 

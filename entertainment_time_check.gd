@@ -6,6 +6,12 @@ var hollyhock_entertainment_good_key = false
 var hollyhock_entertainment_decent_key = false
 var hollyhock_entertainment_worst_key = true
 
+var fiyork_entertainment_best_key = false
+var fiyork_entertainment_great_key = false
+var fiyork_entertainment_good_key = false
+var fiyork_entertainment_decent_key = false
+var fiyork_entertainment_worst_key = true
+
 var wait_time
 
 func _ready():
@@ -25,4 +31,15 @@ func entertainment_time_check():
 		elif (hollyhock_entertainment_decent_key == true):
 			wait_time = 30
 		elif (hollyhock_entertainment_worst_key == true):
+			wait_time = 25
+	if (towns.town_select == "fiyork"):
+		if (fiyork_entertainment_best_key == true):
+			wait_time == 45
+		elif (fiyork_entertainment_great_key == true):
+			wait_time = 40
+		elif (fiyork_entertainment_good_key == true):
+			wait_time = 35
+		elif (fiyork_entertainment_decent_key == true):
+			wait_time = 30
+		elif (fiyork_entertainment_worst_key == true):
 			wait_time = 25

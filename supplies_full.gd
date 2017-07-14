@@ -21,4 +21,13 @@ func _on_confirm_button_down():
 		get_node("supply_two").popcorn_purchase = 0
 		var total_deduc = get_node("overall_total_output").get_text()
 		money.hollyhock_balance = money.hollyhock_balance - int(total_deduc)
+	if (towns.town_select == "fiyork"):
+		supply_one_purchase = get_node("supply_one").soda_purchase
+		supply_two_purchase = get_node("supply_two").popcorn_purchase
+		supplies.fiyork_soda_count = supplies.fiyork_soda_count + supply_one_purchase
+		supplies.fiyork_popcorn_count = supplies.fiyork_popcorn_count + supply_two_purchase
+		get_node("supply_one").soda_purchase = 0
+		get_node("supply_two").popcorn_purchase = 0
+		var total_deduc = get_node("overall_total_output").get_text()
+		money.fiyork_balance = money.fiyork_balance - int(total_deduc)
 	supplies.purchase_total = 0
