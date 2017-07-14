@@ -11,6 +11,7 @@ onready var low_funds_warning = get_tree().get_current_scene().get_node("low_fun
 onready var game_over_alert = get_tree().get_current_scene().get_node("game_over_alert")
 onready var genre_discovery = get_node("genre_discovery")
 onready var hollyhock_complete = get_node("hollyhock_complete")
+onready var fiyork_complete = get_node("fiyork_complete")
 onready var tutorial_start = get_node("tutorial_start")
 onready var tutorial_persistent_menu = get_node("tutorial_persistent_menu")
 onready var tutorial_reports = get_node("tutorial_reports")
