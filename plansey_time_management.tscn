@@ -1,0 +1,1861 @@
+[gd_scene load_steps=13 format=1]
+
+[ext_resource path="res://plansey_time_management.gd" type="Script" id=1]
+[ext_resource path="res://background.png" type="Texture" id=2]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=4]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=5]
+[ext_resource path="res://pixel.png" type="Texture" id=6]
+[ext_resource path="res://pixel_leg.png" type="Texture" id=7]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=8]
+[ext_resource path="res://outer_box.png" type="Texture" id=9]
+[ext_resource path="res://inner_box.png" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="plansey_time_management" type="Node2D"]
+
+transform/pos = Vector2( 513.144, 309.168 )
+transform/scale = Vector2( 16.0526, 9.62054 )
+script/script = ExtResource( 1 )
+
+[node name="a_one" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -27.4626, -25.5973 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one7 5" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -27.4626, -12.2924 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one7 5"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 5"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one7 5" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one76" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -27.4626, 1.01244 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one76"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one76"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one76" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one79" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -27.4626, 14.3173 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one79"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one79" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one1" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -18.3674, -25.5973 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one1"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one1"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one1" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one7 2" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -18.3674, -12.2924 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one7 2"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 2"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one7 2" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one73" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -18.3674, 1.01244 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one73"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one73"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one73" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one79 4" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -18.3674, 14.3173 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one79 4"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 4"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one79 4" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one2" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -9.27228, -25.5973 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one2"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one2"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one2" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one7 3" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -9.27228, -12.2924 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one7 3"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 3"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one7 3" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one74" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -9.27228, 1.01244 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one74"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one74"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one74" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one79 6" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -9.27228, 14.3173 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one79 6"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 6"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one79 6" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one3" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -0.177166, -25.5973 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one3"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one3"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one3" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one7 7" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -0.177166, -12.2924 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one7 7"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 7"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one7 7" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one78" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -0.177166, 1.01244 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one78"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one78"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one78" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one79 2" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -0.177166, 14.3173 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one79 2"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 2"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one79 2" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one4" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 8.91795, -25.5973 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one4"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one4"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one4" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one7 6" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 8.91795, -12.2924 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one7 6"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 6"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one7 6" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one77" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 8.91795, 1.01244 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one77"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one77"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one77" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one79 5" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 8.91795, 14.3173 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one79 5"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 5"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one79 5" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one5" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 18.013, -25.5973 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one5"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one5"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one5" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one7 4" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 18.013, -12.2924 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one7 4"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 4"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one7 4" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one75" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 18.013, 1.01244 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one75"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one75"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one75" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one79 3" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 18.013, 14.3173 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one79 3"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 3"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one79 3" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one6" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 27.1082, -25.5973 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one6"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one6"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one6" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one7" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 27.1082, -12.2924 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one7"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one7" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one8" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 27.1082, 1.01244 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one8"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one8"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one8" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="a_one9" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 27.1082, 14.3173 )
+transform/scale = Vector2( 0.120496, 0.167915 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="a_one9"]
+
+transform/pos = Vector2( 0.625046, 1.30068 )
+transform/scale = Vector2( 0.0591225, 0.0775705 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one9"]
+
+transform/pos = Vector2( 0.845041, 0.876618 )
+transform/scale = Vector2( 2.62512, 2.73256 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="number" type="RichTextLabel" parent="a_one9" groups=[
+"number",
+]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -14.0
+margin/right = 26.0
+margin/bottom = 26.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="goal" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -16.0
+margin/top = 24.0
+margin/right = 257.0
+margin/bottom = 64.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="move_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
+[node name="number_muncher" type="Node2D" parent="."]
+
+transform/pos = Vector2( -27.8843, 15.0023 )
+transform/scale = Vector2( 0.0484629, 0.150002 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="number_muncher"]
+
+transform/pos = Vector2( 0.896034, -6.05616 )
+transform/scale = Vector2( 0.282176, 0.245728 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 3.79511, 0, 0, 2.65404, 1.43023, 2.50243 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 0.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 1
+contact_monitor = true
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="number_muncher/RigidBody2D"]
+
+transform/pos = Vector2( 1.43023, 2.50243 )
+transform/scale = Vector2( 3.79511, 2.65404 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="left_arm" type="Sprite" parent="number_muncher"]
+
+transform/pos = Vector2( -13.4951, -26.0577 )
+transform/rot = -58.211
+transform/scale = Vector2( 0.286378, 0.2961 )
+texture = ExtResource( 4 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="right_arm" type="Sprite" parent="number_muncher"]
+
+transform/pos = Vector2( -0.0984344, -2.17146 )
+transform/rot = 51.2738
+transform/scale = Vector2( 0.297125, 0.259884 )
+texture = ExtResource( 4 )
+centered = false
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="torso" type="Sprite" parent="number_muncher"]
+
+transform/pos = Vector2( -27.8237, -19.7018 )
+transform/scale = Vector2( 0.534314, 0.301116 )
+texture = ExtResource( 5 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="head" type="Sprite" parent="number_muncher"]
+
+transform/pos = Vector2( -26.012, -36.5819 )
+transform/scale = Vector2( 0.534314, 0.301116 )
+texture = ExtResource( 6 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="left_leg" type="Sprite" parent="number_muncher"]
+
+transform/pos = Vector2( -27.47, -0.00810242 )
+transform/rot = -6.79378
+transform/scale = Vector2( 0.53399, 0.332644 )
+texture = ExtResource( 7 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="right_leg" type="Sprite" parent="number_muncher"]
+
+transform/pos = Vector2( -23.9351, 9.42355 )
+transform/rot = 12.5404
+transform/scale = Vector2( 0.533186, 0.337959 )
+texture = ExtResource( 7 )
+centered = false
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hips" type="Sprite" parent="number_muncher"]
+
+transform/pos = Vector2( -17.7132, -2.41655 )
+transform/scale = Vector2( 0.318591, 0.144223 )
+texture = ExtResource( 8 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="success_background" type="Sprite" parent="."]
+
+transform/pos = Vector2( -26.7925, 26.5292 )
+transform/scale = Vector2( 0.050856, 0.0417198 )
+texture = ExtResource( 9 )
+
+[node name="points" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -43.0
+margin/top = -88.0
+margin/right = 41.0
+margin/bottom = -34.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Points"
+visible_characters = -1
+
+[node name="Sprite" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( -46.0194, 18.9423 )
+transform/scale = Vector2( 0.299385, 0.659328 )
+texture = ExtResource( 10 )
+
+[node name="Sprite1" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( -0.320828, 18.9424 )
+transform/scale = Vector2( 0.295403, 0.659328 )
+texture = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( 45.0791, 18.9424 )
+transform/scale = Vector2( 0.295403, 0.659328 )
+texture = ExtResource( 10 )
+
+[node name="hundreths" type="RichTextLabel" parent="success_background"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -61.0
+margin/top = -11.0
+margin/right = -40.0
+margin/bottom = 38.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="tens" type="RichTextLabel" parent="success_background"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -15.0
+margin/top = -11.0
+margin/right = 6.0
+margin/bottom = 38.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="ones" type="RichTextLabel" parent="success_background"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 32.0
+margin/top = -10.0
+margin/right = 53.0
+margin/bottom = 39.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="day_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 120.0
+one_shot = false
+autostart = true
+
+[node name="countdown_timer" type="RichTextLabel" parent="." groups=[
+"number",
+]]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 24.0
+margin/right = 80.0
+margin/bottom = 64.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+
+[node name="debounce" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
+

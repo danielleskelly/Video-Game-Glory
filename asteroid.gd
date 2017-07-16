@@ -123,7 +123,7 @@ func _fixed_process(delta):
 		var colliders = body.get_colliding_bodies()
 		for collider in colliders:
 			if (collider.is_in_group("bullets")):
-				perks.success = perks.success + 1
+				perks.success = perks.success + 2
 				var explosion_place = body.get_pos()
 				get_node("explosion").set_pos(explosion_place)
 				get_node("explosion").show()
@@ -181,9 +181,9 @@ func _process(delta):
 		clear_rocks(z)
 
 func point_display():
-		var one_ones_digit = ((perks.success + perks.perk_final_count)) % 10
-		var one_tens_digit = ((perks.success + perks.perk_final_count) / 10) % 10
-		var one_hunds_digit = ((perks.success + perks.perk_final_count) / 100) % 10
+		var one_ones_digit = ((perks.success)) % 10
+		var one_tens_digit = ((perks.success) / 10) % 10
+		var one_hunds_digit = ((perks.success) / 100) % 10
 		hundreds.clear()
 		hundreds.add_text(str(one_hunds_digit))
 		tens.clear()
