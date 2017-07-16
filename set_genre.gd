@@ -21,6 +21,13 @@ var fiyork_station_four_selection = 0
 var fiyork_station_five_selection = 0
 var fiyork_station_six_selection = 0
 
+var plansey_station_one_selection = 0
+var plansey_station_two_selection = 0
+var plansey_station_three_selection = 0
+var plansey_station_four_selection = 0
+var plansey_station_five_selection = 0
+var plansey_station_six_selection = 0
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here

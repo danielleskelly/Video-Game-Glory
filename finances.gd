@@ -22,3 +22,10 @@ func _process(delta):
 		expenses.add_text(str(money.fiyork_expenses))
 		cash.clear()
 		cash.add_text(str(money.fiyork_cash))
+	if (towns.town_select == "plansey"):
+		balance.clear()
+		balance.add_text(str(money.plansey_balance))
+		expenses.clear()
+		expenses.add_text(str(money.plansey_expenses))
+		cash.clear()
+		cash.add_text(str(money.plansey_cash))

@@ -20,3 +20,9 @@ func add_items():
 				dropdown.add_item("Legendary Zilda")
 			if (fiyork.fiyork_genre_three_key == true):
 				dropdown.add_item("Get Those Unicorns Home!")
+		if (towns.town_select == "plansey"):
+			dropdown.add_item("Mathmatic Mastication")
+			if (fiyork.fiyork_genre_two_key == true):
+				dropdown.add_item("Car Wash Tycoon")
+			if (fiyork.fiyork_genre_three_key == true):
+				dropdown.add_item("Car Wash Tycoon")

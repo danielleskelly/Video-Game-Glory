@@ -50,3 +50,22 @@ func _process(delta):
 		sales_made_output.add_text(str(customer_globals.sales_made))
 		sales_lost_output.clear()
 		sales_lost_output.add_text(str(customer_globals.sales_lost))
+	if (towns.town_select == "plansey"):
+		goal_output.clear()
+		goal_output.add_text("Player Satisfaction of 90% with NO Loans")
+		income_output.clear()
+		income_output.add_text(str(money.income))
+		expenses_output.clear()
+		expenses_output.add_text(str(money.plansey_expenses))
+		cash_output.clear()
+		cash_output.add_text(str(money.plansey_cash))
+		if (customer_math.plansey_player_marketshare > 1):
+			marketshare_output.clear()
+			marketshare_output.add_text("%100")
+		else:
+			marketshare_output.clear()
+			marketshare_output.add_text("%" + str(int(customer_math.plansey_player_marketshare * 100)))
+		sales_made_output.clear()
+		sales_made_output.add_text(str(customer_globals.sales_made))
+		sales_lost_output.clear()
+		sales_lost_output.add_text(str(customer_globals.sales_lost))

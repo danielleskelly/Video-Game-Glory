@@ -12,6 +12,7 @@ onready var game_over_alert = get_tree().get_current_scene().get_node("game_over
 onready var genre_discovery = get_node("genre_discovery")
 onready var hollyhock_complete = get_node("hollyhock_complete")
 onready var fiyork_complete = get_node("fiyork_complete")
+onready var plansey_complete = get_node("plansey_complete")
 onready var tutorial_start = get_node("tutorial_start")
 onready var tutorial_persistent_menu = get_node("tutorial_persistent_menu")
 onready var tutorial_reports = get_node("tutorial_reports")
@@ -134,6 +135,41 @@ func _process(delta):
 			town_banner.get_child(1).add_text("Fiyork...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
+	if (towns.town_select == "plansey"):
+		if ((money.plansey_cash - money.plansey_expenses) < 0):
+			if ((money.plansey_expenses == 0) and (plansey.plansey_current_loan == loans.credit_limit)):
+				game_over_alert.set_hidden(false)
+				pixel.set_hidden(false)
+				get_tree().set_pause(true)
+		if ((customer_math.plansey_player_marketshare >= .9) and (plansey.plansey_current_loan == 0)):
+			plansey_complete.set_hidden(false)
+			pixel.set_hidden(false)
+			get_tree().set_pause(true)
+		supply_one_count = supplies.plansey_energy_count
+		supply_one_name = "Energy"
+		supply_one_icon = load("res://concessions_want.png")
+		supply_two_count = supplies.plansey_nachos_count
+		supply_two_name = "Nachos"
+		supply_two_icon = load("res://nachos.png")
+		genre_one_count = customer_math.nostalgic_prediction
+		genre_one_name = "Nostalgic"
+		genre_one_icon = load("res://meta_genre.png")
+		genre_two_count = customer_math.strategy_prediction
+		genre_two_key = customer_math.plansey_genre_two_key
+		genre_two_name = "Strategy"
+		genre_two_icon = load("res://meta_genre.png")
+		genre_three_count = customer_math.platformer_prediction
+		genre_three_name = "Platformer"
+		genre_three_key = customer_math.plansey_genre_three_key
+		genre_three_icon = load("res://meta_genre.png")
+		if (get_node("cursor_blink").get_time_left() > 1):
+			town_banner.get_child(1).clear()
+			town_banner.get_child(1).add_text("Plansey...")
+		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
+			town_banner.get_child(1).clear()
+			town_banner.get_child(1).add_text("Plansey...l")
+		elif (get_node("cursor_blink").get_time_left() == 0):
+			get_node("cursor_blink").start()
 	supply_one.get_child(2).get_child(0).clear()
 	supply_one.get_child(3).get_child(0).clear()
 	supply_one.get_child(4).get_child(0).clear()
@@ -246,6 +282,27 @@ func research_countdown():
 				pixel_big()
 				pixel.set_hidden(false)
 				get_tree().set_pause(true)
+	if (towns.town_select == "plansey"):
+		if (plansey.plansey_days_left_research - 1 > 0):
+			plansey.plansey_days_left_research = plansey.plansey_days_left_research - 1
+			plansey.plansey_research_fund = plansey.plansey_research_fund + plansey.plansey_research_spending
+		if (plansey.plansey_days_left_research - 1 == 0):
+			if (plansey.plansey_genre_two_key == false):
+				plansey.plansey_genre_two_key = true
+				plansey.plansey_research_fund = 0
+				plansey.plansey_research_spending = 0
+				genre_discovery.set_hidden(false)
+				pixel_big()
+				pixel.set_hidden(false)
+				get_tree().set_pause(true)
+			if ((keys.plansey_genre_two_key == true) and (keys.plansey_genre_three_key == false)):
+				keys.plansey_genre_three_key = true
+				plansey.plansey_research_fund = 0
+				plansey.plansey_research_spending = 0
+				genre_discovery.set_hidden(false)
+				pixel_big()
+				pixel.set_hidden(false)
+				get_tree().set_pause(true)
 
 func _on_start_day_button_up():
 	if (towns.town_select == "hollyhock"):
@@ -267,6 +324,7 @@ func _on_start_day_button_up():
 			customer_globals.price_loss = 0
 			customer_globals.waited_loss = 0
 			customer_globals.sabatoge_loss= 0
+			perks.success = 0
 			money.income = 0
 			perks.perks()
 			get_node("skip_or_play/perk_output").clear()
@@ -295,6 +353,36 @@ func _on_start_day_button_up():
 			customer_globals.price_loss = 0
 			customer_globals.waited_loss = 0
 			customer_globals.sabatoge_loss= 0
+			perks.success = 0
+			money.income = 0
+			perks.perks()
+			get_node("skip_or_play/perk_output").clear()
+			get_node("skip_or_play/perk_output").add_text(perks.perk)
+			get_node("skip_or_play/perk_goal_output").clear()
+			get_node("skip_or_play/perk_goal_output").add_text(str(perks.perk_goal))
+			get_node("skip_or_play").show()
+			pixel_big()
+			get_node("pixel").show()
+	if (towns.town_select == "plansey"):
+		if (money.plansey_balance - money.plansey_expenses < 0):
+			low_funds_warning.set_hidden(false)
+			pixel_big()
+			pixel.set_hidden(false)
+			get_tree().set_pause(true)
+		else:
+			money.plansey_balance = money.plansey_balance - money.plansey_expenses
+			supplies.freezie_yesterday_used = 0
+			supplies.pizza_yesterday_used = 0
+			if (plansey.plansey_current_loan > 0):
+				var daily_interest_charge = plansey.plansey_current_loan * loans.daily_interest
+				money.plansey_balance = money.plansey_balance - int(daily_interest_charge)
+			customer_globals.sales_made = 0
+			customer_globals.sales_lost = 0
+			customer_globals.storefront_loss = 0
+			customer_globals.price_loss = 0
+			customer_globals.waited_loss = 0
+			customer_globals.sabatoge_loss= 0
+			perks.success = 0
 			money.income = 0
 			perks.perks()
 			get_node("skip_or_play/perk_output").clear()
@@ -323,9 +411,12 @@ func _on_continue_ok_button_down():
 		hollyhock_complete.set_hidden(true)
 		get_tree().change_scene("res://story_piece_three.tscn")
 	if (towns.town_select == "fiyork"):
-		print("story piece four")
 		fiyork_complete.set_hidden(true)
-		#get_tree().change_scene("res://story_piece_three.tscn")
+		get_tree().change_scene("res://story_piece_four.tscn")
+	if (towns.town_select == "plansey"):
+		plansey_complete.set_hidden(true)
+		print("story piece five")
+		#get_tree().change_scene("res://story_piece_four.tscn")
 	pixel_small()
 	get_tree().set_pause(false)
 	money.income = 0
@@ -366,6 +457,10 @@ func _on_game_over_ok_button_down():
 		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_fiyork()
+	if (towns.town_select == "plansey"):
+		pixel_small()
+		game_over_alert.set_hidden(true)
+		game_over.game_over_plansey()
 
 func _on_ok_button_button_down():
 	if (get_node("AnimationPlayer").get_current_animation() == "tutorial_pt3"):
@@ -777,6 +872,204 @@ func _on_skip_button_down():
 				else: 
 					customer_globals.sales_lost = customer_globals.sales_lost + 1
 					customer_globals.storefront_loss = customer_globals.storefront_loss + 1
+	if (towns.town_select == "plansey"):
+		for x in range(0, customer_math.player_prediction_one + 1):
+			storefront_check.storefront_check()
+			if (storefront_check.storefront_choice == true):
+				quick_wait_check()
+				customer_choice = randomness[randi() % randomness.size()]
+				if (customer_choice == true):
+					rand_arcade_price = [price_check.plansey_arcade_one_price]
+					if (set_genre.plansey_station_two_selection == 1):
+						rand_arcade_price.append(price_check.plansey_arcade_two_price)
+					if (set_genre.plansey_station_three_selection == 1):
+						rand_arcade_price.append(price_check.plansey_arcade_three_price)
+					if (set_genre.plansey_station_four_selection == 1):
+						rand_arcade_price.append(price_check.plansey_arcade_four_price)
+					if (set_genre.plansey_station_five_selection == 1):
+						rand_arcade_price.append(price_check.plansey_arcade_five_price)
+					if (set_genre.plansey_station_six_selection == 1):
+						rand_arcade_price.append(price_check.plansey_arcade_six_price)
+					price_choice = rand_arcade_price[randi() % rand_arcade_price.size()]
+					if (price_choice < price_check.plansey_arcade_range_high):
+						money.plansey_balance = money.plansey_balance + price_choice
+						money.income = money.income + price_choice
+						customer_globals.sales_made = customer_globals.sales_made + 1
+						var concession_rand = [true, true, false]
+						concession_choice = concession_rand[randi() % concession_rand.size()]
+						if (concession_choice == true):
+							var concession_options = ["energy", "nachos", "both"]
+							concessions_desire = concession_options[randi() % concession_options.size()]
+							if (concessions_desire == "energy"):
+								if (supplies.plansey_energy_count > 0):
+									var check_energy = supplies.energy_range_high - supplies.plansey_energy_price #check if the soda price is too high
+									if (check_energy <= 0):
+										concessions_price_check = false
+									else:
+										concessions_price_check = true
+									if (concessions_price_check == true): #if the price is not too high
+										buy_energy()
+							if (concessions_desire == "nachos"):
+								if (supplies.plansey_nachos_count > 0):
+									var check_nachos = supplies.nachos_range_high - supplies.plansey_nachos_price #check if the soda price is too high
+									if (check_nachos <= 0):
+										concessions_price_check = false
+									else:
+										concessions_price_check = true
+									if (concessions_price_check == true): #if the price is not too high
+										buy_nachos()
+							if (concessions_desire == "both"):
+								if ((supplies.plansey_energy_count > 0) and (supplies.plansey_nachos_count > 0)):
+									var check_energy = supplies.energy_range_high - supplies.plansey_energy_price #check if the soda price is too high
+									var check_nachos = supplies.nachos_range_high - supplies.plansey_nachos_price #check if the popcorn price is too high
+									if ((check_energy <= 0) or (check_nachos <= 0)):
+										concessions_price_check = false
+									else:
+										concessions_price_check = true
+									if (concessions_price_check == true): #if the price is not too high
+										buy_energy()
+										buy_nachos()
+					else:
+						customer_globals.sales_lost = customer_globals.sales_lost + 1
+						customer_globals.price_loss = customer_globals.price_loss + 1
+				else:
+					customer_globals.sales_lost = customer_globals.sales_lost + 1
+					customer_globals.waited_loss = customer_globals.waited_loss + 1
+			else: 
+				customer_globals.sales_lost = customer_globals.sales_lost + 1
+				customer_globals.storefront_loss = customer_globals.storefront_loss + 1
+		if (customer_math.plansey_genre_two_key == true):
+			for x in range(0, customer_math.player_prediction_two + 1):
+				storefront_check.storefront_check()
+				if (storefront_check.storefront_choice == true):
+					quick_wait_check()
+					customer_choice = randomness[randi() % randomness.size()]
+					if (customer_choice == true):
+						rand_arcade_price = [price_check.plansey_arcade_one_price]
+						if (set_genre.plansey_station_two_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_two_price)
+						if (set_genre.plansey_station_three_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_three_price)
+						if (set_genre.plansey_station_four_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_four_price)
+						if (set_genre.plansey_station_five_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_five_price)
+						if (set_genre.plansey_station_six_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_six_price)
+						price_choice = rand_arcade_price[randi() % rand_arcade_price.size()]
+						if (price_choice < price_check.plansey_arcade_range_high):
+							money.plansey_balance = money.plansey_balance + price_choice
+							money.income = money.income + price_choice
+							customer_globals.sales_made = customer_globals.sales_made + 1
+							var concession_rand = [true, true, false]
+							concession_choice = concession_rand[randi() % concession_rand.size()]
+							if (concession_choice == true):
+								var concession_options = ["energy", "nachos", "both"]
+								concessions_desire = concession_options[randi() % concession_options.size()]
+								if (concessions_desire == "soda"):
+									if (supplies.plansey_energy_count > 0):
+										var check_energy = supplies.energy_range_high - supplies.plansey_energy_price #check if the soda price is too high
+										if (check_energy <= 0):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_energy()
+								if (concessions_desire == "nachos"):
+									if (supplies.plansey_nachos_count > 0):
+										var check_nachos = supplies.nachos_range_high - supplies.plansey_nachos_price #check if the soda price is too high
+										if (check_nachos <= 0):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_nachos()
+								if (concessions_desire == "both"):
+									if ((supplies.plansey_energy_count > 0) and (supplies.plansey_nachos_count > 0)):
+										var check_energy = supplies.energy_range_high - supplies.plansey_energy_price #check if the soda price is too high
+										var check_nachos = supplies.nachos_range_high - supplies.plansey_nachos_price #check if the popcorn price is too high
+										if ((check_energy <= 0) or (check_nachos <= 0)):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_energy()
+											buy_nachos()
+						else:
+							customer_globals.sales_lost = customer_globals.sales_lost + 1
+							customer_globals.price_loss = customer_globals.price_loss + 1
+					else:
+						customer_globals.sales_lost = customer_globals.sales_lost + 1
+						customer_globals.waited_loss = customer_globals.waited_loss + 1
+				else: 
+					customer_globals.sales_lost = customer_globals.sales_lost + 1
+					customer_globals.storefront_loss = customer_globals.storefront_loss + 1
+		if (customer_math.plansey_genre_three_key == true):
+			for x in range(0, customer_math.player_prediction_three + 1):
+				storefront_check.storefront_check()
+				if (storefront_check.storefront_choice == true):
+					quick_wait_check()
+					customer_choice = randomness[randi() % randomness.size()]
+					if (customer_choice == true):
+						rand_arcade_price = [price_check.plansey_arcade_one_price]
+						if (set_genre.plansey_station_two_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_two_price)
+						if (set_genre.plansey_station_three_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_three_price)
+						if (set_genre.plansey_station_four_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_four_price)
+						if (set_genre.plansey_station_five_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_five_price)
+						if (set_genre.plansey_station_six_selection == 1):
+							rand_arcade_price.append(price_check.plansey_arcade_six_price)
+						price_choice = rand_arcade_price[randi() % rand_arcade_price.size()]
+						if (price_choice < price_check.plansey_arcade_range_high):
+							money.plansey_balance = money.plansey_balance + price_choice
+							money.income = money.income + price_choice
+							customer_globals.sales_made = customer_globals.sales_made + 1
+							var concession_rand = [true, true, false]
+							concession_choice = concession_rand[randi() % concession_rand.size()]
+							if (concession_choice == true):
+								var concession_options = ["energy", "nachos", "both"]
+								concessions_desire = concession_options[randi() % concession_options.size()]
+								if (concessions_desire == "soda"):
+									if (supplies.plansey_energy_count > 0):
+										var check_energy = supplies.energy_range_high - supplies.plansey_energy_price #check if the soda price is too high
+										if (check_energy <= 0):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_energy()
+								if (concessions_desire == "nachos"):
+									if (supplies.plansey_nachos_count > 0):
+										var check_nachos = supplies.nachos_range_high - supplies.plansey_nachos_price #check if the soda price is too high
+										if (check_nachos <= 0):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_nachos()
+								if (concessions_desire == "both"):
+									if ((supplies.plansey_energy_count > 0) and (supplies.plansey_nachos_count > 0)):
+										var check_energy = supplies.energy_range_high - supplies.plansey_energy_price #check if the soda price is too high
+										var check_nachos = supplies.nachos_range_high - supplies.plansey_nachos_price #check if the popcorn price is too high
+										if ((check_energy <= 0) or (check_nachos <= 0)):
+											concessions_price_check = false
+										else:
+											concessions_price_check = true
+										if (concessions_price_check == true): #if the price is not too high
+											buy_energy()
+											buy_nachos()
+						else:
+							customer_globals.sales_lost = customer_globals.sales_lost + 1
+							customer_globals.price_loss = customer_globals.price_loss + 1
+					else:
+						customer_globals.sales_lost = customer_globals.sales_lost + 1
+						customer_globals.waited_loss = customer_globals.waited_loss + 1
+				else: 
+					customer_globals.sales_lost = customer_globals.sales_lost + 1
+					customer_globals.storefront_loss = customer_globals.storefront_loss + 1
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
@@ -790,6 +1083,8 @@ func _on_play_button_down():
 		get_tree().change_scene("res://hollyhock_time_management.tscn")
 	if (towns.town_select == "fiyork"):
 		get_tree().change_scene("res://fiyork_time_management.tscn")
+	if (towns.town_select == "plansey"):
+		get_tree().change_scene("res://plansey_time_management.tscn")
 	
 func quick_wait_check():
 	if (towns.town_select == "hollyhock"):
@@ -814,6 +1109,17 @@ func quick_wait_check():
 			randomness = [true, true, true, false]
 		if (fiyork.fiyork_entertainment_decent_key == false) and (fiyork.fiyork_entertainment_worst_key == true):
 			randomness = [true, true, false]
+	if (towns.town_select == "plansey"):
+		if (plansey.plansey_entertainment_best_key == true):
+			randomness = [true, true, true, true, true]
+		if (plansey.plansey_entertainment_best_key == false) and (plansey.plansey_entertainment_great_key == true):
+			randomness = [true, true, true, true, false]
+		if (plansey.plansey_entertainment_great_key == false) and (plansey.plansey_entertainment_good_key == true):
+			randomness = [true, true, true, false]
+		if (plansey.plansey_entertainment_good_key == false) and (plansey.plansey_entertainment_decent_key == true):
+			randomness = [true, true, true, false]
+		if (plansey.plansey_entertainment_decent_key == false) and (plansey.plansey_entertainment_worst_key == true):
+			randomness = [true, true, false]
 		
 func buy_soda():
 	if (towns.town_select == "hollyhock"):
@@ -830,6 +1136,14 @@ func buy_freezie():
 		supplies.fiyork_freezie_count = supplies.fiyork_freezie_count - 1
 		supplies.freezie_yesterday_used = supplies.freezie_yesterday_used + 1
 		money.income = money.income + charge_price
+		
+func buy_energy():
+	if (towns.town_select == "plansey"):
+		var charge_price = supplies.plansey_energy_price
+		money.plansey_balance = money.plansey_balance + charge_price
+		supplies.plansey_energy_count = supplies.plansey_energy_count - 1
+		supplies.energy_yesterday_used = supplies.energy_yesterday_used + 1
+		money.income = money.income + charge_price
 	
 func buy_popcorn():
 	if (towns.town_select == "hollyhock"):
@@ -845,6 +1159,14 @@ func buy_pizza():
 		money.fiyork_balance = money.fiyork_balance + charge_price
 		supplies.fiyork_pizza_count = supplies.fiyork_pizza_count - 1
 		supplies.pizza_yesterday_used = supplies.pizza_yesterday_used + 1
+		money.income = money.income + charge_price
+		
+func buy_nachos():
+	if (towns.town_select == "plansey"):
+		var charge_price = supplies.plansey_nachos_price
+		money.plansey_balance = money.plansey_balance + charge_price
+		supplies.plansey_nachos_count = supplies.plansey_nachos_count - 1
+		supplies.nachos_yesterday_used = supplies.nachos_yesterday_used + 1
 		money.income = money.income + charge_price
 		
 func pixel_big():
@@ -884,6 +1206,9 @@ func _on_yes_restart_button_down():
 	if (towns.town_select == "fiyork"):
 		pixel_small()
 		game_over.game_over_fiyork()
+	if (towns.town_select == "plansey"):
+		pixel_small()
+		game_over.game_over_plansey()
 
 func _on_no_restart_button_down():
 	get_node("are_you_sure").set_hidden(true)
@@ -908,5 +1233,3 @@ func set_sound():
 	if (sound.music_mute == true):
 		sound.volume = 0
 	get_node("StreamPlayer").set_volume(sound.volume)
-	
-	

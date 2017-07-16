@@ -8,6 +8,11 @@ const move_speed = 25
 
 var reset_pos
 
+var up_move = true
+var down_move = true
+var left_move = true
+var right_move = true
+
 func _ready():
 	show_a_few()
 	reset_pos = get_pos()
@@ -18,13 +23,22 @@ func _process(delta):
 	potentials = get_tree().get_nodes_in_group("hidden")
 	if (colliders.size() > 0):
 		for x in colliders:
-			if (x.is_in_group("level") == true):
-				reset()
-			if (x.is_in_group("goal") == true):
-				x.set_hidden(true)
-				get_tree().get_current_scene().get_node("checkpoint_timer").start()
-				perks.perk_final_count = int(perks.perk_final_count) + int(perks.success)
-				perks.success = 0
+			if (x.is_in_group("up") == true):
+				up_move = false
+			else:
+				up_move = true
+			if (x.is_in_group("left") == true):
+				left_move = false
+			else:
+				left_move = true
+			if (x.is_in_group("right") == true):
+				right_move = false
+			else:
+				right_move = true
+			if (x.is_in_group("down") == true):
+				down_move = false
+			else:
+				down_move = true
 			if (x.is_in_group("shown") == true):
 				x.set_hidden(true)
 				x.add_to_group("hidden")
@@ -35,26 +49,22 @@ func _process(delta):
 				called.add_to_group("shown")
 				perks.success = perks.success + 1
 	where = get_pos()
-	if (Input.is_action_pressed("move_up")):
+	if ((Input.is_action_pressed("move_up")) and (up_move == true)):
 		direction = Vector2(0.0, -1.0)
 		where += direction * move_speed * delta
 		set_pos(where)
-	if (Input.is_action_pressed("move_left")):
+	if ((Input.is_action_pressed("move_left")) and (left_move == true)):
 		direction = Vector2(-1.0, 0.0)
 		where += direction * move_speed * delta
 		set_pos(where)
-	if (Input.is_action_pressed("move_down")):
+	if ((Input.is_action_pressed("move_down")) and (down_move == true)):
 		direction = Vector2(0.0, 1.0)
 		where += direction * move_speed * delta
 		set_pos(where)
-	if (Input.is_action_pressed("move_right")):
+	if ((Input.is_action_pressed("move_right")) and (right_move == true)):
 		direction = Vector2(1.0, 0.0)
 		where += direction * move_speed * delta
 		set_pos(where)
-	
-func reset():
-	set_pos(reset_pos)
-	perks.success = 0
 
 func show_a_few():
 	potentials = get_tree().get_nodes_in_group("hidden")
