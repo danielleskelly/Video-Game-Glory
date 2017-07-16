@@ -7,16 +7,21 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	range_output.clear()
-	range_output.add_text(str(supplies.pizza_range_low) + " - " + str(supplies.pizza_range_high))
+	if (towns.town_select == "fiyork"):
+		range_output.clear()
+		range_output.add_text(str(supplies.pizza_range_low) + " - " + str(supplies.pizza_range_high))
+		price_output.clear()
+		price_output.add_text(str(supplies.fiyork_pizza_price))
 	
 func _on_lower_button_down():
-	if (supplies.pizza_price > 0):
-		supplies.pizza_price = supplies.pizza_price - 1
-		price_output.clear()
-		price_output.add_text(str(global.pizza_price))
+	if (towns.town_select == "fiyork"):
+		if (supplies.fiyork_pizza_price > 0):
+			supplies.fiyork_pizza_price = supplies.fiyork_pizza_price - 1
+			price_output.clear()
+			price_output.add_text(str(supplies.fiyork_pizza_price))
 
 func _on_raise_button_down():
-	global.pizza_price = global.pizza_price + 1
-	price_output.clear()
-	price_output.add_text(str(global.pizza_price))
+	if (towns.town_select == "fiyork"):
+		supplies.fiyork_pizza_price = supplies.fiyork_pizza_price + 1
+		price_output.clear()
+		price_output.add_text(str(supplies.fiyork_pizza_price))

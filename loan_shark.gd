@@ -22,6 +22,16 @@ func _process(delta):
 		credit_limit_output.add_text(str(loans.credit_limit))
 		current_loan_output.clear()
 		current_loan_output.add_text(str(hollyhock.hollyhock_current_loan))
+	if (towns.town_select == "fiyork"):
+		credit_limit_output.clear()
+		credit_limit_output.add_text(str(loans.credit_limit))
+		current_loan_output.clear()
+		current_loan_output.add_text(str(fiyork.fiyork_current_loan))
+	if (towns.town_select == "plansey"):
+		credit_limit_output.clear()
+		credit_limit_output.add_text(str(loans.credit_limit))
+		current_loan_output.clear()
+		current_loan_output.add_text(str(plansey.plansey_current_loan))
 	daily_interest_output.clear()
 	daily_interest_output.add_text("%" + str(loans.daily_interest * 100))
 
@@ -50,6 +60,16 @@ func _on_payback_raise_button_down():
 			payback = int(payback) + 1
 			payback_output.clear()
 			payback_output.set_text(str(payback))
+	if (towns.town_select == "fiyork"):
+		if ((int(payback) <= fiyork.fiyork_current_loan) and (money.fiyork_cash >= payback)):
+			payback = int(payback) + 1
+			payback_output.clear()
+			payback_output.set_text(str(payback))
+	if (towns.town_select == "plansey"):
+		if ((int(payback) <= plansey.plansey_current_loan) and (money.plansey_cash >= payback)):
+			payback = int(payback) + 1
+			payback_output.clear()
+			payback_output.set_text(str(payback))
 
 func _on_confirm_button_down():
 	if (towns.town_select == "hollyhock"):
@@ -64,6 +84,30 @@ func _on_confirm_button_down():
 		money.hollyhock_balance = (money.hollyhock_balance - int(payback)) + int(borrow)
 		hollyhock.hollyhock_current_loan = (hollyhock.hollyhock_current_loan - int(payback)) + int(borrow)
 		loans.credit_limit = 3000 - hollyhock.hollyhock_current_loan
+	if (towns.town_select == "fiyork"):
+		borrow = get_node("borrow_output").get_text()
+		payback = get_node("payback_output").get_text()
+		if (int(borrow) > (3000 - fiyork.fiyork_current_loan)):
+			borrow = 3000 - fiyork.fiyork_current_loan
+		if (int(payback) > fiyork.fiyork_current_loan):
+			payback = fiyork.fiyork_current_loan
+		if (int(payback) > money.fiyork_cash):
+			payback = money.fiyork_cash
+		money.fiyork_balance = (money.fiyork_balance - int(payback)) + int(borrow)
+		fiyork.fiyork_current_loan = (fiyork.fiyork_current_loan - int(payback)) + int(borrow)
+		loans.credit_limit = 3000 - fiyork.fiyork_current_loan
+	if (towns.town_select == "plansey"):
+		borrow = get_node("borrow_output").get_text()
+		payback = get_node("payback_output").get_text()
+		if (int(borrow) > (3000 - plansey.plansey_current_loan)):
+			borrow = 3000 - plansey.plansey_current_loan
+		if (int(payback) > plansey.plansey_current_loan):
+			payback = plansey.plansey_current_loan
+		if (int(payback) > money.plansey_cash):
+			payback = money.plansey_cash
+		money.plansey_balance = (money.plansey_balance - int(payback)) + int(borrow)
+		plansey.plansey_current_loan = (plansey.plansey_current_loan - int(payback)) + int(borrow)
+		loans.credit_limit = 3000 - plansey.plansey_current_loan
 	borrow = 0
 	payback = 0
 	borrow_output.clear()

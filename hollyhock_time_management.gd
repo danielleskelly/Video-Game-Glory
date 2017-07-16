@@ -269,9 +269,8 @@ func buy_popcorn():
 		money.income = money.income + charge_price
 
 func perk_check():
-	perks.perk_final_count = int(perks.perk_final_count) + int(perks.success)
 	if (towns.town_select == "hollyhock"):
-		if (int(perks.perk_goal) <= int(perks.perk_final_count)):
+		if (int(perks.perk_goal) <= int(perks.success)):
 			if (perks.perk_num == 1):
 				supplies.hollyhock_soda_count = supplies.hollyhock_soda_count + 5
 				supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count + 5
@@ -298,6 +297,7 @@ func pixel_big():
 
 func _on_pixel_button_button_down():
 	pixel_big()
+	get_tree().set_pause(true)
 	get_node("menu").set_hidden(false)
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 	
@@ -320,6 +320,7 @@ func point_display():
 
 func _on_return_to_game_button_down():
 	pixel_small()
+	get_tree().set_pause(false)
 	get_node("menu").set_hidden(true)
 
 
@@ -554,9 +555,3 @@ func _on_yes_main_button_down():
 func _on_no_main_button_down():
 	get_node("are_you_sure_2").set_hidden(true)
 	get_node("menu").set_hidden(false)
-
-
-func _on_checkpoint_timer_timeout():
-	var checkpoints = get_tree().get_nodes_in_group("goal")
-	flag_in_play = checkpoints[randi() % checkpoints.size()]
-	flag_in_play.show()

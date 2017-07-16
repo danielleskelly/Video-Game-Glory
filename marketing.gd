@@ -12,6 +12,10 @@ func _ready():
 func _process(delta):
 	if (towns.town_select == "hollyhock"):
 		advertising = customer_math.hollyhock_advertising
+	if (towns.town_select == "fiyork"):
+		advertising = customer_math.fiyork_advertising
+	if (towns.town_select == "plansey"):
+		advertising = customer_math.plansey_advertising
 	if (int(advertising) == 0):
 		ad_output.clear()
 		ad_output.add_text("None")
@@ -52,6 +56,16 @@ func _on_lower_button_down():
 			customer_math.hollyhock_advertising = int(customer_math.hollyhock_advertising) - 1
 			money.hollyhock_expenses = int(money.hollyhock_expenses) - 1
 			spending()
+	if (towns.town_select == "fiyork"):
+		if (int(customer_math.fiyork_advertising) > 0):
+			customer_math.fiyork_advertising = int(customer_math.fiyork_advertising) - 1
+			money.fiyork_expenses = int(money.fiyork_expenses) - 1
+			spending()
+	if (towns.town_select == "plansey"):
+		if (int(customer_math.plansey_advertising) > 0):
+			customer_math.plansey_advertising = int(customer_math.plansey_advertising) - 1
+			money.plansey_expenses = int(money.plansey_expenses) - 1
+			spending()
 
 func _on_raise_button_down():
 	if (towns.town_select == "hollyhock"):
@@ -59,7 +73,16 @@ func _on_raise_button_down():
 			customer_math.hollyhock_advertising = int(customer_math.hollyhock_advertising) + 1
 			spending()
 			money.hollyhock_expenses = int(money.hollyhock_expenses) + 1
-			
+	if (towns.town_select == "fiyork"):
+		if ((int(customer_math.fiyork_advertising) + 1 <= int(money.fiyork_cash)) and (int(customer_math.fiyork_advertising) + 1 <= int(customer_math.fiyork_advertising_max))):
+			customer_math.fiyork_advertising = int(customer_math.fiyork_advertising) + 1
+			spending()
+			money.fiyork_expenses = int(money.fiyork_expenses) + 1
+	if (towns.town_select == "fiyork"):
+		if ((int(customer_math.fiyork_advertising) + 1 <= int(money.fiyork_cash)) and (int(customer_math.fiyork_advertising) + 1 <= int(customer_math.fiyork_advertising_max))):
+			customer_math.fiyork_advertising = int(customer_math.fiyork_advertising) + 1
+			spending()
+			money.fiyork_expenses = int(money.fiyork_expenses) + 1
 
 
 func _on_confirm_button_down():
@@ -74,8 +97,22 @@ func _on_confirm_button_down():
 			temp_spending = int(customer_math.hollyhock_advertising_max)
 		customer_math.hollyhock_advertising = temp_spending
 		spending()
+	if (towns.town_select == "plansey"):
+		var temp_spending = get_node("container/spending_output").get_text()
+		if (int(temp_spending) > int(money.plansey_cash)):
+			temp_spending = money.plansey_cash
+		if (int(temp_spending) > int(customer_math.plansey_advertising_max)):
+			temp_spending = int(customer_math.plansey_advertising_max)
+		customer_math.plansey_advertising = temp_spending
+		spending()
 		
 func spending():
 	if (towns.town_select == "hollyhock"):
 		spending_output.clear()
 		spending_output.set_text(str(customer_math.hollyhock_advertising))
+	if (towns.town_select == "fiyork"):
+		spending_output.clear()
+		spending_output.set_text(str(customer_math.fiyork_advertising))
+	if (towns.town_select == "plansey"):
+		spending_output.clear()
+		spending_output.set_text(str(customer_math.plansey_advertising))
