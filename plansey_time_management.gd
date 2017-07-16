@@ -7,8 +7,8 @@ var ones
 onready var countdown_timer = get_node("countdown_timer")
 
 var numbers
-var current_hoz = "c"
-var current_vert = "2"
+var current_hoz = "d"
+var current_vert = "1"
 var current_x
 var current_y
 var number_muncher
