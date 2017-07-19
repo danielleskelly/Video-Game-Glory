@@ -9,35 +9,77 @@ func _ready():
 func _process(delta):
 	if (towns.town_select == "hollyhock"):
 		range_output.clear()
-		range_output.add_text(str(price_check.hollyhock_arcade_range_low) + " - " + str(price_check.hollyhock_arcade_range_high))
+		range_output.add_text(str(arcade_day.hollyhock_arcade_range_low) + " - " + str(arcade_day.hollyhock_arcade_range_high))
 		price_output.clear()
-		price_output.add_text(str(price_check.hollyhock_arcade_one_price))
+		price_output.add_text(str(arcade_day.hollyhock_arcade_one_price))
 	if (towns.town_select == "fiyork"):
 		range_output.clear()
-		range_output.add_text(str(price_check.fiyork_arcade_range_low) + " - " + str(price_check.fiyork_arcade_range_high))
+		range_output.add_text(str(arcade_day.fiyork_arcade_range_low) + " - " + str(arcade_day.fiyork_arcade_range_high))
 		price_output.clear()
-		price_output.add_text(str(price_check.fiyork_arcade_one_price))
+		price_output.add_text(str(arcade_day.fiyork_arcade_one_price))
 	if (towns.town_select == "plansey"):
 		range_output.clear()
-		range_output.add_text(str(price_check.plansey_arcade_range_low) + " - " + str(price_check.plansey_arcade_range_high))
+		range_output.add_text(str(arcade_day.plansey_arcade_range_low) + " - " + str(arcade_day.plansey_arcade_range_high))
 		price_output.clear()
-		price_output.add_text(str(price_check.plansey_arcade_one_price))
+		price_output.add_text(str(arcade_day.plansey_arcade_one_price))
+	if (towns.town_select == "untilly"):
+		range_output.clear()
+		range_output.add_text(str(arcade_day.untilly_arcade_range_low) + " - " + str(arcade_day.untilly_arcade_range_high))
+		price_output.clear()
+		price_output.add_text(str(arcade_day.untilly_arcade_one_price))
+	if (towns.town_select == "windrow"):
+		range_output.clear()
+		range_output.add_text(str(arcade_day.windrow_arcade_range_low) + " - " + str(arcade_day.windrow_arcade_range_high))
+		price_output.clear()
+		price_output.add_text(str(arcade_day.windrow_arcade_one_price))
+	if (towns.town_select == "banlon"):
+		range_output.clear()
+		range_output.add_text(str(arcade_day.banlon_arcade_range_low) + " - " + str(arcade_day.banlon_arcade_range_high))
+		price_output.clear()
+		price_output.add_text(str(arcade_day.banlon_arcade_one_price))
+	if (towns.town_select == "slatten"):
+		range_output.clear()
+		range_output.add_text(str(arcade_day.slatten_arcade_range_low) + " - " + str(arcade_day.slatten_arcade_range_high))
+		price_output.clear()
+		price_output.add_text(str(arcade_day.slatten_arcade_one_price))
 
 func _on_lower_button_down():
 	if (towns.town_select == "hollyhock"):
-		if (price_check.hollyhock_arcade_one_price > 0):
-			price_check.hollyhock_arcade_one_price = price_check.hollyhock_arcade_one_price - 1
+		if (arcade_day.hollyhock_arcade_one_price > 0):
+			arcade_day.hollyhock_arcade_one_price = arcade_day.hollyhock_arcade_one_price - 1
 	if (towns.town_select == "fiyork"):
-		if (price_check.fiyork_arcade_one_price > 0):
-			price_check.fiyork_arcade_one_price = price_check.fiyork_arcade_one_price - 1
+		if (arcade_day.fiyork_arcade_one_price > 0):
+			arcade_day.fiyork_arcade_one_price = arcade_day.fiyork_arcade_one_price - 1
 	if (towns.town_select == "plansey"):
-		if (price_check.plansey_arcade_one_price > 0):
-			price_check.plansey_arcade_one_price = price_check.plansey_arcade_one_price - 1
+		if (arcade_day.plansey_arcade_one_price > 0):
+			arcade_day.plansey_arcade_one_price = arcade_day.plansey_arcade_one_price - 1
+	if (towns.town_select == "untilly"):
+		if (arcade_day.untilly_arcade_one_price > 0):
+			arcade_day.untilly_arcade_one_price = arcade_day.untilly_arcade_one_price - 1
+	if (towns.town_select == "windrow"):
+		if (arcade_day.windrow_arcade_one_price > 0):
+			arcade_day.windrow_arcade_one_price = arcade_day.windrow_arcade_one_price - 1
+	if (towns.town_select == "banlon"):
+		if (arcade_day.banlon_arcade_one_price > 0):
+			arcade_day.banlon_arcade_one_price = arcade_day.banlon_arcade_one_price - 1
+	if (towns.town_select == "slatten"):
+		if (arcade_day.slatten_arcade_one_price > 0):
+			arcade_day.slatten_arcade_one_price = arcade_day.slatten_arcade_one_price - 1
+
 
 func _on_raise_button_down():
 	if (towns.town_select == "hollyhock"):
-		price_check.hollyhock_arcade_one_price = price_check.hollyhock_arcade_one_price + 1
+		arcade_day.hollyhock_arcade_one_price = arcade_day.hollyhock_arcade_one_price + 1
 	if (towns.town_select == "fiyork"):
-		price_check.fiyork_arcade_one_price = price_check.fiyork_arcade_one_price + 1
+		arcade_day.fiyork_arcade_one_price = arcade_day.fiyork_arcade_one_price + 1
 	if (towns.town_select == "plansey"):
-		price_check.plansey_arcade_one_price = price_check.plansey_arcade_one_price + 1
+		arcade_day.plansey_arcade_one_price = arcade_day.plansey_arcade_one_price + 1
+	if (towns.town_select == "untilly"):
+		arcade_day.untilly_arcade_one_price = arcade_day.untilly_arcade_one_price + 1
+	if (towns.town_select == "windrow"):
+		arcade_day.windrow_arcade_one_price = arcade_day.windrow_arcade_one_price + 1
+	if (towns.town_select == "banlon"):
+		arcade_day.banlon_arcade_one_price = arcade_day.banlon_arcade_one_price + 1
+	if (towns.town_select == "slatten"):
+		arcade_day.slatten_arcade_one_price = arcade_day.slatten_arcade_one_price + 1
+		

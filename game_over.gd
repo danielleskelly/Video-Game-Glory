@@ -1,242 +1,649 @@
 extends Node
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var game_over_warning = false
+var day_start = true
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
+	
+func day_start_check():
+	if (towns.town_select == "hollyhock"):
+		if (money.hollyhock_balance - money.hollyhock_expenses < 0):
+			day_start = false
+		else:
+			money.hollyhock_balance = money.hollyhock_balance - money.hollyhock_expenses
+			supplies.soda_yesterday_used = 0
+			supplies.popcorn_yesterday_used = 0
+			if (hollyhock.hollyhock_current_loan > 0):
+				var daily_interest_charge = hollyhock.hollyhock_current_loan * loans.daily_interest
+				money.hollyhock_balance = money.hollyhock_balance - int(daily_interest_charge)
+			customer_globals.customer_reset()
+			perks.perks()
+			day_start = true
+	if (towns.town_select == "fiyork"):
+		if (money.fiyork_balance - money.fiyork_expenses < 0):
+			day_start = false
+		else:
+			money.fiyork_balance = money.fiyork_balance - money.fiyork_expenses
+			supplies.soda_yesterday_used = 0
+			supplies.popcorn_yesterday_used = 0
+			if (fiyork.fiyork_current_loan > 0):
+				var daily_interest_charge = fiyork.fiyork_current_loan * loans.daily_interest
+				money.fiyork_balance = money.fiyork_balance - int(daily_interest_charge)
+			customer_globals.customer_reset()
+			perks.perks()
+			day_start = true
+	if (towns.town_select == "untilly"):
+		if (money.untilly_balance - money.untilly_expenses < 0):
+			day_start = false
+		else:
+			money.untilly_balance = money.untilly_balance - money.untilly_expenses
+			supplies.soda_yesterday_used = 0
+			supplies.popcorn_yesterday_used = 0
+			if (untilly.untilly_current_loan > 0):
+				var daily_interest_charge = untilly.untilly_current_loan * loans.daily_interest
+				money.untilly_balance = money.untilly_balance - int(daily_interest_charge)
+			customer_globals.customer_reset()
+			perks.perks()
+			day_start = true
+	if (towns.town_select == "plansey"):
+		if (money.plansey_balance - money.plansey_expenses < 0):
+			day_start = false
+		else:
+			money.plansey_balance = money.plansey_balance - money.plansey_expenses
+			supplies.soda_yesterday_used = 0
+			supplies.popcorn_yesterday_used = 0
+			if (plansey.plansey_current_loan > 0):
+				var daily_interest_charge = plansey.plansey_current_loan * loans.daily_interest
+				money.plansey_balance = money.plansey_balance - int(daily_interest_charge)
+			customer_globals.customer_reset()
+			perks.perks()
+			day_start = true
+	if (towns.town_select == "windrow"):
+		if (money.windrow_balance - money.windrow_expenses < 0):
+			day_start = false
+		else:
+			money.windrow_balance = money.windrow_balance - money.windrow_expenses
+			supplies.soda_yesterday_used = 0
+			supplies.popcorn_yesterday_used = 0
+			if (windrow.windrow_current_loan > 0):
+				var daily_interest_charge = windrow.windrow_current_loan * loans.daily_interest
+				money.windrow_balance = money.windrow_balance - int(daily_interest_charge)
+			customer_globals.customer_reset()
+			perks.perks()
+			day_start = true
+	if (towns.town_select == "banlon"):
+		if (money.banlon_balance - money.banlon_expenses < 0):
+			day_start = false
+		else:
+			money.banlon_balance = money.banlon_balance - money.banlon_expenses
+			supplies.soda_yesterday_used = 0
+			supplies.popcorn_yesterday_used = 0
+			if (banlon.banlon_current_loan > 0):
+				var daily_interest_charge = banlon.banlon_current_loan * loans.daily_interest
+				money.banlon_balance = money.banlon_balance - int(daily_interest_charge)
+			customer_globals.customer_reset()
+			perks.perks()
+			day_start = true
+	if (towns.town_select == "slatten"):
+		if (money.slatten_balance - money.slatten_expenses < 0):
+			day_start = false
+		else:
+			money.slatten_balance = money.slatten_balance - money.slatten_expenses
+			supplies.soda_yesterday_used = 0
+			supplies.popcorn_yesterday_used = 0
+			if (slatten.slatten_current_loan > 0):
+				var daily_interest_charge = slatten.slatten_current_loan * loans.daily_interest
+				money.slatten_balance = money.slatten_balance - int(daily_interest_charge)
+			customer_globals.customer_reset()
+			perks.perks()
+			day_start = true
+
+
+	
+	
+func game_over_warning_check():
+	if (towns.town_select == "hollyhock"):
+		if ((money.hollyhock_cash - money.hollyhock_expenses) < 0):
+			if ((money.hollyhock_expenses == 0) and (hollyhock.hollyhock_current_loan == loans.credit_limit)):
+				game_over_warning = true
+	if (towns.town_select == "fiyork"):
+		if ((money.fiyork_cash - money.fiyork_expenses) < 0):
+			if ((money.fiyork_expenses == 0) and (fiyork.fiyork_current_loan == loans.credit_limit)):
+				game_over_warning = true
+	if (towns.town_select == "untilly"):
+		if ((money.untilly_cash - money.untilly_expenses) < 0):
+			if ((money.untilly_expenses == 0) and (untilly.untilly_current_loan == loans.credit_limit)):
+				game_over_warning = true
+	if (towns.town_select == "plansey"):
+		if ((money.plansey_cash - money.plansey_expenses) < 0):
+			if ((money.plansey_expenses == 0) and (plansey.plansey_current_loan == loans.credit_limit)):
+				game_over_warning = true
+	if (towns.town_select == "windrow"):
+		if ((money.windrow_cash - money.windrow_expenses) < 0):
+			if ((money.windrow_expenses == 0) and (windrow.windrow_current_loan == loans.credit_limit)):
+				game_over_warning = true
+	if (towns.town_select == "banlon"):
+		if ((money.banlon_cash - money.banlon_expenses) < 0):
+			if ((money.banlon_expenses == 0) and (banlon.banlon_current_loan == loans.credit_limit)):
+				game_over_warning = true
+	if (towns.town_select == "slatten"):
+		if ((money.slatten_cash - money.slatten_expenses) < 0):
+			if ((money.slatten_expenses == 0) and (slatten.slatten_current_loan == loans.credit_limit)):
+				game_over_warning = true
+
+
 
 func game_over_hollyhock():
-	money.hollyhock_balance = 500
-	money.hollyhock_expenses = 0
-	money.income = 0
-	money.hollyhock_cash
-	hollyhock.hollyhock_research_one_key = false
-	hollyhock.hollyhock_research_two_key = false
-	hollyhock.hollyhock_storefront_worst_key = true
-	hollyhock.hollyhock_storefront_decent_key = false
-	hollyhock.hollyhock_storefront_good_key = false
-	hollyhock.hollyhock_storefront_great_key = false
+	arcade_day.hollyhock_station_one_selection = 0
+	arcade_day.hollyhock_station_two_selection = 0
+	arcade_day.hollyhock_station_three_selection = 0
+	arcade_day.hollyhock_station_four_selection = 0
+	arcade_day.hollyhock_station_five_selection = 0
+	arcade_day.hollyhock_station_six_selection = 0
+	arcade_day.hollyhock_arcade_range_low = 10
+	arcade_day.hollyhock_arcade_range_high = 20
+	arcade_day.hollyhock_arcade_one_price = 0
+	arcade_day.hollyhock_arcade_two_price = 0
+	arcade_day.hollyhock_arcade_three_price = 0
+	arcade_day.hollyhock_arcade_four_price = 0
+	arcade_day.hollyhock_arcade_five_price = 0
+	arcade_day.hollyhock_arcade_six_price = 0
+
+	customer_math.hollyhock_advertising = 0
+	customer_math.hollyhock_player_marketshare = .1
+	hollyhock.hollyhock_research_total_one = 500
+	hollyhock.hollyhock_genre_two_key = false
+	hollyhock.hollyhock_research_total_two = 1000
+	hollyhock.hollyhock_genre_three_key = false
+
 	hollyhock.hollyhock_storefront_best_key = false
+	hollyhock.hollyhock_storefront_great_key = false
+	hollyhock.hollyhock_storefront_good_key = false
+	hollyhock.hollyhock_storefront_decent_key = false
+	hollyhock.hollyhock_storefront_worst_key = false
+
 	hollyhock.hollyhock_arcade_worst_key = true
 	hollyhock.hollyhock_arcade_decent_key = false
 	hollyhock.hollyhock_arcade_good_key = false
 	hollyhock.hollyhock_arcade_great_key = false
 	hollyhock.hollyhock_arcade_best_key = false
+
 	hollyhock.hollyhock_entertainment_worst_key = true
 	hollyhock.hollyhock_entertainment_decent_key = false
 	hollyhock.hollyhock_entertainment_good_key = false
 	hollyhock.hollyhock_entertainment_great_key = false
 	hollyhock.hollyhock_entertainment_best_key = false
-	customer_globals.sales_lost = 0
-	customer_globals.sales_made = 0
-	customer_globals.storefront_loss = 0
-	customer_globals.price_loss = 0
-	customer_globals.waited_loss = 0
-	customer_globals.sabatoge_loss = 0
-	price_check.hollyhock_arcade_one_price = 0
-	price_check.hollyhock_arcade_two_price = 0
-	price_check.hollyhock_arcade_three_price = 0
-	price_check.hollyhock_arcade_four_price = 0
-	price_check.hollyhock_arcade_five_price = 0
-	price_check.hollyhock_arcade_six_price = 0
-	supplies.hollyhock_soda_price = 0
-	supplies.hollyhock_popcorn_price = 0
-	keys.hollyhock_station_three_key = false
-	keys.hollyhock_station_four_key = false
-	keys.hollyhock_station_five_key = false
-	keys.hollyhock_station_six_key = false
-	keys.hollyhock_plumber_key = false
-	keys.hollyhock_yellowdot_key = false
-	keys.hollyhock_vgg_key = true
-	customer_math.hollyhock_genre_two_key = false
-	customer_math.hollyhock_genre_three_key = false
-	customer_math.meta_prediction = .55
-	customer_math.classic_prediction = .45
-	customer_math.strategy_prediction = .30
-	customer_math.time_management_prediction = .58
-	customer_math.platformer_prediction = .58
-	customer_math.adventure_prediction = .58
-	customer_math.one_cash = 0
-	customer_math.two_cash = 0
-	customer_math.one_sales_made = 0
-	customer_math.two_sales_made = 0
-	customer_math.one_sales_lost = 0
-	customer_math.two_sales_lost = 0
-	customer_math.hollyhock_player_marketshare = .1
-	customer_math.hollyhock_competitor_one_marketshare = .63
-	customer_math.hollyhock_competitor_two_marketshare = .46
-	supplies.purchase_total = 0
-	supplies.soda_total = 0
-	supplies.popcorn_total = 0
-	supplies.hollyhock_popcorn_count = 0
-	supplies.hollyhock_soda_count = 0
-	supplies.daily_soda_purchase_price = 4
-	supplies.daily_popcorn_purchase_price = 4
-	supplies.soda_yesterday_used = 0
-	supplies.popcorn_yesterday_used = 0
-	hollyhock.hollyhock_current_loan = 0
+
 	hollyhock.hollyhock_research_fund = 0
 	hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_one
 	hollyhock.hollyhock_research_spending = 0
-	customer_math.hollyhock_advertising = 0
+	hollyhock.hollyhock_research_input_key = false
+
+	hollyhock.hollyhock_current_loan = 0
+
+	hollyhock.hollyhock_station_three_key = false
+	hollyhock.hollyhock_station_four_key = false
+	hollyhock.hollyhock_station_five_key = false
+	hollyhock.hollyhock_station_six_key = false
+	hollyhock.hollyhock_loans_input_key = false
+
+	money.hollyhock_balance = 400
+	money.hollyhock_expenses = 0
+
+	supplies.soda_yesterday_used = 0
+	supplies.popcorn_yesterday_used = 0
+	supplies.pizza_yesterday_used = 0
+	supplies.freezie_yesterday_used = 0
+	supplies.energy_yesterday_used = 0
+	supplies.nachos_yesterday_used = 0
+	supplies.hollyhock_soda_price = 0
+	supplies.hollyhock_popcorn_price = 0
+
+	supplies.hollyhock_popcorn_count = 0
+	supplies.hollyhock_soda_count = 0
 	get_tree().set_pause(false)
 	get_tree().change_scene("res://strategy.tscn")
-	
-	
+
+
+
+
 func game_over_fiyork():
-	money.fiyork_balance = 500
-	money.fiyork_expenses = 0
-	money.income = 0
-	money.fiyork_cash
-	fiyork.fiyork_research_one_key = false
-	fiyork.fiyork_research_two_key = false
-	fiyork.fiyork_storefront_worst_key = true
-	fiyork.fiyork_storefront_decent_key = false
-	fiyork.fiyork_storefront_good_key = false
-	fiyork.fiyork_storefront_great_key = false
+	arcade_day.fiyork_station_one_selection = 0
+	arcade_day.fiyork_station_two_selection = 0
+	arcade_day.fiyork_station_three_selection = 0
+	arcade_day.fiyork_station_four_selection = 0
+	arcade_day.fiyork_station_five_selection = 0
+	arcade_day.fiyork_station_six_selection = 0
+	arcade_day.fiyork_arcade_range_low = 8
+	arcade_day.fiyork_arcade_range_high = 18
+	arcade_day.fiyork_arcade_one_price = 0
+	arcade_day.fiyork_arcade_two_price = 0
+	arcade_day.fiyork_arcade_three_price = 0
+	arcade_day.fiyork_arcade_four_price = 0
+	arcade_day.fiyork_arcade_five_price = 0
+	arcade_day.fiyork_arcade_six_price = 0
+
+	customer_math.fiyork_advertising = 0
+	customer_math.fiyork_player_marketshare = .1
+
+	fiyork.fiyork_research_total_one = 400
+	fiyork.fiyork_genre_two_key = false
+	fiyork.fiyork_research_total_two = 700
+	fiyork.fiyork_genre_three_key = false
+
 	fiyork.fiyork_storefront_best_key = false
+	fiyork.fiyork_storefront_great_key = false
+	fiyork.fiyork_storefront_good_key = false
+	fiyork.fiyork_storefront_decent_key = false
+	fiyork.fiyork_storefront_worst_key = false
+
 	fiyork.fiyork_arcade_worst_key = true
 	fiyork.fiyork_arcade_decent_key = false
 	fiyork.fiyork_arcade_good_key = false
 	fiyork.fiyork_arcade_great_key = false
 	fiyork.fiyork_arcade_best_key = false
+
 	fiyork.fiyork_entertainment_worst_key = true
 	fiyork.fiyork_entertainment_decent_key = false
 	fiyork.fiyork_entertainment_good_key = false
 	fiyork.fiyork_entertainment_great_key = false
 	fiyork.fiyork_entertainment_best_key = false
-	customer_globals.sales_lost = 0
-	customer_globals.sales_made = 0
-	customer_globals.storefront_loss = 0
-	customer_globals.price_loss = 0
-	customer_globals.waited_loss = 0
-	customer_globals.sabatoge_loss = 0
-	price_check.fiyork_arcade_one_price = 0
-	price_check.fiyork_arcade_two_price = 0
-	price_check.fiyork_arcade_three_price = 0
-	price_check.fiyork_arcade_four_price = 0
-	price_check.fiyork_arcade_five_price = 0
-	price_check.fiyork_arcade_six_price = 0
-	supplies.fiyork_freezie_price = 0
-	supplies.fiyork_pizza_price = 0
-	keys.fiyork_station_three_key = false
-	keys.fiyork_station_four_key = false
-	keys.fiyork_station_five_key = false
-	keys.fiyork_station_six_key = false
-	keys.fiyork_plumber_key = false
-	keys.fiyork_yellowdot_key = false
-	keys.fiyork_vgg_key = true
-	customer_math.fiyork_genre_two_key = false
-	customer_math.fiyork_genre_three_key = false
-	customer_math.meta_prediction = .55
-	customer_math.classic_prediction = .45
-	customer_math.strategy_prediction = .30
-	customer_math.time_management_prediction = .58
-	customer_math.platformer_prediction = .58
-	customer_math.adventure_prediction = .58
-	customer_math.one_cash = 0
-	customer_math.two_cash = 0
-	customer_math.one_sales_made = 0
-	customer_math.two_sales_made = 0
-	customer_math.one_sales_lost = 0
-	customer_math.two_sales_lost = 0
-	customer_math.fiyork_player_marketshare = .1
-	customer_math.fiyork_competitor_one_marketshare = .63
-	customer_math.fiyork_competitor_two_marketshare = .46
-	supplies.purchase_total = 0
-	supplies.freezie_total = 0
-	supplies.pizza_total = 0
-	supplies.fiyork_pizza_count = 0
-	supplies.fiyork_freezie_count = 0
-	supplies.daily_freezie_purchase_price = 10
-	supplies.daily_pizza_purchase_price = 15
-	supplies.freezie_yesterday_used = 0
-	supplies.pizza_yesterday_used = 0
-	fiyork.fiyork_current_loan = 0
+
 	fiyork.fiyork_research_fund = 0
 	fiyork.fiyork_days_left_research = fiyork.fiyork_research_total_one
 	fiyork.fiyork_research_spending = 0
-	customer_math.fiyork_advertising = 0
+	fiyork.fiyork_research_input_key = false
+
+	fiyork.fiyork_current_loan = 0
+
+	fiyork.fiyork_station_three_key = false
+	fiyork.fiyork_station_four_key = false
+	fiyork.fiyork_station_five_key = false
+	fiyork.fiyork_station_six_key = false
+	fiyork.fiyork_loans_input_key = false
+
+	fiyork.fiyork_advertising_sabatoge_key = true
+	fiyork.fiyork_storefront_sabatoge_key = true
+	fiyork.fiyork_entertainment_sabatoge_key = true
+	fiyork.fiyork_arcade_sabatoge_key = true
+
+	money.fiyork_balance = 200
+	money.fiyork_expenses = 0
+
+	supplies.soda_yesterday_used = 0
+	supplies.popcorn_yesterday_used = 0
+	supplies.pizza_yesterday_used = 0
+	supplies.freezie_yesterday_used = 0
+	supplies.energy_yesterday_used = 0
+	supplies.nachos_yesterday_used = 0
+	supplies.fiyork_pizza_price = 0
+	supplies.fiyork_freezie_price = 0
+
+	supplies.fiyork_pizza_count = 0
+	supplies.fiyork_freezie_count = 0
 	get_tree().set_pause(false)
 	get_tree().change_scene("res://strategy.tscn")
-	
+
+
 func game_over_plansey():
-	money.plansey_balance = 500
+	arcade_day.plansey_station_one_selection = 0
+	arcade_day.plansey_station_two_selection = 0
+	arcade_day.plansey_station_three_selection = 0
+	arcade_day.plansey_station_four_selection = 0
+	arcade_day.plansey_station_five_selection = 0
+	arcade_day.plansey_station_six_selection = 0
+	arcade_day.plansey_arcade_range_low = 15
+	arcade_day.plansey_arcade_range_high = 20
+	arcade_day.plansey_arcade_one_price = 0
+	arcade_day.plansey_arcade_two_price = 0
+	arcade_day.plansey_arcade_three_price = 0
+	arcade_day.plansey_arcade_four_price = 0
+	arcade_day.plansey_arcade_five_price = 0
+	arcade_day.plansey_arcade_six_price = 0
+
+	customer_math.plansey_advertising = 0
+	customer_math.plansey_player_marketshare = .1
+
+	money.plansey_balance = 200
 	money.plansey_expenses = 0
-	money.income = 0
-	money.plansey_cash
-	plansey.plansey_research_one_key = false
-	plansey.plansey_research_two_key = false
-	plansey.plansey_storefront_worst_key = true
-	plansey.plansey_storefront_decent_key = false
-	plansey.plansey_storefront_good_key = false
-	plansey.plansey_storefront_great_key = false
+
+	plansey.plansey_research_total_one = 400
+	plansey.plansey_genre_two_key = false
+	plansey.plansey_research_total_two = 700
+	plansey.plansey_genre_three_key = false
+
 	plansey.plansey_storefront_best_key = false
+	plansey.plansey_storefront_great_key = false
+	plansey.plansey_storefront_good_key = false
+	plansey.plansey_storefront_decent_key = false
+	plansey.plansey_storefront_worst_key = false
+
 	plansey.plansey_arcade_worst_key = true
 	plansey.plansey_arcade_decent_key = false
 	plansey.plansey_arcade_good_key = false
 	plansey.plansey_arcade_great_key = false
 	plansey.plansey_arcade_best_key = false
+
 	plansey.plansey_entertainment_worst_key = true
 	plansey.plansey_entertainment_decent_key = false
 	plansey.plansey_entertainment_good_key = false
 	plansey.plansey_entertainment_great_key = false
 	plansey.plansey_entertainment_best_key = false
-	customer_globals.sales_lost = 0
-	customer_globals.sales_made = 0
-	customer_globals.storefront_loss = 0
-	customer_globals.price_loss = 0
-	customer_globals.waited_loss = 0
-	customer_globals.sabatoge_loss = 0
-	price_check.plansey_arcade_one_price = 0
-	price_check.plansey_arcade_two_price = 0
-	price_check.plansey_arcade_three_price = 0
-	price_check.plansey_arcade_four_price = 0
-	price_check.plansey_arcade_five_price = 0
-	price_check.plansey_arcade_six_price = 0
-	supplies.plansey_energy_price = 0
-	supplies.plansey_nachos_price = 0
-	keys.plansey_station_three_key = false
-	keys.plansey_station_four_key = false
-	keys.plansey_station_five_key = false
-	keys.plansey_station_six_key = false
-	keys.plansey_plumber_key = false
-	keys.plansey_yellowdot_key = false
-	keys.plansey_vgg_key = true
-	customer_math.plansey_genre_two_key = false
-	customer_math.plansey_genre_three_key = false
-	customer_math.meta_prediction = .55
-	customer_math.classic_prediction = .45
-	customer_math.strategy_prediction = .30
-	customer_math.time_management_prediction = .58
-	customer_math.platformer_prediction = .58
-	customer_math.adventure_prediction = .58
-	customer_math.one_cash = 0
-	customer_math.two_cash = 0
-	customer_math.one_sales_made = 0
-	customer_math.two_sales_made = 0
-	customer_math.one_sales_lost = 0
-	customer_math.two_sales_lost = 0
-	customer_math.plansey_player_marketshare = .1
-	customer_math.plansey_competitor_one_marketshare = .63
-	customer_math.plansey_competitor_two_marketshare = .46
-	supplies.purchase_total = 0
-	supplies.energy_total = 0
-	supplies.nachos_total = 0
-	supplies.plansey_nachos_count = 0
-	supplies.plansey_energy_count = 0
-	supplies.daily_energy_purchase_price = 10
-	supplies.daily_nachos_purchase_price = 15
-	supplies.energy_yesterday_used = 0
-	supplies.nachos_yesterday_used = 0
-	plansey.plansey_current_loan = 0
+
 	plansey.plansey_research_fund = 0
 	plansey.plansey_days_left_research = plansey.plansey_research_total_one
 	plansey.plansey_research_spending = 0
-	customer_math.plansey_advertising = 0
+	plansey.plansey_research_input_key = false
+
+	plansey.plansey_current_loan = 0
+
+	plansey.plansey_station_three_key = false
+	plansey.plansey_station_four_key = false
+	plansey.plansey_station_five_key = false
+	plansey.plansey_station_six_key = false
+	plansey.plansey_loans_input_key = false
+
+	supplies.soda_yesterday_used = 0
+	supplies.popcorn_yesterday_used = 0
+	supplies.pizza_yesterday_used = 0
+	supplies.freezie_yesterday_used = 0
+	supplies.energy_yesterday_used = 0
+	supplies.nachos_yesterday_used = 0
+	supplies.plansey_energy_price = 0
+	supplies.plansey_nachos_price = 0
+	supplies.plansey_nachos_count = 0
+	supplies.plansey_energy_count = 0
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://strategy.tscn")
+
+func game_over_untilly():
+	arcade_day.untilly_station_one_selection = 0
+	arcade_day.untilly_station_two_selection = 0
+	arcade_day.untilly_station_three_selection = 0
+	arcade_day.untilly_station_four_selection = 0
+	arcade_day.untilly_station_five_selection = 0
+	arcade_day.untilly_station_six_selection = 0
+	arcade_day.untilly_arcade_range_low = 10
+	arcade_day.untilly_arcade_range_high = 25
+	arcade_day.untilly_arcade_one_price = 0
+	arcade_day.untilly_arcade_two_price = 0
+	arcade_day.untilly_arcade_three_price = 0
+	arcade_day.untilly_arcade_four_price = 0
+	arcade_day.untilly_arcade_five_price = 0
+	arcade_day.untilly_arcade_six_price = 0
+	customer_math.untilly_advertising = 0
+	customer_math.untilly_player_marketshare = .1
+	money.untilly_balance = 200
+	money.untilly_expenses = 0
+	untilly.untilly_research_total_one = 400
+	untilly.untilly_genre_two_key = false
+	untilly.untilly_research_total_two = 700
+	untilly.untilly_genre_three_key = false
+
+	untilly.untilly_storefront_best_key = false
+	untilly.untilly_storefront_great_key = false
+	untilly.untilly_storefront_good_key = false
+	untilly.untilly_storefront_decent_key = false
+	untilly.untilly_storefront_worst_key = false
+
+	untilly.untilly_arcade_worst_key = true
+	untilly.untilly_arcade_decent_key = false
+	untilly.untilly_arcade_good_key = false
+	untilly.untilly_arcade_great_key = false
+	untilly.untilly_arcade_best_key = false
+
+	untilly.untilly_entertainment_worst_key = true
+	untilly.untilly_entertainment_decent_key = false
+	untilly.untilly_entertainment_good_key = false
+	untilly.untilly_entertainment_great_key = false
+	untilly.untilly_entertainment_best_key = false
+
+	untilly.untilly_research_fund = 0
+	untilly.untilly_days_left_research = untilly.untilly_research_total_one
+	untilly.untilly_research_spending = 0
+	untilly.untilly_research_input_key = false
+	untilly.untilly_current_loan = 0
+
+	untilly.untilly_station_three_key = false
+	untilly.untilly_station_four_key = false
+	untilly.untilly_station_five_key = false
+	untilly.untilly_station_six_key = false
+	untilly.untilly_loans_input_key = false
+
+	supplies.soda_yesterday_used = 0
+	supplies.popcorn_yesterday_used = 0
+	supplies.pizza_yesterday_used = 0
+	supplies.freezie_yesterday_used = 0
+	supplies.energy_yesterday_used = 0
+	supplies.nachos_yesterday_used = 0
+
+	supplies.untilly_soda_price = 0
+	supplies.untilly_popcorn_price = 0
+
+	supplies.untilly_soda_count = 0
+	supplies.untilly_popcorn_count = 0
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://strategy.tscn")
+
+
+
+
+func game_over_windrow():
+	arcade_day.windrow_station_one_selection = 0
+	arcade_day.windrow_station_two_selection = 0
+	arcade_day.windrow_station_three_selection = 0
+	arcade_day.windrow_station_four_selection = 0
+	arcade_day.windrow_station_five_selection = 0
+	arcade_day.windrow_station_six_selection = 0
+	arcade_day.windrow_arcade_range_low = 15
+	arcade_day.windrow_arcade_range_high = 20
+	arcade_day.windrow_arcade_one_price = 0
+	arcade_day.windrow_arcade_two_price = 0
+	arcade_day.windrow_arcade_three_price = 0
+	arcade_day.windrow_arcade_four_price = 0
+	arcade_day.windrow_arcade_five_price = 0
+	arcade_day.windrow_arcade_six_price = 0
+	customer_math.windrow_advertising = 0
+	customer_math.windrow_player_marketshare = .1
+	money.windrow_balance = 200
+	money.windrow_expenses = 0
+	windrow.windrow_research_total_one = 400
+	windrow.windrow_genre_two_key = false
+	windrow.windrow_research_total_two = 700
+	windrow.windrow_genre_three_key = false
+
+	windrow.windrow_storefront_best_key = false
+	windrow.windrow_storefront_great_key = false
+	windrow.windrow_storefront_good_key = false
+	windrow.windrow_storefront_decent_key = false
+	windrow.windrow_storefront_worst_key = false
+
+	windrow.windrow_arcade_worst_key = true
+	windrow.windrow_arcade_decent_key = false
+	windrow.windrow_arcade_good_key = false
+	windrow.windrow_arcade_great_key = false
+	windrow.windrow_arcade_best_key = false
+
+	windrow.windrow_entertainment_worst_key = true
+	windrow.windrow_entertainment_decent_key = false
+	windrow.windrow_entertainment_good_key = false
+	windrow.windrow_entertainment_great_key = false
+	windrow.windrow_entertainment_best_key = false
+
+	windrow.windrow_research_fund = 0
+	windrow.windrow_days_left_research = windrow.windrow_research_total_one
+	windrow.windrow_research_spending = 0
+	windrow.windrow_research_input_key = false
+	windrow.windrow_current_loan = 0
+
+	windrow.windrow_station_three_key = false
+	windrow.windrow_station_four_key = false
+	windrow.windrow_station_five_key = false
+	windrow.windrow_station_six_key = false
+	windrow.windrow_loans_input_key = false
+
+	windrow.windrow_advertising_sabatoge_key = true
+	windrow.windrow_storefront_sabatoge_key = true
+	windrow.windrow_entertainment_sabatoge_key = true
+	windrow.windrow_arcade_sabatoge_key = true
+
+	supplies.soda_yesterday_used = 0
+	supplies.popcorn_yesterday_used = 0
+	supplies.pizza_yesterday_used = 0
+	supplies.freezie_yesterday_used = 0
+	supplies.energy_yesterday_used = 0
+	supplies.nachos_yesterday_used = 0
+
+	supplies.windrow_freezie_price = 0
+	supplies.windrow_pizza_price = 0
+
+	supplies.windrow_freezie_count = 0
+	supplies.windrow_pizza_count = 0
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://strategy.tscn")
+
+func game_over_banlon():
+	arcade_day.banlon_station_one_selection = 0
+	arcade_day.banlon_station_two_selection = 0
+	arcade_day.banlon_station_three_selection = 0
+	arcade_day.banlon_station_four_selection = 0
+	arcade_day.banlon_station_five_selection = 0
+	arcade_day.banlon_station_six_selection = 0
+	arcade_day.banlon_arcade_range_low = 15
+	arcade_day.banlon_arcade_range_high = 20
+	arcade_day.banlon_arcade_one_price = 0
+	arcade_day.banlon_arcade_two_price = 0
+	arcade_day.banlon_arcade_three_price = 0
+	arcade_day.banlon_arcade_four_price = 0
+	arcade_day.banlon_arcade_five_price = 0
+	arcade_day.banlon_arcade_six_price = 0
+	banlon.banlon_research_total_one = 400
+	banlon.banlon_genre_two_key = false
+	banlon.banlon_research_total_two = 700
+	banlon.banlon_genre_three_key = false
+
+	banlon.banlon_storefront_best_key = false
+	banlon.banlon_storefront_great_key = false
+	banlon.banlon_storefront_good_key = false
+	banlon.banlon_storefront_decent_key = false
+	banlon.banlon_storefront_worst_key = false
+
+	banlon.banlon_arcade_worst_key = true
+	banlon.banlon_arcade_decent_key = false
+	banlon.banlon_arcade_good_key = false
+	banlon.banlon_arcade_great_key = false
+	banlon.banlon_arcade_best_key = false
+
+	banlon.banlon_entertainment_worst_key = true
+	banlon.banlon_entertainment_decent_key = false
+	banlon.banlon_entertainment_good_key = false
+	banlon.banlon_entertainment_great_key = false
+	banlon.banlon_entertainment_best_key = false
+
+	banlon.banlon_research_fund = 0
+	banlon.banlon_days_left_research = banlon.banlon_research_total_one
+	banlon.banlon_research_spending = 0
+	banlon.banlon_research_input_key = false
+	banlon.banlon_current_loan = 0
+
+	banlon.banlon_station_three_key = false
+	banlon.banlon_station_four_key = false
+	banlon.banlon_station_five_key = false
+	banlon.banlon_station_six_key = false
+	banlon.banlon_loans_input_key = false
+	money.banlon_balance = 200
+	money.banlon_expenses = 0
+
+	supplies.soda_yesterday_used = 0
+	supplies.popcorn_yesterday_used = 0
+	supplies.pizza_yesterday_used = 0
+	supplies.freezie_yesterday_used = 0
+	supplies.energy_yesterday_used = 0
+	supplies.nachos_yesterday_used = 0
+
+	supplies.banlon_energy_price = 0
+	supplies.banlon_nachos_price = 0
+
+	supplies.banlon_energy_count = 0
+	supplies.banlon_nachos_count = 0
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://strategy.tscn")
+
+
+
+func game_over_slatten():
+	arcade_day.slatten_station_one_selection = 0
+	arcade_day.slatten_station_two_selection = 0
+	arcade_day.slatten_station_three_selection = 0
+	arcade_day.slatten_station_four_selection = 0
+	arcade_day.slatten_station_five_selection = 0
+	arcade_day.slatten_station_six_selection = 0
+	arcade_day.slatten_arcade_range_low = 15
+	arcade_day.slatten_arcade_range_high = 20
+	arcade_day.slatten_arcade_one_price = 0
+	arcade_day.slatten_arcade_two_price = 0
+	arcade_day.slatten_arcade_three_price = 0
+	arcade_day.slatten_arcade_four_price = 0
+	arcade_day.slatten_arcade_five_price = 0
+	arcade_day.slatten_arcade_six_price = 0
+	customer_math.slatten_advertising = 0
+	customer_math.slatten_player_marketshare = .1
+	money.slatten_balance = 200
+	money.slatten_expenses = 0
+	slatten.slatten_research_total_one = 400
+	slatten.slatten_genre_two_key = false
+	slatten.slatten_research_total_two = 700
+	slatten.slatten_genre_three_key = false
+
+	slatten.slatten_storefront_best_key = false
+	slatten.slatten_storefront_great_key = false
+	slatten.slatten_storefront_good_key = false
+	slatten.slatten_storefront_decent_key = false
+	slatten.slatten_storefront_worst_key = false
+
+	slatten.slatten_arcade_worst_key = true
+	slatten.slatten_arcade_decent_key = false
+	slatten.slatten_arcade_good_key = false
+	slatten.slatten_arcade_great_key = false
+	slatten.slatten_arcade_best_key = false
+
+	slatten.slatten_entertainment_worst_key = true
+	slatten.slatten_entertainment_decent_key = false
+	slatten.slatten_entertainment_good_key = false
+	slatten.slatten_entertainment_great_key = false
+	slatten.slatten_entertainment_best_key = false
+
+	slatten.slatten_research_fund = 0
+	slatten.slatten_days_left_research = slatten.slatten_research_total_one
+	slatten.slatten_research_spending = 0
+	slatten.slatten_research_input_key = false
+	slatten.slatten_current_loan = 0
+
+	slatten.slatten_station_three_key = false
+	slatten.slatten_station_four_key = false
+	slatten.slatten_station_five_key = false
+	slatten.slatten_station_six_key = false
+	slatten.slatten_loans_input_key = false
+
+	slatten.slatten_advertising_sabatoge_key = true
+	slatten.slatten_storefront_sabatoge_key = true
+	slatten.slatten_entertainment_sabatoge_key = true
+	slatten.slatten_arcade_sabatoge_key = true
+
+	supplies.soda_yesterday_used = 0
+	supplies.popcorn_yesterday_used = 0
+	supplies.pizza_yesterday_used = 0
+	supplies.freezie_yesterday_used = 0
+	supplies.energy_yesterday_used = 0
+	supplies.nachos_yesterday_used = 0
+	
+	supplies.slatten_freezie_price = 0
+	supplies.slatten_popcorn_price = 0
+
+	supplies.slatten_freezie_count = 0
+	supplies.slatten_popcorn_count = 0
 	get_tree().set_pause(false)
 	get_tree().change_scene("res://strategy.tscn")

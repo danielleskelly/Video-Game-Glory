@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=1]
 
-[ext_resource path="res://asteroid.gd" type="Script" id=1]
+[ext_resource path="res://fiyork_time_management.gd" type="Script" id=1]
 [ext_resource path="res://spaceship.scn" type="PackedScene" id=2]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://outer_box.png" type="Texture" id=4]

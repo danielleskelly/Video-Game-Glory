@@ -3,6 +3,11 @@ extends Node
 var town_select = "hollyhock"
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+	add_to_group("Persist")
+
+func save():
+	var savedict = {
+		filename=get_filename(),
+		town_select=town_select
+	}
+	return savedict

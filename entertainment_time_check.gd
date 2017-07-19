@@ -1,23 +1,5 @@
 extends Node
 
-var hollyhock_entertainment_best_key = false
-var hollyhock_entertainment_great_key = false
-var hollyhock_entertainment_good_key = false
-var hollyhock_entertainment_decent_key = false
-var hollyhock_entertainment_worst_key = true
-
-var fiyork_entertainment_best_key = false
-var fiyork_entertainment_great_key = false
-var fiyork_entertainment_good_key = false
-var fiyork_entertainment_decent_key = false
-var fiyork_entertainment_worst_key = true
-
-var plansey_entertainment_best_key = false
-var plansey_entertainment_great_key = false
-var plansey_entertainment_good_key = false
-var plansey_entertainment_decent_key = false
-var plansey_entertainment_worst_key = true
-
 var wait_time
 
 func _ready():
@@ -28,35 +10,79 @@ func _ready():
 #in store entertainment upgrades effect on waiting
 func entertainment_time_check(): 
 	if (towns.town_select == "hollyhock"):
-		if (hollyhock_entertainment_best_key == true):
+		if (hollyhock.hollyhock_entertainment_best_key == true):
 			wait_time == 45
-		elif (hollyhock_entertainment_great_key == true):
+		elif (hollyhock.hollyhock_entertainment_great_key == true):
 			wait_time = 40
-		elif (hollyhock_entertainment_good_key == true):
+		elif (hollyhock.hollyhock_entertainment_good_key == true):
 			wait_time = 35
-		elif (hollyhock_entertainment_decent_key == true):
+		elif (hollyhock.hollyhock_entertainment_decent_key == true):
 			wait_time = 30
-		elif (hollyhock_entertainment_worst_key == true):
+		elif (hollyhock.hollyhock_entertainment_worst_key == true):
 			wait_time = 25
 	if (towns.town_select == "fiyork"):
-		if (fiyork_entertainment_best_key == true):
+		if (fiyork.fiyork_entertainment_best_key == true):
 			wait_time == 45
-		elif (fiyork_entertainment_great_key == true):
+		elif (fiyork.fiyork_entertainment_great_key == true):
 			wait_time = 40
-		elif (fiyork_entertainment_good_key == true):
+		elif (fiyork.fiyork_entertainment_good_key == true):
 			wait_time = 35
-		elif (fiyork_entertainment_decent_key == true):
+		elif (fiyork.fiyork_entertainment_decent_key == true):
 			wait_time = 30
-		elif (fiyork_entertainment_worst_key == true):
+		elif (fiyork.fiyork_entertainment_worst_key == true):
 			wait_time = 25
 	if (towns.town_select == "plansey"):
-		if (plansey_entertainment_best_key == true):
+		if (plansey.plansey_entertainment_best_key == true):
 			wait_time == 45
-		elif (plansey_entertainment_great_key == true):
+		elif (plansey.plansey_entertainment_great_key == true):
 			wait_time = 40
-		elif (plansey_entertainment_good_key == true):
+		elif (plansey.plansey_entertainment_good_key == true):
 			wait_time = 35
-		elif (plansey_entertainment_decent_key == true):
+		elif (plansey.plansey_entertainment_decent_key == true):
 			wait_time = 30
-		elif (plansey_entertainment_worst_key == true):
+		elif (plansey.plansey_entertainment_worst_key == true):
+			wait_time = 25
+	if (towns.town_select == "windrow"):
+		if (windrow.windrow_entertainment_best_key == true):
+			wait_time == 45
+		elif (windrow.windrow_entertainment_great_key == true):
+			wait_time = 40
+		elif (windrow.windrow_entertainment_good_key == true):
+			wait_time = 35
+		elif (windrow.windrow_entertainment_decent_key == true):
+			wait_time = 30
+		elif (windrow.windrow_entertainment_worst_key == true):
+			wait_time = 25
+	if (towns.town_select == "banlon"):
+		if (banlon.banlon_entertainment_best_key == true):
+			wait_time == 45
+		elif (banlon.banlon_entertainment_great_key == true):
+			wait_time = 40
+		elif (banlon.banlon_entertainment_good_key == true):
+			wait_time = 35
+		elif (banlon.banlon_entertainment_decent_key == true):
+			wait_time = 30
+		elif (banlon.banlon_entertainment_worst_key == true):
+			wait_time = 25
+	if (towns.town_select == "slatten"):
+		if (slatten.slatten_entertainment_best_key == true):
+			wait_time == 45
+		elif (slatten.slatten_entertainment_great_key == true):
+			wait_time = 40
+		elif (slatten.slatten_entertainment_good_key == true):
+			wait_time = 35
+		elif (slatten.slatten_entertainment_decent_key == true):
+			wait_time = 30
+		elif (slatten.slatten_entertainment_worst_key == true):
+			wait_time = 25
+	if (towns.town_select == "untilly"):
+		if (untilly.untilly_entertainment_best_key == true):
+			wait_time == 45
+		elif (untilly.untilly_entertainment_great_key == true):
+			wait_time = 40
+		elif (untilly.untilly_entertainment_good_key == true):
+			wait_time = 35
+		elif (untilly.untilly_entertainment_decent_key == true):
+			wait_time = 30
+		elif (untilly.untilly_entertainment_worst_key == true):
 			wait_time = 25

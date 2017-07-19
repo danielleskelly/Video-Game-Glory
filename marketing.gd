@@ -16,6 +16,14 @@ func _process(delta):
 		advertising = customer_math.fiyork_advertising
 	if (towns.town_select == "plansey"):
 		advertising = customer_math.plansey_advertising
+	if (towns.town_select == "untilly"):
+		advertising = customer_math.untilly_advertising
+	if (towns.town_select == "windrow"):
+		advertising = customer_math.windrow_advertising
+	if (towns.town_select == "banlon"):
+		advertising = customer_math.banlon_advertising
+	if (towns.town_select == "slatten"):
+		advertising = customer_math.slatten_advertising
 	if (int(advertising) == 0):
 		ad_output.clear()
 		ad_output.add_text("None")
@@ -66,6 +74,26 @@ func _on_lower_button_down():
 			customer_math.plansey_advertising = int(customer_math.plansey_advertising) - 1
 			money.plansey_expenses = int(money.plansey_expenses) - 1
 			spending()
+	if (towns.town_select == "untilly"):
+		if (int(customer_math.untilly_advertising) > 0):
+			customer_math.untilly_advertising = int(customer_math.untilly_advertising) - 1
+			money.untilly_expenses = int(money.untilly_expenses) - 1
+			spending()
+	if (towns.town_select == "windrow"):
+		if (int(customer_math.windrow_advertising) > 0):
+			customer_math.windrow_advertising = int(customer_math.windrow_advertising) - 1
+			money.windrow_expenses = int(money.windrow_expenses) - 1
+			spending()
+	if (towns.town_select == "banlon"):
+		if (int(customer_math.banlon_advertising) > 0):
+			customer_math.banlon_advertising = int(customer_math.banlon_advertising) - 1
+			money.banlon_expenses = int(money.banlon_expenses) - 1
+			spending()
+	if (towns.town_select == "slatten"):
+		if (int(customer_math.slatten_advertising) > 0):
+			customer_math.slatten_advertising = int(customer_math.slatten_advertising) - 1
+			money.slatten_expenses = int(money.slatten_expenses) - 1
+			spending()
 
 func _on_raise_button_down():
 	if (towns.town_select == "hollyhock"):
@@ -78,11 +106,32 @@ func _on_raise_button_down():
 			customer_math.fiyork_advertising = int(customer_math.fiyork_advertising) + 1
 			spending()
 			money.fiyork_expenses = int(money.fiyork_expenses) + 1
-	if (towns.town_select == "fiyork"):
-		if ((int(customer_math.fiyork_advertising) + 1 <= int(money.fiyork_cash)) and (int(customer_math.fiyork_advertising) + 1 <= int(customer_math.fiyork_advertising_max))):
-			customer_math.fiyork_advertising = int(customer_math.fiyork_advertising) + 1
+	if (towns.town_select == "plansey"):
+		if ((int(customer_math.plansey_advertising) + 1 <= int(money.plansey_cash)) and (int(customer_math.plansey_advertising) + 1 <= int(customer_math.plansey_advertising_max))):
+			customer_math.plansey_advertising = int(customer_math.plansey_advertising) + 1
 			spending()
-			money.fiyork_expenses = int(money.fiyork_expenses) + 1
+			money.plansey_expenses = int(money.plansey_expenses) + 1
+	if (towns.town_select == "untilly"):
+		if ((int(customer_math.untilly_advertising) + 1 <= int(money.untilly_cash)) and (int(customer_math.untilly_advertising) + 1 <= int(customer_math.untilly_advertising_max))):
+			customer_math.untilly_advertising = int(customer_math.untilly_advertising) + 1
+			spending()
+			money.untilly_expenses = int(money.untilly_expenses) + 1
+	if (towns.town_select == "windrow"):
+		if ((int(customer_math.windrow_advertising) + 1 <= int(money.windrow_cash)) and (int(customer_math.windrow_advertising) + 1 <= int(customer_math.windrow_advertising_max))):
+			customer_math.windrow_advertising = int(customer_math.windrow_advertising) + 1
+			spending()
+			money.windrow_expenses = int(money.windrow_expenses) + 1
+	if (towns.town_select == "banlon"):
+		if ((int(customer_math.banlon_advertising) + 1 <= int(money.banlon_cash)) and (int(customer_math.banlon_advertising) + 1 <= int(customer_math.banlon_advertising_max))):
+			customer_math.banlon_advertising = int(customer_math.banlon_advertising) + 1
+			spending()
+			money.banlon_expenses = int(money.banlon_expenses) + 1
+	if (towns.town_select == "slatten"):
+		if ((int(customer_math.slatten_advertising) + 1 <= int(money.slatten_cash)) and (int(customer_math.slatten_advertising) + 1 <= int(customer_math.slatten_advertising_max))):
+			customer_math.slatten_advertising = int(customer_math.slatten_advertising) + 1
+			spending()
+			money.slatten_expenses = int(money.slatten_expenses) + 1
+			
 
 
 func _on_confirm_button_down():
@@ -97,6 +146,14 @@ func _on_confirm_button_down():
 			temp_spending = int(customer_math.hollyhock_advertising_max)
 		customer_math.hollyhock_advertising = temp_spending
 		spending()
+	if (towns.town_select == "fiyork"):
+		var temp_spending = get_node("container/spending_output").get_text()
+		if (int(temp_spending) > int(money.fiyork_cash)):
+			temp_spending = money.fiyork_cash
+		if (int(temp_spending) > int(customer_math.fiyork_advertising_max)):
+			temp_spending = int(customer_math.fiyork_advertising_max)
+		customer_math.fiyork_advertising = temp_spending
+		spending()
 	if (towns.town_select == "plansey"):
 		var temp_spending = get_node("container/spending_output").get_text()
 		if (int(temp_spending) > int(money.plansey_cash)):
@@ -104,6 +161,38 @@ func _on_confirm_button_down():
 		if (int(temp_spending) > int(customer_math.plansey_advertising_max)):
 			temp_spending = int(customer_math.plansey_advertising_max)
 		customer_math.plansey_advertising = temp_spending
+		spending()
+	if (towns.town_select == "untilly"):
+		var temp_spending = get_node("container/spending_output").get_text()
+		if (int(temp_spending) > int(money.untilly_cash)):
+			temp_spending = money.untilly_cash
+		if (int(temp_spending) > int(customer_math.untilly_advertising_max)):
+			temp_spending = int(customer_math.untilly_advertising_max)
+		customer_math.untilly_advertising = temp_spending
+		spending()
+	if (towns.town_select == "windrow"):
+		var temp_spending = get_node("container/spending_output").get_text()
+		if (int(temp_spending) > int(money.windrow_cash)):
+			temp_spending = money.windrow_cash
+		if (int(temp_spending) > int(customer_math.windrow_advertising_max)):
+			temp_spending = int(customer_math.windrow_advertising_max)
+		customer_math.windrow_advertising = temp_spending
+		spending()
+	if (towns.town_select == "banlon"):
+		var temp_spending = get_node("container/spending_output").get_text()
+		if (int(temp_spending) > int(money.banlon_cash)):
+			temp_spending = money.banlon_cash
+		if (int(temp_spending) > int(customer_math.banlon_advertising_max)):
+			temp_spending = int(customer_math.banlon_advertising_max)
+		customer_math.banlon_advertising = temp_spending
+		spending()
+	if (towns.town_select == "slatten"):
+		var temp_spending = get_node("container/spending_output").get_text()
+		if (int(temp_spending) > int(money.slatten_cash)):
+			temp_spending = money.slatten_cash
+		if (int(temp_spending) > int(customer_math.slatten_advertising_max)):
+			temp_spending = int(customer_math.slatten_advertising_max)
+		customer_math.slatten_advertising = temp_spending
 		spending()
 		
 func spending():
@@ -116,3 +205,15 @@ func spending():
 	if (towns.town_select == "plansey"):
 		spending_output.clear()
 		spending_output.set_text(str(customer_math.plansey_advertising))
+	if (towns.town_select == "untilly"):
+		spending_output.clear()
+		spending_output.set_text(str(customer_math.untilly_advertising))
+	if (towns.town_select == "windrow"):
+		spending_output.clear()
+		spending_output.set_text(str(customer_math.windrow_advertising))
+	if (towns.town_select == "banlon"):
+		spending_output.clear()
+		spending_output.set_text(str(customer_math.banlon_advertising))
+	if (towns.town_select == "slatten"):
+		spending_output.clear()
+		spending_output.set_text(str(customer_math.slatten_advertising))

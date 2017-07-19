@@ -95,6 +95,108 @@ func _process(delta):
 		elif (plansey.plansey_entertainment_best_key == false):
 			best_output.clear()
 			best_output.add_text(str(upgrade_prices.best_price))
+	if (towns.town_select == "windrow"):
+		if (windrow.windrow_entertainment_decent_key == true):
+			decent_output.clear()
+			decent_output.add_text("Owned")
+		elif (windrow.windrow_entertainment_decent_key == false):
+			decent_output.clear()
+			decent_output.add_text(str(upgrade_prices.decent_price))
+		if (windrow.windrow_entertainment_good_key == true):
+			good_output.clear()
+			good_output.add_text("Owned")
+		elif (windrow.windrow_entertainment_good_key == false):
+			good_output.clear()
+			good_output.add_text(str(upgrade_prices.good_price))
+		if (windrow.windrow_entertainment_great_key == true):
+			great_output.clear()
+			great_output.add_text("Owned")
+		elif (windrow.windrow_entertainment_great_key == false):
+			great_output.clear()
+			great_output.add_text(str(upgrade_prices.great_price))
+		if (windrow.windrow_entertainment_best_key == true):
+			best_output.clear()
+			best_output.add_text("Owned")
+		elif (windrow.windrow_entertainment_best_key == false):
+			best_output.clear()
+			best_output.add_text(str(upgrade_prices.best_price))
+	if (towns.town_select == "banlon"):
+		if (banlon.banlon_entertainment_decent_key == true):
+			decent_output.clear()
+			decent_output.add_text("Owned")
+		elif (banlon.banlon_entertainment_decent_key == false):
+			decent_output.clear()
+			decent_output.add_text(str(upgrade_prices.decent_price))
+		if (banlon.banlon_entertainment_good_key == true):
+			good_output.clear()
+			good_output.add_text("Owned")
+		elif (banlon.banlon_entertainment_good_key == false):
+			good_output.clear()
+			good_output.add_text(str(upgrade_prices.good_price))
+		if (banlon.banlon_entertainment_great_key == true):
+			great_output.clear()
+			great_output.add_text("Owned")
+		elif (banlon.banlon_entertainment_great_key == false):
+			great_output.clear()
+			great_output.add_text(str(upgrade_prices.great_price))
+		if (banlon.banlon_entertainment_best_key == true):
+			best_output.clear()
+			best_output.add_text("Owned")
+		elif (banlon.banlon_entertainment_best_key == false):
+			best_output.clear()
+			best_output.add_text(str(upgrade_prices.best_price))
+	if (towns.town_select == "slatten"):
+		if (slatten.slatten_entertainment_decent_key == true):
+			decent_output.clear()
+			decent_output.add_text("Owned")
+		elif (slatten.slatten_entertainment_decent_key == false):
+			decent_output.clear()
+			decent_output.add_text(str(upgrade_prices.decent_price))
+		if (slatten.slatten_entertainment_good_key == true):
+			good_output.clear()
+			good_output.add_text("Owned")
+		elif (slatten.slatten_entertainment_good_key == false):
+			good_output.clear()
+			good_output.add_text(str(upgrade_prices.good_price))
+		if (slatten.slatten_entertainment_great_key == true):
+			great_output.clear()
+			great_output.add_text("Owned")
+		elif (slatten.slatten_entertainment_great_key == false):
+			great_output.clear()
+			great_output.add_text(str(upgrade_prices.great_price))
+		if (slatten.slatten_entertainment_best_key == true):
+			best_output.clear()
+			best_output.add_text("Owned")
+		elif (slatten.slatten_entertainment_best_key == false):
+			best_output.clear()
+			best_output.add_text(str(upgrade_prices.best_price))
+	if (towns.town_select == "untilly"):
+		if (untilly.untilly_entertainment_decent_key == true):
+			decent_output.clear()
+			decent_output.add_text("Owned")
+		elif (untilly.untilly_entertainment_decent_key == false):
+			decent_output.clear()
+			decent_output.add_text(str(upgrade_prices.decent_price))
+		if (untilly.untilly_entertainment_good_key == true):
+			good_output.clear()
+			good_output.add_text("Owned")
+		elif (untilly.untilly_entertainment_good_key == false):
+			good_output.clear()
+			good_output.add_text(str(upgrade_prices.good_price))
+		if (untilly.untilly_entertainment_great_key == true):
+			great_output.clear()
+			great_output.add_text("Owned")
+		elif (untilly.untilly_entertainment_great_key == false):
+			great_output.clear()
+			great_output.add_text(str(upgrade_prices.great_price))
+		if (untilly.untilly_entertainment_best_key == true):
+			best_output.clear()
+			best_output.add_text("Owned")
+		elif (untilly.untilly_entertainment_best_key == false):
+			best_output.clear()
+			best_output.add_text(str(upgrade_prices.best_price))
+
+
 
 func _on_worst_button_button_down():
 	if (towns.town_select == "hollyhock"):
@@ -111,6 +213,30 @@ func _on_worst_button_button_down():
 			notifications.show()
 	if (towns.town_select == "plansey"):
 		if (plansey.plansey_entertainment_worst_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+	if (towns.town_select == "windrow"):
+		if (windrow.windrow_entertainment_worst_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+	if (towns.town_select == "banlon"):
+		if (banlon.banlon_entertainment_worst_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+	if (towns.town_select == "slatten"):
+		if (slatten.slatten_entertainment_worst_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+	if (towns.town_select == "untilly"):
+		if (untilly.untilly_entertainment_worst_key == true):
 			select_price = 0
 			notifications.clear()
 			notifications.add_text("You already own that!")
@@ -168,8 +294,75 @@ func _on_decent_button_button_down():
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
-				
-	
+	if (towns.town_select == "windrow"):
+		if (windrow.windrow_entertainment_decent_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (windrow.windrow_entertainment_decent_key == false):
+			if (money.windrow_cash >= upgrade_prices.decent_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.decent_price
+				key_change = "windrow decent"
+			if (money.windrow_cash < upgrade_prices.decent_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "banlon"):
+		if (banlon.banlon_entertainment_decent_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (banlon.banlon_entertainment_decent_key == false):
+			if (money.banlon_cash >= upgrade_prices.decent_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.decent_price
+				key_change = "banlon decent"
+			if (money.banlon_cash < upgrade_prices.decent_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "slatten"):
+		if (slatten.slatten_entertainment_decent_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (slatten.slatten_entertainment_decent_key == false):
+			if (money.slatten_cash >= upgrade_prices.decent_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.decent_price
+				key_change = "slatten decent"
+			if (money.slatten_cash < upgrade_prices.decent_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "untilly"):
+		if (untilly.untilly_entertainment_decent_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (untilly.untilly_entertainment_decent_key == false):
+			if (money.untilly_cash >= upgrade_prices.decent_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.decent_price
+				key_change = "untilly decent"
+			if (money.untilly_cash < upgrade_prices.decent_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+
 
 func _on_good_button_button_down():
 	if (towns.town_select == "hollyhock"):
@@ -184,7 +377,6 @@ func _on_good_button_button_down():
 				notifications.add_text("Available for purchase.")
 				notifications.show()
 				select_price = upgrade_prices.good_price
-				print(select_price)
 				key_change = "hollyhock good"
 			if (money.hollyhock_cash < upgrade_prices.good_price):
 				notifications.clear()
@@ -202,7 +394,6 @@ func _on_good_button_button_down():
 				notifications.add_text("Available for purchase.")
 				notifications.show()
 				select_price = upgrade_prices.good_price
-				print(select_price)
 				key_change = "fiyork good"
 			if (money.fiyork_cash < upgrade_prices.good_price):
 				notifications.clear()
@@ -220,12 +411,81 @@ func _on_good_button_button_down():
 				notifications.add_text("Available for purchase.")
 				notifications.show()
 				select_price = upgrade_prices.good_price
-				print(select_price)
 				key_change = "plansey good"
 			if (money.plansey_cash < upgrade_prices.good_price):
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
+	if (towns.town_select == "windrow"):
+		if (windrow.windrow_entertainment_good_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (windrow.windrow_entertainment_good_key == false):
+			if (money.windrow_cash >= upgrade_prices.good_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.good_price
+				key_change = "windrow good"
+			if (money.windrow_cash < upgrade_prices.good_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "banlon"):
+		if (banlon.banlon_entertainment_good_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (banlon.banlon_entertainment_good_key == false):
+			if (money.banlon_cash >= upgrade_prices.good_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.good_price
+				key_change = "banlon good"
+			if (money.banlon_cash < upgrade_prices.good_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "slatten"):
+		if (slatten.slatten_entertainment_good_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (slatten.slatten_entertainment_good_key == false):
+			if (money.slatten_cash >= upgrade_prices.good_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.good_price
+				key_change = "slatten good"
+			if (money.slatten_cash < upgrade_prices.good_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "untilly"):
+		if (untilly.untilly_entertainment_good_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (untilly.untilly_entertainment_good_key == false):
+			if (money.untilly_cash >= upgrade_prices.good_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.good_price
+				key_change = "untilly good"
+			if (money.untilly_cash < upgrade_prices.good_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+
+
 
 func _on_great_button_button_down():
 	if (towns.town_select == "hollyhock"):
@@ -276,6 +536,74 @@ func _on_great_button_button_down():
 				select_price = upgrade_prices.great_price
 				key_change = "plansey great"
 			if (money.plansey_cash < upgrade_prices.great_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "windrow"):
+		if (windrow.windrow_entertainment_great_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (windrow.windrow_entertainment_great_key == false):
+			if (money.windrow_cash >= upgrade_prices.great_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.great_price
+				key_change = "windrow great"
+			if (money.windrow_cash < upgrade_prices.great_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "banlon"):
+		if (banlon.banlon_entertainment_great_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (banlon.banlon_entertainment_great_key == false):
+			if (money.banlon_cash >= upgrade_prices.great_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.great_price
+				key_change = "banlon great"
+			if (money.banlon_cash < upgrade_prices.great_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "slatten"):
+		if (slatten.slatten_entertainment_great_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (slatten.slatten_entertainment_great_key == false):
+			if (money.slatten_cash >= upgrade_prices.great_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.great_price
+				key_change = "slatten great"
+			if (money.slatten_cash < upgrade_prices.great_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "untilly"):
+		if (untilly.untilly_entertainment_great_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (untilly.untilly_entertainment_great_key == false):
+			if (money.untilly_cash >= upgrade_prices.great_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = upgrade_prices.great_price
+				key_change = "untilly great"
+			if (money.untilly_cash < upgrade_prices.great_price):
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -333,6 +661,75 @@ func _on_best_button_button_down():
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
+	if (towns.town_select == "windrow"):
+		if (windrow.windrow_entertainment_best_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (windrow.windrow_entertainment_best_key == false):
+			if (money.windrow_cash >= upgrade_prices.best_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = best_price
+				key_change = "windrow best"
+			if (money.windrow_cash < upgrade_prices.best_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "banlon"):
+		if (banlon.banlon_entertainment_best_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (banlon.banlon_entertainment_best_key == false):
+			if (money.banlon_cash >= upgrade_prices.best_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = best_price
+				key_change = "banlon best"
+			if (money.banlon_cash < upgrade_prices.best_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "slatten"):
+		if (slatten.slatten_entertainment_best_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (slatten.slatten_entertainment_best_key == false):
+			if (money.slatten_cash >= upgrade_prices.best_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = best_price
+				key_change = "slatten best"
+			if (money.slatten_cash < upgrade_prices.best_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+	if (towns.town_select == "untilly"):
+		if (untilly.untilly_entertainment_best_key == true):
+			select_price = 0
+			notifications.clear()
+			notifications.add_text("You already own that!")
+			notifications.show()
+		if (untilly.untilly_entertainment_best_key == false):
+			if (money.untilly_cash >= upgrade_prices.best_price):
+				notifications.clear()
+				notifications.add_text("Available for purchase.")
+				notifications.show()
+				select_price = best_price
+				key_change = "untilly best"
+			if (money.untilly_cash < upgrade_prices.best_price):
+				notifications.clear()
+				notifications.add_text("You cannot afford that!")
+				notifications.show()
+
 
 func _on_confirm_button_down():
 	get_node("notifications").set_hidden(true)
@@ -367,4 +764,45 @@ func _on_confirm_button_down():
 				plansey.plansey_entertainment_great_key = true
 			if (key_change == "plansey best"):
 				plansey.plansey_entertainment_best_key = true
+		if (towns.town_select == "windrow"):
+			money.windrow_balance = money.windrow_balance - select_price
+			if (key_change == "windrow decent"):
+				windrow.windrow_entertainment_decent_key = true
+			if (key_change == "windrow good"):
+				windrow.windrow_entertainment_good_key = true
+			if (key_change == "windrow great"):
+				windrow.windrow_entertainment_great_key = true
+			if (key_change == "windrow best"):
+				windrow.windrow_entertainment_best_key = true
+		if (towns.town_select == "banlon"):
+			money.banlon_balance = money.banlon_balance - select_price
+			if (key_change == "banlon decent"):
+				banlon.banlon_entertainment_decent_key = true
+			if (key_change == "banlon good"):
+				banlon.banlon_entertainment_good_key = true
+			if (key_change == "banlon great"):
+				banlon.banlon_entertainment_great_key = true
+			if (key_change == "banlon best"):
+				banlon.banlon_entertainment_best_key = true
+		if (towns.town_select == "slatten"):
+			money.slatten_balance = money.slatten_balance - select_price
+			if (key_change == "slatten decent"):
+				slatten.slatten_entertainment_decent_key = true
+			if (key_change == "slatten good"):
+				slatten.slatten_entertainment_good_key = true
+			if (key_change == "slatten great"):
+				slatten.slatten_entertainment_great_key = true
+			if (key_change == "slatten best"):
+				slatten.slatten_entertainment_best_key = true
+		if (towns.town_select == "untilly"):
+			money.untilly_balance = money.untilly_balance - select_price
+			if (key_change == "untilly decent"):
+				untilly.untilly_entertainment_decent_key = true
+			if (key_change == "untilly good"):
+				untilly.untilly_entertainment_good_key = true
+			if (key_change == "untilly great"):
+				untilly.untilly_entertainment_great_key = true
+			if (key_change == "untilly best"):
+				untilly.untilly_entertainment_best_key = true
 		notifications.clear()
+		
