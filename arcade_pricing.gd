@@ -60,3 +60,71 @@ func _process(delta):
 			station_six_vis.show()
 		if (plansey.plansey_arcade_best_key == false):
 			station_six_vis.set_hidden(true)
+	if (towns.town_select == "windrow"):
+		if (windrow.windrow_arcade_decent_key == true):
+			station_three_vis.show()
+		if (windrow.windrow_arcade_decent_key == false):
+			station_three_vis.set_hidden(true)
+		if (windrow.windrow_arcade_good_key == true):
+			station_four_vis.show()
+		if (windrow.windrow_arcade_good_key == false):
+			station_four_vis.set_hidden(true)
+		if (windrow.windrow_arcade_great_key == true):
+			station_five_vis.show()
+		if (windrow.windrow_arcade_great_key == false):
+			station_five_vis.set_hidden(true)
+		if (windrow.windrow_arcade_best_key == true):
+			station_six_vis.show()
+		if (windrow.windrow_arcade_best_key == false):
+			station_six_vis.set_hidden(true)
+	if (towns.town_select == "banlon"):
+		if (banlon.banlon_arcade_decent_key == true):
+			station_three_vis.show()
+		if (banlon.banlon_arcade_decent_key == false):
+			station_three_vis.set_hidden(true)
+		if (banlon.banlon_arcade_good_key == true):
+			station_four_vis.show()
+		if (banlon.banlon_arcade_good_key == false):
+			station_four_vis.set_hidden(true)
+		if (banlon.banlon_arcade_great_key == true):
+			station_five_vis.show()
+		if (banlon.banlon_arcade_great_key == false):
+			station_five_vis.set_hidden(true)
+		if (banlon.banlon_arcade_best_key == true):
+			station_six_vis.show()
+		if (banlon.banlon_arcade_best_key == false):
+			station_six_vis.set_hidden(true)
+	if (towns.town_select == "slatten"):
+		if (slatten.slatten_arcade_decent_key == true):
+			station_three_vis.show()
+		if (slatten.slatten_arcade_decent_key == false):
+			station_three_vis.set_hidden(true)
+		if (slatten.slatten_arcade_good_key == true):
+			station_four_vis.show()
+		if (slatten.slatten_arcade_good_key == false):
+			station_four_vis.set_hidden(true)
+		if (slatten.slatten_arcade_great_key == true):
+			station_five_vis.show()
+		if (slatten.slatten_arcade_great_key == false):
+			station_five_vis.set_hidden(true)
+		if (slatten.slatten_arcade_best_key == true):
+			station_six_vis.show()
+		if (slatten.slatten_arcade_best_key == false):
+			station_six_vis.set_hidden(true)
+	if (towns.town_select == "untilly"):
+		if (untilly.untilly_arcade_decent_key == true):
+			station_three_vis.show()
+		if (untilly.untilly_arcade_decent_key == false):
+			station_three_vis.set_hidden(true)
+		if (untilly.untilly_arcade_good_key == true):
+			station_four_vis.show()
+		if (untilly.untilly_arcade_good_key == false):
+			station_four_vis.set_hidden(true)
+		if (untilly.untilly_arcade_great_key == true):
+			station_five_vis.show()
+		if (untilly.untilly_arcade_great_key == false):
+			station_five_vis.set_hidden(true)
+		if (untilly.untilly_arcade_best_key == true):
+			station_six_vis.show()
+		if (untilly.untilly_arcade_best_key == false):
+			station_six_vis.set_hidden(true)

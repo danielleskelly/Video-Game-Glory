@@ -12,8 +12,9 @@ var current_vert = "1"
 var current_x
 var current_y
 var number_muncher
-var number_muncher_colliders
+var number_muncher_position
 var number
+var number_clear
 var spaces
 var goal_choice
 
@@ -22,6 +23,7 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
+	check_board()
 	hundreds = get_node("success_background/hundreths")
 	tens = get_node("success_background/tens")
 	ones = get_node("success_background/ones")
@@ -29,35 +31,34 @@ func _process(delta):
 	countdown_timer.clear()
 	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
 	if ((Input.is_action_pressed("fire")) and (get_node("debounce").get_time_left() == 0)):
-		number_muncher_colliders = get_node("number_muncher").get_child(0).get_colliding_bodies()
-		for x in number_muncher_colliders:
-			number = x.get_child(2).get_text()
-			if (goal_choice == "Multiple of 5"):
-				if (int(number) % 5 == 0):
-					perks.success = perks.success + 1
-				else:
-					if (perks.success > 5):
-						perks.success = perks.success - 5
-			if (goal_choice == "Multiple of 3"):
-				if (int(number) % 3 == 0):
-					perks.success = perks.success + 1
-				else:
-					if (perks.success > 5):
-						perks.success = perks.success - 5
-			if (goal_choice == "Multiple of 2"):
-				if (int(number) % 2 == 0):
-					perks.success = perks.success + 1
-				else:
-					if (perks.success > 5):
-						perks.success = perks.success - 5
-			if (goal_choice == "Multiple of 7"):
-				if (int(number) % 7 == 0):
-					perks.success = perks.success + 1
-				else:
-					if (perks.success > 5):
-						perks.success = perks.success - 5
-			x.get_child(2).clear()
-			get_node("debounce").start()
+		which_number()
+		if (goal_choice == "Multiple of 5"):
+			if (int(number) % 5 == 0):
+				perks.success = perks.success + 1
+		else:
+			if (perks.success > 5):
+				perks.success = perks.success - 5
+		if (goal_choice == "Multiple of 3"):
+			if (int(number) % 3 == 0):
+				perks.success = perks.success + 1
+			else:
+				if (perks.success > 5):
+					perks.success = perks.success - 5
+		if (goal_choice == "Multiple of 2"):
+			if (int(number) % 2 == 0):
+				perks.success = perks.success + 1
+			else:
+				if (perks.success > 5):
+					perks.success = perks.success - 5
+		if (goal_choice == "Multiple of 7"):
+			if (int(number) % 7 == 0):
+				perks.success = perks.success + 1
+			else:
+				if (perks.success > 5):
+					perks.success = perks.success - 5
+		number_clear.remove_from_group("number")
+		number_clear.clear()
+		get_node("debounce").start()
 	if (get_node("move_timer").get_time_left() == 0):
 		if (Input.is_action_pressed("move_left")):
 			if (current_vert == "1"):
@@ -150,6 +151,34 @@ func point_display():
 			
 			
 func load_stuff():
+	get_node("a_one/number").add_to_group("number")
+	get_node("b_one/number").add_to_group("number")
+	get_node("c_one/number").add_to_group("number")
+	get_node("d_one/number").add_to_group("number")
+	get_node("a_two/number").add_to_group("number")
+	get_node("b_two/number").add_to_group("number")
+	get_node("c_two/number").add_to_group("number")
+	get_node("d_two/number").add_to_group("number")
+	get_node("a_three/number").add_to_group("number")
+	get_node("b_three/number").add_to_group("number")
+	get_node("c_three/number").add_to_group("number")
+	get_node("d_three/number").add_to_group("number")
+	get_node("a_four/number").add_to_group("number")
+	get_node("b_four/number").add_to_group("number")
+	get_node("c_four/number").add_to_group("number")
+	get_node("d_four/number").add_to_group("number")
+	get_node("a_five/number").add_to_group("number")
+	get_node("b_five/number").add_to_group("number")
+	get_node("c_five/number").add_to_group("number")
+	get_node("d_five/number").add_to_group("number")
+	get_node("a_six/number").add_to_group("number")
+	get_node("b_six/number").add_to_group("number")
+	get_node("c_six/number").add_to_group("number")
+	get_node("d_six/number").add_to_group("number")
+	get_node("a_seven/number").add_to_group("number")
+	get_node("b_seven/number").add_to_group("number")
+	get_node("c_seven/number").add_to_group("number")
+	get_node("d_seven/number").add_to_group("number")
 	var goals = ["Multiple of 5", "Multiple of 2", "Multiple of 3", "Multiple of 7"]
 	randomize()
 	goal_choice = goals[randi() % goals.size()]
@@ -159,4 +188,131 @@ func load_stuff():
 	for x in numbers:
 		randomize()
 		x.clear()
-		x.add_text(str(int(rand_range(0, 100))))
+		x.add_text(str(int(rand_range(0, 50))))
+		
+func which_number():
+	if (current_vert == "1") and (current_hoz == "a"):
+		number = get_node("a_one/number").get_text()
+		number_clear = get_node("a_one/number")
+	if (current_vert == "2") and (current_hoz == "a"):
+		number = get_node("a_two/number").get_text()
+		number_clear = get_node("a_two/number")
+	if (current_vert == "3") and (current_hoz == "a"):
+		number = get_node("a_three/number").get_text()
+		number_clear = get_node("a_three/number")
+	if (current_vert == "4") and (current_hoz == "a"):
+		number = get_node("a_four/number").get_text()
+		number_clear = get_node("a_four/number")
+	if (current_vert == "5") and (current_hoz == "a"):
+		number = get_node("a_five/number").get_text()
+		number_clear = get_node("a_five/number")
+	if (current_vert == "6") and (current_hoz == "a"):
+		number = get_node("a_six/number").get_text()
+		number_clear = get_node("a_six/number")
+	if (current_vert == "7") and (current_hoz == "a"):
+		number = get_node("a_seven/number").get_text()
+		number_clear = get_node("a_seven/number")
+	if (current_vert == "1") and (current_hoz == "b"):
+		number = get_node("b_one/number").get_text()
+		number_clear = get_node("b_one/number")
+	if (current_vert == "2") and (current_hoz == "b"):
+		number = get_node("b_two/number").get_text()
+		number_clear = get_node("b_two/number")
+	if (current_vert == "3") and (current_hoz == "b"):
+		number = get_node("b_three/number").get_text()
+		number_clear = get_node("b_three/number")
+	if (current_vert == "4") and (current_hoz == "b"):
+		number = get_node("b_four/number").get_text()
+		number_clear = get_node("b_four/number")
+	if (current_vert == "5") and (current_hoz == "b"):
+		number = get_node("b_five/number").get_text()
+		number_clear = get_node("b_five/number")
+	if (current_vert == "6") and (current_hoz == "b"):
+		number = get_node("b_six/number").get_text()
+		number_clear = get_node("b_six/number")
+	if (current_vert == "7") and (current_hoz == "b"):
+		number = get_node("b_seven/number").get_text()
+		number_clear = get_node("b_seven/number")
+	if (current_vert == "1") and (current_hoz == "c"):
+		number = get_node("c_one/number").get_text()
+		number_clear = get_node("c_one/number")
+	if (current_vert == "2") and (current_hoz == "c"):
+		number = get_node("c_two/number").get_text()
+		number_clear = get_node("c_two/number")
+	if (current_vert == "3") and (current_hoz == "c"):
+		number = get_node("c_three/number").get_text()
+		number_clear = get_node("c_three/number")
+	if (current_vert == "4") and (current_hoz == "c"):
+		number = get_node("c_four/number").get_text()
+		number_clear = get_node("c_four/number")
+	if (current_vert == "5") and (current_hoz == "c"):
+		number = get_node("c_five/number").get_text()
+		number_clear = get_node("c_five/number")
+	if (current_vert == "6") and (current_hoz == "c"):
+		number = get_node("c_six/number").get_text()
+		number_clear = get_node("c_six/number")
+	if (current_vert == "7") and (current_hoz == "c"):
+		number = get_node("c_seven/number").get_text()
+		number_clear = get_node("c_seven/number")
+	if (current_vert == "1") and (current_hoz == "d"):
+		number = get_node("d_one/number").get_text()
+		number_clear = get_node("d_one/number")
+	if (current_vert == "2") and (current_hoz == "d"):
+		number = get_node("d_two/number").get_text()
+		number_clear = get_node("d_two/number")
+	if (current_vert == "3") and (current_hoz == "d"):
+		number = get_node("d_three/number").get_text()
+		number_clear = get_node("d_three/number")
+	if (current_vert == "4") and (current_hoz == "d"):
+		number = get_node("d_four/number").get_text()
+		number_clear = get_node("d_four/number")
+	if (current_vert == "5") and (current_hoz == "d"):
+		number = get_node("d_five/number").get_text()
+		number_clear = get_node("d_five/number")
+	if (current_vert == "6") and (current_hoz == "d"):
+		number = get_node("d_six/number").get_text()
+		number_clear = get_node("d_six/number")
+	if (current_vert == "7") and (current_hoz == "d"):
+		number = get_node("d_seven/number").get_text()
+		number_clear = get_node("d_seven/number")
+		
+func check_board():
+	var on_board = get_tree().get_nodes_in_group("number")
+	var something = false
+	for x in on_board:
+		if ((goal_choice == "Multiple of 5") and (int(x.get_text()) % 5 == 0)):
+			something = true
+		elif ((goal_choice == "Multiple of 2") and (int(x.get_text()) % 2 == 0)):
+			something = true
+		elif ((goal_choice == "Multiple of 3") and (int(x.get_text()) % 3 == 0)):
+			something = true
+		elif ((goal_choice == "Multiple of 7") and (int(x.get_text()) % 7 == 0)):
+			something = true
+		else:
+			something = false
+	if (something == false):
+		load_stuff()
+
+func _on_day_timer_timeout():
+	perk_check()
+	get_tree().change_scene("res://strategy.tscn")
+	
+
+func perk_check():
+	if (towns.town_select == "plansey"):
+		if (int(perks.perk_goal) <= int(perks.success)):
+			if (perks.perk_num == 1):
+				supplies.plansey_energy_count = supplies.plansey_energy_count + 5
+				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 5
+			elif (perks.perk_num == 2):
+				customer_math.plansey_player_marketshare = int(customer_math.plansey_player_marketshare) + .1
+			elif (perks.perk_num == 3):
+				money.plansey_balance = money.plansey_balance + 50
+			elif (perks.perk_num == 4):
+				supplies.plansey_energy_count = supplies.plansey_energy_count + 10
+				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 10
+			elif (perks.perk_num == 5):
+				supplies.plansey_energy_count = supplies.plansey_energy_count + 20
+				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 20
+			elif (perks.perk_num == 6):
+				money.plansey_balance = money.plansey_balance + 25

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://tetris_bar.png" type="Texture" id=1]
+
+[node name="tetris_bar" type="Node2D"]
+
+transform/scale = Vector2( 0.045177, 0.07909 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( -0.0905495, -0.0392151 )
+transform/scale = Vector2( 0.335389, 0.400854 )
+texture = ExtResource( 1 )
+
+

@@ -32,6 +32,23 @@ func _process(delta):
 			price_output_black.show()
 			price_output_red.set_hidden(true)
 			price_output_green.set_hidden(true)
+	if (towns.town_select == "windrow"):
+		stock_output.clear()
+		stock_output.add_text(str(supplies.windrow_pizza_count))
+		total_output.clear()
+		total_output.add_text(str(pizza_purchase + supplies.windrow_pizza_count))
+		if (supplies.daily_pizza_purchase_price > (supplies.pizza_range_high / 2)):
+			price_output_black.set_hidden(true)
+			price_output_red.show()
+			price_output_green.set_hidden(true)
+		if (supplies.daily_pizza_purchase_price < (supplies.pizza_range_high / 2)):
+			price_output_black.set_hidden(true)
+			price_output_red.set_hidden(true)
+			price_output_green.show()
+		if (supplies.daily_pizza_purchase_price == (supplies.pizza_range_high / 2)):
+			price_output_black.show()
+			price_output_red.set_hidden(true)
+			price_output_green.set_hidden(true)
 	buy_output.clear()
 	buy_output.add_text(str(pizza_purchase))
 	price_output_black.clear()
@@ -53,5 +70,9 @@ func _on_lower_button_down():
 func _on_raise_button_down():
 	if (towns.town_select == "fiyork"):
 		if (money.fiyork_cash >= (supplies.purchase_total + supplies.daily_pizza_purchase_price)):
+			pizza_purchase = pizza_purchase + 1
+			supplies.purchase_total = supplies.purchase_total + supplies.daily_pizza_purchase_price
+	if (towns.town_select == "windrow"):
+		if (money.windrow_cash >= (supplies.purchase_total + supplies.daily_pizza_purchase_price)):
 			pizza_purchase = pizza_purchase + 1
 			supplies.purchase_total = supplies.purchase_total + supplies.daily_pizza_purchase_price

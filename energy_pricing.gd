@@ -7,16 +7,35 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	range_output.clear()
-	range_output.add_text(str(supplies.energy_range_low) + " - " + str(supplies.energy_range_high))
+	if (towns.town_select == "plansey"):
+		range_output.clear()
+		range_output.add_text(str(supplies.energy_range_low) + " - " + str(supplies.energy_range_high))
+		price_output.clear()
+		price_output.add_text(str(supplies.plansey_energy_price))
+	if (towns.town_select == "banlon"):
+		range_output.clear()
+		range_output.add_text(str(supplies.energy_range_low) + " - " + str(supplies.energy_range_high))
+		price_output.clear()
+		price_output.add_text(str(supplies.banlon_energy_price))
 	
 func _on_lower_button_down():
-	if (supplies.energy_price > 0):
-		supplies.energy_price = supplies.energy_price - 1
-		price_output.clear()
-		price_output.add_text(str(supplies.energy_price))
+	if (towns.town_select == "plansey"):
+		if (supplies.plansey_energy_price > 0):
+			supplies.plansey_energy_price = supplies.plansey_energy_price - 1
+			price_output.clear()
+			price_output.add_text(str(supplies.plansey_energy_price))
+	if (towns.town_select == "banlon"):
+		if (supplies.banlon_energy_price > 0):
+			supplies.banlon_energy_price = supplies.banlon_energy_price - 1
+			price_output.clear()
+			price_output.add_text(str(supplies.banlon_energy_price))
 
 func _on_raise_button_down():
-	supplies.energy_price = supplies.energy_price + 1
-	price_output.clear()
-	price_output.add_text(str(supplies.energy_price))
+	if (towns.town_select == "plansey"):
+		supplies.plansey_energy_price = supplies.plansey_energy_price + 1
+		price_output.clear()
+		price_output.add_text(str(supplies.plansey_energy_price))
+	if (towns.town_select == "banlon"):
+		supplies.banlon_energy_price = supplies.banlon_energy_price + 1
+		price_output.clear()
+		price_output.add_text(str(supplies.banlon_energy_price))

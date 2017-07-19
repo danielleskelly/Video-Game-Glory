@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://plansey_time_management.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
@@ -11,69 +11,32 @@
 [ext_resource path="res://outer_box.png" type="Texture" id=9]
 [ext_resource path="res://inner_box.png" type="Texture" id=10]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
 [node name="plansey_time_management" type="Node2D"]
 
 transform/pos = Vector2( 513.144, 309.168 )
 transform/scale = Vector2( 16.0526, 9.62054 )
 script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="a_one" type="StaticBody2D" parent="."]
+[node name="a_one" type="Sprite" parent="."]
 
-transform/pos = Vector2( -27.4626, -25.5973 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -27.3873, -25.3789 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one"]
+[node name="number" type="RichTextLabel" parent="a_one"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -83,53 +46,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one7 5" type="StaticBody2D" parent="."]
+[node name="b_one" type="Sprite" parent="."]
 
-transform/pos = Vector2( -27.4626, -12.2924 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one7 5"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -27.3873, -11.97 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 5"]
+[node name="number" type="RichTextLabel" parent="b_one"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one7 5" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -139,53 +72,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one76" type="StaticBody2D" parent="."]
+[node name="c_one" type="Sprite" parent="."]
 
-transform/pos = Vector2( -27.4626, 1.01244 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one76"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -27.3873, 1.23094 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one76"]
+[node name="number" type="RichTextLabel" parent="c_one"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one76" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -195,53 +98,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one79" type="StaticBody2D" parent="."]
+[node name="d_one" type="Sprite" parent="."]
 
-transform/pos = Vector2( -27.4626, 14.3173 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one79"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -27.3873, 14.6398 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79"]
+[node name="number" type="RichTextLabel" parent="d_one"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one79" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -251,53 +124,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one1" type="StaticBody2D" parent="."]
+[node name="a_two" type="Sprite" parent="."]
 
-transform/pos = Vector2( -18.3674, -25.5973 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one1"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -18.2921, -25.3789 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one1"]
+[node name="number" type="RichTextLabel" parent="a_two"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one1" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -307,53 +150,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one7 2" type="StaticBody2D" parent="."]
+[node name="b_two" type="Sprite" parent="."]
 
-transform/pos = Vector2( -18.3674, -12.2924 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one7 2"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -18.2921, -11.97 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 2"]
+[node name="number" type="RichTextLabel" parent="b_two"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one7 2" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -363,53 +176,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one73" type="StaticBody2D" parent="."]
+[node name="c_two" type="Sprite" parent="."]
 
-transform/pos = Vector2( -18.3674, 1.01244 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one73"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -18.2921, 1.23094 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one73"]
+[node name="number" type="RichTextLabel" parent="c_two"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one73" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -419,53 +202,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one79 4" type="StaticBody2D" parent="."]
+[node name="d_two" type="Sprite" parent="."]
 
-transform/pos = Vector2( -18.3674, 14.3173 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one79 4"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -18.2921, 14.6398 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 4"]
+[node name="number" type="RichTextLabel" parent="d_two"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one79 4" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -475,53 +228,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one2" type="StaticBody2D" parent="."]
+[node name="a_three" type="Sprite" parent="."]
 
-transform/pos = Vector2( -9.27228, -25.5973 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one2"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -9.19696, -25.3789 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one2"]
+[node name="number" type="RichTextLabel" parent="a_three"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one2" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -531,53 +254,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one7 3" type="StaticBody2D" parent="."]
+[node name="b_three" type="Sprite" parent="."]
 
-transform/pos = Vector2( -9.27228, -12.2924 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one7 3"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -9.19696, -11.97 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 3"]
+[node name="number" type="RichTextLabel" parent="b_three"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one7 3" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -587,53 +280,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one74" type="StaticBody2D" parent="."]
+[node name="c_three" type="Sprite" parent="."]
 
-transform/pos = Vector2( -9.27228, 1.01244 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one74"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -9.19696, 1.23094 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one74"]
+[node name="number" type="RichTextLabel" parent="c_three"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one74" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -643,53 +306,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one79 6" type="StaticBody2D" parent="."]
+[node name="d_three" type="Sprite" parent="."]
 
-transform/pos = Vector2( -9.27228, 14.3173 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one79 6"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -9.19696, 14.6398 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 6"]
+[node name="number" type="RichTextLabel" parent="d_three"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one79 6" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -699,53 +332,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one3" type="StaticBody2D" parent="."]
+[node name="a_four" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.177166, -25.5973 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one3"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -0.101853, -25.3789 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one3"]
+[node name="number" type="RichTextLabel" parent="a_four"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one3" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -755,53 +358,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one7 7" type="StaticBody2D" parent="."]
+[node name="b_four" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.177166, -12.2924 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one7 7"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -0.101853, -11.97 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 7"]
+[node name="number" type="RichTextLabel" parent="b_four"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one7 7" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -811,53 +384,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one78" type="StaticBody2D" parent="."]
+[node name="c_four" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.177166, 1.01244 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one78"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -0.101853, 1.23094 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one78"]
+[node name="number" type="RichTextLabel" parent="c_four"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one78" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -867,53 +410,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one79 2" type="StaticBody2D" parent="."]
+[node name="d_four" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.177166, 14.3173 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one79 2"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( -0.101853, 14.6398 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 2"]
+[node name="number" type="RichTextLabel" parent="d_four"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one79 2" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -923,53 +436,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one4" type="StaticBody2D" parent="."]
+[node name="a_five" type="Sprite" parent="."]
 
-transform/pos = Vector2( 8.91795, -25.5973 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one4"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 8.99326, -25.3789 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one4"]
+[node name="number" type="RichTextLabel" parent="a_five"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one4" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -979,53 +462,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one7 6" type="StaticBody2D" parent="."]
+[node name="b_five" type="Sprite" parent="."]
 
-transform/pos = Vector2( 8.91795, -12.2924 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one7 6"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 8.99326, -11.97 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 6"]
+[node name="number" type="RichTextLabel" parent="b_five"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one7 6" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1035,53 +488,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one77" type="StaticBody2D" parent="."]
+[node name="c_five" type="Sprite" parent="."]
 
-transform/pos = Vector2( 8.91795, 1.01244 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one77"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 8.99326, 1.23094 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one77"]
+[node name="number" type="RichTextLabel" parent="c_five"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one77" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1091,53 +514,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one79 5" type="StaticBody2D" parent="."]
+[node name="d_five" type="Sprite" parent="."]
 
-transform/pos = Vector2( 8.91795, 14.3173 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one79 5"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 8.99326, 14.6398 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 5"]
+[node name="number" type="RichTextLabel" parent="d_five"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one79 5" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1147,53 +540,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one5" type="StaticBody2D" parent="."]
+[node name="a_six" type="Sprite" parent="."]
 
-transform/pos = Vector2( 18.013, -25.5973 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one5"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 18.0261, -25.3789 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one5"]
+[node name="number" type="RichTextLabel" parent="a_six"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one5" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1203,53 +566,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one7 4" type="StaticBody2D" parent="."]
+[node name="b_six" type="Sprite" parent="."]
 
-transform/pos = Vector2( 18.013, -12.2924 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one7 4"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 18.0261, -11.97 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7 4"]
+[node name="number" type="RichTextLabel" parent="b_six"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one7 4" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1259,53 +592,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one75" type="StaticBody2D" parent="."]
+[node name="c_six" type="Sprite" parent="."]
 
-transform/pos = Vector2( 18.013, 1.01244 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one75"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 18.0261, 1.23094 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one75"]
+[node name="number" type="RichTextLabel" parent="c_six"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one75" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1315,53 +618,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one79 3" type="StaticBody2D" parent="."]
+[node name="d_six" type="Sprite" parent="."]
 
-transform/pos = Vector2( 18.013, 14.3173 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one79 3"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 18.0261, 14.6398 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one79 3"]
+[node name="number" type="RichTextLabel" parent="d_six"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one79 3" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1371,53 +644,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one6" type="StaticBody2D" parent="."]
+[node name="a_seven" type="Sprite" parent="."]
 
-transform/pos = Vector2( 27.1082, -25.5973 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one6"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 27.1213, -25.3789 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one6"]
+[node name="number" type="RichTextLabel" parent="a_seven"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one6" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1427,53 +670,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one7" type="StaticBody2D" parent="."]
+[node name="b_seven" type="Sprite" parent="."]
 
-transform/pos = Vector2( 27.1082, -12.2924 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one7"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 27.1213, -11.97 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one7"]
+[node name="number" type="RichTextLabel" parent="b_seven"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one7" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1483,53 +696,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one8" type="StaticBody2D" parent="."]
+[node name="c_seven" type="Sprite" parent="."]
 
-transform/pos = Vector2( 27.1082, 1.01244 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one8"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 27.1213, 1.23094 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one8"]
+[node name="number" type="RichTextLabel" parent="c_seven"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one8" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1539,53 +722,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="a_one9" type="StaticBody2D" parent="."]
+[node name="d_seven" type="Sprite" parent="."]
 
-transform/pos = Vector2( 27.1082, 14.3173 )
-transform/scale = Vector2( 0.120496, 0.167915 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.62512, 0, 0, 2.73256, 0.845041, 0.876618 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="Sprite" type="Sprite" parent="a_one9"]
-
-transform/pos = Vector2( 0.625046, 1.30068 )
-transform/scale = Vector2( 0.0591225, 0.0775705 )
+transform/pos = Vector2( 27.1213, 14.6398 )
+transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a_one9"]
+[node name="number" type="RichTextLabel" parent="d_seven"]
 
-transform/pos = Vector2( 0.845041, 0.876618 )
-transform/scale = Vector2( 2.62512, 2.73256 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="number" type="RichTextLabel" parent="a_one9" groups=[
-"number",
-]]
-
+rect/scale = Vector2( 15, 12 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -14.0
-margin/right = 26.0
-margin/bottom = 26.0
+margin/left = -416.509
+margin/top = -197.249
+margin/right = -366.509
+margin/bottom = -157.249
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -1623,40 +776,6 @@ autostart = false
 
 transform/pos = Vector2( -27.8843, 15.0023 )
 transform/scale = Vector2( 0.0484629, 0.150002 )
-
-[node name="RigidBody2D" type="RigidBody2D" parent="number_muncher"]
-
-transform/pos = Vector2( 0.896034, -6.05616 )
-transform/scale = Vector2( 0.282176, 0.245728 )
-input/pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 3.79511, 0, 0, 2.65404, 1.43023, 2.50243 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 1.0
-friction = 0.0
-bounce = 0.0
-gravity_scale = 0.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 1
-contact_monitor = true
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="number_muncher/RigidBody2D"]
-
-transform/pos = Vector2( 1.43023, 2.50243 )
-transform/scale = Vector2( 3.79511, 2.65404 )
-shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 
 [node name="left_arm" type="Sprite" parent="number_muncher"]
 
@@ -1832,9 +951,7 @@ wait_time = 120.0
 one_shot = false
 autostart = true
 
-[node name="countdown_timer" type="RichTextLabel" parent="." groups=[
-"number",
-]]
+[node name="countdown_timer" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
@@ -1857,5 +974,7 @@ process_mode = 1
 wait_time = 0.1
 one_shot = true
 autostart = false
+
+[connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 
 

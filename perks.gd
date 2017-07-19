@@ -12,8 +12,9 @@ func _ready():
 	pass
 
 func perks():
+	success = 000
 	randomize()
-	if (towns.town_select == "fiyork"):
+	if (towns.town_select == "fiyork") or (towns.town_select == "windrow") or (towns.town_select == "slatten"):
 		var perk_choices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10]
 		perk_num = perk_choices[randi() % perk_choices.size()]
 	else:

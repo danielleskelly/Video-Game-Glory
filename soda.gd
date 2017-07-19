@@ -32,6 +32,23 @@ func _process(delta):
 			price_output_black.show()
 			price_output_red.set_hidden(true)
 			price_output_green.set_hidden(true)
+	if (towns.town_select == "untilly"):
+		stock_output.clear()
+		stock_output.add_text(str(supplies.untilly_soda_count))
+		total_output.clear()
+		total_output.add_text(str(soda_purchase + supplies.untilly_soda_count))
+		if (supplies.daily_soda_purchase_price > (supplies.soda_range_high / 2)):
+			price_output_black.set_hidden(true)
+			price_output_red.show()
+			price_output_green.set_hidden(true)
+		if (supplies.daily_soda_purchase_price < (supplies.soda_range_high / 2)):
+			price_output_black.set_hidden(true)
+			price_output_red.set_hidden(true)
+			price_output_green.show()
+		if (supplies.daily_soda_purchase_price == (supplies.soda_range_high / 2)):
+			price_output_black.show()
+			price_output_red.set_hidden(true)
+			price_output_green.set_hidden(true)
 	buy_output.clear()
 	buy_output.add_text(str(soda_purchase))
 	price_output_black.clear()
@@ -53,5 +70,9 @@ func _on_lower_button_down():
 func _on_raise_button_down():
 	if (towns.town_select == "hollyhock"):
 		if (money.hollyhock_cash >= (supplies.purchase_total + supplies.daily_soda_purchase_price)):
+			soda_purchase = soda_purchase + 1
+			supplies.purchase_total = supplies.purchase_total + supplies.daily_soda_purchase_price
+	if (towns.town_select == "untilly"):
+		if (money.untilly_cash >= (supplies.purchase_total + supplies.daily_soda_purchase_price)):
 			soda_purchase = soda_purchase + 1
 			supplies.purchase_total = supplies.purchase_total + supplies.daily_soda_purchase_price
