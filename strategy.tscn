@@ -4865,7 +4865,6 @@ transform/scale = Vector2( 0.678647, 0.439926 )
 
 [node name="supplies_full" parent="." instance=ExtResource( 13 )]
 
-visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
@@ -6630,7 +6629,6 @@ autoplay = ""
 
 [node name="pixel" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 18.0038, 24.6996 )
 transform/scale = Vector2( 0.443099, 0.357029 )
 __meta__ = {

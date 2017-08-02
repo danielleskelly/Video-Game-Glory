@@ -30,7 +30,7 @@ func _process(delta):
 			direction = -direction
 		if (x.get_name() == "customer"):
 			if (perks.success > 5):
-				perks.success = perks.success - 5
+				perks.success = perks.success - 1
 		
 		
 func _on_time_turner_timeout():

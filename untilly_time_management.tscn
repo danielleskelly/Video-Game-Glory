@@ -1,129 +1,287 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://untilly_time_management.gd" type="Script" id=1]
-[ext_resource path="res://inner_box.png" type="Texture" id=2]
-[ext_resource path="res://tetris_bar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=2]
+[ext_resource path="res://pixel_leg.png" type="Texture" id=3]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=4]
+[ext_resource path="res://pixel.png" type="Texture" id=5]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=6]
+[ext_resource path="res://flappy_enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://button.png" type="Texture" id=8]
+[ext_resource path="res://flappy_enemy_left.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 8.92995 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 14.2158 )
 
 [node name="untilly_time_management" type="Node2D"]
 
-transform/pos = Vector2( 512.172, 305.226 )
-transform/scale = Vector2( 15.9826, 9.59424 )
+transform/pos = Vector2( 513.028, 303.679 )
+transform/scale = Vector2( 15.9327, 9.48442 )
 script/script = ExtResource( 1 )
 
-[node name="background" type="Sprite" parent="."]
+[node name="jouster" type="Node2D" parent="."]
 
-transform/pos = Vector2( 0.0645523, -0.0167446 )
-transform/scale = Vector2( 0.228198, 0.316757 )
+transform/pos = Vector2( 28.4807, 21.0212 )
+transform/scale = Vector2( 0.0591097, 0.203063 )
+
+[node name="Sprite4" type="Sprite" parent="jouster"]
+
+transform/pos = Vector2( -17.39, -8.56885 )
+transform/rot = -48.6785
+transform/scale = Vector2( 0.383256, 0.272716 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar" parent="." instance=ExtResource( 3 )]
+[node name="Sprite5" type="Sprite" parent="jouster"]
 
-transform/pos = Vector2( -14.3537, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 14.9508, -9.01494 )
+transform/rot = 49.8254
+transform/scale = Vector2( 0.398092, 0.260761 )
+texture = ExtResource( 2 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar11" parent="." instance=ExtResource( 3 )]
+[node name="Sprite6" type="Sprite" parent="jouster"]
 
-transform/pos = Vector2( -14.3537, 22.6963 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 5.12854, 17.2885 )
+transform/rot = 17.8084
+transform/scale = Vector2( 0.51207, 0.315007 )
+texture = ExtResource( 3 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar12" parent="." instance=ExtResource( 3 )]
+[node name="Sprite7" type="Sprite" parent="jouster"]
 
-transform/pos = Vector2( -14.3537, 17.6933 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( -5.86633, 17.2885 )
+transform/rot = -10.5391
+transform/scale = Vector2( 0.506327, 0.307885 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar13" parent="." instance=ExtResource( 3 )]
+[node name="Sprite3" type="Sprite" parent="jouster"]
 
-transform/pos = Vector2( -14.3537, 12.6903 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( -2.84105, 1.54964 )
+transform/scale = Vector2( 0.267405, 0.167579 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar14" parent="." instance=ExtResource( 3 )]
+[node name="Sprite 2" type="Sprite" parent="jouster"]
 
-transform/pos = Vector2( -14.3537, 7.68731 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( -1.65991, -23.8037 )
+transform/scale = Vector2( 0.503269, 0.2567 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar15" parent="." instance=ExtResource( 3 )]
+[node name="Sprite 2 2" type="Sprite" parent="jouster"]
 
-transform/pos = Vector2( -14.3537, 2.68429 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( -2.26596, -8.58443 )
+transform/scale = Vector2( 0.447427, 0.2567 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar16" parent="." instance=ExtResource( 3 )]
+[node name="jouster_collider" type="RigidBody2D" parent="jouster" groups=[
+"jouster",
+]]
 
-transform/pos = Vector2( -14.3537, -2.31872 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( -0.556885, -1.58743 )
+transform/scale = Vector2( 1.12449, 0.96687 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.78301, 0, 0, 3.79054, 0.675537, 2.47477 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 100
+contact_monitor = true
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar17" parent="." instance=ExtResource( 3 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jouster/jouster_collider"]
 
-transform/pos = Vector2( -14.3537, -7.32173 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 0.675537, 2.47477 )
+transform/scale = Vector2( 2.78301, 3.79054 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
 
-[node name="tetris_bar18" parent="." instance=ExtResource( 3 )]
+[node name="flappy_enemy" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( -14.3537, -12.3247 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 31.9502, -9.19866 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.184874, 0.120265 )
 
-[node name="tetris_bar19" parent="." instance=ExtResource( 3 )]
+[node name="flappy_enemy1" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( -14.3537, -17.3277 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 35.8722, 11.9891 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.184874, 0.120265 )
 
-[node name="tetris_bar20" parent="." instance=ExtResource( 3 )]
+[node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( -14.3537, -22.3307 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 0, 40.7731 )
+transform/scale = Vector2( 1, 0.184538 )
+texture = ExtResource( 8 )
 
-[node name="tetris_bar21" parent="." instance=ExtResource( 3 )]
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite" groups=[
+"down",
+]]
 
-transform/pos = Vector2( -14.3537, -27.3337 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 0, -219.508 )
+transform/scale = Vector2( 1, 5.41893 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 10.0379, 0, 0, 1.05649, -0.307693, 39.5151 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
 
-[node name="tetris_bar1" parent="." instance=ExtResource( 3 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
 
-transform/pos = Vector2( -11.5089, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( -0.307693, 39.5151 )
+transform/scale = Vector2( 10.0379, 1.05649 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
 
-[node name="tetris_bar2" parent="." instance=ExtResource( 3 )]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=[
+"left",
+]]
 
-transform/pos = Vector2( -8.61739, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 0.424754, 0, 0, 3.11445, -36.5112, -1.9415 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar3" parent="." instance=ExtResource( 3 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 
-transform/pos = Vector2( -5.72594, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( -36.5112, -1.9415 )
+transform/scale = Vector2( 0.424754, 3.11445 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
 
-[node name="tetris_bar4" parent="." instance=ExtResource( 3 )]
+[node name="StaticBody2D 2" type="StaticBody2D" parent="." groups=[
+"right",
+]]
 
-transform/pos = Vector2( -2.83448, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 0.0249329, -0.977673 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 0.363338, 0, 0, 2.464, 35.682, -4.83278 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
 
-[node name="tetris_bar5" parent="." instance=ExtResource( 3 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 2"]
 
-transform/pos = Vector2( 0.0436393, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 35.682, -4.83278 )
+transform/scale = Vector2( 0.363338, 2.464 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
 
-[node name="tetris_bar6" parent="." instance=ExtResource( 3 )]
+[node name="StaticBody2D3" type="StaticBody2D" parent="." groups=[
+"up",
+]]
 
-transform/pos = Vector2( 2.92176, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 0.0249329, -0.977673 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 6.21174, 0, 0, 0.27039, 1.90425, -34.8693 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="tetris_bar7" parent="." instance=ExtResource( 3 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 
-transform/pos = Vector2( 5.79987, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( 1.90425, -34.8693 )
+transform/scale = Vector2( 6.21174, 0.27039 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
 
-[node name="tetris_bar8" parent="." instance=ExtResource( 3 )]
+[node name="flip" type="Timer" parent="."]
 
-transform/pos = Vector2( 8.67799, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+process_mode = 1
+wait_time = 0.2
+one_shot = true
+autostart = true
 
-[node name="tetris_bar9" parent="." instance=ExtResource( 3 )]
+[node name="flappy_enemy_left" parent="." instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 11.5561, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+transform/pos = Vector2( -36.7681, -5.19826 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.141991, 0.104678 )
 
-[node name="tetris_bar10" parent="." instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 14.4342, 27.6993 )
-transform/scale = Vector2( 0.0451766, 0.0790896 )
+[connection signal="timeout" from="flip" to="." method="_on_flip_timeout"]
 
 

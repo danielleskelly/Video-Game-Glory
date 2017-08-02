@@ -21,33 +21,37 @@ func _ready():
 func _process(delta):
 	colliders = get_colliding_bodies()
 	potentials = get_tree().get_nodes_in_group("hidden")
-	if (colliders.size() > 0):
-		for x in colliders:
-			if (x.is_in_group("up") == true):
-				up_move = false
-			else:
-				up_move = true
-			if (x.is_in_group("left") == true):
-				left_move = false
-			else:
-				left_move = true
-			if (x.is_in_group("right") == true):
-				right_move = false
-			else:
-				right_move = true
-			if (x.is_in_group("down") == true):
-				down_move = false
-			else:
-				down_move = true
-			if (x.is_in_group("shown") == true):
-				x.set_hidden(true)
-				x.add_to_group("hidden")
-				x.remove_from_group("shown")
-				var called = potentials[randi() % potentials.size()]
-				called.set_hidden(false)
-				called.remove_from_group("hidden")
-				called.add_to_group("shown")
-				perks.success = perks.success + 1
+	if colliders.size() == 0:
+		up_move = true
+		down_move = true
+		left_move = true
+		right_move = true
+	for x in colliders:
+		if (x.is_in_group("up") == true):
+			up_move = false
+		else:
+			up_move = true
+		if (x.is_in_group("left") == true):
+			left_move = false
+		else:
+			left_move = true
+		if (x.is_in_group("right") == true):
+			right_move = false
+		else:
+			right_move = true
+		if (x.is_in_group("down") == true):
+			down_move = false
+		else:
+			down_move = true
+		if (x.is_in_group("shown") == true):
+			x.set_hidden(true)
+			x.add_to_group("hidden")
+			x.remove_from_group("shown")
+			var called = potentials[randi() % potentials.size()]
+			called.set_hidden(false)
+			called.remove_from_group("hidden")
+			called.add_to_group("shown")
+			perks.success = perks.success + 1
 	where = get_pos()
 	if ((Input.is_action_pressed("move_up")) and (up_move == true)):
 		direction = Vector2(0.0, -1.0)

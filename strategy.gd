@@ -1,5 +1,7 @@
 extends Node2D
 
+var strategy = load("res://strategy.tscn")
+
 #display nodes
 onready var genre_one = get_node("genre_one")
 onready var genre_two = get_node("genre_two")
@@ -37,6 +39,8 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
+	if Input.is_action_pressed("ui_cancel"):
+		_on_pixel_button_button_down()
 	game_over.game_over_warning_check()
 	if (game_over.game_over_warning == true):
 		game_over_alert.set_hidden(false)
@@ -205,9 +209,9 @@ func _process(delta):
 		genre_two.get_child(1).add_text(str(set_displays.genre_two_name))
 		genre_two.get_child(1).clear()
 		genre_two.get_child(1).add_text(str(set_displays.genre_two_name))
-	if (set_displays.genre_two_key == false):
+	elif (set_displays.genre_two_key == false):
 		genre_two.set_hidden(true)
-	if (set_displays.genre_three_key == true):
+	elif (set_displays.genre_three_key == true):
 		genre_three.show()
 		genre_three.get_child(3).get_child(0).clear()
 		genre_three.get_child(4).get_child(0).clear()
@@ -220,7 +224,7 @@ func _process(delta):
 		genre_three.get_child(3).get_child(0).add_text(str(three_hunds_digit))
 		genre_three.get_child(1).clear()
 		genre_three.get_child(1).add_text(str(set_displays.genre_three_name))
-	if (set_displays.genre_three_key == false):
+	elif (set_displays.genre_three_key == false):
 		genre_three.set_hidden(true)
 
 func _on_start_day_button_up():
@@ -355,7 +359,9 @@ func _on_skip_button_down():
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
+	print(get_node("skip_or_play").is_visible())
 	get_node("skip_or_play").set_hidden(true)
+	print(get_node("skip_or_play").is_visible())
 	pixel_small()
 	get_tree().change_scene("res://strategy.tscn")
 
@@ -400,6 +406,7 @@ func _on_play_button_down():
 func pixel_big():
 	pixel.set_pos(Vector2(0.17552, 0.761547))
 	pixel.set_scale(Vector2(0.99308, 1.009797))
+	
 	
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
@@ -456,10 +463,6 @@ func pixel_small():
 	pixel.set_scale(Vector2(0.443099, 0.357029))
 
 func set_sound():
-	if (sound.music_mute == false):
-		sound.volume = 1
-	if (sound.music_mute == true):
-		sound.volume = 0
 	get_node("StreamPlayer").set_volume(sound.volume)
 
 func tutorial_start():
