@@ -10,7 +10,6 @@ var concession_choice
 var concessions_desire
 var concessions_price_check
 
-var flag_in_play
 var new_volume
 
 var hundreds
@@ -25,6 +24,8 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	if Input.is_action_pressed("ui_cancel"):
+		_on_pixel_button_button_down()
 	hundreds = get_node("success_background/hundreths")
 	tens = get_node("success_background/tens")
 	ones = get_node("success_background/ones")

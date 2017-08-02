@@ -52,7 +52,7 @@ func _ready():
 		spawn_box.append(Vector2(screen_size.x, (i + (screen_size.y))/div))
 	
 	rock_load = preload("res://rock.scn")
-	bullet_load = preload("res://bullet.scn")
+	bullet_load = preload("res://bullet.tscn")
 	ship_pos = get_node("spaceship").get_pos()
 	get_node("rock_timer").set_wait_time(4.0)
 	set_fixed_process(true)

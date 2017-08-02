@@ -51,11 +51,11 @@ func set_that_shit():
 		genre_one_name = "Shooter"
 		genre_one_icon = load("res://meta_genre.png")
 		genre_two_count = customer_math.adventure_prediction
-		genre_two_key = customer_math.fiyork_genre_two_key
+		genre_two_key = fiyork.fiyork_genre_two_key
 		genre_two_name = "Adventure"
 		genre_three_count = customer_math.casual_prediction
 		genre_three_name = "Casual"
-		genre_three_key = customer_math.fiyork_genre_three_key
+		genre_three_key = fiyork.fiyork_genre_three_key
 	if (towns.town_select == "untilly"):
 		supply_one_count = supplies.untilly_soda_count
 		supply_one_name = "Soda"

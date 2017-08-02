@@ -41,8 +41,8 @@ var slatten_popcorn_price = 0
 
 var daily_soda_purchase_price = 4
 var daily_popcorn_purchase_price = 4
-var daily_pizza_purchase_price = 0
-var daily_freezie_purchase_price = 0
+var daily_pizza_purchase_price = 6
+var daily_freezie_purchase_price = 8
 var daily_energy_purchase_price = 16
 var daily_nachos_purchase_price = 12
 

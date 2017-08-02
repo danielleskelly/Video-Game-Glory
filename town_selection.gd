@@ -4,6 +4,7 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
+	get_tree().set_pause(false)
 	if (towns.town_select == "hollyhock"):
 		get_node("AnimationPlayer").play("fiyork")
 	if (towns.town_select == "fiyork"):

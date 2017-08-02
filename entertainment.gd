@@ -18,6 +18,23 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
+	if (towns.town_select == "hollyhock") or (towns.town_select == "plansey") or (towns.town_select == "banlon") or (towns.town_select == "untilly"):
+		get_node("not_opened").set_hidden(true)
+	if (towns.town_select == "fiyork"):
+		if (fiyork.fiyork_entertainment_sabatoge_key == true):
+			get_node("not_opened").set_hidden(false)
+		if (fiyork.fiyork_entertainment_sabatoge_key == false):
+			get_node("not_opened").set_hidden(true)
+	if (towns.town_select == "windrow"):
+		if (windrow.windrow_entertainment_sabatoge_key == true):
+			get_node("not_opened").set_hidden(false)
+		if (windrow.windrow_entertainment_sabatoge_key == false):
+			get_node("not_opened").set_hidden(true)
+	if (towns.town_select == "slatten"):
+		if (slatten.slatten_entertainment_sabatoge_key == true):
+			get_node("not_opened").set_hidden(false)
+		if (slatten.slatten_entertainment_sabatoge_key == false):
+			get_node("not_opened").set_hidden(true)
 	worst_output.clear()
 	worst_output.add_text(upgrade_prices.worst_price)
 	if (towns.town_select == "hollyhock"):

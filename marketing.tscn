@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://marketing.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://lower.png" type="Texture" id=4]
 [ext_resource path="res://raise.png" type="Texture" id=5]
 [ext_resource path="res://button.png" type="Texture" id=6]
+[ext_resource path="res://not_opened.png" type="Texture" id=7]
 
 [node name="marketing" type="Node2D"]
 
@@ -148,6 +149,29 @@ margin/bottom = 46.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+
+[node name="not_opened" type="Sprite" parent="."]
+
+transform/pos = Vector2( -0.622186, -0.400231 )
+transform/scale = Vector2( 0.0442987, 0.0465418 )
+texture = ExtResource( 7 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="not_opened"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -277.0
+margin/top = -181.0
+margin/right = -151.0
+margin/bottom = -95.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "   Not Unlocked"
+visible_characters = -1
 
 [connection signal="button_down" from="container/lower" to="." method="_on_lower_button_down"]
 

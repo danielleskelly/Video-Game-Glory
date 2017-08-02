@@ -32,12 +32,6 @@ wait_time = 3.5
 one_shot = true
 autostart = true
 
-[node name="bullet" parent="." instance_placeholder="res://bullet.scn"]
-
-transform/pos = Vector2( 0.474733, 116.303 )
-contacts_reported = 100
-script/script = null
-
 [node name="bullet_timer" type="Timer" parent="."]
 
 process_mode = 1

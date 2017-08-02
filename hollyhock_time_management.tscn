@@ -9,15 +9,15 @@
 [ext_resource path="res://outer_box.png" type="Texture" id=7]
 [ext_resource path="res://inner_box.png" type="Texture" id=8]
 [ext_resource path="res://customer.tscn" type="PackedScene" id=9]
-[ext_resource path="res://strategy.ogg" type="AudioStream" id=10]
-[ext_resource path="res://pixel.png" type="Texture" id=11]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=12]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=13]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=14]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=15]
-[ext_resource path="res://button.png" type="Texture" id=16]
-[ext_resource path="res://green_ghostie.tscn" type="PackedScene" id=17]
-[ext_resource path="res://blue_ghostie.tscn" type="PackedScene" id=18]
+[ext_resource path="res://green_ghostie.tscn" type="PackedScene" id=10]
+[ext_resource path="res://blue_ghostie.tscn" type="PackedScene" id=11]
+[ext_resource path="res://strategy.ogg" type="AudioStream" id=12]
+[ext_resource path="res://pixel.png" type="Texture" id=13]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=14]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=15]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=16]
+[ext_resource path="res://genre_bubble.png" type="Texture" id=17]
+[ext_resource path="res://button.png" type="Texture" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -3173,13 +3173,33 @@ polygon = Vector2Array( -19.5105, 37.9048, -19.5151, 32.6988, -19.9478, 37.9259 
 shape_range = Vector2( 4, 4 )
 trigger = false
 
+[node name="green_ghostie" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 6.27111, 18.9904 )
+transform/scale = Vector2( 0.0269757, 0.0551421 )
+
+[node name="green_ghostie1" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 10.7062, -21.997 )
+transform/scale = Vector2( 0.0269757, 0.0551421 )
+
+[node name="blue_ghostie" parent="." instance=ExtResource( 11 )]
+
+transform/pos = Vector2( -8.06708, -20.0829 )
+transform/scale = Vector2( 0.030515, 0.0681183 )
+
+[node name="blue_ghostie1" parent="." instance=ExtResource( 11 )]
+
+transform/pos = Vector2( -17.1931, 5.97435 )
+transform/scale = Vector2( 0.030515, 0.0681183 )
+
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 10 )
+stream/stream = ExtResource( 12 )
 stream/play = false
 stream/loop = true
 stream/volume_db = -10.0
-stream/autoplay = false
+stream/autoplay = true
 stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
@@ -3198,7 +3218,7 @@ __meta__ = {
 
 transform/pos = Vector2( 2.54887, -26.6799 )
 transform/scale = Vector2( 0.0573211, 0.0959674 )
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3208,7 +3228,7 @@ __meta__ = {
 transform/pos = Vector2( 0.362267, -20.8139 )
 transform/rot = -23.1286
 transform/scale = Vector2( 0.0525097, 0.057022 )
-texture = ExtResource( 12 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3218,7 +3238,7 @@ __meta__ = {
 transform/pos = Vector2( 4.66938, -20.9286 )
 transform/rot = 19.0947
 transform/scale = Vector2( 0.0525097, 0.057022 )
-texture = ExtResource( 12 )
+texture = ExtResource( 14 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -3228,7 +3248,7 @@ __meta__ = {
 
 transform/pos = Vector2( 2.2141, -17.7425 )
 transform/scale = Vector2( 0.04092, 0.0634743 )
-texture = ExtResource( 13 )
+texture = ExtResource( 15 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3237,7 +3257,7 @@ __meta__ = {
 
 transform/pos = Vector2( 2.33945, -20.9733 )
 transform/scale = Vector2( 0.0573211, 0.0959674 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3272,7 +3292,7 @@ transform/pos = Vector2( -0.116028, 0 )
 transform/pos = Vector2( -9.72376, -1.37197 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0510766, 0.0266548 )
-texture = ExtResource( 15 )
+texture = ExtResource( 17 )
 
 [node name="notification" type="RichTextLabel" parent="menu"]
 
@@ -3339,7 +3359,7 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 104.222, 15.7067 )
 transform/scale = Vector2( 1.09076, 0.394836 )
-texture = ExtResource( 16 )
+texture = ExtResource( 18 )
 
 [node name="return_to_village" type="LinkButton" parent="menu"]
 
@@ -3367,7 +3387,7 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 106.621, 15.7067 )
 transform/scale = Vector2( 1.14158, 0.394836 )
-texture = ExtResource( 16 )
+texture = ExtResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3398,7 +3418,7 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 133.059, 15.7067 )
 transform/scale = Vector2( 1.37913, 0.394836 )
-texture = ExtResource( 16 )
+texture = ExtResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3414,7 +3434,7 @@ visibility/visible = false
 transform/pos = Vector2( -10.6101, -1.00017 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0303852, 0.022006 )
-texture = ExtResource( 15 )
+texture = ExtResource( 17 )
 
 [node name="notification1" type="RichTextLabel" parent="are_you_sure"]
 
@@ -3482,7 +3502,7 @@ visibility/visible = false
 transform/pos = Vector2( -10.6101, -1.00017 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0303852, 0.022006 )
-texture = ExtResource( 15 )
+texture = ExtResource( 17 )
 
 [node name="notification1" type="RichTextLabel" parent="are_you_sure_2"]
 
@@ -3538,26 +3558,6 @@ click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
 text = "NO"
-
-[node name="green_ghostie" parent="." instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 6.27111, 18.9904 )
-transform/scale = Vector2( 0.0269757, 0.0551421 )
-
-[node name="green_ghostie1" parent="." instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 10.7062, -21.997 )
-transform/scale = Vector2( 0.0269757, 0.0551421 )
-
-[node name="blue_ghostie" parent="." instance=ExtResource( 18 )]
-
-transform/pos = Vector2( -8.06708, -20.0829 )
-transform/scale = Vector2( 0.030515, 0.0681183 )
-
-[node name="blue_ghostie1" parent="." instance=ExtResource( 18 )]
-
-transform/pos = Vector2( -17.1931, 5.97435 )
-transform/scale = Vector2( 0.030515, 0.0681183 )
 
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 

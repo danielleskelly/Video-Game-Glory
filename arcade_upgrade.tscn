@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://arcade_upgrade.gd" type="Script" id=1]
 [ext_resource path="res://potential_background.png" type="Texture" id=2]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://meta_genre.png" type="Texture" id=4]
 [ext_resource path="res://button.png" type="Texture" id=5]
+[ext_resource path="res://not_opened.png" type="Texture" id=6]
 
 [node name="arcade_upgrade" type="Node2D"]
 
@@ -386,6 +387,29 @@ visibility/behind_parent = true
 transform/pos = Vector2( 57.699, 13.531 )
 transform/scale = Vector2( 0.606007, 0.460791 )
 texture = ExtResource( 5 )
+
+[node name="not_opened" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0.301361, -0.133453 )
+transform/scale = Vector2( 0.0467412, 0.0514044 )
+texture = ExtResource( 6 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="not_opened"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -278.0
+margin/top = -177.0
+margin/right = -153.0
+margin/bottom = -101.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "   Not Unlocked"
+visible_characters = -1
 
 [connection signal="button_down" from="worst/worst_button" to="." method="_on_worst_button_button_down"]
 
