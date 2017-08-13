@@ -83,9 +83,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -29.0
+margin/left = -32.0
 margin/top = -29.0
-margin/right = 46.0
+margin/right = 86.0
 margin/bottom = 18.0
 custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
@@ -173,6 +173,9 @@ visibility/behind_parent = true
 transform/pos = Vector2( 0.114068, 2.40363 )
 transform/scale = Vector2( 0.0529607, 0.0797726 )
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="supply_two" type="Node2D" parent="."]
 
@@ -194,9 +197,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -30.0
+margin/left = -32.0
 margin/top = -32.0
-margin/right = 72.0
+margin/right = 105.0
 margin/bottom = 12.0
 custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )

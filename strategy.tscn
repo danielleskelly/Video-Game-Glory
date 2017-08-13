@@ -1,28 +1,28 @@
-[gd_scene load_steps=55 format=1]
+[gd_scene load_steps=56 format=1]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
-[ext_resource path="res://inner_background.png" type="Texture" id=2]
-[ext_resource path="res://potential_background.png" type="Texture" id=3]
-[ext_resource path="res://supplies.tscn" type="PackedScene" id=4]
-[ext_resource path="res://town_banner.tscn" type="PackedScene" id=5]
-[ext_resource path="res://finances.tscn" type="PackedScene" id=6]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=7]
-[ext_resource path="res://top_buttons.gd" type="Script" id=8]
-[ext_resource path="res://button.png" type="Texture" id=9]
-[ext_resource path="res://finances_full.tscn" type="PackedScene" id=10]
-[ext_resource path="res://customers.tscn" type="PackedScene" id=11]
-[ext_resource path="res://news.tscn" type="PackedScene" id=12]
-[ext_resource path="res://supplies_full.tscn" type="PackedScene" id=13]
-[ext_resource path="res://storefront.tscn" type="PackedScene" id=14]
-[ext_resource path="res://games.tscn" type="PackedScene" id=15]
-[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=16]
-[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=17]
-[ext_resource path="res://research.tscn" type="PackedScene" id=18]
-[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=19]
-[ext_resource path="res://arcade_upgrade.tscn" type="PackedScene" id=20]
-[ext_resource path="res://entertainment.tscn" type="PackedScene" id=21]
-[ext_resource path="res://marketing.tscn" type="PackedScene" id=22]
-[ext_resource path="res://genres.tscn" type="PackedScene" id=23]
+[ext_resource path="res://potential_background.png" type="Texture" id=2]
+[ext_resource path="res://supplies.tscn" type="PackedScene" id=3]
+[ext_resource path="res://finances.tscn" type="PackedScene" id=4]
+[ext_resource path="res://decorative_border.png" type="Texture" id=5]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://top_buttons.gd" type="Script" id=7]
+[ext_resource path="res://enter_button.png" type="Texture" id=8]
+[ext_resource path="res://finances_full.tscn" type="PackedScene" id=9]
+[ext_resource path="res://customers.tscn" type="PackedScene" id=10]
+[ext_resource path="res://news.tscn" type="PackedScene" id=11]
+[ext_resource path="res://supplies_full.tscn" type="PackedScene" id=12]
+[ext_resource path="res://storefront.tscn" type="PackedScene" id=13]
+[ext_resource path="res://games.tscn" type="PackedScene" id=14]
+[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=15]
+[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=16]
+[ext_resource path="res://research.tscn" type="PackedScene" id=17]
+[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=18]
+[ext_resource path="res://arcade_upgrade.tscn" type="PackedScene" id=19]
+[ext_resource path="res://entertainment.tscn" type="PackedScene" id=20]
+[ext_resource path="res://marketing.tscn" type="PackedScene" id=21]
+[ext_resource path="res://genres.tscn" type="PackedScene" id=22]
+[ext_resource path="res://pixels_font_black.fnt" type="BitmapFont" id=23]
 [ext_resource path="res://bubble_green.png" type="Texture" id=24]
 [ext_resource path="res://rect_border.png" type="Texture" id=25]
 [ext_resource path="res://arrow_northeast.png" type="Texture" id=26]
@@ -32,6 +32,7 @@
 [ext_resource path="res://pixel_arm.png" type="Texture" id=30]
 [ext_resource path="res://pixel_torso.png" type="Texture" id=31]
 [ext_resource path="res://pixel.png" type="Texture" id=32]
+[ext_resource path="res://town_banner.tscn" type="PackedScene" id=33]
 
 [sub_resource type="Animation" id=1]
 
@@ -4447,62 +4448,59 @@ __meta__ = {
 
 [node name="background" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.102173, 0.571182 )
-transform/scale = Vector2( 0.0497921, 0.0634167 )
+transform/pos = Vector2( 0.030571, 0.301067 )
+transform/scale = Vector2( 0.049716, 0.0632419 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="decorative4" type="Sprite" parent="."]
+[node name="decorative" type="Sprite" parent="."]
 
-transform/pos = Vector2( -5.31281, 21.0916 )
-transform/scale = Vector2( 0.0117489, 0.0204544 )
-texture = ExtResource( 3 )
+transform/pos = Vector2( -24.7315, -8.06349 )
+transform/scale = Vector2( 0.00884983, 0.0219721 )
+texture = ExtResource( 2 )
 
 [node name="decorative5" type="Sprite" parent="."]
 
 transform/pos = Vector2( 13.9131, 21.0723 )
 transform/scale = Vector2( 0.0173717, 0.0204544 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
-[node name="supply_one" parent="." instance=ExtResource( 4 )]
+[node name="supply_one" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( -9.0148, 24.1143 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="supply_two" parent="." instance=ExtResource( 4 )]
+[node name="supply_two" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( -1.76179, 24.1884 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="town_banner" parent="." instance=ExtResource( 5 )]
-
-transform/pos = Vector2( -0.561625, -25.0427 )
-transform/scale = Vector2( 0.471053, 0.139357 )
-
-[node name="finances" parent="." instance=ExtResource( 6 )]
+[node name="finances" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( -23.0485, 19.8575 )
 transform/scale = Vector2( 0.214076, 0.331204 )
 
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( -0.482896, -14.5126 )
+transform/scale = Vector2( 0.112731, 0.0407525 )
+texture = ExtResource( 5 )
+
 [node name="top_buttons" type="HButtonArray" parent="."]
 
-editor/display_folded = true
-rect/scale = Vector2( 0.09, 0.12 )
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -30.0
-margin/top = -19.0
-margin/right = 644.0
-margin/bottom = 40.0
-custom_fonts/font_selected = ExtResource( 7 )
-custom_fonts/font = ExtResource( 7 )
-custom_colors/font_color_selected = Color( 0.933594, 0.864304, 0.864304, 1 )
+margin/left = -25.0
+margin/top = -18.0
+margin/right = 2764.0
+margin/bottom = 104.0
+custom_fonts/font_selected = ExtResource( 6 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_constants/button_separator = 2
+custom_constants/button_separator = 23
 flat = true
 button/count = 6
 button/min_button_size = 0.0
@@ -4526,65 +4524,63 @@ button/5/text = "Research"
 button/5/tooltip = ""
 button/5/icon = null
 button/selected = 0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 7 )
 
 [node name="button" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 55.252, 29.7387 )
-transform/scale = Vector2( 0.545591, 0.578921 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( 80.4589, 61.7072 )
+transform/scale = Vector2( 0.0720252, 0.116711 )
+texture = ExtResource( 8 )
 
 [node name="button1" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 159.83, 29.622 )
-transform/scale = Vector2( 0.461972, 0.575821 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( 250.598, 62.8847 )
+transform/scale = Vector2( 0.0642561, 0.119854 )
+texture = ExtResource( 8 )
 
 [node name="button2" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 263.362, 29.5704 )
-transform/scale = Vector2( 0.543674, 0.556226 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( 418.648, 60.7621 )
+transform/scale = Vector2( 0.0739638, 0.118926 )
+texture = ExtResource( 8 )
 
 [node name="button3" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 387.02, 29.9225 )
-transform/scale = Vector2( 0.655957, 0.563267 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( 614.083, 60.7621 )
+transform/scale = Vector2( 0.0906057, 0.122277 )
+texture = ExtResource( 8 )
 
 [node name="button4" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 499.683, 29.9225 )
-transform/scale = Vector2( 0.441565, 0.549185 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( 797.07, 60.7621 )
+transform/scale = Vector2( 0.0600956, 0.122276 )
+texture = ExtResource( 8 )
 
 [node name="button5" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 609.78, 29.9257 )
-transform/scale = Vector2( 0.635433, 0.552829 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( 978.787, 58.6396 )
+transform/scale = Vector2( 0.0887334, 0.122276 )
+texture = ExtResource( 8 )
 
 [node name="report_buttons" type="VButtonArray" parent="."]
 
-editor/display_folded = true
-visibility/visible = false
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.02, 0.0225 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -30.0
 margin/top = -6.0
-margin/right = 165.0
-margin/bottom = 116.0
-custom_fonts/font_selected = ExtResource( 7 )
-custom_fonts/font = ExtResource( 7 )
+margin/right = 490.0
+margin/bottom = 368.0
+custom_fonts/font_selected = ExtResource( 6 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
@@ -4602,33 +4598,24 @@ button/2/tooltip = ""
 button/2/icon = null
 button/selected = 0
 
-[node name="decorative" type="Sprite" parent="report_buttons"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 117.144, 65.3645 )
-transform/scale = Vector2( 0.19863, 0.147574 )
-texture = ExtResource( 3 )
-
 [node name="button12" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.6314, 61.3262 )
-transform/scale = Vector2( 0.97248, 0.371663 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( 257.203, 23.8524 )
+transform/scale = Vector2( 0.23576, 0.0580675 )
+texture = ExtResource( 8 )
 
 [node name="button10" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.6314, 18.8745 )
 transform/scale = Vector2( 0.97248, 0.371663 )
-texture = ExtResource( 9 )
 
 [node name="button11" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5777, 103.454 )
 transform/scale = Vector2( 0.971943, 0.371663 )
-texture = ExtResource( 9 )
 
 [node name="supply_buttons" type="VButtonArray" parent="."]
 
@@ -4643,8 +4630,8 @@ margin/left = -30.0
 margin/top = -6.0
 margin/right = 165.0
 margin/bottom = 74.0
-custom_fonts/font_selected = ExtResource( 7 )
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font_selected = ExtResource( 6 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
@@ -4664,21 +4651,19 @@ button/selected = 0
 visibility/behind_parent = true
 transform/pos = Vector2( 119.238, 40.7133 )
 transform/scale = Vector2( 0.201636, 0.0994273 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="button11" type="Sprite" parent="supply_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 98.0639, 19.4014 )
 transform/scale = Vector2( 0.966828, 0.371663 )
-texture = ExtResource( 9 )
 
 [node name="button10" type="Sprite" parent="supply_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5677, 61.3262 )
 transform/scale = Vector2( 0.971791, 0.371663 )
-texture = ExtResource( 9 )
 
 [node name="upgrade_buttons" type="VButtonArray" parent="."]
 
@@ -4693,8 +4678,8 @@ margin/left = -30.0
 margin/top = -6.0
 margin/right = 165.0
 margin/bottom = 116.0
-custom_fonts/font_selected = ExtResource( 7 )
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font_selected = ExtResource( 6 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
@@ -4717,35 +4702,31 @@ button/selected = 0
 visibility/behind_parent = true
 transform/pos = Vector2( 148.903, 64.9901 )
 transform/scale = Vector2( 0.248287, 0.145814 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="button12" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.0986, 19.2869 )
 transform/scale = Vector2( 0.962699, 0.364477 )
-texture = ExtResource( 9 )
 
 [node name="button13" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5053, 61.3234 )
 transform/scale = Vector2( 0.966396, 0.364477 )
-texture = ExtResource( 9 )
 
 [node name="button15" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5053, 61.3234 )
 transform/scale = Vector2( 0.966396, 0.364477 )
-texture = ExtResource( 9 )
 
 [node name="button14" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.5053, 102.382 )
 transform/scale = Vector2( 0.966396, 0.364477 )
-texture = ExtResource( 9 )
 
 [node name="locals_buttons" type="VButtonArray" parent="."]
 
@@ -4760,8 +4741,8 @@ margin/left = -30.0
 margin/top = -6.0
 margin/right = 165.0
 margin/bottom = 83.0
-custom_fonts/font_selected = ExtResource( 7 )
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font_selected = ExtResource( 6 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
@@ -4781,24 +4762,23 @@ button/selected = 0
 visibility/behind_parent = true
 transform/pos = Vector2( 138.666, 40.3986 )
 transform/scale = Vector2( 0.230306, 0.0954084 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="button15" type="Sprite" parent="locals_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.8896, 19.4933 )
 transform/scale = Vector2( 0.968572, 0.355558 )
-texture = ExtResource( 9 )
 
 [node name="button16" type="Sprite" parent="locals_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.7092, 60.3457 )
 transform/scale = Vector2( 0.965718, 0.364477 )
-texture = ExtResource( 9 )
 
 [node name="demand_buttons" type="VButtonArray" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.08, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -4808,8 +4788,8 @@ margin/left = -30.0
 margin/top = -6.0
 margin/right = 166.0
 margin/bottom = 74.0
-custom_fonts/font_selected = ExtResource( 7 )
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font_selected = ExtResource( 6 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 flat = true
@@ -4829,111 +4809,109 @@ button/selected = 0
 visibility/behind_parent = true
 transform/pos = Vector2( 111.62, 40.4583 )
 transform/scale = Vector2( 0.187774, 0.0952068 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="button17" type="Sprite" parent="demand_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.7628, 19.2869 )
 transform/scale = Vector2( 0.975774, 0.364477 )
-texture = ExtResource( 9 )
 
 [node name="button18" type="Sprite" parent="demand_buttons"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 97.8064, 60.3458 )
 transform/scale = Vector2( 0.979542, 0.364477 )
-texture = ExtResource( 9 )
 
-[node name="finances_full" parent="." instance=ExtResource( 10 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
-
-[node name="customers" parent="." instance=ExtResource( 11 )]
+[node name="finances_full" parent="." instance=ExtResource( 9 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="news" parent="." instance=ExtResource( 12 )]
+[node name="customers" parent="." instance=ExtResource( 10 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="supplies_full" parent="." instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
-
-[node name="storefront" parent="." instance=ExtResource( 14 )]
+[node name="news" parent="." instance=ExtResource( 11 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="games" parent="." instance=ExtResource( 15 )]
+[node name="supplies_full" parent="." instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 7.7532, 11.8949 )
+transform/scale = Vector2( 0.678647, 0.439926 )
+
+[node name="storefront" parent="." instance=ExtResource( 13 )]
+
+visibility/visible = false
+transform/pos = Vector2( 8.00721, 2.65491 )
+transform/scale = Vector2( 0.678647, 0.439926 )
+
+[node name="games" parent="." instance=ExtResource( 14 )]
 
 editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="arcade_pricing" parent="." instance=ExtResource( 16 )]
+[node name="arcade_pricing" parent="." instance=ExtResource( 15 )]
 
 visibility/visible = false
 transform/pos = Vector2( 7.97685, 2.5514 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="loans" parent="." instance=ExtResource( 17 )]
+[node name="loans" parent="." instance=ExtResource( 16 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="research" parent="." instance=ExtResource( 18 )]
+[node name="research" parent="." instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 7.7532, 11.8949 )
+transform/scale = Vector2( 0.678647, 0.439926 )
+
+[node name="concessions_pricing" parent="." instance=ExtResource( 18 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="concessions_pricing" parent="." instance=ExtResource( 19 )]
-
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
-
-[node name="arcade_upgrade" parent="." instance=ExtResource( 20 )]
+[node name="arcade_upgrade" parent="." instance=ExtResource( 19 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="entertainment" parent="." instance=ExtResource( 21 )]
+[node name="entertainment" parent="." instance=ExtResource( 20 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="marketing" parent="." instance=ExtResource( 22 )]
+[node name="marketing" parent="." instance=ExtResource( 21 )]
 
 visibility/visible = false
 transform/pos = Vector2( 8.00721, 2.65491 )
 transform/scale = Vector2( 0.678647, 0.439926 )
 
-[node name="genre_one" parent="." instance=ExtResource( 23 )]
+[node name="genre_one" parent="." instance=ExtResource( 22 )]
 
 transform/pos = Vector2( 6.67982, 24.0289 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="genre_two" parent="." instance=ExtResource( 23 )]
+[node name="genre_two" parent="." instance=ExtResource( 22 )]
 
 visibility/visible = false
 transform/pos = Vector2( 13.94, 24.0813 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="genre_three" parent="." instance=ExtResource( 23 )]
+[node name="genre_three" parent="." instance=ExtResource( 22 )]
 
 visibility/visible = false
 transform/pos = Vector2( 21.1111, 24.0996 )
@@ -4941,30 +4919,29 @@ transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="start_day" type="LinkButton" parent="."]
 
-editor/display_folded = true
-rect/scale = Vector2( 0.1, 0.15 )
+rect/scale = Vector2( 0.03, 0.03 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 17.0
-margin/top = -28.0
-margin/right = 143.0
-margin/bottom = 4.0
-custom_fonts/font = ExtResource( 7 )
+margin/left = 19.0
+margin/top = -27.0
+margin/right = 278.0
+margin/bottom = 89.0
+custom_fonts/font = ExtResource( 23 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-text = "Start Day"
+text = "enter"
 underline = 2
 
-[node name="button9" type="Sprite" parent="start_day"]
+[node name="Sprite" type="Sprite" parent="start_day"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 62.6953, 15.7067 )
-transform/scale = Vector2( 0.675488, 0.394836 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( 129.418, 61.6565 )
+transform/scale = Vector2( 0.145568, 0.233896 )
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -4993,7 +4970,7 @@ margin/left = -26.0
 margin/top = -23.0
 margin/right = 251.0
 margin/bottom = 236.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Continuing to the next day will put you in the negatives. Reduce your expenses or take out a loan to continue."
@@ -5010,7 +4987,7 @@ margin/left = -4.0
 margin/top = 4.0
 margin/right = 31.0
 margin/bottom = 36.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5046,7 +5023,7 @@ margin/left = -27.0
 margin/top = -24.0
 margin/right = 262.0
 margin/bottom = 280.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "No problem! I see you are a pro! I am always available, so just give me a click if you need something (even if it is just regular settings)."
@@ -5076,7 +5053,7 @@ margin/left = -25.0
 margin/top = -18.0
 margin/right = 263.0
 margin/bottom = 197.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have run out of cash and the loan officer at the bank won't even answer your calls. Time to start over!"
@@ -5093,7 +5070,7 @@ margin/left = -6.0
 margin/top = 7.0
 margin/right = 29.0
 margin/bottom = 39.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5128,7 +5105,7 @@ margin/left = -26.0
 margin/top = -22.0
 margin/right = 276.0
 margin/bottom = 230.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have purchased a binary infusion from the Muse Pixels! You can now satisfy the needs of the growing desires of the townspeople. Good job!"
@@ -5145,7 +5122,7 @@ margin/left = -1.0
 margin/top = 6.0
 margin/right = 51.0
 margin/bottom = 49.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5180,7 +5157,7 @@ margin/left = -26.0
 margin/top = -21.0
 margin/right = 266.0
 margin/bottom = 349.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have completed the level goal for the town of Hollyhock! With our 75% marketshare we now have a solid hold on the customers of this city. Let's continue on to the next city I have in store for you!"
@@ -5197,7 +5174,7 @@ margin/left = -1.0
 margin/top = 18.0
 margin/right = 51.0
 margin/bottom = 61.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5211,7 +5188,6 @@ underline = 2
 [node name="fiyork_complete" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="fiyork_complete"]
@@ -5232,7 +5208,7 @@ margin/left = -26.0
 margin/top = -21.0
 margin/right = 266.0
 margin/bottom = 349.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
@@ -5249,7 +5225,7 @@ margin/left = -1.0
 margin/top = 18.0
 margin/right = 51.0
 margin/bottom = 61.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5284,7 +5260,7 @@ margin/left = -26.0
 margin/top = -21.0
 margin/right = 266.0
 margin/bottom = 349.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
@@ -5301,7 +5277,7 @@ margin/left = -1.0
 margin/top = 18.0
 margin/right = 51.0
 margin/bottom = 61.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5336,7 +5312,7 @@ margin/left = -26.0
 margin/top = -21.0
 margin/right = 266.0
 margin/bottom = 349.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
@@ -5353,7 +5329,7 @@ margin/left = -1.0
 margin/top = 18.0
 margin/right = 51.0
 margin/bottom = 61.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5388,7 +5364,7 @@ margin/left = -26.0
 margin/top = -21.0
 margin/right = 266.0
 margin/bottom = 349.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
@@ -5405,7 +5381,7 @@ margin/left = -1.0
 margin/top = 18.0
 margin/right = 51.0
 margin/bottom = 61.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5440,7 +5416,7 @@ margin/left = -26.0
 margin/top = -21.0
 margin/right = 266.0
 margin/bottom = 349.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
@@ -5457,7 +5433,7 @@ margin/left = -1.0
 margin/top = 18.0
 margin/right = 51.0
 margin/bottom = 61.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5492,7 +5468,7 @@ margin/left = -26.0
 margin/top = -21.0
 margin/right = 266.0
 margin/bottom = 349.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
@@ -5509,7 +5485,7 @@ margin/left = -1.0
 margin/top = 18.0
 margin/right = 51.0
 margin/bottom = 61.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5543,7 +5519,7 @@ margin/left = -16.0
 margin/top = -22.0
 margin/right = 75.0
 margin/bottom = 17.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sound"
@@ -5582,7 +5558,7 @@ margin/left = -22.0
 margin/top = -10.0
 margin/right = 183.0
 margin/bottom = 22.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -5595,7 +5571,6 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 104.222, 15.7067 )
 transform/scale = Vector2( 1.09076, 0.394836 )
-texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -5612,7 +5587,7 @@ margin/left = -22.0
 margin/top = -1.0
 margin/right = 183.0
 margin/bottom = 31.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -5625,7 +5600,6 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 104.222, 15.7067 )
 transform/scale = Vector2( 1.09076, 0.394836 )
-texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -5642,7 +5616,7 @@ margin/left = -24.0
 margin/top = 8.0
 margin/right = 209.0
 margin/bottom = 40.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -5655,7 +5629,6 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 119.382, 15.7067 )
 transform/scale = Vector2( 1.24236, 0.394836 )
-texture = ExtResource( 9 )
 
 [node name="are_you_sure" type="Node2D" parent="."]
 
@@ -5681,7 +5654,7 @@ margin/left = -21.0
 margin/top = -11.0
 margin/right = 160.0
 margin/bottom = 128.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Do you really want to restart the level?"
@@ -5698,7 +5671,7 @@ margin/left = -8.0
 margin/top = 7.0
 margin/right = 48.0
 margin/bottom = 39.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5720,7 +5693,7 @@ margin/left = -20.0
 margin/top = 7.0
 margin/right = 36.0
 margin/bottom = 39.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5755,7 +5728,7 @@ margin/left = -21.0
 margin/top = -11.0
 margin/right = 160.0
 margin/bottom = 128.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Do you really want to go back to the main menu?"
@@ -5772,7 +5745,7 @@ margin/left = -8.0
 margin/top = 7.0
 margin/right = 48.0
 margin/bottom = 39.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5794,7 +5767,7 @@ margin/left = -20.0
 margin/top = 7.0
 margin/right = 36.0
 margin/bottom = 39.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5828,7 +5801,7 @@ margin/left = -28.0
 margin/top = -22.0
 margin/right = 340.0
 margin/bottom = 116.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Would you like to watch the next day's play through or do you want to skip it?"
@@ -5845,7 +5818,7 @@ margin/left = -27.0
 margin/top = -11.0
 margin/right = 307.0
 margin/bottom = 33.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "If you play you could win:"
@@ -5862,7 +5835,7 @@ margin/left = -28.0
 margin/top = 3.0
 margin/right = 337.0
 margin/bottom = 71.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "But only if you get this many points:"
@@ -5876,10 +5849,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -28.0
-margin/top = -6.0
+margin/top = -7.0
 margin/right = 339.0
-margin/bottom = 54.0
-custom_fonts/normal_font = ExtResource( 7 )
+margin/bottom = 85.0
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
@@ -5896,7 +5869,7 @@ margin/left = -14.0
 margin/top = 11.0
 margin/right = 89.0
 margin/bottom = 65.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
@@ -5913,7 +5886,7 @@ margin/left = -7.0
 margin/top = 18.0
 margin/right = 49.0
 margin/bottom = 50.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5935,7 +5908,7 @@ margin/left = -22.0
 margin/top = 18.0
 margin/right = 47.0
 margin/bottom = 50.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5970,7 +5943,7 @@ margin/left = -29.0
 margin/top = -13.0
 margin/right = 362.0
 margin/bottom = 269.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "This is Hollyhock, and it is the capital city of our kingdom so it is the perfect place for you to start. I am available if you need some help getting started.
@@ -5988,7 +5961,7 @@ margin/left = -7.0
 margin/top = 19.0
 margin/right = 62.0
 margin/bottom = 51.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -6010,7 +5983,7 @@ margin/left = -21.0
 margin/top = 19.0
 margin/right = 29.0
 margin/bottom = 51.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -6049,7 +6022,7 @@ margin/left = -15.0
 margin/top = -12.0
 margin/right = 418.0
 margin/bottom = 224.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Here we have some slimmed down information on your concession's stock. The Players in Hollyhock are mad for soda and popcorn so we will make sure you have plenty of stock in another tab."
@@ -6148,7 +6121,7 @@ margin/left = -14.0
 margin/top = -3.0
 margin/right = 597.0
 margin/bottom = 206.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "And last in the Reports tab is the News. It is mostly just an expanded version of the genre predictions."
@@ -6217,7 +6190,7 @@ margin/left = -30.0
 margin/top = -51.0
 margin/right = 556.0
 margin/bottom = 119.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "We don't have any stock, and both soda and popcorn are in green so we should get at least 10 of each. Don't forget to click the confirm button! Then we can move on to the next section."
@@ -6241,7 +6214,7 @@ margin/left = 8.0
 margin/top = 0.0
 margin/right = 101.0
 margin/bottom = 38.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "CLICK!"
@@ -6330,7 +6303,7 @@ margin/left = -30.0
 margin/top = -51.0
 margin/right = 563.0
 margin/bottom = 119.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "And now we have concessions. The idea is the same as the arcades. Feel free to set them to whatever you want, as long as it is within the range."
@@ -6343,7 +6316,6 @@ visibility/behind_parent = true
 transform/pos = Vector2( 19.6296, 13.2642 )
 transform/rot = 180.0
 transform/scale = Vector2( 0.0383662, 0.0455973 )
-texture = ExtResource( 9 )
 
 [node name="ok" type="RichTextLabel" parent="tutorial_pricing"]
 
@@ -6358,7 +6330,7 @@ margin/left = 16.0
 margin/top = 12.0
 margin/right = 92.0
 margin/bottom = 46.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "OKAY"
@@ -6440,7 +6412,7 @@ margin/left = -31.0
 margin/top = -50.0
 margin/right = 583.0
 margin/bottom = 94.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Here we have our upgrades."
@@ -6502,7 +6474,7 @@ margin/left = -30.0
 margin/top = -50.0
 margin/right = 596.0
 margin/bottom = 84.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Here we have the locals tab, and first along the side is Marketing. This can have a huge impact on drawing customers to the arcade."
@@ -6558,7 +6530,7 @@ margin/left = -28.0
 margin/top = -24.0
 margin/right = 366.0
 margin/bottom = 219.0
-custom_fonts/normal_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I will go while you get everything ready just how you want it. Whenever you are ready to open the arcade just click on the Start Day button right above my head!"
@@ -6694,6 +6666,11 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+
+[node name="town_banner" parent="." instance=ExtResource( 33 )]
+
+transform/pos = Vector2( -4.62777, -24.5135 )
+transform/scale = Vector2( 0.40498, 0.297155 )
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 

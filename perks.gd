@@ -5,6 +5,9 @@ var perk_goal
 var perk
 var success = 000
 var perk_final_count = 0
+var fiyork_array
+var windrow_array
+var slatten_array
 
 
 
@@ -13,15 +16,58 @@ func _ready():
 
 func perks():
 	success = 000
-	randomize()
-	if (towns.town_select == "fiyork") or (towns.town_select == "windrow") or (towns.town_select == "slatten"):
-		var perk_choices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 7, 8, 9, 10]
-		perk_num = perk_choices[randi() % perk_choices.size()]
+	if (towns.town_select == "fiyork"):
+		fiyork_array = [1,2,3,4,5,6]
+		if (fiyork.fiyork_arcade_sabatoge_key == true):
+			fiyork_array.append(7)
+			fiyork_array.append(7)
+		if (fiyork.fiyork_entertainment_sabatoge_key == true):
+			fiyork_array.append(8)
+			fiyork_array.append(8)
+		if (fiyork.fiyork_storefront_sabatoge_key == true):
+			fiyork_array.append(9)
+			fiyork_array.append(9)
+		if (fiyork.fiyork_advertising_sabatoge_key == true):
+			fiyork_array.append(10)
+			fiyork_array.append(10)
+		randomize()
+		perk_num = fiyork_array[randi() % fiyork_array.size()]
+	if (towns.town_select == "windrow"):
+		windrow_array = [1,2,3,4,5,6]
+		if (windrow.windrow_arcade_sabatoge_key == true):
+			windrow_array.append(7)
+			windrow_array.append(7)
+		if (windrow.windrow_entertainment_sabatoge_key == true):
+			windrow_array.append(8)
+			windrow_array.append(8)
+		if (windrow.windrow_storefront_sabatoge_key == true):
+			windrow_array.append(9)
+			windrow_array.append(9)
+		if (windrow.windrow_advertising_sabatoge_key == true):
+			windrow_array.append(10)
+			windrow_array.append(10)
+		randomize()
+		perk_num = windrow_array[randi() % windrow_array.size()]
+	if (towns.town_select == "slatten"):
+		slatten_array = [1,2,3,4,5,6]
+		if (slatten.slatten_arcade_sabatoge_key == true):
+			slatten_array.append(7)
+			slatten_array.append(7)
+		if (slatten.slatten_entertainment_sabatoge_key == true):
+			slatten_array.append(8)
+			slatten_array.append(8)
+		if (slatten.slatten_storefront_sabatoge_key == true):
+			slatten_array.append(9)
+			slatten_array.append(9)
+		if (slatten.slatten_advertising_sabatoge_key == true):
+			slatten_array.append(10)
+			slatten_array.append(10)
+		randomize()
+		perk_num = slatten_array[randi() % slatten_array.size()]
 	else:
+		randomize()
 		var perk_choices = [1, 2, 3, 4, 5, 6]
 		perk_num = perk_choices[randi() % perk_choices.size()]
-	var perk_choices = [1, 2, 3, 4, 5, 6]
-	perk_num = perk_choices[randi() % perk_choices.size()]
 	if (perk_num == 1):
 		perk = "Five of each supply!"
 		perk_goal = 20
