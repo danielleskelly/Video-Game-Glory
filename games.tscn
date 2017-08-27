@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://games.gd" type="Script" id=1]
-[ext_resource path="res://inner_background.png" type="Texture" id=2]
+[ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://potential_background.png" type="Texture" id=3]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://station.gd" type="Script" id=5]
@@ -20,8 +20,8 @@ texture = ExtResource( 2 )
 
 [node name="decorative" type="Sprite" parent="."]
 
-transform/pos = Vector2( -17.1782, 0.832117 )
-transform/scale = Vector2( 0.0153408, 0.0638389 )
+transform/pos = Vector2( -17.1855, 0.832935 )
+transform/scale = Vector2( 0.0187189, 0.0634537 )
 texture = ExtResource( 3 )
 
 [node name="decorative1" type="Sprite" parent="."]
@@ -32,14 +32,14 @@ texture = ExtResource( 3 )
 
 [node name="station" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -25.0
-margin/top = -29.0
-margin/right = 107.0
+margin/top = -31.0
+margin/right = 170.0
 margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
@@ -49,15 +49,15 @@ visible_characters = -1
 
 [node name="game" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 7.0
-margin/top = -30.0
-margin/right = 100.0
-margin/bottom = 23.0
+margin/top = -31.0
+margin/right = 149.0
+margin/bottom = 28.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -72,15 +72,15 @@ script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_one"]
 
-rect/scale = Vector2( 0.125, 1.5 )
+rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -38.0
-margin/top = -49.0
-margin/right = 112.0
-margin/bottom = -4.0
+margin/left = -39.0
+margin/top = -58.0
+margin/right = 250.0
+margin/bottom = 5.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -89,15 +89,15 @@ visible_characters = -1
 
 [node name="dropdown" type="OptionButton" parent="station_one"]
 
-rect/scale = Vector2( 0.1, 1.5 )
+rect/scale = Vector2( 0.075, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -9.0
-margin/top = -69.0
-margin/right = 397.0
-margin/bottom = -17.0
+margin/top = -79.0
+margin/right = 545.0
+margin/bottom = -4.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/hseparation = 3
@@ -118,15 +118,15 @@ script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_two"]
 
-rect/scale = Vector2( 0.125, 1.5 )
+rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -38.0
+margin/left = -39.0
 margin/top = -35.0
-margin/right = 122.0
-margin/bottom = 10.0
+margin/right = 246.0
+margin/bottom = 20.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -135,15 +135,15 @@ visible_characters = -1
 
 [node name="dropdown" type="OptionButton" parent="station_two"]
 
-rect/scale = Vector2( 0.1, 1.5 )
+rect/scale = Vector2( 0.075, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -9.0
-margin/top = -44.0
-margin/right = 395.0
-margin/bottom = 5.0
+margin/top = -61.0
+margin/right = 548.0
+margin/bottom = 17.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false
@@ -157,21 +157,22 @@ items = [  ]
 
 [node name="station_three" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 4.03808, 0.271612 )
 transform/scale = Vector2( 0.780667, 0.111701 )
 script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_three"]
 
-rect/scale = Vector2( 0.125, 1.5 )
+rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -38.0
-margin/top = -27.0
-margin/right = 146.0
-margin/bottom = 18.0
+margin/left = -41.0
+margin/top = -23.0
+margin/right = 232.0
+margin/bottom = 33.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -180,15 +181,15 @@ visible_characters = -1
 
 [node name="dropdown" type="OptionButton" parent="station_three"]
 
-rect/scale = Vector2( 0.1, 1.5 )
+rect/scale = Vector2( 0.075, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -9.0
-margin/top = -29.0
-margin/right = 396.0
-margin/bottom = 20.0
+margin/top = -46.0
+margin/right = 550.0
+margin/bottom = 30.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false
@@ -202,21 +203,22 @@ items = [  ]
 
 [node name="station_four" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 4.03807, 7.77794 )
 transform/scale = Vector2( 0.780667, 0.111701 )
 script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_four"]
 
-rect/scale = Vector2( 0.125, 1.5 )
+rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -38.0
-margin/top = -15.0
-margin/right = 123.0
-margin/bottom = 30.0
+margin/left = -39.0
+margin/top = -10.0
+margin/right = 293.0
+margin/bottom = 48.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -225,15 +227,15 @@ visible_characters = -1
 
 [node name="dropdown" type="OptionButton" parent="station_four"]
 
-rect/scale = Vector2( 0.1, 1.5 )
+rect/scale = Vector2( 0.075, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -9.0
-margin/top = -13.0
-margin/right = 398.0
-margin/bottom = 34.0
+margin/top = -31.0
+margin/right = 550.0
+margin/bottom = 57.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false
@@ -247,21 +249,22 @@ items = [  ]
 
 [node name="station_five" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 3.99681, 15.2843 )
 transform/scale = Vector2( 0.780667, 0.111701 )
 script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_five"]
 
-rect/scale = Vector2( 0.125, 1.5 )
+rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -38.0
+margin/left = -39.0
 margin/top = 0.0
-margin/right = 124.0
-margin/bottom = 45.0
+margin/right = 315.0
+margin/bottom = 57.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -270,15 +273,15 @@ visible_characters = -1
 
 [node name="dropdown" type="OptionButton" parent="station_five"]
 
-rect/scale = Vector2( 0.1, 1.5 )
+rect/scale = Vector2( 0.075, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -9.0
-margin/top = 0.0
-margin/right = 397.0
-margin/bottom = 48.0
+margin/top = -5.0
+margin/right = 551.0
+margin/bottom = 71.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false
@@ -292,21 +295,22 @@ items = [  ]
 
 [node name="station_six" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 3.99681, 22.9693 )
 transform/scale = Vector2( 0.780667, 0.111701 )
 script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_six"]
 
-rect/scale = Vector2( 0.125, 1.5 )
+rect/scale = Vector2( 0.1, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -38.0
-margin/top = 12.0
-margin/right = 106.0
-margin/bottom = 57.0
+margin/top = 19.0
+margin/right = 289.0
+margin/bottom = 80.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -315,15 +319,15 @@ visible_characters = -1
 
 [node name="dropdown" type="OptionButton" parent="station_six"]
 
-rect/scale = Vector2( 0.1, 1.5 )
+rect/scale = Vector2( 0.075, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -9.0
-margin/top = 10.0
-margin/right = 397.0
-margin/bottom = 59.0
+margin/top = 8.0
+margin/right = 553.0
+margin/bottom = 80.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false

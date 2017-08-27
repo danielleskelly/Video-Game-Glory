@@ -1,6 +1,6 @@
 extends Node
 
-var town_select = "fiyork"
+var town_select = "windrow"
 
 func _ready():
 	add_to_group("Persist")

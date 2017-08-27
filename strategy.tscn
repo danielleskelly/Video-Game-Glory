@@ -1,38 +1,39 @@
-[gd_scene load_steps=56 format=1]
+[gd_scene load_steps=57 format=1]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://potential_background.png" type="Texture" id=2]
-[ext_resource path="res://supplies.tscn" type="PackedScene" id=3]
-[ext_resource path="res://finances.tscn" type="PackedScene" id=4]
-[ext_resource path="res://decorative_border.png" type="Texture" id=5]
+[ext_resource path="res://town_banner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://supplies.tscn" type="PackedScene" id=4]
+[ext_resource path="res://finances.tscn" type="PackedScene" id=5]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=6]
 [ext_resource path="res://top_buttons.gd" type="Script" id=7]
-[ext_resource path="res://enter_button.png" type="Texture" id=8]
-[ext_resource path="res://finances_full.tscn" type="PackedScene" id=9]
-[ext_resource path="res://customers.tscn" type="PackedScene" id=10]
-[ext_resource path="res://news.tscn" type="PackedScene" id=11]
-[ext_resource path="res://supplies_full.tscn" type="PackedScene" id=12]
-[ext_resource path="res://storefront.tscn" type="PackedScene" id=13]
-[ext_resource path="res://games.tscn" type="PackedScene" id=14]
-[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=15]
-[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=16]
-[ext_resource path="res://research.tscn" type="PackedScene" id=17]
-[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=18]
-[ext_resource path="res://arcade_upgrade.tscn" type="PackedScene" id=19]
-[ext_resource path="res://entertainment.tscn" type="PackedScene" id=20]
-[ext_resource path="res://marketing.tscn" type="PackedScene" id=21]
-[ext_resource path="res://genres.tscn" type="PackedScene" id=22]
-[ext_resource path="res://pixels_font_black.fnt" type="BitmapFont" id=23]
-[ext_resource path="res://bubble_green.png" type="Texture" id=24]
-[ext_resource path="res://rect_border.png" type="Texture" id=25]
-[ext_resource path="res://arrow_northeast.png" type="Texture" id=26]
-[ext_resource path="res://border.png" type="Texture" id=27]
-[ext_resource path="res://time_management_hollyhock.ogg" type="AudioStream" id=28]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=29]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=30]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=31]
-[ext_resource path="res://pixel.png" type="Texture" id=32]
-[ext_resource path="res://town_banner.tscn" type="PackedScene" id=33]
+[ext_resource path="res://clean_town_banner.png" type="Texture" id=8]
+[ext_resource path="res://clean_button.png" type="Texture" id=9]
+[ext_resource path="res://finances_full.tscn" type="PackedScene" id=10]
+[ext_resource path="res://customers.tscn" type="PackedScene" id=11]
+[ext_resource path="res://news.tscn" type="PackedScene" id=12]
+[ext_resource path="res://supplies_full.tscn" type="PackedScene" id=13]
+[ext_resource path="res://storefront.tscn" type="PackedScene" id=14]
+[ext_resource path="res://games.tscn" type="PackedScene" id=15]
+[ext_resource path="res://arcade_pricing.tscn" type="PackedScene" id=16]
+[ext_resource path="res://loan_shark.tscn" type="PackedScene" id=17]
+[ext_resource path="res://research.tscn" type="PackedScene" id=18]
+[ext_resource path="res://concessions_pricing.tscn" type="PackedScene" id=19]
+[ext_resource path="res://arcade_upgrade.tscn" type="PackedScene" id=20]
+[ext_resource path="res://entertainment.tscn" type="PackedScene" id=21]
+[ext_resource path="res://marketing.tscn" type="PackedScene" id=22]
+[ext_resource path="res://genres.tscn" type="PackedScene" id=23]
+[ext_resource path="res://pixels_font_black.fnt" type="BitmapFont" id=24]
+[ext_resource path="res://bubble_green.png" type="Texture" id=25]
+[ext_resource path="res://rect_border.png" type="Texture" id=26]
+[ext_resource path="res://arrow_northeast.png" type="Texture" id=27]
+[ext_resource path="res://border.png" type="Texture" id=28]
+[ext_resource path="res://enter_button.png" type="Texture" id=29]
+[ext_resource path="res://time_management_hollyhock.ogg" type="AudioStream" id=30]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=31]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=32]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=33]
+[ext_resource path="res://pixel.png" type="Texture" id=34]
 
 [sub_resource type="Animation" id=1]
 
@@ -2700,20 +2701,20 @@ tracks/23/path = NodePath("tutorial_persistent_menu/warning:rect/pos")
 tracks/23/interp = 1
 tracks/23/imported = false
 tracks/23/keys = {
-"times": FloatArray( 0.5 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0.5, 17 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -15, -12 ) ]
+"values": [ Vector2( -16, -13 ), Vector2( -16, -13 ) ]
 }
 tracks/24/type = "value"
 tracks/24/path = NodePath("tutorial_persistent_menu/warning:rect/size")
 tracks/24/interp = 1
 tracks/24/imported = false
 tracks/24/keys = {
-"times": FloatArray( 0.5 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0.5, 17 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 433, 236 ) ]
+"values": [ Vector2( 660, 288 ), Vector2( 688, 288 ) ]
 }
 tracks/25/type = "value"
 tracks/25/path = NodePath("tutorial_persistent_menu/background:transform/pos")
@@ -3134,6 +3135,16 @@ tracks/66/keys = {
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ false ]
+}
+tracks/67/type = "value"
+tracks/67/path = NodePath("tutorial_persistent_menu/warning:rect/scale")
+tracks/67/interp = 1
+tracks/67/imported = false
+tracks/67/keys = {
+"times": FloatArray( 0.5 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.05, 0.065 ) ]
 }
 
 [sub_resource type="Animation" id=15]
@@ -4448,42 +4459,41 @@ __meta__ = {
 
 [node name="background" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.030571, 0.301067 )
+transform/pos = Vector2( 0.10251, 0.851372 )
 transform/scale = Vector2( 0.049716, 0.0632419 )
 texture = ExtResource( 2 )
 
-[node name="decorative" type="Sprite" parent="."]
+[node name="town_banner" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -24.7315, -8.06349 )
-transform/scale = Vector2( 0.00884983, 0.0219721 )
-texture = ExtResource( 2 )
+transform/pos = Vector2( -4.62777, -24.5135 )
+transform/scale = Vector2( 0.40498, 0.297155 )
 
 [node name="decorative5" type="Sprite" parent="."]
 
-transform/pos = Vector2( 13.9131, 21.0723 )
+transform/pos = Vector2( 19.0236, 21.2282 )
 transform/scale = Vector2( 0.0173717, 0.0204544 )
 texture = ExtResource( 2 )
 
-[node name="supply_one" parent="." instance=ExtResource( 3 )]
+[node name="decorative6" type="Sprite" parent="."]
 
-transform/pos = Vector2( -9.0148, 24.1143 )
+transform/pos = Vector2( -2.66721, 21.069 )
+transform/scale = Vector2( 0.0121077, 0.0204174 )
+texture = ExtResource( 2 )
+
+[node name="supply_one" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -6.40071, 24.1143 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="supply_two" parent="." instance=ExtResource( 3 )]
+[node name="supply_two" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -1.76179, 24.1884 )
+transform/pos = Vector2( 0.852298, 24.1884 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="finances" parent="." instance=ExtResource( 4 )]
+[node name="finances" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( -23.0485, 19.8575 )
-transform/scale = Vector2( 0.214076, 0.331204 )
-
-[node name="Sprite" type="Sprite" parent="."]
-
-transform/pos = Vector2( -0.482896, -14.5126 )
-transform/scale = Vector2( 0.112731, 0.0407525 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( -18.8186, 20.7506 )
+transform/scale = Vector2( 0.182832, 0.366478 )
 
 [node name="top_buttons" type="HButtonArray" parent="."]
 
@@ -4492,9 +4502,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -25.0
+margin/left = -26.0
 margin/top = -18.0
-margin/right = 2764.0
+margin/right = 1045.0
 margin/bottom = 104.0
 custom_fonts/font_selected = ExtResource( 6 )
 custom_fonts/font = ExtResource( 6 )
@@ -4526,63 +4536,72 @@ button/5/icon = null
 button/selected = 0
 script/script = ExtResource( 7 )
 
+[node name="Sprite" type="Sprite" parent="top_buttons"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 454.208, 111.704 )
+transform/scale = Vector2( 2.60827, 1.24171 )
+texture = ExtResource( 8 )
+
 [node name="button" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 80.4589, 61.7072 )
-transform/scale = Vector2( 0.0720252, 0.116711 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( 78.0809, 60.351 )
+transform/scale = Vector2( 0.388567, 0.822187 )
+texture = ExtResource( 9 )
 
 [node name="button1" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 250.598, 62.8847 )
-transform/scale = Vector2( 0.0642561, 0.119854 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( 249.274, 60.351 )
+transform/scale = Vector2( 0.325745, 0.822187 )
+texture = ExtResource( 9 )
 
 [node name="button2" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 418.648, 60.7621 )
-transform/scale = Vector2( 0.0739638, 0.118926 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( 417.919, 60.351 )
+transform/scale = Vector2( 0.37926, 0.822187 )
+texture = ExtResource( 9 )
 
 [node name="button3" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 614.083, 60.7621 )
-transform/scale = Vector2( 0.0906057, 0.122277 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( 613.936, 60.351 )
+transform/scale = Vector2( 0.460696, 0.822187 )
+texture = ExtResource( 9 )
 
 [node name="button4" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 797.07, 60.7621 )
-transform/scale = Vector2( 0.0600956, 0.122276 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( 796.376, 60.351 )
+transform/scale = Vector2( 0.309458, 0.822187 )
+texture = ExtResource( 9 )
 
 [node name="button5" type="Sprite" parent="top_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 978.787, 58.6396 )
-transform/scale = Vector2( 0.0887334, 0.122276 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( 975.559, 60.351 )
+transform/scale = Vector2( 0.449063, 0.822187 )
+texture = ExtResource( 9 )
 
 [node name="report_buttons" type="VButtonArray" parent="."]
 
-rect/scale = Vector2( 0.02, 0.0225 )
+editor/display_folded = true
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -30.0
-margin/top = -6.0
-margin/right = 490.0
-margin/bottom = 368.0
+margin/left = -27.0
+margin/top = -8.0
+margin/right = 189.0
+margin/bottom = 159.0
 custom_fonts/font_selected = ExtResource( 6 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/button_separator = 20
 flat = true
 button/count = 3
 button/min_button_size = -1.0
@@ -4590,7 +4609,7 @@ button/align = 1065353216
 button/0/text = "Finances"
 button/0/tooltip = ""
 button/0/icon = null
-button/1/text = "Customers"
+button/1/text = "Customer"
 button/1/tooltip = ""
 button/1/icon = null
 button/2/text = "News"
@@ -4598,42 +4617,52 @@ button/2/tooltip = ""
 button/2/icon = null
 button/selected = 0
 
+[node name="decorative" type="Sprite" parent="report_buttons"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 88.0055, 165.353 )
+transform/scale = Vector2( 0.588368, 1.65031 )
+texture = ExtResource( 8 )
+
 [node name="button12" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 257.203, 23.8524 )
-transform/scale = Vector2( 0.23576, 0.0580675 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( 104.24, 26.1476 )
+transform/scale = Vector2( 0.518865, 0.352366 )
+texture = ExtResource( 9 )
 
 [node name="button10" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.6314, 18.8745 )
-transform/scale = Vector2( 0.97248, 0.371663 )
+transform/pos = Vector2( 104.861, 99.3726 )
+transform/scale = Vector2( 0.521192, 0.360756 )
+texture = ExtResource( 9 )
 
 [node name="button11" type="Sprite" parent="report_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.5777, 103.454 )
-transform/scale = Vector2( 0.971943, 0.371663 )
+transform/pos = Vector2( 104.861, 171.541 )
+transform/scale = Vector2( 0.521192, 0.360756 )
+texture = ExtResource( 9 )
 
 [node name="supply_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
 visibility/visible = false
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -30.0
-margin/top = -6.0
-margin/right = 165.0
-margin/bottom = 74.0
+margin/left = -27.0
+margin/top = -8.0
+margin/right = 211.0
+margin/bottom = 102.0
 custom_fonts/font_selected = ExtResource( 6 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/button_separator = 20
 flat = true
 button/count = 2
 button/min_button_size = -1.0
@@ -4649,39 +4678,42 @@ button/selected = 0
 [node name="decorative" type="Sprite" parent="supply_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 119.238, 40.7133 )
-transform/scale = Vector2( 0.201636, 0.0994273 )
-texture = ExtResource( 2 )
+transform/pos = Vector2( 99.52, 165.353 )
+transform/scale = Vector2( 0.659361, 1.66092 )
+texture = ExtResource( 8 )
 
 [node name="button11" type="Sprite" parent="supply_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 98.0639, 19.4014 )
-transform/scale = Vector2( 0.966828, 0.371663 )
+transform/pos = Vector2( 115.415, 26.1476 )
+transform/scale = Vector2( 0.574707, 0.352366 )
+texture = ExtResource( 9 )
 
 [node name="button10" type="Sprite" parent="supply_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.5677, 61.3262 )
-transform/scale = Vector2( 0.971791, 0.371663 )
+transform/pos = Vector2( 115.415, 98.3155 )
+transform/scale = Vector2( 0.574707, 0.352366 )
+texture = ExtResource( 9 )
 
 [node name="upgrade_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
 visibility/visible = false
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -30.0
-margin/top = -6.0
-margin/right = 165.0
-margin/bottom = 116.0
+margin/left = -27.0
+margin/top = -8.0
+margin/right = 259.0
+margin/bottom = 159.0
 custom_fonts/font_selected = ExtResource( 6 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/button_separator = 20
 flat = true
 button/count = 3
 button/min_button_size = -1.0
@@ -4700,51 +4732,49 @@ button/selected = 0
 [node name="decorative1" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 148.903, 64.9901 )
-transform/scale = Vector2( 0.248287, 0.145814 )
-texture = ExtResource( 2 )
+transform/pos = Vector2( 120.059, 170.66 )
+transform/scale = Vector2( 0.750776, 1.69807 )
+texture = ExtResource( 8 )
 
 [node name="button12" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.0986, 19.2869 )
-transform/scale = Vector2( 0.962699, 0.364477 )
+transform/pos = Vector2( 139.011, 26.1393 )
+transform/scale = Vector2( 0.686391, 0.369145 )
+texture = ExtResource( 9 )
 
 [node name="button13" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.5053, 61.3234 )
-transform/scale = Vector2( 0.966396, 0.364477 )
+transform/pos = Vector2( 139.011, 99.3727 )
+transform/scale = Vector2( 0.686391, 0.360756 )
+texture = ExtResource( 9 )
 
 [node name="button15" type="Sprite" parent="upgrade_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.5053, 61.3234 )
-transform/scale = Vector2( 0.966396, 0.364477 )
-
-[node name="button14" type="Sprite" parent="upgrade_buttons"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 97.5053, 102.382 )
-transform/scale = Vector2( 0.966396, 0.364477 )
+transform/pos = Vector2( 139.011, 171.541 )
+transform/scale = Vector2( 0.686391, 0.360755 )
+texture = ExtResource( 9 )
 
 [node name="locals_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
 visibility/visible = false
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -30.0
-margin/top = -6.0
-margin/right = 165.0
-margin/bottom = 83.0
+margin/left = -27.0
+margin/top = -8.0
+margin/right = 174.0
+margin/bottom = 102.0
 custom_fonts/font_selected = ExtResource( 6 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/button_separator = 20
 flat = true
 button/count = 2
 button/min_button_size = -1.0
@@ -4760,38 +4790,42 @@ button/selected = 0
 [node name="decorative2" type="Sprite" parent="locals_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 138.666, 40.3986 )
-transform/scale = Vector2( 0.230306, 0.0954084 )
-texture = ExtResource( 2 )
+transform/pos = Vector2( 84.5823, 171.721 )
+transform/scale = Vector2( 0.566, 1.66092 )
+texture = ExtResource( 8 )
 
 [node name="button15" type="Sprite" parent="locals_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.8896, 19.4933 )
-transform/scale = Vector2( 0.968572, 0.355558 )
+transform/pos = Vector2( 96.7872, 27.2047 )
+transform/scale = Vector2( 0.486291, 0.360756 )
+texture = ExtResource( 9 )
 
 [node name="button16" type="Sprite" parent="locals_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.7092, 60.3457 )
-transform/scale = Vector2( 0.965718, 0.364477 )
+transform/pos = Vector2( 97.4108, 98.3155 )
+transform/scale = Vector2( 0.483964, 0.352366 )
+texture = ExtResource( 9 )
 
 [node name="demand_buttons" type="VButtonArray" parent="."]
 
+editor/display_folded = true
 visibility/visible = false
-rect/scale = Vector2( 0.08, 0.1 )
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -30.0
-margin/top = -6.0
-margin/right = 166.0
-margin/bottom = 74.0
+margin/left = -27.0
+margin/top = -8.0
+margin/right = 211.0
+margin/bottom = 102.0
 custom_fonts/font_selected = ExtResource( 6 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/button_separator = 20
 flat = true
 button/count = 2
 button/min_button_size = -1.0
@@ -4807,114 +4841,117 @@ button/selected = 0
 [node name="decorative3" type="Sprite" parent="demand_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 111.62, 40.4583 )
-transform/scale = Vector2( 0.187774, 0.0952068 )
-texture = ExtResource( 2 )
+transform/pos = Vector2( 98.2752, 172.782 )
+transform/scale = Vector2( 0.655471, 1.70868 )
+texture = ExtResource( 8 )
 
 [node name="button17" type="Sprite" parent="demand_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.7628, 19.2869 )
-transform/scale = Vector2( 0.975774, 0.364477 )
+transform/pos = Vector2( 115.415, 26.1476 )
+transform/scale = Vector2( 0.574707, 0.352366 )
+texture = ExtResource( 9 )
 
 [node name="button18" type="Sprite" parent="demand_buttons"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 97.8064, 60.3458 )
-transform/scale = Vector2( 0.979542, 0.364477 )
+transform/pos = Vector2( 115.415, 99.3726 )
+transform/scale = Vector2( 0.574707, 0.360756 )
+texture = ExtResource( 9 )
 
-[node name="finances_full" parent="." instance=ExtResource( 9 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
-
-[node name="customers" parent="." instance=ExtResource( 10 )]
+[node name="finances_full" parent="." instance=ExtResource( 10 )]
 
 visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
 
-[node name="news" parent="." instance=ExtResource( 11 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
-
-[node name="supplies_full" parent="." instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 7.7532, 11.8949 )
-transform/scale = Vector2( 0.678647, 0.439926 )
-
-[node name="storefront" parent="." instance=ExtResource( 13 )]
+[node name="customers" parent="." instance=ExtResource( 11 )]
 
 visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
 
-[node name="games" parent="." instance=ExtResource( 14 )]
+[node name="news" parent="." instance=ExtResource( 12 )]
+
+visibility/visible = false
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
+
+[node name="supplies_full" parent="." instance=ExtResource( 13 )]
+
+visibility/visible = false
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
+
+[node name="storefront" parent="." instance=ExtResource( 14 )]
+
+visibility/visible = false
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
+
+[node name="games" parent="." instance=ExtResource( 15 )]
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
 
-[node name="arcade_pricing" parent="." instance=ExtResource( 15 )]
-
-visibility/visible = false
-transform/pos = Vector2( 7.97685, 2.5514 )
-transform/scale = Vector2( 0.678647, 0.439926 )
-
-[node name="loans" parent="." instance=ExtResource( 16 )]
+[node name="arcade_pricing" parent="." instance=ExtResource( 16 )]
 
 visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
 
-[node name="research" parent="." instance=ExtResource( 17 )]
+[node name="loans" parent="." instance=ExtResource( 17 )]
 
-transform/pos = Vector2( 7.7532, 11.8949 )
-transform/scale = Vector2( 0.678647, 0.439926 )
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
 
-[node name="concessions_pricing" parent="." instance=ExtResource( 18 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
-
-[node name="arcade_upgrade" parent="." instance=ExtResource( 19 )]
+[node name="research" parent="." instance=ExtResource( 18 )]
 
 visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
 
-[node name="entertainment" parent="." instance=ExtResource( 20 )]
-
-visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
-
-[node name="marketing" parent="." instance=ExtResource( 21 )]
+[node name="concessions_pricing" parent="." instance=ExtResource( 19 )]
 
 visibility/visible = false
-transform/pos = Vector2( 8.00721, 2.65491 )
-transform/scale = Vector2( 0.678647, 0.439926 )
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
 
-[node name="genre_one" parent="." instance=ExtResource( 22 )]
+[node name="arcade_upgrade" parent="." instance=ExtResource( 20 )]
 
-transform/pos = Vector2( 6.67982, 24.0289 )
+visibility/visible = false
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
+
+[node name="entertainment" parent="." instance=ExtResource( 21 )]
+
+visibility/visible = false
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
+
+[node name="marketing" parent="." instance=ExtResource( 22 )]
+
+visibility/visible = false
+transform/pos = Vector2( 9.7498, 3.76992 )
+transform/scale = Vector2( 0.653526, 0.39301 )
+
+[node name="genre_one" parent="." instance=ExtResource( 23 )]
+
+transform/pos = Vector2( 11.8037, 24.3059 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="genre_two" parent="." instance=ExtResource( 22 )]
+[node name="genre_two" parent="." instance=ExtResource( 23 )]
 
 visibility/visible = false
-transform/pos = Vector2( 13.94, 24.0813 )
+transform/pos = Vector2( 19.0236, 24.3059 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
-[node name="genre_three" parent="." instance=ExtResource( 22 )]
+[node name="genre_three" parent="." instance=ExtResource( 23 )]
 
 visibility/visible = false
-transform/pos = Vector2( 21.1111, 24.0996 )
+transform/pos = Vector2( 26.1813, 24.3059 )
 transform/scale = Vector2( 0.107108, 0.199644 )
 
 [node name="start_day" type="LinkButton" parent="."]
@@ -4928,7 +4965,7 @@ margin/left = 19.0
 margin/top = -27.0
 margin/right = 278.0
 margin/bottom = 89.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 24 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -4939,17 +4976,13 @@ underline = 2
 [node name="Sprite" type="Sprite" parent="start_day"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 129.418, 61.6565 )
-transform/scale = Vector2( 0.145568, 0.233896 )
-texture = ExtResource( 8 )
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( 122.837, 59.3633 )
+transform/scale = Vector2( 0.713536, 1.04871 )
+texture = ExtResource( 9 )
 
 [node name="low_funds_warning" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="low_funds_warning"]
@@ -4957,19 +4990,19 @@ visibility/visible = false
 transform/pos = Vector2( -11.3545, -9.8186 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.033031, 0.0275206 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="low_funds_warning"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -26.0
-margin/top = -23.0
-margin/right = 251.0
-margin/bottom = 236.0
+margin/top = -18.0
+margin/right = 512.0
+margin/bottom = 254.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -4983,10 +5016,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -4.0
-margin/top = 4.0
-margin/right = 31.0
-margin/bottom = 36.0
+margin/left = -5.0
+margin/top = 2.0
+margin/right = 47.0
+margin/bottom = 49.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5001,7 +5034,6 @@ underline = 2
 [node name="tutorial_passover" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 4.46997, 7.26745 )
 
@@ -5010,19 +5042,19 @@ transform/pos = Vector2( 4.46997, 7.26745 )
 transform/pos = Vector2( -11.3545, -9.8186 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.033031, 0.0275206 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="tutorial_passover"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -27.0
-margin/top = -24.0
-margin/right = 262.0
-margin/bottom = 280.0
+margin/top = -21.0
+margin/right = 531.0
+margin/bottom = 283.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5032,7 +5064,6 @@ visible_characters = -1
 [node name="game_over_alert" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="game_over_alert"]
@@ -5040,19 +5071,19 @@ visibility/visible = false
 transform/pos = Vector2( -10.6751, -7.09967 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0323249, 0.0255163 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="game_over_alert"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -25.0
-margin/top = -18.0
-margin/right = 263.0
-margin/bottom = 197.0
+margin/top = -16.0
+margin/right = 493.0
+margin/bottom = 262.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5066,10 +5097,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -6.0
-margin/top = 7.0
-margin/right = 29.0
-margin/bottom = 39.0
+margin/left = -8.0
+margin/top = 4.0
+margin/right = 44.0
+margin/bottom = 51.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5092,19 +5123,19 @@ visibility/visible = false
 transform/pos = Vector2( -9.67806, -9.59794 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0406631, 0.0293596 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="genre_discovery"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -26.0
-margin/top = -22.0
-margin/right = 276.0
-margin/bottom = 230.0
+margin/top = -19.0
+margin/right = 576.0
+margin/bottom = 310.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5118,10 +5149,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = 6.0
-margin/right = 51.0
-margin/bottom = 49.0
+margin/left = -3.0
+margin/top = 5.0
+margin/right = 49.0
+margin/bottom = 52.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5144,19 +5175,19 @@ visibility/visible = false
 transform/pos = Vector2( -10.1723, -2.71569 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="hollyhock_complete"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -26.0
-margin/top = -21.0
-margin/right = 266.0
-margin/bottom = 349.0
+margin/top = -18.0
+margin/right = 543.0
+margin/bottom = 389.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5170,10 +5201,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = 18.0
-margin/right = 51.0
-margin/bottom = 61.0
+margin/left = -4.0
+margin/top = 15.0
+margin/right = 48.0
+margin/bottom = 62.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5188,6 +5219,7 @@ underline = 2
 [node name="fiyork_complete" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="fiyork_complete"]
@@ -5195,19 +5227,19 @@ visibility/visible = false
 transform/pos = Vector2( -10.1723, -2.71569 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="fiyork_complete"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -26.0
-margin/top = -21.0
-margin/right = 266.0
-margin/bottom = 349.0
+margin/left = -25.0
+margin/top = -17.0
+margin/right = 511.0
+margin/bottom = 353.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5221,9 +5253,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = 18.0
-margin/right = 51.0
+margin/left = -4.0
+margin/top = 14.0
+margin/right = 48.0
 margin/bottom = 61.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -5247,19 +5279,19 @@ visibility/visible = false
 transform/pos = Vector2( -10.1723, -2.71569 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="plansey_complete"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -26.0
-margin/top = -21.0
-margin/right = 266.0
-margin/bottom = 349.0
+margin/left = -25.0
+margin/top = -18.0
+margin/right = 511.0
+margin/bottom = 352.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5273,10 +5305,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = 18.0
-margin/right = 51.0
-margin/bottom = 61.0
+margin/left = -4.0
+margin/top = 15.0
+margin/right = 48.0
+margin/bottom = 62.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5299,19 +5331,19 @@ visibility/visible = false
 transform/pos = Vector2( -10.1723, -2.71569 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="untilly_complete"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -26.0
-margin/top = -21.0
-margin/right = 266.0
-margin/bottom = 349.0
+margin/top = -15.0
+margin/right = 527.0
+margin/bottom = 355.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5325,10 +5357,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = 18.0
-margin/right = 51.0
-margin/bottom = 61.0
+margin/left = -4.0
+margin/top = 13.0
+margin/right = 48.0
+margin/bottom = 60.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5351,19 +5383,19 @@ visibility/visible = false
 transform/pos = Vector2( -10.1723, -2.71569 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="windrow_complete"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -26.0
-margin/top = -21.0
-margin/right = 266.0
-margin/bottom = 349.0
+margin/top = -17.0
+margin/right = 520.0
+margin/bottom = 353.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5377,9 +5409,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = 18.0
-margin/right = 51.0
+margin/left = -5.0
+margin/top = 14.0
+margin/right = 47.0
 margin/bottom = 61.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -5403,19 +5435,19 @@ visibility/visible = false
 transform/pos = Vector2( -10.1723, -2.71569 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="banlon_complete"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -26.0
-margin/top = -21.0
-margin/right = 266.0
-margin/bottom = 349.0
+margin/top = -16.0
+margin/right = 525.0
+margin/bottom = 354.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5429,10 +5461,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = 18.0
-margin/right = 51.0
-margin/bottom = 61.0
+margin/left = -5.0
+margin/top = 15.0
+margin/right = 47.0
+margin/bottom = 62.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5455,19 +5487,19 @@ visibility/visible = false
 transform/pos = Vector2( -10.1723, -2.71569 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="slatten_complete"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -26.0
-margin/top = -21.0
-margin/right = 266.0
-margin/bottom = 349.0
+margin/top = -16.0
+margin/right = 527.0
+margin/bottom = 354.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5481,9 +5513,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = 18.0
-margin/right = 51.0
+margin/left = -3.0
+margin/top = 14.0
+margin/right = 49.0
 margin/bottom = 61.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -5506,19 +5538,19 @@ visibility/visible = false
 transform/pos = Vector2( -10.1723, -2.71569 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning1" type="RichTextLabel" parent="menu"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -16.0
-margin/top = -22.0
-margin/right = 75.0
-margin/bottom = 17.0
+margin/top = -20.0
+margin/right = 142.0
+margin/bottom = 43.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5533,9 +5565,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = -25.0
-margin/top = -18.0
+margin/top = -15.0
 margin/right = 110.0
-margin/bottom = -2.0
+margin/bottom = 1.0
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
@@ -5549,15 +5581,16 @@ focus_mode = 2
 
 [node name="return_to_game" type="LinkButton" parent="menu"]
 
-rect/scale = Vector2( 0.1, 0.15 )
+editor/display_folded = true
+rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -22.0
-margin/top = -10.0
-margin/right = 183.0
-margin/bottom = 22.0
+margin/left = -23.0
+margin/top = -7.0
+margin/right = 284.0
+margin/bottom = 40.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -5569,8 +5602,9 @@ underline = 2
 [node name="button9" type="Sprite" parent="menu/return_to_game"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 104.222, 15.7067 )
-transform/scale = Vector2( 1.09076, 0.394836 )
+transform/pos = Vector2( 147.466, 15.7067 )
+transform/scale = Vector2( 0.803504, 0.394836 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -5578,15 +5612,15 @@ __meta__ = {
 [node name="restart_village" type="LinkButton" parent="menu"]
 
 editor/display_folded = true
-rect/scale = Vector2( 0.1, 0.15 )
+rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -22.0
-margin/top = -1.0
-margin/right = 183.0
-margin/bottom = 31.0
+margin/top = 4.0
+margin/right = 266.0
+margin/bottom = 51.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -5598,8 +5632,9 @@ underline = 2
 [node name="button9" type="Sprite" parent="menu/restart_village"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 104.222, 15.7067 )
-transform/scale = Vector2( 1.09076, 0.394836 )
+transform/pos = Vector2( 134.545, 15.7067 )
+transform/scale = Vector2( 0.808157, 0.394836 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -5607,15 +5642,15 @@ __meta__ = {
 [node name="quit_to_main" type="LinkButton" parent="menu"]
 
 editor/display_folded = true
-rect/scale = Vector2( 0.1, 0.15 )
+rect/scale = Vector2( 0.07, 0.09 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -24.0
-margin/top = 8.0
-margin/right = 209.0
-margin/bottom = 40.0
+margin/top = 14.0
+margin/right = 325.0
+margin/bottom = 61.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -5627,8 +5662,12 @@ underline = 2
 [node name="button9" type="Sprite" parent="menu/quit_to_main"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 119.382, 15.7067 )
-transform/scale = Vector2( 1.24236, 0.394836 )
+transform/pos = Vector2( 173.615, 17.2664 )
+transform/scale = Vector2( 0.869207, 0.394836 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="are_you_sure" type="Node2D" parent="."]
 
@@ -5641,19 +5680,19 @@ visibility/visible = false
 transform/pos = Vector2( -11.0683, -2.78012 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0246812, 0.0207212 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="are_you_sure"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -21.0
 margin/top = -11.0
-margin/right = 160.0
-margin/bottom = 128.0
+margin/right = 356.0
+margin/bottom = 163.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5667,10 +5706,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -8.0
-margin/top = 7.0
-margin/right = 48.0
-margin/bottom = 39.0
+margin/left = -11.0
+margin/top = 3.0
+margin/right = 63.0
+margin/bottom = 50.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5689,10 +5728,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -20.0
-margin/top = 7.0
-margin/right = 36.0
-margin/bottom = 39.0
+margin/left = -21.0
+margin/top = 3.0
+margin/right = 35.0
+margin/bottom = 50.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5715,19 +5754,19 @@ visibility/visible = false
 transform/pos = Vector2( -11.0683, -2.78012 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0246812, 0.0207212 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="are_you_sure_2"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -21.0
-margin/top = -11.0
-margin/right = 160.0
-margin/bottom = 128.0
+margin/top = -10.0
+margin/right = 360.0
+margin/bottom = 169.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5741,10 +5780,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -8.0
-margin/top = 7.0
-margin/right = 48.0
-margin/bottom = 39.0
+margin/left = -11.0
+margin/top = 4.0
+margin/right = 63.0
+margin/bottom = 51.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5763,10 +5802,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -20.0
-margin/top = 7.0
-margin/right = 36.0
-margin/bottom = 39.0
+margin/left = -21.0
+margin/top = 4.0
+margin/right = 35.0
+margin/bottom = 51.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5781,6 +5820,7 @@ underline = 2
 [node name="skip_or_play" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="skip_or_play"]
@@ -5788,36 +5828,36 @@ visibility/visible = false
 transform/pos = Vector2( -7.88107, -2.71569 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0436669, 0.0332089 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="skip_or_play"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -28.0
 margin/top = -22.0
-margin/right = 340.0
-margin/bottom = 116.0
+margin/right = 688.0
+margin/bottom = 134.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Would you like to watch the next day's play through or do you want to skip it?"
+bbcode/bbcode = "Would you like to play an arcade game during the work day or do you want to skip it?"
 visible_characters = -1
 
 [node name="perk" type="RichTextLabel" parent="skip_or_play"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
-margin/top = -11.0
-margin/right = 307.0
-margin/bottom = 33.0
+margin/left = -22.0
+margin/top = -10.0
+margin/right = 491.0
+margin/bottom = 60.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5826,15 +5866,15 @@ visible_characters = -1
 
 [node name="perk_goal" type="RichTextLabel" parent="skip_or_play"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -28.0
-margin/top = 3.0
-margin/right = 337.0
-margin/bottom = 71.0
+margin/top = 5.0
+margin/right = 701.0
+margin/bottom = 116.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5843,36 +5883,36 @@ visible_characters = -1
 
 [node name="perk_output" type="RichTextLabel" parent="skip_or_play"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -28.0
-margin/top = -7.0
-margin/right = 339.0
-margin/bottom = 85.0
+margin/left = -25.0
+margin/top = -4.0
+margin/right = 716.0
+margin/bottom = 118.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = ""
+bbcode/bbcode = "Remove the Sabatoge from advertising"
 visible_characters = -1
 
 [node name="perk_goal_output" type="RichTextLabel" parent="skip_or_play"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -14.0
 margin/top = 11.0
-margin/right = 89.0
-margin/bottom = 65.0
+margin/right = 213.0
+margin/bottom = 77.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = ""
+bbcode/bbcode = "10000"
 visible_characters = -1
 
 [node name="skip" type="LinkButton" parent="skip_or_play"]
@@ -5883,9 +5923,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -7.0
-margin/top = 18.0
-margin/right = 49.0
-margin/bottom = 50.0
+margin/top = 17.0
+margin/right = 76.0
+margin/bottom = 64.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5905,9 +5945,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -22.0
-margin/top = 18.0
-margin/right = 47.0
-margin/bottom = 50.0
+margin/top = 17.0
+margin/right = 80.0
+margin/bottom = 64.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5930,19 +5970,19 @@ visibility/visible = false
 transform/pos = Vector2( -7.42649, 1.68678 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0387354, 0.0352096 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="warning" type="RichTextLabel" parent="tutorial_start"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.05, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -29.0
-margin/top = -13.0
-margin/right = 362.0
-margin/bottom = 269.0
+margin/left = -28.0
+margin/top = -12.0
+margin/right = 752.0
+margin/bottom = 382.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -5958,9 +5998,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -7.0
-margin/top = 19.0
-margin/right = 62.0
-margin/bottom = 51.0
+margin/top = 17.0
+margin/right = 64.0
+margin/bottom = 64.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -5980,9 +6020,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -21.0
-margin/top = 19.0
+margin/top = 17.0
 margin/right = 29.0
-margin/bottom = 51.0
+margin/bottom = 64.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
@@ -6008,38 +6048,38 @@ __meta__ = {
 
 transform/pos = Vector2( -0.950006, -2.49925 )
 transform/scale = Vector2( 0.03429, 0.0181352 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 flip_v = true
 
 [node name="warning" type="RichTextLabel" parent="tutorial_persistent_menu"]
 
-rect/scale = Vector2( 0.075, 0.075 )
+rect/scale = Vector2( 0.05, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = -12.0
-margin/right = 418.0
-margin/bottom = 224.0
+margin/left = -16.0
+margin/top = -13.0
+margin/right = 666.25
+margin/bottom = 275.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Here we have some slimmed down information on your concession's stock. The Players in Hollyhock are mad for soda and popcorn so we will make sure you have plenty of stock in another tab."
+bbcode/bbcode = "And a quick peek at your financial situation. We only have a little bit of money saved so we will need to spend it wisely to get Hollyhock back on its feet."
 visible_characters = -1
 
 [node name="title_box_border" type="Sprite" parent="tutorial_persistent_menu"]
 
 visibility/visible = false
-transform/pos = Vector2( -7.9548, -29.4049 )
-transform/scale = Vector2( 0.158585, 0.100571 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( -7.99865, -30.1423 )
+transform/scale = Vector2( 0.154357, 0.0858221 )
+texture = ExtResource( 26 )
 
 [node name="arcade_border" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( -7.9548, -29.4049 )
-transform/scale = Vector2( 0.158585, 0.100571 )
-texture = ExtResource( 25 )
+transform/pos = Vector2( -8.02335, -30.2228 )
+transform/scale = Vector2( 0.149624, 0.0874307 )
+texture = ExtResource( 26 )
 
 [node name="title_box_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
@@ -6047,28 +6087,30 @@ visibility/visible = false
 transform/pos = Vector2( -1.24679, -18.5425 )
 transform/rot = 2.0
 transform/scale = Vector2( 0.125946, 0.237902 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 flip_h = true
 
 [node name="supplies_border" type="Sprite" parent="tutorial_persistent_menu"]
 
-transform/pos = Vector2( -12.8365, 19.5481 )
-transform/scale = Vector2( 0.170763, 0.165702 )
-texture = ExtResource( 27 )
+visibility/visible = false
+transform/pos = Vector2( -10.2704, 19.8374 )
+transform/scale = Vector2( 0.164937, 0.149642 )
+texture = ExtResource( 28 )
 
 [node name="supplies_border1" type="Sprite" parent="tutorial_persistent_menu"]
 
 visibility/visible = false
-transform/pos = Vector2( -0.805752, 19.8626 )
-transform/scale = Vector2( 0.085168, 0.160784 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( 4.20049, 19.8905 )
+transform/scale = Vector2( 0.085168, 0.150704 )
+texture = ExtResource( 28 )
 
 [node name="supplies_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
+visibility/visible = false
 transform/pos = Vector2( -5.59278, 9.96005 )
 transform/rot = -86.0875
 transform/scale = Vector2( 0.0813651, 0.0395302 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 flip_v = true
 
 [node name="supplies_pointer1" type="Sprite" parent="tutorial_persistent_menu"]
@@ -6077,22 +6119,20 @@ visibility/visible = false
 transform/pos = Vector2( -3.50441, 9.49381 )
 transform/rot = -86.0875
 transform/scale = Vector2( 0.104003, 0.0352382 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 
 [node name="finances_border" type="Sprite" parent="tutorial_persistent_menu"]
 
-visibility/visible = false
-transform/pos = Vector2( -29.7574, 14.6899 )
-transform/scale = Vector2( 0.180433, 0.223718 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -25.7372, 15.7303 )
+transform/scale = Vector2( 0.149377, 0.248766 )
+texture = ExtResource( 28 )
 
 [node name="finances_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
-visibility/visible = false
 transform/pos = Vector2( -18.7358, 7.54088 )
 transform/rot = -111.178
 transform/scale = Vector2( 0.0764177, 0.0593957 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 flip_v = true
 
 [node name="tutorial_reports" type="Node2D" parent="."]
@@ -6107,12 +6147,12 @@ transform/scale = Vector2( 1, 0.806395 )
 
 transform/pos = Vector2( 6.03098, 4.72945 )
 transform/scale = Vector2( 0.047212, 0.0154151 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 flip_v = true
 
 [node name="warning" type="RichTextLabel" parent="tutorial_reports"]
 
-rect/scale = Vector2( 0.075, 0.075 )
+rect/scale = Vector2( 0.04, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -6124,7 +6164,7 @@ margin/bottom = 206.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "And last in the Reports tab is the News. It is mostly just an expanded version of the genre predictions."
+bbcode/bbcode = "The first tab across the top is Reports."
 visible_characters = -1
 
 [node name="finances_pointer" type="Sprite" parent="tutorial_reports"]
@@ -6132,39 +6172,39 @@ visible_characters = -1
 transform/pos = Vector2( -12.1785, -35.4509 )
 transform/rot = -37.0565
 transform/scale = Vector2( 0.0813669, 0.0671947 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 flip_h = true
 
 [node name="reports_box" type="Sprite" parent="tutorial_reports"]
 
-transform/pos = Vector2( -12.7833, -43.3353 )
-transform/scale = Vector2( 0.114586, 0.114607 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -9.99456, -43.1516 )
+transform/scale = Vector2( 0.100861, 0.114607 )
+texture = ExtResource( 28 )
 
 [node name="finances_box" type="Sprite" parent="tutorial_reports"]
 
 visibility/visible = false
-transform/pos = Vector2( -10.2576, -30.511 )
-transform/scale = Vector2( 0.183335, 0.0641346 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -9.55729, -33.1076 )
+transform/scale = Vector2( 0.133195, 0.0465443 )
+texture = ExtResource( 28 )
 
 [node name="other_box" type="Sprite" parent="tutorial_reports"]
 
 visibility/visible = false
-transform/pos = Vector2( -10.2497, -24.6665 )
-transform/scale = Vector2( 0.183335, 0.0527548 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -9.49505, -28.6116 )
+transform/scale = Vector2( 0.133195, 0.0461188 )
+texture = ExtResource( 28 )
 
 [node name="other_box1" type="Sprite" parent="tutorial_reports"]
 
-transform/pos = Vector2( -10.2497, -19.0207 )
-transform/scale = Vector2( 0.183335, 0.0633752 )
-texture = ExtResource( 27 )
+visibility/visible = false
+transform/pos = Vector2( -9.52617, -23.8759 )
+transform/scale = Vector2( 0.135062, 0.0487968 )
+texture = ExtResource( 28 )
 
 [node name="tutorial_supplies" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.512787, 10.8623 )
 transform/scale = Vector2( 0.947031, 0.806395 )
@@ -6176,31 +6216,31 @@ __meta__ = {
 
 transform/pos = Vector2( -10.2833, -44.3957 )
 transform/scale = Vector2( 0.044365, 0.0112446 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_supplies"]
 
-rect/scale = Vector2( 0.075, 0.075 )
+rect/scale = Vector2( 0.04, 0.065 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -30.0
 margin/top = -51.0
-margin/right = 556.0
-margin/bottom = 119.0
+margin/right = 1089.0
+margin/bottom = 160.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "We don't have any stock, and both soda and popcorn are in green so we should get at least 10 of each. Don't forget to click the confirm button! Then we can move on to the next section."
+bbcode/bbcode = "Next across the top is the supply button, and it is by far one of the most important."
 visible_characters = -1
 
 [node name="supplies_box" type="Sprite" parent="tutorial_supplies"]
 
-transform/pos = Vector2( -16.9707, -32.9594 )
-transform/scale = Vector2( 0.106464, 0.118743 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -14.6619, -31.8342 )
+transform/scale = Vector2( 0.0874073, 0.106751 )
+texture = ExtResource( 28 )
 
 [node name="click" type="RichTextLabel" parent="tutorial_supplies"]
 
@@ -6226,53 +6266,55 @@ visibility/visible = false
 transform/pos = Vector2( 17.6866, -5.67668 )
 transform/rot = 39.4335
 transform/scale = Vector2( 0.17106, 0.170149 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 
 [node name="supplies_box1" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
-transform/pos = Vector2( -23.8998, -18.5358 )
-transform/scale = Vector2( 0.186269, 0.0570795 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -22.6143, -21.7587 )
+transform/scale = Vector2( 0.154446, 0.0473794 )
+texture = ExtResource( 28 )
 
 [node name="supplies_box2" type="Sprite" parent="tutorial_supplies"]
 
-transform/pos = Vector2( -23.9321, -13.1181 )
-transform/scale = Vector2( 0.193584, 0.0570795 )
-texture = ExtResource( 27 )
+visibility/visible = false
+transform/pos = Vector2( -22.6472, -17.3291 )
+transform/scale = Vector2( 0.153789, 0.045649 )
+texture = ExtResource( 28 )
 
 [node name="supplies_icon_box" type="Sprite" parent="tutorial_supplies"]
 
-transform/pos = Vector2( -6.05738, 16.7831 )
-transform/scale = Vector2( 0.171906, 0.183603 )
-texture = ExtResource( 27 )
+visibility/visible = false
+transform/pos = Vector2( -3.42356, 16.8029 )
+transform/scale = Vector2( 0.172848, 0.186886 )
+texture = ExtResource( 28 )
 
 [node name="supplies_icon_box3" type="Sprite" parent="tutorial_supplies"]
 
+visibility/visible = false
 transform/pos = Vector2( 20.4226, 3.0562 )
 transform/scale = Vector2( 0.194382, 0.0849141 )
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
 
 [node name="supplies_icon_box2" type="Sprite" parent="tutorial_supplies"]
 
-visibility/visible = false
-transform/pos = Vector2( -5.55873, -14.2396 )
-transform/scale = Vector2( 0.192668, 0.290151 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -6.30147, -13.2193 )
+transform/scale = Vector2( 0.131824, 0.25826 )
+texture = ExtResource( 28 )
 
 [node name="supplies_icon_box1" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
-transform/pos = Vector2( 6.6583, 16.826 )
-transform/scale = Vector2( 0.090009, 0.183603 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( 11.9396, 16.9508 )
+transform/scale = Vector2( 0.0850948, 0.183928 )
+texture = ExtResource( 28 )
 
 [node name="finances_box" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
-transform/pos = Vector2( -24.0716, 10.6118 )
-transform/scale = Vector2( 0.190928, 0.284684 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -19.6897, 11.9991 )
+transform/scale = Vector2( 0.155103, 0.30665 )
+texture = ExtResource( 28 )
 
 [node name="tutorial_pricing" type="Node2D" parent="."]
 
@@ -6289,20 +6331,20 @@ __meta__ = {
 
 transform/pos = Vector2( -10.2833, -44.3957 )
 transform/scale = Vector2( 0.044365, 0.0112446 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_pricing"]
 
-rect/scale = Vector2( 0.075, 0.075 )
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -30.0
 margin/top = -51.0
-margin/right = 563.0
-margin/bottom = 119.0
+margin/right = 873.0
+margin/bottom = 197.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -6311,16 +6353,15 @@ visible_characters = -1
 
 [node name="ok_button_background" type="Sprite" parent="tutorial_pricing"]
 
-visibility/visible = false
 visibility/behind_parent = true
-transform/pos = Vector2( 19.6296, 13.2642 )
+transform/pos = Vector2( 18.5932, 13.8417 )
 transform/rot = 180.0
-transform/scale = Vector2( 0.0383662, 0.0455973 )
+transform/scale = Vector2( 0.00260661, 0.00510984 )
+texture = ExtResource( 29 )
 
 [node name="ok" type="RichTextLabel" parent="tutorial_pricing"]
 
 editor/display_folded = true
-visibility/visible = false
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -6328,12 +6369,12 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 16.0
 margin/top = 12.0
-margin/right = 92.0
-margin/bottom = 46.0
+margin/right = 76.0
+margin/bottom = 65.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "OKAY"
+bbcode/bbcode = "OK"
 visible_characters = -1
 
 [node name="ok_button" type="LinkButton" parent="tutorial_pricing/ok"]
@@ -6356,35 +6397,37 @@ __meta__ = {
 [node name="pricing_box" type="Sprite" parent="tutorial_pricing"]
 
 visibility/visible = false
-transform/pos = Vector2( -23.7773, -19.6038 )
-transform/scale = Vector2( 0.189266, 0.0589262 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -22.7129, -21.8245 )
+transform/scale = Vector2( 0.141959, 0.0355346 )
+texture = ExtResource( 28 )
 
 [node name="pricing_box1" type="Sprite" parent="tutorial_pricing"]
 
-transform/pos = Vector2( -7.17912, -32.4628 )
-transform/scale = Vector2( 0.129525, 0.109483 )
-texture = ExtResource( 27 )
+visibility/visible = false
+transform/pos = Vector2( -5.85527, -31.9584 )
+transform/scale = Vector2( 0.0979254, 0.0855462 )
+texture = ExtResource( 28 )
 
 [node name="concessions_tab_box" type="Sprite" parent="tutorial_pricing"]
 
-transform/pos = Vector2( -23.8227, -13.4361 )
-transform/scale = Vector2( 0.187425, 0.0515142 )
-texture = ExtResource( 27 )
+visibility/visible = false
+transform/pos = Vector2( -22.7129, -18.2428 )
+transform/scale = Vector2( 0.141959, 0.037602 )
+texture = ExtResource( 28 )
 
 [node name="prediction_box" type="Sprite" parent="tutorial_pricing"]
 
 visibility/visible = false
-transform/pos = Vector2( 6.46921, 16.6486 )
-transform/scale = Vector2( 0.0846538, 0.186745 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( 6.63187, 16.8029 )
+transform/scale = Vector2( 0.0847811, 0.184253 )
+texture = ExtResource( 28 )
 
 [node name="prediction_box1" type="Sprite" parent="tutorial_pricing"]
 
 visibility/visible = false
-transform/pos = Vector2( -5.81369, 16.7585 )
-transform/scale = Vector2( 0.176858, 0.197736 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -6.18387, 16.9345 )
+transform/scale = Vector2( 0.170219, 0.186885 )
+texture = ExtResource( 28 )
 
 [node name="tutorial_upgrades" type="Node2D" parent="."]
 
@@ -6398,20 +6441,20 @@ transform/scale = Vector2( 0.947031, 0.806395 )
 
 transform/pos = Vector2( -10.8486, -44.4195 )
 transform/scale = Vector2( 0.046027, 0.010089 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_upgrades"]
 
-rect/scale = Vector2( 0.075, 0.075 )
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -31.0
 margin/top = -50.0
-margin/right = 583.0
-margin/bottom = 94.0
+margin/right = 904.0
+margin/bottom = 165.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -6420,30 +6463,31 @@ visible_characters = -1
 
 [node name="pricing_box" type="Sprite" parent="tutorial_upgrades"]
 
-transform/pos = Vector2( 4.74189, -32.3209 )
-transform/scale = Vector2( 0.14385, 0.0988061 )
-texture = ExtResource( 27 )
+visibility/visible = false
+transform/pos = Vector2( 4.46305, -31.8926 )
+transform/scale = Vector2( 0.118956, 0.0868623 )
+texture = ExtResource( 28 )
 
 [node name="pricing_box1" type="Sprite" parent="tutorial_upgrades"]
 
 visibility/visible = false
-transform/pos = Vector2( -23.716, -19.1296 )
-transform/scale = Vector2( 0.189387, 0.0724809 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -21.267, -21.6929 )
+transform/scale = Vector2( 0.165619, 0.040799 )
+texture = ExtResource( 28 )
 
 [node name="pricing_box2" type="Sprite" parent="tutorial_upgrades"]
 
 visibility/visible = false
-transform/pos = Vector2( -23.716, -13.1947 )
-transform/scale = Vector2( 0.189387, 0.0548959 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -21.267, -18.271 )
+transform/scale = Vector2( 0.165619, 0.0302702 )
+texture = ExtResource( 28 )
 
 [node name="pricing_box3" type="Sprite" parent="tutorial_upgrades"]
 
 visibility/visible = false
-transform/pos = Vector2( -23.716, -8.10811 )
-transform/scale = Vector2( 0.189387, 0.05134 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -21.267, -14.7834 )
+transform/scale = Vector2( 0.165619, 0.0394829 )
+texture = ExtResource( 28 )
 
 [node name="tutorial_locals" type="Node2D" parent="."]
 
@@ -6458,22 +6502,24 @@ __meta__ = {
 
 [node name="first_background" type="Sprite" parent="tutorial_locals"]
 
+visibility/visible = false
 transform/pos = Vector2( -9.46886, -44.4189 )
 transform/scale = Vector2( 0.0478571, 0.00992204 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_locals"]
 
-rect/scale = Vector2( 0.075, 0.075 )
+visibility/visible = false
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -30.0
-margin/top = -50.0
-margin/right = 596.0
-margin/bottom = 84.0
+margin/top = -48.0
+margin/right = 916.0
+margin/bottom = 196.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -6483,23 +6529,23 @@ visible_characters = -1
 [node name="pricing_box3" type="Sprite" parent="tutorial_locals"]
 
 visibility/visible = false
-transform/pos = Vector2( 15.3053, -32.409 )
-transform/scale = Vector2( 0.0970986, 0.101696 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( 14.0584, -32.1559 )
+transform/scale = Vector2( 0.0795233, 0.0868623 )
+texture = ExtResource( 28 )
 
 [node name="pricing_box1" type="Sprite" parent="tutorial_locals"]
 
 visibility/visible = false
-transform/pos = Vector2( -23.9591, -18.9561 )
-transform/scale = Vector2( 0.195409, 0.0755639 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -23.6659, -21.6929 )
+transform/scale = Vector2( 0.120271, 0.0381668 )
+texture = ExtResource( 28 )
 
 [node name="pricing_box2" type="Sprite" parent="tutorial_locals"]
 
 visibility/visible = false
-transform/pos = Vector2( -23.6922, -13.5579 )
-transform/scale = Vector2( 0.186622, 0.0685323 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( -23.8302, -18.4039 )
+transform/scale = Vector2( 0.11567, 0.0329262 )
+texture = ExtResource( 28 )
 
 [node name="tutorial_research" type="Node2D" parent="."]
 
@@ -6514,22 +6560,23 @@ __meta__ = {
 
 [node name="first_background" type="Sprite" parent="tutorial_research"]
 
+visibility/visible = false
 transform/pos = Vector2( -6.2008, -13.4731 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0278675, 0.0373426 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_research"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -28.0
-margin/top = -24.0
-margin/right = 366.0
-margin/bottom = 219.0
+margin/left = -29.0
+margin/top = -25.0
+margin/right = 525.0
+margin/bottom = 358.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -6539,15 +6586,16 @@ visible_characters = -1
 [node name="pricing_box" type="Sprite" parent="tutorial_research"]
 
 visibility/visible = false
-transform/pos = Vector2( 25.8918, -32.4093 )
-transform/scale = Vector2( 0.131399, 0.0935725 )
-texture = ExtResource( 27 )
+transform/pos = Vector2( 23.6538, -32.3236 )
+transform/scale = Vector2( 0.117642, 0.084953 )
+texture = ExtResource( 28 )
 
 [node name="pricing_box1" type="Sprite" parent="tutorial_research"]
 
-transform/pos = Vector2( 23.9526, -45.2894 )
-transform/scale = Vector2( 0.179223, 0.11064 )
-texture = ExtResource( 27 )
+visibility/visible = false
+transform/pos = Vector2( 23.6867, -44.4454 )
+transform/scale = Vector2( 0.111727, 0.0937609 )
+texture = ExtResource( 28 )
 
 [node name="cursor_blink" type="Timer" parent="."]
 
@@ -6558,7 +6606,7 @@ autostart = false
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 28 )
+stream/stream = ExtResource( 30 )
 stream/play = false
 stream/loop = true
 stream/volume_db = 0.0
@@ -6601,17 +6649,14 @@ autoplay = ""
 
 [node name="pixel" type="Node2D" parent="."]
 
-transform/pos = Vector2( 18.0038, 24.6996 )
+transform/pos = Vector2( -37.802, 19.7424 )
 transform/scale = Vector2( 0.443099, 0.357029 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="crotch" type="Sprite" parent="pixel"]
 
 transform/pos = Vector2( 22.2317, 10.9105 )
 transform/scale = Vector2( 0.0909543, 0.147603 )
-texture = ExtResource( 29 )
+texture = ExtResource( 31 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -6621,14 +6666,17 @@ __meta__ = {
 transform/pos = Vector2( 18.3179, 3.10948 )
 transform/rot = -22.4228
 transform/scale = Vector2( 0.0909543, 0.147603 )
-texture = ExtResource( 30 )
+texture = ExtResource( 32 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="right_arm" type="Sprite" parent="pixel"]
 
 transform/pos = Vector2( 27.4486, 3.21306 )
 transform/rot = 19.8776
 transform/scale = Vector2( 0.0909543, 0.147603 )
-texture = ExtResource( 30 )
+texture = ExtResource( 32 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -6638,7 +6686,7 @@ __meta__ = {
 
 transform/pos = Vector2( 22.4082, 2.93272 )
 transform/scale = Vector2( 0.122058, 0.233854 )
-texture = ExtResource( 31 )
+texture = ExtResource( 33 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -6647,7 +6695,7 @@ __meta__ = {
 
 transform/pos = Vector2( 22.9738, -10.8119 )
 transform/scale = Vector2( 0.122058, 0.233854 )
-texture = ExtResource( 32 )
+texture = ExtResource( 34 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -6666,11 +6714,9 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-
-[node name="town_banner" parent="." instance=ExtResource( 33 )]
-
-transform/pos = Vector2( -4.62777, -24.5135 )
-transform/scale = Vector2( 0.40498, 0.297155 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 

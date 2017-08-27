@@ -1734,13 +1734,11 @@ func buy_soda():
 		var charge_price = supplies.hollyhock_soda_price
 		money.hollyhock_balance = money.hollyhock_balance + charge_price
 		supplies.hollyhock_soda_count = supplies.hollyhock_soda_count - 1
-		supplies.soda_yesterday_used = supplies.soda_yesterday_used + 1
 		money.income = money.income + charge_price
 	if (towns.town_select == "untilly"):
 		var charge_price = supplies.untilly_soda_price
 		money.untilly_balance = money.untilly_balance + charge_price
 		supplies.untilly_soda_count = supplies.untilly_soda_count - 1
-		supplies.soda_yesterday_used = supplies.soda_yesterday_used + 1
 		money.income = money.income + charge_price
 		
 func buy_freezie():
@@ -1748,19 +1746,16 @@ func buy_freezie():
 		var charge_price = supplies.fiyork_freezie_price
 		money.fiyork_balance = money.fiyork_balance + charge_price
 		supplies.fiyork_freezie_count = supplies.fiyork_freezie_count - 1
-		supplies.freezie_yesterday_used = supplies.freezie_yesterday_used + 1
 		money.income = money.income + charge_price
 	if (towns.town_select == "windrow"):
 		var charge_price = supplies.windrow_freezie_price
 		money.windrow_balance = money.windrow_balance + charge_price
 		supplies.windrow_freezie_count = supplies.windrow_freezie_count - 1
-		supplies.freezie_yesterday_used = supplies.freezie_yesterday_used + 1
 		money.income = money.income + charge_price
 	if (towns.town_select == "slatten"):
 		var charge_price = supplies.slatten_freezie_price
 		money.slatten_balance = money.slatten_balance + charge_price
 		supplies.slatten_freezie_count = supplies.slatten_freezie_count - 1
-		supplies.freezie_yesterday_used = supplies.freezie_yesterday_used + 1
 		money.income = money.income + charge_price
 		
 func buy_energy():
@@ -1768,13 +1763,11 @@ func buy_energy():
 		var charge_price = supplies.plansey_energy_price
 		money.plansey_balance = money.plansey_balance + charge_price
 		supplies.plansey_energy_count = supplies.plansey_energy_count - 1
-		supplies.energy_yesterday_used = supplies.energy_yesterday_used + 1
 		money.income = money.income + charge_price
 	if (towns.town_select == "banlon"):
 		var charge_price = supplies.banlon_energy_price
 		money.banlon_balance = money.banlon_balance + charge_price
 		supplies.banlon_energy_count = supplies.banlon_energy_count - 1
-		supplies.energy_yesterday_used = supplies.energy_yesterday_used + 1
 		money.income = money.income + charge_price
 		
 	
@@ -1783,19 +1776,16 @@ func buy_popcorn():
 		var charge_price = supplies.hollyhock_popcorn_price
 		money.hollyhock_balance = money.hollyhock_balance + charge_price
 		supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count - 1
-		supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
 		money.income = money.income + charge_price
 	if (towns.town_select == "untilly"):
 		var charge_price = supplies.untilly_popcorn_price
 		money.untilly_balance = money.untilly_balance + charge_price
 		supplies.untilly_popcorn_count = supplies.untilly_popcorn_count - 1
-		supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
 		money.income = money.income + charge_price
 	if (towns.town_select == "slatten"):
 		var charge_price = supplies.slatten_popcorn_price
 		money.slatten_balance = money.slatten_balance + charge_price
 		supplies.slatten_popcorn_count = supplies.slatten_popcorn_count - 1
-		supplies.popcorn_yesterday_used = supplies.popcorn_yesterday_used + 1
 		money.income = money.income + charge_price
 		
 		
@@ -1804,13 +1794,11 @@ func buy_pizza():
 		var charge_price = supplies.fiyork_pizza_price
 		money.fiyork_balance = money.fiyork_balance + charge_price
 		supplies.fiyork_pizza_count = supplies.fiyork_pizza_count - 1
-		supplies.pizza_yesterday_used = supplies.pizza_yesterday_used + 1
 		money.income = money.income + charge_price
 	if (towns.town_select == "windrow"):
 		var charge_price = supplies.windrow_pizza_price
 		money.windrow_balance = money.windrow_balance + charge_price
 		supplies.windrow_pizza_count = supplies.windrow_pizza_count - 1
-		supplies.pizza_yesterday_used = supplies.pizza_yesterday_used + 1
 		money.income = money.income + charge_price
 		
 func buy_nachos():
@@ -1818,11 +1806,9 @@ func buy_nachos():
 		var charge_price = supplies.plansey_nachos_price
 		money.plansey_balance = money.plansey_balance + charge_price
 		supplies.plansey_nachos_count = supplies.plansey_nachos_count - 1
-		supplies.nachos_yesterday_used = supplies.nachos_yesterday_used + 1
 		money.income = money.income + charge_price
 	if (towns.town_select == "banlon"):
 		var charge_price = supplies.banlon_nachos_price
 		money.banlon_balance = money.banlon_balance + charge_price
 		supplies.banlon_nachos_count = supplies.banlon_nachos_count - 1
-		supplies.nachos_yesterday_used = supplies.nachos_yesterday_used + 1
 		money.income = money.income + charge_price

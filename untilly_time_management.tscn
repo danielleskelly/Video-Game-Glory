@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://untilly_time_management.gd" type="Script" id=1]
 [ext_resource path="res://pixel_arm.png" type="Texture" id=2]
@@ -7,8 +7,7 @@
 [ext_resource path="res://pixel.png" type="Texture" id=5]
 [ext_resource path="res://pixel_torso.png" type="Texture" id=6]
 [ext_resource path="res://flappy_enemy.tscn" type="PackedScene" id=7]
-[ext_resource path="res://button.png" type="Texture" id=8]
-[ext_resource path="res://flappy_enemy_left.tscn" type="PackedScene" id=9]
+[ext_resource path="res://flappy_enemy_left.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -165,7 +164,6 @@ transform/scale = Vector2( 0.184874, 0.120265 )
 
 transform/pos = Vector2( 0, 40.7731 )
 transform/scale = Vector2( 1, 0.184538 )
-texture = ExtResource( 8 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite" groups=[
 "down",
@@ -276,7 +274,7 @@ wait_time = 0.2
 one_shot = true
 autostart = true
 
-[node name="flappy_enemy_left" parent="." instance=ExtResource( 9 )]
+[node name="flappy_enemy_left" parent="." instance=ExtResource( 8 )]
 
 transform/pos = Vector2( -36.7681, -5.19826 )
 transform/rot = 90.0

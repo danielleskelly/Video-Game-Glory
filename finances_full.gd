@@ -128,7 +128,7 @@ func _process(delta):
 		sales_lost_output.add_text(str(customer_globals.sales_lost))
 	if (towns.town_select == "untilly"):
 		goal_output.clear()
-		goal_output.add_text("Have $500")
+		goal_output.add_text("Have $500 \n No Loans")
 		income_output.clear()
 		income_output.add_text(str(money.income))
 		expenses_output.clear()

@@ -1,0 +1,1956 @@
+[gd_scene load_steps=14 format=1]
+
+[ext_resource path="res://tetrus.gd" type="Script" id=1]
+[ext_resource path="res://inner_box.png" type="Texture" id=2]
+[ext_resource path="res://background.png" type="Texture" id=3]
+[ext_resource path="res://tetris_bar.png" type="Texture" id=4]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=5]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=6]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=7]
+[ext_resource path="res://pixel.png" type="Texture" id=8]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=9]
+[ext_resource path="res://outer_box.png" type="Texture" id=10]
+[ext_resource path="res://untilly.ogg" type="AudioStream" id=11]
+[ext_resource path="res://bubble_green.png" type="Texture" id=12]
+[ext_resource path="res://clean_button.png" type="Texture" id=13]
+
+[node name="tetrus" type="Node2D"]
+
+transform/pos = Vector2( 0, 3 )
+script/script = ExtResource( 1 )
+
+[node name="left_border" type="Sprite" parent="."]
+
+transform/pos = Vector2( -44.8138, 622.868 )
+transform/scale = Vector2( 1.79423, 7.40809 )
+texture = ExtResource( 2 )
+
+[node name="right_border" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1030.69, 616.852 )
+transform/scale = Vector2( 1.46951, 6.68412 )
+texture = ExtResource( 2 )
+
+[node name="floor" type="Sprite" parent="."]
+
+transform/pos = Vector2( 533.045, 714.062 )
+transform/scale = Vector2( 9.47773, 1.4334 )
+texture = ExtResource( 2 )
+
+[node name="Sprite80" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite79" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite78" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite77" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite76" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite75" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite74" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite73" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite7 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 53.7808, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite14" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite15" type="Sprite" parent="."]
+
+transform/pos = Vector2( 571.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite57 8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite579" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5803" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5809" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5810" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5811" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5812" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5813" type="Sprite" parent="."]
+
+transform/pos = Vector2( 312.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite53" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite57 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite573" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580 7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5808" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5809 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58097" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58098 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580983" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580987 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 830.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite57 7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite578" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5804" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5809 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58093" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58098 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580984" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580987 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 118.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite54" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite57 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite576" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5806" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5809 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58095" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58098" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58099" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58100" type="Sprite" parent="."]
+
+transform/pos = Vector2( 636.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite43" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite47 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite473" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite476 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4764" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4765 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite47653" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite47654" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite47655" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite47656" type="Sprite" parent="."]
+
+transform/pos = Vector2( 377.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite46" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite47" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite48" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite49" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite50" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite51" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite52" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite63" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite64" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite65" type="Sprite" parent="."]
+
+transform/pos = Vector2( 895.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite57" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite59" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite60" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite61" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite62" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite63 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite633" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite634" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite55" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite57 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite577" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5805" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5809 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58094" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58098 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580985" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580987 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite44" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite47 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite474" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite476" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite477" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite478" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite479" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite480" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite481" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite482" type="Sprite" parent="."]
+
+transform/pos = Vector2( 442.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite46 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite463" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite464" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite465" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite466" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite467" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite468" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite469" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite470" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite471" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite57 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite574" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5807" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5809 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58096" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite58098 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580986" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580987" type="Sprite" parent="."]
+
+transform/pos = Vector2( 247.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite56" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite57 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite575" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite580" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite581" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite582" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite583" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite584" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite585" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite586" type="Sprite" parent="."]
+
+transform/pos = Vector2( 765.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite45" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 542.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite47 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 485.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite475" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 428.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite476 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 371.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4763" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 314.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4765" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 257.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4766" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 200.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4767" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 143.417 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4768" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 86.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4769" type="Sprite" parent="."]
+
+transform/pos = Vector2( 506.781, 29.4168 )
+transform/scale = Vector2( 0.0510734, 0.0561524 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="block" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 451.435, -104.726 )
+transform/scale = Vector2( 0.329216, 0.357722 )
+texture = ExtResource( 4 )
+
+[node name="blocks" type="Node2D" parent="."]
+
+transform/pos = Vector2( 451.435, -104.726 )
+transform/scale = Vector2( 0.329216, 0.357722 )
+
+[node name="down_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.75
+one_shot = true
+autostart = false
+
+[node name="left_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = true
+autostart = false
+
+[node name="right_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = true
+autostart = false
+
+[node name="rotate_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = true
+autostart = false
+
+[node name="pixel" type="Node2D" parent="."]
+
+transform/pos = Vector2( 896.005, 85.8843 )
+transform/scale = Vector2( 1, 0.894361 )
+
+[node name="Sprite3" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -13.3552, 3.51987 )
+transform/rot = -33.1359
+transform/scale = Vector2( 0.305876, 0.293837 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 12.004, 3.51987 )
+transform/rot = 35.151
+transform/scale = Vector2( 0.305876, 0.293837 )
+texture = ExtResource( 5 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -2.35089, 16.4596 )
+transform/scale = Vector2( 0.22147, 0.288997 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite1" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -2.10706, 3.81402 )
+transform/scale = Vector2( 0.294621, 0.345609 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -1.13171, -16.9065 )
+transform/scale = Vector2( 0.294621, 0.345609 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pixel_button" type="LinkButton" parent="pixel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -20.0
+margin/top = -28.0
+margin/right = 20.0
+margin/bottom = 30.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="countdown_timer" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.75, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 163.0
+margin/top = 239.0
+margin/right = 254.0
+margin/bottom = 293.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "000"
+visible_characters = -1
+
+[node name="day_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="success_background" type="Sprite" parent="."]
+
+transform/pos = Vector2( 701.696, 428.098 )
+transform/scale = Vector2( 0.349416, 0.247503 )
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( -45.603, 25.9886 )
+transform/scale = Vector2( 0.291456, 0.627119 )
+texture = ExtResource( 2 )
+
+[node name="Sprite1" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( 0.376953, 25.9886 )
+transform/scale = Vector2( 0.291456, 0.627119 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( 46.3568, 25.9886 )
+transform/scale = Vector2( 0.291456, 0.627119 )
+texture = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -58.0
+margin/top = -74.0
+margin/right = 82.0
+margin/bottom = 0.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Points"
+visible_characters = -1
+
+[node name="hundreths" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -58.0
+margin/top = 6.0
+margin/right = -20.0
+margin/bottom = 80.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+
+[node name="tens" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -12.0
+margin/top = 6.0
+margin/right = 26.0
+margin/bottom = 80.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+
+[node name="ones" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 34.0
+margin/top = 6.0
+margin/right = 72.0
+margin/bottom = 80.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+
+[node name="StreamPlayer" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 11 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
+
+[node name="menu" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 350.851, 318.449 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.487118, 0.451745 )
+texture = ExtResource( 12 )
+flip_v = true
+
+[node name="button" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 312.628, 231.501 )
+transform/scale = Vector2( 0.871028, 0.385227 )
+texture = ExtResource( 13 )
+flip_v = true
+
+[node name="button1" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 312.628, 345.501 )
+transform/scale = Vector2( 0.871028, 0.385227 )
+texture = ExtResource( 13 )
+flip_v = true
+
+[node name="button2" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 318.208, 452.501 )
+transform/scale = Vector2( 1.00835, 0.385227 )
+texture = ExtResource( 13 )
+flip_v = true
+
+[node name="sound" type="RichTextLabel" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 245.0
+margin/top = 48.0
+margin/right = 380.0
+margin/bottom = 100.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Sound"
+visible_characters = -1
+
+[node name="sound_slider" type="HSlider" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 143.0
+margin/top = 117.0
+margin/right = 480.0
+margin/bottom = 133.0
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="return_to_game" type="LinkButton" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 154.0
+margin/top = 210.0
+margin/right = 470.0
+margin/bottom = 257.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return To Game"
+underline = 2
+
+[node name="return_to_village" type="LinkButton" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 151.0
+margin/top = 324.0
+margin/right = 483.0
+margin/bottom = 371.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return To Village"
+underline = 2
+
+[node name="return_to_main_menu" type="LinkButton" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 119.0
+margin/top = 431.0
+margin/right = 525.0
+margin/bottom = 478.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return To Main Menu"
+underline = 2
+
+[node name="are_you_sure" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="are_you_sure"]
+
+transform/pos = Vector2( 322.209, 294.708 )
+transform/scale = Vector2( 2.69048, 1.9945 )
+texture = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 151.0
+margin/top = 145.0
+margin/right = 505.0
+margin/bottom = 338.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Are you sure you want to return to the village?"
+visible_characters = -1
+
+[node name="yes_village" type="LinkButton" parent="are_you_sure"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 373.0
+margin/top = 367.0
+margin/right = 470.0
+margin/bottom = 422.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Yes"
+underline = 2
+
+[node name="no_village" type="LinkButton" parent="are_you_sure"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 191.0
+margin/top = 367.0
+margin/right = 288.0
+margin/bottom = 422.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "No"
+underline = 2
+
+[node name="are_you_sure_2" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+
+[node name="background" type="Sprite" parent="are_you_sure_2"]
+
+transform/pos = Vector2( 322.209, 294.708 )
+transform/scale = Vector2( 2.69048, 1.9945 )
+texture = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure_2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 151.0
+margin/top = 145.0
+margin/right = 505.0
+margin/bottom = 338.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Are you sure you want to return to the main menu?"
+visible_characters = -1
+
+[node name="yes_main" type="LinkButton" parent="are_you_sure_2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 373.0
+margin/top = 367.0
+margin/right = 470.0
+margin/bottom = 422.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Yes"
+underline = 2
+
+[node name="no_main" type="LinkButton" parent="are_you_sure_2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 191.0
+margin/top = 367.0
+margin/right = 288.0
+margin/bottom = 422.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "No"
+underline = 2
+
+[connection signal="timeout" from="down_timer" to="." method="_on_down_timer_timeout"]
+
+[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
+
+[connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
+
+[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
+
+[connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
+
+[connection signal="button_down" from="menu/return_to_village" to="." method="_on_return_to_village_button_down"]
+
+[connection signal="button_down" from="menu/return_to_main_menu" to="." method="_on_return_to_main_menu_button_down"]
+
+[connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
+
+[connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
+
+[connection signal="button_down" from="are_you_sure_2/yes_main" to="." method="_on_yes_main_button_down"]
+
+[connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
+
+

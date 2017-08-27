@@ -6,7 +6,7 @@
 [ext_resource path="res://customer_six.png" type="Texture" id=4]
 [ext_resource path="res://pixel.png" type="Texture" id=5]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=6]
-[ext_resource path="res://button.png" type="Texture" id=7]
+[ext_resource path="res://clean_button.png" type="Texture" id=7]
 [ext_resource path="res://player_select.ogg" type="AudioStream" id=8]
 [ext_resource path="res://music.png" type="Texture" id=9]
 [ext_resource path="res://no_music.png" type="Texture" id=10]
@@ -172,6 +172,9 @@ autoplay = "title_page"
 transform/pos = Vector2( -0.22974, 0.307449 )
 transform/scale = Vector2( 0.0997623, 0.161618 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="queue" type="Sprite" parent="."]
 
@@ -198,15 +201,15 @@ texture = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.19, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -30.0
-margin/top = -12.0
-margin/right = 231.0
-margin/bottom = 23.0
+margin/left = -23.0
+margin/top = -14.0
+margin/right = 419.0
+margin/bottom = 50.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = true
@@ -216,8 +219,8 @@ visible_characters = -1
 [node name="new" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( -11.7978, 13.6223 )
-transform/scale = Vector2( 0.0438577, 0.0613363 )
+transform/pos = Vector2( -11.5522, 13.1683 )
+transform/scale = Vector2( 0.0188435, 0.0302709 )
 texture = ExtResource( 7 )
 
 [node name="new" type="RichTextLabel" parent="new"]
@@ -227,18 +230,15 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -78.0
-margin/top = -30.0
-margin/right = -6.0
-margin/bottom = 6.0
+margin/left = -106.0
+margin/top = -42.0
+margin/right = 4.0
+margin/bottom = 8.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "NEW"
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="new_button" type="LinkButton" parent="new"]
 
@@ -259,9 +259,8 @@ __meta__ = {
 
 [node name="load" type="Sprite" parent="."]
 
-editor/display_folded = true
-transform/pos = Vector2( 0.00701904, 13.7009 )
-transform/scale = Vector2( 0.0441717, 0.0558981 )
+transform/pos = Vector2( -1.32544, 13.2055 )
+transform/scale = Vector2( 0.0180672, 0.0303931 )
 texture = ExtResource( 7 )
 
 [node name="load" type="RichTextLabel" parent="load"]
@@ -271,18 +270,15 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -85.0
-margin/top = -33.0
-margin/right = -3.0
-margin/bottom = 20.0
+margin/left = -125.0
+margin/top = -51.0
+margin/right = 12.0
+margin/bottom = 2.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "LOAD"
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="load_button" type="LinkButton" parent="load"]
 
@@ -304,9 +300,8 @@ __meta__ = {
 
 [node name="quit" type="Sprite" parent="."]
 
-editor/display_folded = true
-transform/pos = Vector2( 11.5316, 13.7009 )
-transform/scale = Vector2( 0.0441717, 0.0558981 )
+transform/pos = Vector2( 9.04633, 13.1224 )
+transform/scale = Vector2( 0.0204308, 0.0305331 )
 texture = ExtResource( 7 )
 
 [node name="load" type="RichTextLabel" parent="quit"]
@@ -316,18 +311,15 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -85.0
-margin/top = -33.0
+margin/left = -113.0
+margin/top = -42.0
 margin/right = -3.0
-margin/bottom = 20.0
+margin/bottom = 11.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "QUIT"
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="quit_button" type="LinkButton" parent="quit"]
 
@@ -349,15 +341,15 @@ __meta__ = {
 
 [node name="skip" type="LinkButton" parent="."]
 
-rect/scale = Vector2( 0.2, 0.2 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -20.0
-margin/top = 26.0
-margin/right = 36.0
-margin/bottom = 58.0
+margin/top = 27.0
+margin/right = 63.0
+margin/bottom = 74.0
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.182339, 0.699219, 0.163879, 1 )
 toggle_mode = false

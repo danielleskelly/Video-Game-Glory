@@ -24,7 +24,6 @@ func _process(delta):
 		left_move = true
 		right_move = true
 	for x in colliders:
-		print(x.get_name())
 		if x.is_in_group("down") == true:
 			down_move = false
 		elif x.is_in_group("up") == true:

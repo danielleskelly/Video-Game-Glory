@@ -59,7 +59,7 @@ func perk_check():
 				money.hollyhock_balance = money.hollyhock_balance + 25
 				
 func pixel_small():
-	pixel.set_pos(Vector2(15.587059, 31.145905))
+	pixel.set_pos(Vector2(13.019382, 31.225857))
 	pixel.set_scale(Vector2(1.490551, 1.481762))
 	
 func pixel_big():
@@ -103,6 +103,7 @@ func _on_return_to_village_button_down():
 func _on_yes_village_button_down():
 	get_node("menu").set_hidden(true)
 	perk_check()
+	get_tree().set_pause(false)
 	get_tree().change_scene("res://strategy.tscn")
 
 

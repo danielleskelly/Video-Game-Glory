@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://news.gd" type="Script" id=1]
-[ext_resource path="res://potential_background.png" type="Texture" id=2]
+[ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://genre_bubble.png" type="Texture" id=4]
 [ext_resource path="res://meta_genre.png" type="Texture" id=5]
@@ -11,9 +11,6 @@
 transform/pos = Vector2( 511.609, 299.032 )
 transform/scale = Vector2( 15.988, 9.34513 )
 script/script = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="background" type="Sprite" parent="."]
 
@@ -26,15 +23,15 @@ __meta__ = {
 
 [node name="todays_news" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -30.0
 margin/top = -28.0
-margin/right = 385.0
-margin/bottom = 8.0
+margin/right = 589.0
+margin/bottom = 30.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -43,15 +40,15 @@ visible_characters = -1
 
 [node name="ascii" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
+margin/left = -26.0
 margin/top = -21.0
-margin/right = 487.0
-margin/bottom = 27.0
+margin/right = 673.0
+margin/bottom = 272.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -60,15 +57,15 @@ visible_characters = -1
 
 [node name="ascii2" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
+margin/left = -26.0
 margin/top = -21.0
-margin/right = 484.0
-margin/bottom = 27.0
+margin/right = 677.0
+margin/bottom = 184.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -77,15 +74,15 @@ visible_characters = -1
 
 [node name="ascii3" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
+margin/left = -26.0
 margin/top = -21.0
-margin/right = 466.0
-margin/bottom = 31.0
+margin/right = 748.0
+margin/bottom = 153.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -94,15 +91,15 @@ visible_characters = -1
 
 [node name="ascii4" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.075 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
+margin/left = -26.0
 margin/top = -21.0
-margin/right = 483.0
-margin/bottom = 29.0
+margin/right = 847.0
+margin/bottom = 58.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -111,32 +108,32 @@ visible_characters = -1
 
 [node name="game_forecast_output_one" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -7.0
-margin/top = -13.0
-margin/right = 321.0
-margin/bottom = 122.0
+margin/left = -2.0
+margin/top = -11.0
+margin/right = 320.0
+margin/bottom = 136.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
-bbcode/bbcode = ""
+bbcode/bbcode = "Meta %55"
 visible_characters = -1
 
 [node name="game_forecast_output_two" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -9.0
-margin/top = 1.0
-margin/right = 276.0
-margin/bottom = 108.0
+margin/left = -2.0
+margin/top = 4.0
+margin/right = 321.0
+margin/bottom = 179.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -145,15 +142,15 @@ visible_characters = -1
 
 [node name="game_forecast_output_three" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -9.0
-margin/top = 17.0
-margin/right = 279.0
-margin/bottom = 133.0
+margin/left = -2.0
+margin/top = 19.0
+margin/right = 314.0
+margin/bottom = 174.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -162,40 +159,37 @@ visible_characters = -1
 
 [node name="genre_one_background" type="Sprite" parent="."]
 
-transform/pos = Vector2( -17.1437, -8.76491 )
+transform/pos = Vector2( -10.7471, -8.76491 )
 transform/scale = Vector2( 0.00703348, 0.00970793 )
 texture = ExtResource( 4 )
 
 [node name="genre_one_background1" type="Sprite" parent="."]
 
-transform/pos = Vector2( -16.7502, 5.78243 )
+transform/pos = Vector2( -10.6394, 6.02556 )
 transform/scale = Vector2( 0.00717702, 0.0101124 )
 texture = ExtResource( 4 )
 
 [node name="genre_one_background2" type="Sprite" parent="."]
 
-transform/pos = Vector2( -16.6712, 21.138 )
+transform/pos = Vector2( -10.5604, 21.3811 )
 transform/scale = Vector2( 0.00674641, 0.0101124 )
 texture = ExtResource( 4 )
 
 [node name="genre_one_icon" type="Sprite" parent="."]
 
-transform/pos = Vector2( -17.1615, -7.42911 )
+transform/pos = Vector2( -10.9086, -7.42911 )
 transform/scale = Vector2( 0.344292, 0.525729 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="genre_two_icon" type="Sprite" parent="."]
 
-transform/pos = Vector2( -16.9555, 6.79459 )
+transform/pos = Vector2( -10.8892, 7.03772 )
 transform/scale = Vector2( 0.330715, 0.508843 )
 texture = ExtResource( 5 )
 
 [node name="genre_three_icon" type="Sprite" parent="."]
 
-transform/pos = Vector2( -16.8948, 22.105 )
+transform/pos = Vector2( -10.8892, 22.3481 )
 transform/scale = Vector2( 0.325204, 0.534857 )
 texture = ExtResource( 5 )
 

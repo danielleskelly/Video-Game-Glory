@@ -4,32 +4,13 @@ var ball_pos
 const ball_speed = 30
 var colliders
 var direction
-var paddle
-var paddle_size
-var left_wall
-var left_wall_size
-var right_wall
-var right_wall_size
-var floor_
-var floor_size
-var roof
-var roof_size
+
 
 func _ready():
-	paddle_size = get_tree().get_current_scene().get_node("paddle").get_texture().get_size()
-	left_wall_size = get_tree().get_current_scene().get_node("left_wall").get_size()
-	right_wall_size = get_tree().get_current_scene().get_node("right_wall").get_size()
-	floor_size = get_tree().get_current_scene().get_node("floor").get_size()
-	roof_size = get_tree().get_current_scene().get_node("roof").get_size()
-	direction = Vector2(0.5, 1.0)
-	set_process(true)
+	
 	
 func _process(delta):
-	paddle = Rect2(get_tree().get_current_scene().get_node("paddle").get_pos() - paddle_size*.05, paddle_size)
-	left_wall = Rect2(get_tree().get_current_scene().get_node("left_wall").get_pos() - left_wall_size*.05, left_wall_size)
-	right_wall = Rect2(get_tree().get_current_scene().get_node("right_wall").get_pos() - right_wall_size*.05, right_wall_size)
-	floor_ = Rect2(get_tree().get_current_scene().get_node("floor").get_pos() - floor_size*.05, floor_size)
-	roof = Rect2(get_tree().get_current_scene().get_node("roof").get_pos() - roof_size*.05, roof_size)
+	
 	ball_pos = get_pos()
 	ball_pos += direction * delta * ball_speed
 	set_pos(ball_pos)
