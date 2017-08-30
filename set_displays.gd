@@ -115,11 +115,11 @@ func set_that_shit():
 		genre_one_name = "Strategy"
 		genre_one_icon = load("res://meta_genre.png")
 		genre_two_count = customer_math.shooter_prediction
-		genre_two_key = customer_math.banlon_genre_two_key
+		genre_two_key = banlon.banlon_genre_two_key
 		genre_two_name = "Shooter"
 		genre_three_count = customer_math.adventure_prediction
 		genre_three_name = "Adventure"
-		genre_three_key = customer_math.banlon_genre_three_key
+		genre_three_key = banlon.banlon_genre_three_key
 	if (towns.town_select == "slatten"):
 		supply_one_count = supplies.slatten_freezie_count
 		supply_one_name = "Freezie"

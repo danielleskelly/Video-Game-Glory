@@ -169,7 +169,7 @@ func _process(delta):
 		stock_output.add_text(str(supplies.banlon_energy_count))
 		total_output.clear()
 		total_output.add_text(str(energy_purchase + supplies.banlon_energy_count))
-		if (supplies.banlon_energy_purchase_price > (supplies.energy_range_high / 2)):
+		if (supplies.daily_energy_purchase_price > (supplies.energy_range_high / 2)):
 			price_output_black.set_hidden(true)
 			price_output_red.show()
 			price_output_green.set_hidden(true)

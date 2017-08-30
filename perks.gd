@@ -6,8 +6,8 @@ var perk
 var success = 000
 var perk_final_count = 0
 var fiyork_array = []
-var windrow_array
-var slatten_array
+var windrow_array = []
+var slatten_array = []
 
 
 
@@ -33,8 +33,7 @@ func perks():
 			fiyork_array = [1,2,3,4,5,6]
 		randomize()
 		perk_num = fiyork_array[randi() % fiyork_array.size()]
-	elif (towns.town_select == "windrow"):
-		windrow_array = [1,2,3,4,5,6]
+	if (towns.town_select == "windrow"):
 		if (windrow.windrow_arcade_sabatoge_key == true):
 			windrow_array.append(7)
 			windrow_array.append(7)
@@ -47,6 +46,8 @@ func perks():
 		if (windrow.windrow_advertising_sabatoge_key == true):
 			windrow_array.append(10)
 			windrow_array.append(10)
+		elif (windrow.windrow_arcade_sabatoge_key == false) and (windrow.windrow_entertainment_sabatoge_key == false) and (windrow.windrow_storefront_sabatoge_key == false) and (windrow.windrow_advertising_sabatoge_key == false):
+			windrow_array = [1,2,3,4,5,6]
 		randomize()
 		perk_num = windrow_array[randi() % windrow_array.size()]
 	elif (towns.town_select == "slatten"):

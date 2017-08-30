@@ -1,0 +1,837 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://qbert.gd" type="Script" id=1]
+[ext_resource path="res://inner_box.png" type="Texture" id=2]
+[ext_resource path="res://potential_background.png" type="Texture" id=3]
+[ext_resource path="res://pixel.png" type="Texture" id=4]
+
+[node name="qbert" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="zerozero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 496.183, 51.9225 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerozero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 496.298, 51.8494 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onezero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 460.298, 88.8494 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twozero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 427.298, 125.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threezero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 394.298, 162.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourzero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 361.298, 199.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivezero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 328.298, 236.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixzero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 295.298, 273.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenzero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 262.298, 310.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerofour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 653.298, 195.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onefour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 620.298, 232.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twofour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 587.298, 269.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threefour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 554.298, 306.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourfour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 521.298, 343.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivefour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 488.298, 380.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixfour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 455.298, 417.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenfour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 422.298, 454.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerotwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 573.162, 123.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onetwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 540.162, 160.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twotwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 507.162, 197.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threetwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 474.162, 234.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourtwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 441.162, 271.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivetwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 408.162, 308.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixtwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 375.162, 345.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="seventwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 342.162, 382.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerosix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 733.162, 267.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onesix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 700.162, 304.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twosix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 667.162, 341.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threesix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 634.162, 378.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="foursix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 601.162, 415.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivesix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 568.162, 452.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixsix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 535.162, 489.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevensix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 502.162, 526.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zeroone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 532.94, 87.9189 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="oneone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 499.94, 124.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twoone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 466.94, 161.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threeone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 433.94, 198.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 400.94, 235.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fiveone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 367.94, 272.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 334.94, 309.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 301.94, 346.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerofive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 692.94, 231.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onefive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 659.94, 268.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twofive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 626.94, 305.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threefive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 593.94, 342.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourfive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 560.94, 379.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivefive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 527.94, 416.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixfive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 494.94, 453.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenfive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 461.94, 490.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerothree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 613.745, 159.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onethree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 580.745, 196.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twothree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 547.745, 233.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threethree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 514.745, 270.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourthree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 481.745, 307.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivethree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448.745, 344.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixthree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 415.745, 381.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="seventhree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 382.745, 418.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zeroseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 773.745, 303.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="oneseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 740.745, 340.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twoseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 707.745, 377.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threeseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 674.745, 414.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 641.745, 451.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fiveseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 608.745, 488.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 575.745, 525.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 542.745, 562.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourzero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 361.183, 199.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twozero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 427.183, 125.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixzero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 295.183, 273.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onezero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 460.183, 88.9225 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivezero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 328.183, 236.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threezero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 394.183, 162.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevenzero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 262.183, 310.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerofour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 653.183, 195.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fourfour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 521.183, 343.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twofour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 587.183, 269.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixfour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 455.183, 417.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onefour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 620.183, 232.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivefour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 488.183, 380.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threefour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 554.183, 306.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevenfour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 422.183, 454.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerotwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 573.183, 123.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fourtwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 441.183, 271.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twotwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 507.183, 197.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixtwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 375.183, 345.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onetwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 540.183, 160.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivetwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 408.183, 308.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threetwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 474.183, 234.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="seventwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 342.183, 382.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerosix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 733.183, 267.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="foursix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 601.183, 415.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twosix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 667.183, 341.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixsix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 535.183, 489.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onesix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 700.183, 304.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivesix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 568.183, 452.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threesix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 634.183, 378.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevensix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 502.183, 526.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zeroone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 533.183, 87.9225 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fourone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 401.183, 235.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twoone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 467.183, 161.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 335.183, 309.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="oneone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 500.183, 124.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fiveone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 368.183, 272.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threeone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 434.183, 198.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevenone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 302.183, 346.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerofive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 693.183, 231.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fourfive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 561.183, 379.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twofive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 627.183, 305.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixfive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 495.183, 453.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onefive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 660.183, 268.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivefive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 528.183, 416.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threefive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 594.183, 342.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevenfive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 462.183, 490.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerothree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 613.183, 159.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fourthree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 481.183, 307.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twothree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 547.183, 233.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixthree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 415.183, 381.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onethree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 580.183, 196.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivethree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448.183, 344.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threethree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 514.183, 270.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="seventhree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 382.183, 418.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zeroseven_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 773.183, 303.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fourseven_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 641.183, 451.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twoseven_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 707.183, 377.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixseven_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 575.183, 525.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="oneseven_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 740.183, 340.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fiveseven_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 608.183, 488.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threeseven_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 674.183, 414.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevenseven_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 542.183, 562.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="bert" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bert"]
+
+transform/pos = Vector2( 929.89, 517.153 )
+transform/scale = Vector2( 0.673879, 0.584216 )
+texture = ExtResource( 4 )
+
+[node name="left_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="right_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="up_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="down_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+

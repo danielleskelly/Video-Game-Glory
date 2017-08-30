@@ -1,5 +1,23 @@
 extends Node2D
 
+onready var countdown_timer = get_node("countdown_timer")
+
+var new_volume
+
+var hundreds
+var tens
+var ones
+
+var customer_choice
+var price_choice
+var randomness
+var rand_arcade_price
+var concession_choice
+var concessions_desire
+var concessions_price_check
+
+onready var pixel = get_node("pixel")
+
 var five_texture = preload("res://tetris_s.png")
 var four_texture = preload("res://tetris_knight.png")
 var three_texture = preload("res://tetris_square.png")
@@ -19,12 +37,20 @@ var right_move
 var matrix = []
 
 func _ready():
+	pixel_small()
+	get_node("StreamPlayer").set_volume(sound.volume)
 	paddle = get_node("paddle")
 	ball = get_node("ball")
 	set_about()
 	set_process(true)
 	
 func _process(delta):
+	hundreds = get_node("success_background/hundreths")
+	tens = get_node("success_background/tens")
+	ones = get_node("success_background/ones")
+	point_display()
+	countdown_timer.clear()
+	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
 	set_stuff()
 	ball_where = ball.get_pos()
 	ball_where += delta * ball_dir * ball_speed
@@ -54,11 +80,14 @@ func _process(delta):
 			get_node("bounce_timer").start()
 			if perks.success >= 5:
 				perks.success = perks.success - 5
+		if x.is_in_group("roof") == true and get_node("bounce_timer").get_time_left() == 0:
+			ball_dir.y = -ball_dir.y
+			get_node("bounce_timer").start()
 		if x.get_name() == "zerozero" and get_node("bounce_timer").get_time_left() == 0:
 			if matrix[0][0] == 1:
 				matrix[0][0] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[0][0] > 1:
 				matrix[0][0] -= 1
 				ball_dir.y = -ball_dir.y
@@ -69,7 +98,7 @@ func _process(delta):
 			if matrix[0][1] == 1:
 				matrix[0][1] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[0][1] > 1:
 				matrix[0][1] -= 1
 				ball_dir.y = -ball_dir.y
@@ -80,7 +109,7 @@ func _process(delta):
 			if matrix[0][2] == 1:
 				matrix[0][2] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[0][2] > 1:
 				matrix[0][2] -= 1
 				ball_dir.y = -ball_dir.y
@@ -91,7 +120,7 @@ func _process(delta):
 			if matrix[0][3] == 1:
 				matrix[0][3] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[0][3] > 1:
 				matrix[0][3] -= 1
 				ball_dir.y = -ball_dir.y
@@ -102,7 +131,7 @@ func _process(delta):
 			if matrix[0][4] == 1:
 				matrix[0][4] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[0][4] > 1:
 				matrix[0][4] -= 1
 				ball_dir.y = -ball_dir.y
@@ -113,7 +142,7 @@ func _process(delta):
 			if matrix[0][5] == 1:
 				matrix[0][5] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[0][5] > 1:
 				matrix[0][5] -= 1
 				ball_dir.y = -ball_dir.y
@@ -124,7 +153,7 @@ func _process(delta):
 			if matrix[0][6] == 1:
 				matrix[0][6] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[0][6] > 1:
 				matrix[0][6] -= 1
 				ball_dir.y = -ball_dir.y
@@ -135,7 +164,7 @@ func _process(delta):
 			if matrix[0][7] == 1:
 				matrix[0][7] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[0][7] > 1:
 				matrix[0][7] -= 1
 				ball_dir.y = -ball_dir.y
@@ -146,7 +175,7 @@ func _process(delta):
 			if matrix[1][0] == 1:
 				matrix[1][0] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[1][0] > 1:
 				matrix[1][0] -= 1
 				ball_dir.y = -ball_dir.y
@@ -157,7 +186,7 @@ func _process(delta):
 			if matrix[1][1] == 1:
 				matrix[1][1] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[1][1] > 1:
 				matrix[1][1] -= 1
 				ball_dir.y = -ball_dir.y
@@ -168,7 +197,7 @@ func _process(delta):
 			if matrix[1][2] == 1:
 				matrix[1][2] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[1][2] > 1:
 				matrix[1][2] -= 1
 				ball_dir.y = -ball_dir.y
@@ -179,7 +208,7 @@ func _process(delta):
 			if matrix[1][3] == 1:
 				matrix[1][3] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[1][3] > 1:
 				matrix[1][3] -= 1
 				ball_dir.y = -ball_dir.y
@@ -190,7 +219,7 @@ func _process(delta):
 			if matrix[1][4] == 1:
 				matrix[1][4] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[1][4] > 1:
 				matrix[1][4] -= 1
 				ball_dir.y = -ball_dir.y
@@ -201,7 +230,7 @@ func _process(delta):
 			if matrix[1][5] == 1:
 				matrix[1][5] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[1][5] > 1:
 				matrix[1][5] -= 1
 				ball_dir.y = -ball_dir.y
@@ -212,7 +241,7 @@ func _process(delta):
 			if matrix[1][6] == 1:
 				matrix[1][6] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[1][6] > 1:
 				matrix[1][6] -= 1
 				ball_dir.y = -ball_dir.y
@@ -223,7 +252,7 @@ func _process(delta):
 			if matrix[1][7] == 1:
 				matrix[1][7] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[1][7] > 1:
 				matrix[1][7] -= 1
 				ball_dir.y = -ball_dir.y
@@ -234,7 +263,7 @@ func _process(delta):
 			if matrix[2][0] == 1:
 				matrix[2][0] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[2][0] > 1:
 				matrix[2][0] -= 1
 				ball_dir.y = -ball_dir.y
@@ -245,7 +274,7 @@ func _process(delta):
 			if matrix[2][1] == 1:
 				matrix[2][1] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[2][1] > 1:
 				matrix[2][1] -= 1
 				ball_dir.y = -ball_dir.y
@@ -256,7 +285,7 @@ func _process(delta):
 			if matrix[2][2] == 1:
 				matrix[2][2] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[2][2] > 1:
 				matrix[2][2] -= 1
 				ball_dir.y = -ball_dir.y
@@ -267,7 +296,7 @@ func _process(delta):
 			if matrix[2][3] == 1:
 				matrix[2][3] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[2][3] > 1:
 				matrix[2][3] -= 1
 				ball_dir.y = -ball_dir.y
@@ -278,7 +307,7 @@ func _process(delta):
 			if matrix[2][4] == 1:
 				matrix[2][4] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[2][4] > 1:
 				matrix[2][4] -= 1
 				ball_dir.y = -ball_dir.y
@@ -289,7 +318,7 @@ func _process(delta):
 			if matrix[2][5] == 1:
 				matrix[2][5] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[2][5] > 1:
 				matrix[2][5] -= 1
 				ball_dir.y = -ball_dir.y
@@ -300,7 +329,7 @@ func _process(delta):
 			if matrix[2][6] == 1:
 				matrix[2][6] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[2][6] > 1:
 				matrix[2][6] -= 1
 				ball_dir.y = -ball_dir.y
@@ -311,7 +340,7 @@ func _process(delta):
 			if matrix[2][7] == 1:
 				matrix[2][7] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[2][7] > 1:
 				matrix[2][7] -= 1
 				ball_dir.y = -ball_dir.y
@@ -322,7 +351,7 @@ func _process(delta):
 			if matrix[3][0] == 1:
 				matrix[3][0] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[3][0] > 1:
 				matrix[3][0] -= 1
 				ball_dir.y = -ball_dir.y
@@ -333,7 +362,7 @@ func _process(delta):
 			if matrix[3][1] == 1:
 				matrix[3][1] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[3][1] > 1:
 				matrix[3][1] -= 1
 				ball_dir.y = -ball_dir.y
@@ -344,7 +373,7 @@ func _process(delta):
 			if matrix[3][2] == 1:
 				matrix[3][2] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[3][2] > 1:
 				matrix[3][2] -= 1
 				ball_dir.y = -ball_dir.y
@@ -355,7 +384,7 @@ func _process(delta):
 			if matrix[3][3] == 1:
 				matrix[3][3] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[3][3] > 1:
 				matrix[3][3] -= 1
 				ball_dir.y = -ball_dir.y
@@ -366,7 +395,7 @@ func _process(delta):
 			if matrix[3][4] == 1:
 				matrix[3][4] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[3][4] > 1:
 				matrix[3][4] -= 1
 				ball_dir.y = -ball_dir.y
@@ -377,7 +406,7 @@ func _process(delta):
 			if matrix[3][5] == 1:
 				matrix[3][5] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[3][5] > 1:
 				matrix[3][5] -= 1
 				ball_dir.y = -ball_dir.y
@@ -388,7 +417,7 @@ func _process(delta):
 			if matrix[3][6] == 1:
 				matrix[3][6] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[3][6] > 1:
 				matrix[3][6] -= 1
 				ball_dir.y = -ball_dir.y
@@ -399,7 +428,7 @@ func _process(delta):
 			if matrix[3][7] == 1:
 				matrix[3][7] -= 1
 				ball_dir.y = -ball_dir.y
-				perks.success = perks.success + 5
+				perks.success = perks.success + 2
 			elif matrix[3][7] > 1:
 				matrix[3][7] -= 1
 				ball_dir.y = -ball_dir.y
@@ -813,3 +842,104 @@ func check_matrix():
 			matrix[2][x] = 3
 		for x in range(0,8):
 			matrix[3][x] = 2
+			
+func point_display():
+		var one_ones_digit = ((perks.success)) % 10
+		var one_tens_digit = ((perks.success) / 10) % 10
+		var one_hunds_digit = ((perks.success) / 100) % 10
+		hundreds.clear()
+		hundreds.add_text(str(one_hunds_digit))
+		tens.clear()
+		tens.add_text(str(one_tens_digit))
+		ones.clear()
+		ones.add_text(str(one_ones_digit))
+
+
+func pixel_small():
+	pixel.set_pos(Vector2(0, 0.022343))
+	pixel.set_scale(Vector2(1, 1))
+
+
+func pixel_big():
+	pixel.set_pos(Vector2(-66.139618, -57.205349))
+	pixel.set_scale(Vector2(3.066863, 2.788365))
+
+func _on_day_timer_timeout():
+	perk_check()
+	get_tree().change_scene("res://strategy.tscn")
+
+
+func perk_check():
+	if (towns.town_select == "fiyork"):
+		if (int(perks.perk_goal) <= int(perks.success)):
+			if (perks.perk_num == 1):
+				supplies.fiyork_freezie_count = supplies.fiyork_freezie_count + 5
+				supplies.fiyork_pizza_count = supplies.fiyork_pizza_count + 5
+			elif (perks.perk_num == 2):
+				customer_math.fiyork_player_marketshare = int(customer_math.fiyork_player_marketshare) + .1
+			elif (perks.perk_num == 3):
+				money.fiyork_balance = money.fiyork_balance + 50
+			elif (perks.perk_num == 4):
+				supplies.fiyork_freezie_count = supplies.fiyork_freezie_count + 10
+				supplies.fiyork_pizza_count = supplies.fiyork_pizza_count + 10
+			elif (perks.perk_num == 5):
+				supplies.fiyork_freezie_count = supplies.fiyork_freezie_count + 20
+				supplies.fiyork_pizza_count = supplies.fiyork_pizza_count + 20
+			elif (perks.perk_num == 6):
+				money.fiyork_balance = money.fiyork_balance + 25
+			elif (perks.perk_num == 7):
+				fiyork.fiyork_arcade_sabatoge_key = false
+			elif (perks.perk_num == 8):
+				fiyork.fiyork_entertainment_sabatoge_key = false
+			elif (perks.perk_num == 9):
+				fiyork.fiyork_storefront_sabatoge_key = false
+			elif (perks.perk_num == 10):
+				fiyork.fiyork_advertising_sabatoge_key = false
+
+
+func _on_pixel_button_button_down():
+	pixel_big()
+	get_tree().set_pause(true)
+	get_node("menu").set_hidden(false)
+	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
+
+func _on_sound_slider_value_changed( value ):
+	new_volume = value / 100
+	sound.volume = new_volume
+	get_node("StreamPlayer").set_volume(new_volume)
+
+func _on_return_to_game_button_down():
+	pixel_small()
+	get_tree().set_pause(false)
+	get_node("menu").set_hidden(true)
+
+func _on_return_to_village_button_down():
+	get_node("are_you_sure").set_hidden(false)
+
+
+func _on_return_to_main_menu_button_down():
+	get_node("are_you_sure_2").set_hidden(false)
+
+
+func _on_yes_village_button_down():
+	get_node("menu").set_hidden(true)
+	get_tree().set_pause(false)
+	perk_check()
+	get_tree().change_scene("res://strategy.tscn")
+
+
+func _on_no_village_button_down():
+	get_node("are_you_sure").set_hidden(true)
+	get_node("menu").set_hidden(false)
+	
+
+
+func _on_yes_main_button_down():
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://player_selection.tscn")
+
+
+
+func _on_no_main_button_down():
+	get_node("are_you_sure_2").set_hidden(true)
+	get_node("menu").set_hidden(false)
