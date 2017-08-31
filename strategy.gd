@@ -236,7 +236,7 @@ func _on_start_day_button_up():
 		get_tree().set_pause(true)
 	else:
 		get_node("skip_or_play/perk_output").clear()
-		get_node("skip_or_play/perk_output").add_text(perks.perk)
+		get_node("skip_or_play/perk_output").add_text(str(perks.perk))
 		get_node("skip_or_play/perk_goal_output").clear()
 		get_node("skip_or_play/perk_goal_output").add_text(str(perks.perk_goal))
 		get_node("skip_or_play").show()
@@ -398,7 +398,7 @@ func _on_play_button_down():
 	if (towns.town_select == "banlon"):
 		get_tree().change_scene("res://banlon_time_management.tscn")
 	if (towns.town_select == "slatten"):
-		get_tree().change_scene("res://slatten_time_management.tscn")
+		get_tree().change_scene("res://qbert.tscn")
 	
 
 		

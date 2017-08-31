@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://qbert.gd" type="Script" id=1]
 [ext_resource path="res://inner_box.png" type="Texture" id=2]
 [ext_resource path="res://potential_background.png" type="Texture" id=3]
 [ext_resource path="res://pixel.png" type="Texture" id=4]
+[ext_resource path="res://customer_six.png" type="Texture" id=5]
+[ext_resource path="res://outer_box.png" type="Texture" id=6]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://slatten.ogg" type="AudioStream" id=8]
+[ext_resource path="res://bubble_green.png" type="Texture" id=9]
+[ext_resource path="res://clean_button.png" type="Texture" id=10]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=11]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=12]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=13]
 
 [node name="qbert" type="Node2D"]
 
@@ -802,7 +811,7 @@ texture = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="bert"]
 
-transform/pos = Vector2( 929.89, 517.153 )
+transform/pos = Vector2( 527.376, 418.612 )
 transform/scale = Vector2( 0.673879, 0.584216 )
 texture = ExtResource( 4 )
 
@@ -833,5 +842,482 @@ process_mode = 1
 wait_time = 0.3
 one_shot = true
 autostart = true
+
+[node name="sam" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( 500.427, 124.952 )
+transform/scale = Vector2( 0.247646, 0.258063 )
+texture = ExtResource( 5 )
+
+[node name="sam_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[node name="perk_kill_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = true
+
+[node name="success_background" type="Sprite" parent="."]
+
+transform/pos = Vector2( 109.652, 85.2899 )
+transform/scale = Vector2( 1.0368, 0.583559 )
+texture = ExtResource( 6 )
+
+[node name="points" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -57.0
+margin/top = -86.0
+margin/right = 89.0
+margin/bottom = -26.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Points"
+visible_characters = -1
+
+[node name="Sprite" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( -46.6388, 28.5587 )
+transform/scale = Vector2( 0.29044, 0.616124 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite1" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( -0.306656, 27.9444 )
+transform/scale = Vector2( 0.29044, 0.616124 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( 46.0255, 27.9444 )
+transform/scale = Vector2( 0.29044, 0.616124 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hundreths" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -60.0
+margin/top = 7.0
+margin/right = 86.0
+margin/bottom = 67.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+
+[node name="tens" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -14.0
+margin/top = 7.0
+margin/right = 132.0
+margin/bottom = 67.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+
+[node name="ones" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 33.0
+margin/top = 6.0
+margin/right = 179.0
+margin/bottom = 66.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+
+[node name="StreamPlayer" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 8 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
+
+[node name="day_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="countdown_timer" type="RichTextLabel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 846.0
+margin/top = 526.0
+margin/right = 992.0
+margin/bottom = 586.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+
+[node name="menu" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+
+[node name="Sprite" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 333.388, 335.405 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.485496, 0.444286 )
+texture = ExtResource( 9 )
+flip_v = true
+
+[node name="Sprite1" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 307.252, 247.25 )
+transform/scale = Vector2( 1.00803, 0.48073 )
+texture = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 305.201, 365.169 )
+transform/scale = Vector2( 1.00803, 0.456415 )
+texture = ExtResource( 10 )
+
+[node name="Sprite3" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 304.174, 481.029 )
+transform/scale = Vector2( 1.01186, 0.44831 )
+texture = ExtResource( 10 )
+
+[node name="sound" type="RichTextLabel" parent="menu"]
+
+rect/scale = Vector2( 1.25, 1.25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 230.0
+margin/top = 65.0
+margin/right = 376.0
+margin/bottom = 118.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Sound"
+visible_characters = -1
+
+[node name="sound_slider" type="HSlider" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 100.0
+margin/top = 148.0
+margin/right = 534.0
+margin/bottom = 164.0
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="return_to_game" type="LinkButton" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 160.0
+margin/top = 226.0
+margin/right = 483.0
+margin/bottom = 273.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return to Game"
+underline = 2
+
+[node name="return_to_village" type="LinkButton" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 155.0
+margin/top = 343.0
+margin/right = 478.0
+margin/bottom = 390.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return to Village"
+underline = 2
+
+[node name="return_to_main" type="LinkButton" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 113.0
+margin/top = 460.0
+margin/right = 510.0
+margin/bottom = 507.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return to Main Menu"
+underline = 2
+
+[node name="are_you_sure" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+
+[node name="Sprite" type="Sprite" parent="are_you_sure"]
+
+transform/pos = Vector2( 306.764, 294.074 )
+transform/scale = Vector2( 2.80242, 2.11207 )
+texture = ExtResource( 2 )
+
+[node name="sound1" type="RichTextLabel" parent="are_you_sure"]
+
+rect/scale = Vector2( 1.25, 1.25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 146.0
+margin/top = 117.0
+margin/right = 423.0
+margin/bottom = 379.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Are you sure you want to go back to the village?"
+visible_characters = -1
+
+[node name="yes_village" type="LinkButton" parent="are_you_sure"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 367.0
+margin/top = 405.0
+margin/right = 453.0
+margin/bottom = 452.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Yes"
+underline = 2
+
+[node name="no_village" type="LinkButton" parent="are_you_sure"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 189.0
+margin/top = 403.0
+margin/right = 275.0
+margin/bottom = 450.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "No"
+underline = 2
+
+[node name="are_you_sure_2" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+
+[node name="Sprite" type="Sprite" parent="are_you_sure_2"]
+
+transform/pos = Vector2( 306.764, 294.074 )
+transform/scale = Vector2( 2.80242, 2.11207 )
+texture = ExtResource( 2 )
+
+[node name="sound1" type="RichTextLabel" parent="are_you_sure_2"]
+
+rect/scale = Vector2( 1.25, 1.25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 146.0
+margin/top = 117.0
+margin/right = 423.0
+margin/bottom = 379.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Are you sure you want to go back to the main menu?"
+visible_characters = -1
+
+[node name="yes_main" type="LinkButton" parent="are_you_sure_2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 367.0
+margin/top = 432.0
+margin/right = 453.0
+margin/bottom = 479.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Yes"
+underline = 2
+
+[node name="no_main" type="LinkButton" parent="are_you_sure_2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 146.0
+margin/top = 430.0
+margin/right = 232.0
+margin/bottom = 477.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "No"
+underline = 2
+
+[node name="pixel" type="Node2D" parent="."]
+
+transform/pos = Vector2( 799.116, 304.996 )
+transform/scale = Vector2( 5.82181, 8.30002 )
+
+[node name="Sprite3" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -16.5249, 6.81498 )
+transform/rot = -39.075
+transform/scale = Vector2( 0.25343, 0.261638 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -3.67334, 14.3915 )
+transform/scale = Vector2( 0.245119, 0.205697 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 12.291, 6.02384 )
+transform/rot = 40.2774
+transform/scale = Vector2( 0.252371, 0.263026 )
+texture = ExtResource( 11 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite1" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -3.38049, 5.47068 )
+transform/scale = Vector2( 0.374836, 0.28263 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -2.33765, -11.5389 )
+transform/scale = Vector2( 0.374836, 0.28263 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="timeout" from="sam_timer" to="." method="_on_sam_timer_timeout"]
+
+[connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
+
+[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
+
+[connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
+
+[connection signal="button_down" from="menu/return_to_village" to="." method="_on_return_to_village_button_down"]
+
+[connection signal="button_down" from="menu/return_to_main" to="." method="_on_return_to_main_button_down"]
+
+[connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
+
+[connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
+
+[connection signal="button_down" from="are_you_sure_2/yes_main" to="." method="_on_yes_main_button_down"]
+
+[connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
 
 

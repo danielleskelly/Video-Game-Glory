@@ -908,15 +908,15 @@ flip_v = true
 
 [node name="Sprite1" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -13.9727, -5.53263 )
-transform/scale = Vector2( 0.0493914, 0.0370681 )
+transform/pos = Vector2( -13.4755, -5.53263 )
+transform/scale = Vector2( 0.0532038, 0.0370681 )
 texture = ExtResource( 12 )
 flip_v = true
 
 [node name="Sprite2" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -13.9196, 6.63539 )
-transform/scale = Vector2( 0.0511, 0.0413495 )
+transform/pos = Vector2( -13.5455, 6.63539 )
+transform/scale = Vector2( 0.0536711, 0.0413495 )
 texture = ExtResource( 12 )
 flip_v = true
 
@@ -973,9 +973,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -21.0
+margin/left = -20.0
 margin/top = -7.0
-margin/right = 286.0
+margin/right = 287.0
 margin/bottom = 40.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -1030,7 +1030,7 @@ visibility/visible = false
 
 [node name="Sprite" type="Sprite" parent="are_you_sure"]
 
-transform/pos = Vector2( -13.4643, 2.00241 )
+transform/pos = Vector2( -10.4669, -5.30728 )
 transform/scale = Vector2( 0.158649, 0.171709 )
 texture = ExtResource( 10 )
 
@@ -1041,10 +1041,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
-margin/top = -13.0
-margin/right = 242.0
-margin/bottom = 281.0
+margin/left = -20.0
+margin/top = -20.0
+margin/right = 245.0
+margin/bottom = 274.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
@@ -1058,10 +1058,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -12.0
-margin/top = 9.0
-margin/right = 59.0
-margin/bottom = 56.0
+margin/left = -9.0
+margin/top = 2.0
+margin/right = 62.0
+margin/bottom = 49.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -1077,10 +1077,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -21.0
-margin/top = 9.0
-margin/right = 50.0
-margin/bottom = 56.0
+margin/left = -18.0
+margin/top = 2.0
+margin/right = 53.0
+margin/bottom = 49.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
