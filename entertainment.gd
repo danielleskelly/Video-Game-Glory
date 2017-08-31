@@ -274,6 +274,7 @@ func _on_decent_button_button_down():
 				select_price = upgrade_prices.decent_price
 				key_change = "hollyhock decent"
 			if (money.hollyhock_cash < upgrade_prices.decent_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -291,6 +292,7 @@ func _on_decent_button_button_down():
 				select_price = upgrade_prices.decent_price
 				key_change = "fiyork decent"
 			if (money.fiyork_cash < upgrade_prices.decent_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -308,6 +310,7 @@ func _on_decent_button_button_down():
 				select_price = upgrade_prices.decent_price
 				key_change = "plansey decent"
 			if (money.plansey_cash < upgrade_prices.decent_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -325,6 +328,7 @@ func _on_decent_button_button_down():
 				select_price = upgrade_prices.decent_price
 				key_change = "windrow decent"
 			if (money.windrow_cash < upgrade_prices.decent_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -342,6 +346,7 @@ func _on_decent_button_button_down():
 				select_price = upgrade_prices.decent_price
 				key_change = "banlon decent"
 			if (money.banlon_cash < upgrade_prices.decent_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -359,6 +364,7 @@ func _on_decent_button_button_down():
 				select_price = upgrade_prices.decent_price
 				key_change = "slatten decent"
 			if (money.slatten_cash < upgrade_prices.decent_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -379,6 +385,7 @@ func _on_decent_button_button_down():
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
+				select_price = 0
 
 
 func _on_good_button_button_down():
@@ -396,6 +403,7 @@ func _on_good_button_button_down():
 				select_price = upgrade_prices.good_price
 				key_change = "hollyhock good"
 			if (money.hollyhock_cash < upgrade_prices.good_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -413,6 +421,7 @@ func _on_good_button_button_down():
 				select_price = upgrade_prices.good_price
 				key_change = "fiyork good"
 			if (money.fiyork_cash < upgrade_prices.good_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -430,6 +439,7 @@ func _on_good_button_button_down():
 				select_price = upgrade_prices.good_price
 				key_change = "plansey good"
 			if (money.plansey_cash < upgrade_prices.good_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -447,6 +457,7 @@ func _on_good_button_button_down():
 				select_price = upgrade_prices.good_price
 				key_change = "windrow good"
 			if (money.windrow_cash < upgrade_prices.good_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -464,6 +475,7 @@ func _on_good_button_button_down():
 				select_price = upgrade_prices.good_price
 				key_change = "banlon good"
 			if (money.banlon_cash < upgrade_prices.good_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -481,6 +493,7 @@ func _on_good_button_button_down():
 				select_price = upgrade_prices.good_price
 				key_change = "slatten good"
 			if (money.slatten_cash < upgrade_prices.good_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -498,6 +511,7 @@ func _on_good_button_button_down():
 				select_price = upgrade_prices.good_price
 				key_change = "untilly good"
 			if (money.untilly_cash < upgrade_prices.good_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -519,6 +533,7 @@ func _on_great_button_button_down():
 				select_price = upgrade_prices.great_price
 				key_change = "hollyhock great"
 			if (money.hollyhock_cash < upgrade_prices.great_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -536,6 +551,7 @@ func _on_great_button_button_down():
 				select_price = upgrade_prices.great_price
 				key_change = "fiyork great"
 			if (money.fiyork_cash < upgrade_prices.great_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -553,6 +569,7 @@ func _on_great_button_button_down():
 				select_price = upgrade_prices.great_price
 				key_change = "plansey great"
 			if (money.plansey_cash < upgrade_prices.great_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -573,6 +590,7 @@ func _on_great_button_button_down():
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
+				select_price = 0
 	if (towns.town_select == "banlon"):
 		if (banlon.banlon_entertainment_great_key == true):
 			select_price = 0
@@ -590,6 +608,7 @@ func _on_great_button_button_down():
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
+				select_price = 0
 	if (towns.town_select == "slatten"):
 		if (slatten.slatten_entertainment_great_key == true):
 			select_price = 0
@@ -604,6 +623,7 @@ func _on_great_button_button_down():
 				select_price = upgrade_prices.great_price
 				key_change = "slatten great"
 			if (money.slatten_cash < upgrade_prices.great_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -621,6 +641,7 @@ func _on_great_button_button_down():
 				select_price = upgrade_prices.great_price
 				key_change = "untilly great"
 			if (money.untilly_cash < upgrade_prices.great_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -638,9 +659,10 @@ func _on_best_button_button_down():
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = best_price
+				select_price = upgrade_prices.best_price
 				key_change = "hollyhock best"
 			if (money.hollyhock_cash < upgrade_prices.best_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -655,9 +677,10 @@ func _on_best_button_button_down():
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = best_price
+				select_price = upgrade_prices.best_price
 				key_change = "fiyork best"
 			if (money.fiyork_cash < upgrade_prices.best_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -672,9 +695,10 @@ func _on_best_button_button_down():
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = best_price
+				select_price = upgrade_prices.best_price
 				key_change = "plansey best"
 			if (money.plansey_cash < upgrade_prices.best_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -689,9 +713,10 @@ func _on_best_button_button_down():
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = best_price
+				select_price = upgrade_prices.best_price
 				key_change = "windrow best"
 			if (money.windrow_cash < upgrade_prices.best_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -706,9 +731,10 @@ func _on_best_button_button_down():
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = best_price
+				select_price = upgrade_prices.best_price
 				key_change = "banlon best"
 			if (money.banlon_cash < upgrade_prices.best_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -723,9 +749,10 @@ func _on_best_button_button_down():
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = best_price
+				select_price = upgrade_prices.best_price
 				key_change = "slatten best"
 			if (money.slatten_cash < upgrade_prices.best_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -740,9 +767,10 @@ func _on_best_button_button_down():
 				notifications.clear()
 				notifications.add_text("Available for purchase.")
 				notifications.show()
-				select_price = best_price
+				select_price = upgrade_prices.best_price
 				key_change = "untilly best"
 			if (money.untilly_cash < upgrade_prices.best_price):
+				select_price = 0
 				notifications.clear()
 				notifications.add_text("You cannot afford that!")
 				notifications.show()
@@ -822,4 +850,5 @@ func _on_confirm_button_down():
 			if (key_change == "untilly best"):
 				untilly.untilly_entertainment_best_key = true
 		notifications.clear()
+	select_price = 0
 		

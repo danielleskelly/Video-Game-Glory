@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://loan_shark.gd" type="Script" id=1]
-[ext_resource path="res://background.png" type="Texture" id=2]
+[ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://lower.png" type="Texture" id=4]
 [ext_resource path="res://raise.png" type="Texture" id=5]
-[ext_resource path="res://button.png" type="Texture" id=6]
+[ext_resource path="res://clean_button.png" type="Texture" id=6]
 
 [node name="loans" type="Node2D"]
 
@@ -21,15 +21,15 @@ texture = ExtResource( 2 )
 
 [node name="label" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.2, 0.25 )
+rect/scale = Vector2( 0.1, 0.125 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -13.0
+margin/left = -11.0
 margin/top = -30.0
-margin/right = 128.0
-margin/bottom = 8.0
+margin/right = 270.0
+margin/bottom = 31.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -38,15 +38,15 @@ visible_characters = -1
 
 [node name="credit_limit" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
-margin/top = -22.0
-margin/right = 145.0
-margin/bottom = 14.0
+margin/left = -28.0
+margin/top = -23.0
+margin/right = 244.0
+margin/bottom = 36.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -55,14 +55,14 @@ visible_characters = -1
 
 [node name="credit_limit_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 4.0
+margin/left = 8.0
 margin/top = -23.0
-margin/right = 149.0
+margin/right = 153.0
 margin/bottom = 29.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
@@ -72,15 +72,15 @@ visible_characters = -1
 
 [node name="current_loan" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -26.0
+margin/left = -29.0
 margin/top = -15.0
-margin/right = 152.0
-margin/bottom = 37.0
+margin/right = 265.0
+margin/bottom = 54.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -89,14 +89,14 @@ visible_characters = -1
 
 [node name="current_loan_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 3.0
+margin/left = 8.0
 margin/top = -16.0
-margin/right = 146.0
+margin/right = 151.0
 margin/bottom = 36.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
@@ -106,15 +106,15 @@ visible_characters = -1
 
 [node name="daily_interest" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
+margin/left = -30.0
 margin/top = -7.0
-margin/right = 159.0
-margin/bottom = 32.0
+margin/right = 289.0
+margin/bottom = 41.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -123,14 +123,14 @@ visible_characters = -1
 
 [node name="daily_interest_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 4.0
+margin/left = 8.0
 margin/top = -7.0
-margin/right = 145.0
+margin/right = 149.0
 margin/bottom = 45.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
@@ -140,15 +140,15 @@ visible_characters = -1
 
 [node name="borrow" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -19.0
+margin/left = -18.0
 margin/top = 3.0
-margin/right = 94.0
-margin/bottom = 56.0
+margin/right = 177.0
+margin/bottom = 66.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -157,7 +157,7 @@ visible_characters = -1
 
 [node name="borrow_lower" type="TextureButton" parent="."]
 
-rect/scale = Vector2( 0.2, 0.3 )
+rect/scale = Vector2( 0.2, 0.4 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -176,15 +176,15 @@ params/stretch_mode = 0
 
 [node name="borrow_output" type="LineEdit" parent="."]
 
-rect/scale = Vector2( 0.1, 0.2 )
+rect/scale = Vector2( 0.1, 0.125 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 6.0
-margin/top = 3.0
-margin/right = 146.0
-margin/bottom = 45.0
+margin/top = 4.0
+margin/right = 196.0
+margin/bottom = 61.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 placeholder/alpha = 0.6
@@ -194,14 +194,14 @@ caret/caret_blink_speed = 0.65
 
 [node name="borrow_raise" type="TextureButton" parent="."]
 
-rect/scale = Vector2( 0.2, 0.3 )
+rect/scale = Vector2( 0.2, 0.4 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 20.0
+margin/left = 25.0
 margin/top = 4.0
-margin/right = 40.0
+margin/right = 45.0
 margin/bottom = 22.0
 toggle_mode = false
 click_on_press = true
@@ -213,14 +213,14 @@ params/stretch_mode = 0
 
 [node name="pay_back" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -24.0
+margin/left = -21.0
 margin/top = 13.0
-margin/right = 181.0
+margin/right = 184.0
 margin/bottom = 67.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
@@ -230,7 +230,7 @@ visible_characters = -1
 
 [node name="payback_lower" type="TextureButton" parent="."]
 
-rect/scale = Vector2( 0.2, 0.3 )
+rect/scale = Vector2( 0.2, 0.4 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -249,15 +249,15 @@ params/stretch_mode = 0
 
 [node name="payback_output" type="LineEdit" parent="."]
 
-rect/scale = Vector2( 0.1, 0.2 )
+rect/scale = Vector2( 0.1, 0.125 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 6.0
-margin/top = 12.0
-margin/right = 146.0
-margin/bottom = 54.0
+margin/top = 13.0
+margin/right = 196.0
+margin/bottom = 70.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 placeholder/alpha = 0.6
@@ -267,14 +267,14 @@ caret/caret_blink_speed = 0.65
 
 [node name="payback_raise" type="TextureButton" parent="."]
 
-rect/scale = Vector2( 0.2, 0.3 )
+rect/scale = Vector2( 0.2, 0.4 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 20.0
+margin/left = 25.0
 margin/top = 13.0
-margin/right = 40.0
+margin/right = 45.0
 margin/bottom = 31.0
 toggle_mode = false
 click_on_press = true
@@ -286,32 +286,29 @@ params/stretch_mode = 0
 
 [node name="confirm" type="LinkButton" parent="."]
 
-rect/scale = Vector2( 0.2, 0.2 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -9.0
-margin/top = 23.0
-margin/right = 93.0
-margin/bottom = 56.0
+margin/left = -8.0
+margin/top = 24.0
+margin/right = 146.0
+margin/bottom = 71.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-text = "Confirm"
+text = "confirm"
 underline = 2
 
 [node name="Sprite" type="Sprite" parent="confirm"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 49.542, 13.7208 )
-transform/scale = Vector2( 0.551803, 0.452361 )
+transform/pos = Vector2( 74.2057, 19.828 )
+transform/scale = Vector2( 0.392832, 0.327964 )
 texture = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [connection signal="button_down" from="borrow_lower" to="." method="_on_borrow_lower_button_down"]
 

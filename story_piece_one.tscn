@@ -7,7 +7,7 @@
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=5]
 [ext_resource path="res://genre_bubble.png" type="Texture" id=6]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=7]
-[ext_resource path="res://button.png" type="Texture" id=8]
+[ext_resource path="res://clean_button.png" type="Texture" id=8]
 [ext_resource path="res://arrow_northeast.png" type="Texture" id=9]
 [ext_resource path="res://storyline_one.ogg" type="AudioStream" id=10]
 [ext_resource path="res://music.png" type="Texture" id=11]
@@ -876,7 +876,6 @@ shortcut = null
 
 [node name="tv_background" type="Sprite" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 13.795, -22.2089 )
 transform/scale = Vector2( 0.0381013, 0.0693155 )
 texture = ExtResource( 2 )
@@ -1019,7 +1018,6 @@ visible_characters = -1
 
 [node name="acceptance_email" type="Sprite" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 13.795, -22.2089 )
 transform/scale = Vector2( 0.0381013, 0.0693155 )
 texture = ExtResource( 2 )
@@ -1327,10 +1325,8 @@ __meta__ = {
 
 [node name="send_button" type="Sprite" parent="."]
 
-editor/display_folded = true
-visibility/visible = false
-transform/pos = Vector2( 16.226, -20.9574 )
-transform/scale = Vector2( 0.00474596, 0.0095456 )
+transform/pos = Vector2( 16.1179, -20.6685 )
+transform/scale = Vector2( 0.00318005, 0.00631131 )
 texture = ExtResource( 8 )
 flip_v = true
 
@@ -1341,18 +1337,15 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -97.0
-margin/top = -43.0
+margin/left = -132.0
+margin/top = -48.0
 margin/right = -22.0
-margin/bottom = -9.0
+margin/bottom = 5.0
 custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "SEND"
 visible_characters = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="send_button" type="LinkButton" parent="send_button"]
 

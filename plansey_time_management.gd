@@ -4,6 +4,10 @@ var hundreds
 var tens
 var ones
 
+var new_volume
+
+onready var pixel = get_node("pixel")
+
 onready var countdown_timer = get_node("countdown_timer")
 
 var numbers
@@ -19,6 +23,8 @@ var spaces
 var goal_choice
 
 func _ready():
+	pixel_small()
+	get_node("StreamPlayer").set_volume(sound.volume)
 	load_stuff()
 	set_process(true)
 	
@@ -316,3 +322,61 @@ func perk_check():
 				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 20
 			elif (perks.perk_num == 6):
 				money.plansey_balance = money.plansey_balance + 25
+				
+				
+func pixel_small():
+	pixel.set_pos(Vector2(0, 0))
+	pixel.set_scale(Vector2(1, 1))
+	
+func pixel_big():
+	pixel.set_pos(Vector2(98.612053, -132.878601))
+	pixel.set_scale(Vector2(4.201189, 5.211131))
+
+func _on_pixel_button_button_down():
+	pixel_big()
+	get_tree().set_pause(true)
+	get_node("menu").set_hidden(false)
+	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
+	
+
+func _on_sound_slider_value_changed( value ):
+	new_volume = value / 100
+	sound.volume = new_volume
+	get_node("StreamPlayer").set_volume(new_volume)
+
+func _on_return_to_game_button_down():
+	pixel_small()
+	get_tree().set_pause(false)
+	get_node("menu").set_hidden(true)
+
+
+func _on_return_to_village_button_down():
+	get_node("menu").set_hidden(true)
+	get_node("are_you_sure").set_hidden(false)
+
+
+func _on_yes_village_button_down():
+	get_node("menu").set_hidden(true)
+	perk_check()
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://strategy.tscn")
+
+
+func _on_no_village_button_down():
+	get_node("are_you_sure").set_hidden(true)
+	get_node("menu").set_hidden(false)
+
+
+func _on_return_to_main_button_down():
+	get_node("menu").set_hidden(true)
+	get_node("are_you_sure_2").set_hidden(false)
+	
+	
+func _on_yes_main_button_down():
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://player_selection.tscn")
+
+
+func _on_no_main_button_down():
+	get_node("are_you_sure_2").set_hidden(true)
+	get_node("menu").set_hidden(false)

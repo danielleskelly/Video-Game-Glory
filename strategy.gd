@@ -79,7 +79,7 @@ func _process(delta):
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 	if (towns.town_select == "untilly"):
-		if (int(money.untilly_cash) >= 500):
+		if (int(money.untilly_cash) >= 500) and (int(untilly.untilly_current_loan) <= 0):
 			untilly_complete.set_hidden(false)
 			pixel.set_hidden(false)
 			get_tree().set_pause(true)
@@ -236,7 +236,7 @@ func _on_start_day_button_up():
 		get_tree().set_pause(true)
 	else:
 		get_node("skip_or_play/perk_output").clear()
-		get_node("skip_or_play/perk_output").add_text(perks.perk)
+		get_node("skip_or_play/perk_output").add_text(str(perks.perk))
 		get_node("skip_or_play/perk_goal_output").clear()
 		get_node("skip_or_play/perk_goal_output").add_text(str(perks.perk_goal))
 		get_node("skip_or_play").show()
@@ -252,6 +252,7 @@ func _on_low_funds_ok_button_down():
 
 
 func _on_genre_discover_ok_button_down():
+	research_countdown.genre_discovery = false
 	genre_discovery.set_hidden(true)
 	pixel_small()
 	get_tree().set_pause(false)
@@ -359,9 +360,7 @@ func _on_skip_button_down():
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
-	print(get_node("skip_or_play").is_visible())
 	get_node("skip_or_play").set_hidden(true)
-	print(get_node("skip_or_play").is_visible())
 	pixel_small()
 	get_tree().change_scene("res://strategy.tscn")
 
@@ -393,13 +392,13 @@ func _on_play_button_down():
 	if (towns.town_select == "plansey"):
 		get_tree().change_scene("res://plansey_time_management.tscn")
 	if (towns.town_select == "untilly"):
-		get_tree().change_scene("res://untilly_time_management.tscn")
+		get_tree().change_scene("res://tetrus.tscn")
 	if (towns.town_select == "windrow"):
 		get_tree().change_scene("res://windrow_time_management.tscn")
 	if (towns.town_select == "banlon"):
 		get_tree().change_scene("res://banlon_time_management.tscn")
 	if (towns.town_select == "slatten"):
-		get_tree().change_scene("res://slatten_time_management.tscn")
+		get_tree().change_scene("res://qbert.tscn")
 	
 
 		
@@ -459,7 +458,7 @@ func _on_no_main_menu_button_down():
 	get_node("menu").set_hidden(false)
 
 func pixel_small():
-	pixel.set_pos(Vector2(17.910009, 24.698957))
+	pixel.set_pos(Vector2(-37.864216, 19.423996))
 	pixel.set_scale(Vector2(0.443099, 0.357029))
 
 func set_sound():
@@ -467,11 +466,9 @@ func set_sound():
 
 func tutorial_start():
 	if (tutorial.tutorial_start == false):
-		pass
-		print("undo this in strategy tutorial") 
-		#tutorial_start.show()
-		#pixel_big()
-		#pixel.show()
+		tutorial_start.show()
+		pixel_big()
+		pixel.show()
 	if (tutorial.tutorial_start == true):
 		pass
 

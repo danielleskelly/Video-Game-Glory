@@ -67,11 +67,11 @@ func set_that_shit():
 		genre_one_name = "Casual"
 		genre_one_icon = load("res://meta_genre.png")
 		genre_two_count = customer_math.shooter_prediction
-		genre_two_key = customer_math.untilly_genre_two_key
+		genre_two_key = untilly.untilly_genre_two_key
 		genre_two_name = "Shooter"
 		genre_three_count = customer_math.time_management_prediction
 		genre_three_name = "Time Management"
-		genre_three_key = customer_math.untilly_genre_three_key
+		genre_three_key = untilly.untilly_genre_three_key
 	if (towns.town_select == "plansey"):
 		supply_one_count = supplies.plansey_energy_count
 		supply_one_name = "Energy"
@@ -83,11 +83,11 @@ func set_that_shit():
 		genre_one_name = "Nostalgic"
 		genre_one_icon = load("res://meta_genre.png")
 		genre_two_count = customer_math.strategy_prediction
-		genre_two_key = customer_math.plansey_genre_two_key
+		genre_two_key = plansey.plansey_genre_two_key
 		genre_two_name = "Strategy"
 		genre_three_count = customer_math.platformer_prediction
 		genre_three_name = "Platformer"
-		genre_three_key = customer_math.plansey_genre_three_key
+		genre_three_key = plansey.plansey_genre_three_key
 	if (towns.town_select == "windrow"):
 		supply_one_count = supplies.windrow_freezie_count
 		supply_one_name = "Freezie"
@@ -99,11 +99,11 @@ func set_that_shit():
 		genre_one_name = "Classic"
 		genre_one_icon = load("res://meta_genre.png")
 		genre_two_count = customer_math.casual_prediction
-		genre_two_key = customer_math.windrow_genre_two_key
+		genre_two_key = windrow.windrow_genre_two_key
 		genre_two_name = "Casual"
 		genre_three_count = customer_math.nostalgic_prediction
 		genre_three_name = "Nostalgic"
-		genre_three_key = customer_math.windrow_genre_three_key
+		genre_three_key = windrow.windrow_genre_three_key
 	if (towns.town_select == "banlon"):
 		supply_one_count = supplies.banlon_energy_count
 		supply_one_name = "Energy"
@@ -115,11 +115,11 @@ func set_that_shit():
 		genre_one_name = "Strategy"
 		genre_one_icon = load("res://meta_genre.png")
 		genre_two_count = customer_math.shooter_prediction
-		genre_two_key = customer_math.banlon_genre_two_key
+		genre_two_key = banlon.banlon_genre_two_key
 		genre_two_name = "Shooter"
 		genre_three_count = customer_math.adventure_prediction
 		genre_three_name = "Adventure"
-		genre_three_key = customer_math.banlon_genre_three_key
+		genre_three_key = banlon.banlon_genre_three_key
 	if (towns.town_select == "slatten"):
 		supply_one_count = supplies.slatten_freezie_count
 		supply_one_name = "Freezie"

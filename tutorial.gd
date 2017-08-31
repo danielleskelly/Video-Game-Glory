@@ -2,7 +2,7 @@ extends Node
 
 var time_management_start = false
 
-var tutorial_start = false
+var tutorial_start = true
 var tutorial_title_box = false
 var tutorial_prediction_box = false
 var tutorial_supplies_box = false

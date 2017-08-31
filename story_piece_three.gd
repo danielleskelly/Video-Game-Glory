@@ -9,11 +9,13 @@ func _process(delta):
 	get_node("mute_button").set_global_pos(Vector2(920, 526))
 
 func _on_AnimationPlayer_finished():
-	get_tree().change_scene("res://town_selection.tscn")
+	towns.town_select = "fiyork"
+	get_tree().change_scene("res://strategy.tscn")
 
 
 func _on_skip_button_button_down():
-	get_tree().change_scene("res://town_selection.tscn")
+	towns.town_select = "fiyork"
+	get_tree().change_scene("res://strategy.tscn")
 
 
 func set_sound():

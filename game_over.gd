@@ -14,8 +14,6 @@ func day_start_check():
 			day_start = false
 		else:
 			money.hollyhock_balance = money.hollyhock_balance - money.hollyhock_expenses
-			supplies.soda_yesterday_used = 0
-			supplies.popcorn_yesterday_used = 0
 			if (hollyhock.hollyhock_current_loan > 0):
 				var daily_interest_charge = hollyhock.hollyhock_current_loan * loans.daily_interest
 				money.hollyhock_balance = money.hollyhock_balance - int(daily_interest_charge)
@@ -27,8 +25,6 @@ func day_start_check():
 			day_start = false
 		else:
 			money.fiyork_balance = money.fiyork_balance - money.fiyork_expenses
-			supplies.soda_yesterday_used = 0
-			supplies.popcorn_yesterday_used = 0
 			if (fiyork.fiyork_current_loan > 0):
 				var daily_interest_charge = fiyork.fiyork_current_loan * loans.daily_interest
 				money.fiyork_balance = money.fiyork_balance - int(daily_interest_charge)
@@ -40,8 +36,6 @@ func day_start_check():
 			day_start = false
 		else:
 			money.untilly_balance = money.untilly_balance - money.untilly_expenses
-			supplies.soda_yesterday_used = 0
-			supplies.popcorn_yesterday_used = 0
 			if (untilly.untilly_current_loan > 0):
 				var daily_interest_charge = untilly.untilly_current_loan * loans.daily_interest
 				money.untilly_balance = money.untilly_balance - int(daily_interest_charge)
@@ -53,8 +47,6 @@ func day_start_check():
 			day_start = false
 		else:
 			money.plansey_balance = money.plansey_balance - money.plansey_expenses
-			supplies.soda_yesterday_used = 0
-			supplies.popcorn_yesterday_used = 0
 			if (plansey.plansey_current_loan > 0):
 				var daily_interest_charge = plansey.plansey_current_loan * loans.daily_interest
 				money.plansey_balance = money.plansey_balance - int(daily_interest_charge)
@@ -66,8 +58,6 @@ func day_start_check():
 			day_start = false
 		else:
 			money.windrow_balance = money.windrow_balance - money.windrow_expenses
-			supplies.soda_yesterday_used = 0
-			supplies.popcorn_yesterday_used = 0
 			if (windrow.windrow_current_loan > 0):
 				var daily_interest_charge = windrow.windrow_current_loan * loans.daily_interest
 				money.windrow_balance = money.windrow_balance - int(daily_interest_charge)
@@ -79,8 +69,6 @@ func day_start_check():
 			day_start = false
 		else:
 			money.banlon_balance = money.banlon_balance - money.banlon_expenses
-			supplies.soda_yesterday_used = 0
-			supplies.popcorn_yesterday_used = 0
 			if (banlon.banlon_current_loan > 0):
 				var daily_interest_charge = banlon.banlon_current_loan * loans.daily_interest
 				money.banlon_balance = money.banlon_balance - int(daily_interest_charge)
@@ -92,8 +80,6 @@ func day_start_check():
 			day_start = false
 		else:
 			money.slatten_balance = money.slatten_balance - money.slatten_expenses
-			supplies.soda_yesterday_used = 0
-			supplies.popcorn_yesterday_used = 0
 			if (slatten.slatten_current_loan > 0):
 				var daily_interest_charge = slatten.slatten_current_loan * loans.daily_interest
 				money.slatten_balance = money.slatten_balance - int(daily_interest_charge)
@@ -193,12 +179,6 @@ func game_over_hollyhock():
 	money.hollyhock_balance = 400
 	money.hollyhock_expenses = 0
 
-	supplies.soda_yesterday_used = 0
-	supplies.popcorn_yesterday_used = 0
-	supplies.pizza_yesterday_used = 0
-	supplies.freezie_yesterday_used = 0
-	supplies.energy_yesterday_used = 0
-	supplies.nachos_yesterday_used = 0
 	supplies.hollyhock_soda_price = 0
 	supplies.hollyhock_popcorn_price = 0
 
@@ -272,13 +252,7 @@ func game_over_fiyork():
 
 	money.fiyork_balance = 200
 	money.fiyork_expenses = 0
-
-	supplies.soda_yesterday_used = 0
-	supplies.popcorn_yesterday_used = 0
-	supplies.pizza_yesterday_used = 0
-	supplies.freezie_yesterday_used = 0
-	supplies.energy_yesterday_used = 0
-	supplies.nachos_yesterday_used = 0
+	
 	supplies.fiyork_pizza_price = 0
 	supplies.fiyork_freezie_price = 0
 
@@ -346,12 +320,6 @@ func game_over_plansey():
 	plansey.plansey_station_six_key = false
 	plansey.plansey_loans_input_key = false
 
-	supplies.soda_yesterday_used = 0
-	supplies.popcorn_yesterday_used = 0
-	supplies.pizza_yesterday_used = 0
-	supplies.freezie_yesterday_used = 0
-	supplies.energy_yesterday_used = 0
-	supplies.nachos_yesterday_used = 0
 	supplies.plansey_energy_price = 0
 	supplies.plansey_nachos_price = 0
 	supplies.plansey_nachos_count = 0
@@ -412,13 +380,6 @@ func game_over_untilly():
 	untilly.untilly_station_five_key = false
 	untilly.untilly_station_six_key = false
 	untilly.untilly_loans_input_key = false
-
-	supplies.soda_yesterday_used = 0
-	supplies.popcorn_yesterday_used = 0
-	supplies.pizza_yesterday_used = 0
-	supplies.freezie_yesterday_used = 0
-	supplies.energy_yesterday_used = 0
-	supplies.nachos_yesterday_used = 0
 
 	supplies.untilly_soda_price = 0
 	supplies.untilly_popcorn_price = 0
@@ -490,13 +451,6 @@ func game_over_windrow():
 	windrow.windrow_entertainment_sabatoge_key = true
 	windrow.windrow_arcade_sabatoge_key = true
 
-	supplies.soda_yesterday_used = 0
-	supplies.popcorn_yesterday_used = 0
-	supplies.pizza_yesterday_used = 0
-	supplies.freezie_yesterday_used = 0
-	supplies.energy_yesterday_used = 0
-	supplies.nachos_yesterday_used = 0
-
 	supplies.windrow_freezie_price = 0
 	supplies.windrow_pizza_price = 0
 
@@ -556,13 +510,6 @@ func game_over_banlon():
 	banlon.banlon_loans_input_key = false
 	money.banlon_balance = 200
 	money.banlon_expenses = 0
-
-	supplies.soda_yesterday_used = 0
-	supplies.popcorn_yesterday_used = 0
-	supplies.pizza_yesterday_used = 0
-	supplies.freezie_yesterday_used = 0
-	supplies.energy_yesterday_used = 0
-	supplies.nachos_yesterday_used = 0
 
 	supplies.banlon_energy_price = 0
 	supplies.banlon_nachos_price = 0
@@ -632,13 +579,6 @@ func game_over_slatten():
 	slatten.slatten_storefront_sabatoge_key = true
 	slatten.slatten_entertainment_sabatoge_key = true
 	slatten.slatten_arcade_sabatoge_key = true
-
-	supplies.soda_yesterday_used = 0
-	supplies.popcorn_yesterday_used = 0
-	supplies.pizza_yesterday_used = 0
-	supplies.freezie_yesterday_used = 0
-	supplies.energy_yesterday_used = 0
-	supplies.nachos_yesterday_used = 0
 	
 	supplies.slatten_freezie_price = 0
 	supplies.slatten_popcorn_price = 0

@@ -3,13 +3,6 @@ extends Node
 var supply_one
 var supply_two
 
-var soda_yesterday_used = 0
-var popcorn_yesterday_used = 0
-var pizza_yesterday_used = 0
-var freezie_yesterday_used = 0
-var energy_yesterday_used = 0
-var nachos_yesterday_used = 0
-
 var purchase_total = 0
 var soda_total = 0
 var popcorn_total = 0
@@ -95,14 +88,6 @@ func _ready():
 func save():
 	var savedict = {
 		filename=get_filename(),
-		soda_yesterday_used = soda_yesterday_used,
-		popcorn_yesterday_used = popcorn_yesterday_used,
-		pizza_yesterday_used = pizza_yesterday_used,
-		freezie_yesterday_used = freezie_yesterday_used,
-		energy_yesterday_used = energy_yesterday_used,
-		nachos_yesterday_used = nachos_yesterday_used,
-		hollyhock_soda_price = hollyhock_soda_price,
-		hollyhock_popcorn_price = hollyhock_popcorn_price,
 
 		fiyork_pizza_price = fiyork_pizza_price,
 		fiyork_freezie_price = fiyork_freezie_price,

@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://marketing.gd" type="Script" id=1]
-[ext_resource path="res://background.png" type="Texture" id=2]
+[ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://lower.png" type="Texture" id=4]
 [ext_resource path="res://raise.png" type="Texture" id=5]
-[ext_resource path="res://button.png" type="Texture" id=6]
+[ext_resource path="res://clean_button.png" type="Texture" id=6]
 [ext_resource path="res://not_opened.png" type="Texture" id=7]
 
 [node name="marketing" type="Node2D"]
@@ -22,15 +22,15 @@ texture = ExtResource( 2 )
 
 [node name="label" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.2, 0.25 )
+rect/scale = Vector2( 0.14, 0.14 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -28.0
+margin/left = -30.0
 margin/top = -27.0
-margin/right = 255.0
-margin/bottom = 21.0
+margin/right = 398.0
+margin/bottom = 58.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -39,15 +39,15 @@ visible_characters = -1
 
 [node name="ad_output" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.15, 0.2 )
+rect/scale = Vector2( 0.08, 0.125 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -25.0
-margin/top = 6.0
-margin/right = 316.0
-margin/bottom = 97.0
+margin/left = -20.0
+margin/top = 5.0
+margin/right = 594.0
+margin/bottom = 136.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -65,9 +65,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -40.0
+margin/left = -41.0
 margin/top = -6.0
-margin/right = -20.0
+margin/right = -21.0
 margin/bottom = 30.0
 toggle_mode = false
 click_on_press = true
@@ -80,15 +80,15 @@ params/stretch_mode = 0
 
 [node name="spending_output" type="LineEdit" parent="container"]
 
-rect/scale = Vector2( 0.8, 2 )
+rect/scale = Vector2( 0.8, 1.25 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -21.0
-margin/top = -11.0
+margin/top = -6.0
 margin/right = 38.0
-margin/bottom = 13.0
+margin/bottom = 23.0
 placeholder/alpha = 0.6
 focus_mode = 2
 caret/caret_blink = false
@@ -113,60 +113,50 @@ params/resize_mode = 0
 params/scale = Vector2( 1, 2 )
 params/stretch_mode = 0
 
-[node name="button_background" type="Sprite" parent="."]
+[node name="confirm" type="LinkButton" parent="."]
 
-transform/pos = Vector2( 0.448112, 28.0722 )
-transform/scale = Vector2( 0.0664884, 0.0661494 )
-texture = ExtResource( 6 )
-
-[node name="label" type="RichTextLabel" parent="button_background"]
-
-rect/scale = Vector2( 1.8, 2 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -91.0
-margin/top = -32.0
-margin/right = 12.0
-margin/bottom = 3.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Confirm"
-visible_characters = -1
-
-[node name="confirm" type="LinkButton" parent="button_background"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -97.0
-margin/top = -47.0
-margin/right = 100.0
-margin/bottom = 46.0
+margin/left = -7.0
+margin/top = 24.0
+margin/right = 143.0
+margin/bottom = 71.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+text = "confirm"
+underline = 2
+
+[node name="button_background" type="Sprite" parent="confirm"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 74.2057, 19.828 )
+transform/scale = Vector2( 0.392832, 0.327964 )
+texture = ExtResource( 6 )
 
 [node name="not_opened" type="Sprite" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( -0.622186, -0.400231 )
 transform/scale = Vector2( 0.0442987, 0.0465418 )
 texture = ExtResource( 7 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="not_opened"]
 
-rect/scale = Vector2( 5, 5 )
+rect/scale = Vector2( 2.5, 2.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -277.0
+margin/left = -217.0
 margin/top = -181.0
-margin/right = -151.0
-margin/bottom = -95.0
+margin/right = -11.0
+margin/bottom = -37.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
@@ -177,6 +167,6 @@ visible_characters = -1
 
 [connection signal="button_down" from="container/raise" to="." method="_on_raise_button_down"]
 
-[connection signal="button_down" from="button_background/confirm" to="." method="_on_confirm_button_down"]
+[connection signal="button_down" from="confirm" to="." method="_on_confirm_button_down"]
 
 

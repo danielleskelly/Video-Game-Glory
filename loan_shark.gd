@@ -32,11 +32,11 @@ func _process(delta):
 		credit_limit_output.add_text(str(loans.credit_limit))
 		current_loan_output.clear()
 		current_loan_output.add_text(str(plansey.plansey_current_loan))
-	if (towns.town_select == "plansey"):
+	if (towns.town_select == "untilly"):
 		credit_limit_output.clear()
 		credit_limit_output.add_text(str(loans.credit_limit))
 		current_loan_output.clear()
-		current_loan_output.add_text(str(plansey.plansey_current_loan))
+		current_loan_output.add_text(str(untilly.untilly_current_loan))
 	daily_interest_output.clear()
 	daily_interest_output.add_text("%" + str(loans.daily_interest * 100))
 

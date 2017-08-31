@@ -2,6 +2,8 @@ extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
 
+var new_volume
+
 var hundreds
 var tens
 var ones
@@ -232,3 +234,51 @@ func perk_check():
 				fiyork.fiyork_storefront_sabatoge_key = false
 			elif (perks.perk_num == 10):
 				fiyork.fiyork_advertising_sabatoge_key = false
+
+
+func _on_pixel_button_button_down():
+	pixel_big()
+	get_tree().set_pause(true)
+	get_node("menu").set_hidden(false)
+	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
+
+func _on_sound_slider_value_changed( value ):
+	new_volume = value / 100
+	sound.volume = new_volume
+	get_node("StreamPlayer").set_volume(new_volume)
+
+func _on_return_to_game_button_down():
+	pixel_small()
+	get_tree().set_pause(false)
+	get_node("menu").set_hidden(true)
+
+func _on_return_to_village_button_down():
+	get_node("are_you_sure").set_hidden(false)
+
+
+func _on_return_to_main_menu_button_down():
+	get_node("are_you_sure_2").set_hidden(false)
+
+
+func _on_yes_village_button_down():
+	get_node("menu").set_hidden(true)
+	get_tree().set_pause(false)
+	perk_check()
+	get_tree().change_scene("res://strategy.tscn")
+
+
+func _on_no_village_button_down():
+	get_node("are_you_sure").set_hidden(true)
+	get_node("menu").set_hidden(false)
+	
+
+
+func _on_yes_main_button_down():
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://player_selection.tscn")
+
+
+
+func _on_no_main_button_down():
+	get_node("are_you_sure_2").set_hidden(true)
+	get_node("menu").set_hidden(false)
