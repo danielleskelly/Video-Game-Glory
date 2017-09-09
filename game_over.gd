@@ -20,7 +20,7 @@ func day_start_check():
 			customer_globals.customer_reset()
 			perks.perks()
 			day_start = true
-	if (towns.town_select == "fiyork"):
+	elif (towns.town_select == "fiyork"):
 		if (money.fiyork_balance - money.fiyork_expenses < 0):
 			day_start = false
 		else:
@@ -31,7 +31,7 @@ func day_start_check():
 			customer_globals.customer_reset()
 			perks.perks()
 			day_start = true
-	if (towns.town_select == "untilly"):
+	elif (towns.town_select == "untilly"):
 		if (money.untilly_balance - money.untilly_expenses < 0):
 			day_start = false
 		else:
@@ -42,7 +42,7 @@ func day_start_check():
 			customer_globals.customer_reset()
 			perks.perks()
 			day_start = true
-	if (towns.town_select == "plansey"):
+	elif (towns.town_select == "plansey"):
 		if (money.plansey_balance - money.plansey_expenses < 0):
 			day_start = false
 		else:
@@ -53,7 +53,7 @@ func day_start_check():
 			customer_globals.customer_reset()
 			perks.perks()
 			day_start = true
-	if (towns.town_select == "windrow"):
+	elif (towns.town_select == "windrow"):
 		if (money.windrow_balance - money.windrow_expenses < 0):
 			day_start = false
 		else:
@@ -64,7 +64,7 @@ func day_start_check():
 			customer_globals.customer_reset()
 			perks.perks()
 			day_start = true
-	if (towns.town_select == "banlon"):
+	elif (towns.town_select == "banlon"):
 		if (money.banlon_balance - money.banlon_expenses < 0):
 			day_start = false
 		else:
@@ -75,7 +75,7 @@ func day_start_check():
 			customer_globals.customer_reset()
 			perks.perks()
 			day_start = true
-	if (towns.town_select == "slatten"):
+	elif (towns.town_select == "slatten"):
 		if (money.slatten_balance - money.slatten_expenses < 0):
 			day_start = false
 		else:
@@ -91,6 +91,7 @@ func day_start_check():
 	
 	
 func game_over_warning_check():
+	game_over_warning = false
 	if (towns.town_select == "hollyhock"):
 		if ((money.hollyhock_cash - money.hollyhock_expenses) < 0):
 			if ((money.hollyhock_expenses == 0) and (hollyhock.hollyhock_current_loan == loans.credit_limit)):

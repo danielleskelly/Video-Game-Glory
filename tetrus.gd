@@ -2859,31 +2859,23 @@ func _on_day_timer_timeout():
 
 
 func perk_check():
-	if (towns.town_select == "fiyork"):
+	if (towns.town_select == "untilly"):
 		if (int(perks.perk_goal) <= int(perks.success)):
 			if (perks.perk_num == 1):
-				supplies.fiyork_freezie_count = supplies.fiyork_freezie_count + 5
-				supplies.fiyork_pizza_count = supplies.fiyork_pizza_count + 5
+				supplies.untilly_soda_count = supplies.untilly_soda_count + 5
+				supplies.untilly_popcorn_count = supplies.untilly_popcorn_count + 5
 			elif (perks.perk_num == 2):
-				customer_math.fiyork_player_marketshare = int(customer_math.fiyork_player_marketshare) + .1
+				customer_math.untilly_player_marketshare = int(customer_math.untilly_player_marketshare) + .1
 			elif (perks.perk_num == 3):
-				money.fiyork_balance = money.fiyork_balance + 50
+				money.untilly_balance = money.untilly_balance + 50
 			elif (perks.perk_num == 4):
-				supplies.fiyork_freezie_count = supplies.fiyork_freezie_count + 10
-				supplies.fiyork_pizza_count = supplies.fiyork_pizza_count + 10
+				supplies.untilly_soda_count = supplies.untilly_soda_count + 10
+				supplies.untilly_popcorn_count = supplies.untilly_popcorn_count + 10
 			elif (perks.perk_num == 5):
-				supplies.fiyork_freezie_count = supplies.fiyork_freezie_count + 20
-				supplies.fiyork_pizza_count = supplies.fiyork_pizza_count + 20
+				supplies.untilly_soda_count = supplies.untilly_soda_count + 20
+				supplies.untilly_popcorn_count = supplies.untilly_popcorn_count + 20
 			elif (perks.perk_num == 6):
-				money.fiyork_balance = money.fiyork_balance + 25
-			elif (perks.perk_num == 7):
-				fiyork.fiyork_arcade_sabatoge_key = false
-			elif (perks.perk_num == 8):
-				fiyork.fiyork_entertainment_sabatoge_key = false
-			elif (perks.perk_num == 9):
-				fiyork.fiyork_storefront_sabatoge_key = false
-			elif (perks.perk_num == 10):
-				fiyork.fiyork_advertising_sabatoge_key = false
+				money.untilly_balance = money.untilly_balance + 25
 
 func _on_pixel_button_button_down():
 	pixel_big()

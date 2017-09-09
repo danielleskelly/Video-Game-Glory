@@ -18,16 +18,24 @@ func perks():
 		if (fiyork.fiyork_arcade_sabatoge_key == true):
 			fiyork_array.append(7)
 			fiyork_array.append(7)
+		elif (fiyork.fiyork_arcade_sabatoge_key == false):
+			pass
 		if (fiyork.fiyork_entertainment_sabatoge_key == true):
 			fiyork_array.append(8)
 			fiyork_array.append(8)
+		elif (fiyork.fiyork_entertainment_sabatoge_key == false):
+			pass
 		if (fiyork.fiyork_storefront_sabatoge_key == true):
 			fiyork_array.append(9)
 			fiyork_array.append(9)
+		elif (fiyork.fiyork_storefront_sabatoge_key == false):
+			pass
 		if (fiyork.fiyork_advertising_sabatoge_key == true):
 			fiyork_array.append(10)
 			fiyork_array.append(10)
-		elif (fiyork.fiyork_arcade_sabatoge_key == false) and (fiyork.fiyork_entertainment_sabatoge_key == false) and (fiyork.fiyork_storefront_sabatoge_key == false) and (fiyork.fiyork_advertising_sabatoge_key == false):
+		elif (fiyork.fiyork_arcade_sabatoge_key == false):
+			pass
+		if (fiyork.fiyork_arcade_sabatoge_key == false) and (fiyork.fiyork_entertainment_sabatoge_key == false) and (fiyork.fiyork_storefront_sabatoge_key == false) and (fiyork.fiyork_advertising_sabatoge_key == false):
 			fiyork_array = [1,2,3,4,5,6]
 		randomize()
 		perk_num = fiyork_array[randi() % fiyork_array.size()]

@@ -4892,7 +4892,6 @@ transform/scale = Vector2( 0.653526, 0.39301 )
 [node name="games" parent="." instance=ExtResource( 15 )]
 
 editor/display_folded = true
-visibility/visible = false
 transform/pos = Vector2( 9.7498, 3.76992 )
 transform/scale = Vector2( 0.653526, 0.39301 )
 
@@ -4904,6 +4903,7 @@ transform/scale = Vector2( 0.653526, 0.39301 )
 
 [node name="loans" parent="." instance=ExtResource( 17 )]
 
+visibility/visible = false
 transform/pos = Vector2( 9.7498, 3.76992 )
 transform/scale = Vector2( 0.653526, 0.39301 )
 
@@ -5531,6 +5531,7 @@ underline = 2
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="menu"]
@@ -6730,6 +6731,16 @@ __meta__ = {
 
 [connection signal="button_down" from="fiyork_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
 
+[connection signal="button_down" from="plansey_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
+
+[connection signal="button_down" from="untilly_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
+
+[connection signal="button_down" from="windrow_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
+
+[connection signal="button_down" from="banlon_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
+
+[connection signal="button_down" from="slatten_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
+
 [connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
 
 [connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
@@ -6761,3 +6772,4 @@ __meta__ = {
 [connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 
 
+[editable path="games"]

@@ -3,7 +3,7 @@
 [ext_resource path="res://outer_box.png" type="Texture" id=1]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://inner_box.png" type="Texture" id=3]
-[ext_resource path="res://meta_genre.png" type="Texture" id=4]
+[ext_resource path="res://nostalgic.png" type="Texture" id=4]
 
 [node name="genre" type="Node2D"]
 
@@ -124,8 +124,8 @@ visible_characters = -1
 
 [node name="icon" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.967747, -6.77249 )
-transform/scale = Vector2( 0.601429, 0.609491 )
+transform/pos = Vector2( 0.735732, -7.51833 )
+transform/scale = Vector2( 0.148566, 0.145917 )
 texture = ExtResource( 4 )
 
 

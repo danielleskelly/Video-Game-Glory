@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=1]
 
-[ext_resource path="res://story_piece_five.gd" type="Script" id=1]
+[ext_resource path="res://story_piece_six.gd" type="Script" id=1]
 [ext_resource path="res://Screen Shot 2017-07-13 at 4.35.37 PM.png" type="Texture" id=2]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=3]
 [ext_resource path="res://side_walls.png" type="Texture" id=4]
@@ -31,7 +31,7 @@ length = 10.0
 loop = false
 step = 0.1
 
-[node name="story_piece_five" type="Node2D"]
+[node name="story_piece_six" type="Node2D"]
 
 transform/pos = Vector2( 514.994, 303.814 )
 transform/scale = Vector2( 16.0311, 9.62488 )
@@ -294,7 +294,7 @@ margin/bottom = 150.0
 custom_fonts/normal_font = ExtResource( 18 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Untilly story piece"
+bbcode/bbcode = "Plansey story piece"
 visible_characters = -1
 
 [node name="other_other_bubble" type="Node2D" parent="."]

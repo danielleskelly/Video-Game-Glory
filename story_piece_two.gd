@@ -21,6 +21,7 @@ func _on_AnimationPlayer_finished():
 
 
 func _on_skip_button_button_down():
+	towns.town_select = "hollyhock"
 	get_tree().change_scene("res://strategy.tscn")
 
 

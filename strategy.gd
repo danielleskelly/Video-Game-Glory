@@ -207,11 +207,11 @@ func _process(delta):
 		genre_two.get_child(3).get_child(0).add_text(str(two_hunds_digit))
 		genre_two.get_child(1).clear()
 		genre_two.get_child(1).add_text(str(set_displays.genre_two_name))
-		genre_two.get_child(1).clear()
-		genre_two.get_child(1).add_text(str(set_displays.genre_two_name))
+		genre_two.get_child(6).set_texture(set_displays.genre_two_icon)
 	elif (set_displays.genre_two_key == false):
 		genre_two.set_hidden(true)
-	elif (set_displays.genre_three_key == true):
+	
+	if (set_displays.genre_three_key == true):
 		genre_three.show()
 		genre_three.get_child(3).get_child(0).clear()
 		genre_three.get_child(4).get_child(0).clear()
@@ -224,6 +224,7 @@ func _process(delta):
 		genre_three.get_child(3).get_child(0).add_text(str(three_hunds_digit))
 		genre_three.get_child(1).clear()
 		genre_three.get_child(1).add_text(str(set_displays.genre_three_name))
+		genre_three.get_child(6).set_texture(set_displays.genre_three_icon)
 	elif (set_displays.genre_three_key == false):
 		genre_three.set_hidden(true)
 
@@ -234,7 +235,7 @@ func _on_start_day_button_up():
 		pixel_big()
 		pixel.set_hidden(false)
 		get_tree().set_pause(true)
-	else:
+	elif (game_over.day_start == true):
 		get_node("skip_or_play/perk_output").clear()
 		get_node("skip_or_play/perk_output").add_text(str(perks.perk))
 		get_node("skip_or_play/perk_goal_output").clear()
@@ -252,6 +253,8 @@ func _on_low_funds_ok_button_down():
 
 
 func _on_genre_discover_ok_button_down():
+	station.clear_shit()
+	station.add_items()
 	research_countdown.genre_discovery = false
 	genre_discovery.set_hidden(true)
 	pixel_small()
@@ -266,24 +269,19 @@ func _on_continue_ok_button_down():
 		get_tree().change_scene("res://story_piece_four.tscn")
 	if (towns.town_select == "plansey"):
 		plansey_complete.set_hidden(true)
-		print("story piece five")
-		#get_tree().change_scene("res://story_piece_four.tscn")
+		get_tree().change_scene("res://story_piece_five.tscn")
 	if (towns.town_select == "untilly"):
 		untilly_complete.set_hidden(true)
-		print("story piece six")
-		#get_tree().change_scene("res://story_piece_four.tscn")
+		get_tree().change_scene("res://story_piece_six.tscn")
 	if (towns.town_select == "windrow"):
 		windrow_complete.set_hidden(true)
-		print("story piece seven")
-		#get_tree().change_scene("res://story_piece_four.tscn")
+		get_tree().change_scene("res://story_piece_seven.tscn")
 	if (towns.town_select == "banlon"):
 		banlon_complete.set_hidden(true)
-		print("story piece eight")
-		#get_tree().change_scene("res://story_piece_four.tscn")
+		get_tree().change_scene("res://story_piece_eight.tscn")
 	if (towns.town_select == "slatten"):
 		slatten_complete.set_hidden(true)
-		print("story piece nine")
-		#get_tree().change_scene("res://story_piece_four.tscn")
+		get_tree().change_scene("res://story_piece_four.tscn")
 	pixel_small()
 	get_tree().set_pause(false)
 	customer_globals.customer_reset()
