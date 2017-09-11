@@ -172,30 +172,22 @@ autoplay = "title_page"
 transform/pos = Vector2( -0.22974, 0.307449 )
 transform/scale = Vector2( 0.0997623, 0.161618 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="queue" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.135029, 0.799743 )
-transform/scale = Vector2( 0.0903419, 0.0932731 )
+transform/pos = Vector2( 0.135029, 2.24471 )
+transform/scale = Vector2( 0.0903419, 0.0882041 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="sam" type="Sprite" parent="."]
 
-visibility/visible = false
-transform/pos = Vector2( 26.4342, 22.3323 )
+transform/pos = Vector2( -23.194, -23.5293 )
 transform/scale = Vector2( 0.0224115, -0.0403373 )
 texture = ExtResource( 4 )
 
 [node name="pixel" type="Sprite" parent="."]
 
-visibility/visible = false
-transform/pos = Vector2( 27.1778, 22.1724 )
+transform/pos = Vector2( 2.70979, -22.5961 )
 transform/scale = Vector2( 0.036914, 0.0483219 )
 texture = ExtResource( 5 )
 
@@ -206,20 +198,20 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
-margin/top = -14.0
-margin/right = 419.0
-margin/bottom = 50.0
+margin/left = -25.0
+margin/top = -11.0
+margin/right = 417.0
+margin/bottom = 53.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "Video Game Glory"
+bbcode/bbcode = "Vidl"
 visible_characters = -1
 
 [node name="new" type="Sprite" parent="."]
 
-editor/display_folded = true
-transform/pos = Vector2( -11.5522, 13.1683 )
+visibility/visible = false
+transform/pos = Vector2( -11.5522, 14.358 )
 transform/scale = Vector2( 0.0188435, 0.0302709 )
 texture = ExtResource( 7 )
 
@@ -259,7 +251,8 @@ __meta__ = {
 
 [node name="load" type="Sprite" parent="."]
 
-transform/pos = Vector2( -1.32544, 13.2055 )
+visibility/visible = false
+transform/pos = Vector2( -1.32544, 14.3952 )
 transform/scale = Vector2( 0.0180672, 0.0303931 )
 texture = ExtResource( 7 )
 
@@ -300,7 +293,8 @@ __meta__ = {
 
 [node name="quit" type="Sprite" parent="."]
 
-transform/pos = Vector2( 9.04633, 13.1224 )
+visibility/visible = false
+transform/pos = Vector2( 9.04633, 14.3121 )
 transform/scale = Vector2( 0.0204308, 0.0305331 )
 texture = ExtResource( 7 )
 

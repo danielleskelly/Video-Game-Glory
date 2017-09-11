@@ -4,7 +4,7 @@ var hollyhock_balance = 400
 var hollyhock_expenses = 0
 var hollyhock_cash
 
-var fiyork_balance = 200
+var fiyork_balance = 400
 var fiyork_expenses = 0
 var fiyork_cash
 
@@ -16,7 +16,7 @@ var untilly_balance = 200
 var untilly_expenses = 0
 var untilly_cash
 
-var windrow_balance = 200
+var windrow_balance = 800
 var windrow_expenses = 0
 var windrow_cash
 

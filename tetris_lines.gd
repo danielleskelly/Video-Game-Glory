@@ -1887,7 +1887,7 @@ func line_check():
 		for x in one:
 			x.queue_free()
 		move_everything_down()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 	if line_two_clear == true:
 		for y in range(0,15):
 			matrix[1][y] = 0
@@ -1895,7 +1895,7 @@ func line_check():
 		for x in two:
 			x.queue_free()
 		move_everything_down()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 	if line_three_clear == true:
 		for y in range(0,15):
 			matrix[2][y] = 0
@@ -1903,7 +1903,7 @@ func line_check():
 		for x in three:
 			x.queue_free()
 		move_everything_down()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 	if line_four_clear == true:
 		for y in range(0,15):
 			matrix[3][y] = 0
@@ -1911,7 +1911,7 @@ func line_check():
 		for x in four:
 			x.queue_free()
 		move_everything_down()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 	if line_five_clear == true:
 		for y in range(0,15):
 			matrix[4][y] = 0
@@ -1919,14 +1919,14 @@ func line_check():
 		for x in five:
 			x.queue_free()
 		move_everything_down()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 	if line_six_clear == true:
 		for y in range(0,15):
 			matrix[5][y] = 0
 		var six = get_tree().get_nodes_in_group("six")
 		for x in six:
 			x.queue_free()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 		move_everything_down()
 	if line_seven_clear == true:
 		for y in range(0,15):
@@ -1934,7 +1934,7 @@ func line_check():
 		var seven = get_tree().get_nodes_in_group("seven")
 		for x in seven:
 			x.queue_free()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 		move_everything_down()
 	if line_eight_clear == true:
 		for y in range(0,15):
@@ -1942,7 +1942,7 @@ func line_check():
 		var eight = get_tree().get_nodes_in_group("eight")
 		for x in eight:
 			x.queue_free()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 		move_everything_down()
 	if line_nine_clear == true:
 		for y in range(0,15):
@@ -1950,7 +1950,7 @@ func line_check():
 		var nine = get_tree().get_nodes_in_group("nine")
 		for x in nine:
 			x.queue_free()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 		move_everything_down()
 	if line_ten_clear == true:
 		for y in range(0,15):
@@ -1958,7 +1958,7 @@ func line_check():
 		var ten = get_tree().get_nodes_in_group("ten")
 		for x in ten:
 			x.queue_free()
-		perks.success = perks.success + 10
+		perks.success = perks.success + 15
 		move_everything_down()
 	
 	

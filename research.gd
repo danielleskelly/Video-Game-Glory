@@ -11,17 +11,17 @@ func _ready():
 	research_spending_output.clear()
 	if (towns.town_select == "hollyhock"):
 		research_spending_output.set_text(str(hollyhock.hollyhock_research_spending))
-	if (towns.town_select == "fiyork"):
+	elif (towns.town_select == "fiyork"):
 		research_spending_output.set_text(str(fiyork.fiyork_research_spending))
-	if (towns.town_select == "plansey"):
+	elif (towns.town_select == "plansey"):
 		research_spending_output.set_text(str(plansey.plansey_research_spending))
-	if (towns.town_select == "untilly"):
+	elif (towns.town_select == "untilly"):
 		research_spending_output.set_text(str(untilly.untilly_research_spending))
-	if (towns.town_select == "windrow"):
+	elif (towns.town_select == "windrow"):
 		research_spending_output.set_text(str(windrow.windrow_research_spending))
-	if (towns.town_select == "banlon"):
+	elif (towns.town_select == "banlon"):
 		research_spending_output.set_text(str(banlon.banlon_research_spending))
-	if (towns.town_select == "slatten"):
+	elif (towns.town_select == "slatten"):
 		research_spending_output.set_text(str(slatten.slatten_research_spending))
 	set_process(true)
 
@@ -37,7 +37,7 @@ func _process(delta):
 				hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_one / (spending_stand_in + hollyhock.hollyhock_research_fund)
 			elif (hollyhock.hollyhock_research_spending > 0):
 				hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_one / (hollyhock.hollyhock_research_spending + hollyhock.hollyhock_research_fund)
-		elif ((hollyhock.hollyhock_genre_three_key == true) and (hollyhock.hollyhock_genre_two_key == false)):
+		elif ((hollyhock.hollyhock_genre_three_key == false) and (hollyhock.hollyhock_genre_two_key == true)):
 			research_goal_output.clear()
 			research_goal_output.add_text("Genre Three -- Platformer")
 			if (hollyhock.hollyhock_research_spending == 0):
@@ -51,7 +51,7 @@ func _process(delta):
 			block = true
 		days_left_output.clear()
 		days_left_output.add_text(str(hollyhock.hollyhock_days_left_research))
-	if (towns.town_select == "fiyork"):
+	elif (towns.town_select == "fiyork"):
 		research_fund_output.clear()
 		research_fund_output.add_text(str(fiyork.fiyork_research_fund))
 		if (fiyork.fiyork_genre_two_key == false):
@@ -156,7 +156,7 @@ func _process(delta):
 		research_fund_output.add_text(str(slatten.slatten_research_fund))
 		if (slatten.slatten_genre_two_key == false):
 			research_goal_output.clear()
-			research_goal_output.add_text("Genre Two -- Casual")
+			research_goal_output.add_text("Genre Two -- Time Management")
 			if (slatten.slatten_research_spending == 0):
 				var spending_stand_in = 1
 				slatten.slatten_days_left_research = slatten.slatten_research_total_one / (spending_stand_in + slatten.slatten_research_fund)
@@ -164,7 +164,7 @@ func _process(delta):
 				slatten.slatten_days_left_research = slatten.slatten_research_total_one / (slatten.slatten_research_spending + slatten.slatten_research_fund)
 		elif ((slatten.slatten_genre_two_key == true) and (slatten.slatten_genre_three_key == false)):
 			research_goal_output.clear()
-			research_goal_output.add_text("Genre Three -- Nostalgic")
+			research_goal_output.add_text("Genre Three -- Meta")
 			if (slatten.slatten_research_spending == 0):
 				var spending_stand_in = 1
 				slatten.slatten_days_left_research = slatten.slatten_research_total_two / (spending_stand_in + slatten.slatten_research_fund)
@@ -176,6 +176,31 @@ func _process(delta):
 			block = true
 		days_left_output.clear()
 		days_left_output.add_text(str(slatten.slatten_days_left_research))
+	if (towns.town_select == "windrow"):
+		research_fund_output.clear()
+		research_fund_output.add_text(str(windrow.windrow_research_fund))
+		if (windrow.windrow_genre_two_key == false):
+			research_goal_output.clear()
+			research_goal_output.add_text("Genre Two -- Casual")
+			if (windrow.windrow_research_spending == 0):
+				var spending_stand_in = 1
+				windrow.windrow_days_left_research = windrow.windrow_research_total_one / (spending_stand_in + windrow.windrow_research_fund)
+			elif (windrow.windrow_research_spending > 0):
+				windrow.windrow_days_left_research = windrow.windrow_research_total_one / (windrow.windrow_research_spending + windrow.windrow_research_fund)
+		elif ((windrow.windrow_genre_two_key == true) and (windrow.windrow_genre_three_key == false)):
+			research_goal_output.clear()
+			research_goal_output.add_text("Genre Three -- Nostalgic")
+			if (windrow.windrow_research_spending == 0):
+				var spending_stand_in = 1
+				windrow.windrow_days_left_research = windrow.windrow_research_total_two / (spending_stand_in + windrow.windrow_research_fund)
+			elif (windrow.windrow_research_spending > 0):
+				windrow.windrow_days_left_research = windrow.windrow_research_total_two / (windrow.windrow_research_spending + windrow.windrow_research_fund)
+		elif ((windrow.windrow_genre_three_key == true) and (windrow.windrow_genre_two_key == true)):
+			research_goal_output.clear()
+			research_goal_output.add_text("All Genres Available")
+			block = true
+		days_left_output.clear()
+		days_left_output.add_text(str(windrow.windrow_days_left_research))
 
 func _on_research_lower_button_down():
 	if (towns.town_select == "hollyhock"):

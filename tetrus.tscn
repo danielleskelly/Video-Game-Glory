@@ -1577,7 +1577,7 @@ visible_characters = -1
 [node name="day_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 120.0
+wait_time = 160.0
 one_shot = true
 autostart = true
 

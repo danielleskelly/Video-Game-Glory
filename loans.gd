@@ -1,6 +1,6 @@
 extends Node
 
-var credit_limit = 3000
+var credit_limit = 1000
 var daily_interest = .05
 
 func _ready():

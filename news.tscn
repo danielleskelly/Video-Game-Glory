@@ -3,8 +3,8 @@
 [ext_resource path="res://news.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=4]
-[ext_resource path="res://meta_genre.png" type="Texture" id=5]
+[ext_resource path="res://inner_box.png" type="Texture" id=4]
+[ext_resource path="res://adventure.png" type="Texture" id=5]
 
 [node name="news" type="Node2D"]
 
@@ -159,38 +159,38 @@ visible_characters = -1
 
 [node name="genre_one_background" type="Sprite" parent="."]
 
-transform/pos = Vector2( -10.7471, -8.76491 )
-transform/scale = Vector2( 0.00703348, 0.00970793 )
+transform/pos = Vector2( -10.5809, -7.51894 )
+transform/scale = Vector2( 0.0511601, 0.0510572 )
 texture = ExtResource( 4 )
 
-[node name="genre_one_background1" type="Sprite" parent="."]
+[node name="genre_two_background" type="Sprite" parent="."]
 
-transform/pos = Vector2( -10.6394, 6.02556 )
-transform/scale = Vector2( 0.00717702, 0.0101124 )
+transform/pos = Vector2( -10.723, 7.31196 )
+transform/scale = Vector2( 0.0511601, 0.0510572 )
 texture = ExtResource( 4 )
 
-[node name="genre_one_background2" type="Sprite" parent="."]
+[node name="genre_three_background" type="Sprite" parent="."]
 
-transform/pos = Vector2( -10.5604, 21.3811 )
-transform/scale = Vector2( 0.00674641, 0.0101124 )
+transform/pos = Vector2( -10.723, 22.386 )
+transform/scale = Vector2( 0.0511601, 0.0510572 )
 texture = ExtResource( 4 )
 
 [node name="genre_one_icon" type="Sprite" parent="."]
 
-transform/pos = Vector2( -10.9086, -7.42911 )
-transform/scale = Vector2( 0.344292, 0.525729 )
+transform/pos = Vector2( -10.6641, -7.58135 )
+transform/scale = Vector2( 0.0665485, 0.0960035 )
 texture = ExtResource( 5 )
 
 [node name="genre_two_icon" type="Sprite" parent="."]
 
-transform/pos = Vector2( -10.8892, 7.03772 )
-transform/scale = Vector2( 0.330715, 0.508843 )
+transform/pos = Vector2( -10.8062, 7.24954 )
+transform/scale = Vector2( 0.0665485, 0.0960035 )
 texture = ExtResource( 5 )
 
 [node name="genre_three_icon" type="Sprite" parent="."]
 
-transform/pos = Vector2( -10.8892, 22.3481 )
-transform/scale = Vector2( 0.325204, 0.534857 )
+transform/pos = Vector2( -10.8062, 22.8098 )
+transform/scale = Vector2( 0.0665485, 0.0960035 )
 texture = ExtResource( 5 )
 
 

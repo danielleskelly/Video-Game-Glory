@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://games.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://potential_background.png" type="Texture" id=3]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=4]
-[ext_resource path="res://station.gd" type="Script" id=5]
 
 [node name="games" type="Node2D"]
 
@@ -68,7 +67,6 @@ visible_characters = -1
 
 transform/pos = Vector2( 4.23678, -14.7551 )
 transform/scale = Vector2( 0.780667, 0.111701 )
-script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_one"]
 
@@ -114,7 +112,6 @@ items = [  ]
 
 transform/pos = Vector2( 4.14187, -7.59215 )
 transform/scale = Vector2( 0.780667, 0.111701 )
-script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_two"]
 
@@ -160,7 +157,6 @@ items = [  ]
 visibility/visible = false
 transform/pos = Vector2( 4.03808, 0.271612 )
 transform/scale = Vector2( 0.780667, 0.111701 )
-script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_three"]
 
@@ -206,7 +202,6 @@ items = [  ]
 visibility/visible = false
 transform/pos = Vector2( 4.03807, 7.77794 )
 transform/scale = Vector2( 0.780667, 0.111701 )
-script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_four"]
 
@@ -252,7 +247,6 @@ items = [  ]
 visibility/visible = false
 transform/pos = Vector2( 3.99681, 15.2843 )
 transform/scale = Vector2( 0.780667, 0.111701 )
-script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_five"]
 
@@ -298,7 +292,6 @@ items = [  ]
 visibility/visible = false
 transform/pos = Vector2( 3.99681, 22.9693 )
 transform/scale = Vector2( 0.780667, 0.111701 )
-script/script = ExtResource( 5 )
 
 [node name="name" type="RichTextLabel" parent="station_six"]
 
