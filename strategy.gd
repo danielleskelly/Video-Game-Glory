@@ -35,17 +35,12 @@ func _ready():
 	pixel_small()
 	set_sound()
 	tutorial_start()
-	research_countdown()
+	research_countdown_trigger()
 	set_process(true)
 	
 func _process(delta):
 	if Input.is_action_pressed("ui_cancel"):
 		_on_pixel_button_button_down()
-	game_over.game_over_warning_check()
-	if (game_over.game_over_warning == true):
-		game_over_alert.set_hidden(false)
-		pixel.set_hidden(false)
-		get_tree().set_pause(true)
 	if (towns.town_select == "hollyhock"):
 		if (get_node("AnimationPlayer").get_current_animation() == "tutorial"):
 			if ((arcade_day.hollyhock_station_one_selection == 1) and (arcade_day.hollyhock_station_two_selection == 1)):
@@ -65,7 +60,7 @@ func _process(delta):
 			town_banner.get_child(1).add_text("Hollyhock...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
-	if (towns.town_select == "fiyork"):
+	elif (towns.town_select == "fiyork"):
 		if (fiyork.fiyork_advertising_sabatoge_key == false) and (fiyork.fiyork_storefront_sabatoge_key == false) and (fiyork.fiyork_entertainment_sabatoge_key == false) and (fiyork.fiyork_arcade_sabatoge_key == false):
 			fiyork_complete.set_hidden(false)
 			pixel.set_hidden(false)
@@ -78,7 +73,7 @@ func _process(delta):
 			town_banner.get_child(1).add_text("Fiyork...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
-	if (towns.town_select == "untilly"):
+	elif (towns.town_select == "untilly"):
 		if (int(money.untilly_cash) >= 500) and (int(untilly.untilly_current_loan) <= 0):
 			untilly_complete.set_hidden(false)
 			pixel.set_hidden(false)
@@ -91,7 +86,7 @@ func _process(delta):
 			town_banner.get_child(1).add_text("Untilly...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
-	if (towns.town_select == "plansey"):
+	elif (towns.town_select == "plansey"):
 		if (customer_math.plansey_player_marketshare >= .75) and (plansey.plansey_current_loan == 0):
 			plansey_complete.set_hidden(false)
 			pixel.set_hidden(false)
@@ -104,7 +99,7 @@ func _process(delta):
 			town_banner.get_child(1).add_text("Plansey...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
-	if (towns.town_select == "windrow"):
+	elif (towns.town_select == "windrow"):
 		if (windrow.windrow_advertising_sabatoge_key == false) and (windrow.windrow_entertainment_sabatoge_key == false) and (windrow.windrow_storefront_sabatoge_key == false) and (windrow.windrow_arcade_sabatoge_key == false) and (windrow.windrow_genre_two_key == true) and (windrow.windrow_genre_three_key == true):
 			windrow_complete.set_hidden(false)
 			pixel.set_hidden(false)
@@ -117,7 +112,7 @@ func _process(delta):
 			town_banner.get_child(1).add_text("Windrow...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
-	if (towns.town_select == "plansey"):
+	elif (towns.town_select == "plansey"):
 		if (customer_math.plansey_player_marketshare >= .75) and (plansey.plansey_current_loan == 0):
 			plansey_complete.set_hidden(false)
 			pixel.set_hidden(false)
@@ -130,7 +125,7 @@ func _process(delta):
 			town_banner.get_child(1).add_text("Plansey...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
-	if (towns.town_select == "banlon"):
+	elif (towns.town_select == "banlon"):
 		if (int(money.banlon_cash) >= 1000) and (banlon.banlon_current_loan == 0):
 			banlon_complete.set_hidden(false)
 			pixel.set_hidden(false)
@@ -143,7 +138,7 @@ func _process(delta):
 			town_banner.get_child(1).add_text("Banlon...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
-	if (towns.town_select == "slatten"):
+	elif (towns.town_select == "slatten"):
 		if (slatten.slatten_advertising_sabatoge_key == false) and (slatten.slatten_storefront_sabatoge_key == false) and (slatten.slatten_entertainment_sabatoge_key == false) and (slatten.slatten_arcade_sabatoge_key == false) and (int(money.slatten_cash) >= 500) and (slatten.slatten_current_loan == 0):
 			slatten_complete.set_hidden(false)
 			pixel.set_hidden(false)
@@ -229,13 +224,18 @@ func _process(delta):
 		genre_three.set_hidden(true)
 
 func _on_start_day_button_up():
-	game_over.day_start_check()
-	if (game_over.day_start == false):
+	game_over.game_over_check()
+	if game_over.expenses_warning == true:
 		low_funds_warning.set_hidden(false)
 		pixel_big()
 		pixel.set_hidden(false)
 		get_tree().set_pause(true)
-	elif (game_over.day_start == true):
+	elif game_over.game_over == true:
+		game_over_alert.set_hidden(false)
+		pixel.set_hidden(false)
+		get_tree().set_pause(true)
+	elif (game_over.expenses_warning == false) and (game_over.game_over == false):
+		perks.perks()
 		get_node("skip_or_play/perk_output").clear()
 		get_node("skip_or_play/perk_output").add_text(str(perks.perk))
 		get_node("skip_or_play/perk_goal_output").clear()
@@ -243,7 +243,6 @@ func _on_start_day_button_up():
 		get_node("skip_or_play").show()
 		pixel_big()
 		get_node("pixel").show()
-
 
 func _on_low_funds_ok_button_down():
 	low_funds_warning.set_hidden(true)
@@ -341,65 +340,57 @@ func _on_AnimationPlayer_finished():
 
 func _on_skip_button_down():
 	customer_globals.customer_reset()
-	if (towns.town_select == "hollyhock"):
-		arcade_day.hollyhock_day()
-	if (towns.town_select == "fiyork"):
-		arcade_day.fiyork_day()
-	if (towns.town_select == "untilly"):
-		arcade_day.untilly_day()
-	if (towns.town_select == "plansey"):
-		arcade_day.plansey_day()
-	if (towns.town_select == "windrow"):
-		arcade_day.windrow_day()
-	if (towns.town_select == "banlon"):
-		arcade_day.banlon_day()
-	if (towns.town_select == "slatten"):
-		arcade_day.slatten_day()
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
-	get_node("skip_or_play").set_hidden(true)
 	pixel_small()
+	get_node("skip_or_play").set_hidden(true)
+	if (towns.town_select == "hollyhock"):
+		arcade_day.hollyhock_day()
+	elif (towns.town_select == "fiyork"):
+		arcade_day.fiyork_day()
+	elif (towns.town_select == "untilly"):
+		arcade_day.untilly_day()
+	elif (towns.town_select == "plansey"):
+		arcade_day.plansey_day()
+	elif (towns.town_select == "windrow"):
+		arcade_day.windrow_day()
+	elif (towns.town_select == "banlon"):
+		arcade_day.banlon_day()
+	elif (towns.town_select == "slatten"):
+		arcade_day.slatten_day()
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_play_button_down():
 	customer_globals.customer_reset()
-	if (towns.town_select == "hollyhock"):
-		arcade_day.hollyhock_day()
-	if (towns.town_select == "fiyork"):
-		arcade_day.fiyork_day()
-	if (towns.town_select == "untilly"):
-		arcade_day.untilly_day()
-	if (towns.town_select == "plansey"):
-		arcade_day.plansey_day()
-	if (towns.town_select == "windrow"):
-		arcade_day.windrow_day()
-	if (towns.town_select == "banlon"):
-		arcade_day.banlon_day()
-	if (towns.town_select == "slatten"):
-		arcade_day.slatten_day()
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
 	pixel_small()
 	get_node("skip_or_play").set_hidden(true)
 	if (towns.town_select == "hollyhock"):
+		arcade_day.hollyhock_day()
 		get_tree().change_scene("res://hollyhock_time_management.tscn")
-	if (towns.town_select == "fiyork"):
+	elif (towns.town_select == "fiyork"):
+		arcade_day.fiyork_day()
 		get_tree().change_scene("res://fiyork_time_management.tscn")
-	if (towns.town_select == "plansey"):
+	elif (towns.town_select == "plansey"):
+		arcade_day.plansey_day()
 		get_tree().change_scene("res://plansey_time_management.tscn")
-	if (towns.town_select == "untilly"):
+	elif (towns.town_select == "untilly"):
+		arcade_day.untilly_day()
 		get_tree().change_scene("res://tetrus.tscn")
-	if (towns.town_select == "windrow"):
+	elif (towns.town_select == "windrow"):
+		arcade_day.windrow_day()
 		get_tree().change_scene("res://windrow_time_management.tscn")
-	if (towns.town_select == "banlon"):
+	elif (towns.town_select == "banlon"):
+		arcade_day.banlon_day()
 		get_tree().change_scene("res://banlon_time_management.tscn")
-	if (towns.town_select == "slatten"):
+	elif (towns.town_select == "slatten"):
+		arcade_day.slatten_day()
 		get_tree().change_scene("res://qbert.tscn")
-	
 
-		
+
 func pixel_big():
 	pixel.set_pos(Vector2(0.17552, 0.761547))
 	pixel.set_scale(Vector2(0.99308, 1.009797))
@@ -470,7 +461,7 @@ func tutorial_start():
 	if (tutorial.tutorial_start == true):
 		pass
 
-func research_countdown():
+func research_countdown_trigger():
 	research_countdown.research_counting()
 	if (research_countdown.genre_discovery == true):
 			genre_discovery.set_hidden(false)

@@ -1,125 +1,59 @@
 extends Node
 
-var game_over_warning = false
-var day_start = true
+var game_over = false
+var expenses_warning = false
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
-	
-func day_start_check():
+
+func game_over_check():
+	game_over = false
+	expenses_warning = false
 	if (towns.town_select == "hollyhock"):
-		if (money.hollyhock_balance - money.hollyhock_expenses < 0):
-			day_start = false
-		else:
-			money.hollyhock_balance = money.hollyhock_balance - money.hollyhock_expenses
-			if (hollyhock.hollyhock_current_loan > 0):
-				var daily_interest_charge = hollyhock.hollyhock_current_loan * loans.daily_interest
-				money.hollyhock_balance = money.hollyhock_balance - int(daily_interest_charge)
-			customer_globals.customer_reset()
-			perks.perks()
-			day_start = true
+		if (money.hollyhock_balance - money.hollyhock_expenses <= 0):
+			if (money.hollyhock_expenses > 0) or (hollyhock.hollyhock_current_loan < 1000):
+				expenses_warning = true
+			elif (money.hollyhock_expenses == 0) or (hollyhock.hollyhock_current_loan < 1000):
+				game_over = true
 	elif (towns.town_select == "fiyork"):
-		if (money.fiyork_balance - money.fiyork_expenses < 0):
-			day_start = false
-		else:
-			money.fiyork_balance = money.fiyork_balance - money.fiyork_expenses
-			if (fiyork.fiyork_current_loan > 0):
-				var daily_interest_charge = fiyork.fiyork_current_loan * loans.daily_interest
-				money.fiyork_balance = money.fiyork_balance - int(daily_interest_charge)
-			customer_globals.customer_reset()
-			perks.perks()
-			day_start = true
+		if (money.fiyork_balance - money.fiyork_expenses <= 0):
+			if (money.fiyork_expenses > 0) or (fiyork.hollyhock_current_loan < 1000):
+				expenses_warning = true
+			elif (money.fiyork_expenses == 0) or (fiyork.hollyhock_current_loan < 1000):
+				game_over = true
 	elif (towns.town_select == "untilly"):
-		if (money.untilly_balance - money.untilly_expenses < 0):
-			day_start = false
-		else:
-			money.untilly_balance = money.untilly_balance - money.untilly_expenses
-			if (untilly.untilly_current_loan > 0):
-				var daily_interest_charge = untilly.untilly_current_loan * loans.daily_interest
-				money.untilly_balance = money.untilly_balance - int(daily_interest_charge)
-			customer_globals.customer_reset()
-			perks.perks()
-			day_start = true
+		if (money.untilly_balance - money.untilly_expenses <= 0):
+			if (money.untilly_expenses > 0) or (untilly.hollyhock_current_loan < 1000):
+				expenses_warning = true
+			elif (money.untilly_expenses == 0) or (untilly.hollyhock_current_loan < 1000):
+				game_over = true
 	elif (towns.town_select == "plansey"):
-		if (money.plansey_balance - money.plansey_expenses < 0):
-			day_start = false
-		else:
-			money.plansey_balance = money.plansey_balance - money.plansey_expenses
-			if (plansey.plansey_current_loan > 0):
-				var daily_interest_charge = plansey.plansey_current_loan * loans.daily_interest
-				money.plansey_balance = money.plansey_balance - int(daily_interest_charge)
-			customer_globals.customer_reset()
-			perks.perks()
-			day_start = true
+		if (money.plansey_balance - money.plansey_expenses <= 0):
+			if (money.plansey_expenses > 0) or (plansey.hollyhock_current_loan < 1000):
+				expenses_warning = true
+			elif (money.plansey_expenses == 0) or (plansey.hollyhock_current_loan < 1000):
+				game_over = true
 	elif (towns.town_select == "windrow"):
-		if (money.windrow_balance - money.windrow_expenses < 0):
-			day_start = false
-		else:
-			money.windrow_balance = money.windrow_balance - money.windrow_expenses
-			if (windrow.windrow_current_loan > 0):
-				var daily_interest_charge = windrow.windrow_current_loan * loans.daily_interest
-				money.windrow_balance = money.windrow_balance - int(daily_interest_charge)
-			customer_globals.customer_reset()
-			perks.perks()
-			day_start = true
+		if (money.windrow_balance - money.windrow_expenses <= 0):
+			if (money.windrow_expenses > 0) or (windrow.hollyhock_current_loan < 1000):
+				expenses_warning = true
+			elif (money.windrow_expenses == 0) or (windrow.hollyhock_current_loan < 1000):
+				game_over = true
 	elif (towns.town_select == "banlon"):
-		if (money.banlon_balance - money.banlon_expenses < 0):
-			day_start = false
-		else:
-			money.banlon_balance = money.banlon_balance - money.banlon_expenses
-			if (banlon.banlon_current_loan > 0):
-				var daily_interest_charge = banlon.banlon_current_loan * loans.daily_interest
-				money.banlon_balance = money.banlon_balance - int(daily_interest_charge)
-			customer_globals.customer_reset()
-			perks.perks()
-			day_start = true
+		if (money.banlon_balance - money.banlon_expenses <= 0):
+			if (money.banlon_expenses > 0) or (banlon.hollyhock_current_loan < 1000):
+				expenses_warning = true
+			elif (money.banlon_expenses == 0) or (banlon.hollyhock_current_loan < 1000):
+				game_over = true
 	elif (towns.town_select == "slatten"):
-		if (money.slatten_balance - money.slatten_expenses < 0):
-			day_start = false
-		else:
-			money.slatten_balance = money.slatten_balance - money.slatten_expenses
-			if (slatten.slatten_current_loan > 0):
-				var daily_interest_charge = slatten.slatten_current_loan * loans.daily_interest
-				money.slatten_balance = money.slatten_balance - int(daily_interest_charge)
-			customer_globals.customer_reset()
-			perks.perks()
-			day_start = true
-
-
-	
-	
-func game_over_warning_check():
-	game_over_warning = false
-	if (towns.town_select == "hollyhock"):
-		if ((money.hollyhock_cash - money.hollyhock_expenses) < 0):
-			if ((money.hollyhock_expenses == 0) and (hollyhock.hollyhock_current_loan == loans.credit_limit)):
-				game_over_warning = true
-	if (towns.town_select == "fiyork"):
-		if ((money.fiyork_cash - money.fiyork_expenses) < 0):
-			if ((money.fiyork_expenses == 0) and (fiyork.fiyork_current_loan == loans.credit_limit)):
-				game_over_warning = true
-	if (towns.town_select == "untilly"):
-		if ((money.untilly_cash - money.untilly_expenses) < 0):
-			if ((money.untilly_expenses == 0) and (untilly.untilly_current_loan == loans.credit_limit)):
-				game_over_warning = true
-	if (towns.town_select == "plansey"):
-		if ((money.plansey_cash - money.plansey_expenses) < 0):
-			if ((money.plansey_expenses == 0) and (plansey.plansey_current_loan == loans.credit_limit)):
-				game_over_warning = true
-	if (towns.town_select == "windrow"):
-		if ((money.windrow_cash - money.windrow_expenses) < 0):
-			if ((money.windrow_expenses == 0) and (windrow.windrow_current_loan == loans.credit_limit)):
-				game_over_warning = true
-	if (towns.town_select == "banlon"):
-		if ((money.banlon_cash - money.banlon_expenses) < 0):
-			if ((money.banlon_expenses == 0) and (banlon.banlon_current_loan == loans.credit_limit)):
-				game_over_warning = true
-	if (towns.town_select == "slatten"):
-		if ((money.slatten_cash - money.slatten_expenses) < 0):
-			if ((money.slatten_expenses == 0) and (slatten.slatten_current_loan == loans.credit_limit)):
-				game_over_warning = true
+		if (money.slatten_balance - money.slatten_expenses <= 0):
+			if (money.slatten_expenses > 0) or (slatten.hollyhock_current_loan < 1000):
+				expenses_warning = true
+			elif (money.slatten_expenses == 0) or (slatten.hollyhock_current_loan < 1000):
+				game_over = true
+		
 
 
 

@@ -11,17 +11,17 @@ func _ready():
 	research_spending_output.clear()
 	if (towns.town_select == "hollyhock"):
 		research_spending_output.set_text(str(hollyhock.hollyhock_research_spending))
-	if (towns.town_select == "fiyork"):
+	elif (towns.town_select == "fiyork"):
 		research_spending_output.set_text(str(fiyork.fiyork_research_spending))
-	if (towns.town_select == "plansey"):
+	elif (towns.town_select == "plansey"):
 		research_spending_output.set_text(str(plansey.plansey_research_spending))
-	if (towns.town_select == "untilly"):
+	elif (towns.town_select == "untilly"):
 		research_spending_output.set_text(str(untilly.untilly_research_spending))
-	if (towns.town_select == "windrow"):
+	elif (towns.town_select == "windrow"):
 		research_spending_output.set_text(str(windrow.windrow_research_spending))
-	if (towns.town_select == "banlon"):
+	elif (towns.town_select == "banlon"):
 		research_spending_output.set_text(str(banlon.banlon_research_spending))
-	if (towns.town_select == "slatten"):
+	elif (towns.town_select == "slatten"):
 		research_spending_output.set_text(str(slatten.slatten_research_spending))
 	set_process(true)
 
@@ -37,7 +37,7 @@ func _process(delta):
 				hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_one / (spending_stand_in + hollyhock.hollyhock_research_fund)
 			elif (hollyhock.hollyhock_research_spending > 0):
 				hollyhock.hollyhock_days_left_research = hollyhock.hollyhock_research_total_one / (hollyhock.hollyhock_research_spending + hollyhock.hollyhock_research_fund)
-		elif ((hollyhock.hollyhock_genre_three_key == true) and (hollyhock.hollyhock_genre_two_key == false)):
+		elif ((hollyhock.hollyhock_genre_three_key == false) and (hollyhock.hollyhock_genre_two_key == true)):
 			research_goal_output.clear()
 			research_goal_output.add_text("Genre Three -- Platformer")
 			if (hollyhock.hollyhock_research_spending == 0):
@@ -51,7 +51,7 @@ func _process(delta):
 			block = true
 		days_left_output.clear()
 		days_left_output.add_text(str(hollyhock.hollyhock_days_left_research))
-	if (towns.town_select == "fiyork"):
+	elif (towns.town_select == "fiyork"):
 		research_fund_output.clear()
 		research_fund_output.add_text(str(fiyork.fiyork_research_fund))
 		if (fiyork.fiyork_genre_two_key == false):

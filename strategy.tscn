@@ -4879,7 +4879,6 @@ transform/scale = Vector2( 0.653526, 0.39301 )
 
 [node name="supplies_full" parent="." instance=ExtResource( 13 )]
 
-visibility/visible = false
 transform/pos = Vector2( 9.7498, 3.76992 )
 transform/scale = Vector2( 0.653526, 0.39301 )
 
@@ -4892,6 +4891,7 @@ transform/scale = Vector2( 0.653526, 0.39301 )
 [node name="games" parent="." instance=ExtResource( 15 )]
 
 editor/display_folded = true
+visibility/visible = false
 transform/pos = Vector2( 9.7498, 3.76992 )
 transform/scale = Vector2( 0.653526, 0.39301 )
 

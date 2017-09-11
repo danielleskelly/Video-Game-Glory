@@ -248,6 +248,7 @@ func save():
 	return savedict
 	
 func hollyhock_day():
+	money.hollyhock_balance = money.hollyhock_balance - money.hollyhock_expenses
 	customer_math.customer_math()
 	for x in range(0, customer_math.player_prediction_one + 1):
 		storefront_check.storefront_check()
@@ -448,6 +449,7 @@ func hollyhock_day():
 				customer_globals.storefront_loss = customer_globals.storefront_loss + 1
 				
 func fiyork_day():
+	money.fiyork_balance = money.fiyork_balance - money.fiyork_expenses
 	customer_math.customer_math()
 	for x in range(0, customer_math.player_prediction_one + 1):
 		storefront_check.storefront_check()
@@ -648,6 +650,7 @@ func fiyork_day():
 				customer_globals.storefront_loss = customer_globals.storefront_loss + 1
 				
 func untilly_day():
+	money.untilly_balance = money.untilly_balance - money.untilly_expenses
 	customer_math.customer_math()
 	for x in range(0, customer_math.player_prediction_one + 1):
 		storefront_check.storefront_check()
@@ -848,6 +851,7 @@ func untilly_day():
 				customer_globals.storefront_loss = customer_globals.storefront_loss + 1
 	
 func plansey_day():
+	money.plansey_balance = money.plansey_balance - money.plansey_expenses
 	customer_math.customer_math()
 	for x in range(0, customer_math.player_prediction_one + 1):
 		storefront_check.storefront_check()
@@ -1048,6 +1052,7 @@ func plansey_day():
 				customer_globals.storefront_loss = customer_globals.storefront_loss + 1
 	
 func windrow_day():
+	money.windrow_balance = money.windrow_balance - money.windrow_expenses
 	customer_math.customer_math()
 	for x in range(0, customer_math.player_prediction_one + 1):
 		storefront_check.storefront_check()
@@ -1249,6 +1254,7 @@ func windrow_day():
 				
 				
 func banlon_day():
+	money.banlon_balance = money.banlon_balance - money.banlon_expenses
 	customer_math.customer_math()
 	for x in range(0, customer_math.player_prediction_one + 1):
 		storefront_check.storefront_check()
@@ -1449,6 +1455,7 @@ func banlon_day():
 				customer_globals.storefront_loss = customer_globals.storefront_loss + 1
 
 func slatten_day():
+	money.slatten_balance = money.slatten_balance - money.slatten_expenses
 	customer_math.customer_math()
 	for x in range(0, customer_math.player_prediction_one + 1):
 		storefront_check.storefront_check()
