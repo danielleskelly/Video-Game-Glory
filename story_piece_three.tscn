@@ -427,6 +427,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ".....Hmmkay...."
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="other_bubble" type="Node2D" parent="."]
 
@@ -456,6 +457,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I knew you could do it! So we..."
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="other_other_bubble" type="Node2D" parent="."]
 
@@ -487,6 +489,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Otherwise they are threatening to start.... watching MOVIES!"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 

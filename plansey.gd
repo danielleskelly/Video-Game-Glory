@@ -37,45 +37,4 @@ var plansey_station_six_key = false
 var plansey_loans_input_key = false
 
 func _ready():
-	add_to_group("Persist")
-	
-
-func save():
-	var savedict = {
-		filename=get_filename(),
-		plansey_research_total_one = plansey_research_total_one,
-		plansey_genre_two_key = plansey_genre_two_key,
-		plansey_research_total_two = plansey_research_total_two,
-		plansey_genre_three_key = plansey_genre_three_key,
-
-		plansey_storefront_best_key = plansey_storefront_best_key,
-		plansey_storefront_great_key = plansey_storefront_great_key,
-		plansey_storefront_good_key = plansey_storefront_good_key,
-		plansey_storefront_decent_key = plansey_storefront_decent_key,
-		plansey_storefront_worst_key = plansey_storefront_worst_key,
-
-		plansey_arcade_worst_key = plansey_arcade_worst_key,
-		plansey_arcade_decent_key = plansey_arcade_decent_key,
-		plansey_arcade_good_key = plansey_arcade_good_key,
-		plansey_arcade_great_key = plansey_arcade_great_key,
-		plansey_arcade_best_key = plansey_arcade_best_key,
-
-		plansey_entertainment_worst_key = plansey_entertainment_worst_key,
-		plansey_entertainment_decent_key = plansey_entertainment_decent_key,
-		plansey_entertainment_good_key = plansey_entertainment_good_key,
-		plansey_entertainment_great_key = plansey_entertainment_great_key,
-		plansey_entertainment_best_key = plansey_entertainment_best_key,
-
-		plansey_research_fund = plansey_research_fund,
-		plansey_days_left_research = plansey_days_left_research,
-		plansey_research_spending = plansey_research_spending,
-		plansey_research_input_key = plansey_research_input_key,
-
-		plansey_current_loan = plansey_current_loan,
-
-		plansey_station_three_key = plansey_station_three_key,
-		plansey_station_four_key = plansey_station_four_key,
-		plansey_station_five_key = plansey_station_five_key,
-		plansey_station_six_key = plansey_station_six_key,
-		plansey_loans_input_key = plansey_loans_input_key
-	}
+	pass

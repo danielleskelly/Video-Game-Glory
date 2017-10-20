@@ -142,11 +142,11 @@ func set_that_shit():
 		genre_one_count = customer_math.platformer_prediction
 		genre_one_name = "Platformer"
 		genre_two_count = customer_math.time_management_prediction
-		genre_two_key = customer_math.slatten_genre_two_key
+		genre_two_key = slatten.slatten_genre_two_key
 		genre_two_name = "Time Management"
 		genre_three_count = customer_math.meta_prediction
 		genre_three_name = "Meta"
-		genre_three_key = customer_math.slatten_genre_three_key
+		genre_three_key = slatten.slatten_genre_three_key
 		genre_one_icon = load("res://platformer.png")
 		genre_two_icon = load("res://time_management_icon.png")
 		genre_three_icon = load("res://meta.png")

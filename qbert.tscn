@@ -976,7 +976,7 @@ stream/buffering_ms = 500
 [node name="day_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 120.0
+wait_time = 45.0
 one_shot = true
 autostart = true
 

@@ -60,26 +60,7 @@ var casual_prediction = .99
 var nostalgic_prediction = .67
 
 func _ready():
-	add_to_group("Persist")
-	
-func save():
-	var savedict = {
-		filename=get_filename(),
-		hollyhock_advertising = hollyhock_advertising,
-		hollyhock_player_marketshare = hollyhock_player_marketshare,
-		fiyork_advertising = fiyork_advertising,
-		fiyork_player_marketshare = fiyork_player_marketshare,
-		plansey_advertising = plansey_advertising,
-		plansey_player_marketshare = plansey_player_marketshare,
-		windrow_advertising = windrow_advertising,
-		windrow_player_marketshare = windrow_player_marketshare,
-		banlon_advertising = banlon_advertising, 
-		banlon_player_marketshare = banlon_player_marketshare,
-		slatten_advertising = slatten_advertising,
-		slatten_player_marketshare = slatten_player_marketshare,
-		untilly_advertising = untilly_advertising,
-		untilly_player_marketshare = untilly_player_marketshare
-	}
+	pass
 
 func customer_math():
 	#performs the calculations to determine the number of customers that will enter the store
@@ -252,6 +233,9 @@ func daily_marketshare_adjustment():
 		if (hollyhock_player_marketshare == 1):
 			pass
 		else:
+			print(customer_globals.sales_lost)
+			print(customer_globals.sales_made)
+			print(money.hollyhock_cash)
 			if ((customer_globals.sales_made > customer_globals.sales_lost) and (money.hollyhock_cash > 100)):
 				hollyhock_player_marketshare = hollyhock_player_marketshare + .2
 			elif ((customer_globals.sales_made > customer_globals.sales_lost) or (money.hollyhock_cash > 100)):

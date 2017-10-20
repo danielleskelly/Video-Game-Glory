@@ -50,7 +50,7 @@ func _process(delta):
 				get_node("AnimationPlayer").play("tutorial_pt3")
 		if (customer_math.hollyhock_player_marketshare >= .75):
 			hollyhock_complete.set_hidden(false)
-			pixel.set_hidden(false)
+			pixel_big()
 			get_tree().set_pause(true)
 		if (get_node("cursor_blink").get_time_left() > 1):
 			town_banner.get_child(1).clear()
@@ -263,22 +263,22 @@ func _on_continue_ok_button_down():
 	if (towns.town_select == "hollyhock"):
 		hollyhock_complete.set_hidden(true)
 		get_tree().change_scene("res://story_piece_three.tscn")
-	if (towns.town_select == "fiyork"):
+	elif (towns.town_select == "fiyork"):
 		fiyork_complete.set_hidden(true)
 		get_tree().change_scene("res://story_piece_four.tscn")
-	if (towns.town_select == "plansey"):
+	elif (towns.town_select == "untilly"):
 		plansey_complete.set_hidden(true)
 		get_tree().change_scene("res://story_piece_five.tscn")
-	if (towns.town_select == "untilly"):
+	elif (towns.town_select == "plansey"):
 		untilly_complete.set_hidden(true)
 		get_tree().change_scene("res://story_piece_six.tscn")
-	if (towns.town_select == "windrow"):
+	elif (towns.town_select == "windrow"):
 		windrow_complete.set_hidden(true)
 		get_tree().change_scene("res://story_piece_seven.tscn")
-	if (towns.town_select == "banlon"):
+	elif (towns.town_select == "banlon"):
 		banlon_complete.set_hidden(true)
 		get_tree().change_scene("res://story_piece_eight.tscn")
-	if (towns.town_select == "slatten"):
+	elif (towns.town_select == "slatten"):
 		slatten_complete.set_hidden(true)
 		get_tree().change_scene("res://story_piece_four.tscn")
 	pixel_small()
@@ -468,3 +468,21 @@ func research_countdown_trigger():
 			pixel_big()
 			pixel.set_hidden(false)
 			get_tree().set_pause(true)
+			
+func save_game():
+	var savegame = File.new()
+	savegame.open("user://savegame.save", File.WRITE)
+	savegame.store_line(str(towns.town_select))
+	savegame.store_line(str(global.player_name))
+	savegame.store_line(str(global.endless_unlocked))
+	savegame.close()
+
+func _on_autosave_timeout():
+	get_node("autosaved").set_hidden(false)
+	get_node("autosave/timer_notify").start()
+	print(str(global.endless_unlocked))
+	save_game()
+
+
+func _on_timer_notify_timeout():
+	get_node("autosaved").set_hidden(true)

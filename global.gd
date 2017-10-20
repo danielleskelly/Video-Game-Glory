@@ -3,11 +3,8 @@ extends Node
 #player
 var player_name = "dutchess"
 
-func _ready():
-	add_to_group("Persist")
+#endless
+var endless_unlocked = "false"
 
-func save():
-	var savedict = {
-	filename=get_filename(),
-	player_name = player_name
-	}
+func _ready():
+	pass

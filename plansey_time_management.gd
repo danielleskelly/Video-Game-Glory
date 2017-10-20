@@ -4,6 +4,8 @@ var hundreds
 var tens
 var ones
 
+var something = false
+
 var new_volume
 
 onready var pixel = get_node("pixel")
@@ -26,10 +28,12 @@ func _ready():
 	pixel_small()
 	get_node("StreamPlayer").set_volume(sound.volume)
 	load_stuff()
-	set_process(true)
+	set_fixed_process(true)
 	
-func _process(delta):
-	check_board()
+func _fixed_process(delta):
+	if get_node("board_check_timer").get_time_left() == 0:
+		check_board()
+		get_node("board_check_timer").start()
 	hundreds = get_node("success_background/hundreths")
 	tens = get_node("success_background/tens")
 	ones = get_node("success_background/ones")
@@ -40,28 +44,28 @@ func _process(delta):
 		which_number()
 		if (goal_choice == "Multiple of 5"):
 			if (int(number) % 5 == 0):
-				perks.success = perks.success + 1
-		else:
-			if (perks.success > 5):
-				perks.success = perks.success - 5
-		if (goal_choice == "Multiple of 3"):
+				perks.success = perks.success + 2
+			else:
+				if (perks.success > 5):
+					perks.success = perks.success - 2
+		elif (goal_choice == "Multiple of 3"):
 			if (int(number) % 3 == 0):
-				perks.success = perks.success + 1
+				perks.success = perks.success + 2
 			else:
 				if (perks.success > 5):
-					perks.success = perks.success - 5
-		if (goal_choice == "Multiple of 2"):
+					perks.success = perks.success - 2
+		elif (goal_choice == "Multiple of 2"):
 			if (int(number) % 2 == 0):
-				perks.success = perks.success + 1
+				perks.success = perks.success + 2
 			else:
 				if (perks.success > 5):
-					perks.success = perks.success - 5
-		if (goal_choice == "Multiple of 7"):
-			if (int(number) % 7 == 0):
-				perks.success = perks.success + 1
+					perks.success = perks.success - 2
+		elif (goal_choice == "Multiple of 4"):
+			if (int(number) % 4 == 0):
+				perks.success = perks.success + 2
 			else:
 				if (perks.success > 5):
-					perks.success = perks.success - 5
+					perks.success = perks.success - 2
 		number_clear.remove_from_group("number")
 		number_clear.clear()
 		get_node("debounce").start()
@@ -157,6 +161,7 @@ func point_display():
 			
 			
 func load_stuff():
+	get_node("debounce").start()
 	get_node("a_one/number").add_to_group("number")
 	get_node("b_one/number").add_to_group("number")
 	get_node("c_one/number").add_to_group("number")
@@ -185,7 +190,7 @@ func load_stuff():
 	get_node("b_seven/number").add_to_group("number")
 	get_node("c_seven/number").add_to_group("number")
 	get_node("d_seven/number").add_to_group("number")
-	var goals = ["Multiple of 5", "Multiple of 2", "Multiple of 3", "Multiple of 7"]
+	var goals = ["Multiple of 5", "Multiple of 2", "Multiple of 3", "Multiple of 4"]
 	randomize()
 	goal_choice = goals[randi() % goals.size()]
 	get_node("goal").clear()
@@ -284,7 +289,7 @@ func which_number():
 		
 func check_board():
 	var on_board = get_tree().get_nodes_in_group("number")
-	var something = false
+	something = false
 	for x in on_board:
 		if ((goal_choice == "Multiple of 5") and (int(x.get_text()) % 5 == 0)):
 			something = true
@@ -292,10 +297,8 @@ func check_board():
 			something = true
 		elif ((goal_choice == "Multiple of 3") and (int(x.get_text()) % 3 == 0)):
 			something = true
-		elif ((goal_choice == "Multiple of 7") and (int(x.get_text()) % 7 == 0)):
+		elif ((goal_choice == "Multiple of 4") and (int(x.get_text()) % 4 == 0)):
 			something = true
-		else:
-			something = false
 	if (something == false):
 		load_stuff()
 

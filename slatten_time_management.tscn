@@ -392,8 +392,8 @@ trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D1" type="StaticBody2D" parent="Sprite" groups=[
-"right_push",
 "down",
+"right_push",
 ]]
 
 input/pickable = false
@@ -624,8 +624,8 @@ trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D1" type="StaticBody2D" parent="Sprite1" groups=[
-"right_push",
 "down",
+"right_push",
 ]]
 
 input/pickable = false
@@ -682,8 +682,8 @@ trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D1" type="StaticBody2D" parent="Sprite2" groups=[
-"right_push",
 "down",
+"right_push",
 ]]
 
 input/pickable = false

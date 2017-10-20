@@ -9,19 +9,7 @@ var tutorial_supplies_box = false
 var tutorial_finances_box = false
 
 func _ready():
-	add_to_group("Persist")
-	
-func save():
-	var savedict = {
-		filename=get_filename(),
-		time_management_start = time_management_start,
-		tutorial_start = tutorial_start,
-		tutorial_title_box = tutorial_title_box,
-		tutorial_prediction_box = tutorial_prediction_box,
-		tutorial_supplies_box = tutorial_supplies_box,
-		tutorial_finances_box = tutorial_finances_box
-	}
-	return savedict
+	pass
 
 func tutorial_check():
 	if (time_management_start == false):

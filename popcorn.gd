@@ -168,7 +168,7 @@ func _process(delta):
 		stock_output.clear()
 		stock_output.add_text(str(supplies.plansey_nachos_count))
 		total_output.clear()
-		total_output.add_text(str(pizza_purchase + supplies.plansey_nachos_count))
+		total_output.add_text(str(nachos_purchase + supplies.plansey_nachos_count))
 		if (supplies.daily_nachos_purchase_price > (supplies.nachos_range_high / 2)):
 			price_output_black.set_hidden(true)
 			price_output_red.show()
@@ -193,11 +193,11 @@ func _process(delta):
 		overall_total_output.add_text(str(supplies.purchase_total))
 	if (towns.town_select == "banlon"):
 		name.clear()
-		name.add_text("Energy")
+		name.add_text("Nachos")
 		stock_output.clear()
 		stock_output.add_text(str(supplies.banlon_nachos_count))
 		total_output.clear()
-		total_output.add_text(str(pizza_purchase + supplies.banlon_nachos_count))
+		total_output.add_text(str(nachos_purchase + supplies.banlon_nachos_count))
 		if (supplies.daily_nachos_purchase_price > (supplies.nachos_range_high / 2)):
 			price_output_black.set_hidden(true)
 			price_output_red.show()
@@ -211,7 +211,7 @@ func _process(delta):
 			price_output_red.set_hidden(true)
 			price_output_green.set_hidden(true)
 		buy_output.clear()
-		buy_output.add_text(str(pizza_purchase))
+		buy_output.add_text(str(nachos_purchase))
 		price_output_black.clear()
 		price_output_black.add_text("$" + str(supplies.daily_nachos_purchase_price))
 		price_output_green.clear()
@@ -260,10 +260,10 @@ func _on_raise_button_down():
 			pizza_purchase = pizza_purchase + 1
 			supplies.purchase_total = supplies.purchase_total + supplies.daily_pizza_purchase_price
 	if (towns.town_select == "plansey"):
-		if (money.plansey_cash >= (supplies.purchase_total + supplies.daily_popcorn_purchase_price)):
-			popcorn_purchase = popcorn_purchase + 1
+		if (money.plansey_cash >= (supplies.purchase_total + supplies.daily_nachos_purchase_price)):
+			nachos_purchase = nachos_purchase + 1
 			supplies.purchase_total = supplies.purchase_total + supplies.daily_popcorn_purchase_price
 	if (towns.town_select == "banlon"):
-		if (money.banlon_cash >= (supplies.purchase_total + supplies.daily_popcorn_purchase_price)):
-			popcorn_purchase = popcorn_purchase + 1
-			supplies.purchase_total = supplies.purchase_total + supplies.daily_popcorn_purchase_price
+		if (money.banlon_cash >= (supplies.purchase_total + supplies.daily_nachos_purchase_price)):
+			nachos_purchase = nachos_purchase + 1
+			supplies.purchase_total = supplies.purchase_total + supplies.daily_nachos_purchase_price
