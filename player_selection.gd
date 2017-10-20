@@ -5,10 +5,32 @@ onready var new_button = preload("res://story_piece_one.tscn")
 
 var loop = load("res://player_select_two.ogg")
 
+var endless_button
+
 func _ready():
 	set_process(true)
 	
 func _process(delta):
+	endless_button = get_node("endless")
+	var file = File.new()
+	file.open("user://savegame.save", file.READ)
+	if file.file_exists("user://savegame.save") == true:
+		var temp = file.get_line()
+
+		var temp_2 = file.get_line()
+
+		var endless_mode = file.get_line()
+
+		global.endless_unlocked = endless_mode
+		file.close()
+		if global.endless_unlocked == "true":
+			endless_button.show()
+		elif global.endless_unlocked == "false":
+			endless_button.hide()
+	elif file.file_exists("user://savegame.save") == false:
+			endless_button.hide()
+			
+			
 	if (sound.music_mute == false) and (get_node("StreamPlayer").is_playing() == false):
 		get_node("StreamPlayer").set_stream(loop)
 		get_node("StreamPlayer").play()
@@ -34,7 +56,18 @@ func _on_music_button_toggled( pressed ):
 		sound.music_mute = false
 
 func _on_load_button_button_up():
-	get_tree().change_scene_to(load_button)
+	load_game()
+	
+func load_game():
+	var file = File.new()
+	file.open("user://savegame.save", file.READ)
+	if file.file_exists("user://savegame.save") == true:
+		var town_load = file.get_line()
+		towns.town_select = town_load
+		var username_load = file.get_line()
+		global.player_name = username_load
+		file.close()
+		get_tree().change_scene("res://strategy.tscn")
 
 func _on_new_button_button_up():
 	get_tree().change_scene_to(new_button)

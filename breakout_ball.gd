@@ -7,10 +7,9 @@ var direction
 
 
 func _ready():
-	
+	pass
 	
 func _process(delta):
-	
 	ball_pos = get_pos()
 	ball_pos += direction * delta * ball_speed
 	set_pos(ball_pos)

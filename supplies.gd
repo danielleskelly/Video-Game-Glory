@@ -83,32 +83,8 @@ var supply_two_name
 var supply_two_icon
 
 func _ready():
-	add_to_group("Persist")
-	
-func save():
-	var savedict = {
-		filename=get_filename(),
+	pass
 
-		fiyork_pizza_price = fiyork_pizza_price,
-		fiyork_freezie_price = fiyork_freezie_price,
-
-		plansey_energy_price = plansey_energy_price,
-		plansey_nachos_price = plansey_nachos_price,
-
-		untilly_soda_price = untilly_soda_price,
-		untilly_popcorn_price = untilly_popcorn_price,
-
-		windrow_freezie_price = windrow_freezie_price,
-		windrow_pizza_price = windrow_pizza_price,
-
-		banlon_energy_price = banlon_energy_price,
-		banlon_nachos_price = banlon_nachos_price,
-
-		slatten_freezie_price = slatten_freezie_price,
-		slatten_popcorn_price = slatten_popcorn_price
-	}
-	return savedict
-		
 func set_supply():
 	supply_one = get_tree().get_current_scene().get_node("supply_one")
 	supply_two = get_tree().get_current_scene().get_node("supply_two")

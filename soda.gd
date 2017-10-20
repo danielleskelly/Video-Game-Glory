@@ -182,7 +182,7 @@ func _process(delta):
 			price_output_red.set_hidden(true)
 			price_output_green.set_hidden(true)
 		buy_output.clear()
-		buy_output.add_text(str(soda_purchase))
+		buy_output.add_text(str(energy_purchase))
 		price_output_black.clear()
 		price_output_black.add_text("$" + str(supplies.daily_energy_purchase_price))
 		price_output_green.clear()
