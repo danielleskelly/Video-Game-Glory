@@ -181,13 +181,15 @@ texture = ExtResource( 3 )
 
 [node name="sam" type="Sprite" parent="."]
 
-transform/pos = Vector2( -23.194, -23.5293 )
+visibility/visible = false
+transform/pos = Vector2( 26.4342, 22.3323 )
 transform/scale = Vector2( 0.0224115, -0.0403373 )
 texture = ExtResource( 4 )
 
 [node name="pixel" type="Sprite" parent="."]
 
-transform/pos = Vector2( 2.70979, -22.5961 )
+visibility/visible = false
+transform/pos = Vector2( 27.1778, 22.1724 )
 transform/scale = Vector2( 0.036914, 0.0483219 )
 texture = ExtResource( 5 )
 
@@ -205,12 +207,11 @@ margin/bottom = 53.0
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "Vidl"
+bbcode/bbcode = "Video Game Glory"
 visible_characters = -1
 
 [node name="new" type="Sprite" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( -11.5522, 14.358 )
 transform/scale = Vector2( 0.0188435, 0.0302709 )
 texture = ExtResource( 7 )
@@ -249,9 +250,48 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="endless" type="Sprite" parent="."]
+
+transform/pos = Vector2( 9.02006, 28.4682 )
+transform/scale = Vector2( 0.03152, 0.0226245 )
+texture = ExtResource( 7 )
+
+[node name="endless" type="RichTextLabel" parent="endless"]
+
+rect/scale = Vector2( 2.5, 2.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -163.0
+margin/top = -45.0
+margin/right = -20.0
+margin/bottom = 5.0
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = true
+bbcode/bbcode = "Endless"
+visible_characters = -1
+
+[node name="new_button" type="LinkButton" parent="endless"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -226.0
+margin/top = -97.0
+margin/right = 236.0
+margin/bottom = 95.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="load" type="Sprite" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( -1.32544, 14.3952 )
 transform/scale = Vector2( 0.0180672, 0.0303931 )
 texture = ExtResource( 7 )
@@ -293,7 +333,6 @@ __meta__ = {
 
 [node name="quit" type="Sprite" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 9.04633, 14.3121 )
 transform/scale = Vector2( 0.0204308, 0.0305331 )
 texture = ExtResource( 7 )
