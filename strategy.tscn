@@ -4896,38 +4896,6 @@ visibility/visible = false
 transform/pos = Vector2( 9.7498, 3.76992 )
 transform/scale = Vector2( 0.653526, 0.39301 )
 
-[node name="station" parent="games"]
-
-percent_visible = 1.0
-
-[node name="game" parent="games"]
-
-percent_visible = 1.0
-
-[node name="name" parent="games/station_one"]
-
-percent_visible = 1.0
-
-[node name="name" parent="games/station_two"]
-
-percent_visible = 1.0
-
-[node name="name" parent="games/station_three"]
-
-percent_visible = 1.0
-
-[node name="name" parent="games/station_four"]
-
-percent_visible = 1.0
-
-[node name="name" parent="games/station_five"]
-
-percent_visible = 1.0
-
-[node name="name" parent="games/station_six"]
-
-percent_visible = 1.0
-
 [node name="arcade_pricing" parent="." instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 9.7498, 3.76992 )
@@ -5040,7 +5008,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Continuing to the next day will put you in the negatives. Reduce your expenses or take out a loan to continue."
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="low_funds_ok" type="LinkButton" parent="low_funds_warning"]
 
@@ -5093,7 +5060,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "No problem! I see you are a pro! I am always available, so just give me a click if you need something (even if it is just regular settings)."
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="game_over_alert" type="Node2D" parent="."]
 
@@ -5123,7 +5089,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have run out of cash and the loan officer at the bank won't even answer your calls. Time to start over!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="game_over_ok" type="LinkButton" parent="game_over_alert"]
 
@@ -5176,7 +5141,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have purchased a binary infusion from the Muse Pixels! You can now satisfy the needs of the growing desires of the townspeople. Good job!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="genre_discover_ok" type="LinkButton" parent="genre_discovery"]
 
@@ -5228,7 +5192,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have completed the level goal for the town of Hollyhock! With our 75% marketshare we now have a solid hold on the customers of this city. Let's continue on to the next city I have in store for you!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="continue_ok" type="LinkButton" parent="hollyhock_complete"]
 
@@ -5281,7 +5244,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="continue_ok" type="LinkButton" parent="fiyork_complete"]
 
@@ -5334,7 +5296,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="continue_ok" type="LinkButton" parent="plansey_complete"]
 
@@ -5387,7 +5348,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="continue_ok" type="LinkButton" parent="untilly_complete"]
 
@@ -5440,7 +5400,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="continue_ok" type="LinkButton" parent="windrow_complete"]
 
@@ -5493,7 +5452,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="continue_ok" type="LinkButton" parent="banlon_complete"]
 
@@ -5546,7 +5504,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="continue_ok" type="LinkButton" parent="slatten_complete"]
 
@@ -5599,7 +5556,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sound"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="sound_slider" type="HSlider" parent="menu"]
 
@@ -5742,7 +5698,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Do you really want to restart the level?"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="yes_restart" type="LinkButton" parent="are_you_sure"]
 
@@ -5817,7 +5772,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Do you really want to go back to the main menu?"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="yes_main_menu" type="LinkButton" parent="are_you_sure_2"]
 
@@ -5892,7 +5846,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Would you like to play an arcade game during the work day or do you want to skip it?"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="perk" type="RichTextLabel" parent="skip_or_play"]
 
@@ -5910,7 +5863,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "If you play you could win:"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="perk_goal" type="RichTextLabel" parent="skip_or_play"]
 
@@ -5928,7 +5880,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "But only if you get this many points:"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="perk_output" type="RichTextLabel" parent="skip_or_play"]
 
@@ -5946,7 +5897,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Remove the Sabatoge from advertising"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="perk_goal_output" type="RichTextLabel" parent="skip_or_play"]
 
@@ -5964,7 +5914,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "10000"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="skip" type="LinkButton" parent="skip_or_play"]
 
@@ -6040,7 +5989,6 @@ bbcode/enabled = false
 bbcode/bbcode = "This is Hollyhock, and it is the capital city of our kingdom so it is the perfect place for you to start. I am available if you need some help getting started.
 Do you want me to help you?"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="tutorial_start_yes_button" type="LinkButton" parent="tutorial_start"]
 
@@ -6119,7 +6067,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "And a quick peek at your financial situation. We only have a little bit of money saved so we will need to spend it wisely to get Hollyhock back on its feet."
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="title_box_border" type="Sprite" parent="tutorial_persistent_menu"]
 
@@ -6219,7 +6166,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "The first tab across the top is Reports."
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="finances_pointer" type="Sprite" parent="tutorial_reports"]
 
@@ -6289,7 +6235,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Next across the top is the supply button, and it is by far one of the most important."
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="supplies_box" type="Sprite" parent="tutorial_supplies"]
 
@@ -6314,7 +6259,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "CLICK!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="arrow1" type="Sprite" parent="tutorial_supplies"]
 
@@ -6406,7 +6350,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "And now we have concessions. The idea is the same as the arcades. Feel free to set them to whatever you want, as long as it is within the range."
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="ok_button_background" type="Sprite" parent="tutorial_pricing"]
 
@@ -6433,7 +6376,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "OK"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="ok_button" type="LinkButton" parent="tutorial_pricing/ok"]
 
@@ -6518,7 +6460,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Here we have our upgrades."
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="pricing_box" type="Sprite" parent="tutorial_upgrades"]
 
@@ -6584,7 +6525,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Here we have the locals tab, and first along the side is Marketing. This can have a huge impact on drawing customers to the arcade."
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="pricing_box3" type="Sprite" parent="tutorial_locals"]
 
@@ -6642,7 +6582,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I will go while you get everything ready just how you want it. Whenever you are ready to open the arcade just click on the Start Day button right above my head!"
 visible_characters = -1
-percent_visible = 1.0
 
 [node name="pricing_box" type="Sprite" parent="tutorial_research"]
 
@@ -6809,7 +6748,6 @@ custom_colors/default_color = Color( 0.180392, 0.698039, 0.160784, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Autosaved"
 visible_characters = -1
-percent_visible = 1.0
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 

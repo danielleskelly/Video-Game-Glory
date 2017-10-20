@@ -15,18 +15,17 @@ func _process(delta):
 	var file = File.new()
 	file.open("user://savegame.save", file.READ)
 	if file.file_exists("user://savegame.save") == true:
-		var temp = file.get_line()
-
-		var temp_2 = file.get_line()
-
+		file.get_line()
+		file.get_line()
 		var endless_mode = file.get_line()
-
 		global.endless_unlocked = endless_mode
 		file.close()
 		if global.endless_unlocked == "true":
 			endless_button.show()
 		elif global.endless_unlocked == "false":
 			endless_button.hide()
+		else:
+			print("nope")
 	elif file.file_exists("user://savegame.save") == false:
 			endless_button.hide()
 			
