@@ -471,11 +471,12 @@ func research_countdown_trigger():
 			
 func save_game():
 	var savegame = File.new()
-	savegame.open("user://savegame.save", File.WRITE)
+	savegame.open(str("user://savegame.save"), File.WRITE)
 	savegame.store_line(str(towns.town_select))
 	savegame.store_line(str(global.player_name))
 	savegame.store_line(str(global.endless_unlocked))
 	savegame.close()
+		
 
 func _on_autosave_timeout():
 	get_node("autosaved").set_hidden(false)
