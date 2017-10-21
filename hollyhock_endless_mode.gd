@@ -2,8 +2,6 @@ extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
 
-var stopwatch = 0
-
 var customer_choice
 var price_choice
 var randomness
@@ -33,12 +31,12 @@ func _process(delta):
 	ones = get_node("success_background/ones")
 	point_display()
 	countdown_timer.clear()
-	countdown_timer.set_text(str(stopwatch))
+	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
 	
 
 func _on_day_timer_timeout():
-	stopwatch += 1
-	
+	perk_check()
+	get_tree().change_scene("res://strategy.tscn")
 	
 
 func perk_check():
