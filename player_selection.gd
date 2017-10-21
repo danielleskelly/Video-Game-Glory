@@ -2,6 +2,7 @@ extends Node2D
 
 onready var load_button = preload("res://load.tscn")
 onready var new_button = preload("res://story_piece_one.tscn")
+onready var endless_butt = preload("res://endless_mode.tscn")
 
 var loop = load("res://player_select_two.ogg")
 
@@ -18,14 +19,12 @@ func _process(delta):
 		file.get_line()
 		file.get_line()
 		var endless_mode = file.get_line()
-		global.endless_unlocked = endless_mode
+		endless.endless_unlocked = endless_mode
 		file.close()
-		if global.endless_unlocked == "true":
+		if endless.endless_unlocked == "true":
 			endless_button.show()
-		elif global.endless_unlocked == "false":
+		elif endless.endless_unlocked == "false":
 			endless_button.hide()
-		else:
-			print("nope")
 	elif file.file_exists("user://savegame.save") == false:
 			endless_button.hide()
 			
@@ -82,3 +81,7 @@ func _on_yes_quit_button_down():
 
 func _on_no_quit_button_down():
 	get_node("are_you_sure").set_hidden(true)
+
+
+func _on_endless_button_button_up():
+	get_tree().change_scene_to(endless_butt)

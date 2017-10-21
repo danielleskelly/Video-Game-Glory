@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://endless_mode.gd" type="Script" id=1]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://yellow_eating_dot.png" type="Texture" id=3]
+
+[node name="endless_mode" type="Node2D"]
+
+transform/pos = Vector2( 509.66, 305.995 )
+transform/scale = Vector2( 15.9492, 9.58466 )
+script/script = ExtResource( 1 )
+
+[node name="title" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -14.0
+margin/top = -28.0
+margin/right = 372.0
+margin/bottom = 78.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Endless Mode"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="yellow_eating_dot" type="Sprite" parent="."]
+
+transform/pos = Vector2( -22.1738, -11.6943 )
+transform/scale = Vector2( 0.00866633, 0.0213023 )
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="yellow_eating_dot"]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -517.0
+margin/top = 339.0
+margin/right = -160.0
+margin/bottom = 397.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Yellow Eating Dot"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="yellow_eating_button" type="LinkButton" parent="yellow_eating_dot"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -541.0
+margin/top = -284.0
+margin/right = 516.0
+margin/bottom = 494.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[connection signal="button_up" from="yellow_eating_dot/yellow_eating_button" to="." method="_on_yellow_eating_button_button_up"]
+
+

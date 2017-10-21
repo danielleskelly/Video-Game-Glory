@@ -84,7 +84,7 @@ texture = ExtResource( 3 )
 
 [node name="banana_squish" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.0771522, 13.9152 )
+transform/pos = Vector2( 0.061601, 14.1685 )
 transform/scale = Vector2( 0.024648, 0.0354167 )
 texture = ExtResource( 3 )
 

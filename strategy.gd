@@ -474,14 +474,13 @@ func save_game():
 	savegame.open(str("user://savegame.save"), File.WRITE)
 	savegame.store_line(str(towns.town_select))
 	savegame.store_line(str(global.player_name))
-	savegame.store_line(str(global.endless_unlocked))
+	savegame.store_line(str(endless.endless_unlocked))
 	savegame.close()
 		
 
 func _on_autosave_timeout():
 	get_node("autosaved").set_hidden(false)
-	get_node("autosave/timer_notify").start()
-	print(str(global.endless_unlocked))
+	get_node("timer_notify").start()
 	save_game()
 
 
