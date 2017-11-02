@@ -1,11 +1,5 @@
 extends Node2D
 
-onready var load_button = preload("res://load.tscn")
-onready var new_button = preload("res://story_piece_one.tscn")
-onready var endless_butt = preload("res://endless_mode.tscn")
-
-var loop = load("res://player_select_two.ogg")
-
 var endless_button
 
 func _ready():
@@ -17,7 +11,6 @@ func _process(delta):
 	file.open("user://savegame.save", file.READ)
 	if file.file_exists("user://savegame.save") == true:
 		file.get_line()
-		file.get_line()
 		var endless_mode = file.get_line()
 		endless.endless_unlocked = endless_mode
 		file.close()
@@ -27,23 +20,6 @@ func _process(delta):
 			endless_button.hide()
 	elif file.file_exists("user://savegame.save") == false:
 			endless_button.hide()
-			
-			
-	if (sound.music_mute == false) and (get_node("StreamPlayer").is_playing() == false):
-		get_node("StreamPlayer").set_stream(loop)
-		get_node("StreamPlayer").play()
-		get_node("StreamPlayer").has_loop()
-
-func _on_skip_button_down():
-	if (get_node("AnimationPlayer").is_playing() == true):
-		get_node("AnimationPlayer").stop()
-		get_node("name").clear()
-		get_node("name").add_text("Video Game Glory")
-		get_node("sam").set_hidden(true)
-		get_node("pixel").set_hidden(true)
-		get_node("new").show()
-		get_node("quit").set_hidden(false)
-		get_node("load").show()
 
 func _on_music_button_toggled( pressed ):
 	if (get_node("StreamPlayer").is_playing() == true):
@@ -62,26 +38,36 @@ func load_game():
 	if file.file_exists("user://savegame.save") == true:
 		var town_load = file.get_line()
 		towns.town_select = town_load
-		var username_load = file.get_line()
-		global.player_name = username_load
 		file.close()
 		get_tree().change_scene("res://strategy.tscn")
 
 func _on_new_button_button_up():
-	get_tree().change_scene_to(new_button)
-
+	var file = File.new()
+	file.open("user://savegame.save", file.READ)
+	if file.file_exists("user://savegame.save") == true:
+		get_tree().set_pause(true)
+		get_node("new_game_overwrite").show()
+		file.close()
+	else:
+		file.close()
+		get_tree().change_scene_to("res://story_piece_one.tscn")
 
 func _on_quit_button_button_down():
-	get_node("are_you_sure").set_hidden(false)
-
+	get_node("quit_game").set_hidden(false)
 
 func _on_yes_quit_button_down():
 	get_tree().quit()
 
-
 func _on_no_quit_button_down():
-	get_node("are_you_sure").set_hidden(true)
-
+	get_node("quit_game").set_hidden(true)
 
 func _on_endless_button_button_up():
-	get_tree().change_scene_to(endless_butt)
+	get_tree().change_scene_to("res://endless_mode.tscn")
+
+func _on_no_overwrite_button_up():
+	get_node("new_game_overwrite").set_hidden(true)
+
+func _on_yes_overwrite_button_up():
+	get_tree().set_pause(false)
+	get_node("new_game_overwrite").set_hidden(true)
+	get_tree().change_scene("res://story_piece_one.tscn")

@@ -35,6 +35,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="first_digit" type="Sprite" parent="."]
 
@@ -58,6 +59,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="second_digit" type="Sprite" parent="."]
 
@@ -81,6 +83,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="third_digit" type="Sprite" parent="."]
 
@@ -104,6 +107,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="icon" type="Sprite" parent="."]
 

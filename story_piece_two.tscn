@@ -1,565 +1,265 @@
-[gd_scene load_steps=26 format=1]
+[gd_scene load_steps=25 format=1]
 
 [ext_resource path="res://story_piece_two.gd" type="Script" id=1]
-[ext_resource path="res://Screen Shot 2017-07-03 at 7.08.15 PM.png" type="Texture" id=2]
+[ext_resource path="res://Screen Shot 2017-10-27 at 4.36.54 PM.png" type="Texture" id=2]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=3]
-[ext_resource path="res://side_walls.png" type="Texture" id=4]
-[ext_resource path="res://open_door.png" type="Texture" id=5]
-[ext_resource path="res://window.png" type="Texture" id=6]
-[ext_resource path="res://floor.png" type="Texture" id=7]
-[ext_resource path="res://chair.png" type="Texture" id=8]
-[ext_resource path="res://desk.png" type="Texture" id=9]
-[ext_resource path="res://computer.png" type="Texture" id=10]
-[ext_resource path="res://lamp.png" type="Texture" id=11]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=12]
-[ext_resource path="res://pixel_leg.png" type="Texture" id=13]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=14]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=15]
-[ext_resource path="res://pixel.png" type="Texture" id=16]
-[ext_resource path="res://door.png" type="Texture" id=17]
-[ext_resource path="res://plaque.png" type="Texture" id=18]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=19]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=20]
-[ext_resource path="res://bubble_green.png" type="Texture" id=21]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=22]
-[ext_resource path="res://music.png" type="Texture" id=23]
-[ext_resource path="res://no_music.png" type="Texture" id=24]
+[ext_resource path="res://office.png" type="Texture" id=4]
+[ext_resource path="res://window.png" type="Texture" id=5]
+[ext_resource path="res://chair.png" type="Texture" id=6]
+[ext_resource path="res://desk.png" type="Texture" id=7]
+[ext_resource path="res://computer.png" type="Texture" id=8]
+[ext_resource path="res://lamp.png" type="Texture" id=9]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=10]
+[ext_resource path="res://pixel_leg.png" type="Texture" id=11]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=12]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=13]
+[ext_resource path="res://pixel.png" type="Texture" id=14]
+[ext_resource path="res://back_of_head.png" type="Texture" id=15]
+[ext_resource path="res://hallway.png" type="Texture" id=16]
+[ext_resource path="res://hallway_door.png" type="Texture" id=17]
+[ext_resource path="res://genre_bubble.png" type="Texture" id=18]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=19]
+[ext_resource path="res://bubble_green.png" type="Texture" id=20]
+[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=21]
+[ext_resource path="res://music_icon_on.png" type="Texture" id=22]
+[ext_resource path="res://music_icon_off.png" type="Texture" id=23]
 
 [sub_resource type="Animation" id=1]
 
 resource/name = "two_one"
-length = 107.2
+length = 340.0
 loop = false
-step = 0.01
+step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("strategy:visibility/visible")
+tracks/0/path = NodePath("strategy/crtv:transform/pos")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 106.5 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("strategy/crtv:transform/pos")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 106.5, 106.6, 106.7, 106.8, 107, 107.1 ),
+"times": FloatArray( 0, 329, 329.1, 329.2, 329.3, 329.5, 329.6 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 14.1786, -476.419 ), Vector2( 14.1786, -208.906 ), Vector2( 7.16791, -132.474 ), Vector2( 7.16791, -149.845 ), Vector2( 7.16791, -264.493 ), Vector2( 3.66252, -149.845 ), Vector2( -3.3481, -500.739 ) ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("strategy/crtv:transform/scale")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0, 106.5, 106.6, 106.7, 106.8, 107, 107.1 ),
+tracks/1/type = "value"
+tracks/1/path = NodePath("strategy/crtv:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 329, 329.1, 329.2, 329.3, 329.5, 329.6 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ) ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("strategy/crtv1:transform/pos")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0, 106.5, 106.8, 107, 107.1 ),
+tracks/2/type = "value"
+tracks/2/path = NodePath("strategy/crtv1:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 44.4936, -124.914 ), Vector2( 37.483, 201.661 ), Vector2( 37.483, 87.0123 ), Vector2( 33.9775, 201.661 ), Vector2( 26.9669, -149.233 ) ]
 }
-tracks/4/type = "value"
-tracks/4/path = NodePath("strategy/crtv1:transform/scale")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0, 106.5, 106.8, 107, 107.1 ),
+tracks/3/type = "value"
+tracks/3/path = NodePath("strategy/crtv1:transform/scale")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ) ]
 }
-tracks/5/type = "value"
-tracks/5/path = NodePath("strategy/crtv2:transform/pos")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0, 106.5, 106.8, 107, 107.1 ),
+tracks/4/type = "value"
+tracks/4/path = NodePath("strategy/crtv2:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 44.4936, -39.4257 ), Vector2( 37.483, 287.149 ), Vector2( 37.483, 172.5 ), Vector2( 33.9775, 287.149 ), Vector2( 26.9669, -63.745 ) ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("strategy/crtv3:transform/scale")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0, 106.5, 106.8, 107, 107.1 ),
+tracks/5/type = "value"
+tracks/5/path = NodePath("strategy/crtv3:transform/scale")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2.80987, 1.64743 ), Vector2( 2.80987, 1.64743 ), Vector2( 2.80987, 1.64743 ), Vector2( 2.80987, 1.64743 ), Vector2( 2.80987, 1.64743 ) ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("strategy/crtv2:transform/scale")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ) ]
+}
 tracks/7/type = "value"
-tracks/7/path = NodePath("inner_office:transform/pos")
+tracks/7/path = NodePath("strategy/crtv3:transform/pos")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.835938, 0.548452 ) ]
+"values": [ Vector2( 44.4938, 340.111 ), Vector2( 37.483, 666.686 ), Vector2( 37.483, 552.037 ), Vector2( 33.9776, 666.686 ), Vector2( 26.967, 315.792 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("inner_office:transform/scale")
+tracks/8/path = NodePath("outside_office:transform/pos")
 tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.4, 0.8, 1.4, 2, 2.5, 6.5, 6.6, 7.1, 44.8, 45.1, 45.2, 45.4, 45.7, 45.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.997054, 1.03856 ) ]
+"values": [ Vector2( -0.00170135, 1.32025 ), Vector2( 1.00074, -0.901395 ), Vector2( 0.263593, -2.39567 ), Vector2( -1.90452, -0.0428965 ), Vector2( 1.2355, 1.70044 ), Vector2( -0.409272, 1.94949 ), Vector2( -0.409272, 1.94949 ), Vector2( -1.92377, 2.72808 ), Vector2( -1.1931, 2.72808 ), Vector2( -0.409272, 1.94949 ), Vector2( 2.14371, -0.988402 ), Vector2( -2.46826, -3.38868 ), Vector2( -0.0664275, 0.587399 ), Vector2( -2.4869, -2.77257 ), Vector2( 0.212709, -5.55474 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("inner_office:visibility/visible")
+tracks/9/path = NodePath("outside_office:transform/scale")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
-"times": FloatArray( 0, 106 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
+"times": FloatArray( 0, 0.4, 0.8, 1.4, 2, 2.5, 6.5, 6.6, 7.1, 44.8, 45.1, 45.2, 45.4, 45.7, 45.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.985302, 0.97776 ), Vector2( 1.01663, 1.04719 ), Vector2( 1.03966, 1.09388 ), Vector2( 1.10742, 1.16741 ), Vector2( 1.20554, 1.22189 ), Vector2( 1.15414, 1.2141 ), Vector2( 1.15414, 1.2141 ), Vector2( 1.10112, 1.18977 ), Vector2( 1.07855, 1.18977 ), Vector2( 1.15414, 1.2141 ), Vector2( 1.23392, 1.30591 ), Vector2( 1.37805, 1.38092 ), Vector2( 1.45311, 1.50517 ), Vector2( 1.52875, 1.57017 ), Vector2( 1.60774, 1.65711 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("pixel:transform/pos")
+tracks/10/path = NodePath("speech_bubble:visibility/visible")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
-"times": FloatArray( 0, 5.1, 5.56, 19, 19.74, 20 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -1.20643, -0.321138 ), Vector2( -1.20643, -0.321138 ), Vector2( -0.264181, -8.42964 ), Vector2( -0.264181, -8.42964 ), Vector2( -16.2006, -4.16463 ), Vector2( -15.813, -9.38458 ) ]
+"times": FloatArray( 0, 0.9, 16.2, 187.8, 195.8, 211.6, 218.6, 267.9, 290.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, true, false ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("pixel:transform/scale")
+tracks/11/path = NodePath("speech_bubble/speech:bbcode/bbcode")
 tracks/11/interp = 1
 tracks/11/imported = false
 tracks/11/keys = {
-"times": FloatArray( 0, 5.1, 5.56, 19, 19.35, 19.74, 20 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.912718, 0.825318 ), Vector2( 0.86254, 0.77474 ), Vector2( 0.884005, 0.718394 ) ]
+"times": FloatArray( 0, 6.4, 10.7, 187.8, 211.6, 267.9, 269.9, 279.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "Whew! I made it!", "Whoa! Watch out!", "Oh! Um... hi.", "Um... *most*?", "Wait, what did you say?", "...", "You know what? Yeah, sure.", "I've got nothing better to do." ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("outside_office:transform/pos")
+tracks/12/path = NodePath("outside_office/door:transform/pos")
 tracks/12/interp = 1
 tracks/12/imported = false
 tracks/12/keys = {
-"times": FloatArray( 0, 0.53, 1.05, 1.57, 2.09, 2.58, 5.13, 5.58, 19 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 6, 6.2 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.00170135, 1.32025 ), Vector2( 2.35202, -3.60254 ), Vector2( 3.21965, 1.17113 ), Vector2( -1.07224, 2.93735 ), Vector2( -8.01319, 0.495722 ), Vector2( -3.3859, 15.9617 ), Vector2( -3.3859, 15.9617 ), Vector2( -0.0809581, 8.57151 ), Vector2( -0.0809581, 8.57151 ) ]
+"values": [ Vector2( -0.498777, -0.679602 ), Vector2( -16.5636, -0.884731 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("outside_office:transform/scale")
+tracks/13/path = NodePath("outside_office/door:flip_h")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
-"times": FloatArray( 0, 0.53, 1.05, 1.57, 2.09, 2.58, 5.13, 5.58, 19, 20 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.985302, 0.97776 ), Vector2( 1.05886, 1.1316 ), Vector2( 1.08597, 1.28077 ), Vector2( 1.22009, 1.33597 ), Vector2( 1.437, 1.41227 ), Vector2( 1.5816, 1.68026 ), Vector2( 1.5816, 1.68026 ), Vector2( 1.4, 1.5093 ), Vector2( 1.4, 1.5093 ), Vector2( 3.52857, 2.03309 ) ]
+"times": FloatArray( 6, 6.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("outside_office:visibility/visible")
+tracks/14/path = NodePath("outside_office/door:visibility/visible")
 tracks/14/interp = 1
 tracks/14/imported = false
 tracks/14/keys = {
-"times": FloatArray( 0, 20 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 6, 6.1, 6.2 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ true, false, true ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("speech_bubble:visibility/visible")
+tracks/15/path = NodePath("pixel:transform/pos")
 tracks/15/interp = 1
 tracks/15/imported = false
 tracks/15/keys = {
-"times": FloatArray( 0, 2.58, 18.48, 60, 106 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false, true, false ]
+"times": FloatArray( 44.8, 46.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -5.75828, 5.77512 ), Vector2( -19.0301, 2.60686 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("speech_bubble/bubble:transform/pos")
+tracks/16/path = NodePath("other_bubble:visibility/visible")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 0, 5.13, 5.14, 5.23, 5.98, 7.47, 7.48, 19.99, 59.9, 69.99, 70 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -1.89949, 13.0198 ), Vector2( -14.2468, 13.0198 ), Vector2( -9.32978, 13.0198 ), Vector2( -9.32978, 13.0198 ), Vector2( -9.32978, 13.0198 ), Vector2( -9.32978, 13.0198 ), Vector2( -12.4986, 20.1644 ), Vector2( -12.4986, 20.1644 ), Vector2( -12.4986, 20.1644 ), Vector2( -12.4986, 20.1644 ), Vector2( -1.88626, 21.1227 ) ]
+"times": FloatArray( 0, 16.8, 44.1, 46.6, 187.8, 195.8, 211.6, 218.6, 254.1, 255.1, 267.9, 290.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, true, false, true, false, true ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("speech_bubble/bubble:transform/scale")
+tracks/17/path = NodePath("other_bubble/speech:bbcode/bbcode")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
-"times": FloatArray( 0, 5.13, 5.14, 5.23, 5.98, 7.47, 7.48, 19.99, 59.9, 69.99, 70 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.0431744, 0.0205695 ), Vector2( 0.0206428, 0.0205695 ), Vector2( 0.0296155, 0.0205695 ), Vector2( 0.0296155, 0.0205695 ), Vector2( 0.0296155, 0.0205695 ), Vector2( 0.0296155, 0.0205695 ), Vector2( 0.0239014, 0.00984191 ), Vector2( 0.0239014, 0.00984191 ), Vector2( 0.0239014, 0.00984191 ), Vector2( 0.0239014, 0.00984191 ), Vector2( 0.043267, 0.0162987 ) ]
+"times": FloatArray( 16.8, 36.2, 46.6, 56, 66.4, 85.5, 102.1, 117.5, 127.4, 142.3, 154.8, 168.6, 195.8, 218.6, 237.1, 255.1, 290.9, 300.9, 312.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "Oh, yes! You must be the new liason! You are just in time.", "Please, won't you come inside?", "It is so nice to meet you.", "My name is Pixel and I will be your assistant.", "I am in charge of the Pixels who design the games, and maintain the arcades.", "Sam will be here soon. He is in charge of the Players.", "I appreciate you taking this job on such short notice.", "It really is a totally normal job. ", "The people of this kingdom love video games.", "But they are very specific about what they play.", "*Most* of your job will be visiting the different kingdoms.", "Just to make sure everything is smooth between the pixels and players.", "Erm... well yes legally you should be informed there have been some deaths....", "Recently someone has been sabotaging the Pixel and Player relations.", "We don't know who it is, but they are very... well...
+effective.", "Do you still think you can take the job?", "...! *whew* Great! Alright then!", "Well you should come and sit before you change your mind.", "We can complete a little training session while we wait for Sam." ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("speech_bubble/whew:visibility/visible")
+tracks/18/path = NodePath("pixel/head:visibility/visible")
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
-"times": FloatArray( 0, 2.58, 5.14 ),
+"times": FloatArray( 44.1, 44.2, 46.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, true, false ]
+"values": [ true, false, true ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("speech_bubble/whoa:visibility/visible")
+tracks/19/path = NodePath("pixel/back_of_head:visibility/visible")
 tracks/19/interp = 1
 tracks/19/imported = false
 tracks/19/keys = {
-"times": FloatArray( 0, 5.14, 7.48 ),
+"times": FloatArray( 0, 44.2, 46.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("speech_bubble/oh:visibility/visible")
+tracks/20/path = NodePath("outside_office:visibility/visible")
 tracks/20/interp = 1
 tracks/20/imported = false
 tracks/20/keys = {
-"times": FloatArray( 0, 7.48, 60 ),
+"times": FloatArray( 0, 45.5, 45.8 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false, true, false ]
+"values": [ true, true, false ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("speech_bubble/most:visibility/visible")
+tracks/21/path = NodePath("inner_office:transform/pos")
 tracks/21/interp = 1
 tracks/21/imported = false
 tracks/21/keys = {
-"times": FloatArray( 0, 60, 70 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
+"times": FloatArray( 45.8, 46.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.835938, 0.548452 ), Vector2( 0.546793, -2.38416 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("speech_bubble/hogwarts:visibility/visible")
+tracks/22/path = NodePath("inner_office:transform/scale")
 tracks/22/interp = 1
 tracks/22/imported = false
 tracks/22/keys = {
-"times": FloatArray( 0, 70, 75 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/23/type = "value"
-tracks/23/path = NodePath("speech_bubble/what_happened:visibility/visible")
-tracks/23/interp = 1
-tracks/23/imported = false
-tracks/23/keys = {
-"times": FloatArray( 0, 75, 88.02 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/24/type = "value"
-tracks/24/path = NodePath("speech_bubble/elipses:visibility/visible")
-tracks/24/interp = 1
-tracks/24/imported = false
-tracks/24/keys = {
-"times": FloatArray( 0, 88.02, 94.52 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/25/type = "value"
-tracks/25/path = NodePath("speech_bubble/yeah_sure:visibility/visible")
-tracks/25/interp = 1
-tracks/25/imported = false
-tracks/25/keys = {
-"times": FloatArray( 0, 94.52 ),
+"times": FloatArray( 45.8, 45.9 ),
 "transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/26/type = "value"
-tracks/26/path = NodePath("other_bubble:visibility/visible")
-tracks/26/interp = 1
-tracks/26/imported = false
-tracks/26/keys = {
-"times": FloatArray( 0, 8.48, 18.48, 20.2, 106 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false, true, false ]
-}
-tracks/27/type = "value"
-tracks/27/path = NodePath("other_bubble/bubble:transform/scale")
-tracks/27/interp = 1
-tracks/27/imported = false
-tracks/27/keys = {
-"times": FloatArray( 0, 8.48, 12.38, 12.48, 19.99, 25.01, 39.99, 40, 88.01, 88.02, 89, 94, 101.05, 101.06 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.0277045, 0.0184051 ), Vector2( 0.0277045, 0.0184051 ), Vector2( 0.0277045, 0.0184051 ), Vector2( 0.0277045, 0.0184051 ), Vector2( 0.0277045, 0.0184051 ), Vector2( 0.0277045, 0.0184051 ), Vector2( 0.0277045, 0.0184051 ), Vector2( 0.0362315, 0.028268 ), Vector2( 0.0362315, 0.028268 ), Vector2( 0.0150763, 0.028268 ), Vector2( 0.0150763, 0.028268 ), Vector2( 0.0150763, 0.028268 ), Vector2( 0.0150763, 0.028268 ), Vector2( 0.0286028, 0.028268 ) ]
-}
-tracks/28/type = "value"
-tracks/28/path = NodePath("other_bubble/bubble:transform/pos")
-tracks/28/interp = 1
-tracks/28/imported = false
-tracks/28/keys = {
-"times": FloatArray( 0, 8.48, 12.38, 12.48, 19.99, 25.01, 39.99, 40, 88.01, 101.05, 101.06 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 18.8032, 0.536227 ), Vector2( 19.4313, -13.5883 ), Vector2( 19.4313, -13.5883 ), Vector2( 19.4313, -13.5883 ), Vector2( 19.4313, -13.5883 ), Vector2( 19.4313, -13.5883 ), Vector2( 19.4313, -13.5883 ), Vector2( 12.33, -7.44883 ), Vector2( 12.33, -7.44883 ), Vector2( 12.33, -7.44883 ), Vector2( 12.33, -10.4978 ) ]
-}
-tracks/29/type = "value"
-tracks/29/path = NodePath("other_bubble/yes:visibility/visible")
-tracks/29/interp = 1
-tracks/29/imported = false
-tracks/29/keys = {
-"times": FloatArray( 0, 12.48 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/30/type = "value"
-tracks/30/path = NodePath("other_bubble/player_name:visibility/visible")
-tracks/30/interp = 1
-tracks/30/imported = false
-tracks/30/keys = {
-"times": FloatArray( 0, 12.48 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/31/type = "value"
-tracks/31/path = NodePath("other_bubble/just:visibility/visible")
-tracks/31/interp = 1
-tracks/31/imported = false
-tracks/31/keys = {
-"times": FloatArray( 0, 12.48 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/32/type = "value"
-tracks/32/path = NodePath("other_bubble/please:visibility/visible")
-tracks/32/interp = 1
-tracks/32/imported = false
-tracks/32/keys = {
-"times": FloatArray( 0, 12.48, 20.2 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/33/type = "value"
-tracks/33/path = NodePath("other_bubble/nice:visibility/visible")
-tracks/33/interp = 1
-tracks/33/imported = false
-tracks/33/keys = {
-"times": FloatArray( 0, 20.2, 25.02 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/34/type = "value"
-tracks/34/path = NodePath("other_bubble/my_name:visibility/visible")
-tracks/34/interp = 1
-tracks/34/imported = false
-tracks/34/keys = {
-"times": FloatArray( 0, 25.02, 30.03 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/35/type = "value"
-tracks/35/path = NodePath("other_bubble/sam:visibility/visible")
-tracks/35/interp = 1
-tracks/35/imported = false
-tracks/35/keys = {
-"times": FloatArray( 0, 35.07, 40 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/36/type = "value"
-tracks/36/path = NodePath("other_bubble/appeciate:visibility/visible")
-tracks/36/interp = 1
-tracks/36/imported = false
-tracks/36/keys = {
-"times": FloatArray( 0, 40, 45 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/37/type = "value"
-tracks/37/path = NodePath("other_bubble/normal:visibility/visible")
-tracks/37/interp = 1
-tracks/37/imported = false
-tracks/37/keys = {
-"times": FloatArray( 0, 45, 50 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/38/type = "value"
-tracks/38/path = NodePath("other_bubble/most:visibility/visible")
-tracks/38/interp = 1
-tracks/38/imported = false
-tracks/38/keys = {
-"times": FloatArray( 0, 50, 65 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/39/type = "value"
-tracks/39/path = NodePath("other_bubble/legally:visibility/visible")
-tracks/39/interp = 1
-tracks/39/imported = false
-tracks/39/keys = {
-"times": FloatArray( 0, 65, 81.05 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/40/type = "value"
-tracks/40/path = NodePath("other_bubble/ok_well:visibility/visible")
-tracks/40/interp = 1
-tracks/40/imported = false
-tracks/40/keys = {
-"times": FloatArray( 0, 81.05, 88.02 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/41/type = "value"
-tracks/41/path = NodePath("other_bubble/do_you:visibility/visible")
-tracks/41/interp = 1
-tracks/41/imported = false
-tracks/41/keys = {
-"times": FloatArray( 0, 88.02, 101.06 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/42/type = "value"
-tracks/42/path = NodePath("other_bubble/great:visibility/visible")
-tracks/42/interp = 1
-tracks/42/imported = false
-tracks/42/keys = {
-"times": FloatArray( 0, 101.06 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/43/type = "value"
-tracks/43/path = NodePath("outside_office/door:transform/pos")
-tracks/43/interp = 1
-tracks/43/imported = false
-tracks/43/keys = {
-"times": FloatArray( 0, 4.85, 5.35 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -0.234246, -9.7197 ), Vector2( -0.234246, -9.7197 ), Vector2( -13.2039, -10.1055 ) ]
-}
-tracks/44/type = "value"
-tracks/44/path = NodePath("outside_office/door:transform/scale")
-tracks/44/interp = 1
-tracks/44/imported = false
-tracks/44/keys = {
-"times": FloatArray( 0, 4.85, 5.35 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.0450579, 0.0445168 ), Vector2( 0.0450579, 0.0445168 ), Vector2( -0.0316857, 0.0457417 ) ]
-}
-tracks/45/type = "value"
-tracks/45/path = NodePath("pixel/left_leg:transform/pos")
-tracks/45/interp = 1
-tracks/45/imported = false
-tracks/45/keys = {
-"times": FloatArray( 19, 19.19, 19.2, 19.28, 19.42, 19.66, 19.77, 19.92, 20 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1.23616, 16.285 ), Vector2( 1.23616, 17.6545 ), Vector2( 1.23616, 17.2619 ), Vector2( 1.23616, 18.3676 ), Vector2( 1.23616, 18.3251 ), Vector2( 1.23616, 17.3341 ), Vector2( 1.23616, 18.3263 ), Vector2( 1.23616, 16.716 ), Vector2( 1.23616, 17.7552 ) ]
-}
-tracks/46/type = "value"
-tracks/46/path = NodePath("pixel/left_leg:transform/scale")
-tracks/46/interp = 1
-tracks/46/imported = false
-tracks/46/keys = {
-"times": FloatArray( 19, 19.19, 19.2, 19.28, 19.42, 19.66, 19.77, 19.92, 20 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.0910834, 0.207054 ), Vector2( 0.0910834, 0.234444 ), Vector2( 0.0910834, 0.226592 ), Vector2( 0.0910834, 0.248706 ), Vector2( 0.0910834, 0.247855 ), Vector2( 0.0910834, 0.228035 ), Vector2( 0.0910834, 0.247879 ), Vector2( 0.0910834, 0.215674 ), Vector2( 0.0910834, 0.274678 ) ]
-}
-tracks/47/type = "value"
-tracks/47/path = NodePath("pixel/right_leg:transform/pos")
-tracks/47/interp = 1
-tracks/47/imported = false
-tracks/47/keys = {
-"times": FloatArray( 19, 19.07, 19.19, 19.2, 19.42, 19.66, 19.77, 19.83, 19.92, 20 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 3.47801, 16.3619 ), Vector2( 3.47801, 17.0375 ), Vector2( 3.47801, 17.0023 ), Vector2( 3.47801, 17.517 ), Vector2( 3.47801, 18.3888 ), Vector2( 3.47801, 18.2677 ), Vector2( 3.47801, 18.1559 ), Vector2( 3.47801, 16.8635 ), Vector2( 3.47801, 18.3551 ), Vector2( 3.47801, 17.6814 ) ]
-}
-tracks/48/type = "value"
-tracks/48/path = NodePath("pixel/right_leg:transform/scale")
-tracks/48/interp = 1
-tracks/48/imported = false
-tracks/48/keys = {
-"times": FloatArray( 19, 19.07, 19.19, 19.2, 19.42, 19.66, 19.77, 19.83, 19.92, 20 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -0.108113, 0.211143 ), Vector2( -0.108113, 0.224655 ), Vector2( -0.108113, 0.223951 ), Vector2( -0.108113, 0.234246 ), Vector2( -0.108113, 0.251682 ), Vector2( -0.108113, 0.249258 ), Vector2( -0.108113, 0.247024 ), Vector2( -0.108113, 0.221174 ), Vector2( -0.108113, 0.251007 ), Vector2( -0.108113, 0.264482 ) ]
-}
-tracks/49/type = "value"
-tracks/49/path = NodePath("other_bubble/pixels:visibility/visible")
-tracks/49/interp = 1
-tracks/49/imported = false
-tracks/49/keys = {
-"times": FloatArray( 0, 30.03, 35.07 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/50/type = "value"
-tracks/50/path = NodePath("pixel:visibility/visible")
-tracks/50/interp = 1
-tracks/50/imported = false
-tracks/50/keys = {
-"times": FloatArray( 0, 106 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/51/type = "value"
-tracks/51/path = NodePath("strategy/crtv2:transform/scale")
-tracks/51/interp = 1
-tracks/51/imported = false
-tracks/51/keys = {
-"times": FloatArray( 0, 106.5, 106.8, 107, 107.1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ) ]
-}
-tracks/52/type = "value"
-tracks/52/path = NodePath("strategy/crtv3:transform/pos")
-tracks/52/interp = 1
-tracks/52/imported = false
-tracks/52/keys = {
-"times": FloatArray( 0, 106.5, 106.8, 107, 107.1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 44.4938, 340.111 ), Vector2( 37.483, 666.686 ), Vector2( 37.483, 552.037 ), Vector2( 33.9776, 666.686 ), Vector2( 26.967, 315.792 ) ]
+"values": [ Vector2( 0.997054, 1.03856 ), Vector2( 1.08923, 1.1302 ) ]
 }
 
 [node name="story_piece_two" type="Node2D"]
@@ -581,6 +281,7 @@ autoplay = "two_one"
 
 [node name="strategy" type="Sprite" parent="."]
 
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( -0.37561, 0.0704174 )
 transform/scale = Vector2( 0.0448001, 0.0752878 )
@@ -588,25 +289,25 @@ texture = ExtResource( 2 )
 
 [node name="crtv" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 14.1786, -461.689 )
+transform/pos = Vector2( 14.1786, -476.419 )
 transform/scale = Vector2( 2.80987, 1.32809 )
 texture = ExtResource( 3 )
 
 [node name="crtv1" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 44.1076, -106.932 )
+transform/pos = Vector2( 44.4936, -124.914 )
 transform/scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 3 )
 
 [node name="crtv2" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 44.1076, -21.4434 )
+transform/pos = Vector2( 44.4936, -39.4257 )
 transform/scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 3 )
 
 [node name="crtv3" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 44.1078, 358.093 )
+transform/pos = Vector2( 44.4938, 340.111 )
 transform/scale = Vector2( 2.80987, 1.64743 )
 texture = ExtResource( 3 )
 
@@ -614,684 +315,211 @@ texture = ExtResource( 3 )
 
 transform/pos = Vector2( 0.835938, 0.548452 )
 transform/scale = Vector2( 0.997054, 1.03856 )
-
-[node name="door_plug" type="Sprite" parent="inner_office"]
-
-transform/pos = Vector2( -9.56574, -1.68441 )
-transform/scale = Vector2( 0.298605, 0.109688 )
-texture = ExtResource( 4 )
-
-[node name="back_wall" type="Sprite" parent="inner_office"]
-
-transform/pos = Vector2( -0.268932, -5.90387 )
-transform/scale = Vector2( 0.0439155, 0.0510962 )
-texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="left_wall" type="Sprite" parent="inner_office"]
+[node name="Sprite" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -28.1363, 1.99552 )
-transform/scale = Vector2( 0.0647611, 0.109688 )
+transform/pos = Vector2( -0.886196, 0.188874 )
+transform/scale = Vector2( 0.0549797, 0.0791224 )
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="right_wall" type="Sprite" parent="inner_office"]
-
-transform/pos = Vector2( 27.8933, 2.76461 )
-transform/scale = Vector2( 0.0647611, 0.109688 )
-texture = ExtResource( 4 )
-flip_h = true
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="window" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( 0.838203, -9.9508 )
-transform/scale = Vector2( 0.0963926, 0.109688 )
-texture = ExtResource( 6 )
+transform/pos = Vector2( -0.894562, 1.02959 )
+transform/scale = Vector2( 0.0688434, 0.0859832 )
+texture = ExtResource( 5 )
 flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="floor" type="Sprite" parent="inner_office"]
-
-transform/pos = Vector2( 0.130707, 17.8638 )
-transform/scale = Vector2( 0.0513523, 0.0357478 )
-texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="chair" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -1.63028, 3.11239 )
-transform/scale = Vector2( 0.036946, 0.0518165 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( -1.03533, 15.618 )
+transform/scale = Vector2( 0.0316858, 0.0376473 )
+texture = ExtResource( 6 )
 flip_h = true
 
 [node name="desk" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( 1.08964, 4.90849 )
-transform/scale = Vector2( 0.0647611, 0.109688 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( -0.438004, 18.1301 )
+transform/scale = Vector2( 0.0415765, 0.0653465 )
+texture = ExtResource( 7 )
 flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="computer" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( 4.16058, -6.8645 )
-transform/scale = Vector2( 0.112629, 0.166383 )
-texture = ExtResource( 10 )
+transform/pos = Vector2( 1.45889, 10.5681 )
+transform/scale = Vector2( 0.0337077, 0.0503777 )
+texture = ExtResource( 8 )
 
 [node name="lamp" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -7.49199, -5.37641 )
+transform/pos = Vector2( -5.63167, 9.87837 )
 transform/scale = Vector2( 0.0103429, 0.0153723 )
-texture = ExtResource( 11 )
+texture = ExtResource( 9 )
 
 [node name="pixel" type="Node2D" parent="."]
 
-transform/pos = Vector2( -0.264181, -8.42964 )
+transform/pos = Vector2( -5.75828, 5.77512 )
+transform/scale = Vector2( 0.907402, 0.824811 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="left_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( -1.99212, 1.7015 )
-transform/rot = -17.716
-transform/scale = Vector2( 0.0910834, 0.20347 )
-texture = ExtResource( 12 )
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( 1.85691, -2.51094 )
+transform/scale = Vector2( 0.119264, 0.178869 )
+texture = ExtResource( 10 )
 
 [node name="right_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 6.74009, 1.45695 )
-transform/rot = 16.8
-transform/scale = Vector2( -0.0942702, 0.207054 )
-texture = ExtResource( 12 )
+transform/pos = Vector2( 3.71628, -2.7337 )
+transform/scale = Vector2( 0.107768, 0.176169 )
+texture = ExtResource( 10 )
+flip_h = true
 
 [node name="left_leg" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 1.23616, 16.285 )
-transform/scale = Vector2( 0.0910834, 0.207054 )
-texture = ExtResource( 13 )
+transform/pos = Vector2( 1.3199, 15.2614 )
+transform/scale = Vector2( 0.0868664, 0.216245 )
+texture = ExtResource( 11 )
 
 [node name="right_leg" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 3.47801, 16.3619 )
-transform/scale = Vector2( -0.108113, 0.211143 )
-texture = ExtResource( 13 )
+transform/pos = Vector2( 3.91681, 15.0056 )
+transform/scale = Vector2( 0.0972607, 0.217393 )
+texture = ExtResource( 11 )
+flip_h = true
 
 [node name="crotch" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 1.74826, 5.1688 )
-transform/scale = Vector2( 0.0841436, 0.132919 )
-texture = ExtResource( 14 )
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( 2.50384, 8.9411 )
+transform/scale = Vector2( 0.0757082, 0.116306 )
+texture = ExtResource( 12 )
 
 [node name="body" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 1.94207, -1.98201 )
+transform/pos = Vector2( 2.53233, -0.948296 )
 transform/scale = Vector2( 0.0910834, 0.207054 )
-texture = ExtResource( 15 )
-__meta__ = {
-"_edit_lock_": true
-}
+texture = ExtResource( 13 )
 
 [node name="head" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 2.33107, -12.284 )
+transform/pos = Vector2( 2.6307, -13.8357 )
 transform/scale = Vector2( 0.096818, 0.155561 )
-texture = ExtResource( 16 )
-__meta__ = {
-"_edit_lock_": true
-}
+texture = ExtResource( 14 )
+
+[node name="back_of_head" type="Sprite" parent="pixel"]
+
+visibility/visible = false
+transform/pos = Vector2( 2.56298, -13.0579 )
+transform/scale = Vector2( 0.101456, 0.167424 )
+texture = ExtResource( 15 )
 
 [node name="outside_office" type="Node2D" parent="."]
 
-transform/pos = Vector2( -0.0809581, 8.57151 )
-transform/scale = Vector2( 1.4, 1.5093 )
+editor/display_folded = true
+transform/pos = Vector2( -0.00170135, 1.32025 )
+transform/scale = Vector2( 0.985302, 0.97776 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="back_wall" type="Sprite" parent="outside_office"]
+[node name="Sprite" type="Sprite" parent="outside_office"]
 
-transform/pos = Vector2( -0.268932, -5.90387 )
-transform/scale = Vector2( 0.0439155, 0.0510962 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="left_wall" type="Sprite" parent="outside_office"]
-
-transform/pos = Vector2( -28.1363, 1.99552 )
-transform/scale = Vector2( 0.0647611, 0.109688 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="right_wall" type="Sprite" parent="outside_office"]
-
-transform/pos = Vector2( 27.8933, 2.76461 )
-transform/scale = Vector2( 0.0647611, 0.109688 )
-texture = ExtResource( 4 )
-flip_h = true
+transform/pos = Vector2( -0.357955, -0.681422 )
+transform/scale = Vector2( 0.0553747, 0.0864132 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="door" type="Sprite" parent="outside_office"]
 
-transform/pos = Vector2( -13.2039, -10.1055 )
-transform/scale = Vector2( -0.0316857, 0.0457417 )
+transform/pos = Vector2( -0.498777, -0.679602 )
+transform/scale = Vector2( 0.0589716, 0.0878755 )
 texture = ExtResource( 17 )
-
-[node name="floor" type="Sprite" parent="outside_office"]
-
-transform/pos = Vector2( 0.130707, 17.8638 )
-transform/scale = Vector2( 0.0513523, 0.0357478 )
-texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="plaque" type="Sprite" parent="outside_office"]
-
-transform/pos = Vector2( -0.214281, -26.6303 )
-transform/scale = Vector2( 0.278571, 0.107863 )
-texture = ExtResource( 18 )
-
-[node name="plaque_engraving" type="RichTextLabel" parent="outside_office/plaque"]
-
-rect/scale = Vector2( 0.28, 0.28 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -35.0
-margin/top = -11.0
-margin/right = 370.0
-margin/bottom = 152.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Pixel & Player Relations"
-visible_characters = -1
-percent_visible = 1.0
-
 [node name="speech_bubble" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 0.108246, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bubble" type="Sprite" parent="speech_bubble"]
 
-transform/pos = Vector2( -9.32978, 13.0198 )
-transform/scale = Vector2( 0.0296155, 0.0205695 )
-texture = ExtResource( 20 )
+transform/pos = Vector2( -12.2206, 13.7753 )
+transform/scale = Vector2( 0.0253465, 0.0183162 )
+texture = ExtResource( 18 )
 flip_h = true
 flip_v = true
 
-[node name="whew" type="RichTextLabel" parent="speech_bubble"]
+[node name="speech" type="RichTextLabel" parent="speech_bubble"]
 
-visibility/visible = false
-rect/scale = Vector2( 0.2, 0.2 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -19.0
-margin/top = 4.0
-margin/right = 192.0
-margin/bottom = 147.0
+margin/left = -21.0
+margin/top = 7.0
+margin/right = 190.0
+margin/bottom = 150.0
 custom_fonts/normal_font = ExtResource( 19 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Whew! I made it!"
 visible_characters = -1
 percent_visible = 1.0
-
-[node name="whoa" type="RichTextLabel" parent="speech_bubble"]
-
-rect/scale = Vector2( 0.2, 0.2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -24.0
-margin/top = 4.0
-margin/right = 153.0
-margin/bottom = 113.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Whoa! Watch out!"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="oh" type="RichTextLabel" parent="speech_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.15, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -24.0
-margin/top = 15.0
-margin/right = 153.0
-margin/bottom = 124.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Oh...um...hi..."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="most" type="RichTextLabel" parent="speech_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.15, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -20.0
-margin/top = 15.0
-margin/right = 157.0
-margin/bottom = 124.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Um... *most*?"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="hogwarts" type="RichTextLabel" parent="speech_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.125, 0.125 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -21.0
-margin/top = 13.0
-margin/right = 303.0
-margin/bottom = 189.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Haha! You want me to teach the Dark Arts at Hogwarts while I am at it?"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="what_happened" type="RichTextLabel" parent="speech_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.125, 0.125 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -17.0
-margin/top = 15.0
-margin/right = 275.0
-margin/bottom = 278.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "What happened to them???"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="elipses" type="RichTextLabel" parent="speech_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.125, 0.125 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -5.0
-margin/top = 17.0
-margin/right = 172.0
-margin/bottom = 280.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "..."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="yeah_sure" type="RichTextLabel" parent="speech_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.125, 0.125 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -22.0
-margin/top = 12.0
-margin/right = 305.0
-margin/bottom = 275.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "You know what? Yeah, sure, why not? They are just video games lives, right?"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="other_bubble" type="Node2D" parent="."]
-
-visibility/visible = false
 __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="other_bubble" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( -2.30912, -1.68264 )
+
 [node name="bubble" type="Sprite" parent="other_bubble"]
 
-transform/pos = Vector2( 19.2376, -9.23145 )
+transform/pos = Vector2( 19.2281, -0.906036 )
 transform/rot = 90.0
-transform/scale = Vector2( 0.0277045, 0.0184051 )
-texture = ExtResource( 21 )
+transform/scale = Vector2( 0.0277045, 0.0193962 )
+texture = ExtResource( 20 )
 
-[node name="yes" type="RichTextLabel" parent="other_bubble"]
-
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 12.0
-margin/top = -26.0
-margin/right = 235.0
-margin/bottom = 169.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Oh, yes! You must be"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="player_name" type="RichTextLabel" parent="other_bubble"]
+[node name="speech" type="RichTextLabel" parent="other_bubble"]
 
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 14.0
+margin/left = 10.0
 margin/top = -17.0
-margin/right = 183.0
-margin/bottom = 50.0
+margin/right = 220.0
+margin/bottom = 340.0
 custom_fonts/normal_font = ExtResource( 19 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "dutchess"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="just" type="RichTextLabel" parent="other_bubble"]
-
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 13.0
-margin/top = -11.0
-margin/right = 180.0
-margin/bottom = 80.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "You are just in time."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="please" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.15, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 13.0
-margin/top = -24.0
-margin/right = 154.0
-margin/bottom = 101.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Please, come inside."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="nice" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.15, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 12.0
-margin/top = -22.0
-margin/right = 143.0
-margin/bottom = 186.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "It is nice to meet you!"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="my_name" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 13.0
-margin/top = -24.0
-margin/right = 180.0
-margin/bottom = 182.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "My name is Pixel and I will be your assistant."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="pixels" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 11.0
-margin/top = -28.0
-margin/right = 201.0
-margin/bottom = 264.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "There are more Pixels who are in charge of designing games, and anything else you may need."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="sam" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 13.0
-margin/top = -24.0
-margin/right = 180.0
-margin/bottom = 176.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Sam will be here soon. He is in charge of the Players."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="appeciate" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = -24.0
-margin/right = 286.0
-margin/bottom = 285.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Unfortunately we are going to have to get started without him. I want to say again we really do appreciate you taking this job on such short notice."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="normal" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1.0
-margin/top = -24.0
-margin/right = 273.0
-margin/bottom = 370.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "It really is a totally normal job. The people of this kingdom love video games, but they are very specific about what they play."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="most" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = -22.0
-margin/right = 303.0
-margin/bottom = 295.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "*Most* of your job will be visiting the different kingdoms and making sure everything is running smoothly between the pixels and players."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="legally" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = -25.0
-margin/right = 299.0
-margin/bottom = 301.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Er... yes well, I am legally required to inform you that the previous occupant of your position died on the job. In fact the last four of them died.... on the job."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="ok_well" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -1.0
-margin/top = -26.0
-margin/right = 298.0
-margin/bottom = 328.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Ok... well... usually this is a totally normal job. But recently someone has been sabotaging the Pixel and Player relations. We don't know who it is, but they are very... well...effective."
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="do_you" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = -12.0
-margin/right = 299.0
-margin/bottom = 314.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Do you still think you can take the job?"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="great" type="RichTextLabel" parent="other_bubble"]
-
-visibility/visible = false
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 2.0
-margin/top = -23.0
-margin/right = 262.0
-margin/bottom = 303.0
-custom_fonts/normal_font = ExtResource( 19 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "...! *whew* Great! Alright then, if you will come sit down we can complete a little training session while we wait for Sam."
+bbcode/bbcode = "Oh, yes! You must be the new liason! You are just in time."
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 22 )
+stream/stream = ExtResource( 21 )
 stream/play = false
 stream/loop = true
 stream/volume_db = -10.0
@@ -1302,16 +530,17 @@ stream/buffering_ms = 500
 
 [node name="skip_button" type="LinkButton" parent="."]
 
-rect/scale = Vector2( 0.4, 0.4 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -31.0
-margin/top = 19.0
-margin/right = -3.0
-margin/bottom = 33.0
-custom_colors/font_color = Color( 0.121569, 1, 0.0901961, 1 )
+margin/left = -27.0
+margin/top = 27.0
+margin/right = 46.0
+margin/bottom = 67.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -1321,20 +550,21 @@ underline = 2
 
 [node name="mute_button" type="TextureButton" parent="."]
 
+rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 25.0
-margin/top = 19.0
-margin/right = 30.0
-margin/bottom = 25.45
+margin/left = 19.0
+margin/top = 25.0
+margin/right = 29.0
+margin/bottom = 40.0
 toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 23 )
-textures/pressed = ExtResource( 24 )
+textures/normal = ExtResource( 22 )
+textures/pressed = ExtResource( 23 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.15 )
 params/stretch_mode = 0

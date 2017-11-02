@@ -1,16 +1,15 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://player_selection.gd" type="Script" id=1]
-[ext_resource path="res://time_management_background.png" type="Texture" id=2]
-[ext_resource path="res://player_screen.png" type="Texture" id=3]
-[ext_resource path="res://customer_six.png" type="Texture" id=4]
-[ext_resource path="res://pixel.png" type="Texture" id=5]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=6]
-[ext_resource path="res://clean_button.png" type="Texture" id=7]
-[ext_resource path="res://player_select.ogg" type="AudioStream" id=8]
-[ext_resource path="res://music.png" type="Texture" id=9]
-[ext_resource path="res://no_music.png" type="Texture" id=10]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=11]
+[ext_resource path="res://collander_64.png" type="Texture" id=2]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://file_icon.png" type="Texture" id=4]
+[ext_resource path="res://player_select.ogg" type="AudioStream" id=5]
+[ext_resource path="res://music_icon_on.png" type="Texture" id=6]
+[ext_resource path="res://music_icon_off.png" type="Texture" id=7]
+[ext_resource path="res://error_box.png" type="Texture" id=8]
+[ext_resource path="res://button.png" type="Texture" id=9]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=10]
 
 [sub_resource type="Animation" id=1]
 
@@ -19,134 +18,14 @@ length = 20.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("sam:visibility/visible")
+tracks/0/path = NodePath("name:bbcode/bbcode")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 3, 19 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": FloatArray( 0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.3, 3.5, 3.7, 3.9, 4.1, 4.3, 4.5, 4.8, 5, 5.4, 5.6, 5.8, 6, 6.2, 6.2, 6.6, 6.8, 7, 7.2, 7.2, 7.4, 7.6, 7.8, 8, 8.2, 8.4, 8.4, 8.8, 9.2, 9.4, 9.4, 9.6, 10, 10.3, 10.4, 10.6, 10.8, 10.9, 10.9, 11.2, 11.6, 12, 12.4, 12.4, 12.8, 13.2, 13.6, 14, 14.4, 14.8, 15.2, 15.6, 16, 16.4, 16.8, 17.2, 17.6, 18, 18.4, 18.8, 18.8, 19.2, 19.6, 20 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ false, true, false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("new:visibility/visible")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 15.6 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("load:visibility/visible")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0, 16.2 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("pixel:visibility/visible")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0, 1, 17.8 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("pixel:transform/pos")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 1, 5, 7, 12, 15, 17 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -27.5292, -23.3229 ), Vector2( 24.3723, -22.0755 ), Vector2( 24.5374, 3.36703 ), Vector2( -23.8159, 4.19667 ), Vector2( -24.4761, 21.3428 ), Vector2( 27.1778, 22.1724 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("sam:transform/pos")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 3, 7, 9, 15, 16, 18.5 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -27.53, -23.575 ), Vector2( 24.949, -23.0219 ), Vector2( 24.949, 3.52689 ), Vector2( -24.2295, 4.63309 ), Vector2( -24.7246, 20.9495 ), Vector2( 26.4342, 22.3323 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("name:bbcode/bbcode")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.3, 3.5, 3.7, 3.9, 4.1, 4.3, 4.5, 4.8, 5, 5.4, 5.6, 5.8, 6, 6.2, 6.6, 6.8, 7, 7.2, 7.4, 7.6, 7.8, 8, 8.2, 8.4, 8.8, 9.2, 9.4, 9.6, 10, 10.3, 10.4, 10.6, 10.8, 10.9, 11.2, 11.6, 12, 12.4, 12.8, 13.2, 13.6, 14, 14.4, 14.8, 15.2, 15.6, 16, 16.4, 16.8, 17.2, 17.6, 18, 18.4, 18.8, 19.2, 19.6, 20 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ "", "l", "", "l", "V", "Vl", "Vil", "Vi", "Vid", "Vidl", "Vidyl", "Vidye", "Vidyea", "Vidye", "Vidyl", "Vidl", "Videl", "Video", "Video l", "Video Gl", "Video G", "Video Ga", "Video Gal", "Video Gam", "Video Game", "Video Gamel", "Video Game l", "Video Game G", "Video Game GL", "Video Game GLOl", "Video Game GLORl", "Video Game GLORY", "Video Game GLORYl", "Video Game GLOR", "Video Game GLl", "Video Game Gl", "Video Game G", "Video Game Gll", "Video Game Glol", "Video Game Glo", "Video Game Glor", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory", "Video Game Gloryl", "Video Game Glory" ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("background:visibility/visible")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("queue:visibility/visible")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("name:visibility/visible")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("skip:visibility/visible")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("music_button:visibility/visible")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("quit:visibility/visible")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0, 17.1 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"values": [ "", "^", "", "^", "V", "V^", "Vi^", "Vi", "Vid", "Vid^", "Vidy^", "Vidye", "Vidyea", "Vidye", "Vidy^", "Vid^", "Vide^", "Video", "Video ^", "Video G^", "Video G", "Video Ga", "Video Gal", "Video Ga^", "Video Gam", "Video Game", "Video Game^", "Video Game l", "Video Game ^", "Video Game G", "Video Game GL", "Video Game GLO^", "Video Game GLOR^", "Video Game GLORY", "Video Game GLORYl", "Video Game GLORY^", "Video Game GLOR", "Video Game GL^", "Video Game Gl", "Video Game G^", "Video Game G", "Video Game Gl^", "Video Game Glo^", "Video Game Glo", "Video Game Glor", "Video Game Glory", "Video Game Gloryl", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Gloryl", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Gloryl", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory" ]
 }
 
 [node name="player_selection" type="Node2D"]
@@ -173,39 +52,39 @@ transform/pos = Vector2( -0.22974, 0.307449 )
 transform/scale = Vector2( 0.0997623, 0.161618 )
 texture = ExtResource( 2 )
 
-[node name="queue" type="Sprite" parent="."]
+[node name="collander" type="RichTextLabel" parent="."]
 
-transform/pos = Vector2( 0.135029, 2.24471 )
-transform/scale = Vector2( 0.0903419, 0.0882041 )
-texture = ExtResource( 3 )
-
-[node name="sam" type="Sprite" parent="."]
-
-visibility/visible = false
-transform/pos = Vector2( 26.4342, 22.3323 )
-transform/scale = Vector2( 0.0224115, -0.0403373 )
-texture = ExtResource( 4 )
-
-[node name="pixel" type="Sprite" parent="."]
-
-visibility/visible = false
-transform/pos = Vector2( 27.1778, 22.1724 )
-transform/scale = Vector2( 0.036914, 0.0483219 )
-texture = ExtResource( 5 )
-
-[node name="name" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.1, 0.15 )
+rect/scale = Vector2( 0.06, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -25.0
-margin/top = -11.0
-margin/right = 417.0
-margin/bottom = 53.0
-custom_fonts/normal_font = ExtResource( 6 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+margin/left = -17.0
+margin/top = -21.0
+margin/right = 606.0
+margin/bottom = 133.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+bbcode/enabled = true
+bbcode/bbcode = "*** Collander 64 Extended Edition ***
+64K RAM 39205 BYTES FREE
+READY."
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="name" type="RichTextLabel" parent="."]
+
+rect/scale = Vector2( 0.125, 0.15 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -22.0
+margin/top = -7.0
+margin/right = 349.0
+margin/bottom = 95.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "Video Game Glory"
 visible_characters = -1
@@ -213,25 +92,25 @@ percent_visible = 1.0
 
 [node name="new" type="Sprite" parent="."]
 
-transform/pos = Vector2( -11.5522, 14.358 )
-transform/scale = Vector2( 0.0188435, 0.0302709 )
-texture = ExtResource( 7 )
+editor/display_folded = true
+transform/pos = Vector2( -18.8484, 7.33482 )
+transform/scale = Vector2( 0.0671159, 0.0895979 )
+texture = ExtResource( 4 )
 
 [node name="new" type="RichTextLabel" parent="new"]
 
-rect/scale = Vector2( 2.5, 2.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -106.0
-margin/top = -42.0
-margin/right = 4.0
-margin/bottom = 8.0
-custom_fonts/normal_font = ExtResource( 6 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -34.0
+margin/top = 67.0
+margin/right = 76.0
+margin/bottom = 177.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "NEW"
+bbcode/bbcode = "NEW FILE"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -241,10 +120,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -100.0
+margin/left = -45.0
 margin/top = -50.0
-margin/right = 100.0
-margin/bottom = 51.0
+margin/right = 49.0
+margin/bottom = 150.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -254,25 +133,27 @@ __meta__ = {
 
 [node name="endless" type="Sprite" parent="."]
 
-transform/pos = Vector2( 9.02006, 28.4682 )
-transform/scale = Vector2( 0.03152, 0.0226245 )
-texture = ExtResource( 7 )
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 18.9642, 7.32881 )
+transform/scale = Vector2( 0.0633426, 0.0879617 )
+texture = ExtResource( 4 )
 
 [node name="endless" type="RichTextLabel" parent="endless"]
 
-rect/scale = Vector2( 2.5, 2.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -163.0
-margin/top = -45.0
-margin/right = -20.0
-margin/bottom = 5.0
-custom_fonts/normal_font = ExtResource( 6 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -66.0
+margin/top = 62.0
+margin/right = 77.0
+margin/bottom = 209.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "Endless"
+bbcode/bbcode = "ENDLESS
+MODE"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -282,10 +163,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -226.0
-margin/top = -97.0
-margin/right = 236.0
-margin/bottom = 95.0
+margin/left = -65.0
+margin/top = -50.0
+margin/right = 75.0
+margin/bottom = 142.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -295,25 +176,26 @@ __meta__ = {
 
 [node name="load" type="Sprite" parent="."]
 
-transform/pos = Vector2( -1.32544, 14.3952 )
-transform/scale = Vector2( 0.0180672, 0.0303931 )
-texture = ExtResource( 7 )
+editor/display_folded = true
+transform/pos = Vector2( -5.55846, 7.38193 )
+transform/scale = Vector2( 0.0657454, 0.0889864 )
+texture = ExtResource( 4 )
 
 [node name="load" type="RichTextLabel" parent="load"]
 
-rect/scale = Vector2( 2.5, 2.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -125.0
-margin/top = -51.0
-margin/right = 12.0
-margin/bottom = 2.0
-custom_fonts/normal_font = ExtResource( 6 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -42.0
+margin/top = 64.0
+margin/right = 56.0
+margin/bottom = 163.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "LOAD"
+bbcode/bbcode = "LOAD
+FILE"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -323,10 +205,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -100.0
+margin/left = -59.0
 margin/top = -51.0
-margin/right = 100.0
-margin/bottom = 49.0
+margin/right = 56.0
+margin/bottom = 144.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -337,25 +219,26 @@ __meta__ = {
 
 [node name="quit" type="Sprite" parent="."]
 
-transform/pos = Vector2( 9.04633, 14.3121 )
-transform/scale = Vector2( 0.0204308, 0.0305331 )
-texture = ExtResource( 7 )
+editor/display_folded = true
+transform/pos = Vector2( 6.61248, 7.24926 )
+transform/scale = Vector2( 0.0632069, 0.089305 )
+texture = ExtResource( 4 )
 
 [node name="load" type="RichTextLabel" parent="quit"]
 
-rect/scale = Vector2( 2.5, 2.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -113.0
-margin/top = -42.0
-margin/right = -3.0
-margin/bottom = 11.0
-custom_fonts/normal_font = ExtResource( 6 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin/left = -42.0
+margin/top = 64.0
+margin/right = 68.0
+margin/bottom = 155.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "QUIT"
+bbcode/bbcode = "QUIT
+GAME"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -365,10 +248,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -100.0
-margin/top = -51.0
-margin/right = 100.0
-margin/bottom = 49.0
+margin/left = -55.0
+margin/top = -53.0
+margin/right = 62.0
+margin/bottom = 145.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -377,31 +260,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="skip" type="LinkButton" parent="."]
-
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -20.0
-margin/top = 27.0
-margin/right = 63.0
-margin/bottom = 74.0
-custom_fonts/font = ExtResource( 6 )
-custom_colors/font_color = Color( 0.182339, 0.699219, 0.163879, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "SKIP"
-underline = 2
-
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 8 )
+stream/stream = ExtResource( 5 )
 stream/play = false
-stream/loop = false
+stream/loop = true
 stream/volume_db = 0.0
 stream/autoplay = true
 stream/paused = false
@@ -410,25 +273,25 @@ stream/buffering_ms = 500
 
 [node name="music_button" type="TextureButton" parent="."]
 
-rect/scale = Vector2( 0.1, 0.2 )
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 21.0
-margin/top = 10.0
-margin/right = 71.0
-margin/bottom = 53.0
+margin/left = -25.0
+margin/top = -19.0
+margin/right = 75.0
+margin/bottom = 81.0
 toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 9 )
-textures/pressed = ExtResource( 10 )
+textures/normal = ExtResource( 6 )
+textures/pressed = ExtResource( 7 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
-[node name="are_you_sure" type="Node2D" parent="."]
+[node name="quit_game" type="Node2D" parent="."]
 
 editor/display_folded = true
 visibility/visible = false
@@ -436,69 +299,201 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="background" type="Sprite" parent="are_you_sure"]
+[node name="background" type="Sprite" parent="quit_game"]
 
-transform/pos = Vector2( -2.08142, -4.74082 )
-transform/scale = Vector2( 0.0376187, 0.0284477 )
-texture = ExtResource( 11 )
-flip_v = true
+transform/pos = Vector2( 0.226585, -0.189409 )
+transform/scale = Vector2( 0.0661152, 0.0814358 )
+texture = ExtResource( 8 )
 
-[node name="notification" type="RichTextLabel" parent="are_you_sure"]
+[node name="notification" type="RichTextLabel" parent="quit_game"]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.07, 0.07 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -20.0
-margin/top = -19.0
-margin/right = 220.0
-margin/bottom = 94.0
-custom_fonts/normal_font = ExtResource( 6 )
+margin/left = -8.0
+margin/top = -8.0
+margin/right = 302.0
+margin/bottom = 218.0
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "Are you sure you want to quit the game?"
+bbcode/bbcode = "Do you want to quit the game?"
 visible_characters = -1
 percent_visible = 1.0
 
-[node name="yes_quit" type="LinkButton" parent="are_you_sure"]
+[node name="error" type="RichTextLabel" parent="quit_game"]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.06, 0.06 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 5.0
-margin/top = 2.0
-margin/right = 55.0
+margin/left = -11.0
+margin/top = -12.0
+margin/right = 84.0
 margin/bottom = 34.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = true
+bbcode/bbcode = "error"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="background1" type="Sprite" parent="quit_game"]
+
+transform/pos = Vector2( -5.45131, 5.96934 )
+transform/scale = Vector2( 0.0371544, 0.0390076 )
+texture = ExtResource( 9 )
+
+[node name="yes_quit" type="LinkButton" parent="quit_game"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -7.0
+margin/top = 5.0
+margin/right = 67.0
+margin/bottom = 52.0
+custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "YES"
+text = "OK"
 underline = 2
 
-[node name="no_quit" type="LinkButton" parent="are_you_sure"]
+[node name="background2" type="Sprite" parent="quit_game"]
 
-rect/scale = Vector2( 0.15, 0.15 )
+transform/pos = Vector2( 6.68201, 5.81384 )
+transform/scale = Vector2( 0.0445258, 0.0390076 )
+texture = ExtResource( 9 )
+
+[node name="no_quit" type="LinkButton" parent="quit_game"]
+
+rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -14.0
-margin/top = 2.0
-margin/right = 22.0
-margin/bottom = 34.0
-custom_fonts/font = ExtResource( 6 )
+margin/left = 3.0
+margin/top = 5.0
+margin/right = 155.0
+margin/bottom = 52.0
+custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "NO"
+text = "CANCEL"
+underline = 2
+
+[node name="new_game_overwrite" type="Node2D" parent="."]
+
+process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="background" type="Sprite" parent="new_game_overwrite"]
+
+transform/pos = Vector2( 0.226585, -0.189409 )
+transform/scale = Vector2( 0.0661152, 0.0814358 )
+texture = ExtResource( 8 )
+
+[node name="notification" type="RichTextLabel" parent="new_game_overwrite"]
+
+rect/scale = Vector2( 0.07, 0.07 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -10.0
+margin/top = -9.0
+margin/right = 300.0
+margin/bottom = 217.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = true
+bbcode/bbcode = "Doing this will overwrite your old saved game data. Continue?"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="error" type="RichTextLabel" parent="new_game_overwrite"]
+
+rect/scale = Vector2( 0.06, 0.06 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -11.0
+margin/top = -12.0
+margin/right = 84.0
+margin/bottom = 34.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = true
+bbcode/bbcode = "error"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="background1" type="Sprite" parent="new_game_overwrite"]
+
+transform/pos = Vector2( -5.12474, 8.02157 )
+transform/scale = Vector2( 0.0371544, 0.0390076 )
+texture = ExtResource( 9 )
+
+[node name="yes_overwrite" type="LinkButton" parent="new_game_overwrite"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -7.0
+margin/top = 7.0
+margin/right = 67.0
+margin/bottom = 54.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="background2" type="Sprite" parent="new_game_overwrite"]
+
+transform/pos = Vector2( 6.60037, 7.86608 )
+transform/scale = Vector2( 0.0445258, 0.0390076 )
+texture = ExtResource( 9 )
+
+[node name="no_overwrite" type="LinkButton" parent="new_game_overwrite"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 7.0
+margin/right = 155.0
+margin/bottom = 54.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "CANCEL"
 underline = 2
 
 [connection signal="button_up" from="new/new_button" to="." method="_on_new_button_button_up"]
@@ -509,12 +504,14 @@ underline = 2
 
 [connection signal="button_down" from="quit/quit_button" to="." method="_on_quit_button_button_down"]
 
-[connection signal="button_down" from="skip" to="." method="_on_skip_button_down"]
-
 [connection signal="toggled" from="music_button" to="." method="_on_music_button_toggled"]
 
-[connection signal="button_down" from="are_you_sure/yes_quit" to="." method="_on_yes_quit_button_down"]
+[connection signal="button_down" from="quit_game/yes_quit" to="." method="_on_yes_quit_button_down"]
 
-[connection signal="button_down" from="are_you_sure/no_quit" to="." method="_on_no_quit_button_down"]
+[connection signal="button_down" from="quit_game/no_quit" to="." method="_on_no_quit_button_down"]
+
+[connection signal="button_up" from="new_game_overwrite/yes_overwrite" to="." method="_on_yes_overwrite_button_up"]
+
+[connection signal="button_up" from="new_game_overwrite/no_overwrite" to="." method="_on_no_overwrite_button_up"]
 
 

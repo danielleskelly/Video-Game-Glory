@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://marketing.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://lower.png" type="Texture" id=4]
 [ext_resource path="res://raise.png" type="Texture" id=5]
-[ext_resource path="res://clean_button.png" type="Texture" id=6]
+[ext_resource path="res://button.png" type="Texture" id=6]
 [ext_resource path="res://not_opened.png" type="Texture" id=7]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=8]
 
 [node name="marketing" type="Node2D"]
 
@@ -32,10 +33,11 @@ margin/top = -27.0
 margin/right = 398.0
 margin/bottom = 58.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Satisfaction Boosters"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="ad_output" type="RichTextLabel" parent="."]
 
@@ -49,10 +51,11 @@ margin/top = 5.0
 margin/right = 594.0
 margin/bottom = 136.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "None"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="container" type="Node2D" parent="."]
 
@@ -61,14 +64,15 @@ transform/scale = Vector2( 0.536962, 0.354903 )
 
 [node name="lower" type="TextureButton" parent="container"]
 
+rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -41.0
-margin/top = -6.0
-margin/right = -21.0
-margin/bottom = 30.0
+margin/left = -28.0
+margin/top = -3.0
+margin/right = -8.0
+margin/bottom = 33.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -80,15 +84,18 @@ params/stretch_mode = 0
 
 [node name="spending_output" type="LineEdit" parent="container"]
 
-rect/scale = Vector2( 0.8, 1.25 )
+rect/scale = Vector2( 0.25, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -21.0
+margin/left = -18.0
 margin/top = -6.0
-margin/right = 38.0
-margin/bottom = 23.0
+margin/right = 124.0
+margin/bottom = 44.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+text = "000"
 placeholder/alpha = 0.6
 focus_mode = 2
 caret/caret_blink = false
@@ -96,14 +103,15 @@ caret/caret_blink_speed = 0.65
 
 [node name="raise" type="TextureButton" parent="container"]
 
+rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 26.0
-margin/top = -6.0
-margin/right = 46.0
-margin/bottom = 30.0
+margin/left = 17.0
+margin/top = -3.0
+margin/right = 37.0
+margin/bottom = 33.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -129,14 +137,14 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-text = "confirm"
+text = "purchase"
 underline = 2
 
 [node name="button_background" type="Sprite" parent="confirm"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 74.2057, 19.828 )
-transform/scale = Vector2( 0.392832, 0.327964 )
+transform/pos = Vector2( 67.5899, 20.3633 )
+transform/scale = Vector2( 0.793219, 0.629679 )
 texture = ExtResource( 6 )
 
 [node name="not_opened" type="Sprite" parent="."]
@@ -157,11 +165,12 @@ margin/left = -217.0
 margin/top = -181.0
 margin/right = -11.0
 margin/bottom = -37.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 8 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "   Not Unlocked"
 visible_characters = -1
+percent_visible = 1.0
 
 [connection signal="button_down" from="container/lower" to="." method="_on_lower_button_down"]
 

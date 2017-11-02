@@ -2,8 +2,8 @@ extends Node2D
 
 var strategy_node = load("res://strategy.tscn")
 
-var texture_off = load("res://no_music.png")
-var texture_on = load("res://music.png")
+var texture_off = load("res://music_icon_off.png")
+var texture_on = load("res://music_icon_on.png")
 
 func _ready():
 	set_sound()
@@ -12,8 +12,6 @@ func _ready():
 func _process(delta):
 	get_node("skip_button").set_global_pos(Vector2(20,526))
 	get_node("mute_button").set_global_pos(Vector2(920, 526))
-	get_node("other_bubble/player_name").clear()
-	get_node("other_bubble/player_name").add_text(global.player_name + "!")
 
 func _on_AnimationPlayer_finished():
 	towns.town_select = "hollyhock"
