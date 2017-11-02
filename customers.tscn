@@ -2,7 +2,7 @@
 
 [ext_resource path="res://customers.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
 
 [node name="customers" type="Node2D"]
 
@@ -28,14 +28,16 @@ margin/top = -29.0
 margin/right = 309.0
 margin/bottom = 29.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Completed Sales"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="sales_made" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.09, 0.13 )
+rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The number of players that completed a game at your arcade yesterday."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -45,14 +47,16 @@ margin/top = -19.0
 margin/right = 284.0
 margin/bottom = 37.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Happy Players:"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="sales_made_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The number of players that completed a game at your arcade yesterday."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -62,14 +66,16 @@ margin/top = -19.0
 margin/right = 114.0
 margin/bottom = 52.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0000"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="lost_sales" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The number of unhappy players during yesterday's business."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -79,14 +85,16 @@ margin/top = -5.0
 margin/right = 198.0
 margin/bottom = 49.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Lost Sales"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="waited_loss" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.09, 0.13 )
+rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "Players who gave up from too long of a wait. If there are too many, upgrade your in-store entertainment, or unlock more arcades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -96,31 +104,35 @@ margin/top = 5.0
 margin/right = 96.0
 margin/bottom = 65.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Wait:"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="waited_loss_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "Players who gave up from too long of a wait. If there are too many, upgrade your in-store entertainment, or unlock more arcades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -11.0
+margin/left = -16.0
 margin/top = 5.0
-margin/right = 108.0
+margin/right = 103.0
 margin/bottom = 91.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0000"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="price_loss" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.09, 0.13 )
+rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The number of players who did not like your high prices. If the number is high, lower your prices."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -130,31 +142,35 @@ margin/top = 5.0
 margin/right = 134.0
 margin/bottom = 63.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Price:"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="price_loss_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The number of players who did not like your high prices. If the number is high, lower your prices."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 23.0
+margin/left = 21.0
 margin/top = 4.0
-margin/right = 119.0
+margin/right = 117.0
 margin/bottom = 93.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0000"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="sabatoge_loss" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.09, 0.13 )
+visibility/visible = false
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -164,13 +180,15 @@ margin/top = 18.0
 margin/right = 172.0
 margin/bottom = 74.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sabatoge:"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="sabatoge_loss_output" type="RichTextLabel" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -181,43 +199,48 @@ margin/top = 18.0
 margin/right = 95.0
 margin/bottom = 113.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0000"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="storefront_loss" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.09, 0.13 )
+rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The number of players who never came in due to the shabby storefront. If this number is high, upgrade your storefront."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1.0
+margin/left = -15.0
 margin/top = 18.0
-margin/right = 231.0
+margin/right = 215.0
 margin/bottom = 116.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Storefront:"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="storefront_loss_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The number of players who never came in due to the shabby storefront. If this number is high, upgrade your storefront."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 23.0
+margin/left = 6.0
 margin/top = 18.0
-margin/right = 120.0
+margin/right = 103.0
 margin/bottom = 115.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0000"
 visible_characters = -1
+percent_visible = 1.0
 
 

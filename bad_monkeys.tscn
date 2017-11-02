@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://bad_monkeys.gd" type="Script" id=1]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=2]
 [ext_resource path="res://bad_monkey_logo.png" type="Texture" id=3]
-[ext_resource path="res://bad_monkey.png" type="Texture" id=4]
-[ext_resource path="res://bad_monkeys.ogg" type="AudioStream" id=5]
+[ext_resource path="res://bad_monkey_logo_squish.png" type="Texture" id=4]
+[ext_resource path="res://bad_monkey.png" type="Texture" id=5]
+[ext_resource path="res://bad_monkeys.ogg" type="AudioStream" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -17,7 +18,7 @@ tracks/0/path = NodePath("banana_hold:transform/pos")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 2.2 ),
+"times": FloatArray( 0, 2.4 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( -0.570312, 39.2127 ), Vector2( 0.0616013, 14.1685 ) ]
@@ -84,15 +85,18 @@ texture = ExtResource( 3 )
 
 [node name="banana_squish" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.061601, 14.1685 )
-transform/scale = Vector2( 0.024648, 0.0354167 )
-texture = ExtResource( 3 )
+transform/pos = Vector2( -0.0838412, 7.8776 )
+transform/scale = Vector2( 0.0253728, 0.0405096 )
+texture = ExtResource( 4 )
 
 [node name="bad_monkeys_splash" type="Sprite" parent="."]
 
 transform/pos = Vector2( 0.167749, 5.47469 )
 transform/scale = Vector2( 0.0584516, 0.0761602 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
@@ -107,7 +111,7 @@ autoplay = "splash"
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 5 )
+stream/stream = ExtResource( 6 )
 stream/play = true
 stream/loop = false
 stream/volume_db = 0.12

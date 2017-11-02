@@ -473,7 +473,6 @@ func save_game():
 	var savegame = File.new()
 	savegame.open(str("user://savegame.save"), File.WRITE)
 	savegame.store_line(str(towns.town_select))
-	savegame.store_line(str(global.player_name))
 	savegame.store_line(str(endless.endless_unlocked))
 	savegame.close()
 		

@@ -2,10 +2,10 @@
 
 [ext_resource path="res://research.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://lower.png" type="Texture" id=4]
 [ext_resource path="res://raise.png" type="Texture" id=5]
-[ext_resource path="res://clean_button.png" type="Texture" id=6]
+[ext_resource path="res://button.png" type="Texture" id=6]
 
 [node name="research" type="Node2D"]
 
@@ -31,10 +31,11 @@ margin/top = -27.0
 margin/right = 254.0
 margin/bottom = 68.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Researching:"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="research_goal_output" type="RichTextLabel" parent="."]
 
@@ -48,10 +49,11 @@ margin/top = -30.0
 margin/right = 335.0
 margin/bottom = 74.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Genre Two -- Classic"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="research_fund" type="RichTextLabel" parent="."]
 
@@ -65,10 +67,11 @@ margin/top = -16.0
 margin/right = 261.0
 margin/bottom = 51.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Research Fund:"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="research_output" type="RichTextLabel" parent="."]
 
@@ -82,10 +85,11 @@ margin/top = -16.0
 margin/right = 228.0
 margin/bottom = 60.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "000"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="daily_research" type="RichTextLabel" parent="."]
 
@@ -99,10 +103,11 @@ margin/top = -4.0
 margin/right = 279.0
 margin/bottom = 90.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Daily Spending:"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="research_lower" type="TextureButton" parent="."]
 
@@ -154,10 +159,11 @@ margin/top = 9.0
 margin/right = 226.0
 margin/bottom = 86.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Days Left:"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="days_left_output" type="RichTextLabel" parent="."]
 
@@ -171,10 +177,11 @@ margin/top = 9.0
 margin/right = 229.0
 margin/bottom = 90.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "000"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="confirm" type="LinkButton" parent="."]
 
@@ -192,14 +199,14 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-text = "confirm"
+text = "purchase"
 underline = 2
 
 [node name="Sprite" type="Sprite" parent="confirm"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 74.2057, 19.828 )
-transform/scale = Vector2( 0.392832, 0.327964 )
+transform/pos = Vector2( 72.0432, 21.9689 )
+transform/scale = Vector2( 0.798941, 0.498718 )
 texture = ExtResource( 6 )
 
 [node name="research_spending_output" type="LineEdit" parent="."]
@@ -214,7 +221,7 @@ margin/top = -5.0
 margin/right = 199.0
 margin/bottom = 52.0
 custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
 placeholder/text = "000"
 placeholder/alpha = 0.6
 focus_mode = 2

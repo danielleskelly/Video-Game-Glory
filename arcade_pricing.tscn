@@ -3,7 +3,7 @@
 [ext_resource path="res://arcade_pricing.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://potential_background.png" type="Texture" id=3]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://zone_one.gd" type="Script" id=5]
 [ext_resource path="res://lower.png" type="Texture" id=6]
 [ext_resource path="res://raise.png" type="Texture" id=7]
@@ -55,10 +55,11 @@ margin/top = -30.0
 margin/right = 129.0
 margin/bottom = 21.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Arcade"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="price" type="RichTextLabel" parent="."]
 
@@ -72,10 +73,11 @@ margin/top = -30.0
 margin/right = 148.0
 margin/bottom = 39.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Price"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="range" type="RichTextLabel" parent="."]
 
@@ -89,10 +91,11 @@ margin/top = -30.0
 margin/right = 138.0
 margin/bottom = 26.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Range"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="zone_one" type="Node2D" parent="."]
 
@@ -112,10 +115,11 @@ margin/top = -75.0
 margin/right = 213.0
 margin/bottom = -14.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Arcade One"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="range" type="RichTextLabel" parent="zone_one"]
 
@@ -129,10 +133,11 @@ margin/top = -75.0
 margin/right = 131.0
 margin/bottom = -23.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0-10"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="lower" type="TextureButton" parent="zone_one"]
 
@@ -166,10 +171,11 @@ margin/top = -75.0
 margin/right = 95.0
 margin/bottom = -15.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.761719, 0.761719, 0.761719, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="raise" type="TextureButton" parent="zone_one"]
 
@@ -209,10 +215,11 @@ margin/top = -40.0
 margin/right = 224.0
 margin/bottom = 51.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Arcade Two"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="range" type="RichTextLabel" parent="zone_two"]
 
@@ -226,10 +233,11 @@ margin/top = -40.0
 margin/right = 154.0
 margin/bottom = 19.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0-10"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="lower" type="TextureButton" parent="zone_two"]
 
@@ -263,10 +271,11 @@ margin/top = -40.0
 margin/right = 95.0
 margin/bottom = 20.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.761719, 0.761719, 0.761719, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="raise" type="TextureButton" parent="zone_two"]
 
@@ -296,7 +305,7 @@ script/script = ExtResource( 9 )
 
 [node name="name" type="RichTextLabel" parent="zone_three"]
 
-rect/scale = Vector2( 0.09, 0.95 )
+rect/scale = Vector2( 0.1, 1.25 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -306,10 +315,11 @@ margin/top = -22.0
 margin/right = 246.0
 margin/bottom = 54.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Arcade Three"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="range" type="RichTextLabel" parent="zone_three"]
 
@@ -323,10 +333,11 @@ margin/top = -22.0
 margin/right = 151.0
 margin/bottom = 31.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0-10"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="lower" type="TextureButton" parent="zone_three"]
 
@@ -360,10 +371,11 @@ margin/top = -22.0
 margin/right = 95.0
 margin/bottom = 38.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.761719, 0.761719, 0.761719, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="raise" type="TextureButton" parent="zone_three"]
 
@@ -403,10 +415,11 @@ margin/top = 8.0
 margin/right = 235.0
 margin/bottom = 83.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Arcade Four"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="range" type="RichTextLabel" parent="zone_four"]
 
@@ -420,10 +433,11 @@ margin/top = 8.0
 margin/right = 148.0
 margin/bottom = 62.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0-10"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="lower" type="TextureButton" parent="zone_four"]
 
@@ -457,10 +471,11 @@ margin/top = 8.0
 margin/right = 95.0
 margin/bottom = 68.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.761719, 0.761719, 0.761719, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="raise" type="TextureButton" parent="zone_four"]
 
@@ -503,10 +518,11 @@ margin/top = 14.0
 margin/right = 228.0
 margin/bottom = 95.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Arcade Five"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="range" type="RichTextLabel" parent="zone_five"]
 
@@ -520,10 +536,11 @@ margin/top = 14.0
 margin/right = 158.0
 margin/bottom = 74.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0-10"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="lower" type="TextureButton" parent="zone_five"]
 
@@ -557,10 +574,11 @@ margin/top = 14.0
 margin/right = 95.0
 margin/bottom = 74.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.761719, 0.761719, 0.761719, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="raise" type="TextureButton" parent="zone_five"]
 
@@ -603,10 +621,11 @@ margin/top = 23.0
 margin/right = 203.0
 margin/bottom = 101.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Arcade Six"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="range" type="RichTextLabel" parent="zone_six"]
 
@@ -620,10 +639,11 @@ margin/top = 23.0
 margin/right = 151.0
 margin/bottom = 78.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0-10"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="lower" type="TextureButton" parent="zone_six"]
 
@@ -657,10 +677,11 @@ margin/top = 23.0
 margin/right = 95.0
 margin/bottom = 83.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.761719, 0.761719, 0.761719, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="raise" type="TextureButton" parent="zone_six"]
 

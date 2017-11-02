@@ -3,7 +3,7 @@
 [ext_resource path="res://games.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://potential_background.png" type="Texture" id=3]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=4]
 
 [node name="games" type="Node2D"]
 
@@ -41,10 +41,11 @@ margin/top = -31.0
 margin/right = 170.0
 margin/bottom = 23.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="game" type="RichTextLabel" parent="."]
 
@@ -58,10 +59,11 @@ margin/top = -31.0
 margin/right = 149.0
 margin/bottom = 28.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Game"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="station_one" type="Node2D" parent="."]
 
@@ -80,10 +82,11 @@ margin/top = -58.0
 margin/right = 250.0
 margin/bottom = 5.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station One"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="dropdown" type="OptionButton" parent="station_one"]
 
@@ -97,7 +100,8 @@ margin/top = -79.0
 margin/right = 545.0
 margin/bottom = -4.0
 custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_constants/hseparation = 3
 toggle_mode = false
 click_on_press = true
@@ -125,10 +129,11 @@ margin/top = -35.0
 margin/right = 246.0
 margin/bottom = 20.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Two"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="dropdown" type="OptionButton" parent="station_two"]
 
@@ -142,7 +147,8 @@ margin/top = -61.0
 margin/right = 548.0
 margin/bottom = 17.0
 custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -170,10 +176,11 @@ margin/top = -23.0
 margin/right = 232.0
 margin/bottom = 33.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Three"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="dropdown" type="OptionButton" parent="station_three"]
 
@@ -187,7 +194,8 @@ margin/top = -46.0
 margin/right = 550.0
 margin/bottom = 30.0
 custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -215,10 +223,11 @@ margin/top = -10.0
 margin/right = 293.0
 margin/bottom = 48.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Four"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="dropdown" type="OptionButton" parent="station_four"]
 
@@ -232,7 +241,8 @@ margin/top = -31.0
 margin/right = 550.0
 margin/bottom = 57.0
 custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -260,10 +270,11 @@ margin/top = 0.0
 margin/right = 315.0
 margin/bottom = 57.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Five"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="dropdown" type="OptionButton" parent="station_five"]
 
@@ -277,7 +288,8 @@ margin/top = -5.0
 margin/right = 551.0
 margin/bottom = 71.0
 custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -305,10 +317,11 @@ margin/top = 19.0
 margin/right = 289.0
 margin/bottom = 80.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Station Six"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="dropdown" type="OptionButton" parent="station_six"]
 
@@ -322,7 +335,8 @@ margin/top = 8.0
 margin/right = 553.0
 margin/bottom = 80.0
 custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
