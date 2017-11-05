@@ -1,9 +1,9 @@
-[gd_scene load_steps=69 format=1]
+[gd_scene load_steps=53 format=1]
 
 [ext_resource path="res://hollyhock_time_management.gd" type="Script" id=1]
-[ext_resource path="res://time_management_background.png" type="Texture" id=2]
+[ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://hollyhock_background.png" type="Texture" id=3]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://concessions_want.png" type="Texture" id=5]
 [ext_resource path="res://popcorn.png" type="Texture" id=6]
 [ext_resource path="res://outer_box.png" type="Texture" id=7]
@@ -12,12 +12,12 @@
 [ext_resource path="res://green_ghostie.tscn" type="PackedScene" id=10]
 [ext_resource path="res://blue_ghostie.tscn" type="PackedScene" id=11]
 [ext_resource path="res://strategy.ogg" type="AudioStream" id=12]
-[ext_resource path="res://pixel.png" type="Texture" id=13]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=14]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=15]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=16]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=17]
-[ext_resource path="res://clean_button.png" type="Texture" id=18]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=13]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=14]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=15]
+[ext_resource path="res://pixel.png" type="Texture" id=16]
+[ext_resource path="res://error_box.png" type="Texture" id=17]
+[ext_resource path="res://button.png" type="Texture" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -52,222 +52,142 @@ points = Vector2Array( 16.1409, -16.4944, 16.1634, 17.3008, 14.2305, 17.3008, 14
 [sub_resource type="ConvexPolygonShape2D" id=7]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -5.08216, -7.48954, -4.14016, -7.48954, -4.12671, 7.32751, -5.0687, 7.32751 )
+points = Vector2Array( 28.1845, -30.3704, 32.792, -30.3932, 32.792, 31.9271, 28.1506, 31.8851 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -4.87885, -7.28865, -4.12828, -7.28865, -4.12828, 5.37444, -4.87885, 5.37444 )
+points = Vector2Array( 14.941, -20.6928, 16.6701, -20.6928, 16.6701, 18.663, 14.941, 18.663 )
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 28.1845, -30.3704, 32.792, -30.3932, 32.792, 31.9271, 28.1506, 31.8851 )
+points = Vector2Array( 15.0439, -17.8645, 16.8933, -17.8645, 16.8933, 21.8708, 15.0439, 21.8708 )
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 14.941, -20.6928, 16.6701, -20.6928, 16.6701, 18.663, 14.941, 18.663 )
+points = Vector2Array( 14.5831, -16.9756, 16.1247, -16.9756, 16.1247, 16.8683, 14.5831, 16.8683 )
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 15.0439, -17.8645, 16.8933, -17.8645, 16.8933, 21.8708, 15.0439, 21.8708 )
+points = Vector2Array( 29.3091, -31.747, 93.9413, -31.5991, 93.9413, -25.7346, 29.3109, -25.6854 )
 
 [sub_resource type="ConvexPolygonShape2D" id=12]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 14.5831, -16.9756, 16.1247, -16.9756, 16.1247, 16.8683, 14.5831, 16.8683 )
+points = Vector2Array( 17.6844, 14.4911, 3.70555, 14.6178, 3.70555, 6.76231, 17.6844, 6.76231 )
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -7.2393, -8.0921, -6.38387, -8.10479, -6.41147, 6.60153, -7.2117, 6.60153 )
+points = Vector2Array( 4.48321, 6.69955, 18.3694, 6.69955, 18.3694, 16.1464, 4.48321, 16.1845 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -4.52492, -7.24462, -3.75412, -7.24462, -3.75412, 5.37753, -4.52492, 5.37753 )
+points = Vector2Array( 14.4566, 33.35, 24.5863, 33.35, 24.5863, 35.8117, 14.4566, 35.8117 )
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 29.3091, -31.747, 93.9413, -31.5991, 93.9413, -25.7346, 29.3109, -25.6854 )
+points = Vector2Array( 29.7273, -32.6177, 92.4126, -32.7057, 92.5756, -25.6067, 29.5567, -25.4692 )
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 17.6844, 14.4911, 3.70555, 14.6178, 3.70555, 6.76231, 17.6844, 6.76231 )
+points = Vector2Array( 19.9949, 15.2976, 5.92773, 15.1611, 5.92773, 6.61972, 20.0659, 6.6795 )
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 4.48321, 6.69955, 18.3694, 6.69955, 18.3694, 16.1464, 4.48321, 16.1845 )
+points = Vector2Array( 4.27751, 5.7673, 18.1652, 5.7673, 18.1652, 15.3157, 4.27751, 15.5327 )
 
 [sub_resource type="ConvexPolygonShape2D" id=18]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 14.4566, 33.35, 24.5863, 33.35, 24.5863, 35.8117, 14.4566, 35.8117 )
+points = Vector2Array( 10.5831, 39.6392, 20.6555, 39.6392, 20.6555, 42.4865, 10.5831, 42.453 )
 
 [sub_resource type="ConvexPolygonShape2D" id=19]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -1.48593, -6.05552, -4.82339, -6.00995, -4.82339, -8.47071, -1.4689, -8.47071 )
+points = Vector2Array( 32.7584, -51.4543, 32.7584, -47.6596, 31.0768, -51.4543 )
 
 [sub_resource type="ConvexPolygonShape2D" id=20]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 29.7273, -32.6177, 92.4126, -32.7057, 92.5756, -25.6067, 29.5567, -25.4692 )
+points = Vector2Array( 6.51396, 32.5878, 6.55466, 23.1854, 8.2644, 32.5878 )
 
 [sub_resource type="ConvexPolygonShape2D" id=21]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 19.9949, 15.2976, 5.92773, 15.1611, 5.92773, 6.61972, 20.0659, 6.6795 )
+points = Vector2Array( 13.6596, -3.0365, 15.2714, -3.03649, 15.2714, 6.56019 )
 
 [sub_resource type="ConvexPolygonShape2D" id=22]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 4.27751, 5.7673, 18.1652, 5.7673, 18.1652, 15.3157, 4.27751, 15.5327 )
+points = Vector2Array( 19.2338, 33.3435, 21.3129, 33.3435, 21.3129, 36.878 )
 
 [sub_resource type="ConvexPolygonShape2D" id=23]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 10.5831, 39.6392, 20.6555, 39.6392, 20.6555, 42.4865, 10.5831, 42.453 )
+points = Vector2Array( 43.2526, -50.7771, 41.2346, -46.9824, 41.2652, -50.7771 )
 
 [sub_resource type="ConvexPolygonShape2D" id=24]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -0.474451, -5.76627, -4.97615, -5.76627, -4.98186, -7.33538, -0.474451, -7.33833 )
+points = Vector2Array( 5.37943, 47.6518, 5.37943, 36.4105, 7.47684, 47.6518 )
 
 [sub_resource type="ConvexPolygonShape2D" id=25]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -1.35491, -5.37333, -5.37094, -5.37333, -5.3856, -7.03767, -1.35491, -7.03767 )
+points = Vector2Array( 13.8495, 4.85916, 17.0691, 4.81851, 17.0691, 18.1901 )
 
 [sub_resource type="ConvexPolygonShape2D" id=26]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -2.37563, -5.64378, -4.3305, -5.64378, -4.3305, -7.20905, -2.36528, -7.21584 )
+points = Vector2Array( 21.3736, 33.8901, 23.6733, 33.8901, 23.6733, 36.7177 )
 
 [sub_resource type="ConvexPolygonShape2D" id=27]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32.7584, -51.4543, 32.7584, -47.6596, 31.0768, -51.4543 )
+points = Vector2Array( 41.9782, -48.8508, 41.9849, -51.8649, 43.4165, -51.8439 )
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 6.51396, 32.5878, 6.55466, 23.1854, 8.2644, 32.5878 )
+points = Vector2Array( 5.35615, 29.4178, 5.35615, 21.8474, 6.4672, 29.4178 )
 
 [sub_resource type="ConvexPolygonShape2D" id=29]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 13.6596, -3.0365, 15.2714, -3.0365, 15.2714, 6.56019 )
+points = Vector2Array( 15.2731, 1.22087, 17.0689, 1.22087, 17.0689, 10.3624 )
 
 [sub_resource type="ConvexPolygonShape2D" id=30]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 18.772, 34.7158, 20.023, 34.7158, 19.9987, 36.5811 )
+points = Vector2Array( 22.5878, 34.7406, 24.6778, 34.7406, 24.6914, 37.5421 )
 
 [sub_resource type="ConvexPolygonShape2D" id=31]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 18.1766, 35.7265, 19.3001, 35.7265, 19.3001, 37.6091 )
+points = Vector2Array( 41.9755, -51.1417, 40.9036, -48.1917, 40.8955, -51.1378 )
 
 [sub_resource type="ConvexPolygonShape2D" id=32]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 19.2343, 36.1185, 20.1988, 36.1185, 20.1879, 37.7114 )
+points = Vector2Array( 5.36613, 42.3024, 5.36613, 34.0321, 6.47491, 42.3024 )
 
 [sub_resource type="ConvexPolygonShape2D" id=33]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 19.2338, 33.3435, 21.3129, 33.3435, 21.3129, 36.878 )
+points = Vector2Array( 17.8467, 2.3591, 19.9156, 2.3591, 19.9156, 11.0244 )
 
 [sub_resource type="ConvexPolygonShape2D" id=34]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 43.2526, -50.7771, 41.2346, -46.9824, 41.2652, -50.7771 )
-
-[sub_resource type="ConvexPolygonShape2D" id=35]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 5.37943, 47.6518, 5.37943, 36.4105, 7.47684, 47.6518 )
-
-[sub_resource type="ConvexPolygonShape2D" id=36]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 14.118, 4.91402, 17.0691, 4.81851, 17.0691, 18.1901 )
-
-[sub_resource type="ConvexPolygonShape2D" id=37]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 21.3736, 33.8901, 23.6733, 33.8901, 23.6733, 36.7177 )
-
-[sub_resource type="ConvexPolygonShape2D" id=38]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 19.042, 36.4157, 19.8757, 36.4157, 19.8757, 37.8668 )
-
-[sub_resource type="ConvexPolygonShape2D" id=39]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 22.4774, 34.856, 23.6175, 34.8413, 23.6175, 36.8759 )
-
-[sub_resource type="ConvexPolygonShape2D" id=40]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 19.0423, 36.1611, 19.8089, 36.1643, 19.8035, 37.854 )
-
-[sub_resource type="ConvexPolygonShape2D" id=41]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 41.9782, -48.8508, 41.9849, -51.8649, 43.4165, -51.8439 )
-
-[sub_resource type="ConvexPolygonShape2D" id=42]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 5.35615, 29.4178, 5.35615, 21.8474, 6.4672, 29.4178 )
-
-[sub_resource type="ConvexPolygonShape2D" id=43]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 15.2731, 1.22087, 17.0689, 1.22087, 17.0689, 10.3624 )
-
-[sub_resource type="ConvexPolygonShape2D" id=44]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 22.5878, 34.7406, 24.6778, 34.7406, 24.6914, 37.5421 )
-
-[sub_resource type="ConvexPolygonShape2D" id=45]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 18.8012, 37.7725, 18.8012, 35.766, 19.0536, 37.7725 )
-
-[sub_resource type="ConvexPolygonShape2D" id=46]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 41.9755, -51.1417, 40.9036, -48.1917, 40.8955, -51.1378 )
-
-[sub_resource type="ConvexPolygonShape2D" id=47]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 5.36613, 42.3024, 5.36613, 34.0321, 6.47491, 42.3024 )
-
-[sub_resource type="ConvexPolygonShape2D" id=48]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 17.8467, 2.3591, 19.9156, 2.3591, 19.9156, 11.0244 )
-
-[sub_resource type="ConvexPolygonShape2D" id=49]
-
-custom_solver_bias = 0.0
 points = Vector2Array( 18.808, 35.9679, 20.2529, 35.9679, 20.2529, 38.285 )
-
-[sub_resource type="ConvexPolygonShape2D" id=50]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -20.0208, 37.6931, -19.8839, 35.873, -19.8839, 37.6924 )
 
 [node name="time_management" type="Node2D"]
 
@@ -289,10 +209,13 @@ __meta__ = {
 
 [node name="level_background" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1.52169, -2.12671 )
-transform/scale = Vector2( 0.115576, 0.175322 )
+transform/pos = Vector2( 0.0536799, -0.300717 )
+transform/scale = Vector2( 0.10043, 0.157541 )
 texture = ExtResource( 3 )
 flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="day_timer" type="Timer" parent="."]
 
@@ -308,15 +231,19 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -22.0
-margin/top = 15.0
-margin/right = 76.0
-margin/bottom = 69.0
+margin/left = -14.0
+margin/top = 13.0
+margin/right = 84.0
+margin/bottom = 67.0
 custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "000"
 visible_characters = -1
+percent_visible = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="soda" type="StaticBody2D" parent="." groups=[
 "hidden",
@@ -324,7 +251,7 @@ visible_characters = -1
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -21.4633, -3.93256 )
+transform/pos = Vector2( 16.3205, 6.98175 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
@@ -987,7 +914,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -8.18929, 11.2162 )
+transform/pos = Vector2( -5.57275, 0.919338 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
@@ -1026,7 +953,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 1.43894, 18.3666 )
+transform/pos = Vector2( 21.9321, 10.9212 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
@@ -1104,7 +1031,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -10.7106, 15.0609 )
+transform/pos = Vector2( -12.8818, 23.9787 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
@@ -1182,7 +1109,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -14.3032, -3.76702 )
+transform/pos = Vector2( -22.1592, -16.7406 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
@@ -1416,7 +1343,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 9.38494, 20.3827 )
+transform/pos = Vector2( 22.2956, -13.9114 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
@@ -1494,7 +1421,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -6.24447, -13.9332 )
+transform/pos = Vector2( 16.0766, 14.6911 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
@@ -1767,7 +1694,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 7.2814, -10.1503 )
+transform/pos = Vector2( 18.7995, -1.44569 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
@@ -1923,7 +1850,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -10.8723, 21.4311 )
+transform/pos = Vector2( -19.9467, 13.6165 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
@@ -2001,7 +1928,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -10.9233, -21.5906 )
+transform/pos = Vector2( 11.3978, 7.03374 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
@@ -2313,7 +2240,7 @@ __meta__ = {
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -11.8512, -6.881 )
+transform/pos = Vector2( -3.93722, -6.79087 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
@@ -2348,9 +2275,12 @@ __meta__ = {
 
 [node name="success_background" type="Sprite" parent="."]
 
-transform/pos = Vector2( -20.3616, -16.8147 )
+transform/pos = Vector2( 13.8394, -12.2076 )
 transform/scale = Vector2( 0.0465265, 0.0295693 )
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite2" type="Sprite" parent="success_background"]
 
@@ -2385,6 +2315,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Points"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="hundreths" type="RichTextLabel" parent="success_background"]
 
@@ -2394,14 +2325,15 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -66.0
-margin/top = -20.0
-margin/right = -37.0
-margin/bottom = 44.0
+margin/top = -21.0
+margin/right = -33.0
+margin/bottom = 43.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="tens" type="RichTextLabel" parent="success_background"]
 
@@ -2419,6 +2351,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="ones" type="RichTextLabel" parent="success_background"]
 
@@ -2436,35 +2369,31 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="customer" parent="." instance=ExtResource( 9 )]
 
-transform/pos = Vector2( -2.84879, -4.65588 )
+transform/pos = Vector2( -1.73072, 0.652534 )
 transform/scale = Vector2( 0.0554587, 0.10134 )
 
 [node name="right_stop" type="StaticBody2D" parent="." groups=[
 "right",
 ]]
 
+editor/display_folded = true
 input/pickable = true
 shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 0.739589, 0, 0, 1.07616, 8.80436, -0.484108 )
 shapes/0/trigger = false
 shapes/1/shape = SubResource( 4 )
-shapes/1/transform = Matrix32( 0.84084, 0, 0, 0.264384, -36.0155, 14.1665 )
+shapes/1/transform = Matrix32( 0.84084, 0, 0, 0.224545, -26.4935, 12.9616 )
 shapes/1/trigger = false
 shapes/2/shape = SubResource( 5 )
-shapes/2/transform = Matrix32( 0.831164, 0, 0, 0.284318, -38.4023, -17.9036 )
+shapes/2/transform = Matrix32( 0.831164, 0, 0, 0.374634, -28.3122, -14.7416 )
 shapes/2/trigger = false
 shapes/3/shape = SubResource( 6 )
-shapes/3/transform = Matrix32( 0.896022, 0, 0, 1.10256, -1.43353, -2.24115 )
+shapes/3/transform = Matrix32( 0.896022, 0, 0, 0.272502, -3.94242, -12.4733 )
 shapes/3/trigger = false
-shapes/4/shape = SubResource( 7 )
-shapes/4/transform = Matrix32( 1.25233, 0, 0, 1.12692, -3.41051, -0.27209 )
-shapes/4/trigger = false
-shapes/5/shape = SubResource( 8 )
-shapes/5/transform = Matrix32( 0.95449, 0, 0, 0.703724, 4.08911, -3.56325 )
-shapes/5/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2483,81 +2412,74 @@ build_mode = 0
 polygon = Vector2Array( 29.3001, -29.0451, 32.0455, -29.1104, 32.0455, 29.4983, 29.3883, 29.3417 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="right_stop"]
 
-transform/pos = Vector2( -36.0155, 14.1665 )
-transform/scale = Vector2( 0.84084, 0.264384 )
+transform/pos = Vector2( -26.4935, 12.9616 )
+transform/scale = Vector2( 0.84084, 0.224545 )
 build_mode = 0
 polygon = Vector2Array( 11.6734, -12.6112, 13.0492, -12.6112, 13.0551, 31.3148, 11.6734, 31.3148 )
 shape_range = Vector2( 1, 1 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="right_stop"]
 
-transform/pos = Vector2( -38.4023, -17.9036 )
-transform/scale = Vector2( 0.831164, 0.284318 )
+transform/pos = Vector2( -28.3122, -14.7416 )
+transform/scale = Vector2( 0.831164, 0.374634 )
 build_mode = 0
 polygon = Vector2Array( 14.6669, -16.244, 16.1347, -16.244, 16.1191, 23.5395, 14.6584, 23.6537 )
 shape_range = Vector2( 2, 2 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="right_stop"]
 
-transform/pos = Vector2( -1.43353, -2.24115 )
-transform/scale = Vector2( 0.896022, 1.10256 )
+transform/pos = Vector2( -3.94242, -12.4733 )
+transform/scale = Vector2( 0.896022, 0.272502 )
 build_mode = 0
 polygon = Vector2Array( 14.2529, -16.4924, 14.2305, 17.3008, 16.1634, 17.3008, 16.1409, -16.4944 )
 shape_range = Vector2( 3, 3 )
 trigger = false
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="right_stop"]
-
-transform/pos = Vector2( -3.41051, -0.27209 )
-transform/scale = Vector2( 1.25233, 1.12692 )
-build_mode = 0
-polygon = Vector2Array( -5.08216, -7.48954, -4.14016, -7.48954, -4.12671, 7.32751, -5.0687, 7.32751 )
-shape_range = Vector2( 4, 4 )
-trigger = false
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="right_stop"]
-
-transform/pos = Vector2( 4.08911, -3.56325 )
-transform/scale = Vector2( 0.95449, 0.703724 )
-build_mode = 0
-polygon = Vector2Array( -4.87885, -7.28865, -4.12828, -7.28865, -4.12828, 5.37444, -4.87885, 5.37444 )
-shape_range = Vector2( 5, 5 )
-trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="left_stop" type="StaticBody2D" parent="." groups=[
 "left",
 ]]
 
+editor/display_folded = true
+transform/pos = Vector2( 0, -0.0968113 )
 input/pickable = true
-shapes/0/shape = SubResource( 9 )
+shapes/0/shape = SubResource( 7 )
 shapes/0/transform = Matrix32( 0.312477, 0, 0, 1.02458, -40.9238, -0.854475 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 10 )
-shapes/1/transform = Matrix32( 0.895532, 0, 0, 0.29042, -29.0877, 17.006 )
+shapes/1/shape = SubResource( 8 )
+shapes/1/transform = Matrix32( 0.895532, 0, 0, 0.247133, -20.9115, 15.1816 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 11 )
-shapes/2/transform = Matrix32( 0.66405, 0, 0, 0.284811, -25.5591, -17.4745 )
+shapes/2/shape = SubResource( 9 )
+shapes/2/transform = Matrix32( 0.66405, 0, 0, 0.380274, -18.6418, -13.7383 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 12 )
-shapes/3/transform = Matrix32( 1.16925, 0, 0, 1.10707, 3.51505, -1.81898 )
+shapes/3/shape = SubResource( 10 )
+shapes/3/transform = Matrix32( 1.16925, 0, 0, 0.274656, 0.122642, -12.2877 )
 shapes/3/trigger = false
-shapes/4/shape = SubResource( 13 )
-shapes/4/transform = Matrix32( 1.31648, 0, 0, 1.11514, 12.9275, 0.389335 )
-shapes/4/trigger = false
-shapes/5/shape = SubResource( 14 )
-shapes/5/transform = Matrix32( 1.30883, 0, 0, 0.698117, 0.0122914, -3.40573 )
-shapes/5/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="left_stop"]
 
@@ -2567,72 +2489,64 @@ build_mode = 0
 polygon = Vector2Array( 28.1845, -30.3704, 32.792, -30.3932, 32.792, 31.9271, 28.1506, 31.8851 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="left_stop"]
 
-transform/pos = Vector2( -29.0877, 17.006 )
-transform/scale = Vector2( 0.895532, 0.29042 )
+transform/pos = Vector2( -20.9115, 15.1816 )
+transform/scale = Vector2( 0.895532, 0.247133 )
 build_mode = 0
 polygon = Vector2Array( 14.941, -20.6928, 16.6701, -20.6928, 16.6701, 18.663, 14.941, 18.663 )
 shape_range = Vector2( 1, 1 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="left_stop"]
 
-transform/pos = Vector2( -25.5591, -17.4745 )
-transform/scale = Vector2( 0.66405, 0.284811 )
+transform/pos = Vector2( -18.6418, -13.7383 )
+transform/scale = Vector2( 0.66405, 0.380274 )
 build_mode = 0
 polygon = Vector2Array( 15.0439, -17.8645, 16.8933, -17.8645, 16.8933, 21.8708, 15.0439, 21.8708 )
 shape_range = Vector2( 2, 2 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="left_stop"]
 
-transform/pos = Vector2( 3.51505, -1.81898 )
-transform/scale = Vector2( 1.16925, 1.10707 )
+transform/pos = Vector2( 0.122642, -12.2877 )
+transform/scale = Vector2( 1.16925, 0.274656 )
 build_mode = 0
 polygon = Vector2Array( 14.5831, -16.9756, 16.1247, -16.9756, 16.1247, 16.8683, 14.5831, 16.8683 )
 shape_range = Vector2( 3, 3 )
 trigger = false
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="left_stop"]
-
-transform/pos = Vector2( 12.9275, 0.389335 )
-transform/scale = Vector2( 1.31648, 1.11514 )
-build_mode = 0
-polygon = Vector2Array( -7.2393, -8.0921, -6.38387, -8.10479, -6.41147, 6.60153, -7.2117, 6.60153 )
-shape_range = Vector2( 4, 4 )
-trigger = false
-
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="left_stop"]
-
-transform/pos = Vector2( 0.0122914, -3.40573 )
-transform/scale = Vector2( 1.30883, 0.698117 )
-build_mode = 0
-polygon = Vector2Array( -4.52492, -7.24462, -3.75412, -7.24462, -3.75412, 5.37753, -4.52492, 5.37753 )
-shape_range = Vector2( 5, 5 )
-trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="up_stop" type="StaticBody2D" parent="." groups=[
 "up",
 ]]
 
+editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 15 )
+shapes/0/shape = SubResource( 11 )
 shapes/0/transform = Matrix32( 1, 0, 0, 0.549699, -61.6196, -14.3052 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 16 )
-shapes/1/transform = Matrix32( 0.867615, 0, 0, 0.301934, -29.4831, 18.2217 )
+shapes/1/shape = SubResource( 12 )
+shapes/1/transform = Matrix32( 0.789722, 0, 0, 0.301934, -19.3498, 15.4377 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 17 )
-shapes/2/transform = Matrix32( 0.856645, 0, 0, 0.235943, -30.0411, -14.942 )
+shapes/2/shape = SubResource( 13 )
+shapes/2/transform = Matrix32( 0.619234, 0, 0, 0.235943, -18.8034, -9.49879 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 18 )
-shapes/3/transform = Matrix32( 1.09184, 0, 0, 1.16185, -4.50649, -24.436 )
+shapes/3/shape = SubResource( 14 )
+shapes/3/transform = Matrix32( 1.00559, 0, 0, 1.16185, -5.73715, -49.3449 )
 shapes/3/trigger = false
-shapes/4/shape = SubResource( 19 )
-shapes/4/transform = Matrix32( 4.22575, 0, 0, 0.473349, 10.6447, 10.6667 )
-shapes/4/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2651,69 +2565,64 @@ build_mode = 0
 polygon = Vector2Array( 29.3109, -25.6854, 93.9413, -25.7346, 93.9413, -31.5991, 29.3091, -31.747 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="up_stop"]
 
-transform/pos = Vector2( -29.4831, 18.2217 )
-transform/scale = Vector2( 0.867615, 0.301934 )
+transform/pos = Vector2( -19.3498, 15.4377 )
+transform/scale = Vector2( 0.789722, 0.301934 )
 build_mode = 0
 polygon = Vector2Array( 17.6844, 6.76231, 3.70555, 6.76231, 3.70555, 14.6178, 17.6844, 14.4911 )
 shape_range = Vector2( 1, 1 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="up_stop"]
 
-transform/pos = Vector2( -30.0411, -14.942 )
-transform/scale = Vector2( 0.856645, 0.235943 )
+transform/pos = Vector2( -18.8034, -9.49879 )
+transform/scale = Vector2( 0.619234, 0.235943 )
 build_mode = 0
 polygon = Vector2Array( 4.48321, 16.1845, 18.3694, 16.1464, 18.3694, 6.69955, 4.48321, 6.69955 )
 shape_range = Vector2( 2, 2 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="up_stop"]
 
-transform/pos = Vector2( -4.50649, -24.436 )
-transform/scale = Vector2( 1.09184, 1.16185 )
+transform/pos = Vector2( -5.73715, -49.3449 )
+transform/scale = Vector2( 1.00559, 1.16185 )
 build_mode = 0
 polygon = Vector2Array( 14.4566, 35.8117, 24.5863, 35.8117, 24.5863, 33.35, 14.4566, 33.35 )
 shape_range = Vector2( 3, 3 )
 trigger = false
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="up_stop"]
-
-transform/pos = Vector2( 10.6447, 10.6667 )
-transform/scale = Vector2( 4.22575, 0.473349 )
-build_mode = 0
-polygon = Vector2Array( -1.4689, -8.47071, -4.82339, -8.47071, -4.82339, -6.00995, -1.48593, -6.05552 )
-shape_range = Vector2( 4, 4 )
-trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="down_stop" type="StaticBody2D" parent="." groups=[
 "down",
 ]]
 
+editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 20 )
+shapes/0/shape = SubResource( 15 )
 shapes/0/transform = Matrix32( 1.03193, 0, 0, 0.541215, -62.8247, 45.6202 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 21 )
-shapes/1/transform = Matrix32( 0.848103, 0, 0, 0.272408, -31.206, 8.99596 )
+shapes/1/shape = SubResource( 16 )
+shapes/1/transform = Matrix32( 0.78432, 0, 0, 0.272408, -21.2265, 8.57836 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 22 )
-shapes/2/transform = Matrix32( 0.858125, 0, 0, 0.244988, -29.9198, -23.9868 )
+shapes/2/shape = SubResource( 17 )
+shapes/2/transform = Matrix32( 0.637612, 0, 0, 0.244988, -18.9184, -22.0425 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 23 )
-shapes/3/transform = Matrix32( 1.10387, 0, 0, 1.16946, -0.323918, -67.258 )
+shapes/3/shape = SubResource( 18 )
+shapes/3/transform = Matrix32( 1.00731, 0, 0, 1.16946, -1.87231, -63.3112 )
 shapes/3/trigger = false
-shapes/4/shape = SubResource( 24 )
-shapes/4/transform = Matrix32( 1.09828, 0, 0, 1.22596, -4.29999, 0.370041 )
-shapes/4/trigger = false
-shapes/5/shape = SubResource( 25 )
-shapes/5/transform = Matrix32( 1.30384, 0, 0, 1.02992, 6.46386, -1.43368 )
-shapes/5/trigger = false
-shapes/6/shape = SubResource( 26 )
-shapes/6/transform = Matrix32( 3.11591, 0, 0, 1.02163, 7.60256, 6.20343 )
-shapes/6/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2732,88 +2641,65 @@ build_mode = 0
 polygon = Vector2Array( 29.5567, -25.4692, 92.5756, -25.6067, 92.4126, -32.7057, 29.7273, -32.6177 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="down_stop"]
 
-transform/pos = Vector2( -31.206, 8.99596 )
-transform/scale = Vector2( 0.848103, 0.272408 )
+transform/pos = Vector2( -21.2265, 8.57836 )
+transform/scale = Vector2( 0.78432, 0.272408 )
 build_mode = 0
 polygon = Vector2Array( 20.0659, 6.6795, 5.92773, 6.61972, 5.92773, 15.1611, 19.9949, 15.2976 )
 shape_range = Vector2( 1, 1 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="down_stop"]
 
-transform/pos = Vector2( -29.9198, -23.9868 )
-transform/scale = Vector2( 0.858125, 0.244988 )
+transform/pos = Vector2( -18.9184, -22.0425 )
+transform/scale = Vector2( 0.637612, 0.244988 )
 build_mode = 0
 polygon = Vector2Array( 4.27751, 15.5327, 18.1652, 15.3157, 18.1652, 5.7673, 4.27751, 5.7673 )
 shape_range = Vector2( 2, 2 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="down_stop"]
 
-transform/pos = Vector2( -0.323918, -67.258 )
-transform/scale = Vector2( 1.10387, 1.16946 )
+transform/pos = Vector2( -1.87231, -63.3112 )
+transform/scale = Vector2( 1.00731, 1.16946 )
 build_mode = 0
 polygon = Vector2Array( 10.5831, 42.453, 20.6555, 42.4865, 20.6555, 39.6392, 10.5831, 39.6392 )
 shape_range = Vector2( 3, 3 )
 trigger = false
-
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="down_stop"]
-
-transform/pos = Vector2( -4.29999, 0.370041 )
-transform/scale = Vector2( 1.09828, 1.22596 )
-build_mode = 0
-polygon = Vector2Array( -0.474451, -7.33833, -4.98186, -7.33538, -4.97615, -5.76627, -0.474451, -5.76627 )
-shape_range = Vector2( 4, 4 )
-trigger = false
-
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="down_stop"]
-
-transform/pos = Vector2( 6.46386, -1.43368 )
-transform/scale = Vector2( 1.30384, 1.02992 )
-build_mode = 0
-polygon = Vector2Array( -1.35491, -7.03767, -5.3856, -7.03767, -5.37094, -5.37333, -1.35491, -5.37333 )
-shape_range = Vector2( 5, 5 )
-trigger = false
-
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="down_stop"]
-
-transform/pos = Vector2( 7.60256, 6.20343 )
-transform/scale = Vector2( 3.11591, 1.02163 )
-build_mode = 0
-polygon = Vector2Array( -2.36528, -7.21584, -4.3305, -7.20905, -4.3305, -5.64378, -2.37563, -5.64378 )
-shape_range = Vector2( 6, 6 )
-trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="down_left" type="StaticBody2D" parent="." groups=[
 "left",
 "down",
 ]]
 
+editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 27 )
+shapes/0/shape = SubResource( 19 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1.02458, -63.3595, 80.584 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 28 )
-shapes/1/transform = Matrix32( -0.922138, 0, 0, -0.243946, -8.17043, 18.8346 )
+shapes/1/shape = SubResource( 20 )
+shapes/1/transform = Matrix32( -0.922138, 0, 0, -0.243946, 0.245121, 18.4207 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 29 )
-shapes/2/transform = Matrix32( 0.833502, 0, 0, 0.248933, -27.0969, -21.8463 )
+shapes/2/shape = SubResource( 21 )
+shapes/2/transform = Matrix32( 0.833502, 0, 0, 0.248933, -20.1316, -19.9627 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 30 )
-shapes/3/transform = Matrix32( 1, 0, 0, 1, -15.4868, -43.3889 )
+shapes/3/shape = SubResource( 22 )
+shapes/3/transform = Matrix32( 0.950369, 0, 0, 1.02679, -1.33459, -51.2989 )
 shapes/3/trigger = false
-shapes/4/shape = SubResource( 31 )
-shapes/4/transform = Matrix32( 1, 0, 0, 1, -24.1824, -44.2484 )
-shapes/4/trigger = false
-shapes/5/shape = SubResource( 32 )
-shapes/5/transform = Matrix32( 1, 0, 0, 1, -25.1525, -37.2899 )
-shapes/5/trigger = false
-shapes/6/shape = SubResource( 33 )
-shapes/6/transform = Matrix32( 0.950369, 0, 0, 1.02679, 2.10267, -55.1473 )
-shapes/6/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2832,85 +2718,65 @@ build_mode = 0
 polygon = Vector2Array( 31.0768, -51.4543, 32.7584, -47.6596, 32.7584, -51.4543 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="down_left"]
 
-transform/pos = Vector2( -8.17043, 18.8346 )
+transform/pos = Vector2( 0.245121, 18.4207 )
 transform/scale = Vector2( -0.922138, -0.243946 )
 build_mode = 0
 polygon = Vector2Array( 8.2644, 32.5878, 6.55466, 23.1854, 6.51396, 32.5878 )
 shape_range = Vector2( 1, 1 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="down_left"]
 
-transform/pos = Vector2( -27.0969, -21.8463 )
+transform/pos = Vector2( -20.1316, -19.9627 )
 transform/scale = Vector2( 0.833502, 0.248933 )
 build_mode = 0
-polygon = Vector2Array( 15.2714, 6.56019, 15.2714, -3.0365, 13.6596, -3.0365 )
+polygon = Vector2Array( 15.2714, 6.56019, 15.2714, -3.03649, 13.6596, -3.0365 )
 shape_range = Vector2( 2, 2 )
 trigger = false
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="down_left"]
-
-transform/pos = Vector2( -15.4868, -43.3889 )
-build_mode = 0
-polygon = Vector2Array( 19.9987, 36.5811, 20.023, 34.7158, 18.772, 34.7158 )
-shape_range = Vector2( 3, 3 )
-trigger = false
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="down_left"]
-
-transform/pos = Vector2( -24.1824, -44.2484 )
-build_mode = 0
-polygon = Vector2Array( 19.3001, 37.6091, 19.3001, 35.7265, 18.1766, 35.7265 )
-shape_range = Vector2( 4, 4 )
-trigger = false
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="down_left"]
-
-transform/pos = Vector2( -25.1525, -37.2899 )
-build_mode = 0
-polygon = Vector2Array( 20.1879, 37.7114, 20.1988, 36.1185, 19.2343, 36.1185 )
-shape_range = Vector2( 5, 5 )
-trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="down_left"]
 
-transform/pos = Vector2( 2.10267, -55.1473 )
+transform/pos = Vector2( -1.33459, -51.2989 )
 transform/scale = Vector2( 0.950369, 1.02679 )
 build_mode = 0
 polygon = Vector2Array( 21.3129, 36.878, 21.3129, 33.3435, 19.2338, 33.3435 )
-shape_range = Vector2( 6, 6 )
+shape_range = Vector2( 3, 3 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="down_right" type="StaticBody2D" parent="." groups=[
 "right",
 "down",
 ]]
 
+editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 34 )
+shapes/0/shape = SubResource( 23 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1.02458, -10.7033, 79.8902 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 35 )
-shapes/1/transform = Matrix32( 0.96623, 0, 0, -0.243946, -31.3916, 22.4162 )
+shapes/1/shape = SubResource( 24 )
+shapes/1/transform = Matrix32( 0.96623, 0, 0, -0.243946, -21.7083, 21.8695 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 36 )
-shapes/2/transform = Matrix32( -0.616403, 0, 0, 0.257812, -15.6955, -23.8012 )
+shapes/2/shape = SubResource( 25 )
+shapes/2/transform = Matrix32( -0.616403, 0, 0, 0.257812, -5.60542, -22.0745 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 37 )
-shapes/3/transform = Matrix32( -0.864196, 0, 0, 1.16394, 31.7813, -60.3827 )
+shapes/3/shape = SubResource( 26 )
+shapes/3/transform = Matrix32( -0.864196, 0, 0, 1.16394, 29.2762, -56.3419 )
 shapes/3/trigger = false
-shapes/4/shape = SubResource( 38 )
-shapes/4/transform = Matrix32( -1.01019, 0, 0, 1.08408, 19.5132, -40.5815 )
-shapes/4/trigger = false
-shapes/5/shape = SubResource( 39 )
-shapes/5/transform = Matrix32( -0.99116, 0, 0, 1, 13.6689, -43.4697 )
-shapes/5/trigger = false
-shapes/6/shape = SubResource( 40 )
-shapes/6/transform = Matrix32( -1.24277, 0, 0, 1.08731, 24.0613, -48.0464 )
-shapes/6/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2929,82 +2795,65 @@ build_mode = 0
 polygon = Vector2Array( 43.2526, -50.7771, 41.2346, -46.9824, 41.2652, -50.7771 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="down_right"]
 
-transform/pos = Vector2( -31.3916, 22.4162 )
+transform/pos = Vector2( -21.7083, 21.8695 )
 transform/scale = Vector2( 0.96623, -0.243946 )
 build_mode = 0
 polygon = Vector2Array( 7.47684, 47.6518, 5.37943, 36.4105, 5.37943, 47.6518 )
 shape_range = Vector2( 1, 1 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="down_right"]
 
-transform/pos = Vector2( -15.6955, -23.8012 )
+transform/pos = Vector2( -5.60542, -22.0745 )
 transform/scale = Vector2( -0.616403, 0.257812 )
 build_mode = 0
-polygon = Vector2Array( 17.0691, 18.1901, 17.0691, 4.81851, 14.118, 4.91402 )
+polygon = Vector2Array( 17.0691, 18.1901, 17.0691, 4.81851, 13.8495, 4.85916 )
 shape_range = Vector2( 2, 2 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="down_right"]
 
-transform/pos = Vector2( 31.7813, -60.3827 )
+transform/pos = Vector2( 29.2762, -56.3419 )
 transform/scale = Vector2( -0.864196, 1.16394 )
 build_mode = 0
 polygon = Vector2Array( 23.6733, 36.7177, 23.6733, 33.8901, 21.3736, 33.8901 )
 shape_range = Vector2( 3, 3 )
 trigger = false
-
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="down_right"]
-
-transform/pos = Vector2( 19.5132, -40.5815 )
-transform/scale = Vector2( -1.01019, 1.08408 )
-build_mode = 0
-polygon = Vector2Array( 19.8757, 37.8668, 19.8757, 36.4157, 19.042, 36.4157 )
-shape_range = Vector2( 4, 4 )
-trigger = false
-
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="down_right"]
-
-transform/pos = Vector2( 13.6689, -43.4697 )
-transform/scale = Vector2( -0.99116, 1 )
-build_mode = 0
-polygon = Vector2Array( 23.6175, 36.8759, 23.6175, 34.8413, 22.4774, 34.856 )
-shape_range = Vector2( 5, 5 )
-trigger = false
-
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="down_right"]
-
-transform/pos = Vector2( 24.0613, -48.0464 )
-transform/scale = Vector2( -1.24277, 1.08731 )
-build_mode = 0
-polygon = Vector2Array( 19.8035, 37.854, 19.8089, 36.1643, 19.0423, 36.1611 )
-shape_range = Vector2( 6, 6 )
-trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="up_right" type="StaticBody2D" parent="." groups=[
 "right",
 "up",
 ]]
 
+editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 41 )
+shapes/0/shape = SubResource( 27 )
 shapes/0/transform = Matrix32( 1.36435, 0, 0, -1.17312, -26.8755, -89.1789 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 42 )
-shapes/1/transform = Matrix32( 1.12489, 0, 0, 0.274435, -32.222, 14.5385 )
+shapes/1/shape = SubResource( 28 )
+shapes/1/transform = Matrix32( 1.12489, 0, 0, 0.274435, -22.7305, 12.0798 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 43 )
-shapes/2/transform = Matrix32( -0.735297, 0, 0, -0.243614, -13.6857, -10.8686 )
+shapes/2/shape = SubResource( 29 )
+shapes/2/transform = Matrix32( -0.735297, 0, 0, -0.243614, -3.4846, -5.38021 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 44 )
-shapes/3/transform = Matrix32( -0.843166, 0, 0, -0.993174, 32.1458, 51.5897 )
+shapes/3/shape = SubResource( 30 )
+shapes/3/transform = Matrix32( -0.843166, 0, 0, -0.993174, 29.6407, 26.5752 )
 shapes/3/trigger = false
-shapes/4/shape = SubResource( 45 )
-shapes/4/transform = Matrix32( 4.10358, 0, 0, 0.668597, -86.9163, -17.4328 )
-shapes/4/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -3023,64 +2872,65 @@ build_mode = 0
 polygon = Vector2Array( 41.9782, -48.8508, 41.9849, -51.8649, 43.4165, -51.8439 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="up_right"]
 
-transform/pos = Vector2( -32.222, 14.5385 )
+transform/pos = Vector2( -22.7305, 12.0798 )
 transform/scale = Vector2( 1.12489, 0.274435 )
 build_mode = 0
 polygon = Vector2Array( 6.4672, 29.4178, 5.35615, 21.8474, 5.35615, 29.4178 )
 shape_range = Vector2( 1, 1 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="up_right"]
 
-transform/pos = Vector2( -13.6857, -10.8686 )
+transform/pos = Vector2( -3.4846, -5.38021 )
 transform/scale = Vector2( -0.735297, -0.243614 )
 build_mode = 0
 polygon = Vector2Array( 17.0689, 10.3624, 17.0689, 1.22087, 15.2731, 1.22087 )
 shape_range = Vector2( 2, 2 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="up_right"]
 
-transform/pos = Vector2( 32.1458, 51.5897 )
+transform/pos = Vector2( 29.6407, 26.5752 )
 transform/scale = Vector2( -0.843166, -0.993174 )
 build_mode = 0
 polygon = Vector2Array( 24.6914, 37.5421, 24.6778, 34.7406, 22.5878, 34.7406 )
 shape_range = Vector2( 3, 3 )
 trigger = false
-
-[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="up_right"]
-
-transform/pos = Vector2( -86.9163, -17.4328 )
-transform/scale = Vector2( 4.10358, 0.668597 )
-build_mode = 0
-polygon = Vector2Array( 19.0536, 37.7725, 18.8012, 35.766, 18.8012, 37.7725 )
-shape_range = Vector2( 4, 4 )
-trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="up_left" type="StaticBody2D" parent="." groups=[
 "left",
 "up",
 ]]
 
+editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 46 )
+shapes/0/shape = SubResource( 31 )
 shapes/0/transform = Matrix32( -1.35728, 0, 0, -1.20866, 24.8351, -90.1662 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 47 )
-shapes/1/transform = Matrix32( -1.46092, 0, 0, 0.269131, -6.31621, 11.1821 )
+shapes/1/shape = SubResource( 32 )
+shapes/1/transform = Matrix32( -1.46092, 0, 0, 0.269131, 2.03741, 8.39203 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 48 )
-shapes/2/transform = Matrix32( 0.606911, 0, 0, -0.271557, -26.3872, -10.4026 )
+shapes/2/shape = SubResource( 33 )
+shapes/2/transform = Matrix32( 0.606911, 0, 0, -0.271557, -19.5337, -4.96541 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 49 )
-shapes/3/transform = Matrix32( 1.26826, 0, 0, -1.24946, -3.32269, 62.0651 )
+shapes/3/shape = SubResource( 34 )
+shapes/3/transform = Matrix32( 1.26826, 0, 0, -1.24946, -6.64343, 37.3031 )
 shapes/3/trigger = false
-shapes/4/shape = SubResource( 50 )
-shapes/4/transform = Matrix32( 6.92289, 0, 0, 0.710994, 142.108, -18.9938 )
-shapes/4/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -3099,42 +2949,45 @@ build_mode = 0
 polygon = Vector2Array( 41.9755, -51.1417, 40.9036, -48.1917, 40.8955, -51.1378 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="up_left"]
 
-transform/pos = Vector2( -6.31621, 11.1821 )
+transform/pos = Vector2( 2.03741, 8.39203 )
 transform/scale = Vector2( -1.46092, 0.269131 )
 build_mode = 0
 polygon = Vector2Array( 6.47491, 42.3024, 5.36613, 34.0321, 5.36613, 42.3024 )
 shape_range = Vector2( 1, 1 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="up_left"]
 
-transform/pos = Vector2( -26.3872, -10.4026 )
+transform/pos = Vector2( -19.5337, -4.96541 )
 transform/scale = Vector2( 0.606911, -0.271557 )
 build_mode = 0
 polygon = Vector2Array( 19.9156, 11.0244, 19.9156, 2.3591, 17.8467, 2.3591 )
 shape_range = Vector2( 2, 2 )
 trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="up_left"]
 
-transform/pos = Vector2( -3.32269, 62.0651 )
+transform/pos = Vector2( -6.64343, 37.3031 )
 transform/scale = Vector2( 1.26826, -1.24946 )
 build_mode = 0
 polygon = Vector2Array( 20.2529, 38.285, 20.2529, 35.9679, 18.808, 35.9679 )
 shape_range = Vector2( 3, 3 )
 trigger = false
-
-[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="up_left"]
-
-transform/pos = Vector2( 142.108, -18.9938 )
-transform/scale = Vector2( 6.92289, 0.710994 )
-build_mode = 0
-polygon = Vector2Array( -19.8839, 37.6924, -19.8839, 35.873, -20.0208, 37.6931 )
-shape_range = Vector2( 4, 4 )
-trigger = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="green_ghostie" parent="." instance=ExtResource( 10 )]
 
@@ -3143,12 +2996,12 @@ transform/scale = Vector2( 0.0269757, 0.0551421 )
 
 [node name="green_ghostie1" parent="." instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 8.8723, -21.9697 )
+transform/pos = Vector2( 19.3076, 2.12476 )
 transform/scale = Vector2( 0.0269757, 0.0551421 )
 
 [node name="blue_ghostie" parent="." instance=ExtResource( 11 )]
 
-transform/pos = Vector2( -8.06708, -20.0829 )
+transform/pos = Vector2( -2.20914, -22.8469 )
 transform/scale = Vector2( 0.030515, 0.0681183 )
 
 [node name="blue_ghostie1" parent="." instance=ExtResource( 11 )]
@@ -3170,34 +3023,27 @@ stream/buffering_ms = 500
 [node name="pixel" type="Node2D" parent="."]
 
 process/pause_mode = 2
-transform/pos = Vector2( 13.132, 31.2259 )
-transform/scale = Vector2( 1.49055, 1.48176 )
-
-[node name="head" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 2.54887, -26.6799 )
-transform/scale = Vector2( 0.0573211, 0.0959674 )
-texture = ExtResource( 13 )
+editor/display_folded = true
+transform/pos = Vector2( -13.512, 1.68732 )
+transform/scale = Vector2( 0.626518, 0.655878 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="left_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 0.362267, -20.8139 )
-transform/rot = -23.1286
-transform/scale = Vector2( 0.0525097, 0.057022 )
-texture = ExtResource( 14 )
+transform/pos = Vector2( 1.51461, -21.9795 )
+transform/scale = Vector2( 0.0525097, 0.0839613 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="right_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 4.66938, -20.9286 )
-transform/rot = 19.0947
-transform/scale = Vector2( 0.0525097, 0.057022 )
-texture = ExtResource( 14 )
+transform/pos = Vector2( 3.44501, -21.9471 )
+transform/scale = Vector2( 0.0525097, 0.0845101 )
+texture = ExtResource( 13 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -3205,17 +3051,26 @@ __meta__ = {
 
 [node name="hips" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 2.2141, -17.7425 )
-transform/scale = Vector2( 0.04092, 0.0634743 )
-texture = ExtResource( 15 )
+transform/pos = Vector2( 2.39866, -17.4225 )
+transform/scale = Vector2( 0.0370912, 0.0646075 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="torso" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 2.33945, -20.9733 )
-transform/scale = Vector2( 0.0573211, 0.0959674 )
+transform/pos = Vector2( 2.41146, -21.7639 )
+transform/scale = Vector2( 0.0573211, 0.0818684 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="head" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 2.41815, -27.1596 )
+transform/scale = Vector2( 0.0482248, 0.0768474 )
 texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
@@ -3242,32 +3097,32 @@ __meta__ = {
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -0.116028, 0 )
+transform/pos = Vector2( 12.0802, 0.805649 )
 
 [node name="background" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -8.49866, -1.90092 )
-transform/rot = -90.0
-transform/scale = Vector2( 0.0463374, 0.0284943 )
+transform/pos = Vector2( -11.3306, -4.30554 )
+transform/scale = Vector2( 0.0630713, 0.130568 )
 texture = ExtResource( 17 )
 
 [node name="button" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -11.6389, -7.75191 )
-transform/scale = Vector2( 0.0613748, 0.039382 )
+transform/pos = Vector2( -11.3306, -7.17244 )
+transform/scale = Vector2( 0.102842, 0.0610348 )
 texture = ExtResource( 18 )
 
 [node name="button 2" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -11.7052, 4.04322 )
-transform/scale = Vector2( 0.061375, 0.039382 )
+transform/pos = Vector2( -11.0494, 1.18668 )
+transform/scale = Vector2( 0.110475, 0.0610349 )
 texture = ExtResource( 18 )
 
 [node name="button 3" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -11.3721, 15.6876 )
-transform/scale = Vector2( 0.0625586, 0.039382 )
+transform/pos = Vector2( -11.3708, 9.41311 )
+transform/scale = Vector2( 0.106458, 0.0610349 )
 texture = ExtResource( 18 )
 
 [node name="notification" type="RichTextLabel" parent="menu"]
@@ -3278,14 +3133,15 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -17.0
-margin/top = -25.0
+margin/top = -19.0
 margin/right = 118.0
-margin/bottom = 24.0
+margin/bottom = 30.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sound"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="sound_slider" type="HSlider" parent="menu"]
 
@@ -3294,10 +3150,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = -25.0
-margin/top = -18.0
-margin/right = 107.0
-margin/bottom = -2.0
+margin/left = -22.0
+margin/top = -15.0
+margin/right = 89.0
+margin/bottom = 1.0
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
@@ -3316,10 +3172,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
-margin/top = -10.0
-margin/right = 284.0
-margin/bottom = 37.0
+margin/left = -21.0
+margin/top = -9.0
+margin/right = 286.0
+margin/bottom = 38.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3336,10 +3192,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
-margin/top = 2.0
-margin/right = 300.0
-margin/bottom = 49.0
+margin/left = -21.0
+margin/top = -1.0
+margin/right = 302.0
+margin/bottom = 46.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3356,10 +3212,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -23.0
-margin/top = 13.0
-margin/right = 374.0
-margin/bottom = 60.0
+margin/left = -21.0
+margin/top = 7.0
+margin/right = 376.0
+margin/bottom = 54.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3372,14 +3228,14 @@ underline = 2
 [node name="are_you_sure" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="are_you_sure"]
 
-transform/pos = Vector2( -10.6342, -0.319662 )
-transform/rot = -90.0
-transform/scale = Vector2( 0.23518, 0.140317 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( 0.546828, -6.05607 )
+transform/scale = Vector2( 0.0568319, 0.0995517 )
+texture = ExtResource( 17 )
 
 [node name="notification1" type="RichTextLabel" parent="are_you_sure"]
 
@@ -3388,15 +3244,22 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -21.0
+margin/left = -10.0
 margin/top = -15.0
-margin/right = 279.0
+margin/right = 290.0
 margin/bottom = 198.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to go back to the village?"
 visible_characters = -1
+percent_visible = 1.0
+
+[node name="background2" type="Sprite" parent="are_you_sure"]
+
+transform/pos = Vector2( 5.48762, 3.57191 )
+transform/scale = Vector2( 0.0427519, 0.0587461 )
+texture = ExtResource( 18 )
 
 [node name="yes_village" type="LinkButton" parent="are_you_sure"]
 
@@ -3405,10 +3268,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -9.0
-margin/top = 9.0
-margin/right = 65.0
-margin/bottom = 56.0
+margin/left = 2.0
+margin/top = 2.0
+margin/right = 76.0
+margin/bottom = 49.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3418,6 +3281,12 @@ shortcut = null
 text = "YES"
 underline = 2
 
+[node name="background1" type="Sprite" parent="are_you_sure"]
+
+transform/pos = Vector2( -5.62276, 3.57191 )
+transform/scale = Vector2( 0.0309759, 0.0553641 )
+texture = ExtResource( 18 )
+
 [node name="no_village" type="LinkButton" parent="are_you_sure"]
 
 rect/scale = Vector2( 0.1, 0.1 )
@@ -3425,10 +3294,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -19.0
-margin/top = 9.0
-margin/right = 35.0
-margin/bottom = 56.0
+margin/left = -8.0
+margin/top = 2.0
+margin/right = 46.0
+margin/bottom = 49.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3441,14 +3310,15 @@ underline = 2
 [node name="are_you_sure_2" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
+transform/pos = Vector2( 12.5952, -2.19837 )
 
 [node name="background" type="Sprite" parent="are_you_sure_2"]
 
-transform/pos = Vector2( -11.5766, -0.665514 )
-transform/rot = -90.0
-transform/scale = Vector2( 0.237486, 0.130892 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( -12.1353, -0.73198 )
+transform/scale = Vector2( 0.0574612, 0.0971016 )
+texture = ExtResource( 17 )
 
 [node name="notification1" type="RichTextLabel" parent="are_you_sure_2"]
 
@@ -3458,14 +3328,21 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -23.0
-margin/top = -15.0
+margin/top = -10.0
 margin/right = 281.0
-margin/bottom = 201.0
+margin/bottom = 206.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to go to the main menu?"
 visible_characters = -1
+percent_visible = 1.0
+
+[node name="background2" type="Sprite" parent="are_you_sure_2"]
+
+transform/pos = Vector2( -6.65643, 8.5367 )
+transform/scale = Vector2( 0.0423164, 0.0647372 )
+texture = ExtResource( 18 )
 
 [node name="yes_main" type="LinkButton" parent="are_you_sure_2"]
 
@@ -3475,9 +3352,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -10.0
-margin/top = 9.0
+margin/top = 7.0
 margin/right = 64.0
-margin/bottom = 56.0
+margin/bottom = 54.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3487,6 +3364,12 @@ shortcut = null
 text = "YES"
 underline = 2
 
+[node name="background1" type="Sprite" parent="are_you_sure_2"]
+
+transform/pos = Vector2( -17.926, 8.46314 )
+transform/scale = Vector2( 0.0302896, 0.0573813 )
+texture = ExtResource( 18 )
+
 [node name="no_main" type="LinkButton" parent="are_you_sure_2"]
 
 rect/scale = Vector2( 0.1, 0.1 )
@@ -3495,9 +3378,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -21.0
-margin/top = 9.0
+margin/top = 7.0
 margin/right = 33.0
-margin/bottom = 56.0
+margin/bottom = 54.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false

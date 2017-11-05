@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://arcade_upgrade.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=4]
-[ext_resource path="res://meta_genre.png" type="Texture" id=5]
-[ext_resource path="res://button.png" type="Texture" id=6]
-[ext_resource path="res://not_opened.png" type="Texture" id=7]
+[ext_resource path="res://meta_genre.png" type="Texture" id=4]
+[ext_resource path="res://button.png" type="Texture" id=5]
+[ext_resource path="res://not_opened.png" type="Texture" id=6]
 
 [node name="arcade_upgrade" type="Node2D"]
 
@@ -23,14 +22,15 @@ texture = ExtResource( 2 )
 [node name="label" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.15, 0.15 )
+hint/tooltip = "Unlocking this upgrade will repair the broken arcade stations in this town."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -14.0
+margin/left = -10.0
 margin/top = -30.0
-margin/right = 198.0
-margin/bottom = 48.0
+margin/right = 122.0
+margin/bottom = 15.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -40,18 +40,17 @@ percent_visible = 1.0
 
 [node name="notifications" type="RichTextLabel" parent="."]
 
-visibility/visible = false
 rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -19.0
-margin/top = -1.0
-margin/right = 477.0
-margin/bottom = 50.0
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -16.0
+margin/top = 15.0
+margin/right = 480.0
+margin/bottom = 66.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You cannot afford that!"
 visible_characters = -1
@@ -69,10 +68,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -20.0
-margin/top = 18.0
-margin/right = 177.0
-margin/bottom = 85.0
+margin/left = -26.0
+margin/top = 10.0
+margin/right = 171.0
+margin/bottom = 77.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -94,7 +93,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -106,10 +105,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -20.0
-margin/top = 36.0
-margin/right = 167.0
-margin/bottom = 94.0
+margin/left = -26.0
+margin/top = 25.0
+margin/right = 161.0
+margin/bottom = 83.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -129,10 +128,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -9.0
-margin/top = 14.0
-margin/right = 176.0
-margin/bottom = 67.0
+margin/left = -15.0
+margin/top = 6.0
+margin/right = 170.0
+margin/bottom = 59.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -142,6 +141,7 @@ percent_visible = 1.0
 
 [node name="decent_button" type="TextureButton" parent="decent"]
 
+hint/tooltip = "Click to select the decent arcade upgrades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -154,7 +154,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -166,10 +166,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -9.0
-margin/top = 32.0
-margin/right = 236.0
-margin/bottom = 81.0
+margin/left = -15.0
+margin/top = 21.0
+margin/right = 230.0
+margin/bottom = 70.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -189,10 +189,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -10.0
-margin/top = 14.0
-margin/right = 185.0
-margin/bottom = 67.0
+margin/left = -16.0
+margin/top = 6.0
+margin/right = 179.0
+margin/bottom = 59.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -202,6 +202,7 @@ percent_visible = 1.0
 
 [node name="good_button" type="TextureButton" parent="good"]
 
+hint/tooltip = "Click to select the good arcade upgrades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -214,7 +215,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -226,10 +227,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -10.0
-margin/top = 32.0
-margin/right = 213.0
-margin/bottom = 95.0
+margin/left = -16.0
+margin/top = 21.0
+margin/right = 207.0
+margin/bottom = 84.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -249,10 +250,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = 14.0
-margin/right = 161.0
-margin/bottom = 75.0
+margin/left = -21.0
+margin/top = 6.0
+margin/right = 155.0
+margin/bottom = 67.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -262,6 +263,7 @@ percent_visible = 1.0
 
 [node name="great_button" type="TextureButton" parent="great"]
 
+hint/tooltip = "Click to select the great arcade upgrades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -274,7 +276,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -286,10 +288,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = 32.0
-margin/right = 205.0
-margin/bottom = 91.0
+margin/left = -21.0
+margin/top = 21.0
+margin/right = 199.0
+margin/bottom = 80.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -309,10 +311,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = 13.0
-margin/right = 142.0
-margin/bottom = 61.0
+margin/left = -21.0
+margin/top = 5.0
+margin/right = 136.0
+margin/bottom = 53.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -322,6 +324,7 @@ percent_visible = 1.0
 
 [node name="best_button" type="TextureButton" parent="best"]
 
+hint/tooltip = "Click to select the best arcade upgrades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -334,7 +337,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -346,10 +349,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = 32.0
-margin/right = 200.0
-margin/bottom = 89.0
+margin/left = -21.0
+margin/top = 21.0
+margin/right = 194.0
+margin/bottom = 78.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -360,6 +363,7 @@ percent_visible = 1.0
 [node name="confirm" type="LinkButton" parent="."]
 
 rect/scale = Vector2( 0.1, 0.1 )
+hint/tooltip = "Click to purchase the selected upgrade."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -382,14 +386,14 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 68.7086, 22.5071 )
 transform/scale = Vector2( 0.795429, 0.459507 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="not_opened" type="Sprite" parent="."]
 
 visibility/visible = false
 transform/pos = Vector2( 0.301361, -0.133453 )
 transform/scale = Vector2( 0.0467412, 0.0514044 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="not_opened"]
 
@@ -402,10 +406,10 @@ margin/left = -218.0
 margin/top = -151.0
 margin/right = -27.0
 margin/bottom = -43.0
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "   Not Unlocked"
+bbcode/bbcode = "Sabotaged"
 visible_characters = -1
 percent_visible = 1.0
 

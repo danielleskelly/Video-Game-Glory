@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://marketing.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://raise.png" type="Texture" id=5]
 [ext_resource path="res://button.png" type="Texture" id=6]
 [ext_resource path="res://not_opened.png" type="Texture" id=7]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=8]
 
 [node name="marketing" type="Node2D"]
 
@@ -24,6 +23,7 @@ texture = ExtResource( 2 )
 [node name="label" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.14, 0.14 )
+hint/tooltip = "This is your marketing for the town. More marketing will bring in more customers up to $100 a day."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -42,6 +42,7 @@ percent_visible = 1.0
 [node name="ad_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.08, 0.125 )
+hint/tooltip = "The marketing that your daily expenses will buy."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -149,7 +150,6 @@ texture = ExtResource( 6 )
 
 [node name="not_opened" type="Sprite" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( -0.622186, -0.400231 )
 transform/scale = Vector2( 0.0442987, 0.0465418 )
 texture = ExtResource( 7 )
@@ -162,13 +162,13 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -217.0
-margin/top = -181.0
+margin/top = -106.0
 margin/right = -11.0
-margin/bottom = -37.0
-custom_fonts/normal_font = ExtResource( 8 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+margin/bottom = 38.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "   Not Unlocked"
+bbcode/bbcode = "Sabotoged"
 visible_characters = -1
 percent_visible = 1.0
 

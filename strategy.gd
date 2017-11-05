@@ -32,7 +32,6 @@ onready var pixel = get_node("pixel")
 var new_volume
 
 func _ready():
-	pixel_small()
 	set_sound()
 	tutorial_start()
 	research_countdown_trigger()
@@ -50,14 +49,13 @@ func _process(delta):
 				get_node("AnimationPlayer").play("tutorial_pt3")
 		if (customer_math.hollyhock_player_marketshare >= .75):
 			hollyhock_complete.set_hidden(false)
-			pixel_big()
 			get_tree().set_pause(true)
 		if (get_node("cursor_blink").get_time_left() > 1):
 			town_banner.get_child(1).clear()
 			town_banner.get_child(1).add_text("Hollyhock...")
 		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
 			town_banner.get_child(1).clear()
-			town_banner.get_child(1).add_text("Hollyhock...l")
+			town_banner.get_child(1).add_text("Hollyhock...^")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 	elif (towns.town_select == "fiyork"):
@@ -227,7 +225,6 @@ func _on_start_day_button_up():
 	game_over.game_over_check()
 	if game_over.expenses_warning == true:
 		low_funds_warning.set_hidden(false)
-		pixel_big()
 		pixel.set_hidden(false)
 		get_tree().set_pause(true)
 	elif game_over.game_over == true:
@@ -241,12 +238,10 @@ func _on_start_day_button_up():
 		get_node("skip_or_play/perk_goal_output").clear()
 		get_node("skip_or_play/perk_goal_output").add_text(str(perks.perk_goal))
 		get_node("skip_or_play").show()
-		pixel_big()
 		get_node("pixel").show()
 
 func _on_low_funds_ok_button_down():
 	low_funds_warning.set_hidden(true)
-	pixel_big()
 	pixel.set_hidden(true)
 	get_tree().set_pause(false)
 
@@ -256,15 +251,16 @@ func _on_genre_discover_ok_button_down():
 	station.add_items()
 	research_countdown.genre_discovery = false
 	genre_discovery.set_hidden(true)
-	pixel_small()
 	get_tree().set_pause(false)
 
 func _on_continue_ok_button_down():
 	if (towns.town_select == "hollyhock"):
 		hollyhock_complete.set_hidden(true)
+		endless.endless_unlocked == "true"
 		get_tree().change_scene("res://story_piece_three.tscn")
 	elif (towns.town_select == "fiyork"):
 		fiyork_complete.set_hidden(true)
+		endless.shoot_that_rock == true
 		get_tree().change_scene("res://story_piece_four.tscn")
 	elif (towns.town_select == "untilly"):
 		plansey_complete.set_hidden(true)
@@ -281,7 +277,6 @@ func _on_continue_ok_button_down():
 	elif (towns.town_select == "slatten"):
 		slatten_complete.set_hidden(true)
 		get_tree().change_scene("res://story_piece_four.tscn")
-	pixel_small()
 	get_tree().set_pause(false)
 	customer_globals.customer_reset()
 	
@@ -298,31 +293,24 @@ func _on_tutorial_start_yes_button_button_down():
 
 func _on_game_over_ok_button_down():
 	if (towns.town_select == "hollyhock"):
-		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_hollyhock()
 	if (towns.town_select == "fiyork"):
-		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_fiyork()
 	if (towns.town_select == "plansey"):
-		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_plansey()
 	if (towns.town_select == "untilly"):
-		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_untilly()
 	if (towns.town_select == "windrow"):
-		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_windrow()
 	if (towns.town_select == "banlon"):
-		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_banlon()
 	if (towns.town_select == "slatten"):
-		pixel_small()
 		game_over_alert.set_hidden(true)
 		game_over.game_over_slatten()
 
@@ -343,7 +331,6 @@ func _on_skip_button_down():
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
-	pixel_small()
 	get_node("skip_or_play").set_hidden(true)
 	if (towns.town_select == "hollyhock"):
 		arcade_day.hollyhock_day()
@@ -366,7 +353,6 @@ func _on_play_button_down():
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
 	customer_math.daily_marketshare_adjustment()
-	pixel_small()
 	get_node("skip_or_play").set_hidden(true)
 	if (towns.town_select == "hollyhock"):
 		arcade_day.hollyhock_day()
@@ -389,16 +375,10 @@ func _on_play_button_down():
 	elif (towns.town_select == "slatten"):
 		arcade_day.slatten_day()
 		get_tree().change_scene("res://qbert.tscn")
-
-
-func pixel_big():
-	pixel.set_pos(Vector2(0.17552, 0.761547))
-	pixel.set_scale(Vector2(0.99308, 1.009797))
 	
 	
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
-	pixel_big()
 	get_node("menu").set_hidden(false)
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
@@ -409,7 +389,6 @@ func _on_sound_slider_value_changed( value ):
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
-	pixel_small()
 	get_node("menu").set_hidden(true)
 
 
@@ -420,13 +399,10 @@ func _on_restart_village_button_down():
 func _on_yes_restart_button_down():
 	get_tree().set_pause(false)
 	if (towns.town_select == "hollyhock"):
-		pixel_small()
 		game_over.game_over_hollyhock()
 	if (towns.town_select == "fiyork"):
-		pixel_small()
 		game_over.game_over_fiyork()
 	if (towns.town_select == "plansey"):
-		pixel_small()
 		game_over.game_over_plansey()
 
 func _on_no_restart_button_down():
@@ -446,17 +422,12 @@ func _on_no_main_menu_button_down():
 	get_node("are_you_sure_2").set_hidden(true)
 	get_node("menu").set_hidden(false)
 
-func pixel_small():
-	pixel.set_pos(Vector2(-37.864216, 19.423996))
-	pixel.set_scale(Vector2(0.443099, 0.357029))
-
 func set_sound():
 	get_node("StreamPlayer").set_volume(sound.volume)
 
 func tutorial_start():
 	if (tutorial.tutorial_start == false):
 		tutorial_start.show()
-		pixel_big()
 		pixel.show()
 	if (tutorial.tutorial_start == true):
 		pass
@@ -465,7 +436,6 @@ func research_countdown_trigger():
 	research_countdown.research_counting()
 	if (research_countdown.genre_discovery == true):
 			genre_discovery.set_hidden(false)
-			pixel_big()
 			pixel.set_hidden(false)
 			get_tree().set_pause(true)
 			
@@ -473,6 +443,7 @@ func save_game():
 	var savegame = File.new()
 	savegame.open(str("user://savegame.save"), File.WRITE)
 	savegame.store_line(str(towns.town_select))
+	print(str(endless.endless_unlocked))
 	savegame.store_line(str(endless.endless_unlocked))
 	savegame.close()
 		

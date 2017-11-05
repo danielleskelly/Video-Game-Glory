@@ -22,6 +22,7 @@ texture = ExtResource( 2 )
 [node name="label" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.125 )
+hint/tooltip = "Your communication with the local bank."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -40,6 +41,7 @@ percent_visible = 1.0
 [node name="credit_limit" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The total amount you can borrow from this bank."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -76,6 +78,7 @@ percent_visible = 1.0
 [node name="current_loan" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The current amount you have borrowed from this bank."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -112,6 +115,7 @@ percent_visible = 1.0
 [node name="daily_interest" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The interest you are being charged daily for your loan."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -148,6 +152,7 @@ percent_visible = 1.0
 [node name="borrow" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "Use the buttons to change the amount you would like to borrow."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -222,6 +227,7 @@ params/stretch_mode = 0
 [node name="pay_back" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "Use the buttons to change the amount you would like to pay back."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -296,6 +302,7 @@ params/stretch_mode = 0
 [node name="confirm" type="LinkButton" parent="."]
 
 rect/scale = Vector2( 0.1, 0.1 )
+hint/tooltip = "Confirm the amount you would like to borrow or pay back."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

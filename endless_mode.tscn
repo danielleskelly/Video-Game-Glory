@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://yellow_eating_dot.png" type="Texture" id=3]
+[ext_resource path="res://Screen Shot 2017-11-05 at 2.18.10 PM.png" type="Texture" id=3]
+[ext_resource path="res://Screen Shot 2017-11-05 at 2.24.50 PM.png" type="Texture" id=4]
+[ext_resource path="res://back_arrow.png" type="Texture" id=5]
 
 [node name="endless_mode" type="Node2D"]
 
@@ -30,9 +32,12 @@ percent_visible = 1.0
 
 [node name="yellow_eating_dot" type="Sprite" parent="."]
 
-transform/pos = Vector2( -22.1738, -11.6943 )
-transform/scale = Vector2( 0.00866633, 0.0213023 )
+transform/pos = Vector2( -20.7296, -11.6943 )
+transform/scale = Vector2( 0.011487, 0.0213023 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="yellow_eating_dot"]
 
@@ -66,6 +71,74 @@ toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 
+[node name="shoot_that_rock" type="Sprite" parent="."]
+
+transform/pos = Vector2( -4.11492, -11.5017 )
+transform/scale = Vector2( 0.0113646, 0.0213023 )
+texture = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="shoot_that_rock"]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -517.0
+margin/top = 339.0
+margin/right = -160.0
+margin/bottom = 397.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Shoot That Rock!"
+visible_characters = -1
+percent_visible = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shoot_that_rock_button" type="LinkButton" parent="shoot_that_rock"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -541.0
+margin/top = -284.0
+margin/right = 516.0
+margin/bottom = 494.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( -27.4387, -25.4067 )
+transform/scale = Vector2( 0.0442591, 0.096115 )
+texture = ExtResource( 5 )
+
+[node name="back_button" type="LinkButton" parent="Sprite"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -42.0
+margin/top = -27.0
+margin/right = 37.0
+margin/bottom = 17.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
 [connection signal="button_up" from="yellow_eating_dot/yellow_eating_button" to="." method="_on_yellow_eating_button_button_up"]
+
+[connection signal="button_up" from="shoot_that_rock/shoot_that_rock_button" to="." method="_on_shoot_that_rock_button_button_up"]
+
+[connection signal="button_up" from="Sprite/back_button" to="." method="_on_back_button_button_up"]
 
 

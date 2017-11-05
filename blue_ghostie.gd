@@ -29,8 +29,14 @@ func _process(delta):
 		if (x.is_in_group("green_ghostie")):
 			direction = -direction
 		if (x.get_name() == "customer"):
-			if (perks.success > 5):
+			var parent_name = get_parent().get_name()
+			if (parent_name == "time_management"):
 				perks.success = perks.success - 1
+			elif (parent_name == "endless_mode"):
+				var game_over = get_tree().get_nodes_in_group("game_over")
+				for x in game_over:
+					x.show()
+					get_tree().set_pause(true)
 		
 		
 func _on_time_turner_timeout():
