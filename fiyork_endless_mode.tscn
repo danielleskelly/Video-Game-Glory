@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=1]
 
-[ext_resource path="res://fiyork_time_management.gd" type="Script" id=1]
+[ext_resource path="res://fiyork_endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://spaceship.scn" type="PackedScene" id=2]
 [ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://outer_box.png" type="Texture" id=4]
@@ -13,7 +13,7 @@
 [ext_resource path="res://error_box.png" type="Texture" id=11]
 [ext_resource path="res://button.png" type="Texture" id=12]
 
-[node name="time_management" type="Node2D"]
+[node name="endless_mode" type="Node2D"]
 
 transform/pos = Vector2( 0, 50 )
 script/script = ExtResource( 1 )
@@ -76,8 +76,8 @@ autostart = false
 [node name="day_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 120.0
-one_shot = true
+wait_time = 1.0
+one_shot = false
 autostart = true
 
 [node name="countdown_timer" type="RichTextLabel" parent="."]
@@ -552,6 +552,64 @@ shortcut = null
 text = "No"
 underline = 2
 
+[node name="game_over" type="Node2D" parent="." groups=[
+"game_over",
+]]
+
+process/pause_mode = 2
+visibility/visible = false
+
+[node name="Sprite" type="Sprite" parent="game_over"]
+
+transform/pos = Vector2( 509.632, 214.129 )
+transform/scale = Vector2( 0.697904, 1.00087 )
+texture = ExtResource( 11 )
+
+[node name="Sprite1" type="Sprite" parent="game_over"]
+
+transform/pos = Vector2( 564.945, 305.842 )
+transform/scale = Vector2( 0.393449, 0.654944 )
+texture = ExtResource( 12 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="game_over"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 412.0
+margin/top = 111.0
+margin/right = 562.0
+margin/bottom = 215.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "GAME OVER!"
+visible_characters = -1
+percent_visible = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="game_over_button" type="LinkButton" parent="game_over"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 546.0
+margin/top = 289.0
+margin/right = 589.0
+margin/bottom = 329.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
 [connection signal="timeout" from="pop_timer" to="." method="_on_pop_timer_timeout"]
 
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
@@ -573,5 +631,7 @@ underline = 2
 [connection signal="button_down" from="are_you_sure_2/yes_main" to="." method="_on_yes_main_button_down"]
 
 [connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
+
+[connection signal="button_up" from="game_over/game_over_button" to="." method="_on_game_over_button_button_up"]
 
 

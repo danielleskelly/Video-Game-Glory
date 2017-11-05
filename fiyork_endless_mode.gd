@@ -29,6 +29,7 @@ const LEVEL_CAP = 10
 const ROCK_SPEED = .1
 const BULLET_SPEED = 500
 
+var stopwatch = 0
 
 func _ready():
 	get_node("StreamPlayer").set_volume(sound.volume)
@@ -139,7 +140,7 @@ func _process(delta):
 	ones = get_node("success_background/ones")
 	point_display()
 	countdown_timer.clear()
-	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
+	countdown_timer.add_text(str(int(stopwatch)))
 	
 	
 	if (Input.is_action_pressed("pause")):
@@ -193,8 +194,7 @@ func point_display():
 		ones.add_text(str(one_ones_digit))
 
 func _on_day_timer_timeout():
-	perk_check()
-	get_tree().change_scene("res://strategy.tscn")
+	stopwatch += 1
 
 
 func perk_check():
@@ -257,15 +257,15 @@ func _on_yes_village_button_down():
 func _on_no_village_button_down():
 	get_node("are_you_sure").set_hidden(true)
 	get_node("menu").set_hidden(false)
-	
-
 
 func _on_yes_main_button_down():
 	get_tree().set_pause(false)
 	get_tree().change_scene("res://player_selection.tscn")
 
-
-
 func _on_no_main_button_down():
 	get_node("are_you_sure_2").set_hidden(true)
 	get_node("menu").set_hidden(false)
+
+func _on_game_over_button_button_up():
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://endless_mode.tscn")

@@ -26,6 +26,7 @@ texture = ExtResource( 2 )
 [node name="food" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The names of the concessions available in this town."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -44,6 +45,7 @@ percent_visible = 1.0
 [node name="price" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.075, 0.15 )
+hint/tooltip = "The price to purchase this concession. Changes daily."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -62,6 +64,7 @@ percent_visible = 1.0
 [node name="stock" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.075, 0.15 )
+hint/tooltip = "How many of each concession you already have in stock."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -80,6 +83,7 @@ percent_visible = 1.0
 [node name="buy" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.075, 0.15 )
+hint/tooltip = "How many you would like to buy right now."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -98,6 +102,7 @@ percent_visible = 1.0
 [node name="total" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.075, 0.15 )
+hint/tooltip = "The total of each concession after you have made your purchase."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

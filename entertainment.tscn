@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://entertainment.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=4]
-[ext_resource path="res://meta_genre.png" type="Texture" id=5]
-[ext_resource path="res://button.png" type="Texture" id=6]
-[ext_resource path="res://not_opened.png" type="Texture" id=7]
+[ext_resource path="res://meta_genre.png" type="Texture" id=4]
+[ext_resource path="res://button.png" type="Texture" id=5]
+[ext_resource path="res://not_opened.png" type="Texture" id=6]
 
 [node name="entertainment" type="Node2D"]
 
@@ -23,37 +22,37 @@ texture = ExtResource( 2 )
 [node name="label" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.15, 0.15 )
+hint/tooltip = "This will upgrade your in-store entertainment which will keep the Players happy while they wait in line."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -20.0
+margin/left = -30.0
 margin/top = -30.0
-margin/right = 311.0
-margin/bottom = 88.0
+margin/right = 375.0
+margin/bottom = 20.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Entertainment"
+bbcode/bbcode = "In-Store Entertainment"
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="notifications" type="RichTextLabel" parent="."]
 
-visibility/visible = false
 rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -18.0
-margin/top = -1.0
-margin/right = 478.0
-margin/bottom = 50.0
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+margin/left = -14.0
+margin/top = 15.0
+margin/right = 482.0
+margin/bottom = 66.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.0117188, 0.0117188, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "You cannot afford that!"
+bbcode/bbcode = "You can't afford that!"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -69,10 +68,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -20.0
-margin/top = 18.0
-margin/right = 186.0
-margin/bottom = 76.0
+margin/left = -19.0
+margin/top = 5.0
+margin/right = 187.0
+margin/bottom = 63.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -94,7 +93,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -107,9 +106,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -20.0
-margin/top = 36.0
+margin/top = 23.0
 margin/right = 258.0
-margin/bottom = 85.0
+margin/bottom = 72.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -130,9 +129,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -9.0
-margin/top = 14.0
+margin/top = 4.0
 margin/right = 262.0
-margin/bottom = 65.0
+margin/bottom = 55.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -142,6 +141,7 @@ percent_visible = 1.0
 
 [node name="decent_button" type="TextureButton" parent="decent"]
 
+hint/tooltip = "Click to select the decent entertainment upgrade."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -154,7 +154,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -167,9 +167,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -9.0
-margin/top = 32.0
+margin/top = 22.0
 margin/right = 281.0
-margin/bottom = 99.0
+margin/bottom = 89.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -190,9 +190,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -10.0
-margin/top = 14.0
+margin/top = 4.0
 margin/right = 192.0
-margin/bottom = 65.0
+margin/bottom = 55.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -202,6 +202,7 @@ percent_visible = 1.0
 
 [node name="good_button" type="TextureButton" parent="good"]
 
+hint/tooltip = "Click to select the good entertainment upgrade."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -214,7 +215,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -227,9 +228,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -10.0
-margin/top = 32.0
+margin/top = 22.0
 margin/right = 251.0
-margin/bottom = 99.0
+margin/bottom = 89.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -250,9 +251,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -15.0
-margin/top = 14.0
+margin/top = 4.0
 margin/right = 221.0
-margin/bottom = 75.0
+margin/bottom = 65.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -262,6 +263,7 @@ percent_visible = 1.0
 
 [node name="great_button" type="TextureButton" parent="great"]
 
+hint/tooltip = "Click to select the great entertainment upgrade."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -274,7 +276,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -287,9 +289,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -15.0
-margin/top = 32.0
+margin/top = 22.0
 margin/right = 264.0
-margin/bottom = 104.0
+margin/bottom = 94.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -310,9 +312,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -15.0
-margin/top = 13.0
+margin/top = 3.0
 margin/right = 188.0
-margin/bottom = 77.0
+margin/bottom = 67.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -322,6 +324,7 @@ percent_visible = 1.0
 
 [node name="best_button" type="TextureButton" parent="best"]
 
+hint/tooltip = "Click to select the best entertainment upgrade."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -334,7 +337,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -347,9 +350,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -15.0
-margin/top = 32.0
+margin/top = 22.0
 margin/right = 204.0
-margin/bottom = 109.0
+margin/bottom = 99.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -360,6 +363,7 @@ percent_visible = 1.0
 [node name="confirm" type="LinkButton" parent="."]
 
 rect/scale = Vector2( 0.1, 0.1 )
+hint/tooltip = "Click to purchase the selected entertainment upgrade."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -382,14 +386,14 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 66.7699, 17.7587 )
 transform/scale = Vector2( 0.825245, 0.448803 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="not_opened" type="Sprite" parent="."]
 
 visibility/visible = false
 transform/pos = Vector2( 0.292991, 0.0293176 )
 transform/scale = Vector2( 0.0470236, 0.053751 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="not_opened"]
 
@@ -402,10 +406,10 @@ margin/left = -199.0
 margin/top = -151.0
 margin/right = 12.0
 margin/bottom = -9.0
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "   Not Unlocked"
+bbcode/bbcode = "Sabotaged"
 visible_characters = -1
 percent_visible = 1.0
 

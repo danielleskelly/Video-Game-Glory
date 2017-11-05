@@ -62,12 +62,14 @@ func _on_no_quit_button_down():
 	get_node("quit_game").set_hidden(true)
 
 func _on_endless_button_button_up():
-	get_tree().change_scene_to("res://endless_mode.tscn")
+	get_tree().change_scene("res://endless_mode.tscn")
 
 func _on_no_overwrite_button_up():
 	get_node("new_game_overwrite").set_hidden(true)
 
 func _on_yes_overwrite_button_up():
 	get_tree().set_pause(false)
+	towns.town_select == "hollyhock"
+	endless.endless_unlocked == "false"
 	get_node("new_game_overwrite").set_hidden(true)
 	get_tree().change_scene("res://story_piece_one.tscn")

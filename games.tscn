@@ -32,6 +32,7 @@ texture = ExtResource( 3 )
 [node name="station" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The available stations available in this town."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -50,6 +51,7 @@ percent_visible = 1.0
 [node name="game" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "Allows you to choose which game you want in each station."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

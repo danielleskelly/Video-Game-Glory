@@ -46,6 +46,7 @@ texture = ExtResource( 3 )
 [node name="goods" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The arcades available in this town."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -64,6 +65,7 @@ percent_visible = 1.0
 [node name="price" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The price you will set to charge for each station in the arcade."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -82,6 +84,7 @@ percent_visible = 1.0
 [node name="range" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The suggested range of prices to charge for each station."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

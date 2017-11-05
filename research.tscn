@@ -22,6 +22,7 @@ texture = ExtResource( 2 )
 [node name="label" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "The name of the next genre that the Pixels are researching for you."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -40,6 +41,7 @@ percent_visible = 1.0
 [node name="research_goal_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.09, 0.125 )
+hint/tooltip = "The name of the next genre that the Pixels are researching for you."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -57,7 +59,9 @@ percent_visible = 1.0
 
 [node name="research_fund" type="RichTextLabel" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "Th"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -75,6 +79,7 @@ percent_visible = 1.0
 
 [node name="research_output" type="RichTextLabel" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.09, 0.125 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -94,14 +99,15 @@ percent_visible = 1.0
 [node name="daily_research" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "Use the buttons to change the amount you would like to spend daily on research. The more you spend the harder the Pixels will work."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -29.0
-margin/top = -4.0
+margin/top = -10.0
 margin/right = 279.0
-margin/bottom = 90.0
+margin/bottom = 84.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -117,9 +123,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 5.0
-margin/top = -5.0
+margin/top = -10.0
 margin/right = 25.0
-margin/bottom = 13.0
+margin/bottom = 8.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -136,9 +142,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 26.0
-margin/top = -5.0
+margin/top = -10.0
 margin/right = 46.0
-margin/bottom = 13.0
+margin/bottom = 8.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -150,6 +156,7 @@ params/stretch_mode = 0
 [node name="days_left" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.1, 0.15 )
+hint/tooltip = "Approximate number of days you have before discovering the next genre."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -168,6 +175,7 @@ percent_visible = 1.0
 [node name="days_left_output" type="RichTextLabel" parent="."]
 
 rect/scale = Vector2( 0.09, 0.125 )
+hint/tooltip = "Approximate number of days you have before discovering the next genre."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -185,28 +193,30 @@ percent_visible = 1.0
 
 [node name="confirm" type="LinkButton" parent="."]
 
+editor/display_folded = true
 rect/scale = Vector2( 0.1, 0.1 )
+hint/tooltip = "Confirm the amount you would like to spend on research."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -8.0
+margin/left = -5.0
 margin/top = 24.0
-margin/right = 146.0
+margin/right = 149.0
 margin/bottom = 71.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-text = "purchase"
+text = "confirm"
 underline = 2
 
 [node name="Sprite" type="Sprite" parent="confirm"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 72.0432, 21.9689 )
-transform/scale = Vector2( 0.798941, 0.498718 )
+transform/pos = Vector2( 60.7069, 21.9689 )
+transform/scale = Vector2( 0.685578, 0.498718 )
 texture = ExtResource( 6 )
 
 [node name="research_spending_output" type="LineEdit" parent="."]
@@ -217,9 +227,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 9.0
-margin/top = -5.0
+margin/top = -10.0
 margin/right = 199.0
-margin/bottom = 52.0
+margin/bottom = 47.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
 placeholder/text = "000"

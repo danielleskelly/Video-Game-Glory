@@ -16,10 +16,11 @@ var hundreds
 var tens
 var ones
 
+var stopwatch = 0
+
 onready var pixel = get_node("pixel")
 
 func _ready():
-	pixel_small()
 	get_node("StreamPlayer").set_volume(sound.volume)
 	set_process(true)
 
@@ -31,12 +32,11 @@ func _process(delta):
 	ones = get_node("success_background/ones")
 	point_display()
 	countdown_timer.clear()
-	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
+	countdown_timer.set_text(str(stopwatch))
 	
 
 func _on_day_timer_timeout():
-	perk_check()
-	get_tree().change_scene("res://strategy.tscn")
+	stopwatch += 1
 	
 
 func perk_check():
@@ -57,17 +57,8 @@ func perk_check():
 				supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count + 20
 			elif (perks.perk_num == 6):
 				money.hollyhock_balance = money.hollyhock_balance + 25
-				
-func pixel_small():
-	pixel.set_pos(Vector2(13.019382, 31.225857))
-	pixel.set_scale(Vector2(1.490551, 1.481762))
-	
-func pixel_big():
-	pixel.set_pos(Vector2(17.404663, 71.34024))
-	pixel.set_scale(Vector2(2.601525, 3.259631))
 
 func _on_pixel_button_button_down():
-	pixel_big()
 	get_tree().set_pause(true)
 	get_node("menu").set_hidden(false)
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
@@ -90,7 +81,6 @@ func point_display():
 		ones.add_text(str(one_ones_digit))
 
 func _on_return_to_game_button_down():
-	pixel_small()
 	get_tree().set_pause(false)
 	get_node("menu").set_hidden(true)
 
@@ -125,3 +115,8 @@ func _on_yes_main_button_down():
 func _on_no_main_button_down():
 	get_node("are_you_sure_2").set_hidden(true)
 	get_node("menu").set_hidden(false)
+
+
+func _on_game_over_button_button_up():
+	get_tree().set_pause(false)
+	get_tree().change_scene("res://endless_mode.tscn")

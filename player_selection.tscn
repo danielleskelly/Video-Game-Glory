@@ -396,7 +396,6 @@ underline = 2
 [node name="new_game_overwrite" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 __meta__ = {
 "_edit_lock_": true
