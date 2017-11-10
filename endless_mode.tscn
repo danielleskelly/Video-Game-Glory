@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://Screen Shot 2017-11-05 at 2.18.10 PM.png" type="Texture" id=3]
 [ext_resource path="res://Screen Shot 2017-11-05 at 2.24.50 PM.png" type="Texture" id=4]
-[ext_resource path="res://back_arrow.png" type="Texture" id=5]
+[ext_resource path="res://Screen Shot 2017-11-07 at 9.36.11 PM.png" type="Texture" id=5]
+[ext_resource path="res://back_arrow.png" type="Texture" id=6]
 
 [node name="endless_mode" type="Node2D"]
 
@@ -32,7 +33,7 @@ percent_visible = 1.0
 
 [node name="yellow_eating_dot" type="Sprite" parent="."]
 
-transform/pos = Vector2( -20.7296, -11.6943 )
+transform/pos = Vector2( -23.5213, -10.8009 )
 transform/scale = Vector2( 0.011487, 0.0213023 )
 texture = ExtResource( 3 )
 __meta__ = {
@@ -56,6 +57,9 @@ bbcode/enabled = false
 bbcode/bbcode = "Yellow Eating Dot"
 visible_characters = -1
 percent_visible = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="yellow_eating_button" type="LinkButton" parent="yellow_eating_dot"]
 
@@ -70,12 +74,18 @@ margin/bottom = 494.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="shoot_that_rock" type="Sprite" parent="."]
 
-transform/pos = Vector2( -4.11492, -11.5017 )
+transform/pos = Vector2( -7.61296, -10.9021 )
 transform/scale = Vector2( 0.0113646, 0.0213023 )
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="shoot_that_rock"]
 
@@ -115,11 +125,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="falling_shapes_organization" type="Sprite" parent="."]
+
+transform/pos = Vector2( 7.85793, -11.0849 )
+transform/scale = Vector2( 0.0113646, 0.0213023 )
+texture = ExtResource( 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="falling_shapes_organization"]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -425.0
+margin/top = 339.0
+margin/right = -140.0
+margin/bottom = 442.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Falling Shapes Organization"
+visible_characters = -1
+percent_visible = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="falling_shapes_organization_button" type="LinkButton" parent="falling_shapes_organization"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -541.0
+margin/top = -284.0
+margin/right = 516.0
+margin/bottom = 494.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="Sprite" type="Sprite" parent="."]
 
 transform/pos = Vector2( -27.4387, -25.4067 )
 transform/scale = Vector2( 0.0442591, 0.096115 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="back_button" type="LinkButton" parent="Sprite"]
 
@@ -138,6 +192,8 @@ shortcut = null
 [connection signal="button_up" from="yellow_eating_dot/yellow_eating_button" to="." method="_on_yellow_eating_button_button_up"]
 
 [connection signal="button_up" from="shoot_that_rock/shoot_that_rock_button" to="." method="_on_shoot_that_rock_button_button_up"]
+
+[connection signal="button_up" from="falling_shapes_organization/falling_shapes_organization_button" to="." method="_on_falling_shapes_organization_button_button_up"]
 
 [connection signal="button_up" from="Sprite/back_button" to="." method="_on_back_button_button_up"]
 

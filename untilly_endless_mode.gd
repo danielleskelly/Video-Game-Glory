@@ -2,6 +2,8 @@ extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
 
+var game_over = false
+
 var hundreds
 var tens
 var ones
@@ -42,6 +44,8 @@ var tetris_array
 
 var rotate = 1
 
+var stopwatch = 0
+
 func _ready():
 	get_node("StreamPlayer").set_volume(sound.volume)
 	block_load = preload("res://tetris_one.tscn")
@@ -65,7 +69,12 @@ func _process(delta):
 	ones = get_node("success_background/ones")
 	point_display()
 	countdown_timer.clear()
-	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
+	countdown_timer.add_text(str(int(stopwatch)))
+	if game_over == true:
+		var game = get_tree().get_nodes_in_group("game_over")
+		for x in game:
+			x.show()
+		get_tree().set_pause(true)
 	
 func _fixed_process(delta):
 	if (Input.is_action_pressed("fire")) and get_node("rotate_timer").get_time_left() == 0:
@@ -559,7 +568,10 @@ func random_piece():
 	randomize()
 	current_piece = tetris_array[randi() % tetris_array.size()]
 	get_node("down_timer").start()
+	game_over = false
 	if current_piece == "square":
+		if tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[1][7] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 8
 		tetris_lines.current_loc_hoz_c = 7
@@ -576,7 +588,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "l":
+	elif current_piece == "l":
+		if tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[2][6] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 8
 		tetris_lines.current_loc_hoz_c = 7
@@ -593,7 +607,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "bl":
+	elif current_piece == "bl":
+		if tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[1][7] == 1 or tetris_lines.matrix[2][7] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 8
 		tetris_lines.current_loc_hoz_b = 7
 		tetris_lines.current_loc_hoz_c = 8
@@ -610,7 +626,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "bz":
+	elif current_piece == "bz":
+		if tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[1][7] == 1 or tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[0][8] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 8
 		tetris_lines.current_loc_hoz_c = 8
@@ -627,7 +645,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "threesome":
+	elif current_piece == "threesome":
+		if tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[1][7] == 1 or tetris_lines.matrix[1][8] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 8
 		tetris_lines.current_loc_hoz_b = 7
 		tetris_lines.current_loc_hoz_c = 8
@@ -644,7 +664,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "bar":
+	elif current_piece == "bar":
+		if tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[2][6] == 1 or tetris_lines.matrix[3][6] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 7
 		tetris_lines.current_loc_hoz_c = 7
@@ -661,7 +683,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "z":
+	elif current_piece == "z":
+		if tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[1][7] == 1 or tetris_lines.matrix[1][8] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 8
 		tetris_lines.current_loc_hoz_c = 8
@@ -2843,8 +2867,7 @@ func point_display():
 		ones.add_text(str(one_ones_digit))
 
 func _on_day_timer_timeout():
-	perk_check()
-	get_tree().change_scene("res://strategy.tscn")
+	stopwatch += 1
 
 
 func perk_check():
@@ -2903,3 +2926,6 @@ func _on_yes_main_button_down():
 func _on_no_main_button_down():
 	get_node("are_you_sure_2").set_hidden(true)
 	get_node("menu").set_hidden(false)
+
+func _on_game_over_button_button_up():
+	get_tree().change_scene("res://endless_mode.tscn")

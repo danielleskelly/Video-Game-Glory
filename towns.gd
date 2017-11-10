@@ -1,6 +1,6 @@
 extends Node
 
-var town_select = "fiyork"
+var town_select = "untilly"
 
 func _ready():
 	pass

@@ -4837,6 +4837,7 @@ transform/scale = Vector2( 0.592294, 0.457411 )
 
 [node name="storefront" parent="." instance=ExtResource( 13 )]
 
+visibility/visible = false
 transform/pos = Vector2( 6.33152, 7.13988 )
 transform/scale = Vector2( 0.592294, 0.457411 )
 
@@ -4879,7 +4880,6 @@ transform/scale = Vector2( 0.592294, 0.457411 )
 
 [node name="entertainment" parent="." instance=ExtResource( 20 )]
 
-visibility/visible = false
 transform/pos = Vector2( 6.33152, 7.13988 )
 transform/scale = Vector2( 0.592294, 0.457411 )
 

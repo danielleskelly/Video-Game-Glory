@@ -365,7 +365,7 @@ func _on_play_button_down():
 		get_tree().change_scene("res://plansey_time_management.tscn")
 	elif (towns.town_select == "untilly"):
 		arcade_day.untilly_day()
-		get_tree().change_scene("res://tetrus.tscn")
+		get_tree().change_scene("res://untilly_time_management.tscn")
 	elif (towns.town_select == "windrow"):
 		arcade_day.windrow_day()
 		get_tree().change_scene("res://windrow_time_management.tscn")

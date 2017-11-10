@@ -13,13 +13,19 @@ func _process(delta):
 		get_node("shoot_that_rock").show()
 	elif endless.shoot_that_rock == false:
 		get_node("shoot_that_rock").hide()
+	if endless.falling_shapes_organization == true:
+		get_node("falling_shapes_organization").show()
+	elif endless.falling_shapes_organization == false:
+		get_node("falling_shapes_organization").hide()
 
 func _on_yellow_eating_button_button_up():
 	get_tree().change_scene("res://hollyhock_endless_mode.tscn")
-
 
 func _on_back_button_button_up():
 	get_tree().change_scene("res://player_selection.tscn")
 
 func _on_shoot_that_rock_button_button_up():
 	get_tree().change_scene("res://fiyork_endless_mode.tscn")
+
+func _on_falling_shapes_organization_button_button_up():
+	get_tree().change_scene("res://untilly_endless_mode.tscn")
