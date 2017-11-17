@@ -21,7 +21,19 @@ var bert
 var sam
 
 func _ready():
-	pixel_small()
+	if customer_globals.sales_made != 0:
+		var time = 120/customer_globals.sales_made
+		get_node("customer_display/customer").set_wait_time(time)
+		get_node("customer_display/customer").start()
+	else:
+		pass
+	if tutorial.tutorial == false:
+		tutorial.tutorial = true
+		get_node("tutorial").show()
+		get_tree().set_pause(true)
+	else:
+		get_tree().set_pause(true)
+		countin()
 	get_node("StreamPlayer").set_volume(sound.volume)
 	sam = get_node("sam/Sprite")
 	bert = get_node("bert/Sprite")
@@ -2606,7 +2618,8 @@ func _on_sam_timer_timeout():
 				matrix[1][0] = 1
 			elif matrix[1][0] == 1:
 				matrix[1][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 1:
 			sam_hoz = 1
 			sam_vert = 1
@@ -2614,7 +2627,8 @@ func _on_sam_timer_timeout():
 				matrix[1][1] = 1
 			elif matrix[1][1] == 1:
 				matrix[1][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 2:
 			sam_hoz = 1
 			sam_vert = 2
@@ -2622,7 +2636,8 @@ func _on_sam_timer_timeout():
 				matrix[1][2] = 1
 			elif matrix[1][2] == 1:
 				matrix[1][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 3:
 			sam_hoz = 1
 			sam_vert = 3
@@ -2630,7 +2645,8 @@ func _on_sam_timer_timeout():
 				matrix[1][3] = 1
 			elif matrix[1][3] == 1:
 				matrix[1][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 4:
 			sam_hoz = 1
 			sam_vert = 4
@@ -2638,7 +2654,8 @@ func _on_sam_timer_timeout():
 				matrix[1][4] = 1
 			elif matrix[1][4] == 1:
 				matrix[1][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 5:
 			sam_hoz = 1
 			sam_vert = 5
@@ -2646,7 +2663,8 @@ func _on_sam_timer_timeout():
 				matrix[1][5] = 1
 			elif matrix[1][5] == 1:
 				matrix[1][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 6:
 			sam_hoz = 1
 			sam_vert = 6
@@ -2654,7 +2672,8 @@ func _on_sam_timer_timeout():
 				matrix[1][6] = 1
 			elif matrix[1][6] == 1:
 				matrix[1][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 7:
 			sam_hoz = 1
 			sam_vert = 7
@@ -2662,7 +2681,8 @@ func _on_sam_timer_timeout():
 				matrix[1][7] = 1
 			elif matrix[1][7] == 1:
 				matrix[1][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 1 and sam_vert == 0:
 			sam_hoz = 2
@@ -2671,7 +2691,8 @@ func _on_sam_timer_timeout():
 				matrix[2][0] = 1
 			elif matrix[2][0] == 1:
 				matrix[2][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 1:
 			sam_hoz = 2
 			sam_vert = 1
@@ -2679,7 +2700,8 @@ func _on_sam_timer_timeout():
 				matrix[2][1] = 1
 			elif matrix[2][1] == 1:
 				matrix[2][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 2:
 			sam_hoz = 2
 			sam_vert = 2
@@ -2687,7 +2709,8 @@ func _on_sam_timer_timeout():
 				matrix[2][2] = 1
 			elif matrix[2][2] == 1:
 				matrix[2][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 3:
 			sam_hoz = 2
 			sam_vert = 3
@@ -2695,7 +2718,8 @@ func _on_sam_timer_timeout():
 				matrix[2][3] = 1
 			elif matrix[2][3] == 1:
 				matrix[2][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 4:
 			sam_hoz = 2
 			sam_vert = 4
@@ -2703,7 +2727,8 @@ func _on_sam_timer_timeout():
 				matrix[2][4] = 1
 			elif matrix[2][4] == 1:
 				matrix[2][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 5:
 			sam_hoz = 2
 			sam_vert = 5
@@ -2711,7 +2736,8 @@ func _on_sam_timer_timeout():
 				matrix[2][5] = 1
 			elif matrix[2][5] == 1:
 				matrix[2][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 6:
 			sam_hoz = 2
 			sam_vert = 6
@@ -2719,7 +2745,8 @@ func _on_sam_timer_timeout():
 				matrix[2][6] = 1
 			elif matrix[2][6] == 1:
 				matrix[2][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 7:
 			sam_hoz = 2
 			sam_vert = 7
@@ -2727,7 +2754,8 @@ func _on_sam_timer_timeout():
 				matrix[2][7] = 1
 			elif matrix[2][7] == 1:
 				matrix[2][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 2 and sam_vert == 0:
 			sam_hoz = 3
@@ -2736,7 +2764,8 @@ func _on_sam_timer_timeout():
 				matrix[3][0] = 1
 			elif matrix[3][0] == 1:
 				matrix[3][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 1:
 			sam_hoz = 3
 			sam_vert = 1
@@ -2744,7 +2773,8 @@ func _on_sam_timer_timeout():
 				matrix[3][1] = 1
 			elif matrix[3][1] == 1:
 				matrix[3][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 2:
 			sam_hoz = 3
 			sam_vert = 2
@@ -2752,7 +2782,8 @@ func _on_sam_timer_timeout():
 				matrix[3][2] = 1
 			elif matrix[3][2] == 1:
 				matrix[3][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 3:
 			sam_hoz = 3
 			sam_vert = 3
@@ -2760,7 +2791,8 @@ func _on_sam_timer_timeout():
 				matrix[3][3] = 1
 			elif matrix[3][3] == 1:
 				matrix[3][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 4:
 			sam_hoz = 3
 			sam_vert = 4
@@ -2768,7 +2800,8 @@ func _on_sam_timer_timeout():
 				matrix[3][4] = 1
 			elif matrix[3][4] == 1:
 				matrix[3][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 5:
 			sam_hoz = 3
 			sam_vert = 5
@@ -2776,7 +2809,8 @@ func _on_sam_timer_timeout():
 				matrix[3][5] = 1
 			elif matrix[3][5] == 1:
 				matrix[3][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 6:
 			sam_hoz = 3
 			sam_vert = 6
@@ -2784,7 +2818,8 @@ func _on_sam_timer_timeout():
 				matrix[3][6] = 1
 			elif matrix[3][6] == 1:
 				matrix[3][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 7:
 			sam_hoz = 3
 			sam_vert = 7
@@ -2792,7 +2827,8 @@ func _on_sam_timer_timeout():
 				matrix[3][7] = 1
 			elif matrix[3][7] == 1:
 				matrix[3][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 				
 		elif sam_hoz == 3 and sam_vert == 0:
 			sam_hoz = 4
@@ -2801,7 +2837,8 @@ func _on_sam_timer_timeout():
 				matrix[4][0] = 1
 			elif matrix[4][0] == 1:
 				matrix[4][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 1:
 			sam_hoz = 4
 			sam_vert = 1
@@ -2809,7 +2846,8 @@ func _on_sam_timer_timeout():
 				matrix[4][1] = 1
 			elif matrix[4][1] == 1:
 				matrix[4][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 2:
 			sam_hoz = 4
 			sam_vert = 2
@@ -2817,7 +2855,8 @@ func _on_sam_timer_timeout():
 				matrix[4][2] = 1
 			elif matrix[4][2] == 1:
 				matrix[4][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 3:
 			sam_hoz = 4
 			sam_vert = 3
@@ -2825,7 +2864,8 @@ func _on_sam_timer_timeout():
 				matrix[4][3] = 1
 			elif matrix[4][3] == 1:
 				matrix[4][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 4:
 			sam_hoz = 4
 			sam_vert = 4
@@ -2833,7 +2873,8 @@ func _on_sam_timer_timeout():
 				matrix[4][4] = 1
 			elif matrix[4][4] == 1:
 				matrix[4][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 5:
 			sam_hoz = 4
 			sam_vert = 5
@@ -2841,7 +2882,8 @@ func _on_sam_timer_timeout():
 				matrix[4][5] = 1
 			elif matrix[4][5] == 1:
 				matrix[4][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 6:
 			sam_hoz = 4
 			sam_vert = 6
@@ -2849,7 +2891,8 @@ func _on_sam_timer_timeout():
 				matrix[4][6] = 1
 			elif matrix[4][6] == 1:
 				matrix[4][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 7:
 			sam_hoz = 4
 			sam_vert = 7
@@ -2857,7 +2900,8 @@ func _on_sam_timer_timeout():
 				matrix[4][7] = 1
 			elif matrix[4][7] == 1:
 				matrix[4][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 4 and sam_vert == 0:
 			sam_hoz = 5
@@ -2866,7 +2910,8 @@ func _on_sam_timer_timeout():
 				matrix[5][0] = 1
 			elif matrix[5][0] == 1:
 				matrix[5][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 1:
 			sam_hoz = 5
 			sam_vert = 1
@@ -2874,7 +2919,8 @@ func _on_sam_timer_timeout():
 				matrix[5][1] = 1
 			elif matrix[5][1] == 1:
 				matrix[5][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 2:
 			sam_hoz = 5
 			sam_vert = 2
@@ -2882,7 +2928,8 @@ func _on_sam_timer_timeout():
 				matrix[5][2] = 1
 			elif matrix[5][2] == 1:
 				matrix[5][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 3:
 			sam_hoz = 5
 			sam_vert = 3
@@ -2890,7 +2937,8 @@ func _on_sam_timer_timeout():
 				matrix[5][3] = 1
 			elif matrix[5][3] == 1:
 				matrix[5][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 4:
 			sam_hoz = 5
 			sam_vert = 4
@@ -2898,7 +2946,8 @@ func _on_sam_timer_timeout():
 				matrix[5][4] = 1
 			elif matrix[5][4] == 1:
 				matrix[5][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 5:
 			sam_hoz = 5
 			sam_vert = 5
@@ -2906,7 +2955,8 @@ func _on_sam_timer_timeout():
 				matrix[5][5] = 1
 			elif matrix[5][5] == 1:
 				matrix[5][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 6:
 			sam_hoz = 5
 			sam_vert = 6
@@ -2914,7 +2964,8 @@ func _on_sam_timer_timeout():
 				matrix[5][6] = 1
 			elif matrix[5][6] == 1:
 				matrix[5][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 7:
 			sam_hoz = 5
 			sam_vert = 7
@@ -2922,7 +2973,8 @@ func _on_sam_timer_timeout():
 				matrix[5][7] = 1
 			elif matrix[5][7] == 1:
 				matrix[5][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 5 and sam_vert == 0:
 			sam_hoz = 6
@@ -2931,7 +2983,8 @@ func _on_sam_timer_timeout():
 				matrix[6][0] = 1
 			elif matrix[6][0] == 1:
 				matrix[6][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 1:
 			sam_hoz = 6
 			sam_vert = 1
@@ -2939,7 +2992,8 @@ func _on_sam_timer_timeout():
 				matrix[6][1] = 1
 			elif matrix[6][1] == 1:
 				matrix[6][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 2:
 			sam_hoz = 6
 			sam_vert = 2
@@ -2947,7 +3001,8 @@ func _on_sam_timer_timeout():
 				matrix[6][2] = 1
 			elif matrix[6][2] == 1:
 				matrix[6][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 3:
 			sam_hoz = 6
 			sam_vert = 3
@@ -2955,7 +3010,8 @@ func _on_sam_timer_timeout():
 				matrix[6][3] = 1
 			elif matrix[6][3] == 1:
 				matrix[6][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 4:
 			sam_hoz = 6
 			sam_vert = 4
@@ -2963,7 +3019,8 @@ func _on_sam_timer_timeout():
 				matrix[6][4] = 1
 			elif matrix[6][4] == 1:
 				matrix[6][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 5:
 			sam_hoz = 6
 			sam_vert = 5
@@ -2971,7 +3028,8 @@ func _on_sam_timer_timeout():
 				matrix[6][5] = 1
 			elif matrix[6][5] == 1:
 				matrix[6][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 6:
 			sam_hoz = 6
 			sam_vert = 6
@@ -2979,7 +3037,8 @@ func _on_sam_timer_timeout():
 				matrix[6][6] = 1
 			elif matrix[6][6] == 1:
 				matrix[6][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 7:
 			sam_hoz = 6
 			sam_vert = 7
@@ -2987,7 +3046,8 @@ func _on_sam_timer_timeout():
 				matrix[6][7] = 1
 			elif matrix[6][7] == 1:
 				matrix[6][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 6 and sam_vert == 0:
 			sam_hoz = 7
@@ -2996,7 +3056,8 @@ func _on_sam_timer_timeout():
 				matrix[7][0] = 1
 			elif matrix[7][0] == 1:
 				matrix[7][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 1:
 			sam_hoz = 7
 			sam_vert = 1
@@ -3004,7 +3065,8 @@ func _on_sam_timer_timeout():
 				matrix[7][1] = 1
 			elif matrix[7][1] == 1:
 				matrix[7][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 2:
 			sam_hoz = 7
 			sam_vert = 2
@@ -3012,7 +3074,8 @@ func _on_sam_timer_timeout():
 				matrix[7][2] = 1
 			elif matrix[7][2] == 1:
 				matrix[7][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 3:
 			sam_hoz = 7
 			sam_vert = 3
@@ -3020,7 +3083,8 @@ func _on_sam_timer_timeout():
 				matrix[7][3] = 1
 			elif matrix[7][3] == 1:
 				matrix[7][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 4:
 			sam_hoz = 7
 			sam_vert = 4
@@ -3028,7 +3092,8 @@ func _on_sam_timer_timeout():
 				matrix[7][4] = 1
 			elif matrix[7][4] == 1:
 				matrix[7][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 5:
 			sam_hoz = 7
 			sam_vert = 5
@@ -3036,7 +3101,8 @@ func _on_sam_timer_timeout():
 				matrix[7][5] = 1
 			elif matrix[7][5] == 1:
 				matrix[7][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 6:
 			sam_hoz = 7
 			sam_vert = 6
@@ -3044,7 +3110,8 @@ func _on_sam_timer_timeout():
 				matrix[7][6] = 1
 			elif matrix[7][6] == 1:
 				matrix[7][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 7:
 			sam_hoz = 7
 			sam_vert = 7
@@ -3052,7 +3119,8 @@ func _on_sam_timer_timeout():
 				matrix[7][7] = 1
 			elif matrix[7][7] == 1:
 				matrix[7][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 	elif which_way == "move_right":
 		if sam_hoz == 1 and sam_vert == 0:
 			sam_hoz = 0
@@ -3061,7 +3129,8 @@ func _on_sam_timer_timeout():
 				matrix[0][0] = 1
 			elif matrix[0][0] == 1:
 				matrix[0][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 1:
 			sam_hoz = 0
 			sam_vert = 1
@@ -3069,7 +3138,8 @@ func _on_sam_timer_timeout():
 				matrix[0][1] = 1
 			elif matrix[0][1] == 1:
 				matrix[0][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 2:
 			sam_hoz = 0
 			sam_vert = 2
@@ -3077,7 +3147,8 @@ func _on_sam_timer_timeout():
 				matrix[0][2] = 1
 			elif matrix[0][2] == 1:
 				matrix[0][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 3:
 			sam_hoz = 0
 			sam_vert = 3
@@ -3085,7 +3156,8 @@ func _on_sam_timer_timeout():
 				matrix[0][3] = 1
 			elif matrix[0][3] == 1:
 				matrix[0][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 4:
 			sam_hoz = 0
 			sam_vert = 4
@@ -3093,7 +3165,8 @@ func _on_sam_timer_timeout():
 				matrix[0][4] = 1
 			elif matrix[0][4] == 1:
 				matrix[0][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 5:
 			sam_hoz = 0
 			sam_vert = 5
@@ -3101,7 +3174,8 @@ func _on_sam_timer_timeout():
 				matrix[0][5] = 1
 			elif matrix[0][5] == 1:
 				matrix[0][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 6:
 			sam_hoz = 0
 			sam_vert = 6
@@ -3109,7 +3183,8 @@ func _on_sam_timer_timeout():
 				matrix[0][6] = 1
 			elif matrix[0][6] == 1:
 				matrix[0][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 7:
 			sam_hoz = 0
 			sam_vert = 7
@@ -3117,7 +3192,8 @@ func _on_sam_timer_timeout():
 				matrix[0][7] = 1
 			elif matrix[0][7] == 1:
 				matrix[0][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 2 and sam_vert == 0:
 			sam_hoz = 1
@@ -3126,7 +3202,8 @@ func _on_sam_timer_timeout():
 				matrix[1][0] = 1
 			elif matrix[1][0] == 1:
 				matrix[1][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 1:
 			sam_hoz = 1
 			sam_vert = 1
@@ -3134,7 +3211,8 @@ func _on_sam_timer_timeout():
 				matrix[1][1] = 1
 			elif matrix[1][1] == 1:
 				matrix[1][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 2:
 			sam_hoz = 1
 			sam_vert = 2
@@ -3142,7 +3220,8 @@ func _on_sam_timer_timeout():
 				matrix[1][2] = 1
 			elif matrix[1][2] == 1:
 				matrix[1][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 3:
 			sam_hoz = 1
 			sam_vert = 3
@@ -3150,7 +3229,8 @@ func _on_sam_timer_timeout():
 				matrix[1][3] = 1
 			elif matrix[1][3] == 1:
 				matrix[1][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 4:
 			sam_hoz = 1
 			sam_vert = 4
@@ -3158,7 +3238,8 @@ func _on_sam_timer_timeout():
 				matrix[1][4] = 1
 			elif matrix[1][4] == 1:
 				matrix[1][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 5:
 			sam_hoz = 1
 			sam_vert = 5
@@ -3166,7 +3247,8 @@ func _on_sam_timer_timeout():
 				matrix[1][5] = 1
 			elif matrix[1][5] == 1:
 				matrix[1][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 6:
 			sam_hoz = 1
 			sam_vert = 6
@@ -3174,7 +3256,8 @@ func _on_sam_timer_timeout():
 				matrix[1][6] = 1
 			elif matrix[1][6] == 1:
 				matrix[1][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 7:
 			sam_hoz = 1
 			sam_vert = 7
@@ -3182,7 +3265,8 @@ func _on_sam_timer_timeout():
 				matrix[1][7] = 1
 			elif matrix[1][7] == 1:
 				matrix[1][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 				
 		elif sam_hoz == 3 and sam_vert == 0:
 			sam_hoz = 2
@@ -3191,7 +3275,8 @@ func _on_sam_timer_timeout():
 				matrix[2][0] = 1
 			elif matrix[2][0] == 1:
 				matrix[2][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 1:
 			sam_hoz = 2
 			sam_vert = 1
@@ -3199,7 +3284,8 @@ func _on_sam_timer_timeout():
 				matrix[2][1] = 1
 			elif matrix[2][1] == 1:
 				matrix[2][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 2:
 			sam_hoz = 2
 			sam_vert = 2
@@ -3207,7 +3293,8 @@ func _on_sam_timer_timeout():
 				matrix[2][2] = 1
 			elif matrix[2][2] == 1:
 				matrix[2][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 3:
 			sam_hoz = 2
 			sam_vert = 3
@@ -3215,7 +3302,8 @@ func _on_sam_timer_timeout():
 				matrix[2][3] = 1
 			elif matrix[2][3] == 1:
 				matrix[2][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 4:
 			sam_hoz = 2
 			sam_vert = 4
@@ -3223,7 +3311,8 @@ func _on_sam_timer_timeout():
 				matrix[2][4] = 1
 			elif matrix[2][4] == 1:
 				matrix[2][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 5:
 			sam_hoz = 2
 			sam_vert = 5
@@ -3231,7 +3320,8 @@ func _on_sam_timer_timeout():
 				matrix[2][5] = 1
 			elif matrix[2][5] == 1:
 				matrix[2][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 6:
 			sam_hoz = 2
 			sam_vert = 6
@@ -3239,7 +3329,8 @@ func _on_sam_timer_timeout():
 				matrix[2][6] = 1
 			elif matrix[2][6] == 1:
 				matrix[2][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 7:
 			sam_hoz = 2
 			sam_vert = 7
@@ -3247,7 +3338,8 @@ func _on_sam_timer_timeout():
 				matrix[2][7] = 1
 			elif matrix[2][7] == 1:
 				matrix[2][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 4 and sam_vert == 0:
 			sam_hoz = 3
@@ -3256,7 +3348,8 @@ func _on_sam_timer_timeout():
 				matrix[3][0] = 1
 			elif matrix[3][0] == 1:
 				matrix[3][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 1:
 			sam_hoz = 3
 			sam_vert = 1
@@ -3264,7 +3357,8 @@ func _on_sam_timer_timeout():
 				matrix[3][1] = 1
 			elif matrix[3][1] == 1:
 				matrix[3][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 2:
 			sam_hoz = 3
 			sam_vert = 2
@@ -3272,7 +3366,8 @@ func _on_sam_timer_timeout():
 				matrix[3][2] = 1
 			elif matrix[3][2] == 1:
 				matrix[3][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 3:
 			sam_hoz = 3
 			sam_vert = 3
@@ -3280,7 +3375,8 @@ func _on_sam_timer_timeout():
 				matrix[3][3] = 1
 			elif matrix[3][3] == 1:
 				matrix[3][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 4:
 			sam_hoz = 3
 			sam_vert = 4
@@ -3288,7 +3384,8 @@ func _on_sam_timer_timeout():
 				matrix[3][4] = 1
 			elif matrix[3][4] == 1:
 				matrix[3][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 5:
 			sam_hoz = 3
 			sam_vert = 5
@@ -3296,7 +3393,8 @@ func _on_sam_timer_timeout():
 				matrix[3][5] = 1
 			elif matrix[3][5] == 1:
 				matrix[3][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 6:
 			sam_hoz = 3
 			sam_vert = 6
@@ -3304,7 +3402,8 @@ func _on_sam_timer_timeout():
 				matrix[3][6] = 1
 			elif matrix[3][6] == 1:
 				matrix[3][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 7:
 			sam_hoz = 3
 			sam_vert = 7
@@ -3312,7 +3411,8 @@ func _on_sam_timer_timeout():
 				matrix[3][7] = 1
 			elif matrix[3][7] == 1:
 				matrix[3][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 5 and sam_vert == 0:
 			sam_hoz = 4
@@ -3321,7 +3421,8 @@ func _on_sam_timer_timeout():
 				matrix[4][0] = 1
 			elif matrix[4][0] == 1:
 				matrix[4][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 1:
 			sam_hoz = 4
 			sam_vert = 1
@@ -3329,7 +3430,8 @@ func _on_sam_timer_timeout():
 				matrix[4][1] = 1
 			elif matrix[4][1] == 1:
 				matrix[4][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 2:
 			sam_hoz = 4
 			sam_vert = 2
@@ -3337,7 +3439,8 @@ func _on_sam_timer_timeout():
 				matrix[4][2] = 1
 			elif matrix[4][2] == 1:
 				matrix[4][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 3:
 			sam_hoz = 4
 			sam_vert = 3
@@ -3345,7 +3448,8 @@ func _on_sam_timer_timeout():
 				matrix[4][3] = 1
 			elif matrix[4][3] == 1:
 				matrix[4][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 4:
 			sam_hoz = 4
 			sam_vert = 4
@@ -3353,7 +3457,8 @@ func _on_sam_timer_timeout():
 				matrix[4][4] = 1
 			elif matrix[4][4] == 1:
 				matrix[4][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 5:
 			sam_hoz = 4
 			sam_vert = 5
@@ -3361,7 +3466,8 @@ func _on_sam_timer_timeout():
 				matrix[4][5] = 1
 			elif matrix[4][5] == 1:
 				matrix[4][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 6:
 			sam_hoz = 4
 			sam_vert = 6
@@ -3369,7 +3475,8 @@ func _on_sam_timer_timeout():
 				matrix[4][6] = 1
 			elif matrix[4][6] == 1:
 				matrix[4][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 7:
 			sam_hoz = 4
 			sam_vert = 7
@@ -3377,7 +3484,8 @@ func _on_sam_timer_timeout():
 				matrix[4][7] = 1
 			elif matrix[4][7] == 1:
 				matrix[4][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 6 and sam_vert == 0:
 			sam_hoz = 5
@@ -3386,7 +3494,8 @@ func _on_sam_timer_timeout():
 				matrix[5][0] = 1
 			elif matrix[5][0] == 1:
 				matrix[5][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 1:
 			sam_hoz = 5
 			sam_vert = 1
@@ -3394,7 +3503,8 @@ func _on_sam_timer_timeout():
 				matrix[5][1] = 1
 			elif matrix[5][1] == 1:
 				matrix[5][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 2:
 			sam_hoz = 5
 			sam_vert = 2
@@ -3402,7 +3512,8 @@ func _on_sam_timer_timeout():
 				matrix[5][2] = 1
 			elif matrix[5][2] == 1:
 				matrix[5][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 3:
 			sam_hoz = 5
 			sam_vert = 3
@@ -3410,7 +3521,8 @@ func _on_sam_timer_timeout():
 				matrix[5][3] = 1
 			elif matrix[5][3] == 1:
 				matrix[5][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 4:
 			sam_hoz = 5
 			sam_vert = 4
@@ -3418,7 +3530,8 @@ func _on_sam_timer_timeout():
 				matrix[5][4] = 1
 			elif matrix[5][4] == 1:
 				matrix[5][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 5:
 			sam_hoz = 5
 			sam_vert = 5
@@ -3426,7 +3539,8 @@ func _on_sam_timer_timeout():
 				matrix[5][5] = 1
 			elif matrix[5][5] == 1:
 				matrix[5][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 6:
 			sam_hoz = 5
 			sam_vert = 6
@@ -3434,7 +3548,8 @@ func _on_sam_timer_timeout():
 				matrix[5][6] = 1
 			elif matrix[5][6] == 1:
 				matrix[5][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 6:
 			sam_hoz = 5
 			sam_vert = 6
@@ -3442,7 +3557,8 @@ func _on_sam_timer_timeout():
 				matrix[5][6] = 1
 			elif matrix[5][6] == 1:
 				matrix[5][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 7:
 			sam_hoz = 5
 			sam_vert = 7
@@ -3450,7 +3566,8 @@ func _on_sam_timer_timeout():
 				matrix[5][7] = 1
 			elif matrix[5][7] == 1:
 				matrix[5][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 	
 		elif sam_hoz == 7 and sam_vert == 0:
 			sam_hoz = 6
@@ -3459,7 +3576,8 @@ func _on_sam_timer_timeout():
 				matrix[6][0] = 1
 			elif matrix[6][0] == 1:
 				matrix[6][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 1:
 			sam_hoz = 6
 			sam_vert = 1
@@ -3467,7 +3585,8 @@ func _on_sam_timer_timeout():
 				matrix[6][1] = 1
 			elif matrix[6][1] == 1:
 				matrix[6][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 2:
 			sam_hoz = 6
 			sam_vert = 2
@@ -3475,7 +3594,8 @@ func _on_sam_timer_timeout():
 				matrix[6][2] = 1
 			elif matrix[6][2] == 1:
 				matrix[6][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 3:
 			sam_hoz = 6
 			sam_vert = 3
@@ -3483,7 +3603,8 @@ func _on_sam_timer_timeout():
 				matrix[6][3] = 1
 			elif matrix[6][3] == 1:
 				matrix[6][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 4:
 			sam_hoz = 6
 			sam_vert = 4
@@ -3491,7 +3612,8 @@ func _on_sam_timer_timeout():
 				matrix[6][4] = 1
 			elif matrix[6][4] == 1:
 				matrix[6][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 5:
 			sam_hoz = 6
 			sam_vert = 5
@@ -3499,7 +3621,8 @@ func _on_sam_timer_timeout():
 				matrix[6][5] = 1
 			elif matrix[6][5] == 1:
 				matrix[6][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 6:
 			sam_hoz = 6
 			sam_vert = 6
@@ -3507,7 +3630,8 @@ func _on_sam_timer_timeout():
 				matrix[6][6] = 1
 			elif matrix[6][6] == 1:
 				matrix[6][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 6:
 			sam_hoz = 6
 			sam_vert = 6
@@ -3515,7 +3639,8 @@ func _on_sam_timer_timeout():
 				matrix[6][6] = 1
 			elif matrix[6][6] == 1:
 				matrix[6][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 7:
 			sam_hoz = 6
 			sam_vert = 7
@@ -3523,7 +3648,8 @@ func _on_sam_timer_timeout():
 				matrix[6][7] = 1
 			elif matrix[6][7] == 1:
 				matrix[6][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 	elif which_way == "move_up":
 		if sam_hoz == 0 and sam_vert == 1:
 			sam_hoz = 0
@@ -3532,7 +3658,8 @@ func _on_sam_timer_timeout():
 				matrix[0][0] = 1
 			elif matrix[0][0] == 1:
 				matrix[0][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 2:
 			sam_hoz = 0
 			sam_vert = 1
@@ -3540,7 +3667,8 @@ func _on_sam_timer_timeout():
 				matrix[0][1] = 1
 			elif matrix[0][1] == 1:
 				matrix[0][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 3:
 			sam_hoz = 0
 			sam_vert = 2
@@ -3548,7 +3676,8 @@ func _on_sam_timer_timeout():
 				matrix[0][2] = 1
 			elif matrix[0][2] == 1:
 				matrix[0][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 4:
 			sam_hoz = 0
 			sam_vert = 3
@@ -3556,7 +3685,8 @@ func _on_sam_timer_timeout():
 				matrix[0][3] = 1
 			elif matrix[0][3] == 1:
 				matrix[0][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 5:
 			sam_hoz = 0
 			sam_vert = 4
@@ -3564,7 +3694,8 @@ func _on_sam_timer_timeout():
 				matrix[0][4] = 1
 			elif matrix[0][4] == 1:
 				matrix[0][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 6:
 			sam_hoz = 0
 			sam_vert = 5
@@ -3572,7 +3703,8 @@ func _on_sam_timer_timeout():
 				matrix[0][5] = 1
 			elif matrix[0][5] == 1:
 				matrix[0][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 7:
 			sam_hoz = 0
 			sam_vert = 6
@@ -3580,7 +3712,8 @@ func _on_sam_timer_timeout():
 				matrix[0][6] = 1
 			elif matrix[0][6] == 1:
 				matrix[0][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 1 and sam_vert == 1:
 			sam_hoz = 1
@@ -3589,7 +3722,8 @@ func _on_sam_timer_timeout():
 				matrix[1][0] = 1
 			elif matrix[1][0] == 1:
 				matrix[1][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 2:
 			sam_hoz = 1
 			sam_vert = 1
@@ -3597,7 +3731,8 @@ func _on_sam_timer_timeout():
 				matrix[1][1] = 1
 			elif matrix[1][1] == 1:
 				matrix[1][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 3:
 			sam_hoz = 1
 			sam_vert = 2
@@ -3605,7 +3740,8 @@ func _on_sam_timer_timeout():
 				matrix[1][2] = 1
 			elif matrix[1][2] == 1:
 				matrix[1][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 4:
 			sam_hoz = 1
 			sam_vert = 3
@@ -3613,7 +3749,8 @@ func _on_sam_timer_timeout():
 				matrix[1][3] = 1
 			elif matrix[1][3] == 1:
 				matrix[1][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 5:
 			sam_hoz = 1
 			sam_vert = 4
@@ -3621,7 +3758,8 @@ func _on_sam_timer_timeout():
 				matrix[1][4] = 1
 			elif matrix[1][4] == 1:
 				matrix[1][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 6:
 			sam_hoz = 1
 			sam_vert = 5
@@ -3629,7 +3767,8 @@ func _on_sam_timer_timeout():
 				matrix[1][5] = 1
 			elif matrix[1][5] == 1:
 				matrix[1][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 7:
 			sam_hoz = 1
 			sam_vert = 6
@@ -3637,7 +3776,8 @@ func _on_sam_timer_timeout():
 				matrix[1][6] = 1
 			elif matrix[1][6] == 1:
 				matrix[1][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 2 and sam_vert == 1:
 			sam_hoz = 2
@@ -3646,7 +3786,8 @@ func _on_sam_timer_timeout():
 				matrix[2][0] = 1
 			elif matrix[2][0] == 1:
 				matrix[2][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 2:
 			sam_hoz = 2
 			sam_vert = 1
@@ -3654,7 +3795,8 @@ func _on_sam_timer_timeout():
 				matrix[2][1] = 1
 			elif matrix[2][1] == 1:
 				matrix[2][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 3:
 			sam_hoz = 2
 			sam_vert = 2
@@ -3662,7 +3804,8 @@ func _on_sam_timer_timeout():
 				matrix[2][2] = 1
 			elif matrix[2][2] == 1:
 				matrix[2][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 4:
 			sam_hoz = 2
 			sam_vert = 3
@@ -3670,7 +3813,8 @@ func _on_sam_timer_timeout():
 				matrix[2][3] = 1
 			elif matrix[2][3] == 1:
 				matrix[2][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 5:
 			sam_hoz = 2
 			sam_vert = 4
@@ -3678,7 +3822,8 @@ func _on_sam_timer_timeout():
 				matrix[2][4] = 1
 			elif matrix[2][4] == 1:
 				matrix[2][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 6:
 			sam_hoz = 2
 			sam_vert = 5
@@ -3686,7 +3831,8 @@ func _on_sam_timer_timeout():
 				matrix[2][5] = 1
 			elif matrix[2][5] == 1:
 				matrix[2][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 7:
 			sam_hoz = 2
 			sam_vert = 6
@@ -3694,7 +3840,8 @@ func _on_sam_timer_timeout():
 				matrix[2][6] = 1
 			elif matrix[2][6] == 1:
 				matrix[2][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 				
 		elif sam_hoz == 3 and sam_vert == 1:
 			sam_hoz = 3
@@ -3703,7 +3850,8 @@ func _on_sam_timer_timeout():
 				matrix[3][0] = 1
 			elif matrix[3][0] == 1:
 				matrix[3][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 2:
 			sam_hoz = 3
 			sam_vert = 1
@@ -3711,7 +3859,8 @@ func _on_sam_timer_timeout():
 				matrix[3][1] = 1
 			elif matrix[3][1] == 1:
 				matrix[3][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 3:
 			sam_hoz = 3
 			sam_vert = 2
@@ -3719,7 +3868,8 @@ func _on_sam_timer_timeout():
 				matrix[3][2] = 1
 			elif matrix[3][2] == 1:
 				matrix[3][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 4:
 			sam_hoz = 3
 			sam_vert = 3
@@ -3727,7 +3877,8 @@ func _on_sam_timer_timeout():
 				matrix[3][3] = 1
 			elif matrix[3][3] == 1:
 				matrix[3][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 5:
 			sam_hoz = 3
 			sam_vert = 4
@@ -3735,7 +3886,8 @@ func _on_sam_timer_timeout():
 				matrix[3][4] = 1
 			elif matrix[3][4] == 1:
 				matrix[3][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 6:
 			sam_hoz = 3
 			sam_vert = 5
@@ -3743,7 +3895,8 @@ func _on_sam_timer_timeout():
 				matrix[3][5] = 1
 			elif matrix[3][5] == 1:
 				matrix[3][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 7:
 			sam_hoz = 3
 			sam_vert = 6
@@ -3751,7 +3904,8 @@ func _on_sam_timer_timeout():
 				matrix[3][6] = 1
 			elif matrix[3][6] == 1:
 				matrix[3][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 4 and sam_vert == 1:
 			sam_hoz = 4
@@ -3760,7 +3914,8 @@ func _on_sam_timer_timeout():
 				matrix[4][0] = 1
 			elif matrix[4][0] == 1:
 				matrix[4][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 2:
 			sam_hoz = 4
 			sam_vert = 1
@@ -3768,7 +3923,8 @@ func _on_sam_timer_timeout():
 				matrix[4][1] = 1
 			elif matrix[4][1] == 1:
 				matrix[4][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 3:
 			sam_hoz = 4
 			sam_vert = 2
@@ -3776,7 +3932,8 @@ func _on_sam_timer_timeout():
 				matrix[4][2] = 1
 			elif matrix[4][2] == 1:
 				matrix[4][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 4:
 			sam_hoz = 4
 			sam_vert = 3
@@ -3784,7 +3941,8 @@ func _on_sam_timer_timeout():
 				matrix[4][3] = 1
 			elif matrix[4][3] == 1:
 				matrix[4][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 5:
 			sam_hoz = 4
 			sam_vert = 4
@@ -3792,7 +3950,8 @@ func _on_sam_timer_timeout():
 				matrix[4][4] = 1
 			elif matrix[4][4] == 1:
 				matrix[4][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 6:
 			sam_hoz = 4
 			sam_vert = 5
@@ -3800,7 +3959,8 @@ func _on_sam_timer_timeout():
 				matrix[4][5] = 1
 			elif matrix[4][5] == 1:
 				matrix[4][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 7:
 			sam_hoz = 4
 			sam_vert = 6
@@ -3808,7 +3968,8 @@ func _on_sam_timer_timeout():
 				matrix[4][6] = 1
 			elif matrix[4][6] == 1:
 				matrix[4][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 5 and sam_vert == 1:
 			sam_hoz = 5
@@ -3817,7 +3978,8 @@ func _on_sam_timer_timeout():
 				matrix[5][0] = 1
 			elif matrix[5][0] == 1:
 				matrix[5][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 2:
 			sam_hoz = 5
 			sam_vert = 1
@@ -3825,7 +3987,8 @@ func _on_sam_timer_timeout():
 				matrix[5][1] = 1
 			elif matrix[5][1] == 1:
 				matrix[5][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 3:
 			sam_hoz = 5
 			sam_vert = 2
@@ -3833,7 +3996,8 @@ func _on_sam_timer_timeout():
 				matrix[5][2] = 1
 			elif matrix[5][2] == 1:
 				matrix[5][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 4:
 			sam_hoz = 5
 			sam_vert = 3
@@ -3841,7 +4005,8 @@ func _on_sam_timer_timeout():
 				matrix[5][3] = 1
 			elif matrix[5][3] == 1:
 				matrix[5][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 5:
 			sam_hoz = 5
 			sam_vert = 4
@@ -3849,7 +4014,8 @@ func _on_sam_timer_timeout():
 				matrix[5][4] = 1
 			elif matrix[5][4] == 1:
 				matrix[5][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 6:
 			sam_hoz = 5
 			sam_vert = 5
@@ -3857,7 +4023,8 @@ func _on_sam_timer_timeout():
 				matrix[5][5] = 1
 			elif matrix[5][5] == 1:
 				matrix[5][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 7:
 			sam_hoz = 5
 			sam_vert = 6
@@ -3865,7 +4032,8 @@ func _on_sam_timer_timeout():
 				matrix[5][6] = 1
 			elif matrix[5][6] == 1:
 				matrix[5][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 6 and sam_vert == 1:
 			sam_hoz = 6
@@ -3874,7 +4042,8 @@ func _on_sam_timer_timeout():
 				matrix[6][0] = 1
 			elif matrix[6][0] == 1:
 				matrix[6][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 2:
 			sam_hoz = 6
 			sam_vert = 1
@@ -3882,7 +4051,8 @@ func _on_sam_timer_timeout():
 				matrix[6][1] = 1
 			elif matrix[6][1] == 1:
 				matrix[6][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 3:
 			sam_hoz = 6
 			sam_vert = 2
@@ -3890,7 +4060,8 @@ func _on_sam_timer_timeout():
 				matrix[6][2] = 1
 			elif matrix[6][2] == 1:
 				matrix[6][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 4:
 			sam_hoz = 6
 			sam_vert = 3
@@ -3898,7 +4069,8 @@ func _on_sam_timer_timeout():
 				matrix[6][3] = 1
 			elif matrix[6][3] == 1:
 				matrix[6][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 5:
 			sam_hoz = 6
 			sam_vert = 4
@@ -3906,7 +4078,8 @@ func _on_sam_timer_timeout():
 				matrix[6][4] = 1
 			elif matrix[6][4] == 1:
 				matrix[6][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 6:
 			sam_hoz = 6
 			sam_vert = 5
@@ -3914,7 +4087,8 @@ func _on_sam_timer_timeout():
 				matrix[6][5] = 1
 			elif matrix[6][5] == 1:
 				matrix[6][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 7:
 			sam_hoz = 6
 			sam_vert = 6
@@ -3922,7 +4096,8 @@ func _on_sam_timer_timeout():
 				matrix[6][6] = 1
 			elif matrix[6][6] == 1:
 				matrix[6][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 	
 		elif sam_hoz == 7 and sam_vert == 1:
 			sam_hoz = 7
@@ -3931,7 +4106,8 @@ func _on_sam_timer_timeout():
 				matrix[7][0] = 1
 			elif matrix[7][0] == 1:
 				matrix[7][0] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 2:
 			sam_hoz = 7
 			sam_vert = 1
@@ -3939,7 +4115,8 @@ func _on_sam_timer_timeout():
 				matrix[7][1] = 1
 			elif matrix[7][1] == 1:
 				matrix[7][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 3:
 			sam_hoz = 7
 			sam_vert = 2
@@ -3947,7 +4124,8 @@ func _on_sam_timer_timeout():
 				matrix[7][2] = 1
 			elif matrix[7][2] == 1:
 				matrix[7][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 4:
 			sam_hoz = 7
 			sam_vert = 3
@@ -3955,7 +4133,8 @@ func _on_sam_timer_timeout():
 				matrix[7][3] = 1
 			elif matrix[7][3] == 1:
 				matrix[7][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 5:
 			sam_hoz = 7
 			sam_vert = 4
@@ -3963,7 +4142,8 @@ func _on_sam_timer_timeout():
 				matrix[7][4] = 1
 			elif matrix[7][4] == 1:
 				matrix[7][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 6:
 			sam_hoz = 7
 			sam_vert = 5
@@ -3971,7 +4151,8 @@ func _on_sam_timer_timeout():
 				matrix[7][5] = 1
 			elif matrix[7][5] == 1:
 				matrix[7][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 7:
 			sam_hoz = 7
 			sam_vert = 6
@@ -3979,7 +4160,8 @@ func _on_sam_timer_timeout():
 				matrix[7][6] = 1
 			elif matrix[7][6] == 1:
 				matrix[7][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 	elif which_way == "move_down":
 		if sam_hoz == 0 and sam_vert == 0:
 			sam_hoz = 0
@@ -3988,7 +4170,8 @@ func _on_sam_timer_timeout():
 				matrix[0][1] = 1
 			elif matrix[0][1] == 1:
 				matrix[0][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 1:
 			sam_hoz = 0
 			sam_vert = 2
@@ -3996,7 +4179,8 @@ func _on_sam_timer_timeout():
 				matrix[0][2] = 1
 			elif matrix[0][2] == 1:
 				matrix[0][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 2:
 			sam_hoz = 0
 			sam_vert = 3
@@ -4004,7 +4188,8 @@ func _on_sam_timer_timeout():
 				matrix[0][3] = 1
 			elif matrix[0][3] == 1:
 				matrix[0][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 3:
 			sam_hoz = 0
 			sam_vert = 4
@@ -4012,7 +4197,8 @@ func _on_sam_timer_timeout():
 				matrix[0][4] = 1
 			elif matrix[0][4] == 1:
 				matrix[0][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 4:
 			sam_hoz = 0
 			sam_vert = 5
@@ -4020,7 +4206,8 @@ func _on_sam_timer_timeout():
 				matrix[0][5] = 1
 			elif matrix[0][5] == 1:
 				matrix[0][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 5:
 			sam_hoz = 0
 			sam_vert = 6
@@ -4028,7 +4215,8 @@ func _on_sam_timer_timeout():
 				matrix[0][6] = 1
 			elif matrix[0][6] == 1:
 				matrix[0][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 0 and sam_vert == 6:
 			sam_hoz = 0
 			sam_vert = 7
@@ -4036,7 +4224,8 @@ func _on_sam_timer_timeout():
 				matrix[0][7] = 1
 			elif matrix[0][7] == 1:
 				matrix[0][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 1 and sam_vert == 0:
 			sam_hoz = 1
@@ -4045,7 +4234,8 @@ func _on_sam_timer_timeout():
 				matrix[1][1] = 1
 			elif matrix[1][1] == 1:
 				matrix[1][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 1:
 			sam_hoz = 1
 			sam_vert = 2
@@ -4053,7 +4243,8 @@ func _on_sam_timer_timeout():
 				matrix[1][2] = 1
 			elif matrix[1][2] == 1:
 				matrix[1][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 2:
 			sam_hoz = 1
 			sam_vert = 3
@@ -4061,7 +4252,8 @@ func _on_sam_timer_timeout():
 				matrix[1][3] = 1
 			elif matrix[1][3] == 1:
 				matrix[1][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 3:
 			sam_hoz = 1
 			sam_vert = 4
@@ -4069,7 +4261,8 @@ func _on_sam_timer_timeout():
 				matrix[1][4] = 1
 			elif matrix[1][4] == 1:
 				matrix[1][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 4:
 			sam_hoz = 1
 			sam_vert = 5
@@ -4077,7 +4270,8 @@ func _on_sam_timer_timeout():
 				matrix[1][5] = 1
 			elif matrix[1][5] == 1:
 				matrix[1][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 5:
 			sam_hoz = 1
 			sam_vert = 6
@@ -4085,7 +4279,8 @@ func _on_sam_timer_timeout():
 				matrix[1][6] = 1
 			elif matrix[1][6] == 1:
 				matrix[1][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 1 and sam_vert == 6:
 			sam_hoz = 1
 			sam_vert = 7
@@ -4093,7 +4288,8 @@ func _on_sam_timer_timeout():
 				matrix[1][7] = 1
 			elif matrix[1][7] == 1:
 				matrix[1][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 2 and sam_vert == 0:
 			sam_hoz = 2
@@ -4102,7 +4298,8 @@ func _on_sam_timer_timeout():
 				matrix[2][1] = 1
 			elif matrix[2][1] == 1:
 				matrix[2][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 1:
 			sam_hoz = 2
 			sam_vert = 2
@@ -4110,7 +4307,8 @@ func _on_sam_timer_timeout():
 				matrix[2][2] = 1
 			elif matrix[2][2] == 1:
 				matrix[2][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 2:
 			sam_hoz = 2
 			sam_vert = 3
@@ -4118,7 +4316,8 @@ func _on_sam_timer_timeout():
 				matrix[2][3] = 1
 			elif matrix[2][3] == 1:
 				matrix[2][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 3:
 			sam_hoz = 2
 			sam_vert = 4
@@ -4126,7 +4325,8 @@ func _on_sam_timer_timeout():
 				matrix[2][4] = 1
 			elif matrix[2][4] == 1:
 				matrix[2][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 4:
 			sam_hoz = 2
 			sam_vert = 5
@@ -4134,7 +4334,8 @@ func _on_sam_timer_timeout():
 				matrix[2][5] = 1
 			elif matrix[2][5] == 1:
 				matrix[2][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 5:
 			sam_hoz = 2
 			sam_vert = 6
@@ -4142,7 +4343,8 @@ func _on_sam_timer_timeout():
 				matrix[2][6] = 1
 			elif matrix[2][6] == 1:
 				matrix[2][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 2 and sam_vert == 6:
 			sam_hoz = 2
 			sam_vert = 7
@@ -4150,7 +4352,8 @@ func _on_sam_timer_timeout():
 				matrix[2][7] = 1
 			elif matrix[2][7] == 1:
 				matrix[2][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 				
 		elif sam_hoz == 3 and sam_vert == 0:
 			sam_hoz = 3
@@ -4159,7 +4362,8 @@ func _on_sam_timer_timeout():
 				matrix[3][1] = 1
 			elif matrix[3][1] == 1:
 				matrix[3][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 1:
 			sam_hoz = 3
 			sam_vert = 2
@@ -4167,7 +4371,8 @@ func _on_sam_timer_timeout():
 				matrix[3][2] = 1
 			elif matrix[3][2] == 1:
 				matrix[3][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 2:
 			sam_hoz = 3
 			sam_vert = 3
@@ -4175,7 +4380,8 @@ func _on_sam_timer_timeout():
 				matrix[3][3] = 1
 			elif matrix[3][3] == 1:
 				matrix[3][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 3:
 			sam_hoz = 3
 			sam_vert = 4
@@ -4183,7 +4389,8 @@ func _on_sam_timer_timeout():
 				matrix[3][4] = 1
 			elif matrix[3][4] == 1:
 				matrix[3][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 4:
 			sam_hoz = 3
 			sam_vert = 5
@@ -4191,7 +4398,8 @@ func _on_sam_timer_timeout():
 				matrix[3][5] = 1
 			elif matrix[3][5] == 1:
 				matrix[3][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 5:
 			sam_hoz = 3
 			sam_vert = 6
@@ -4199,7 +4407,8 @@ func _on_sam_timer_timeout():
 				matrix[3][6] = 1
 			elif matrix[3][6] == 1:
 				matrix[3][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 3 and sam_vert == 6:
 			sam_hoz = 3
 			sam_vert = 7
@@ -4207,7 +4416,8 @@ func _on_sam_timer_timeout():
 				matrix[3][7] = 1
 			elif matrix[3][7] == 1:
 				matrix[3][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 4 and sam_vert == 0:
 			sam_hoz = 4
@@ -4216,7 +4426,8 @@ func _on_sam_timer_timeout():
 				matrix[4][1] = 1
 			elif matrix[4][1] == 1:
 				matrix[4][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 1:
 			sam_hoz = 4
 			sam_vert = 2
@@ -4224,7 +4435,8 @@ func _on_sam_timer_timeout():
 				matrix[4][2] = 1
 			elif matrix[4][2] == 1:
 				matrix[4][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 2:
 			sam_hoz = 4
 			sam_vert = 3
@@ -4232,7 +4444,8 @@ func _on_sam_timer_timeout():
 				matrix[4][3] = 1
 			elif matrix[4][3] == 1:
 				matrix[4][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 3:
 			sam_hoz = 4
 			sam_vert = 4
@@ -4240,7 +4453,8 @@ func _on_sam_timer_timeout():
 				matrix[4][4] = 1
 			elif matrix[4][4] == 1:
 				matrix[4][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 4:
 			sam_hoz = 4
 			sam_vert = 5
@@ -4248,7 +4462,8 @@ func _on_sam_timer_timeout():
 				matrix[4][5] = 1
 			elif matrix[4][5] == 1:
 				matrix[4][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 5:
 			sam_hoz = 5
 			sam_vert = 5
@@ -4256,7 +4471,8 @@ func _on_sam_timer_timeout():
 				matrix[5][5] = 1
 			elif matrix[5][5] == 1:
 				matrix[5][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 4 and sam_vert == 6:
 			sam_hoz = 4
 			sam_vert = 7
@@ -4264,7 +4480,8 @@ func _on_sam_timer_timeout():
 				matrix[4][7] = 1
 			elif matrix[4][7] == 1:
 				matrix[4][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 5 and sam_vert == 0:
 			sam_hoz = 5
@@ -4273,7 +4490,8 @@ func _on_sam_timer_timeout():
 				matrix[5][1] = 1
 			elif matrix[5][1] == 1:
 				matrix[5][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 1:
 			sam_hoz = 5
 			sam_vert = 2
@@ -4281,7 +4499,8 @@ func _on_sam_timer_timeout():
 				matrix[5][2] = 1
 			elif matrix[5][2] == 1:
 				matrix[5][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 2:
 			sam_hoz = 5
 			sam_vert = 3
@@ -4289,7 +4508,8 @@ func _on_sam_timer_timeout():
 				matrix[5][3] = 1
 			elif matrix[5][3] == 1:
 				matrix[5][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 3:
 			sam_hoz = 5
 			sam_vert = 4
@@ -4297,7 +4517,8 @@ func _on_sam_timer_timeout():
 				matrix[5][4] = 1
 			elif matrix[5][4] == 1:
 				matrix[5][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 4:
 			sam_hoz = 5
 			sam_vert = 5
@@ -4305,7 +4526,8 @@ func _on_sam_timer_timeout():
 				matrix[5][5] = 1
 			elif matrix[5][5] == 1:
 				matrix[5][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 5:
 			sam_hoz = 5
 			sam_vert = 6
@@ -4313,7 +4535,8 @@ func _on_sam_timer_timeout():
 				matrix[5][6] = 1
 			elif matrix[5][6] == 1:
 				matrix[5][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 5 and sam_vert == 6:
 			sam_hoz = 5
 			sam_vert = 7
@@ -4321,7 +4544,8 @@ func _on_sam_timer_timeout():
 				matrix[5][7] = 1
 			elif matrix[5][7] == 1:
 				matrix[5][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		
 		elif sam_hoz == 6 and sam_vert == 0:
 			sam_hoz = 6
@@ -4330,7 +4554,8 @@ func _on_sam_timer_timeout():
 				matrix[6][1] = 1
 			elif matrix[6][1] == 1:
 				matrix[6][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 1:
 			sam_hoz = 6
 			sam_vert = 2
@@ -4338,7 +4563,8 @@ func _on_sam_timer_timeout():
 				matrix[6][2] = 1
 			elif matrix[6][2] == 1:
 				matrix[6][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 2:
 			sam_hoz = 6
 			sam_vert = 3
@@ -4346,7 +4572,8 @@ func _on_sam_timer_timeout():
 				matrix[6][3] = 1
 			elif matrix[6][3] == 1:
 				matrix[6][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 3:
 			sam_hoz = 6
 			sam_vert = 4
@@ -4354,7 +4581,8 @@ func _on_sam_timer_timeout():
 				matrix[6][4] = 1
 			elif matrix[6][4] == 1:
 				matrix[6][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 4:
 			sam_hoz = 6
 			sam_vert = 5
@@ -4362,7 +4590,8 @@ func _on_sam_timer_timeout():
 				matrix[6][5] = 1
 			elif matrix[6][5] == 1:
 				matrix[6][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 5:
 			sam_hoz = 6
 			sam_vert = 6
@@ -4370,7 +4599,8 @@ func _on_sam_timer_timeout():
 				matrix[6][6] = 1
 			elif matrix[6][6] == 1:
 				matrix[6][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 6 and sam_vert == 6:
 			sam_hoz = 6
 			sam_vert = 7
@@ -4378,7 +4608,8 @@ func _on_sam_timer_timeout():
 				matrix[6][7] = 1
 			elif matrix[6][7] == 1:
 				matrix[6][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 	
 		elif sam_hoz == 7 and sam_vert == 0:
 			sam_hoz = 7
@@ -4387,7 +4618,8 @@ func _on_sam_timer_timeout():
 				matrix[7][1] = 1
 			elif matrix[7][1] == 1:
 				matrix[7][1] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 1:
 			sam_hoz = 7
 			sam_vert = 2
@@ -4395,7 +4627,8 @@ func _on_sam_timer_timeout():
 				matrix[7][2] = 1
 			elif matrix[7][2] == 1:
 				matrix[7][2] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 2:
 			sam_hoz = 7
 			sam_vert = 3
@@ -4403,7 +4636,8 @@ func _on_sam_timer_timeout():
 				matrix[7][3] = 1
 			elif matrix[7][3] == 1:
 				matrix[7][3] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 3:
 			sam_hoz = 7
 			sam_vert = 4
@@ -4411,7 +4645,8 @@ func _on_sam_timer_timeout():
 				matrix[7][4] = 1
 			elif matrix[7][4] == 1:
 				matrix[7][4] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 4:
 			sam_hoz = 7
 			sam_vert = 5
@@ -4419,7 +4654,8 @@ func _on_sam_timer_timeout():
 				matrix[7][5] = 1
 			elif matrix[7][5] == 1:
 				matrix[7][5] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 5:
 			sam_hoz = 7
 			sam_vert = 6
@@ -4427,7 +4663,8 @@ func _on_sam_timer_timeout():
 				matrix[7][6] = 1
 			elif matrix[7][6] == 1:
 				matrix[7][6] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 		elif sam_hoz == 7 and sam_vert == 6:
 			sam_hoz = 7
 			sam_vert = 7
@@ -4435,7 +4672,8 @@ func _on_sam_timer_timeout():
 				matrix[7][7] = 1
 			elif matrix[7][7] == 1:
 				matrix[7][7] = 0
-				perks.success = perks.success - 2
+				if perks.success > 2:
+					perks.success = perks.success - 2
 				
 func _on_day_timer_timeout():
 	perk_check()
@@ -4444,6 +4682,9 @@ func _on_day_timer_timeout():
 
 func perk_check():
 	if (towns.town_select == "slatten"):
+		if perks.success > rewards_globals.points_in_one_minigame:
+			rewards_globals.points_in_one_minigame = perks.success
+			rewards_globals.million_total_minigame_points += perks.success
 		if (int(perks.perk_goal) <= int(perks.success)):
 			if (perks.perk_num == 1):
 				supplies.slatten_freezie_count = supplies.slatten_freezie_count + 5
@@ -4468,18 +4709,8 @@ func perk_check():
 				slatten.slatten_storefront_sabatoge_key = false
 			elif (perks.perk_num == 10):
 				slatten.slatten_advertising_sabatoge_key = false
-				
-				
-func pixel_small():
-	pixel.set_pos(Vector2(909.8880, 82.193741))
-	pixel.set_scale(Vector2(1.730811, 2.281522))
-	
-func pixel_big():
-	pixel.set_pos(Vector2(799.116211, 304.996155))
-	pixel.set_scale(Vector2(5.821814, 8.30002))
 
 func _on_pixel_button_button_down():
-	pixel_big()
 	get_tree().set_pause(true)
 	get_node("menu").set_hidden(false)
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
@@ -4491,7 +4722,6 @@ func _on_sound_slider_value_changed( value ):
 	get_node("StreamPlayer").set_volume(new_volume)
 
 func _on_return_to_game_button_down():
-	pixel_small()
 	get_tree().set_pause(false)
 	get_node("menu").set_hidden(true)
 
@@ -4526,3 +4756,34 @@ func _on_yes_main_button_down():
 func _on_no_main_button_down():
 	get_node("are_you_sure_2").set_hidden(true)
 	get_node("menu").set_hidden(false)
+	
+func _on_customer_timeout():
+	get_node("customer_display/moneybag").show()
+	get_node("customer_display/explosion").show()
+	get_node("customer_display/pop_timer").start()
+
+
+func _on_customer_pop_timer_timeout():
+	get_node("customer_display/moneybag").hide()
+	get_node("customer_display/explosion").hide()
+
+
+func _on_tutorial_button_button_down():
+	get_node("tutorial").hide()
+	countin()
+	
+func countin():
+	get_node("in").show()
+	get_node("in/count_timer").start()
+
+func _on_count_timer_timeout():
+	if get_node("in/in_number").get_text() == "3":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("2")
+	elif get_node("in/in_number").get_text() == "2":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("1")
+	elif get_node("in/in_number").get_text() == "1":
+		get_node("in").hide()
+		get_node("in/count_timer").stop()
+		get_tree().set_pause(false)

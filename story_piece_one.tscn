@@ -268,8 +268,9 @@ autoplay = "story_piece_one"
 
 [node name="tv_desktop" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.169138, -0.300376 )
-transform/scale = Vector2( 0.0993884, 0.158644 )
+visibility/visible = false
+transform/pos = Vector2( -1.13452, 1.20238 )
+transform/scale = Vector2( 0.00519792, 0.0133534 )
 texture = ExtResource( 2 )
 
 [node name="Sprite1" type="Sprite" parent="tv_desktop"]
@@ -330,8 +331,9 @@ percent_visible = 1.0
 [node name="email" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( -0.661597, -1.37725 )
-transform/scale = Vector2( 0.105015, 0.124539 )
+visibility/visible = false
+transform/pos = Vector2( 13.2037, 5.12915 )
+transform/scale = Vector2( 0.0119557, 0.0196748 )
 texture = ExtResource( 6 )
 
 [node name="job_application" type="RichTextLabel" parent="email"]
@@ -438,7 +440,7 @@ margin/bottom = 62.0
 custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "^"
+bbcode/bbcode = "Newo Ikken"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -505,8 +507,8 @@ percent_visible = 1.0
 [node name="acceptance_email" type="Sprite" parent="."]
 
 visibility/visible = false
-transform/pos = Vector2( 15.6936, 6.30926 )
-transform/scale = Vector2( 0.0107395, 0.0195464 )
+transform/pos = Vector2( 1.29896, -2.48024 )
+transform/scale = Vector2( 0.109361, 0.122812 )
 texture = ExtResource( 6 )
 
 [node name="start_date" type="RichTextLabel" parent="acceptance_email"]
@@ -583,8 +585,9 @@ percent_visible = 1.0
 
 [node name="speaking_bubble" type="Sprite" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( -9.68433, 12.0952 )
-transform/scale = Vector2( 0.0236464, 0.0134585 )
+transform/scale = Vector2( 0.023646, 0.013458 )
 texture = ExtResource( 8 )
 flip_v = true
 
@@ -602,12 +605,13 @@ margin/bottom = -208.0
 custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "OK. I am almost done..."
+bbcode/bbcode = "I gotta go!"
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="skip_button" type="LinkButton" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.08, 0.08 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -628,6 +632,7 @@ underline = 2
 
 [node name="mute_button" type="TextureButton" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -654,16 +659,17 @@ transform/scale = Vector2( 0.177281, 0.054958 )
 
 [node name="Sprite" type="Sprite" parent="fade_out"]
 
+transform/pos = Vector2( 0.721695, 112.741 )
 texture = ExtResource( 11 )
 
 [node name="Sprite1" type="Sprite" parent="fade_out"]
 
-transform/pos = Vector2( -4.3559, 488.426 )
+transform/pos = Vector2( -2.91241, 542.853 )
 texture = ExtResource( 11 )
 
 [node name="Sprite2" type="Sprite" parent="fade_out"]
 
-transform/pos = Vector2( -3.26694, 979.587 )
+transform/pos = Vector2( -2.54517, 987.362 )
 texture = ExtResource( 11 )
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]

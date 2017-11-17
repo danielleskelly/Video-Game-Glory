@@ -1,28 +1,24 @@
-[gd_scene load_steps=25 format=1]
+[gd_scene load_steps=21 format=1]
 
 [ext_resource path="res://story_piece_two.gd" type="Script" id=1]
-[ext_resource path="res://Screen Shot 2017-10-27 at 4.36.54 PM.png" type="Texture" id=2]
-[ext_resource path="res://blacker_than_night.png" type="Texture" id=3]
-[ext_resource path="res://office.png" type="Texture" id=4]
-[ext_resource path="res://window.png" type="Texture" id=5]
-[ext_resource path="res://chair.png" type="Texture" id=6]
-[ext_resource path="res://desk.png" type="Texture" id=7]
-[ext_resource path="res://computer.png" type="Texture" id=8]
-[ext_resource path="res://lamp.png" type="Texture" id=9]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=10]
-[ext_resource path="res://pixel_leg.png" type="Texture" id=11]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=12]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=13]
-[ext_resource path="res://pixel.png" type="Texture" id=14]
-[ext_resource path="res://back_of_head.png" type="Texture" id=15]
-[ext_resource path="res://hallway.png" type="Texture" id=16]
-[ext_resource path="res://hallway_door.png" type="Texture" id=17]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=18]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=19]
-[ext_resource path="res://bubble_green.png" type="Texture" id=20]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=21]
-[ext_resource path="res://music_icon_on.png" type="Texture" id=22]
-[ext_resource path="res://music_icon_off.png" type="Texture" id=23]
+[ext_resource path="res://pixel_front.png" type="Texture" id=2]
+[ext_resource path="res://pixel_back.png" type="Texture" id=3]
+[ext_resource path="res://Screen Shot 2017-10-27 at 4.36.54 PM.png" type="Texture" id=4]
+[ext_resource path="res://blacker_than_night.png" type="Texture" id=5]
+[ext_resource path="res://office.png" type="Texture" id=6]
+[ext_resource path="res://window.png" type="Texture" id=7]
+[ext_resource path="res://chair.png" type="Texture" id=8]
+[ext_resource path="res://desk.png" type="Texture" id=9]
+[ext_resource path="res://computer.png" type="Texture" id=10]
+[ext_resource path="res://lamp.png" type="Texture" id=11]
+[ext_resource path="res://hallway.png" type="Texture" id=12]
+[ext_resource path="res://hallway_door.png" type="Texture" id=13]
+[ext_resource path="res://genre_bubble.png" type="Texture" id=14]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=15]
+[ext_resource path="res://bubble_green.png" type="Texture" id=16]
+[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=17]
+[ext_resource path="res://music_icon_on.png" type="Texture" id=18]
+[ext_resource path="res://music_icon_off.png" type="Texture" id=19]
 
 [sub_resource type="Animation" id=1]
 
@@ -212,54 +208,44 @@ tracks/17/keys = {
 effective.", "Do you still think you can take the job?", "...! *whew* Great! Alright then!", "Well you should come and sit before you change your mind.", "We can complete a little training session while we wait for Sam." ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("pixel/head:visibility/visible")
+tracks/18/path = NodePath("outside_office:visibility/visible")
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
-"times": FloatArray( 44.1, 44.2, 46.4 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, true ]
-}
-tracks/19/type = "value"
-tracks/19/path = NodePath("pixel/back_of_head:visibility/visible")
-tracks/19/interp = 1
-tracks/19/imported = false
-tracks/19/keys = {
-"times": FloatArray( 0, 44.2, 46.4 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/20/type = "value"
-tracks/20/path = NodePath("outside_office:visibility/visible")
-tracks/20/interp = 1
-tracks/20/imported = false
-tracks/20/keys = {
 "times": FloatArray( 0, 45.5, 45.8 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, true, false ]
 }
-tracks/21/type = "value"
-tracks/21/path = NodePath("inner_office:transform/pos")
-tracks/21/interp = 1
-tracks/21/imported = false
-tracks/21/keys = {
+tracks/19/type = "value"
+tracks/19/path = NodePath("inner_office:transform/pos")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
 "times": FloatArray( 45.8, 46.2 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.835938, 0.548452 ), Vector2( 0.546793, -2.38416 ) ]
 }
-tracks/22/type = "value"
-tracks/22/path = NodePath("inner_office:transform/scale")
-tracks/22/interp = 1
-tracks/22/imported = false
-tracks/22/keys = {
+tracks/20/type = "value"
+tracks/20/path = NodePath("inner_office:transform/scale")
+tracks/20/interp = 1
+tracks/20/imported = false
+tracks/20/keys = {
 "times": FloatArray( 45.8, 45.9 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.997054, 1.03856 ), Vector2( 1.08923, 1.1302 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("pixel/left_arm:texture")
+tracks/21/interp = 1
+tracks/21/imported = false
+tracks/21/keys = {
+"times": FloatArray( 0, 44.2, 46.4 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ]
 }
 
 [node name="story_piece_two" type="Node2D"]
@@ -285,36 +271,36 @@ editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( -0.37561, 0.0704174 )
 transform/scale = Vector2( 0.0448001, 0.0752878 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 
 [node name="crtv" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 14.1786, -476.419 )
+transform/pos = Vector2( -3.3481, -500.739 )
 transform/scale = Vector2( 2.80987, 1.32809 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 
 [node name="crtv1" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 44.4936, -124.914 )
+transform/pos = Vector2( 26.9669, -149.233 )
 transform/scale = Vector2( 2.80987, 0.141569 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 
 [node name="crtv2" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 44.4936, -39.4257 )
+transform/pos = Vector2( 26.9669, -63.745 )
 transform/scale = Vector2( 2.80987, 0.141569 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 
 [node name="crtv3" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 44.4938, 340.111 )
+transform/pos = Vector2( 26.967, 315.792 )
 transform/scale = Vector2( 2.80987, 1.64743 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 
 [node name="inner_office" type="Node2D" parent="."]
 
-transform/pos = Vector2( 0.835938, 0.548452 )
-transform/scale = Vector2( 0.997054, 1.03856 )
+transform/pos = Vector2( 0.546793, -2.38416 )
+transform/scale = Vector2( 1.08923, 1.1302 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -323,7 +309,7 @@ __meta__ = {
 
 transform/pos = Vector2( -0.886196, 0.188874 )
 transform/scale = Vector2( 0.0549797, 0.0791224 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -332,7 +318,7 @@ __meta__ = {
 
 transform/pos = Vector2( -0.894562, 1.02959 )
 transform/scale = Vector2( 0.0688434, 0.0859832 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -342,31 +328,31 @@ __meta__ = {
 
 transform/pos = Vector2( -1.03533, 15.618 )
 transform/scale = Vector2( 0.0316858, 0.0376473 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 flip_h = true
 
 [node name="desk" type="Sprite" parent="inner_office"]
 
 transform/pos = Vector2( -0.438004, 18.1301 )
 transform/scale = Vector2( 0.0415765, 0.0653465 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 flip_h = true
 
 [node name="computer" type="Sprite" parent="inner_office"]
 
 transform/pos = Vector2( 1.45889, 10.5681 )
 transform/scale = Vector2( 0.0337077, 0.0503777 )
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 
 [node name="lamp" type="Sprite" parent="inner_office"]
 
 transform/pos = Vector2( -5.63167, 9.87837 )
 transform/scale = Vector2( 0.0103429, 0.0153723 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 
 [node name="pixel" type="Node2D" parent="."]
 
-transform/pos = Vector2( -5.75828, 5.77512 )
+transform/pos = Vector2( -19.0301, 2.60686 )
 transform/scale = Vector2( 0.907402, 0.824811 )
 __meta__ = {
 "_edit_lock_": true
@@ -374,60 +360,16 @@ __meta__ = {
 
 [node name="left_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 1.85691, -2.51094 )
-transform/scale = Vector2( 0.119264, 0.178869 )
-texture = ExtResource( 10 )
-
-[node name="right_arm" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 3.71628, -2.7337 )
-transform/scale = Vector2( 0.107768, 0.176169 )
-texture = ExtResource( 10 )
-flip_h = true
-
-[node name="left_leg" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 1.3199, 15.2614 )
-transform/scale = Vector2( 0.0868664, 0.216245 )
-texture = ExtResource( 11 )
-
-[node name="right_leg" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 3.91681, 15.0056 )
-transform/scale = Vector2( 0.0972607, 0.217393 )
-texture = ExtResource( 11 )
-flip_h = true
-
-[node name="crotch" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 2.50384, 8.9411 )
-transform/scale = Vector2( 0.0757082, 0.116306 )
-texture = ExtResource( 12 )
-
-[node name="body" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 2.53233, -0.948296 )
-transform/scale = Vector2( 0.0910834, 0.207054 )
-texture = ExtResource( 13 )
-
-[node name="head" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 2.6307, -13.8357 )
-transform/scale = Vector2( 0.096818, 0.155561 )
-texture = ExtResource( 14 )
-
-[node name="back_of_head" type="Sprite" parent="pixel"]
-
-visibility/visible = false
-transform/pos = Vector2( 2.56298, -13.0579 )
-transform/scale = Vector2( 0.101456, 0.167424 )
-texture = ExtResource( 15 )
+transform/pos = Vector2( 3.16718, 7.19054 )
+transform/scale = Vector2( 0.0654626, 0.105712 )
+texture = ExtResource( 2 )
 
 [node name="outside_office" type="Node2D" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( -0.00170135, 1.32025 )
-transform/scale = Vector2( 0.985302, 0.97776 )
+visibility/visible = false
+transform/pos = Vector2( 0.212709, -5.55474 )
+transform/scale = Vector2( 1.60774, 1.65711 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -436,16 +378,17 @@ __meta__ = {
 
 transform/pos = Vector2( -0.357955, -0.681422 )
 transform/scale = Vector2( 0.0553747, 0.0864132 )
-texture = ExtResource( 16 )
+texture = ExtResource( 12 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="door" type="Sprite" parent="outside_office"]
 
-transform/pos = Vector2( -0.498777, -0.679602 )
+transform/pos = Vector2( -16.5636, -0.884731 )
 transform/scale = Vector2( 0.0589716, 0.0878755 )
-texture = ExtResource( 17 )
+texture = ExtResource( 13 )
+flip_h = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -462,7 +405,7 @@ __meta__ = {
 
 transform/pos = Vector2( -12.2206, 13.7753 )
 transform/scale = Vector2( 0.0253465, 0.0183162 )
-texture = ExtResource( 18 )
+texture = ExtResource( 14 )
 flip_h = true
 flip_v = true
 
@@ -477,10 +420,10 @@ margin/left = -21.0
 margin/top = 7.0
 margin/right = 190.0
 margin/bottom = 150.0
-custom_fonts/normal_font = ExtResource( 19 )
+custom_fonts/normal_font = ExtResource( 15 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Whew! I made it!"
+bbcode/bbcode = "I've got nothing better to do."
 visible_characters = -1
 percent_visible = 1.0
 __meta__ = {
@@ -489,7 +432,6 @@ __meta__ = {
 
 [node name="other_bubble" type="Node2D" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( -2.30912, -1.68264 )
 
 [node name="bubble" type="Sprite" parent="other_bubble"]
@@ -497,7 +439,7 @@ transform/pos = Vector2( -2.30912, -1.68264 )
 transform/pos = Vector2( 19.2281, -0.906036 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0277045, 0.0193962 )
-texture = ExtResource( 20 )
+texture = ExtResource( 16 )
 
 [node name="speech" type="RichTextLabel" parent="other_bubble"]
 
@@ -510,16 +452,16 @@ margin/left = 10.0
 margin/top = -17.0
 margin/right = 220.0
 margin/bottom = 340.0
-custom_fonts/normal_font = ExtResource( 19 )
+custom_fonts/normal_font = ExtResource( 15 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Oh, yes! You must be the new liason! You are just in time."
+bbcode/bbcode = "We can complete a little training session while we wait for Sam."
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 21 )
+stream/stream = ExtResource( 17 )
 stream/play = false
 stream/loop = true
 stream/volume_db = -10.0
@@ -539,7 +481,7 @@ margin/left = -27.0
 margin/top = 27.0
 margin/right = 46.0
 margin/bottom = 67.0
-custom_fonts/font = ExtResource( 19 )
+custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
 toggle_mode = false
 click_on_press = true
@@ -563,8 +505,8 @@ toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 22 )
-textures/pressed = ExtResource( 23 )
+textures/normal = ExtResource( 18 )
+textures/pressed = ExtResource( 19 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.15 )
 params/stretch_mode = 0

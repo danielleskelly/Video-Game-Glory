@@ -12,11 +12,9 @@ func _on_AnimationPlayer_finished():
 	towns.town_select = "windrow"
 	get_tree().change_scene("res://strategy.tscn")
 
-
 func _on_skip_button_button_down():
 	towns.town_select = "windrow"
 	get_tree().change_scene("res://strategy.tscn")
-
 
 func set_sound():
 	get_node("StreamPlayer").set_volume(sound.volume)

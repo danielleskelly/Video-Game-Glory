@@ -1,41 +1,247 @@
-[gd_scene load_steps=25 format=1]
+[gd_scene load_steps=29 format=1]
 
 [ext_resource path="res://story_piece_seven.gd" type="Script" id=1]
-[ext_resource path="res://Screen Shot 2017-07-13 at 4.35.37 PM.png" type="Texture" id=2]
-[ext_resource path="res://blacker_than_night.png" type="Texture" id=3]
-[ext_resource path="res://side_walls.png" type="Texture" id=4]
-[ext_resource path="res://open_door.png" type="Texture" id=5]
-[ext_resource path="res://window.png" type="Texture" id=6]
-[ext_resource path="res://floor.png" type="Texture" id=7]
-[ext_resource path="res://chair.png" type="Texture" id=8]
-[ext_resource path="res://desk.png" type="Texture" id=9]
-[ext_resource path="res://computer.png" type="Texture" id=10]
-[ext_resource path="res://lamp.png" type="Texture" id=11]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=12]
-[ext_resource path="res://pixel_leg.png" type="Texture" id=13]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=14]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=15]
-[ext_resource path="res://pixel.png" type="Texture" id=16]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=17]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=18]
-[ext_resource path="res://bubble_green.png" type="Texture" id=19]
-[ext_resource path="res://purple_bubble.png" type="Texture" id=20]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=21]
-[ext_resource path="res://music.png" type="Texture" id=22]
-[ext_resource path="res://no_music.png" type="Texture" id=23]
+[ext_resource path="res://Screen Shot 2017-10-27 at 4.36.54 PM.png" type="Texture" id=2]
+[ext_resource path="res://office.png" type="Texture" id=3]
+[ext_resource path="res://window.png" type="Texture" id=4]
+[ext_resource path="res://chair.png" type="Texture" id=5]
+[ext_resource path="res://desk.png" type="Texture" id=6]
+[ext_resource path="res://computer.png" type="Texture" id=7]
+[ext_resource path="res://lamp.png" type="Texture" id=8]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=9]
+[ext_resource path="res://pixel_leg.png" type="Texture" id=10]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=11]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=12]
+[ext_resource path="res://pixel.png" type="Texture" id=13]
+[ext_resource path="res://blacker_than_night.png" type="Texture" id=14]
+[ext_resource path="res://genre_bubble.png" type="Texture" id=15]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=16]
+[ext_resource path="res://bubble_green.png" type="Texture" id=17]
+[ext_resource path="res://purple_bubble.png" type="Texture" id=18]
+[ext_resource path="res://sam_top_arm.png" type="Texture" id=19]
+[ext_resource path="res://sam_lower_arm.png" type="Texture" id=20]
+[ext_resource path="res://sam_bottom_leg.png" type="Texture" id=21]
+[ext_resource path="res://sam_back_of_crotch.png" type="Texture" id=22]
+[ext_resource path="res://sam_torso.png" type="Texture" id=23]
+[ext_resource path="res://sam_back_of_head.png" type="Texture" id=24]
+[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=25]
+[ext_resource path="res://music_icon_on.png" type="Texture" id=26]
+[ext_resource path="res://music_icon_off.png" type="Texture" id=27]
 
 [sub_resource type="Animation" id=1]
 
-resource/name = "piece_one"
-length = 10.0
+length = 60.0
 loop = false
 step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("other_bubble:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 18.8, 33.5, 43.7, 58.2 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("other_bubble/yes:bbcode/bbcode")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 18.8, 26.2, 43.7 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "I don't know what is happening!", "Hang on! I am trying to fix it!", "I have an idea! I think I can safely send you to the next city while I fix the program!" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("speech_bubble:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("speech_bubble/whew:bbcode/bbcode")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray(  ),
+"transitions": FloatArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("inner_office:visibility/visible")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5, 59.2 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("pixel:visibility/visible")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("other_other_bubble:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 1.7, 18.6, 34.6, 42.6 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("sam:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("skip_button:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("mute_button:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("crtv/crtv:transform/pos")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0.5, 0.7, 33.5, 42.8, 58.2, 58.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.36666, -21.2373 ), Vector2( -1.33893, -21.798 ), Vector2( -1.33893, -21.798 ), Vector2( -1.33893, -21.798 ), Vector2( -1.33893, -21.798 ), Vector2( -1.33893, -17.9561 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("crtv/crtv1:transform/pos")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0, 0.5, 0.7, 1, 1.3, 33.5, 33.8, 33.9, 34.2, 42.8, 58.2, 58.5, 58.6, 58.9, 59.1 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 40.471, 218.779 ), Vector2( 1.99336, 15.218 ), Vector2( 1.59624, 11.8094 ), Vector2( 1.39594, 8.1498 ), Vector2( 1.51177, 3.44979 ), Vector2( 1.51177, 3.44979 ), Vector2( 1.04718, 16.2178 ), Vector2( 0.814888, 22.2148 ), Vector2( 0.814888, 4.57045 ), Vector2( 0.814888, 4.57045 ), Vector2( 0.814888, 4.57045 ), Vector2( 0.814888, 20.194 ), Vector2( 0.968668, 15.3277 ), Vector2( 1.12244, 22.4991 ), Vector2( 0.507343, 17.8889 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("crtv/crtv2:transform/pos")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0, 0.5, 0.7, 1, 1.3, 33.5, 33.8, 33.9, 34.2, 42.8, 58.2, 58.5, 58.6, 58.9, 59.1 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 40.8005, 350.395 ), Vector2( 3.20227, 5.97271 ), Vector2( 2.79642, 2.26012 ), Vector2( 2.58302, -0.0161018 ), Vector2( 2.68576, -2.0227 ), Vector2( 2.68576, -2.0227 ), Vector2( 1.98888, 6.29583 ), Vector2( 1.75658, 12.2929 ), Vector2( 1.89417, -0.997667 ), Vector2( 1.89417, -0.997667 ), Vector2( 1.89417, -0.997667 ), Vector2( 1.89417, 6.42993 ), Vector2( 2.04794, 1.56357 ), Vector2( 2.20172, 8.73506 ), Vector2( 1.58662, 4.12482 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("crtv/crtv3:transform/pos")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0, 0.5, 0.7, 0.8, 1, 1.3, 33.5, 33.8, 33.9, 34.2, 42.8, 43, 43.3, 43.4, 58.2, 58.5, 58.6, 58.9, 59.1 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 40.8006, 729.932 ), Vector2( -0.0869484, 47.2941 ), Vector2( -0.0139999, 50.2241 ), Vector2( -0.13517, 41.1844 ), Vector2( -0.0619392, 37.0381 ), Vector2( 0.0479088, 29.1254 ), Vector2( 0.0479088, 29.1254 ), Vector2( 0.280205, 48.6642 ), Vector2( 0.0479092, 54.6613 ), Vector2( -0.639975, 28.7676 ), Vector2( -0.639975, 28.7676 ), Vector2( -0.639973, 40.2932 ), Vector2( -0.793743, 34.1462 ), Vector2( -0.793741, 27.2309 ), Vector2( -0.793741, 27.2309 ), Vector2( -0.639967, 52.8433 ), Vector2( -0.486187, 47.9769 ), Vector2( -0.332414, 55.1484 ), Vector2( -0.947516, 50.5381 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("sam/head:texture")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray(  ),
+"transitions": FloatArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("sam:transform/pos")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray(  ),
+"transitions": FloatArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("sam/full crotch:texture")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray(  ),
+"transitions": FloatArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("other_other_bubble/yes:bbcode/bbcode")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 1.7, 12.7, 34.6 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "You have thwarted my plans for the last time!", "Welcome to the ultimate sabotage!", "You have no chance! You are trapped!" ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("strategy:visibility/visible")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("crtv/crtv:visibility/visible")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
+"times": FloatArray( 0.5 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[node name="story_piece_seven" type="Node2D"]
+[node name="story_piece_five" type="Node2D"]
 
 transform/pos = Vector2( 514.994, 303.814 )
 transform/scale = Vector2( 16.0311, 9.62488 )
 script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
@@ -55,100 +261,49 @@ transform/pos = Vector2( -0.37561, 0.0704174 )
 transform/scale = Vector2( 0.0448001, 0.0752878 )
 texture = ExtResource( 2 )
 
-[node name="crtv" type="Sprite" parent="strategy"]
-
-transform/pos = Vector2( 10.2945, -210.299 )
-transform/scale = Vector2( 2.80987, 1.22882 )
-texture = ExtResource( 3 )
-
-[node name="crtv1" type="Sprite" parent="strategy"]
-
-transform/pos = Vector2( 40.8005, 31.7248 )
-transform/scale = Vector2( 2.80987, 0.141569 )
-texture = ExtResource( 3 )
-
-[node name="crtv2" type="Sprite" parent="strategy"]
-
-transform/pos = Vector2( 40.8005, 117.213 )
-transform/scale = Vector2( 2.80987, 0.141569 )
-texture = ExtResource( 3 )
-
-[node name="crtv3" type="Sprite" parent="strategy"]
-
-transform/pos = Vector2( 40.8006, 496.75 )
-transform/scale = Vector2( 2.80987, 1.64743 )
-texture = ExtResource( 3 )
-
 [node name="inner_office" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 0.835938, 0.548452 )
 transform/scale = Vector2( 0.997054, 1.03856 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="door_plug" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -9.56574, -1.68441 )
-transform/scale = Vector2( 0.298605, 0.109688 )
-texture = ExtResource( 4 )
-
-[node name="back_wall" type="Sprite" parent="inner_office"]
-
-transform/pos = Vector2( -0.268932, -5.90387 )
-transform/scale = Vector2( 0.0439155, 0.0510962 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="left_wall" type="Sprite" parent="inner_office"]
-
-transform/pos = Vector2( -28.1363, 1.99552 )
-transform/scale = Vector2( 0.0647611, 0.109688 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="right_wall" type="Sprite" parent="inner_office"]
-
-transform/pos = Vector2( 27.8933, 2.76461 )
-transform/scale = Vector2( 0.0647611, 0.109688 )
-texture = ExtResource( 4 )
-flip_h = true
+transform/pos = Vector2( -1.05319, -0.356661 )
+transform/scale = Vector2( 0.0532517, 0.0760253 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="window" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( 0.838203, -9.9508 )
+transform/pos = Vector2( -0.894562, 1.02959 )
 transform/scale = Vector2( 0.0963926, 0.109688 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="floor" type="Sprite" parent="inner_office"]
-
-transform/pos = Vector2( 0.130707, 17.8638 )
-transform/scale = Vector2( 0.0513523, 0.0357478 )
-texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="chair" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -1.63028, 3.11239 )
+transform/pos = Vector2( -1.03533, 15.618 )
 transform/scale = Vector2( 0.036946, 0.0518165 )
-texture = ExtResource( 8 )
+texture = ExtResource( 5 )
 flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="desk" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( 1.08964, 4.90849 )
+transform/pos = Vector2( -0.438004, 18.1301 )
 transform/scale = Vector2( 0.0647611, 0.109688 )
-texture = ExtResource( 9 )
+texture = ExtResource( 6 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -156,88 +311,118 @@ __meta__ = {
 
 [node name="computer" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( 4.16058, -6.8645 )
-transform/scale = Vector2( 0.112629, 0.166383 )
-texture = ExtResource( 10 )
-
-[node name="lamp" type="Sprite" parent="inner_office"]
-
-transform/pos = Vector2( -7.49199, -5.37641 )
-transform/scale = Vector2( 0.0103429, 0.0153723 )
-texture = ExtResource( 11 )
-
-[node name="pixel" type="Node2D" parent="."]
-
-transform/pos = Vector2( -20.0649, -6.55184 )
-transform/scale = Vector2( 0.884005, 0.718394 )
+transform/pos = Vector2( 1.45889, 10.5681 )
+transform/scale = Vector2( 0.033708, 0.050378 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="lamp" type="Sprite" parent="inner_office"]
+
+transform/pos = Vector2( -5.63167, 9.87837 )
+transform/scale = Vector2( 0.0103429, 0.0153723 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pixel" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( -20.6054, 6.38172 )
+transform/scale = Vector2( 0.884005, 0.718394 )
+
 [node name="left_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( -1.99212, 1.7015 )
-transform/rot = -17.716
-transform/scale = Vector2( 0.0910834, 0.20347 )
-texture = ExtResource( 12 )
+transform/pos = Vector2( 1.22534, -1.39071 )
+transform/scale = Vector2( 0.119264, 0.189767 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="right_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 6.74009, 1.45695 )
-transform/rot = 16.8
-transform/scale = Vector2( -0.0942702, 0.207054 )
-texture = ExtResource( 12 )
+transform/pos = Vector2( 4.27768, -1.43459 )
+transform/scale = Vector2( 0.107768, 0.196398 )
+texture = ExtResource( 9 )
+flip_h = true
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="left_leg" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 1.23616, 17.7552 )
-transform/scale = Vector2( 0.0910834, 0.274678 )
-texture = ExtResource( 13 )
+transform/pos = Vector2( 1.3199, 15.2614 )
+transform/scale = Vector2( 0.086866, 0.216245 )
+texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="right_leg" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 3.47801, 17.6814 )
-transform/scale = Vector2( -0.108113, 0.264482 )
-texture = ExtResource( 13 )
+transform/pos = Vector2( 3.91681, 15.0056 )
+transform/scale = Vector2( 0.097261, 0.217393 )
+texture = ExtResource( 10 )
+flip_h = true
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="crotch" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 1.74826, 5.1688 )
-transform/scale = Vector2( 0.0841436, 0.132919 )
-texture = ExtResource( 14 )
+transform/pos = Vector2( 2.50384, 8.9411 )
+transform/scale = Vector2( 0.075708, 0.116306 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="body" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 1.94207, -1.98201 )
-transform/scale = Vector2( 0.0910834, 0.207054 )
-texture = ExtResource( 15 )
+transform/pos = Vector2( 2.57364, -0.948296 )
+transform/scale = Vector2( 0.091083, 0.207054 )
+texture = ExtResource( 12 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="head" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 2.33107, -12.284 )
+transform/pos = Vector2( 2.58499, -13.4983 )
 transform/scale = Vector2( 0.096818, 0.155561 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="crtv" type="Node2D" parent="."]
+
+[node name="crtv" type="Sprite" parent="crtv"]
+
+transform/pos = Vector2( -1.33893, -17.9561 )
+transform/scale = Vector2( 0.125882, 0.0910982 )
+texture = ExtResource( 14 )
+
+[node name="crtv1" type="Sprite" parent="crtv"]
+
+transform/pos = Vector2( 0.507343, 17.8889 )
+transform/scale = Vector2( 0.125882, 0.0133824 )
+texture = ExtResource( 14 )
+
+[node name="crtv2" type="Sprite" parent="crtv"]
+
+transform/pos = Vector2( 1.58662, 4.12482 )
+transform/scale = Vector2( 0.125882, 0.0197666 )
+texture = ExtResource( 14 )
+
+[node name="crtv3" type="Sprite" parent="crtv"]
+
+transform/pos = Vector2( -0.947516, 50.5381 )
+transform/scale = Vector2( 0.125882, 0.124031 )
+texture = ExtResource( 14 )
 
 [node name="speech_bubble" type="Node2D" parent="."]
 
@@ -245,92 +430,187 @@ visibility/visible = false
 
 [node name="bubble" type="Sprite" parent="speech_bubble"]
 
-transform/pos = Vector2( -2.48767, 20.4542 )
-transform/scale = Vector2( 0.02817, 0.00984191 )
-texture = ExtResource( 17 )
+transform/pos = Vector2( -2.48767, 16.884 )
+transform/scale = Vector2( 0.02817, 0.0152025 )
+texture = ExtResource( 15 )
 flip_h = true
 flip_v = true
 
 [node name="whew" type="RichTextLabel" parent="speech_bubble"]
 
-rect/scale = Vector2( 0.15, 0.15 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -16.0
-margin/top = 16.0
-margin/right = 168.0
-margin/bottom = 60.0
-custom_fonts/normal_font = ExtResource( 18 )
+margin/top = 9.0
+margin/right = 254.0
+margin/bottom = 145.0
+custom_fonts/normal_font = ExtResource( 16 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = ".....Hmmkay...."
+bbcode/bbcode = "er...um...well..."
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="other_bubble" type="Node2D" parent="."]
 
-transform/pos = Vector2( 22.7972, -12.5517 )
-transform/scale = Vector2( 0.798329, 0.551946 )
+visibility/visible = false
+transform/pos = Vector2( 14.3138, -14.0428 )
+transform/scale = Vector2( 0.610145, 0.504589 )
 
 [node name="bubble" type="Sprite" parent="other_bubble"]
 
-transform/pos = Vector2( -27.9697, -3.17193 )
+transform/pos = Vector2( -27.2496, 17.6459 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0362315, 0.028268 )
-texture = ExtResource( 19 )
+texture = ExtResource( 17 )
 
 [node name="yes" type="RichTextLabel" parent="other_bubble"]
 
-rect/scale = Vector2( 0.125, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -42.0
-margin/top = -23.0
-margin/right = 212.0
-margin/bottom = 150.0
-custom_fonts/normal_font = ExtResource( 18 )
+margin/left = -41.0
+margin/top = -3.0
+margin/right = 273.0
+margin/bottom = 252.0
+custom_fonts/normal_font = ExtResource( 16 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Plansey story piece"
+bbcode/bbcode = "I have an idea! I think I can safely send you to the next city while I fix the program!"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="other_other_bubble" type="Node2D" parent="."]
 
 visibility/visible = false
-transform/pos = Vector2( 22.7972, -12.5517 )
-transform/scale = Vector2( 0.798329, 0.551946 )
+transform/pos = Vector2( 17.7667, -11.6668 )
+transform/scale = Vector2( 0.641126, 0.524294 )
 
 [node name="bubble" type="Sprite" parent="other_other_bubble"]
 
-transform/pos = Vector2( -24.7741, -3.17193 )
+transform/pos = Vector2( -28.0682, 1.74075 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0362315, 0.028268 )
-texture = ExtResource( 20 )
+texture = ExtResource( 18 )
 flip_v = true
 
 [node name="yes" type="RichTextLabel" parent="other_other_bubble"]
 
-rect/scale = Vector2( 0.125, 0.2 )
+rect/scale = Vector2( 0.1, 0.15 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -42.0
-margin/top = -19.0
-margin/right = 219.0
-margin/bottom = 170.0
-custom_fonts/normal_font = ExtResource( 18 )
+margin/left = -45.0
+margin/top = -16.0
+margin/right = 263.0
+margin/bottom = 234.0
+custom_fonts/normal_font = ExtResource( 16 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Otherwise they are threatening to start.... watching MOVIES!"
+bbcode/bbcode = "You have no chance! You are trapped!"
 visible_characters = -1
+percent_visible = 1.0
+
+[node name="sam" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 17.7192, 29.1975 )
+transform/scale = Vector2( 0.884005, 0.718394 )
+
+[node name="top arm left" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( -17.4362, 2.07494 )
+transform/scale = Vector2( 0.268766, 0.329765 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="top arm right" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( -21.0046, 2.56828 )
+transform/scale = Vector2( 0.246029, 0.329765 )
+texture = ExtResource( 19 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bottom arm right" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( -21.0023, 1.99836 )
+transform/scale = Vector2( 0.240393, 0.306038 )
+texture = ExtResource( 20 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bottom arm left" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( -19.175, 1.58156 )
+transform/scale = Vector2( 0.209892, 0.314374 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bottom left leg" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( -17.9753, 32.0163 )
+transform/scale = Vector2( 0.185859, 0.25514 )
+texture = ExtResource( 21 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bottom left leg1" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( -21.761, 31.9805 )
+transform/scale = Vector2( 0.190989, 0.25514 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="full crotch" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( -18.656, 19.1697 )
+transform/scale = Vector2( 0.158266, 0.25514 )
+texture = ExtResource( 22 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="torso" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( -19.716, 1.04348 )
+transform/scale = Vector2( 0.168754, 0.272936 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="head" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( -19.247, -12.1867 )
+transform/scale = Vector2( 0.124356, 0.251262 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 21 )
+stream/stream = ExtResource( 25 )
 stream/play = false
 stream/loop = true
 stream/volume_db = -10.0
@@ -341,16 +621,17 @@ stream/buffering_ms = 500
 
 [node name="skip_button" type="LinkButton" parent="."]
 
-rect/scale = Vector2( 0.4, 0.4 )
+rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -31.0
-margin/top = 19.0
-margin/right = -3.0
-margin/bottom = 33.0
-custom_colors/font_color = Color( 0.121569, 1, 0.0901961, 1 )
+margin/left = -26.0
+margin/top = 26.0
+margin/right = 47.0
+margin/bottom = 66.0
+custom_fonts/font = ExtResource( 16 )
+custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -360,20 +641,21 @@ underline = 2
 
 [node name="mute_button" type="TextureButton" parent="."]
 
+rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 25.0
-margin/top = 19.0
+margin/left = 20.0
+margin/top = 24.0
 margin/right = 30.0
-margin/bottom = 25.45
+margin/bottom = 39.0
 toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 22 )
-textures/pressed = ExtResource( 23 )
+textures/normal = ExtResource( 26 )
+textures/pressed = ExtResource( 27 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.15 )
 params/stretch_mode = 0

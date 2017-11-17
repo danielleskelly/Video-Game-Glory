@@ -31,7 +31,8 @@ func _process(delta):
 		if (x.get_name() == "customer"):
 			var parent_name = get_parent().get_name()
 			if (parent_name == "time_management"):
-				perks.success = perks.success - 1
+				if (perks.success > 5):
+					perks.success = perks.success - 1
 			elif (parent_name == "endless_mode"):
 				var game_over = get_tree().get_nodes_in_group("game_over")
 				for x in game_over:

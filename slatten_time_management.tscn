@@ -1,986 +1,1825 @@
-[gd_scene load_steps=32 format=1]
+[gd_scene load_steps=18 format=1]
 
-[ext_resource path="res://slatten_time_management.gd" type="Script" id=1]
-[ext_resource path="res://ladder.png" type="Texture" id=2]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=3]
-[ext_resource path="res://pixel_leg.png" type="Texture" id=4]
-[ext_resource path="res://computer.png" type="Texture" id=5]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=6]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=7]
-[ext_resource path="res://pixel.png" type="Texture" id=8]
-[ext_resource path="res://blue_ghostie.png" type="Texture" id=9]
+[ext_resource path="res://qbert.gd" type="Script" id=1]
+[ext_resource path="res://inner_box.png" type="Texture" id=2]
+[ext_resource path="res://potential_background.png" type="Texture" id=3]
+[ext_resource path="res://pixel.png" type="Texture" id=4]
+[ext_resource path="res://customer_six.png" type="Texture" id=5]
+[ext_resource path="res://outer_box.png" type="Texture" id=6]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://slatten.ogg" type="AudioStream" id=8]
+[ext_resource path="res://error_box.png" type="Texture" id=9]
+[ext_resource path="res://button.png" type="Texture" id=10]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=11]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=12]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=13]
+[ext_resource path="res://customer_four.png" type="Texture" id=14]
+[ext_resource path="res://moneybag.png" type="Texture" id=15]
+[ext_resource path="res://ghostie_tag.png" type="Texture" id=16]
+[ext_resource path="res://wasd.png" type="Texture" id=17]
 
-[sub_resource type="RectangleShape2D" id=1]
+[node name="qbert" type="Node2D"]
 
-custom_solver_bias = 0.0
-extents = Vector2( 11.8182, 10 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 158.779, 346.391 )
-
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 150.422, 310.242 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 151.896, 337.311 )
-
-[sub_resource type="RectangleShape2D" id=6]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=7]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 11.0221 )
-
-[sub_resource type="RectangleShape2D" id=8]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10.0625, 123.233 )
-
-[sub_resource type="RectangleShape2D" id=9]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 60.0219 )
-
-[sub_resource type="RectangleShape2D" id=10]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=11]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=12]
-
-custom_solver_bias = 0.0
-extents = Vector2( 36.9747, 65.0903 )
-
-[sub_resource type="RectangleShape2D" id=13]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 6.23065 )
-
-[sub_resource type="RectangleShape2D" id=14]
-
-custom_solver_bias = 0.0
-extents = Vector2( 102.778, 59.6666 )
-
-[sub_resource type="RectangleShape2D" id=15]
-
-custom_solver_bias = 0.0
-extents = Vector2( 69.2563, 5.51279 )
-
-[sub_resource type="RectangleShape2D" id=16]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=17]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 57.8135 )
-
-[sub_resource type="RectangleShape2D" id=18]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 9.94118 )
-
-[sub_resource type="RectangleShape2D" id=19]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 2.98364 )
-
-[sub_resource type="RectangleShape2D" id=20]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=21]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=22]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[node name="slatten_time_management" type="Node2D"]
-
-transform/pos = Vector2( 512.405, 304.228 )
-transform/scale = Vector2( 16.0619, 9.63964 )
 script/script = ExtResource( 1 )
 
-[node name="Sprite6" type="Sprite" parent="."]
+[node name="zerozero_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -11.7599, 21.6397 )
-transform/scale = Vector2( 0.00815063, 0.027132 )
+transform/pos = Vector2( 496.183, 51.9225 )
+transform/scale = Vector2( 0.348801, 0.243002 )
 texture = ExtResource( 2 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite6" groups=[
-"up",
-]]
+[node name="zerozero_gray" type="Sprite" parent="."]
 
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 11.9613, 0, 0, 36.6789, -20.3525, -14.1678 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite6/StaticBody2D"]
-
-transform/pos = Vector2( -20.3525, -14.1678 )
-transform/scale = Vector2( 11.9613, 36.6789 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-
-[node name="Sprite7" type="Sprite" parent="."]
-
-transform/pos = Vector2( 13.5642, 21.3574 )
-transform/scale = Vector2( 0.00815063, 0.027132 )
-texture = ExtResource( 2 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite7" groups=[
-"up",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -18.1162, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite7/StaticBody2D"]
-
-transform/pos = Vector2( -18.1162, 0 )
-shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
-
-[node name="Sprite8" type="Sprite" parent="."]
-
-transform/pos = Vector2( 19.0694, 3.83988 )
-transform/scale = Vector2( 0.00815063, 0.0228145 )
-texture = ExtResource( 2 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite8" groups=[
-"up",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1.19284, -16.9277, 28.6476 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite8/StaticBody2D"]
-
-transform/pos = Vector2( -16.9277, 28.6476 )
-transform/scale = Vector2( 1, 1.19284 )
-shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite10" type="Sprite" parent="."]
-
-transform/pos = Vector2( -18.3764, 4.4178 )
-transform/scale = Vector2( 0.00815063, 0.0220865 )
-texture = ExtResource( 2 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite10" groups=[
-"up",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 4 )
-shapes/0/transform = Matrix32( 13.3468, 0, 0, 35.0508, -20.8473, -15.6174 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite10/StaticBody2D"]
-
-transform/pos = Vector2( -20.8473, -15.6174 )
-transform/scale = Vector2( 13.3468, 35.0508 )
-shape = SubResource( 4 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite11" type="Sprite" parent="."]
-
-transform/pos = Vector2( -23.9069, -11.5687 )
-transform/scale = Vector2( 0.00815063, 0.0229439 )
-texture = ExtResource( 2 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite11" groups=[
-"up",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 5 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1.0475, -11.2303, 18.1182 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite11/StaticBody2D"]
-
-transform/pos = Vector2( -11.2303, 18.1182 )
-transform/scale = Vector2( 1, 1.0475 )
-shape = SubResource( 5 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite9" type="Sprite" parent="."]
-
-transform/pos = Vector2( 24.2377, -11.4806 )
-transform/scale = Vector2( 0.00815063, 0.0205866 )
-texture = ExtResource( 2 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite9" groups=[
-"up",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 14.9015, 0, 0, 34.7627, -19.0267, 46.3849 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite9/StaticBody2D"]
-
-transform/pos = Vector2( -19.0267, 46.3849 )
-transform/scale = Vector2( 14.9015, 34.7627 )
-shape = SubResource( 6 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="floor" type="Sprite" parent="."]
-
-transform/pos = Vector2( 0.427444, 40.7039 )
-transform/scale = Vector2( 0.644636, 0.185922 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="floor" groups=[
-"down",
-]]
-
-transform/pos = Vector2( 0.316196, -0.107553 )
-transform/scale = Vector2( 3.12162, 1.58248 )
-input/pickable = false
-shapes/0/shape = SubResource( 7 )
-shapes/0/transform = Matrix32( 3.21065, 0, 0, 3.25109, -0.115834, -0.603791 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D"]
-
-transform/pos = Vector2( -0.115834, -0.603791 )
-transform/scale = Vector2( 3.21065, 3.25109 )
-shape = SubResource( 7 )
-trigger = false
-_update_shape_index = 0
-
-[node name="Sprite" type="Sprite" parent="."]
-
-transform/pos = Vector2( -19.6501, 12.7376 )
-transform/scale = Vector2( 0.122507, 0.016711 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite" groups=[
-"down",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 8 )
-shapes/0/transform = Matrix32( 10.0004, -0.0100923, 0.00100919, 0.999999, -0.398954, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
-
-transform/pos = Vector2( -0.398954, 0 )
-transform/rot = 0.0578222
-transform/scale = Vector2( 10.0004, 1 )
-shape = SubResource( 8 )
-trigger = false
-_update_shape_index = 0
-
-[node name="StaticBody2D1" type="StaticBody2D" parent="Sprite" groups=[
-"down",
-"right_push",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 9 )
-shapes/0/transform = Matrix32( 6.66696, 0, 0, 1.98159, -32.1532, -4.29432 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D1"]
-
-transform/pos = Vector2( -32.1532, -4.29432 )
-transform/scale = Vector2( 6.66696, 1.98159 )
-shape = SubResource( 9 )
-trigger = false
-_update_shape_index = 0
-
-[node name="Sprite3" type="Sprite" parent="."]
-
-transform/pos = Vector2( 19.947, 12.7376 )
-transform/scale = Vector2( 0.122507, 0.016711 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite3" groups=[
-"down",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 10 )
-shapes/0/transform = Matrix32( 10.0311, 0, 0, 4.98329, 0.307356, -2.56297 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite3/StaticBody2D"]
-
-transform/pos = Vector2( 0.307356, -2.56297 )
-transform/scale = Vector2( 10.0311, 4.98329 )
-shape = SubResource( 10 )
-trigger = false
-_update_shape_index = 0
-
-[node name="StaticBody2D1" type="StaticBody2D" parent="Sprite3" groups=[
-"down",
-"left_push",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 11 )
-shapes/0/transform = Matrix32( 6.71942, 0, 0, 4.69016, 29.6329, -6.37393 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite3/StaticBody2D1"]
-
-transform/pos = Vector2( 29.6329, -6.37393 )
-transform/scale = Vector2( 6.71942, 4.69016 )
-shape = SubResource( 11 )
-trigger = false
-_update_shape_index = 0
-
-[node name="Sprite4" type="Sprite" parent="."]
-
-transform/pos = Vector2( 23.368, -3.53336 )
-transform/scale = Vector2( 0.0902216, 0.0096192 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite4" groups=[
-"down",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 12 )
-shapes/0/transform = Matrix32( 2.69885, 0, 0, 1, -0.781513, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite4/StaticBody2D"]
-
-transform/pos = Vector2( -0.781513, 0 )
-transform/scale = Vector2( 2.69885, 1 )
-shape = SubResource( 12 )
-trigger = false
-_update_shape_index = 0
-
-[node name="StaticBody2D1" type="StaticBody2D" parent="Sprite4" groups=[
-"down",
-"left_push",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 13 )
-shapes/0/transform = Matrix32( 6.54582, 0, 0, -8.26213, 34.0398, 0.371338 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite4/StaticBody2D1"]
-
-transform/pos = Vector2( 34.0398, 0.371338 )
-transform/scale = Vector2( 6.54582, -8.26213 )
-shape = SubResource( 13 )
-trigger = false
-_update_shape_index = 0
-
-[node name="Sprite5" type="Sprite" parent="."]
-
-transform/pos = Vector2( 27.2167, -18.2829 )
-transform/scale = Vector2( 0.0478859, 0.00961926 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite5" groups=[
-"down",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 14 )
-shapes/0/transform = Matrix32( 0.987528, 0, 0, 1, 1.31927, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite5/StaticBody2D"]
-
-transform/pos = Vector2( 1.31927, 0 )
-transform/scale = Vector2( 0.987528, 1 )
-shape = SubResource( 14 )
-trigger = false
-_update_shape_index = 0
-
-[node name="StaticBody2D1" type="StaticBody2D" parent="Sprite5" groups=[
-"down",
-"left_push",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 15 )
-shapes/0/transform = Matrix32( 0.606187, 0, 0, 9.19439, 55.5919, 4.26062 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite5/StaticBody2D1"]
-
-transform/pos = Vector2( 55.5919, 4.26062 )
-transform/scale = Vector2( 0.606187, 9.19439 )
-shape = SubResource( 15 )
-trigger = false
-_update_shape_index = 0
-
-[node name="Sprite1" type="Sprite" parent="."]
-
-transform/pos = Vector2( -23.6912, -3.0763 )
-transform/scale = Vector2( 0.0840203, 0.0123476 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite1" groups=[
-"down",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 16 )
-shapes/0/transform = Matrix32( 10.0282, 0, 0, 5.5271, -0.116732, 0.352846 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite1/StaticBody2D"]
-
-transform/pos = Vector2( -0.116732, 0.352846 )
-transform/scale = Vector2( 10.0282, 5.5271 )
-shape = SubResource( 16 )
-trigger = false
-_update_shape_index = 0
-
-[node name="StaticBody2D1" type="StaticBody2D" parent="Sprite1" groups=[
-"down",
-"right_push",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 17 )
-shapes/0/transform = Matrix32( 5.87301, 0, 0, 1, -39.0457, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite1/StaticBody2D1"]
-
-transform/pos = Vector2( -39.0457, 0 )
-transform/scale = Vector2( 5.87301, 1 )
-shape = SubResource( 17 )
-trigger = false
-_update_shape_index = 0
-
-[node name="Sprite2" type="Sprite" parent="."]
-
-transform/pos = Vector2( -26.9443, -18.9481 )
-transform/scale = Vector2( 0.0476413, 0.00914123 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2" groups=[
-"down",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 18 )
-shapes/0/transform = Matrix32( 10.0711, 0, 0, 6.04374, -0.0470581, -0.987671 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D"]
-
-transform/pos = Vector2( -0.0470581, -0.987671 )
-transform/scale = Vector2( 10.0711, 6.04374 )
-shape = SubResource( 18 )
-trigger = false
-_update_shape_index = 0
-
-[node name="StaticBody2D1" type="StaticBody2D" parent="Sprite2" groups=[
-"down",
-"right_push",
-]]
-
-input/pickable = false
-shapes/0/shape = SubResource( 19 )
-shapes/0/transform = Matrix32( 4.9642, 0, 0, 20.082, -51.5346, 3.63385 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D1"]
-
-transform/pos = Vector2( -51.5346, 3.63385 )
-transform/scale = Vector2( 4.9642, 20.082 )
-shape = SubResource( 19 )
-trigger = false
-_update_shape_index = 0
-
-[node name="lou" type="Node2D" parent="."]
-
-transform/pos = Vector2( 0.217655, 22.2306 )
-transform/scale = Vector2( 0.0649728, 0.178233 )
-
-[node name="Sprite14" type="Sprite" parent="lou"]
-
-transform/pos = Vector2( -20.7711, -3.49052 )
-transform/rot = -51.6816
-transform/scale = Vector2( 0.300574, 0.304012 )
+transform/pos = Vector2( 496.298, 51.8494 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="Sprite16" type="Sprite" parent="lou"]
+[node name="onezero_gray" type="Sprite" parent="."]
 
-transform/pos = Vector2( -6.84311, 19.605 )
-transform/rot = -10.8952
-transform/scale = Vector2( 0.322879, 0.282704 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite17" type="Sprite" parent="lou"]
-
-transform/pos = Vector2( 4.43701, 19.6008 )
-transform/rot = 6.76718
-transform/scale = Vector2( 0.323252, 0.313685 )
-texture = ExtResource( 4 )
-flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite15" type="Sprite" parent="lou"]
-
-transform/pos = Vector2( 19.1325, -3.8644 )
-transform/rot = 52.3878
-transform/scale = Vector2( 0.299532, 0.307618 )
+transform/pos = Vector2( 460.298, 88.8494 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
 texture = ExtResource( 3 )
-flip_h = true
+
+[node name="twozero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 427.298, 125.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threezero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 394.298, 162.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourzero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 361.298, 199.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivezero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 328.298, 236.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixzero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 295.298, 273.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenzero_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 262.298, 310.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerofour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 653.298, 195.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onefour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 620.298, 232.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twofour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 587.298, 269.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threefour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 554.298, 306.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourfour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 521.298, 343.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivefour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 488.298, 380.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixfour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 455.298, 417.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenfour_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 422.298, 454.849 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerotwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 573.162, 123.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onetwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 540.162, 160.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twotwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 507.162, 197.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threetwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 474.162, 234.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourtwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 441.162, 271.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivetwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 408.162, 308.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixtwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 375.162, 345.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="seventwo_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 342.162, 382.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerosix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 733.162, 267.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onesix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 700.162, 304.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twosix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 667.162, 341.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threesix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 634.162, 378.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="foursix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 601.162, 415.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivesix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 568.162, 452.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixsix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 535.162, 489.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevensix_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 502.162, 526.869 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zeroone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 532.94, 87.9189 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="oneone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 499.94, 124.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twoone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 466.94, 161.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threeone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 433.94, 198.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 400.94, 235.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fiveone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 367.94, 272.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 334.94, 309.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenone_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 301.94, 346.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerofive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 692.94, 231.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onefive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 659.94, 268.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twofive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 626.94, 305.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threefive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 593.94, 342.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourfive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 560.94, 379.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivefive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 527.94, 416.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixfive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 494.94, 453.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenfive_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 461.94, 490.919 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zerothree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 613.745, 159.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="onethree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 580.745, 196.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twothree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 547.745, 233.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threethree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 514.745, 270.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourthree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 481.745, 307.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fivethree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448.745, 344.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixthree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 415.745, 381.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="seventhree_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 382.745, 418.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="zeroseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 773.745, 303.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="oneseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 740.745, 340.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="twoseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 707.745, 377.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="threeseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 674.745, 414.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 641.745, 451.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fiveseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 608.745, 488.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sixseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 575.745, 525.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="sevenseven_gray" type="Sprite" parent="."]
+
+transform/pos = Vector2( 542.745, 562.759 )
+transform/scale = Vector2( 0.0409471, 0.0472863 )
+texture = ExtResource( 3 )
+
+[node name="fourzero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 361.183, 199.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twozero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 427.183, 125.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixzero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 295.183, 273.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onezero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 460.183, 88.9225 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivezero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 328.183, 236.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threezero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 394.183, 162.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevenzero_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 262.183, 310.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerofour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 653.183, 195.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite18" type="Sprite" parent="lou"]
+[node name="fourfour_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.499115, -5.56326 )
-transform/rot = -0.0958171
-transform/scale = Vector2( 0.552294, 0.2994 )
-texture = ExtResource( 5 )
-flip_h = true
+transform/pos = Vector2( 521.183, 343.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twofour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 587.183, 269.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixfour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 455.183, 417.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onefour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 620.183, 232.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivefour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 488.183, 380.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threefour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 554.183, 306.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevenfour_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 422.183, 454.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerotwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 573.183, 123.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite13" type="Sprite" parent="lou"]
+[node name="fourtwo_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -2.8653, 4.73611 )
-transform/scale = Vector2( 0.306069, 0.19767 )
-texture = ExtResource( 6 )
+transform/pos = Vector2( 441.183, 271.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twotwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 507.183, 197.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixtwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 375.183, 345.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onetwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 540.183, 160.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivetwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 408.183, 308.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threetwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 474.183, 234.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="seventwo_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 342.183, 382.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerosix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 733.183, 267.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite12" type="Sprite" parent="lou"]
+[node name="foursix_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -2.7594, -4.7635 )
-transform/scale = Vector2( 0.478678, 0.28094 )
-texture = ExtResource( 7 )
+transform/pos = Vector2( 601.183, 415.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twosix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 667.183, 341.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixsix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 535.183, 489.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onesix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 700.183, 304.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivesix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 568.183, 452.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threesix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 634.183, 378.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevensix_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 502.183, 526.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zeroone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 533.183, 87.9225 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite 2" type="Sprite" parent="lou"]
+[node name="fourone_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -1.73157, -21.7064 )
-transform/scale = Vector2( 0.478678, 0.28094 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( 401.183, 235.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twoone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 467.183, 161.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 335.183, 309.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="oneone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 500.183, 124.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fiveone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 368.183, 272.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threeone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 434.183, 198.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevenone_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 302.183, 346.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerofive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 693.183, 231.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="lou_colliders" type="RigidBody2D" parent="lou"]
+[node name="fourfive_white" type="Sprite" parent="."]
 
-input/pickable = false
-shapes/0/shape = SubResource( 20 )
-shapes/0/transform = Matrix32( 1.85125, 0, 0, 3.17352, -4.28547, -1.08114 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 0.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 100
-contact_monitor = true
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
+transform/pos = Vector2( 561.183, 379.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="twofive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 627.183, 305.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixfive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 495.183, 453.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onefive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 660.183, 268.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivefive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 528.183, 416.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threefive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 594.183, 342.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sevenfive_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 462.183, 490.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zerothree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 613.183, 159.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="lou/lou_colliders"]
+[node name="fourthree_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -4.28547, -1.08114 )
-transform/scale = Vector2( 1.85125, 3.17352 )
-shape = SubResource( 20 )
-trigger = false
-_update_shape_index = 0
+transform/pos = Vector2( 481.183, 307.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 
-[node name="vaccuum" type="RigidBody2D" parent="lou"]
+[node name="twothree_white" type="Sprite" parent="."]
 
-input/pickable = false
-shapes/0/shape = SubResource( 20 )
-shapes/0/transform = Matrix32( 1.71572, 0, 0, 1.17524, -32.4117, -5.2811 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 20 )
-shapes/1/transform = Matrix32( 1.79961, 0, 0, 1.17524, 25.4474, -5.97809 )
-shapes/1/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 0.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 100
-contact_monitor = true
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
+transform/pos = Vector2( 547.183, 233.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="sixthree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 415.183, 381.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="onethree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 580.183, 196.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="fivethree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448.183, 344.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="threethree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 514.183, 270.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="seventhree_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 382.183, 418.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
+
+[node name="zeroseven_white" type="Sprite" parent="."]
+
+transform/pos = Vector2( 773.183, 303.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="lou/vaccuum"]
+[node name="fourseven_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -32.4117, -5.2811 )
-transform/scale = Vector2( 1.71572, 1.17524 )
-shape = SubResource( 20 )
-trigger = false
-_update_shape_index = 0
+transform/pos = Vector2( 641.183, 451.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 
-[node name="CollisionShape2D1" type="CollisionShape2D" parent="lou/vaccuum"]
+[node name="twoseven_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( 25.4474, -5.97809 )
-transform/scale = Vector2( 1.79961, 1.17524 )
-shape = SubResource( 20 )
-trigger = false
-_update_shape_index = 1
+transform/pos = Vector2( 707.183, 377.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." groups=[
-"left",
-]]
+[node name="sixseven_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -42.496, -5.97999 )
-transform/scale = Vector2( -0.328001, 1.18687 )
-input/pickable = false
-shapes/0/shape = SubResource( 21 )
-shapes/0/transform = Matrix32( 1.95261, 0, 0, 2.68284, -12.384, 5.51749 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
+transform/pos = Vector2( 575.183, 525.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="oneseven_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -12.384, 5.51749 )
-transform/scale = Vector2( 1.95261, 2.68284 )
-shape = SubResource( 21 )
-trigger = false
-_update_shape_index = 0
+transform/pos = Vector2( 740.183, 340.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 
-[node name="StaticBody2D1" type="StaticBody2D" parent="." groups=[
-"right",
-]]
+[node name="fiveseven_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( 34.3064, -4.93533 )
-transform/scale = Vector2( -0.328001, 1.18687 )
-input/pickable = false
-shapes/0/shape = SubResource( 21 )
-shapes/0/transform = Matrix32( 1.95261, 0, 0, 2.68284, -12.384, 4.41727 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( 608.183, 488.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D1"]
+[node name="threeseven_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -12.384, 4.41727 )
-transform/scale = Vector2( 1.95261, 2.68284 )
-shape = SubResource( 21 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
+transform/pos = Vector2( 674.183, 414.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 
-[node name="ghostie" type="Sprite" parent="."]
+[node name="sevenseven_white" type="Sprite" parent="."]
 
-transform/pos = Vector2( -29.4419, -24.5859 )
-transform/scale = Vector2( 0.017158, 0.0366978 )
-texture = ExtResource( 9 )
+transform/pos = Vector2( 542.183, 562.923 )
+transform/scale = Vector2( 0.348801, 0.243002 )
+texture = ExtResource( 2 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="ghostie" groups=[
-"ghostie",
-]]
+[node name="bert" type="Node2D" parent="."]
 
-input/pickable = false
-shapes/0/shape = SubResource( 22 )
-shapes/0/transform = Matrix32( 6.36571, 0, 0, 8.85565, -12.4333, -8.73095 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Sprite" type="Sprite" parent="bert"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ghostie/StaticBody2D"]
+transform/pos = Vector2( 527.376, 418.612 )
+transform/scale = Vector2( 0.673879, 0.584216 )
+texture = ExtResource( 4 )
 
-transform/pos = Vector2( -12.4333, -8.73095 )
-transform/scale = Vector2( 6.36571, 8.85565 )
-shape = SubResource( 22 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="ghostie_timer" type="Timer" parent="."]
+[node name="left_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 10.0
+wait_time = 0.3
 one_shot = true
 autostart = true
 
-[node name="suck_timer" type="Timer" parent="."]
+[node name="right_timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 0.5
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="up_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="down_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="sam" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="sam"]
+
+transform/pos = Vector2( 500.427, 124.952 )
+transform/scale = Vector2( 0.247646, 0.258063 )
+texture = ExtResource( 5 )
+
+[node name="sam_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[node name="perk_kill_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = true
+
+[node name="success_background" type="Sprite" parent="."]
+
+transform/pos = Vector2( 109.652, 85.2899 )
+transform/scale = Vector2( 1.0368, 0.583559 )
+texture = ExtResource( 6 )
+
+[node name="points" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -57.0
+margin/top = -86.0
+margin/right = 89.0
+margin/bottom = -26.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Points"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( -46.6388, 28.5587 )
+transform/scale = Vector2( 0.29044, 0.616124 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite1" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( -0.306656, 27.9444 )
+transform/scale = Vector2( 0.29044, 0.616124 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="success_background"]
+
+transform/pos = Vector2( 46.0255, 27.9444 )
+transform/scale = Vector2( 0.29044, 0.616124 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hundreths" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -60.0
+margin/top = 7.0
+margin/right = 86.0
+margin/bottom = 67.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="tens" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -14.0
+margin/top = 7.0
+margin/right = 132.0
+margin/bottom = 67.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="ones" type="RichTextLabel" parent="success_background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 33.0
+margin/top = 6.0
+margin/right = 179.0
+margin/bottom = 66.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="StreamPlayer" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 8 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
+
+[node name="day_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 45.0
+one_shot = true
+autostart = true
+
+[node name="countdown_timer" type="RichTextLabel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 846.0
+margin/top = 526.0
+margin/right = 992.0
+margin/bottom = 586.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "8"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="menu" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 205.129, 48.0018 )
+
+[node name="Sprite" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 312.443, 246.313 )
+transform/scale = Vector2( 1.0716, 1.3536 )
+texture = ExtResource( 9 )
+
+[node name="Sprite1" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 305.079, 211.178 )
+transform/scale = Vector2( 1.45801, 0.579654 )
+texture = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 307.13, 292.28 )
+transform/scale = Vector2( 1.49903, 0.557325 )
+texture = ExtResource( 10 )
+
+[node name="Sprite3" type="Sprite" parent="menu"]
+
+transform/pos = Vector2( 310.392, 367.845 )
+transform/scale = Vector2( 1.83556, 0.563691 )
+texture = ExtResource( 10 )
+
+[node name="sound" type="RichTextLabel" parent="menu"]
+
+rect/scale = Vector2( 1.25, 1.25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 242.0
+margin/top = 95.0
+margin/right = 388.0
+margin/bottom = 148.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Sound"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="sound_slider" type="HSlider" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 129.0
+margin/top = 148.0
+margin/right = 492.0
+margin/bottom = 164.0
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="return_to_game" type="LinkButton" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 183.0
+margin/top = 193.0
+margin/right = 506.0
+margin/bottom = 240.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return to Game"
+underline = 2
+
+[node name="return_to_village" type="LinkButton" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 176.0
+margin/top = 277.0
+margin/right = 499.0
+margin/bottom = 324.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return to Village"
+underline = 2
+
+[node name="return_to_main" type="LinkButton" parent="menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 150.0
+margin/top = 353.0
+margin/right = 547.0
+margin/bottom = 400.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Return to Main Menu"
+underline = 2
+
+[node name="are_you_sure" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 223.486, 56.8517 )
+
+[node name="Sprite" type="Sprite" parent="are_you_sure"]
+
+transform/pos = Vector2( 294.453, 245.092 )
+transform/scale = Vector2( 0.927152, 1.16971 )
+texture = ExtResource( 9 )
+
+[node name="Sprite1" type="Sprite" parent="are_you_sure"]
+
+transform/pos = Vector2( 381.863, 358.795 )
+transform/scale = Vector2( 0.470496, 0.568516 )
+texture = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="are_you_sure"]
+
+transform/pos = Vector2( 195.625, 357.815 )
+transform/scale = Vector2( 0.431288, 0.509704 )
+texture = ExtResource( 10 )
+
+[node name="sound1" type="RichTextLabel" parent="are_you_sure"]
+
+rect/scale = Vector2( 1.25, 1.25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 146.0
+margin/top = 117.0
+margin/right = 423.0
+margin/bottom = 294.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Are you sure you want to go back to the village?"
+visible_characters = -1
+percent_visible = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="yes_village" type="LinkButton" parent="are_you_sure"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 351.0
+margin/top = 342.0
+margin/right = 437.0
+margin/bottom = 389.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Yes"
+underline = 2
+
+[node name="no_village" type="LinkButton" parent="are_you_sure"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 173.0
+margin/top = 340.0
+margin/right = 259.0
+margin/bottom = 387.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "No"
+underline = 2
+
+[node name="are_you_sure_2" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 214.448, 67.7204 )
+
+[node name="Sprite" type="Sprite" parent="are_you_sure_2"]
+
+transform/pos = Vector2( 302.962, 218.16 )
+transform/scale = Vector2( 0.982398, 1.00929 )
+texture = ExtResource( 9 )
+
+[node name="Sprite1" type="Sprite" parent="are_you_sure_2"]
+
+transform/pos = Vector2( 400.039, 314.54 )
+transform/scale = Vector2( 0.501944, 0.561982 )
+texture = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="are_you_sure_2"]
+
+transform/pos = Vector2( 167.901, 314.067 )
+transform/scale = Vector2( 0.401014, 0.497267 )
+texture = ExtResource( 10 )
+
+[node name="sound1" type="RichTextLabel" parent="are_you_sure_2"]
+
+rect/scale = Vector2( 1.25, 1.25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 128.0
+margin/top = 119.0
+margin/right = 434.0
+margin/bottom = 251.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Are you sure you want to go back to the main menu?"
+visible_characters = -1
+percent_visible = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="yes_main" type="LinkButton" parent="are_you_sure_2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 365.0
+margin/top = 300.0
+margin/right = 451.0
+margin/bottom = 347.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Yes"
+underline = 2
+
+[node name="no_main" type="LinkButton" parent="are_you_sure_2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 144.0
+margin/top = 298.0
+margin/right = 230.0
+margin/bottom = 345.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "No"
+underline = 2
+
+[node name="pixel" type="Node2D" parent="."]
+
+transform/pos = Vector2( 945.701, 95.4472 )
+transform/scale = Vector2( 1.97649, 2.36291 )
+
+[node name="Sprite3" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -10.8932, 3.55614 )
+transform/scale = Vector2( 0.25343, 0.261638 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -3.67334, 18.4651 )
+transform/scale = Vector2( 0.245119, 0.205697 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 5.72064, 3.57971 )
+transform/scale = Vector2( 0.252371, 0.263026 )
+texture = ExtResource( 11 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite1" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -3.38049, 4.07014 )
+transform/scale = Vector2( 0.374836, 0.28263 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( -3.38721, -13.1848 )
+transform/scale = Vector2( 0.353845, 0.249712 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pixel_button" type="LinkButton" parent="pixel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -20.0
+margin/top = -23.0
+margin/right = 15.0
+margin/bottom = 27.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="customer_display" type="Node2D" parent="."]
+
+transform/pos = Vector2( 510.376, 308.016 )
+transform/scale = Vector2( 16.0291, 9.60572 )
+
+[node name="customer" type="Timer" parent="customer_display"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="customer_pop_timer" type="Timer" parent="customer_display"]
+
+process_mode = 1
+wait_time = 1.0
 one_shot = true
 autostart = false
 
-[connection signal="timeout" from="ghostie_timer" to="." method="_on_ghostie_timer_timeout"]
+[node name="customer_pic" type="Sprite" parent="customer_display"]
 
-[connection signal="timeout" from="suck_timer" to="." method="_on_suck_timer_timeout"]
+transform/pos = Vector2( 27.6143, 23.8742 )
+transform/scale = Vector2( 0.0172057, 0.0222086 )
+texture = ExtResource( 14 )
+
+[node name="moneybag" type="Sprite" parent="customer_display"]
+
+visibility/visible = false
+transform/pos = Vector2( 28.8934, 20.3003 )
+transform/scale = Vector2( 0.0229, 0.0328711 )
+texture = ExtResource( 15 )
+
+[node name="explosion" type="Particles2D" parent="customer_display"]
+
+visibility/visible = false
+transform/pos = Vector2( 28.9001, 20.3583 )
+transform/scale = Vector2( 0.110664, 0.16403 )
+config/amount = 50
+config/lifetime = 1.0
+config/process_mode = 1
+config/explosiveness = 0.2
+params/direction = 0.0
+params/spread = 180.0
+params/linear_velocity = 20.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 9.8
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 1.0
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color = Color( 0.288992, 0.703125, 0.173035, 1 )
+
+[node name="tutorial" type="Node2D" parent="."]
+
+process/pause_mode = 2
+transform/pos = Vector2( 512.579, 308.143 )
+transform/scale = Vector2( 16.0758, 9.50013 )
+
+[node name="Sprite2" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -3.37491, -18.1402 )
+transform/scale = Vector2( 0.0374524, 0.0683183 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -57.0
+margin/top = 24.0
+margin/right = 88.0
+margin/bottom = 82.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "ghostie"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite7" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -1.64354, -3.97207 )
+transform/scale = Vector2( 0.0374524, 0.0683183 )
+texture = ExtResource( 16 )
+flip_v = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite7"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -32.0
+margin/top = -63.0
+margin/right = 43.0
+margin/bottom = -19.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "you"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite5" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( 26.5567, -13.5851 )
+transform/scale = Vector2( 0.0374524, 0.0683183 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite5"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -39.0
+margin/top = 33.0
+margin/right = 43.0
+margin/bottom = 91.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Pixel"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite6" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( 17.4703, 25.5695 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0915925, 0.0764046 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite6"]
+
+rect/rotation = 90.0
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 17.0
+margin/top = 139.0
+margin/right = 378.0
+margin/bottom = 233.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Seconds left in the day"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite4" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -17.7307, -23.1314 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.0745852, 0.0449206 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial/Sprite4"]
+
+rect/rotation = -90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 17.0
+margin/top = 34.0
+margin/right = 162.0
+margin/bottom = 90.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "points"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite10" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -28.9237, -3.04222 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.0636586, 0.028042 )
+texture = ExtResource( 16 )
+flip_v = true
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite10"]
+
+rect/rotation = -90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = -83.0
+margin/right = 88.0
+margin/bottom = -26.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "left"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite14" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( 24.7524, 23.7369 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.0636586, 0.028042 )
+texture = ExtResource( 16 )
+flip_v = true
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite14"]
+
+rect/rotation = -90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 68.0
+margin/top = -82.0
+margin/right = 254.0
+margin/bottom = -14.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Customer"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite11" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -19.3592, -3.53033 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.0636586, 0.028042 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite11"]
+
+rect/rotation = -90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 36.0
+margin/right = 120.0
+margin/bottom = 93.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "right"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite12" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -24.1601, 0.127735 )
+transform/scale = Vector2( 0.0504109, 0.0422474 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite12"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -41.0
+margin/top = 25.0
+margin/right = 58.0
+margin/bottom = 82.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "down"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite13" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -24.2281, -10.1214 )
+transform/scale = Vector2( 0.0504109, 0.0422474 )
+texture = ExtResource( 16 )
+flip_v = true
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite13"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -20.0
+margin/top = -72.0
+margin/right = 79.0
+margin/bottom = -15.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "up"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -28.0
+margin/top = -16.0
+margin/right = 132.0
+margin/bottom = 44.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Movement"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -30.0
+margin/top = 19.0
+margin/right = 413.0
+margin/bottom = 332.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "The rules are simple:
+-Don't get caught by Sam!
+-Turn on single lights to get a few points, get them all to get a lot of points!"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="RichTextLabel1" type="RichTextLabel" parent="tutorial"]
+
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -26.0
+margin/right = 367.0
+margin/bottom = 51.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Welcome to Lights Off!"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite3" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( 26.19, -3.35279 )
+transform/scale = Vector2( 0.0233709, 0.0450107 )
+texture = ExtResource( 10 )
+
+[node name="Sprite8" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -23.9163, -13.4038 )
+transform/scale = Vector2( 0.0612173, 0.00208607 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -24.1945, -4.94754 )
+transform/scale = Vector2( 0.0168183, 0.0253723 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tutorial_button" type="LinkButton" parent="tutorial"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 24.0
+margin/top = -5.0
+margin/right = 67.0
+margin/bottom = 35.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="in" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 511.98, 302.557 )
+transform/scale = Vector2( 16.0518, 9.58532 )
+
+[node name="in_number" type="RichTextLabel" parent="in"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -10.0
+margin/top = -20.0
+margin/right = 630.0
+margin/bottom = 616.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "3"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="count_timer" type="Timer" parent="in"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="sam_timer" to="." method="_on_sam_timer_timeout"]
+
+[connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
+
+[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
+
+[connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
+
+[connection signal="button_down" from="menu/return_to_village" to="." method="_on_return_to_village_button_down"]
+
+[connection signal="button_down" from="menu/return_to_main" to="." method="_on_return_to_main_button_down"]
+
+[connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
+
+[connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
+
+[connection signal="button_down" from="are_you_sure_2/yes_main" to="." method="_on_yes_main_button_down"]
+
+[connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
+
+[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
+
+[connection signal="timeout" from="customer_display/customer" to="." method="_on_customer_timeout"]
+
+[connection signal="timeout" from="customer_display/customer_pop_timer" to="." method="_on_customer_pop_timer_timeout"]
+
+[connection signal="button_down" from="tutorial/tutorial_button" to="." method="_on_tutorial_button_button_down"]
+
+[connection signal="timeout" from="in/count_timer" to="." method="_on_count_timer_timeout"]
 
 

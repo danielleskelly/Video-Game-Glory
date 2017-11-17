@@ -37,26 +37,7 @@ func _process(delta):
 
 func _on_day_timer_timeout():
 	stopwatch += 1
-	
 
-func perk_check():
-	if (towns.town_select == "hollyhock"):
-		if (int(perks.perk_goal) <= int(perks.success)):
-			if (perks.perk_num == 1):
-				supplies.hollyhock_soda_count = supplies.hollyhock_soda_count + 5
-				supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count + 5
-			elif (perks.perk_num == 2):
-				customer_math.hollyhock_player_marketshare = int(customer_math.hollyhock_player_marketshare) + .1
-			elif (perks.perk_num == 3):
-				money.hollyhock_balance = money.hollyhock_balance + 50
-			elif (perks.perk_num == 4):
-				supplies.hollyhock_soda_count = supplies.hollyhock_soda_count + 10
-				supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count + 10
-			elif (perks.perk_num == 5):
-				supplies.hollyhock_soda_count = supplies.hollyhock_soda_count + 20
-				supplies.hollyhock_popcorn_count = supplies.hollyhock_popcorn_count + 20
-			elif (perks.perk_num == 6):
-				money.hollyhock_balance = money.hollyhock_balance + 25
 
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
@@ -84,39 +65,21 @@ func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
 	get_node("menu").set_hidden(true)
 
-
-func _on_return_to_village_button_down():
-	get_node("menu").set_hidden(true)
-	get_node("are_you_sure").set_hidden(false)
-
-
-func _on_yes_village_button_down():
-	get_node("menu").set_hidden(true)
-	perk_check()
-	get_tree().set_pause(false)
-	get_tree().change_scene("res://strategy.tscn")
-
-
-func _on_no_village_button_down():
-	get_node("are_you_sure").set_hidden(true)
-	get_node("menu").set_hidden(false)
-
-
-func _on_return_to_main_button_down():
-	get_node("menu").set_hidden(true)
-	get_node("are_you_sure_2").set_hidden(false)
-	
-	
-func _on_yes_main_button_down():
-	get_tree().set_pause(false)
-	get_tree().change_scene("res://player_selection.tscn")
-
-
-func _on_no_main_button_down():
-	get_node("are_you_sure_2").set_hidden(true)
-	get_node("menu").set_hidden(false)
-
-
 func _on_game_over_button_button_up():
 	get_tree().set_pause(false)
+	rewards_globals.million_total_minigame_points += perks.success
+	if stopwatch > rewards_globals.three_min_yed:
+		rewards_globals.three_min_yed = stopwatch
 	get_tree().change_scene("res://endless_mode.tscn")
+
+
+func _on_return_to_endless_button_down():
+	get_node("are_you_sure").show()
+
+func _on_yes_endless_button_down():
+	get_tree().change_scene("res://endless_mode.tscn")
+
+
+func _on_no_endless_button_down():
+	get_tree().set_pause(false)
+	get_node("are_you_sure").hide()

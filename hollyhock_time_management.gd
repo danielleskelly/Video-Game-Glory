@@ -19,6 +19,19 @@ var ones
 onready var pixel = get_node("pixel")
 
 func _ready():
+	if customer_globals.sales_made != 0:
+		var time = 120/customer_globals.sales_made
+		get_node("customer_display/customer").set_wait_time(time)
+		get_node("customer_display/customer").start()
+	else:
+		pass
+	if tutorial.tutorial == false:
+		tutorial.tutorial = true
+		get_node("tutorial").show()
+		get_tree().set_pause(true)
+	else:
+		get_tree().set_pause(true)
+		countin()
 	get_node("StreamPlayer").set_volume(sound.volume)
 	set_process(true)
 
@@ -39,6 +52,9 @@ func _on_day_timer_timeout():
 
 func perk_check():
 	if (towns.town_select == "hollyhock"):
+		if perks.success > rewards_globals.points_in_one_minigame:
+			rewards_globals.points_in_one_minigame = perks.success
+			rewards_globals.million_total_minigame_points += perks.success
 		if (int(perks.perk_goal) <= int(perks.success)):
 			if (perks.perk_num == 1):
 				supplies.hollyhock_soda_count = supplies.hollyhock_soda_count + 5
@@ -114,3 +130,35 @@ func _on_yes_main_button_down():
 func _on_no_main_button_down():
 	get_node("are_you_sure_2").set_hidden(true)
 	get_node("menu").set_hidden(false)
+
+
+func _on_customer_timeout():
+	get_node("customer_display/moneybag").show()
+	get_node("customer_display/explosion").show()
+	get_node("customer_display/pop_timer").start()
+
+
+func _on_pop_timer_timeout():
+	get_node("customer_display/moneybag").hide()
+	get_node("customer_display/explosion").hide()
+
+
+func _on_tutorial_button_button_down():
+	get_node("tutorial").hide()
+	countin()
+	
+func countin():
+	get_node("in").show()
+	get_node("in/count_timer").start()
+
+func _on_count_timer_timeout():
+	if get_node("in/in_number").get_text() == "3":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("2")
+	elif get_node("in/in_number").get_text() == "2":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("1")
+	elif get_node("in/in_number").get_text() == "1":
+		get_node("in").hide()
+		get_node("in/count_timer").stop()
+		get_tree().set_pause(false)

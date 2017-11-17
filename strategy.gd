@@ -257,26 +257,45 @@ func _on_continue_ok_button_down():
 	if (towns.town_select == "hollyhock"):
 		hollyhock_complete.set_hidden(true)
 		endless.endless_unlocked == "true"
+		rewards_globals.complete_hollyhock = true
+		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_three.tscn")
 	elif (towns.town_select == "fiyork"):
 		fiyork_complete.set_hidden(true)
 		endless.shoot_that_rock == true
+		rewards_globals.complete_fiyork = true
+		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_four.tscn")
 	elif (towns.town_select == "untilly"):
 		plansey_complete.set_hidden(true)
+		endless.falling_shapes_organization = true
+		rewards_globals.complete_plansey = true
+		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_five.tscn")
 	elif (towns.town_select == "plansey"):
 		untilly_complete.set_hidden(true)
+		endless.mathmatic_mastication = true
+		rewards_globals.complete_untilly = true
+		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_six.tscn")
 	elif (towns.town_select == "windrow"):
 		windrow_complete.set_hidden(true)
+		endless.tall_wall_fall_ball = true
+		rewards_globals.complete_windrow = true
+		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_seven.tscn")
 	elif (towns.town_select == "banlon"):
 		banlon_complete.set_hidden(true)
+		endless.jump_and_dodge = true
+		rewards_globals.complete_banlon = true
+		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_eight.tscn")
 	elif (towns.town_select == "slatten"):
 		slatten_complete.set_hidden(true)
-		get_tree().change_scene("res://story_piece_four.tscn")
+		endless.lights_off = true
+		rewards_globals.complete_slatten = true
+		rewards_globals.unseen += 1
+		get_tree().change_scene("res://story_piece_nine.tscn")
 	get_tree().set_pause(false)
 	customer_globals.customer_reset()
 	
@@ -327,6 +346,7 @@ func _on_AnimationPlayer_finished():
 		get_node("AnimationPlayer").play("tutorial_finish")
 
 func _on_skip_button_down():
+	rewards_globals.fifty_business_days += 1
 	customer_globals.customer_reset()
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
@@ -349,6 +369,10 @@ func _on_skip_button_down():
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_play_button_down():
+	rewards_globals.minigames_played += 1
+	rewards_globals.fifty_business_days += 1
+	if money.income > rewards_globals.earn_thousand:
+		rewards_globals.earn_thousand = money.income
 	customer_globals.customer_reset()
 	customer_math.new_predictions()
 	supplies.new_supply_prices()
@@ -365,7 +389,7 @@ func _on_play_button_down():
 		get_tree().change_scene("res://plansey_time_management.tscn")
 	elif (towns.town_select == "untilly"):
 		arcade_day.untilly_day()
-		get_tree().change_scene("res://tetrus.tscn")
+		get_tree().change_scene("res://untilly_time_management.tscn")
 	elif (towns.town_select == "windrow"):
 		arcade_day.windrow_day()
 		get_tree().change_scene("res://windrow_time_management.tscn")
@@ -374,7 +398,7 @@ func _on_play_button_down():
 		get_tree().change_scene("res://banlon_time_management.tscn")
 	elif (towns.town_select == "slatten"):
 		arcade_day.slatten_day()
-		get_tree().change_scene("res://qbert.tscn")
+		get_tree().change_scene("res://slatten_time_management.tscn")
 	
 	
 func _on_pixel_button_button_down():
@@ -443,7 +467,6 @@ func save_game():
 	var savegame = File.new()
 	savegame.open(str("user://savegame.save"), File.WRITE)
 	savegame.store_line(str(towns.town_select))
-	print(str(endless.endless_unlocked))
 	savegame.store_line(str(endless.endless_unlocked))
 	savegame.close()
 		

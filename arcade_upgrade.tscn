@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://arcade_upgrade.gd" type="Script" id=1]
 [ext_resource path="res://little_background.png" type="Texture" id=2]
 [ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://meta_genre.png" type="Texture" id=4]
-[ext_resource path="res://button.png" type="Texture" id=5]
-[ext_resource path="res://not_opened.png" type="Texture" id=6]
+[ext_resource path="res://arcade_worst.png" type="Texture" id=4]
+[ext_resource path="res://arcade_decent.png" type="Texture" id=5]
+[ext_resource path="res://arcade_good.png" type="Texture" id=6]
+[ext_resource path="res://arcade_great.png" type="Texture" id=7]
+[ext_resource path="res://arcade_best.png" type="Texture" id=8]
+[ext_resource path="res://button.png" type="Texture" id=9]
+[ext_resource path="res://not_opened.png" type="Texture" id=10]
 
 [node name="arcade_upgrade" type="Node2D"]
 
@@ -15,7 +19,7 @@ script/script = ExtResource( 1 )
 
 [node name="background" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.147015, 0.720919 )
+transform/pos = Vector2( 0.147015, 0.94031 )
 transform/scale = Vector2( 0.0500382, 0.0639212 )
 texture = ExtResource( 2 )
 
@@ -40,6 +44,7 @@ percent_visible = 1.0
 
 [node name="notifications" type="RichTextLabel" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -81,14 +86,15 @@ percent_visible = 1.0
 
 [node name="worst_button" type="TextureButton" parent="worst"]
 
+rect/scale = Vector2( 0.06, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -22.0
-margin/top = -38.0
-margin/right = 20.0
-margin/bottom = 4.0
+margin/left = -28.0
+margin/top = -34.0
+margin/right = 772.0
+margin/bottom = 752.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
@@ -129,9 +135,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -15.0
-margin/top = 6.0
+margin/top = 9.0
 margin/right = 170.0
-margin/bottom = 59.0
+margin/bottom = 62.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -141,20 +147,21 @@ percent_visible = 1.0
 
 [node name="decent_button" type="TextureButton" parent="decent"]
 
+rect/scale = Vector2( 0.06, 0.05 )
 hint/tooltip = "Click to select the decent arcade upgrades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -14.0
-margin/top = -40.0
-margin/right = 28.0
-margin/bottom = 2.0
+margin/left = -19.0
+margin/top = -35.0
+margin/right = 781.0
+margin/bottom = 751.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
+textures/normal = ExtResource( 5 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -166,10 +173,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
-margin/top = 21.0
-margin/right = 230.0
-margin/bottom = 70.0
+margin/left = -14.0
+margin/top = 23.0
+margin/right = 231.0
+margin/bottom = 72.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -189,10 +196,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -16.0
-margin/top = 6.0
-margin/right = 179.0
-margin/bottom = 59.0
+margin/left = -15.0
+margin/top = 8.0
+margin/right = 180.0
+margin/bottom = 61.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -202,20 +209,21 @@ percent_visible = 1.0
 
 [node name="good_button" type="TextureButton" parent="good"]
 
+rect/scale = Vector2( 0.06, 0.05 )
 hint/tooltip = "Click to select the good arcade upgrades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -19.0
-margin/top = -39.0
-margin/right = 23.0
-margin/bottom = 3.0
+margin/left = -21.0
+margin/top = -34.0
+margin/right = 779.0
+margin/bottom = 752.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
+textures/normal = ExtResource( 6 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -228,9 +236,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -16.0
-margin/top = 21.0
+margin/top = 23.0
 margin/right = 207.0
-margin/bottom = 84.0
+margin/bottom = 86.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -250,10 +258,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -21.0
-margin/top = 6.0
-margin/right = 155.0
-margin/bottom = 67.0
+margin/left = -23.0
+margin/top = 9.0
+margin/right = 153.0
+margin/bottom = 70.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -263,20 +271,21 @@ percent_visible = 1.0
 
 [node name="great_button" type="TextureButton" parent="great"]
 
+rect/scale = Vector2( 0.06, 0.05 )
 hint/tooltip = "Click to select the great arcade upgrades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -22.0
-margin/top = -40.0
-margin/right = 20.0
-margin/bottom = 2.0
+margin/left = -29.0
+margin/top = -34.0
+margin/right = 771.0
+margin/bottom = 752.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
+textures/normal = ExtResource( 7 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -289,9 +298,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -21.0
-margin/top = 21.0
+margin/top = 23.0
 margin/right = 199.0
-margin/bottom = 80.0
+margin/bottom = 82.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -312,9 +321,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -21.0
-margin/top = 5.0
+margin/top = 9.0
 margin/right = 136.0
-margin/bottom = 53.0
+margin/bottom = 57.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -324,20 +333,21 @@ percent_visible = 1.0
 
 [node name="best_button" type="TextureButton" parent="best"]
 
+rect/scale = Vector2( 0.06, 0.05 )
 hint/tooltip = "Click to select the best arcade upgrades."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -22.0
-margin/top = -40.0
-margin/right = 20.0
-margin/bottom = 2.0
+margin/left = -31.0
+margin/top = -34.0
+margin/right = 769.0
+margin/bottom = 752.0
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
+textures/normal = ExtResource( 8 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -350,9 +360,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -21.0
-margin/top = 21.0
+margin/top = 23.0
 margin/right = 194.0
-margin/bottom = 78.0
+margin/bottom = 80.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
@@ -386,14 +396,14 @@ underline = 2
 visibility/behind_parent = true
 transform/pos = Vector2( 68.7086, 22.5071 )
 transform/scale = Vector2( 0.795429, 0.459507 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="not_opened" type="Sprite" parent="."]
 
 visibility/visible = false
 transform/pos = Vector2( 0.301361, -0.133453 )
 transform/scale = Vector2( 0.0467412, 0.0514044 )
-texture = ExtResource( 6 )
+texture = ExtResource( 10 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="not_opened"]
 
