@@ -233,9 +233,6 @@ func daily_marketshare_adjustment():
 		if (hollyhock_player_marketshare == 1):
 			pass
 		else:
-			print(customer_globals.sales_lost)
-			print(customer_globals.sales_made)
-			print(money.hollyhock_cash)
 			if ((customer_globals.sales_made > customer_globals.sales_lost) and (money.hollyhock_cash > 100)):
 				hollyhock_player_marketshare = hollyhock_player_marketshare + .2
 			elif ((customer_globals.sales_made > customer_globals.sales_lost) or (money.hollyhock_cash > 100)):

@@ -4,6 +4,8 @@ var hundreds
 var tens
 var ones
 
+var stopwatch = 0
+
 var something = false
 
 var new_volume
@@ -38,33 +40,40 @@ func _fixed_process(delta):
 	ones = get_node("success_background/ones")
 	point_display()
 	countdown_timer.clear()
-	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
+	countdown_timer.add_text(str(int(stopwatch)))
+	get_node("time_out").clear()
+	get_node("time_out").add_text(str(int(get_node("time_out_timer").get_time_left())))
 	if ((Input.is_action_pressed("fire")) and (get_node("debounce").get_time_left() == 0)):
+		get_node("time_out_timer").start()
 		which_number()
 		if (goal_choice == "Multiple of 5"):
-			if (int(number) % 5 == 0):
-				perks.success = perks.success + 2
-			else:
-				if (perks.success > 5):
-					perks.success = perks.success - 2
+			if number_clear.is_in_group("number"):
+				if (int(number) % 5 == 0):
+					perks.success = perks.success + 2
+				else:
+					if (perks.success > 5):
+						perks.success = perks.success - 2
 		elif (goal_choice == "Multiple of 3"):
-			if (int(number) % 3 == 0):
-				perks.success = perks.success + 2
-			else:
-				if (perks.success > 5):
-					perks.success = perks.success - 2
+			if number_clear.is_in_group("number"):
+				if (int(number) % 3 == 0):
+					perks.success = perks.success + 2
+				else:
+					if (perks.success > 5):
+						perks.success = perks.success - 2
 		elif (goal_choice == "Multiple of 2"):
-			if (int(number) % 2 == 0):
-				perks.success = perks.success + 2
-			else:
-				if (perks.success > 5):
-					perks.success = perks.success - 2
+			if number_clear.is_in_group("number"):
+				if (int(number) % 2 == 0):
+					perks.success = perks.success + 2
+				else:
+					if (perks.success > 5):
+						perks.success = perks.success - 2
 		elif (goal_choice == "Multiple of 4"):
-			if (int(number) % 4 == 0):
-				perks.success = perks.success + 2
-			else:
-				if (perks.success > 5):
-					perks.success = perks.success - 2
+			if number_clear.is_in_group("number"):
+				if (int(number) % 4 == 0):
+					perks.success = perks.success + 2
+				else:
+					if (perks.success > 5):
+						perks.success = perks.success - 2
 		number_clear.remove_from_group("number")
 		number_clear.clear()
 		get_node("debounce").start()
@@ -302,28 +311,9 @@ func check_board():
 		load_stuff()
 
 func _on_day_timer_timeout():
-	perk_check()
-	get_tree().change_scene("res://strategy.tscn")
-	
+	stopwatch += 1
 
-func perk_check():
-	if (towns.town_select == "plansey"):
-		if (int(perks.perk_goal) <= int(perks.success)):
-			if (perks.perk_num == 1):
-				supplies.plansey_energy_count = supplies.plansey_energy_count + 5
-				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 5
-			elif (perks.perk_num == 2):
-				customer_math.plansey_player_marketshare = int(customer_math.plansey_player_marketshare) + .1
-			elif (perks.perk_num == 3):
-				money.plansey_balance = money.plansey_balance + 50
-			elif (perks.perk_num == 4):
-				supplies.plansey_energy_count = supplies.plansey_energy_count + 10
-				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 10
-			elif (perks.perk_num == 5):
-				supplies.plansey_energy_count = supplies.plansey_energy_count + 20
-				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 20
-			elif (perks.perk_num == 6):
-				money.plansey_balance = money.plansey_balance + 25
+
 
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
@@ -340,34 +330,24 @@ func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
 	get_node("menu").set_hidden(true)
 
+func _on_time_out_timer_timeout():
+	var game = get_tree().get_nodes_in_group("game_over")
+	for x in game:
+		x.show()
+	get_tree().set_pause(true)
+
+func _on_game_over_button_button_up():
+	get_tree().set_pause(false)
+	rewards_globals.million_total_minigame_points += perks.success
+	if stopwatch > rewards_globals.three_min_math_mast:
+		rewards_globals.three_min_math_mast = stopwatch
+	get_tree().change_scene("res://endless_mode.tscn")
 
 func _on_return_to_village_button_down():
-	get_node("menu").set_hidden(true)
-	get_node("are_you_sure").set_hidden(false)
-
+	get_node("are_you_sure").show()
 
 func _on_yes_village_button_down():
-	get_node("menu").set_hidden(true)
-	perk_check()
-	get_tree().set_pause(false)
-	get_tree().change_scene("res://strategy.tscn")
-
+	get_tree().change_scene("res://endless_mode.tscn")
 
 func _on_no_village_button_down():
-	get_node("are_you_sure").set_hidden(true)
-	get_node("menu").set_hidden(false)
-
-
-func _on_return_to_main_button_down():
-	get_node("menu").set_hidden(true)
-	get_node("are_you_sure_2").set_hidden(false)
-	
-	
-func _on_yes_main_button_down():
-	get_tree().set_pause(false)
-	get_tree().change_scene("res://player_selection.tscn")
-
-
-func _on_no_main_button_down():
-	get_node("are_you_sure_2").set_hidden(true)
-	get_node("menu").set_hidden(false)
+	get_node("are_you_sure").hide()

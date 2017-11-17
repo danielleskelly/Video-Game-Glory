@@ -37,7 +37,19 @@ var right_move
 var matrix = []
 
 func _ready():
-	pixel_small()
+	if customer_globals.sales_made != 0:
+		var time = 120/customer_globals.sales_made
+		get_node("customer_display/customer").set_wait_time(time)
+		get_node("customer_display/customer").start()
+	else:
+		pass
+	if tutorial.tutorial == false:
+		tutorial.tutorial = true
+		get_node("tutorial").show()
+		get_tree().set_pause(true)
+	else:
+		get_tree().set_pause(true)
+		countin()
 	get_node("StreamPlayer").set_volume(sound.volume)
 	paddle = get_node("paddle")
 	ball = get_node("ball")
@@ -854,16 +866,6 @@ func point_display():
 		ones.clear()
 		ones.add_text(str(one_ones_digit))
 
-
-func pixel_small():
-	pixel.set_pos(Vector2(0, 0.022343))
-	pixel.set_scale(Vector2(1, 1))
-
-
-func pixel_big():
-	pixel.set_pos(Vector2(-66.139618, -57.205349))
-	pixel.set_scale(Vector2(3.066863, 2.788365))
-
 func _on_day_timer_timeout():
 	perk_check()
 	get_tree().change_scene("res://strategy.tscn")
@@ -871,6 +873,9 @@ func _on_day_timer_timeout():
 
 func perk_check():
 	if (towns.town_select == "windrow"):
+		if perks.success > rewards_globals.points_in_one_minigame:
+			rewards_globals.points_in_one_minigame = perks.success
+			rewards_globals.million_total_minigame_points += perks.success
 		if (int(perks.perk_goal) <= int(perks.success)):
 			if (perks.perk_num == 1):
 				supplies.windrow_freezie_count = supplies.windrow_freezie_count + 5
@@ -898,7 +903,6 @@ func perk_check():
 
 
 func _on_pixel_button_button_down():
-	pixel_big()
 	get_tree().set_pause(true)
 	get_node("menu").set_hidden(false)
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
@@ -909,7 +913,6 @@ func _on_sound_slider_value_changed( value ):
 	get_node("StreamPlayer").set_volume(new_volume)
 
 func _on_return_to_game_button_down():
-	pixel_small()
 	get_tree().set_pause(false)
 	get_node("menu").set_hidden(true)
 
@@ -943,3 +946,36 @@ func _on_yes_main_button_down():
 func _on_no_main_button_down():
 	get_node("are_you_sure_2").set_hidden(true)
 	get_node("menu").set_hidden(false)
+
+
+func _on_customer_timeout():
+	get_node("customer_display/moneybag").show()
+	get_node("customer_display/explosion").show()
+	get_node("customer_display/pop_timer").start()
+
+
+func _on_customer_pop_timer_timeout():
+	get_node("customer_display/moneybag").hide()
+	get_node("customer_display/explosion").hide()
+
+
+func _on_tutorial_button_button_down():
+	get_node("tutorial").hide()
+	countin()
+	
+func countin():
+	get_node("in").show()
+	get_node("in/count_timer").start()
+
+func _on_count_timer_timeout():
+	if get_node("in/in_number").get_text() == "3":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("2")
+	elif get_node("in/in_number").get_text() == "2":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("1")
+	elif get_node("in/in_number").get_text() == "1":
+		get_node("in").hide()
+		get_node("in/count_timer").stop()
+		get_tree().set_pause(false)
+

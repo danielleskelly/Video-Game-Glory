@@ -6,6 +6,12 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
+	if rewards_globals.unseen == 0:
+		get_node("rewards/unseen_badge").hide()
+	elif rewards_globals.unseen > 0:
+		get_node("rewards/unseen_badge").show()
+		get_node("rewards/unseen_badge/unseen_number").clear()
+		get_node("rewards/unseen_badge/unseen_number").add_text(str(rewards_globals.unseen))
 	endless_button = get_node("endless")
 	var file = File.new()
 	file.open("user://savegame.save", file.READ)
@@ -73,3 +79,7 @@ func _on_yes_overwrite_button_up():
 	endless.endless_unlocked == "false"
 	get_node("new_game_overwrite").set_hidden(true)
 	get_tree().change_scene("res://story_piece_one.tscn")
+
+func _on_reward_button_button_down():
+	rewards_globals.unseen = 0
+	get_tree().change_scene("res://rewards.tscn")

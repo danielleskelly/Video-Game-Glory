@@ -1689,17 +1689,13 @@ stream/buffering_ms = 500
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
-visibility/visible = false
 transform/pos = Vector2( 188.156, 59.9559 )
 
 [node name="background" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( 326.495, 215.683 )
-transform/scale = Vector2( 1.05884, 1.19914 )
+transform/pos = Vector2( 326.495, 183.406 )
+transform/scale = Vector2( 1.05884, 0.983957 )
 texture = ExtResource( 12 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="button" type="Sprite" parent="menu"]
 
@@ -1720,13 +1716,6 @@ flip_v = true
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="button2" type="Sprite" parent="menu"]
-
-transform/pos = Vector2( 327.706, 343.995 )
-transform/scale = Vector2( 1.76261, 0.508149 )
-texture = ExtResource( 13 )
-flip_v = true
 
 [node name="sound" type="RichTextLabel" parent="menu"]
 
@@ -1808,29 +1797,11 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-text = "Return To Village"
+text = "Return to Endless"
 underline = 2
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="return_to_main_menu" type="LinkButton" parent="menu"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 160.0
-margin/top = 329.0
-margin/right = 566.0
-margin/bottom = 376.0
-custom_fonts/font = ExtResource( 9 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "Return To Main Menu"
-underline = 2
 
 [node name="are_you_sure" type="Node2D" parent="."]
 
@@ -1912,86 +1883,6 @@ shortcut = null
 text = "No"
 underline = 2
 
-[node name="are_you_sure_2" type="Node2D" parent="."]
-
-process/pause_mode = 2
-visibility/visible = false
-transform/pos = Vector2( 221.199, 74.2278 )
-
-[node name="background" type="Sprite" parent="are_you_sure_2"]
-
-transform/pos = Vector2( 293.528, 216.378 )
-transform/scale = Vector2( 0.922636, 0.944223 )
-texture = ExtResource( 12 )
-
-[node name="background1" type="Sprite" parent="are_you_sure_2"]
-
-transform/pos = Vector2( 395.662, 303.083 )
-transform/scale = Vector2( 0.482482, 0.564132 )
-texture = ExtResource( 13 )
-
-[node name="background2" type="Sprite" parent="are_you_sure_2"]
-
-transform/pos = Vector2( 201.928, 303.083 )
-transform/scale = Vector2( 0.445367, 0.593822 )
-texture = ExtResource( 13 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure_2"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 149.0
-margin/top = 135.0
-margin/right = 469.0
-margin/bottom = 278.0
-custom_fonts/normal_font = ExtResource( 9 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Are you sure you want to return to the main menu?"
-visible_characters = -1
-percent_visible = 1.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="yes_main" type="LinkButton" parent="are_you_sure_2"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 358.0
-margin/top = 285.0
-margin/right = 455.0
-margin/bottom = 340.0
-custom_fonts/font = ExtResource( 9 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "Yes"
-underline = 2
-
-[node name="no_main" type="LinkButton" parent="are_you_sure_2"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 176.0
-margin/top = 285.0
-margin/right = 273.0
-margin/bottom = 340.0
-custom_fonts/font = ExtResource( 9 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "No"
-underline = 2
-
 [node name="game_over" type="Node2D" parent="." groups=[
 "game_over",
 ]]
@@ -2062,15 +1953,9 @@ underline = 2
 
 [connection signal="button_down" from="menu/return_to_village" to="." method="_on_return_to_village_button_down"]
 
-[connection signal="button_down" from="menu/return_to_main_menu" to="." method="_on_return_to_main_menu_button_down"]
-
 [connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
 
 [connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
-
-[connection signal="button_down" from="are_you_sure_2/yes_main" to="." method="_on_yes_main_button_down"]
-
-[connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
 
 [connection signal="button_up" from="game_over/game_over_button" to="." method="_on_game_over_button_button_up"]
 

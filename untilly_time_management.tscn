@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=18 format=1]
 
 [ext_resource path="res://tetrus.gd" type="Script" id=1]
 [ext_resource path="res://inner_box.png" type="Texture" id=2]
@@ -13,6 +13,10 @@
 [ext_resource path="res://untilly.ogg" type="AudioStream" id=11]
 [ext_resource path="res://error_box.png" type="Texture" id=12]
 [ext_resource path="res://button.png" type="Texture" id=13]
+[ext_resource path="res://customer_four.png" type="Texture" id=14]
+[ext_resource path="res://moneybag.png" type="Texture" id=15]
+[ext_resource path="res://ghostie_tag.png" type="Texture" id=16]
+[ext_resource path="res://wasd.png" type="Texture" id=17]
 
 [node name="time_management" type="Node2D"]
 
@@ -1983,6 +1987,410 @@ shortcut = null
 text = "No"
 underline = 2
 
+[node name="customer_display" type="Node2D" parent="."]
+
+transform/pos = Vector2( 544.617, 334.944 )
+transform/scale = Vector2( 14.9956, 8.58391 )
+
+[node name="customer" type="Timer" parent="customer_display"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="customer_pop_timer" type="Timer" parent="customer_display"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="customer_pic" type="Sprite" parent="customer_display"]
+
+transform/pos = Vector2( 27.6143, 23.8742 )
+transform/scale = Vector2( 0.0172057, 0.0222086 )
+texture = ExtResource( 14 )
+
+[node name="moneybag" type="Sprite" parent="customer_display"]
+
+visibility/visible = false
+transform/pos = Vector2( 28.8934, 20.3003 )
+transform/scale = Vector2( 0.0229, 0.0328711 )
+texture = ExtResource( 15 )
+
+[node name="explosion" type="Particles2D" parent="customer_display"]
+
+visibility/visible = false
+transform/pos = Vector2( 28.9001, 20.3583 )
+transform/scale = Vector2( 0.110664, 0.16403 )
+config/amount = 50
+config/lifetime = 1.0
+config/process_mode = 1
+config/explosiveness = 0.2
+params/direction = 0.0
+params/spread = 180.0
+params/linear_velocity = 20.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 9.8
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 1.0
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color = Color( 0.288992, 0.703125, 0.173035, 1 )
+
+[node name="tutorial" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/blend_mode = 1
+transform/pos = Vector2( 511.98, 301.641 )
+transform/scale = Vector2( 15.9374, 9.49948 )
+
+[node name="Sprite5" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( 20.717, -22.2147 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0769144, 0.0542936 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel 3" type="RichTextLabel" parent="tutorial/Sprite5"]
+
+visibility/blend_mode = 1
+rect/rotation = 90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = 123.0
+margin/right = 51.0
+margin/bottom = 181.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Pixel"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite6" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -25.0471, -4.84464 )
+transform/rot = -90.0
+transform/scale = Vector2( 0.0915925, 0.0764046 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite6"]
+
+visibility/blend_mode = 1
+rect/rotation = 90.0
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 49.0
+margin/top = 28.0
+margin/right = 410.0
+margin/bottom = 122.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Seconds left in the day"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite4" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( 16.8046, 13.3304 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.0745852, 0.0449206 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial/Sprite4"]
+
+visibility/blend_mode = 1
+rect/rotation = -90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 17.0
+margin/top = 34.0
+margin/right = 162.0
+margin/bottom = 90.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "points"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite10" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -23.803, 14.1814 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.0636586, 0.028042 )
+texture = ExtResource( 16 )
+flip_v = true
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite10"]
+
+visibility/blend_mode = 1
+rect/rotation = -90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 23.0
+margin/top = -83.0
+margin/right = 100.0
+margin/bottom = -26.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "left"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite14" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( 24.7524, 23.7369 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.0636586, 0.028042 )
+texture = ExtResource( 16 )
+flip_v = true
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite14"]
+
+visibility/blend_mode = 1
+rect/rotation = -90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 22.0
+margin/top = -190.0
+margin/right = 854.0
+margin/bottom = 27.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "customer"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite11" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -13.9197, 14.0744 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.0636586, 0.028042 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite11"]
+
+visibility/blend_mode = 1
+rect/rotation = -90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 21.0
+margin/right = 120.0
+margin/bottom = 78.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "right"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite12" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -19.2179, 17.5431 )
+transform/scale = Vector2( 0.0504109, 0.0422474 )
+texture = ExtResource( 16 )
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite12"]
+
+visibility/blend_mode = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -41.0
+margin/top = 25.0
+margin/right = 58.0
+margin/bottom = 82.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "down"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite13" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -19.355, 7.73583 )
+transform/scale = Vector2( 0.0504109, 0.0422474 )
+texture = ExtResource( 16 )
+flip_v = true
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite13"]
+
+visibility/blend_mode = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -20.0
+margin/top = -65.0
+margin/right = 79.0
+margin/bottom = -8.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "up"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial"]
+
+visibility/blend_mode = 1
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -13.0
+margin/top = 18.0
+margin/right = 147.0
+margin/bottom = 78.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Movement"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial"]
+
+visibility/blend_mode = 1
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -27.0
+margin/top = -23.0
+margin/right = 416.0
+margin/bottom = 290.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "The rules are simple:
+-Shapes will fall from the top of the screen.
+-Move the shapes left or right to fill a whole row and earn points."
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="RichTextLabel1" type="RichTextLabel" parent="tutorial"]
+
+visibility/blend_mode = 1
+rect/scale = Vector2( 0.05, 0.05 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -5.0
+margin/top = -5.0
+margin/right = 647.0
+margin/bottom = 308.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Welcome to Falling Shapes Organization!"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite3" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( 26.2769, -11.1709 )
+transform/scale = Vector2( 0.0233709, 0.0450107 )
+texture = ExtResource( 13 )
+
+[node name="Sprite8" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -9.55457, 20.9476 )
+transform/scale = Vector2( 0.0612173, 0.00208607 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="tutorial"]
+
+transform/pos = Vector2( -19.3395, 12.567 )
+transform/scale = Vector2( 0.0168183, 0.0253723 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tutorial_button" type="LinkButton" parent="tutorial"]
+
+rect/scale = Vector2( 0.1, 0.1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 24.0
+margin/top = -13.0
+margin/right = 67.0
+margin/bottom = 27.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "OK"
+underline = 2
+
+[node name="in" type="Node2D" parent="."]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 511.98, 302.557 )
+transform/scale = Vector2( 16.0518, 9.58532 )
+
+[node name="in_number" type="RichTextLabel" parent="in"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -11.0
+margin/top = -21.0
+margin/right = 27.0
+margin/bottom = 23.0
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "3"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="count_timer" type="Timer" parent="in"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [connection signal="timeout" from="down_timer" to="." method="_on_down_timer_timeout"]
 
 [connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
@@ -2004,5 +2412,13 @@ underline = 2
 [connection signal="button_down" from="are_you_sure_2/yes_main" to="." method="_on_yes_main_button_down"]
 
 [connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
+
+[connection signal="timeout" from="customer_display/customer" to="." method="_on_customer_timeout"]
+
+[connection signal="timeout" from="customer_display/customer_pop_timer" to="." method="_on_customer_pop_timer_timeout"]
+
+[connection signal="button_down" from="tutorial/tutorial_button" to="." method="_on_tutorial_button_button_down"]
+
+[connection signal="timeout" from="in/count_timer" to="." method="_on_count_timer_timeout"]
 
 

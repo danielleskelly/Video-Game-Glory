@@ -280,8 +280,8 @@ visibility/visible = false
 
 [node name="background" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( 511.694, 214.999 )
-transform/scale = Vector2( 1.06834, 1.26362 )
+transform/pos = Vector2( 511.694, 171.322 )
+transform/scale = Vector2( 1.06834, 1.10247 )
 texture = ExtResource( 11 )
 
 [node name="button" type="Sprite" parent="menu"]
@@ -294,12 +294,6 @@ texture = ExtResource( 12 )
 
 transform/pos = Vector2( 518.975, 260.32 )
 transform/scale = Vector2( 1.51963, 0.420472 )
-texture = ExtResource( 12 )
-
-[node name="button2" type="Sprite" parent="menu"]
-
-transform/pos = Vector2( 517.991, 333.951 )
-transform/scale = Vector2( 1.73591, 0.539907 )
 texture = ExtResource( 12 )
 
 [node name="sound" type="RichTextLabel" parent="menu"]
@@ -358,7 +352,7 @@ shortcut = null
 text = "Return To Game"
 underline = 2
 
-[node name="return_to_village" type="LinkButton" parent="menu"]
+[node name="return_to_endless" type="LinkButton" parent="menu"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -373,31 +367,14 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-text = "Return To Village"
-underline = 2
-
-[node name="return_to_main_menu" type="LinkButton" parent="menu"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 352.0
-margin/top = 317.0
-margin/right = 686.0
-margin/bottom = 364.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "Return To Main Menu"
+text = "Return to Endless"
 underline = 2
 
 [node name="are_you_sure" type="Node2D" parent="."]
 
 process/pause_mode = 2
 visibility/visible = false
+transform/pos = Vector2( 7.69165, -61.5332 )
 
 [node name="background" type="Sprite" parent="are_you_sure"]
 
@@ -423,19 +400,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 364.0
-margin/top = 138.0
-margin/right = 661.0
-margin/bottom = 269.0
+margin/left = 347.0
+margin/top = 130.0
+margin/right = 664.0
+margin/bottom = 346.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Are you sure you want to go back to the village?"
+bbcode/bbcode = "Are you sure you want to go back to the Endless Mode menu?"
 visible_characters = -1
 percent_visible = 1.0
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="yes_village" type="LinkButton" parent="are_you_sure"]
 
@@ -465,85 +439,6 @@ margin/left = 404.0
 margin/top = 312.0
 margin/right = 498.0
 margin/bottom = 359.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "No"
-underline = 2
-
-[node name="are_you_sure_2" type="Node2D" parent="."]
-
-process/pause_mode = 2
-visibility/visible = false
-
-[node name="background" type="Sprite" parent="are_you_sure_2"]
-
-transform/pos = Vector2( 518.929, 208.431 )
-transform/scale = Vector2( 0.835114, 0.806964 )
-texture = ExtResource( 11 )
-
-[node name="background1" type="Sprite" parent="are_you_sure_2"]
-
-transform/pos = Vector2( 590.711, 291.942 )
-transform/scale = Vector2( 0.464473, 0.487932 )
-texture = ExtResource( 12 )
-
-[node name="background2" type="Sprite" parent="are_you_sure_2"]
-
-transform/pos = Vector2( 438.702, 291.004 )
-transform/scale = Vector2( 0.351874, 0.506699 )
-texture = ExtResource( 12 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure_2"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 375.0
-margin/top = 125.0
-margin/right = 672.0
-margin/bottom = 341.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Are you sure you want to go back to the main menu?"
-visible_characters = -1
-percent_visible = 1.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="yes_main" type="LinkButton" parent="are_you_sure_2"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 559.0
-margin/top = 277.0
-margin/right = 653.0
-margin/bottom = 324.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "Yes"
-underline = 2
-
-[node name="no_main" type="LinkButton" parent="are_you_sure_2"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 413.0
-margin/top = 277.0
-margin/right = 507.0
-margin/bottom = 324.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -620,17 +515,11 @@ underline = 2
 
 [connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
 
-[connection signal="button_down" from="menu/return_to_village" to="." method="_on_return_to_village_button_down"]
-
-[connection signal="button_down" from="menu/return_to_main_menu" to="." method="_on_return_to_main_menu_button_down"]
+[connection signal="button_down" from="menu/return_to_endless" to="." method="_on_return_to_endless_button_down"]
 
 [connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
 
 [connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
-
-[connection signal="button_down" from="are_you_sure_2/yes_main" to="." method="_on_yes_main_button_down"]
-
-[connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
 
 [connection signal="button_up" from="game_over/game_over_button" to="." method="_on_game_over_button_button_up"]
 

@@ -22,18 +22,18 @@
 [ext_resource path="res://entertainment.tscn" type="PackedScene" id=20]
 [ext_resource path="res://marketing.tscn" type="PackedScene" id=21]
 [ext_resource path="res://genres.tscn" type="PackedScene" id=22]
-[ext_resource path="res://error_box.png" type="Texture" id=23]
-[ext_resource path="res://bubble_green.png" type="Texture" id=24]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=25]
-[ext_resource path="res://rect_border.png" type="Texture" id=26]
-[ext_resource path="res://arrow_northeast.png" type="Texture" id=27]
-[ext_resource path="res://border.png" type="Texture" id=28]
-[ext_resource path="res://enter_button.png" type="Texture" id=29]
-[ext_resource path="res://time_management_hollyhock.ogg" type="AudioStream" id=30]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=31]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=32]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=33]
-[ext_resource path="res://pixel.png" type="Texture" id=34]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=23]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=24]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=25]
+[ext_resource path="res://pixel.png" type="Texture" id=26]
+[ext_resource path="res://error_box.png" type="Texture" id=27]
+[ext_resource path="res://bubble_green.png" type="Texture" id=28]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=29]
+[ext_resource path="res://rect_border.png" type="Texture" id=30]
+[ext_resource path="res://arrow_northeast.png" type="Texture" id=31]
+[ext_resource path="res://border.png" type="Texture" id=32]
+[ext_resource path="res://enter_button.png" type="Texture" id=33]
+[ext_resource path="res://time_management_hollyhock.ogg" type="AudioStream" id=34]
 
 [sub_resource type="Animation" id=1]
 
@@ -4490,7 +4490,6 @@ transform/scale = Vector2( 0.148344, 0.288334 )
 
 [node name="top_buttons" type="HButtonArray" parent="."]
 
-editor/display_folded = true
 rect/scale = Vector2( 0.06, 0.06 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -4575,7 +4574,6 @@ texture = ExtResource( 8 )
 [node name="report_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
-visibility/visible = false
 rect/scale = Vector2( 0.05, 0.06 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -4727,6 +4725,7 @@ texture = ExtResource( 8 )
 [node name="locals_buttons" type="VButtonArray" parent="."]
 
 editor/display_folded = true
+visibility/visible = false
 rect/scale = Vector2( 0.05, 0.06 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -4813,7 +4812,6 @@ texture = ExtResource( 8 )
 
 [node name="finances_full" parent="." instance=ExtResource( 9 )]
 
-visibility/visible = false
 transform/pos = Vector2( 6.33152, 7.13988 )
 transform/scale = Vector2( 0.592294, 0.457411 )
 
@@ -4838,7 +4836,7 @@ transform/scale = Vector2( 0.592294, 0.457411 )
 [node name="storefront" parent="." instance=ExtResource( 13 )]
 
 visibility/visible = false
-transform/pos = Vector2( 6.33152, 7.13988 )
+transform/pos = Vector2( 6.2256, 7.50111 )
 transform/scale = Vector2( 0.592294, 0.457411 )
 
 [node name="games" parent="." instance=ExtResource( 14 )]
@@ -4880,6 +4878,7 @@ transform/scale = Vector2( 0.592294, 0.457411 )
 
 [node name="entertainment" parent="." instance=ExtResource( 20 )]
 
+visibility/visible = false
 transform/pos = Vector2( 6.33152, 7.13988 )
 transform/scale = Vector2( 0.592294, 0.457411 )
 
@@ -4906,6 +4905,79 @@ transform/scale = Vector2( 0.107108, 0.199644 )
 visibility/visible = false
 transform/pos = Vector2( 21.7622, 18.8933 )
 transform/scale = Vector2( 0.107108, 0.199644 )
+
+[node name="pixel" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -24.8175, -20.4692 )
+transform/scale = Vector2( 0.28786, 0.190359 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="crotch" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 22.3209, 15.3919 )
+transform/scale = Vector2( 0.0848177, 0.199521 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="left_arm" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 20.1989, 2.27338 )
+transform/scale = Vector2( 0.0909543, 0.223061 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="right_arm" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 24.9737, 1.90617 )
+transform/scale = Vector2( 0.0909543, 0.226215 )
+texture = ExtResource( 24 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="torso" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 22.4082, 2.93272 )
+transform/scale = Vector2( 0.122058, 0.233854 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="head" type="Sprite" parent="pixel"]
+
+transform/pos = Vector2( 22.4788, -12.6974 )
+transform/scale = Vector2( 0.122058, 0.233854 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pixel_button" type="LinkButton" parent="pixel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = -18.0
+margin/right = 29.0
+margin/bottom = 18.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="start_day" type="LinkButton" parent="."]
 
@@ -4948,7 +5020,7 @@ transform/pos = Vector2( 12.6589, 5.79603 )
 
 transform/pos = Vector2( -12.2292, -7.06939 )
 transform/scale = Vector2( 0.0839425, 0.117993 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="warning" type="RichTextLabel" parent="low_funds_warning"]
 
@@ -5008,7 +5080,7 @@ transform/pos = Vector2( 4.46997, 7.26745 )
 transform/pos = Vector2( -11.3545, -9.8186 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.033031, 0.0275206 )
-texture = ExtResource( 24 )
+texture = ExtResource( 28 )
 
 [node name="warning" type="RichTextLabel" parent="tutorial_passover"]
 
@@ -5021,7 +5093,7 @@ margin/left = -27.0
 margin/top = -21.0
 margin/right = 531.0
 margin/bottom = 283.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "No problem! I see you are a pro! I am always available, so just give me a click if you need something (even if it is just regular settings)."
@@ -5039,7 +5111,7 @@ transform/pos = Vector2( 13.3621, 7.79465 )
 
 transform/pos = Vector2( -13.3427, -6.86953 )
 transform/scale = Vector2( 0.0741363, 0.129245 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="warning" type="RichTextLabel" parent="game_over_alert"]
 
@@ -5097,7 +5169,7 @@ transform/pos = Vector2( 12.6589, 6.9952 )
 
 transform/pos = Vector2( -10.4124, -7.06939 )
 transform/scale = Vector2( 0.0876157, 0.129245 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="warning" type="RichTextLabel" parent="genre_discovery"]
 
@@ -5148,7 +5220,6 @@ underline = 2
 [node name="hollyhock_complete" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 11.6039, 3.99727 )
 
@@ -5156,14 +5227,14 @@ transform/pos = Vector2( 11.6039, 3.99727 )
 
 transform/pos = Vector2( 4.32471, -12.4642 )
 transform/scale = Vector2( 0.0817551, 0.10726 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="background2" type="Sprite" parent="hollyhock_complete"]
 
 transform/pos = Vector2( 15.0201, -21.4962 )
 transform/scale = Vector2( 0.0299162, 0.0601328 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="warning" type="RichTextLabel" parent="hollyhock_complete"]
@@ -5199,6 +5270,31 @@ custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Unlocked! Yellow Eating Dot Endless Mode"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="background3" type="Sprite" parent="hollyhock_complete"]
+
+transform/pos = Vector2( -26.4244, -20.0624 )
+transform/scale = Vector2( 0.0209402, 0.0466523 )
+texture = ExtResource( 27 )
+offset = Vector2( -188.862, 54.9548 )
+
+[node name="warning2" type="RichTextLabel" parent="hollyhock_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -34.0
+margin/top = -22.0
+margin/right = 142.0
+margin/bottom = 145.0
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! New Reward!"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -5241,13 +5337,13 @@ transform/pos = Vector2( -1.31922, -0.346069 )
 
 transform/pos = Vector2( 1.79382, 1.20379 )
 transform/scale = Vector2( 0.0744699, 0.0980871 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="background2" type="Sprite" parent="fiyork_complete"]
 
 transform/pos = Vector2( 21.1989, -13.0901 )
 transform/scale = Vector2( 0.0322013, 0.0658139 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="background1" type="Sprite" parent="fiyork_complete"]
 
@@ -5294,6 +5390,31 @@ bbcode/bbcode = "Unlocked! Shoot That Rock Endless Mode"
 visible_characters = -1
 percent_visible = 1.0
 
+[node name="background4" type="Sprite" parent="fiyork_complete"]
+
+transform/pos = Vector2( -13.5013, -15.719 )
+transform/scale = Vector2( 0.0209402, 0.0466523 )
+texture = ExtResource( 27 )
+offset = Vector2( -188.862, 54.9548 )
+
+[node name="warning3" type="RichTextLabel" parent="fiyork_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -21.0769
+margin/top = -17.6567
+margin/right = 154.923
+margin/bottom = 149.343
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! New Reward!"
+visible_characters = -1
+percent_visible = 1.0
+
 [node name="continue_ok" type="LinkButton" parent="fiyork_complete"]
 
 rect/scale = Vector2( 0.075, 0.075 )
@@ -5305,7 +5426,7 @@ margin/left = 8.0
 margin/top = 10.0
 margin/right = 60.0
 margin/bottom = 57.0
-custom_fonts/font = ExtResource( 25 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5324,10 +5445,21 @@ visibility/visible = false
 
 [node name="background" type="Sprite" parent="plansey_complete"]
 
-transform/pos = Vector2( -10.1723, -2.71569 )
-transform/rot = -90.0
-transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+transform/pos = Vector2( -1.61995, -2.24749 )
+transform/scale = Vector2( 0.0653929, 0.119054 )
+texture = ExtResource( 27 )
+
+[node name="background2" type="Sprite" parent="plansey_complete"]
+
+transform/pos = Vector2( 18.82, -12.2457 )
+transform/scale = Vector2( 0.033965, 0.0731843 )
+texture = ExtResource( 27 )
+
+[node name="background1" type="Sprite" parent="plansey_complete"]
+
+transform/pos = Vector2( 3.25152, 10.6152 )
+transform/scale = Vector2( 0.0315072, 0.0546669 )
+texture = ExtResource( 8 )
 
 [node name="warning" type="RichTextLabel" parent="plansey_complete"]
 
@@ -5336,14 +5468,57 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -25.0
-margin/top = -18.0
-margin/right = 511.0
-margin/bottom = 352.0
-custom_fonts/normal_font = ExtResource( 25 )
+margin/left = -12.0
+margin/top = -14.0
+margin/right = 445.0
+margin/bottom = 280.0
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
+bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Plansey! This will go a long way to repairing Player relations but we still have more work to do!"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="warning1" type="RichTextLabel" parent="plansey_complete"]
+
+rect/scale = Vector2( 0.06, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 13.0
+margin/top = -19.0
+margin/right = 252.0
+margin/bottom = 275.0
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! Mathmatic Mastication Endless Mode"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="background5" type="Sprite" parent="plansey_complete"]
+
+transform/pos = Vector2( -16.2943, -16.6036 )
+transform/scale = Vector2( 0.0209402, 0.0466523 )
+texture = ExtResource( 27 )
+offset = Vector2( -188.862, 54.9548 )
+
+[node name="warning5" type="RichTextLabel" parent="plansey_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -24.0
+margin/top = -19.0
+margin/right = 151.0
+margin/bottom = 147.0
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! New Reward!"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -5354,11 +5529,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -4.0
-margin/top = 15.0
-margin/right = 48.0
-margin/bottom = 62.0
-custom_fonts/font = ExtResource( 25 )
+margin/left = 1.0
+margin/top = 9.0
+margin/right = 53.0
+margin/bottom = 56.0
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5374,13 +5549,25 @@ underline = 2
 process/pause_mode = 2
 editor/display_folded = true
 visibility/visible = false
+transform/pos = Vector2( 12.4558, 1.73774 )
 
 [node name="background" type="Sprite" parent="untilly_complete"]
 
-transform/pos = Vector2( -10.1723, -2.71569 )
-transform/rot = -90.0
-transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+transform/pos = Vector2( -12.9984, -3.62444 )
+transform/scale = Vector2( 0.0741686, 0.111344 )
+texture = ExtResource( 27 )
+
+[node name="background2" type="Sprite" parent="untilly_complete"]
+
+transform/pos = Vector2( 8.61457, -13.9198 )
+transform/scale = Vector2( 0.0328056, 0.0806191 )
+texture = ExtResource( 27 )
+
+[node name="background1" type="Sprite" parent="untilly_complete"]
+
+transform/pos = Vector2( -5.77888, 7.71988 )
+transform/scale = Vector2( 0.0240542, 0.0473207 )
+texture = ExtResource( 8 )
 
 [node name="warning" type="RichTextLabel" parent="untilly_complete"]
 
@@ -5390,13 +5577,56 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -26.0
-margin/top = -15.0
+margin/top = -13.0
 margin/right = 527.0
-margin/bottom = 355.0
-custom_fonts/normal_font = ExtResource( 25 )
+margin/bottom = 357.0
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
+bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Untilly! This will go a long way to repairing Player relations but we still have more work to do!"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="warning1" type="RichTextLabel" parent="untilly_complete"]
+
+rect/scale = Vector2( 0.06, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = -22.0
+margin/right = 205.0
+margin/bottom = 247.0
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! Falling Shapes Organization Endless Mode"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="background6" type="Sprite" parent="untilly_complete"]
+
+transform/pos = Vector2( -28.7501, -18.3413 )
+transform/scale = Vector2( 0.0209402, 0.0466523 )
+texture = ExtResource( 27 )
+offset = Vector2( -188.862, 54.9548 )
+
+[node name="warning4" type="RichTextLabel" parent="untilly_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -36.4558
+margin/top = -20.7377
+margin/right = 138.544
+margin/bottom = 145.262
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! New Reward!"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -5407,11 +5637,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -4.0
-margin/top = 13.0
-margin/right = 48.0
-margin/bottom = 60.0
-custom_fonts/font = ExtResource( 25 )
+margin/left = -8.0
+margin/top = 6.0
+margin/right = 44.0
+margin/bottom = 53.0
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5427,13 +5657,28 @@ underline = 2
 process/pause_mode = 2
 editor/display_folded = true
 visibility/visible = false
+transform/pos = Vector2( 14.0187, 2.86847 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="background" type="Sprite" parent="windrow_complete"]
 
-transform/pos = Vector2( -10.1723, -2.71569 )
-transform/rot = -90.0
-transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+transform/pos = Vector2( -14.8756, -2.32775 )
+transform/scale = Vector2( 0.0686915, 0.107834 )
+texture = ExtResource( 27 )
+
+[node name="background2" type="Sprite" parent="windrow_complete"]
+
+transform/pos = Vector2( 6.47769, -17.7817 )
+transform/scale = Vector2( 0.0353298, 0.0610957 )
+texture = ExtResource( 27 )
+
+[node name="background1" type="Sprite" parent="windrow_complete"]
+
+transform/pos = Vector2( -8.00485, 8.66824 )
+transform/scale = Vector2( 0.0285981, 0.0535448 )
+texture = ExtResource( 8 )
 
 [node name="warning" type="RichTextLabel" parent="windrow_complete"]
 
@@ -5442,14 +5687,57 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -26.0
-margin/top = -17.0
-margin/right = 520.0
-margin/bottom = 353.0
-custom_fonts/normal_font = ExtResource( 25 )
+margin/left = -27.0
+margin/top = -13.0
+margin/right = 478.0
+margin/bottom = 247.0
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
+bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Windrow! This will go a long way to repairing Player relations but we still have more work to do!"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="warning1" type="RichTextLabel" parent="windrow_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = -23.0
+margin/right = 258.0
+margin/bottom = 347.0
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! Tall Wall Fall Ball Endless Mode Unlocked"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="background7" type="Sprite" parent="windrow_complete"]
+
+transform/pos = Vector2( -29.0661, -19.0848 )
+transform/scale = Vector2( 0.0224129, 0.048266 )
+texture = ExtResource( 27 )
+offset = Vector2( -188.862, 54.9548 )
+
+[node name="warning5" type="RichTextLabel" parent="windrow_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -37.0
+margin/top = -21.0
+margin/right = 136.0
+margin/bottom = 145.0
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! New Reward!"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -5460,11 +5748,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -5.0
-margin/top = 14.0
-margin/right = 47.0
-margin/bottom = 61.0
-custom_fonts/font = ExtResource( 25 )
+margin/left = -10.0
+margin/top = 7.0
+margin/right = 42.0
+margin/bottom = 54.0
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5483,10 +5771,21 @@ visibility/visible = false
 
 [node name="background" type="Sprite" parent="banlon_complete"]
 
-transform/pos = Vector2( -10.1723, -2.71569 )
-transform/rot = -90.0
-transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+transform/pos = Vector2( -1.024, -2.86025 )
+transform/scale = Vector2( 0.0800074, 0.111247 )
+texture = ExtResource( 27 )
+
+[node name="background2" type="Sprite" parent="banlon_complete"]
+
+transform/pos = Vector2( 20.045, -14.2473 )
+transform/scale = Vector2( 0.0328648, 0.0623868 )
+texture = ExtResource( 27 )
+
+[node name="background1" type="Sprite" parent="banlon_complete"]
+
+transform/pos = Vector2( 7.23992, 7.8274 )
+transform/scale = Vector2( 0.02895, 0.0520567 )
+texture = ExtResource( 8 )
 
 [node name="warning" type="RichTextLabel" parent="banlon_complete"]
 
@@ -5495,14 +5794,57 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -26.0
-margin/top = -16.0
-margin/right = 525.0
-margin/bottom = 354.0
-custom_fonts/normal_font = ExtResource( 25 )
+margin/left = -14.0
+margin/top = -13.0
+margin/right = 537.0
+margin/bottom = 357.0
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
+bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Banlon! This will go a long way to repairing Player relations but we still have more work to do!"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="warning1" type="RichTextLabel" parent="banlon_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 15.0
+margin/top = -20.0
+margin/right = 229.0
+margin/bottom = 173.0
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! Jump and Dodge Endless Mode"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="background8" type="Sprite" parent="banlon_complete"]
+
+transform/pos = Vector2( -15.0474, -16.2163 )
+transform/scale = Vector2( 0.0224129, 0.048266 )
+texture = ExtResource( 27 )
+offset = Vector2( -188.862, 54.9548 )
+
+[node name="warning6" type="RichTextLabel" parent="banlon_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -22.9813
+margin/top = -18.1315
+margin/right = 150.019
+margin/bottom = 147.868
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! New Reward!"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -5513,11 +5855,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -5.0
-margin/top = 15.0
-margin/right = 47.0
-margin/bottom = 62.0
-custom_fonts/font = ExtResource( 25 )
+margin/left = 5.0
+margin/top = 6.0
+margin/right = 57.0
+margin/bottom = 53.0
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5533,13 +5875,25 @@ underline = 2
 process/pause_mode = 2
 editor/display_folded = true
 visibility/visible = false
+transform/pos = Vector2( 11.4407, 5.77279 )
 
 [node name="background" type="Sprite" parent="slatten_complete"]
 
-transform/pos = Vector2( -10.1723, -2.71569 )
-transform/rot = -90.0
-transform/scale = Vector2( 0.0436669, 0.0276812 )
-texture = ExtResource( 24 )
+transform/pos = Vector2( -11.61, -7.31219 )
+transform/scale = Vector2( 0.0706286, 0.093559 )
+texture = ExtResource( 27 )
+
+[node name="background2" type="Sprite" parent="slatten_complete"]
+
+transform/pos = Vector2( 8.76729, -20.5013 )
+transform/scale = Vector2( 0.0299594, 0.0526917 )
+texture = ExtResource( 27 )
+
+[node name="background1" type="Sprite" parent="slatten_complete"]
+
+transform/pos = Vector2( -4.75475, 1.8816 )
+transform/scale = Vector2( 0.0303285, 0.0530075 )
+texture = ExtResource( 8 )
 
 [node name="warning" type="RichTextLabel" parent="slatten_complete"]
 
@@ -5548,14 +5902,60 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -26.0
-margin/top = -16.0
-margin/right = 527.0
-margin/bottom = 354.0
-custom_fonts/normal_font = ExtResource( 25 )
+margin/left = -24.0
+margin/top = -15.0
+margin/right = 529.0
+margin/bottom = 355.0
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "It took a lot but we have finally satisfied the customers of Fiyork! This will go a long way to repairing Player relations but we still have more work to do!"
+bbcode/bbcode = "You have restored the Pixel and Player relations! You have achieved Video Game Glory!"
+visible_characters = -1
+percent_visible = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="warning1" type="RichTextLabel" parent="slatten_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -25.0
+margin/right = 258.0
+margin/bottom = 225.0
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! Lights Off Endless Mode"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="background9" type="Sprite" parent="slatten_complete"]
+
+transform/pos = Vector2( -26.4881, -21.9891 )
+transform/scale = Vector2( 0.0224129, 0.048266 )
+texture = ExtResource( 27 )
+offset = Vector2( -188.862, 54.9548 )
+
+[node name="warning7" type="RichTextLabel" parent="slatten_complete"]
+
+rect/scale = Vector2( 0.05, 0.075 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -34.422
+margin/top = -23.9043
+margin/right = 138.578
+margin/bottom = 142.096
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Unlocked! New Reward!"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -5566,11 +5966,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -3.0
-margin/top = 14.0
-margin/right = 49.0
-margin/bottom = 61.0
-custom_fonts/font = ExtResource( 25 )
+margin/left = -7.0
+margin/top = 0.0
+margin/right = 45.0
+margin/bottom = 47.0
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -5592,7 +5992,7 @@ transform/pos = Vector2( 11.4867, 0.59959 )
 
 transform/pos = Vector2( -10.8782, -1.45341 )
 transform/scale = Vector2( 0.0622243, 0.135695 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="warning1" type="RichTextLabel" parent="menu"]
 
@@ -5732,7 +6132,7 @@ visibility/visible = false
 
 transform/pos = Vector2( 0.760927, 0.618607 )
 transform/scale = Vector2( 0.0573987, 0.0623617 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="warning" type="RichTextLabel" parent="are_you_sure"]
 
@@ -5819,7 +6219,7 @@ transform/pos = Vector2( 12.6988, 1.73227 )
 
 transform/pos = Vector2( -12.4459, -2.67271 )
 transform/scale = Vector2( 0.0553669, 0.0843038 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="warning" type="RichTextLabel" parent="are_you_sure_2"]
 
@@ -5905,7 +6305,7 @@ transform/pos = Vector2( 11.175, -0.346451 )
 
 transform/pos = Vector2( -9.24576, -0.074303 )
 transform/scale = Vector2( 0.0962571, 0.135117 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="warning" type="RichTextLabel" parent="skip_or_play"]
 
@@ -6064,7 +6464,7 @@ visibility/visible = false
 transform/pos = Vector2( -7.42649, 1.68678 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0387354, 0.0352096 )
-texture = ExtResource( 24 )
+texture = ExtResource( 28 )
 
 [node name="warning" type="RichTextLabel" parent="tutorial_start"]
 
@@ -6077,7 +6477,7 @@ margin/left = -28.0
 margin/top = -12.0
 margin/right = 752.0
 margin/bottom = 382.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "This is Hollyhock, and it is the capital city of our kingdom so it is the perfect place for you to start. I am available if you need some help getting started.
@@ -6096,7 +6496,7 @@ margin/left = -7.0
 margin/top = 17.0
 margin/right = 64.0
 margin/bottom = 64.0
-custom_fonts/font = ExtResource( 25 )
+custom_fonts/font = ExtResource( 29 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -6118,7 +6518,7 @@ margin/left = -21.0
 margin/top = 17.0
 margin/right = 29.0
 margin/bottom = 64.0
-custom_fonts/font = ExtResource( 25 )
+custom_fonts/font = ExtResource( 29 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.121569, 1, 0.0901961, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -6143,7 +6543,7 @@ __meta__ = {
 
 transform/pos = Vector2( -0.950006, -2.49925 )
 transform/scale = Vector2( 0.03429, 0.0181352 )
-texture = ExtResource( 24 )
+texture = ExtResource( 28 )
 flip_v = true
 
 [node name="warning" type="RichTextLabel" parent="tutorial_persistent_menu"]
@@ -6157,7 +6557,7 @@ margin/left = -16.0
 margin/top = -13.0
 margin/right = 666.25
 margin/bottom = 275.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "And a quick peek at your financial situation. We only have a little bit of money saved so we will need to spend it wisely to get Hollyhock back on its feet."
@@ -6169,13 +6569,13 @@ percent_visible = 1.0
 visibility/visible = false
 transform/pos = Vector2( -7.99865, -30.1423 )
 transform/scale = Vector2( 0.154357, 0.0858221 )
-texture = ExtResource( 26 )
+texture = ExtResource( 30 )
 
 [node name="arcade_border" type="Sprite" parent="tutorial_persistent_menu"]
 
 transform/pos = Vector2( -8.02335, -30.2228 )
 transform/scale = Vector2( 0.149624, 0.0874307 )
-texture = ExtResource( 26 )
+texture = ExtResource( 30 )
 
 [node name="title_box_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
@@ -6183,7 +6583,7 @@ visibility/visible = false
 transform/pos = Vector2( -1.24679, -18.5425 )
 transform/rot = 2.0
 transform/scale = Vector2( 0.125946, 0.237902 )
-texture = ExtResource( 27 )
+texture = ExtResource( 31 )
 flip_h = true
 
 [node name="supplies_border" type="Sprite" parent="tutorial_persistent_menu"]
@@ -6191,14 +6591,14 @@ flip_h = true
 visibility/visible = false
 transform/pos = Vector2( -10.2704, 19.8374 )
 transform/scale = Vector2( 0.164937, 0.149642 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="supplies_border1" type="Sprite" parent="tutorial_persistent_menu"]
 
 visibility/visible = false
 transform/pos = Vector2( 4.20049, 19.8905 )
 transform/scale = Vector2( 0.085168, 0.150704 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="supplies_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
@@ -6206,7 +6606,7 @@ visibility/visible = false
 transform/pos = Vector2( -5.59278, 9.96005 )
 transform/rot = -86.0875
 transform/scale = Vector2( 0.0813651, 0.0395302 )
-texture = ExtResource( 27 )
+texture = ExtResource( 31 )
 flip_v = true
 
 [node name="supplies_pointer1" type="Sprite" parent="tutorial_persistent_menu"]
@@ -6215,20 +6615,20 @@ visibility/visible = false
 transform/pos = Vector2( -3.50441, 9.49381 )
 transform/rot = -86.0875
 transform/scale = Vector2( 0.104003, 0.0352382 )
-texture = ExtResource( 27 )
+texture = ExtResource( 31 )
 
 [node name="finances_border" type="Sprite" parent="tutorial_persistent_menu"]
 
 transform/pos = Vector2( -25.7372, 15.7303 )
 transform/scale = Vector2( 0.149377, 0.248766 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="finances_pointer" type="Sprite" parent="tutorial_persistent_menu"]
 
 transform/pos = Vector2( -18.7358, 7.54088 )
 transform/rot = -111.178
 transform/scale = Vector2( 0.0764177, 0.0593957 )
-texture = ExtResource( 27 )
+texture = ExtResource( 31 )
 flip_v = true
 
 [node name="tutorial_reports" type="Node2D" parent="."]
@@ -6243,7 +6643,7 @@ transform/scale = Vector2( 1, 0.806395 )
 
 transform/pos = Vector2( 6.03098, 4.72945 )
 transform/scale = Vector2( 0.047212, 0.0154151 )
-texture = ExtResource( 24 )
+texture = ExtResource( 28 )
 flip_v = true
 
 [node name="warning" type="RichTextLabel" parent="tutorial_reports"]
@@ -6257,7 +6657,7 @@ margin/left = -14.0
 margin/top = -3.0
 margin/right = 597.0
 margin/bottom = 206.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "The first tab across the top is Reports."
@@ -6269,35 +6669,35 @@ percent_visible = 1.0
 transform/pos = Vector2( -12.1785, -35.4509 )
 transform/rot = -37.0565
 transform/scale = Vector2( 0.0813669, 0.0671947 )
-texture = ExtResource( 27 )
+texture = ExtResource( 31 )
 flip_h = true
 
 [node name="reports_box" type="Sprite" parent="tutorial_reports"]
 
 transform/pos = Vector2( -9.99456, -43.1516 )
 transform/scale = Vector2( 0.100861, 0.114607 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="finances_box" type="Sprite" parent="tutorial_reports"]
 
 visibility/visible = false
 transform/pos = Vector2( -9.55729, -33.1076 )
 transform/scale = Vector2( 0.133195, 0.0465443 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="other_box" type="Sprite" parent="tutorial_reports"]
 
 visibility/visible = false
 transform/pos = Vector2( -9.49505, -28.6116 )
 transform/scale = Vector2( 0.133195, 0.0461188 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="other_box1" type="Sprite" parent="tutorial_reports"]
 
 visibility/visible = false
 transform/pos = Vector2( -9.52617, -23.8759 )
 transform/scale = Vector2( 0.135062, 0.0487968 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="tutorial_supplies" type="Node2D" parent="."]
 
@@ -6314,7 +6714,7 @@ __meta__ = {
 
 transform/pos = Vector2( -10.2833, -44.3957 )
 transform/scale = Vector2( 0.044365, 0.0112446 )
-texture = ExtResource( 24 )
+texture = ExtResource( 28 )
 flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_supplies"]
@@ -6328,7 +6728,7 @@ margin/left = -30.0
 margin/top = -51.0
 margin/right = 1089.0
 margin/bottom = 160.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Next across the top is the supply button, and it is by far one of the most important."
@@ -6339,7 +6739,7 @@ percent_visible = 1.0
 
 transform/pos = Vector2( -14.6619, -31.8342 )
 transform/scale = Vector2( 0.0874073, 0.106751 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="click" type="RichTextLabel" parent="tutorial_supplies"]
 
@@ -6353,7 +6753,7 @@ margin/left = 8.0
 margin/top = 0.0
 margin/right = 101.0
 margin/bottom = 38.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "CLICK!"
@@ -6366,55 +6766,55 @@ visibility/visible = false
 transform/pos = Vector2( 17.6866, -5.67668 )
 transform/rot = 39.4335
 transform/scale = Vector2( 0.17106, 0.170149 )
-texture = ExtResource( 27 )
+texture = ExtResource( 31 )
 
 [node name="supplies_box1" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
 transform/pos = Vector2( -22.6143, -21.7587 )
 transform/scale = Vector2( 0.154446, 0.0473794 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="supplies_box2" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
 transform/pos = Vector2( -22.6472, -17.3291 )
 transform/scale = Vector2( 0.153789, 0.045649 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="supplies_icon_box" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
 transform/pos = Vector2( -3.42356, 16.8029 )
 transform/scale = Vector2( 0.172848, 0.186886 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="supplies_icon_box3" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
 transform/pos = Vector2( 20.4226, 3.0562 )
 transform/scale = Vector2( 0.194382, 0.0849141 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="supplies_icon_box2" type="Sprite" parent="tutorial_supplies"]
 
 transform/pos = Vector2( -6.30147, -13.2193 )
 transform/scale = Vector2( 0.131824, 0.25826 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="supplies_icon_box1" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
 transform/pos = Vector2( 11.9396, 16.9508 )
 transform/scale = Vector2( 0.0850948, 0.183928 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="finances_box" type="Sprite" parent="tutorial_supplies"]
 
 visibility/visible = false
 transform/pos = Vector2( -19.6897, 11.9991 )
 transform/scale = Vector2( 0.155103, 0.30665 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="tutorial_pricing" type="Node2D" parent="."]
 
@@ -6431,7 +6831,7 @@ __meta__ = {
 
 transform/pos = Vector2( -10.2833, -44.3957 )
 transform/scale = Vector2( 0.044365, 0.0112446 )
-texture = ExtResource( 24 )
+texture = ExtResource( 28 )
 flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_pricing"]
@@ -6445,7 +6845,7 @@ margin/left = -30.0
 margin/top = -51.0
 margin/right = 873.0
 margin/bottom = 197.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "And now we have concessions. The idea is the same as the arcades. Feel free to set them to whatever you want, as long as it is within the range."
@@ -6458,7 +6858,7 @@ visibility/behind_parent = true
 transform/pos = Vector2( 18.5932, 13.8417 )
 transform/rot = 180.0
 transform/scale = Vector2( 0.00260661, 0.00510984 )
-texture = ExtResource( 29 )
+texture = ExtResource( 33 )
 
 [node name="ok" type="RichTextLabel" parent="tutorial_pricing"]
 
@@ -6472,7 +6872,7 @@ margin/left = 16.0
 margin/top = 12.0
 margin/right = 76.0
 margin/bottom = 65.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "OK"
@@ -6501,35 +6901,35 @@ __meta__ = {
 visibility/visible = false
 transform/pos = Vector2( -22.7129, -21.8245 )
 transform/scale = Vector2( 0.141959, 0.0355346 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="pricing_box1" type="Sprite" parent="tutorial_pricing"]
 
 visibility/visible = false
 transform/pos = Vector2( -5.85527, -31.9584 )
 transform/scale = Vector2( 0.0979254, 0.0855462 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="concessions_tab_box" type="Sprite" parent="tutorial_pricing"]
 
 visibility/visible = false
 transform/pos = Vector2( -22.7129, -18.2428 )
 transform/scale = Vector2( 0.141959, 0.037602 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="prediction_box" type="Sprite" parent="tutorial_pricing"]
 
 visibility/visible = false
 transform/pos = Vector2( 6.63187, 16.8029 )
 transform/scale = Vector2( 0.0847811, 0.184253 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="prediction_box1" type="Sprite" parent="tutorial_pricing"]
 
 visibility/visible = false
 transform/pos = Vector2( -6.18387, 16.9345 )
 transform/scale = Vector2( 0.170219, 0.186885 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="tutorial_upgrades" type="Node2D" parent="."]
 
@@ -6543,7 +6943,7 @@ transform/scale = Vector2( 0.947031, 0.806395 )
 
 transform/pos = Vector2( -10.8486, -44.4195 )
 transform/scale = Vector2( 0.046027, 0.010089 )
-texture = ExtResource( 24 )
+texture = ExtResource( 28 )
 flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_upgrades"]
@@ -6557,7 +6957,7 @@ margin/left = -31.0
 margin/top = -50.0
 margin/right = 904.0
 margin/bottom = 165.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Here we have our upgrades."
@@ -6569,28 +6969,28 @@ percent_visible = 1.0
 visibility/visible = false
 transform/pos = Vector2( 4.46305, -31.8926 )
 transform/scale = Vector2( 0.118956, 0.0868623 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="pricing_box1" type="Sprite" parent="tutorial_upgrades"]
 
 visibility/visible = false
 transform/pos = Vector2( -21.267, -21.6929 )
 transform/scale = Vector2( 0.165619, 0.040799 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="pricing_box2" type="Sprite" parent="tutorial_upgrades"]
 
 visibility/visible = false
 transform/pos = Vector2( -21.267, -18.271 )
 transform/scale = Vector2( 0.165619, 0.0302702 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="pricing_box3" type="Sprite" parent="tutorial_upgrades"]
 
 visibility/visible = false
 transform/pos = Vector2( -21.267, -14.7834 )
 transform/scale = Vector2( 0.165619, 0.0394829 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="tutorial_locals" type="Node2D" parent="."]
 
@@ -6608,7 +7008,7 @@ __meta__ = {
 visibility/visible = false
 transform/pos = Vector2( -9.46886, -44.4189 )
 transform/scale = Vector2( 0.0478571, 0.00992204 )
-texture = ExtResource( 24 )
+texture = ExtResource( 28 )
 flip_v = true
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_locals"]
@@ -6623,7 +7023,7 @@ margin/left = -30.0
 margin/top = -48.0
 margin/right = 916.0
 margin/bottom = 196.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Here we have the locals tab, and first along the side is Marketing. This can have a huge impact on drawing customers to the arcade."
@@ -6635,21 +7035,21 @@ percent_visible = 1.0
 visibility/visible = false
 transform/pos = Vector2( 14.0584, -32.1559 )
 transform/scale = Vector2( 0.0795233, 0.0868623 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="pricing_box1" type="Sprite" parent="tutorial_locals"]
 
 visibility/visible = false
 transform/pos = Vector2( -23.6659, -21.6929 )
 transform/scale = Vector2( 0.120271, 0.0381668 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="pricing_box2" type="Sprite" parent="tutorial_locals"]
 
 visibility/visible = false
 transform/pos = Vector2( -23.8302, -18.4039 )
 transform/scale = Vector2( 0.11567, 0.0329262 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="tutorial_research" type="Node2D" parent="."]
 
@@ -6668,7 +7068,7 @@ visibility/visible = false
 transform/pos = Vector2( -6.2008, -13.4731 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0278675, 0.0373426 )
-texture = ExtResource( 24 )
+texture = ExtResource( 28 )
 
 [node name="first_warning" type="RichTextLabel" parent="tutorial_research"]
 
@@ -6681,7 +7081,7 @@ margin/left = -29.0
 margin/top = -25.0
 margin/right = 525.0
 margin/bottom = 358.0
-custom_fonts/normal_font = ExtResource( 25 )
+custom_fonts/normal_font = ExtResource( 29 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I will go while you get everything ready just how you want it. Whenever you are ready to open the arcade just click on the Start Day button right above my head!"
@@ -6693,14 +7093,14 @@ percent_visible = 1.0
 visibility/visible = false
 transform/pos = Vector2( 23.6538, -32.3236 )
 transform/scale = Vector2( 0.117642, 0.084953 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="pricing_box1" type="Sprite" parent="tutorial_research"]
 
 visibility/visible = false
 transform/pos = Vector2( 23.6867, -44.4454 )
 transform/scale = Vector2( 0.111727, 0.0937609 )
-texture = ExtResource( 28 )
+texture = ExtResource( 32 )
 
 [node name="cursor_blink" type="Timer" parent="."]
 
@@ -6711,7 +7111,7 @@ autostart = false
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 30 )
+stream/stream = ExtResource( 34 )
 stream/play = false
 stream/loop = true
 stream/volume_db = 0.0
@@ -6752,76 +7152,6 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="pixel" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( -24.8175, -20.4692 )
-transform/scale = Vector2( 0.28786, 0.190359 )
-
-[node name="crotch" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 22.3209, 15.3919 )
-transform/scale = Vector2( 0.0848177, 0.199521 )
-texture = ExtResource( 31 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="left_arm" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 20.1989, 2.27338 )
-transform/scale = Vector2( 0.0909543, 0.223061 )
-texture = ExtResource( 32 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="right_arm" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 24.9737, 1.90617 )
-transform/scale = Vector2( 0.0909543, 0.226215 )
-texture = ExtResource( 32 )
-flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="torso" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 22.4082, 2.93272 )
-transform/scale = Vector2( 0.122058, 0.233854 )
-texture = ExtResource( 33 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="head" type="Sprite" parent="pixel"]
-
-transform/pos = Vector2( 22.4788, -12.6974 )
-transform/scale = Vector2( 0.122058, 0.233854 )
-texture = ExtResource( 34 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pixel_button" type="LinkButton" parent="pixel"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 16.0
-margin/top = -18.0
-margin/right = 29.0
-margin/bottom = 18.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="timer_notify" type="Timer" parent="."]
 
 process_mode = 1
@@ -6854,6 +7184,8 @@ bbcode/enabled = false
 bbcode/bbcode = "Autosaved."
 visible_characters = -1
 percent_visible = 1.0
+
+[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 
 [connection signal="button_up" from="start_day" to="." method="_on_start_day_button_up"]
 
@@ -6904,8 +7236,6 @@ percent_visible = 1.0
 [connection signal="button_down" from="tutorial_pricing/ok/ok_button" to="." method="_on_ok_button_button_down"]
 
 [connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
-
-[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 
 [connection signal="timeout" from="timer_notify" to="." method="_on_timer_notify_timeout"]
 

@@ -3085,14 +3085,12 @@ __meta__ = {
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
-visibility/visible = false
-transform/pos = Vector2( 12.0802, 0.805649 )
+transform/pos = Vector2( 11.0595, 8.99264 )
 
 [node name="background" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -11.3306, -4.30554 )
-transform/scale = Vector2( 0.0630713, 0.130568 )
+transform/pos = Vector2( -11.1027, -8.42556 )
+transform/scale = Vector2( 0.0642106, 0.103101 )
 texture = ExtResource( 17 )
 
 [node name="button" type="Sprite" parent="menu"]
@@ -3103,14 +3101,8 @@ texture = ExtResource( 18 )
 
 [node name="button 2" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -11.0494, 1.18668 )
-transform/scale = Vector2( 0.110475, 0.0610349 )
-texture = ExtResource( 18 )
-
-[node name="button 3" type="Sprite" parent="menu"]
-
-transform/pos = Vector2( -11.3708, 9.41311 )
-transform/scale = Vector2( 0.106458, 0.0610349 )
+transform/pos = Vector2( -10.8765, 1.18668 )
+transform/scale = Vector2( 0.112204, 0.0610349 )
 texture = ExtResource( 18 )
 
 [node name="notification" type="RichTextLabel" parent="menu"]
@@ -3173,7 +3165,7 @@ shortcut = null
 text = "Return to Game"
 underline = 2
 
-[node name="return_to_village" type="LinkButton" parent="menu"]
+[node name="return_to_endless" type="LinkButton" parent="menu"]
 
 rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
@@ -3190,34 +3182,14 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "Return to Village"
-underline = 2
-
-[node name="return_to_main" type="LinkButton" parent="menu"]
-
-rect/scale = Vector2( 0.06, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -21.0
-margin/top = 7.0
-margin/right = 376.0
-margin/bottom = 54.0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "Return to Main Menu"
+text = "Return to Endless"
 underline = 2
 
 [node name="are_you_sure" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
+transform/pos = Vector2( -0.450146, 6.69044 )
 
 [node name="background" type="Sprite" parent="are_you_sure"]
 
@@ -3233,13 +3205,13 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -10.0
-margin/top = -15.0
+margin/top = -17.0
 margin/right = 290.0
-margin/bottom = 198.0
+margin/bottom = 196.0
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Are you sure you want to go back to the village?"
+bbcode/bbcode = "Are you sure you want to go back to the Endless Mode menu?"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -3249,7 +3221,7 @@ transform/pos = Vector2( 5.48762, 3.57191 )
 transform/scale = Vector2( 0.0427519, 0.0587461 )
 texture = ExtResource( 18 )
 
-[node name="yes_village" type="LinkButton" parent="are_you_sure"]
+[node name="yes_endless" type="LinkButton" parent="are_you_sure"]
 
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
@@ -3275,7 +3247,7 @@ transform/pos = Vector2( -5.62276, 3.57191 )
 transform/scale = Vector2( 0.0309759, 0.0553641 )
 texture = ExtResource( 18 )
 
-[node name="no_village" type="LinkButton" parent="are_you_sure"]
+[node name="no_endless" type="LinkButton" parent="are_you_sure"]
 
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
@@ -3286,89 +3258,6 @@ margin/left = -8.0
 margin/top = 2.0
 margin/right = 46.0
 margin/bottom = 49.0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "NO"
-underline = 2
-
-[node name="are_you_sure_2" type="Node2D" parent="."]
-
-process/pause_mode = 2
-editor/display_folded = true
-visibility/visible = false
-transform/pos = Vector2( 12.5952, -2.19837 )
-
-[node name="background" type="Sprite" parent="are_you_sure_2"]
-
-transform/pos = Vector2( -12.1353, -0.73198 )
-transform/scale = Vector2( 0.0574612, 0.0971016 )
-texture = ExtResource( 17 )
-
-[node name="notification1" type="RichTextLabel" parent="are_you_sure_2"]
-
-rect/scale = Vector2( 0.075, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -23.0
-margin/top = -10.0
-margin/right = 281.0
-margin/bottom = 206.0
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Are you sure you want to go to the main menu?"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="background2" type="Sprite" parent="are_you_sure_2"]
-
-transform/pos = Vector2( -6.65643, 8.5367 )
-transform/scale = Vector2( 0.0423164, 0.0647372 )
-texture = ExtResource( 18 )
-
-[node name="yes_main" type="LinkButton" parent="are_you_sure_2"]
-
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -10.0
-margin/top = 7.0
-margin/right = 64.0
-margin/bottom = 54.0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-text = "YES"
-underline = 2
-
-[node name="background1" type="Sprite" parent="are_you_sure_2"]
-
-transform/pos = Vector2( -17.926, 8.46314 )
-transform/scale = Vector2( 0.0302896, 0.0573813 )
-texture = ExtResource( 18 )
-
-[node name="no_main" type="LinkButton" parent="are_you_sure_2"]
-
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -21.0
-margin/top = 7.0
-margin/right = 33.0
-margin/bottom = 54.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3442,17 +3331,11 @@ underline = 2
 
 [connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
 
-[connection signal="button_down" from="menu/return_to_village" to="." method="_on_return_to_village_button_down"]
+[connection signal="button_down" from="menu/return_to_endless" to="." method="_on_return_to_endless_button_down"]
 
-[connection signal="button_down" from="menu/return_to_main" to="." method="_on_return_to_main_button_down"]
+[connection signal="button_down" from="are_you_sure/yes_endless" to="." method="_on_yes_endless_button_down"]
 
-[connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
-
-[connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
-
-[connection signal="button_down" from="are_you_sure_2/yes_main" to="." method="_on_yes_main_button_down"]
-
-[connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
+[connection signal="button_down" from="are_you_sure/no_endless" to="." method="_on_no_endless_button_down"]
 
 [connection signal="button_up" from="game_over/game_over_button" to="." method="_on_game_over_button_button_up"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://player_selection.gd" type="Script" id=1]
 [ext_resource path="res://collander_64.png" type="Texture" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://error_box.png" type="Texture" id=8]
 [ext_resource path="res://button.png" type="Texture" id=9]
 [ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=10]
+[ext_resource path="res://rewards.png" type="Texture" id=11]
+[ext_resource path="res://badge.png" type="Texture" id=12]
 
 [sub_resource type="Animation" id=1]
 
@@ -134,7 +136,6 @@ __meta__ = {
 [node name="endless" type="Sprite" parent="."]
 
 editor/display_folded = true
-visibility/visible = false
 transform/pos = Vector2( 18.9642, 7.32881 )
 transform/scale = Vector2( 0.0633426, 0.0879617 )
 texture = ExtResource( 4 )
@@ -279,9 +280,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -25.0
-margin/top = -19.0
+margin/top = -18.0
 margin/right = 75.0
-margin/bottom = 81.0
+margin/bottom = 82.0
 toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
@@ -293,7 +294,6 @@ params/stretch_mode = 0
 
 [node name="quit_game" type="Node2D" parent="."]
 
-editor/display_folded = true
 visibility/visible = false
 __meta__ = {
 "_edit_lock_": true
@@ -495,6 +495,73 @@ shortcut = null
 text = "CANCEL"
 underline = 2
 
+[node name="rewards" type="Node2D" parent="."]
+
+transform/pos = Vector2( 44.1853, -3.13085 )
+
+[node name="star" type="Sprite" parent="rewards"]
+
+transform/pos = Vector2( -22.1548, -11.673 )
+transform/scale = Vector2( 0.0374423, 0.0532243 )
+texture = ExtResource( 11 )
+
+[node name="reward_label" type="RichTextLabel" parent="rewards"]
+
+rect/scale = Vector2( 0.04, 0.04 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -25.0
+margin/top = -10.0
+margin/right = 124.0
+margin/bottom = 67.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Rewards"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="reward_button" type="LinkButton" parent="rewards"]
+
+rect/scale = Vector2( 1, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -25.0
+margin/top = -16.0
+margin/right = -19.0
+margin/bottom = -1.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="unseen_badge" type="Sprite" parent="rewards"]
+
+transform/pos = Vector2( -20.5356, -14.1776 )
+transform/scale = Vector2( 0.018665, 0.026037 )
+texture = ExtResource( 12 )
+
+[node name="unseen_number" type="RichTextLabel" parent="rewards/unseen_badge"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -23.0
+margin/top = -40.0
+margin/right = 9.0
+margin/bottom = 4.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "0"
+visible_characters = -1
+percent_visible = 1.0
+
 [connection signal="button_up" from="new/new_button" to="." method="_on_new_button_button_up"]
 
 [connection signal="button_up" from="endless/endless_button" to="." method="_on_endless_button_button_up"]
@@ -512,5 +579,7 @@ underline = 2
 [connection signal="button_up" from="new_game_overwrite/yes_overwrite" to="." method="_on_yes_overwrite_button_up"]
 
 [connection signal="button_up" from="new_game_overwrite/no_overwrite" to="." method="_on_no_overwrite_button_up"]
+
+[connection signal="button_down" from="rewards/reward_button" to="." method="_on_reward_button_button_down"]
 
 
