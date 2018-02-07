@@ -31,8 +31,8 @@ func _ready():
 		get_node("customer_display/customer").start()
 	else:
 		pass
-	if tutorial.tutorial == false:
-		tutorial.tutorial = true
+	if tutorial.banlon_tutorial == false:
+		tutorial.banlon_tutorial = true
 		get_node("tutorial").show()
 		get_tree().set_pause(true)
 	else:

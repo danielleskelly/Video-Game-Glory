@@ -1,17 +1,18 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=22 format=1]
 
 [ext_resource path="res://story_piece_one.gd" type="Script" id=1]
 [ext_resource path="res://collander_64.png" type="Texture" id=2]
-[ext_resource path="res://file_icon.png" type="Texture" id=3]
-[ext_resource path="res://email.png" type="Texture" id=4]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=5]
-[ext_resource path="res://error_box.png" type="Texture" id=6]
-[ext_resource path="res://button.png" type="Texture" id=7]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=8]
-[ext_resource path="res://music_icon_on.png" type="Texture" id=9]
-[ext_resource path="res://music_icon_off.png" type="Texture" id=10]
-[ext_resource path="res://blacker_than_night.png" type="Texture" id=11]
-[ext_resource path="res://storyline_one.ogg" type="AudioStream" id=12]
+[ext_resource path="res://secondary_background.png" type="Texture" id=3]
+[ext_resource path="res://file_icon.png" type="Texture" id=4]
+[ext_resource path="res://email.png" type="Texture" id=5]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://error_box.png" type="Texture" id=7]
+[ext_resource path="res://button.png" type="Texture" id=8]
+[ext_resource path="res://dialogue_box.png" type="Texture" id=9]
+[ext_resource path="res://music_icon_on.png" type="Texture" id=10]
+[ext_resource path="res://music_icon_off.png" type="Texture" id=11]
+[ext_resource path="res://blacker_than_night.png" type="Texture" id=12]
+[ext_resource path="res://storyline_one.ogg" type="AudioStream" id=13]
 
 [sub_resource type="Animation" id=1]
 
@@ -89,165 +90,194 @@ tracks/6/keys = {
 "values": [ true, false, true, false, true, false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("speaking_bubble:transform/pos")
+tracks/7/path = NodePath("speaking_bubble/speech:bbcode/bbcode")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
-"times": FloatArray( 0, 78.2, 78.3, 78.4, 78.5, 78.6, 78.7, 78.8, 78.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -9.68433, 12.0952 ), Vector2( -9.68433, 12.0952 ), Vector2( -8.9096, 10.8911 ), Vector2( -10.3705, 10.4105 ), Vector2( -8.54618, 9.9345 ), Vector2( -11.086, 9.21364 ), Vector2( -9.265, 7.53165 ), Vector2( -11.4734, 8.73307 ), Vector2( -9.68433, 12.0952 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("speaking_bubble:transform/scale")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0, 78.2, 78.3, 78.4, 78.5, 78.6, 78.7, 78.8, 78.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.0236464, 0.0134585 ), Vector2( 0.0236464, 0.0134585 ), Vector2( 0.0250601, 0.0152665 ), Vector2( 0.0277212, 0.0159881 ), Vector2( 0.0243981, 0.0152734 ), Vector2( 0.0197634, 0.014191 ), Vector2( 0.0230864, 0.0167165 ), Vector2( 0.0271091, 0.0149126 ), Vector2( 0.023646, 0.013458 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("speaking_bubble/speech:bbcode/bbcode")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
 "times": FloatArray( 0, 10, 23.7, 35, 46, 48.5, 63.9, 73.4, 78.2, 79.1 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "OK. I am almost done...", "I just need to type in my name and click send!", "Done and done! I really hope I get this job...", "Well... what to do while I wait?", "Maybe I have time to take a little trip over to hornbub...", "Wow! That was fast! I guess I should click that...", "No way! I got the job!", "Start date....", "NOW?!?!", "I gotta go!" ]
 }
-tracks/10/type = "value"
-tracks/10/path = NodePath("fade_out:visibility/visible")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
+tracks/8/type = "value"
+tracks/8/path = NodePath("fade_out:visibility/visible")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
 "times": FloatArray( 0, 84, 84.6 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
 }
-tracks/11/type = "value"
-tracks/11/path = NodePath("email/name_output:bbcode/bbcode")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
+tracks/9/type = "value"
+tracks/9/path = NodePath("email/name_output:bbcode/bbcode")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
 "times": FloatArray( 0, 0.4, 0.8, 1.3, 1.8, 2.2, 2.6, 3, 3.4, 3.8, 4.2, 4.6, 5, 5.4, 5.8, 6.2, 6.6, 7, 7.4, 7.8, 8.2, 8.6, 9, 9.4, 9.8, 10.2, 10.6, 11, 11.4, 11.8, 12.2, 12.6, 13, 13.4, 13.8, 14.3, 14.7, 15.1, 15.5, 15.9, 16.3, 16.7, 17.1, 17.5, 18, 18.4, 18.8, 19.2, 19.6, 20, 20.2, 20.4, 20.5, 20.7, 20.9, 21.1, 21.2, 21.4, 21.5, 21.7, 21.8, 22.1, 22.5, 22.9 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "^", "", "N", "Ne^", "New^", "Newo", "Newo I", "Newo Ik^", "Newo Ikk^", "Newo Ikke^", "Newo Ikke", "Newo Ikken", "Newo Ikken^", "Newo Ikken", "Newo Ikken^", "Newo Ikken" ]
 }
-tracks/12/type = "value"
-tracks/12/path = NodePath("tv_desktop/email_icon:transform/pos")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
+tracks/10/type = "value"
+tracks/10/path = NodePath("background_main/email_icon:transform/pos")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
 "times": FloatArray( 47, 47.2, 47.4, 47.6, 47.8, 48, 48.2, 48.4 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 159.016, 41.8049 ), Vector2( 150, 41.8049 ), Vector2( 159.016, 41.8049 ), Vector2( 165, 41.8049 ), Vector2( 159.016, 41.8049 ), Vector2( 150, 41.8049 ), Vector2( 165, 41.8049 ), Vector2( 159.016, 41.8049 ) ]
 }
-tracks/13/type = "value"
-tracks/13/path = NodePath("tv_desktop/email_icon:transform/rot")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
+tracks/11/type = "value"
+tracks/11/path = NodePath("background_main/email_icon:transform/rot")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
 "times": FloatArray( 47, 47.2, 47.4, 47.6, 47.8, 48, 48.2, 48.4 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 20.0, 0.0, -20.0, 0.0, 20.0, -20.0, 0.0 ]
 }
-tracks/14/type = "value"
-tracks/14/path = NodePath("speaking_bubble/speech:visibility/visible")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
+tracks/12/type = "value"
+tracks/12/path = NodePath("speaking_bubble/speech:visibility/visible")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
-tracks/15/type = "value"
-tracks/15/path = NodePath("fade_out/Sprite:transform/pos")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
+tracks/13/type = "value"
+tracks/13/path = NodePath("fade_out/Sprite:transform/pos")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
 "times": FloatArray( 84, 84.2, 84.3, 84.4, 84.5 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( -3.05176e-05, -93.3026 ), Vector2( -1.52588e-05, 11.6628 ), Vector2( -1.52588e-05, 81.6397 ), Vector2( 0.721695, 112.741 ) ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("fade_out/Sprite1:transform/pos")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
+tracks/14/type = "value"
+tracks/14/path = NodePath("fade_out/Sprite1:transform/pos")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
 "times": FloatArray( 84, 84.1, 84.2, 84.4, 84.5 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -4.3559, 488.426 ), Vector2( -3.63419, 535.078 ), Vector2( -3.63419, 441.775 ), Vector2( -3.63416, 511.752 ), Vector2( -2.91241, 542.853 ) ]
 }
-tracks/17/type = "value"
-tracks/17/path = NodePath("fade_out/Sprite2:transform/pos")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
+tracks/15/type = "value"
+tracks/15/path = NodePath("fade_out/Sprite2:transform/pos")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
 "times": FloatArray( 84, 84.2, 84.4, 84.5 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -3.26694, 979.587 ), Vector2( -3.26694, 886.284 ), Vector2( -3.26691, 956.261 ), Vector2( -2.54517, 987.362 ) ]
 }
+tracks/16/type = "value"
+tracks/16/path = NodePath("skip_button:visibility/visible")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0, 84.6 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("mute_button:visibility/visible")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0, 84.6 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 tracks/18/type = "value"
-tracks/18/path = NodePath("skip_button:visibility/visible")
+tracks/18/path = NodePath("background_main:transform/pos")
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
-"times": FloatArray( 0, 84.6 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/19/type = "value"
-tracks/19/path = NodePath("mute_button:visibility/visible")
-tracks/19/interp = 1
-tracks/19/imported = false
-tracks/19/keys = {
-"times": FloatArray( 0, 84.6 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/20/type = "value"
-tracks/20/path = NodePath("tv_desktop:transform/pos")
-tracks/20/interp = 1
-tracks/20/imported = false
-tracks/20/keys = {
 "times": FloatArray( 84.5, 84.6 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( -0.169138, -0.300376 ), Vector2( -1.13452, 1.20238 ) ]
 }
-tracks/21/type = "value"
-tracks/21/path = NodePath("tv_desktop:transform/scale")
-tracks/21/interp = 1
-tracks/21/imported = false
-tracks/21/keys = {
+tracks/19/type = "value"
+tracks/19/path = NodePath("background_main:transform/scale")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
 "times": FloatArray( 84.5, 84.6 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.0993884, 0.158644 ), Vector2( 0.00519792, 0.0133534 ) ]
 }
-tracks/22/type = "value"
-tracks/22/path = NodePath("tv_desktop:visibility/visible")
-tracks/22/interp = 1
-tracks/22/imported = false
-tracks/22/keys = {
+tracks/20/type = "value"
+tracks/20/path = NodePath("background_main:visibility/visible")
+tracks/20/interp = 1
+tracks/20/imported = false
+tracks/20/keys = {
 "times": FloatArray( 0, 84.6 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=6]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=8]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 6 )
 
 [node name="story_piece_one" type="Node2D"]
 
@@ -266,32 +296,37 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "story_piece_one"
 
-[node name="tv_desktop" type="Sprite" parent="."]
+[node name="background_main" type="Sprite" parent="."]
 
-visibility/visible = false
-transform/pos = Vector2( -1.13452, 1.20238 )
-transform/scale = Vector2( 0.00519792, 0.0133534 )
+transform/pos = Vector2( -0.169138, -0.300376 )
+transform/scale = Vector2( 0.0993884, 0.158644 )
 texture = ExtResource( 2 )
 
-[node name="Sprite1" type="Sprite" parent="tv_desktop"]
+[node name="generated_background" type="Sprite" parent="background_main"]
+
+transform/pos = Vector2( 0.0245609, 0.190653 )
+transform/scale = Vector2( 0.514741, 0.274886 )
+texture = ExtResource( 3 )
+
+[node name="disk_icon" type="Sprite" parent="background_main"]
 
 transform/pos = Vector2( -146.838, 36.8423 )
 transform/scale = Vector2( 0.594936, 0.509383 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
-[node name="Sprite2" type="Sprite" parent="tv_desktop"]
+[node name="disk_icon 2" type="Sprite" parent="background_main"]
 
 transform/pos = Vector2( -46.1026, 35.7446 )
 transform/scale = Vector2( 0.594936, 0.509383 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
-[node name="email_icon" type="Sprite" parent="tv_desktop"]
+[node name="email_icon" type="Sprite" parent="background_main"]
 
 transform/pos = Vector2( 159.016, 41.8049 )
 transform/scale = Vector2( 0.516704, 0.51677 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
-[node name="email_button" type="LinkButton" parent="tv_desktop/email_icon"]
+[node name="email_button" type="LinkButton" parent="background_main/email_icon"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -308,7 +343,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="collander" type="RichTextLabel" parent="tv_desktop"]
+[node name="collander" type="RichTextLabel" parent="background_main"]
 
 rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
@@ -319,8 +354,8 @@ margin/left = -154.0
 margin/top = -125.0
 margin/right = 554.0
 margin/bottom = 17.0
-custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 0.619608, 0.819608, 1, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.941176, 0.929412, 0.894118, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "*** Collander 64 Extended Edition ***
 64K RAM 39205 BYTES FREE
@@ -330,11 +365,9 @@ percent_visible = 1.0
 
 [node name="email" type="Sprite" parent="."]
 
-editor/display_folded = true
-visibility/visible = false
-transform/pos = Vector2( 13.2037, 5.12915 )
-transform/scale = Vector2( 0.0119557, 0.0196748 )
-texture = ExtResource( 6 )
+transform/pos = Vector2( -0.661597, -1.37725 )
+transform/scale = Vector2( 0.105015, 0.124539 )
+texture = ExtResource( 7 )
 
 [node name="job_application" type="RichTextLabel" parent="email"]
 
@@ -347,7 +380,7 @@ margin/left = -93.0
 margin/top = -57.0
 margin/right = 161.0
 margin/bottom = -6.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Job Application"
@@ -365,7 +398,7 @@ margin/left = -109.0
 margin/top = -11.0
 margin/right = -7.0
 margin/bottom = 47.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Name:"
@@ -383,7 +416,7 @@ margin/left = -142.0
 margin/top = 31.0
 margin/right = 135.0
 margin/bottom = 95.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Start Date:"
@@ -401,7 +434,7 @@ margin/left = -166.0
 margin/top = 72.0
 margin/right = 72.0
 margin/bottom = 130.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Qualifications:"
@@ -419,7 +452,7 @@ margin/left = -44.0
 margin/top = 75.0
 margin/right = 404.0
 margin/bottom = 211.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Twelve years as a super fan of video games"
@@ -437,10 +470,10 @@ margin/left = -26.0
 margin/top = -11.0
 margin/right = 377.0
 margin/bottom = 62.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Newo Ikken"
+bbcode/bbcode = "^"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -455,7 +488,7 @@ margin/left = -20.0
 margin/top = 31.0
 margin/right = 196.0
 margin/bottom = 85.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Whenever"
@@ -472,7 +505,7 @@ margin/left = -150.0
 margin/top = -103.0
 margin/right = 170.0
 margin/bottom = -47.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Pixel & Player Liason"
@@ -483,7 +516,7 @@ percent_visible = 1.0
 
 transform/pos = Vector2( 152.776, 118.201 )
 transform/scale = Vector2( 0.215583, 0.308293 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 flip_v = true
 
 [node name="send_text" type="RichTextLabel" parent="email/send_button"]
@@ -497,7 +530,7 @@ margin/left = -84.0
 margin/top = -33.0
 margin/right = 26.0
 margin/bottom = 20.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "SEND"
@@ -507,9 +540,9 @@ percent_visible = 1.0
 [node name="acceptance_email" type="Sprite" parent="."]
 
 visibility/visible = false
-transform/pos = Vector2( 1.29896, -2.48024 )
-transform/scale = Vector2( 0.109361, 0.122812 )
-texture = ExtResource( 6 )
+transform/pos = Vector2( 15.6936, 6.30926 )
+transform/scale = Vector2( 0.0107395, 0.0195464 )
+texture = ExtResource( 7 )
 
 [node name="start_date" type="RichTextLabel" parent="acceptance_email"]
 
@@ -522,7 +555,7 @@ margin/left = -159.0
 margin/top = -20.0
 margin/right = 36.0
 margin/bottom = 40.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Start Date:"
@@ -540,7 +573,7 @@ margin/left = -152.0
 margin/top = -62.0
 margin/right = 471.0
 margin/bottom = 51.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Congratulations! You have been hired!"
@@ -558,7 +591,7 @@ margin/left = 33.0
 margin/top = -17.0
 margin/right = 215.0
 margin/bottom = 32.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Now"
@@ -576,7 +609,7 @@ margin/left = -118.0
 margin/top = -105.0
 margin/right = 338.0
 margin/bottom = -39.0
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Pixel & Player Liason"
@@ -585,33 +618,31 @@ percent_visible = 1.0
 
 [node name="speaking_bubble" type="Sprite" parent="."]
 
-visibility/visible = false
-transform/pos = Vector2( -9.68433, 12.0952 )
-transform/scale = Vector2( 0.023646, 0.013458 )
-texture = ExtResource( 8 )
+transform/pos = Vector2( -10.8586, 13.6135 )
+transform/scale = Vector2( 0.023978, 0.0239167 )
+texture = ExtResource( 9 )
 flip_v = true
 
 [node name="speech" type="RichTextLabel" parent="speaking_bubble"]
 
-rect/scale = Vector2( 2, 6 )
+rect/scale = Vector2( 1.8, 3.6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -293.0
-margin/top = -346.0
-margin/right = 29.0
-margin/bottom = -208.0
-custom_fonts/normal_font = ExtResource( 5 )
+margin/left = -459.0
+margin/top = -188.0
+margin/right = 52.0
+margin/bottom = -81.0
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "I gotta go!"
+bbcode/bbcode = "OK. I am almost done..."
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="skip_button" type="LinkButton" parent="."]
 
-visibility/visible = false
 rect/scale = Vector2( 0.08, 0.08 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -621,8 +652,8 @@ margin/left = 19.0
 margin/top = 18.0
 margin/right = 92.0
 margin/bottom = 58.0
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.941176, 0.929412, 0.894118, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -632,22 +663,22 @@ underline = 2
 
 [node name="mute_button" type="TextureButton" parent="."]
 
-visibility/visible = false
+visibility/blend_mode = 1
 rect/scale = Vector2( 0.05, 0.05 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -26.0
-margin/top = -20.0
+margin/top = -22.0
 margin/right = 74.0
-margin/bottom = 80.0
+margin/bottom = 78.0
 toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 9 )
-textures/pressed = ExtResource( 10 )
+textures/normal = ExtResource( 10 )
+textures/pressed = ExtResource( 11 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -659,22 +690,21 @@ transform/scale = Vector2( 0.177281, 0.054958 )
 
 [node name="Sprite" type="Sprite" parent="fade_out"]
 
-transform/pos = Vector2( 0.721695, 112.741 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Sprite1" type="Sprite" parent="fade_out"]
 
-transform/pos = Vector2( -2.91241, 542.853 )
-texture = ExtResource( 11 )
+transform/pos = Vector2( -4.3559, 488.426 )
+texture = ExtResource( 12 )
 
 [node name="Sprite2" type="Sprite" parent="fade_out"]
 
-transform/pos = Vector2( -2.54517, 987.362 )
-texture = ExtResource( 11 )
+transform/pos = Vector2( -3.26694, 979.587 )
+texture = ExtResource( 12 )
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 12 )
+stream/stream = ExtResource( 13 )
 stream/play = false
 stream/loop = true
 stream/volume_db = -10.0
@@ -685,7 +715,7 @@ stream/buffering_ms = 500
 
 [connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
 
-[connection signal="button_down" from="tv_desktop/email_icon/email_button" to="." method="_on_email_button_button_down"]
+[connection signal="button_down" from="background_main/email_icon/email_button" to="." method="_on_email_button_button_down"]
 
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 

@@ -1,42 +1,64 @@
 extends Node
 
-var hollyhock_balance = 400
-var hollyhock_expenses = 0
-var hollyhock_cash = hollyhock_balance - hollyhock_expenses
+var hollyhock_balance
+var hollyhock_expenses
+var hollyhock_cash
 
-var fiyork_balance = 400
-var fiyork_expenses = 0
-var fiyork_cash = fiyork_balance - fiyork_expenses
+var fiyork_balance
+var fiyork_expenses
+var fiyork_cash
 
-var plansey_balance = 400
-var plansey_expenses = 0
-var plansey_cash = plansey_balance - plansey_expenses
+var plansey_balance
+var plansey_expenses
+var plansey_cash
 
-var untilly_balance = 200
-var untilly_expenses = 0
-var untilly_cash = untilly_balance - untilly_expenses
+var untilly_balance
+var untilly_expenses
+var untilly_cash
 
-var windrow_balance = 800
-var windrow_expenses = 0
-var windrow_cash = windrow_balance - windrow_expenses
 
-var banlon_balance = 200
-var banlon_expenses = 0
-var banlon_cash = banlon_balance - banlon_expenses
+var windrow_balance
+var windrow_expenses
+var windrow_cash
 
-var slatten_balance = 500
-var slatten_expenses = 0
-var slatten_cash = slatten_balance - slatten_expenses
+var banlon_balance
+var banlon_expenses
+var banlon_cash
+
+var slatten_balance
+var slatten_expenses
+var slatten_cash
 
 var income = 0
 
 func _ready():
-	pass
-	
+	hollyhock_balance = 400
+	hollyhock_expenses = 0
+	hollyhock_cash = hollyhock_balance - hollyhock_expenses
+	fiyork_balance = 400
+	fiyork_expenses = 0
+	fiyork_cash = fiyork_balance - fiyork_expenses
+	plansey_balance = 400
+	plansey_expenses = 0
+	plansey_cash = plansey_balance - plansey_expenses
+	untilly_balance = 200
+	untilly_expenses = 0
+	untilly_cash = untilly_balance - untilly_expenses
+	windrow_balance = 800
+	windrow_expenses = 0
+	windrow_cash = windrow_balance - windrow_expenses
+	banlon_balance = 200
+	banlon_expenses = 0
+	banlon_cash = banlon_balance - banlon_expenses
+	slatten_balance = 500
+	slatten_expenses = 0
+	slatten_cash = slatten_balance - slatten_expenses
+	set_process(true)
+
 func _process(delta):
 	if (towns.town_select == "hollyhock"):
-		hollyhock_cash = hollyhock_balance - hollyhock_expenses
 		hollyhock_expenses = int(customer_math.hollyhock_advertising) + int(hollyhock.hollyhock_research_spending)
+		hollyhock_cash = hollyhock_balance - hollyhock_expenses
 	if (towns.town_select == "fiyork"):
 		fiyork_cash = fiyork_balance - fiyork_expenses
 		fiyork_expenses = int(customer_math.fiyork_advertising) + int(fiyork.fiyork_research_spending)

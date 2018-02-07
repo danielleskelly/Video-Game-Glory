@@ -1,7 +1,7 @@
-[gd_scene load_steps=31 format=1]
+[gd_scene load_steps=32 format=1]
 
 [ext_resource path="res://story_piece_nine.gd" type="Script" id=1]
-[ext_resource path="res://Screen Shot 2017-10-27 at 4.36.54 PM.png" type="Texture" id=2]
+[ext_resource path="res://Screen Shot 2018-02-06 at 10.23.29 AM.png" type="Texture" id=2]
 [ext_resource path="res://office.png" type="Texture" id=3]
 [ext_resource path="res://window.png" type="Texture" id=4]
 [ext_resource path="res://chair.png" type="Texture" id=5]
@@ -12,23 +12,20 @@
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=10]
 [ext_resource path="res://genre_bubble.png" type="Texture" id=11]
 [ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=12]
-[ext_resource path="res://bubble_green.png" type="Texture" id=13]
-[ext_resource path="res://purple_bubble.png" type="Texture" id=14]
-[ext_resource path="res://bubble_yellow.png" type="Texture" id=15]
-[ext_resource path="res://sam_top_arm.png" type="Texture" id=16]
-[ext_resource path="res://sam_lower_arm.png" type="Texture" id=17]
-[ext_resource path="res://sam_bottom_leg.png" type="Texture" id=18]
-[ext_resource path="res://sam_back_of_crotch.png" type="Texture" id=19]
-[ext_resource path="res://sam_torso.png" type="Texture" id=20]
-[ext_resource path="res://sam_back_of_head.png" type="Texture" id=21]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=22]
-[ext_resource path="res://music_icon_on.png" type="Texture" id=23]
-[ext_resource path="res://music_icon_off.png" type="Texture" id=24]
-[ext_resource path="res://error_box.png" type="Texture" id=25]
-[ext_resource path="res://pixel.png" type="Texture" id=26]
-[ext_resource path="res://button.png" type="Texture" id=27]
-[ext_resource path="res://sam_head.png" type="Texture" id=28]
-[ext_resource path="res://confetti.png" type="Texture" id=29]
+[ext_resource path="res://dialogue_box_two.png" type="Texture" id=13]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://purple_bubble.png" type="Texture" id=15]
+[ext_resource path="res://bubble_yellow.png" type="Texture" id=16]
+[ext_resource path="res://sam_top_arm.png" type="Texture" id=17]
+[ext_resource path="res://sam_lower_arm.png" type="Texture" id=18]
+[ext_resource path="res://sam_bottom_leg.png" type="Texture" id=19]
+[ext_resource path="res://sam_back_of_crotch.png" type="Texture" id=20]
+[ext_resource path="res://sam_torso.png" type="Texture" id=21]
+[ext_resource path="res://sam_back_of_head.png" type="Texture" id=22]
+[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=23]
+[ext_resource path="res://music_icon_on.png" type="Texture" id=24]
+[ext_resource path="res://music_icon_off.png" type="Texture" id=25]
+[ext_resource path="res://confetti.png" type="Texture" id=26]
 
 [sub_resource type="Animation" id=1]
 
@@ -266,30 +263,10 @@ tracks/22/keys = {
 "values": [  ]
 }
 tracks/23/type = "value"
-tracks/23/path = NodePath("the_question:visibility/visible")
+tracks/23/path = NodePath("credits:bbcode/bbcode")
 tracks/23/interp = 1
 tracks/23/imported = false
 tracks/23/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/24/type = "value"
-tracks/24/path = NodePath("the_question1:visibility/visible")
-tracks/24/interp = 1
-tracks/24/imported = false
-tracks/24/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/25/type = "value"
-tracks/25/path = NodePath("credits:bbcode/bbcode")
-tracks/25/interp = 1
-tracks/25/imported = false
-tracks/25/keys = {
 "times": FloatArray( 0, 11.2, 34.2 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
@@ -311,28 +288,48 @@ Michael Kelly", "Made with the best game engine you have never heard of....
 
 Godot" ]
 }
-tracks/26/type = "value"
-tracks/26/path = NodePath("credits:rect/pos")
-tracks/26/interp = 1
-tracks/26/imported = false
-tracks/26/keys = {
+tracks/24/type = "value"
+tracks/24/path = NodePath("credits:rect/pos")
+tracks/24/interp = 1
+tracks/24/imported = false
+tracks/24/keys = {
 "times": FloatArray( 11.2, 20.2, 34.1, 44.2 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -2, 35 ), Vector2( -1, -74 ), Vector2( -2, 37 ), Vector2( -1, -77 ) ]
 }
-tracks/27/type = "value"
-tracks/27/path = NodePath("credits:visibility/visible")
-tracks/27/interp = 1
-tracks/27/imported = false
-tracks/27/keys = {
+tracks/25/type = "value"
+tracks/25/path = NodePath("credits:visibility/visible")
+tracks/25/interp = 1
+tracks/25/imported = false
+tracks/25/keys = {
 "times": FloatArray( 11.2, 20.21, 34.2 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
 }
+tracks/26/type = "value"
+tracks/26/path = NodePath("Sprite:visibility/visible")
+tracks/26/interp = 1
+tracks/26/imported = false
+tracks/26/keys = {
+"times": FloatArray( 0, 59.3 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Sprite:transform/pos")
+tracks/27/interp = 1
+tracks/27/imported = false
+tracks/27/keys = {
+"times": FloatArray( 59.3, 60.8 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 13.0068, -15.2169 ), Vector2( 12.7364, 47.8319 ) ]
+}
 tracks/28/type = "value"
-tracks/28/path = NodePath("Sprite:visibility/visible")
+tracks/28/path = NodePath("RichTextLabel 2:visibility/visible")
 tracks/28/interp = 1
 tracks/28/imported = false
 tracks/28/keys = {
@@ -342,35 +339,43 @@ tracks/28/keys = {
 "values": [ false, true ]
 }
 tracks/29/type = "value"
-tracks/29/path = NodePath("Sprite:transform/pos")
+tracks/29/path = NodePath("RichTextLabel 2:visible_characters")
 tracks/29/interp = 1
 tracks/29/imported = false
 tracks/29/keys = {
-"times": FloatArray( 59.3, 60.8 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 13.0068, -15.2169 ), Vector2( 12.7364, 47.8319 ) ]
-}
-tracks/30/type = "value"
-tracks/30/path = NodePath("RichTextLabel 2:visibility/visible")
-tracks/30/interp = 1
-tracks/30/imported = false
-tracks/30/keys = {
-"times": FloatArray( 0, 59.3 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/31/type = "value"
-tracks/31/path = NodePath("RichTextLabel 2:visible_characters")
-tracks/31/interp = 1
-tracks/31/imported = false
-tracks/31/keys = {
 "times": FloatArray( 59.5, 59.7, 59.8, 60.1, 60.3, 60.4, 60.7 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 4, 5, 6, 8 ]
 }
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 14 )
 
 [node name="story_piece_five" type="Node2D"]
 
@@ -542,9 +547,9 @@ transform/scale = Vector2( 0.610145, 0.504589 )
 
 [node name="bubble" type="Sprite" parent="other_bubble"]
 
-transform/pos = Vector2( -27.2496, 17.6459 )
+transform/pos = Vector2( -24.9554, 16.9428 )
 transform/rot = 90.0
-transform/scale = Vector2( 0.0362315, 0.028268 )
+transform/scale = Vector2( 0.0452996, 0.0774513 )
 texture = ExtResource( 13 )
 
 [node name="yes" type="RichTextLabel" parent="other_bubble"]
@@ -558,7 +563,7 @@ margin/left = -41.0
 margin/top = -3.0
 margin/right = 273.0
 margin/bottom = 252.0
-custom_fonts/normal_font = ExtResource( 12 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "And hey! You didn't die... very much..."
@@ -576,7 +581,7 @@ transform/scale = Vector2( 0.641126, 0.524294 )
 transform/pos = Vector2( -28.0682, 1.74075 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0362315, 0.028268 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 flip_v = true
 
 [node name="yes" type="RichTextLabel" parent="other_other_bubble"]
@@ -608,7 +613,7 @@ transform/scale = Vector2( 0.641126, 0.524294 )
 transform/pos = Vector2( -28.0682, 1.74075 )
 transform/rot = 180.0
 transform/scale = Vector2( 0.0362315, 0.028268 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 flip_v = true
 __meta__ = {
 "_edit_lock_": true
@@ -642,7 +647,7 @@ transform/scale = Vector2( 0.884005, 0.718394 )
 
 transform/pos = Vector2( -17.4362, 2.07494 )
 transform/scale = Vector2( 0.268766, 0.329765 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -651,7 +656,7 @@ __meta__ = {
 
 transform/pos = Vector2( -21.0046, 2.56828 )
 transform/scale = Vector2( 0.246029, 0.329765 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -661,7 +666,7 @@ __meta__ = {
 
 transform/pos = Vector2( -21.0023, 1.99836 )
 transform/scale = Vector2( 0.240393, 0.306038 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -671,7 +676,7 @@ __meta__ = {
 
 transform/pos = Vector2( -19.175, 1.58156 )
 transform/scale = Vector2( 0.209892, 0.314374 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -680,7 +685,7 @@ __meta__ = {
 
 transform/pos = Vector2( -17.9753, 32.0163 )
 transform/scale = Vector2( 0.185859, 0.25514 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -690,7 +695,7 @@ __meta__ = {
 
 transform/pos = Vector2( -21.761, 31.9805 )
 transform/scale = Vector2( 0.190989, 0.25514 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -699,7 +704,7 @@ __meta__ = {
 
 transform/pos = Vector2( -18.656, 19.1697 )
 transform/scale = Vector2( 0.158266, 0.25514 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -709,7 +714,7 @@ __meta__ = {
 
 transform/pos = Vector2( -19.716, 1.04348 )
 transform/scale = Vector2( 0.168754, 0.272936 )
-texture = ExtResource( 20 )
+texture = ExtResource( 21 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -718,14 +723,14 @@ __meta__ = {
 
 transform/pos = Vector2( -19.247, -12.1867 )
 transform/scale = Vector2( 0.124356, 0.251262 )
-texture = ExtResource( 21 )
+texture = ExtResource( 22 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 22 )
+stream/stream = ExtResource( 23 )
 stream/play = false
 stream/loop = true
 stream/volume_db = -10.0
@@ -746,8 +751,8 @@ margin/left = -26.0
 margin/top = 26.0
 margin/right = 47.0
 margin/bottom = 66.0
-custom_fonts/font = ExtResource( 12 )
-custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.941176, 0.929412, 0.894118, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -758,6 +763,7 @@ underline = 2
 [node name="mute_button" type="TextureButton" parent="."]
 
 process/pause_mode = 2
+visibility/blend_mode = 1
 rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -771,157 +777,11 @@ toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 23 )
-textures/pressed = ExtResource( 24 )
+textures/normal = ExtResource( 24 )
+textures/pressed = ExtResource( 25 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.15 )
 params/stretch_mode = 0
-
-[node name="the_question" type="Node2D" parent="."]
-
-visibility/visible = false
-
-[node name="Sprite" type="Sprite" parent="the_question"]
-
-transform/pos = Vector2( -18.1839, -6.50152 )
-transform/scale = Vector2( 0.0308891, 0.0492057 )
-texture = ExtResource( 25 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite1" type="Sprite" parent="the_question"]
-
-transform/pos = Vector2( -22.7806, -7.04254 )
-transform/scale = Vector2( 0.0308891, 0.0492057 )
-texture = ExtResource( 26 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite2" type="Sprite" parent="the_question"]
-
-transform/pos = Vector2( -17.6967, -3.20485 )
-transform/scale = Vector2( 0.0266691, 0.0435654 )
-texture = ExtResource( 27 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="the_question"]
-
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -21.0
-margin/top = -11.0
-margin/right = 73.0
-margin/bottom = 64.0
-custom_fonts/normal_font = ExtResource( 12 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Pixel"
-visible_characters = -1
-percent_visible = 1.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pixel_accuse" type="LinkButton" parent="the_question"]
-
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -20.0
-margin/top = -5.0
-margin/right = 23.0
-margin/bottom = 35.0
-custom_fonts/font = ExtResource( 12 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="the_question1" type="Node2D" parent="."]
-
-visibility/visible = false
-transform/pos = Vector2( 36.758, -1.00307 )
-
-[node name="Sprite" type="Sprite" parent="the_question1"]
-
-transform/pos = Vector2( -18.1839, -6.50152 )
-transform/scale = Vector2( 0.0308891, 0.0492057 )
-texture = ExtResource( 25 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite1" type="Sprite" parent="the_question1"]
-
-transform/pos = Vector2( -22.4855, -5.98936 )
-transform/scale = Vector2( 0.0308891, 0.0492057 )
-texture = ExtResource( 28 )
-
-[node name="Sprite2" type="Sprite" parent="the_question1"]
-
-transform/pos = Vector2( -17.6967, -3.20485 )
-transform/scale = Vector2( 0.0266691, 0.0435654 )
-texture = ExtResource( 27 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="the_question1"]
-
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -21.0
-margin/top = -11.0
-margin/right = 73.0
-margin/bottom = 64.0
-custom_fonts/normal_font = ExtResource( 12 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Sam"
-visible_characters = -1
-percent_visible = 1.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="sam_accuse" type="LinkButton" parent="the_question1"]
-
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -20.0
-margin/top = -5.0
-margin/right = 23.0
-margin/bottom = 35.0
-custom_fonts/font = ExtResource( 12 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-text = "OK"
-underline = 2
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="credits" type="RichTextLabel" parent="."]
 
@@ -934,7 +794,7 @@ margin/left = -1.0
 margin/top = -77.0
 margin/right = 319.0
 margin/bottom = 341.0
-custom_fonts/normal_font = ExtResource( 12 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode/enabled = false
 bbcode/bbcode = "Made with the best game engine you have never heard of....
 
@@ -946,7 +806,7 @@ percent_visible = 1.0
 
 transform/pos = Vector2( 12.7364, 47.8319 )
 transform/scale = Vector2( 0.2797, 0.244765 )
-texture = ExtResource( 29 )
+texture = ExtResource( 26 )
 
 [node name="RichTextLabel 2" type="RichTextLabel" parent="."]
 
@@ -959,11 +819,11 @@ margin/left = 0.0
 margin/top = -13.0
 margin/right = 141.0
 margin/bottom = 162.0
-custom_fonts/normal_font = ExtResource( 12 )
+custom_fonts/normal_font = SubResource( 5 )
 bbcode/enabled = false
 bbcode/bbcode = "YOU
 ROCK!"
-visible_characters = -1
+visible_characters = 8
 percent_visible = 1.0
 
 [connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
@@ -971,9 +831,5 @@ percent_visible = 1.0
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 
 [connection signal="button_down" from="mute_button" to="." method="_on_mute_button_button_down"]
-
-[connection signal="button_down" from="the_question/pixel_accuse" to="." method="_on_pixel_accuse_button_down"]
-
-[connection signal="button_down" from="the_question1/sam_accuse" to="." method="_on_sam_accuse_button_down"]
 
 

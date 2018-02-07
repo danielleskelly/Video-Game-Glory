@@ -1,11 +1,11 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=20 format=1]
 
 [ext_resource path="res://banlon_endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://road.png" type="Texture" id=2]
 [ext_resource path="res://pixel.png" type="Texture" id=3]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=4]
-[ext_resource path="res://car_move.gd" type="Script" id=5]
-[ext_resource path="res://ship.png" type="Texture" id=6]
+[ext_resource path="res://car_move.gd" type="Script" id=4]
+[ext_resource path="res://ship.png" type="Texture" id=5]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=6]
 [ext_resource path="res://pixel_crotch.png" type="Texture" id=7]
 [ext_resource path="res://pixel_arm.png" type="Texture" id=8]
 [ext_resource path="res://pixel_torso.png" type="Texture" id=9]
@@ -20,14 +20,25 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="DynamicFontData" id=2]
+
+font_path = "res://Vgg_font-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = SubResource( 2 )
+
+[sub_resource type="Curve2D" id=4]
 
 bake_interval = 5.0
 _data = {
 "points": Vector2Array( 0, 0, 0, 0, 114.878, 13.1073, 0, 0, 0, 0, -68.3969, 14.7142 )
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -125,7 +136,7 @@ margin/left = -29.0
 margin/top = -30.0
 margin/right = 475.0
 margin/bottom = 23.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You made it!"
@@ -134,7 +145,7 @@ percent_visible = 1.0
 
 [node name="Path2D" type="Path2D" parent="."]
 
-curve = SubResource( 2 )
+curve = SubResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -150,7 +161,7 @@ rotate = false
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Path2D/car_path_follow" groups=[
 "car",
@@ -159,7 +170,7 @@ script/script = ExtResource( 5 )
 transform/pos = Vector2( 50.449, -0.46712 )
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -174,7 +185,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -184,7 +195,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -198,7 +209,7 @@ __meta__ = {
 transform/pos = Vector2( 81.3252, 0.530422 )
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -213,7 +224,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -223,7 +234,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -237,7 +248,7 @@ __meta__ = {
 transform/pos = Vector2( 154.142, 0.898155 )
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -252,7 +263,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -262,7 +273,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -272,7 +283,7 @@ __meta__ = {
 [node name="Path2D1" type="Path2D" parent="."]
 
 transform/pos = Vector2( 1.92957, -29.2332 )
-curve = SubResource( 2 )
+curve = SubResource( 4 )
 
 [node name="car_path_follow1" type="PathFollow2D" parent="Path2D1"]
 
@@ -285,7 +296,7 @@ rotate = false
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Path2D1/car_path_follow1" groups=[
 "car",
@@ -295,7 +306,7 @@ transform/pos = Vector2( 165.515, 0.390413 )
 transform/rot = 0.30479
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -310,7 +321,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -320,7 +331,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -335,7 +346,7 @@ transform/pos = Vector2( 85.2568, 0.0691471 )
 transform/rot = 0.30479
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -350,7 +361,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -360,7 +371,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -375,7 +386,7 @@ transform/pos = Vector2( 48.7708, 0.21492 )
 transform/rot = 0.30479
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -390,7 +401,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -400,7 +411,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -415,7 +426,7 @@ transform/pos = Vector2( 23.485, 0.165485 )
 transform/rot = 0.30479
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -430,7 +441,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -440,7 +451,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -450,7 +461,7 @@ __meta__ = {
 [node name="Path2D2" type="Path2D" parent="."]
 
 transform/pos = Vector2( 4.97898, -13.2518 )
-curve = SubResource( 2 )
+curve = SubResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -466,7 +477,7 @@ rotate = false
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -479,7 +490,7 @@ transform/pos = Vector2( 40.1899, 0.129478 )
 transform/rot = 0.30479
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -494,7 +505,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -504,7 +515,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -519,7 +530,7 @@ transform/pos = Vector2( 155.829, 0.409504 )
 transform/rot = 0.30479
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -534,7 +545,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -544,7 +555,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -559,7 +570,7 @@ transform/pos = Vector2( 182.074, 0.276917 )
 transform/rot = 0.30479
 transform/scale = Vector2( 0.161721, 0.117178 )
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 3.18409, -5.21541e-08, 2.98023e-08, 3.17449, -0.251343, 0.646301 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -574,7 +585,7 @@ bounce = 0.0
 transform/pos = Vector2( -4.09009, 1.14368 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.990265, 0.924191 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -584,7 +595,7 @@ __meta__ = {
 transform/pos = Vector2( -0.251343, 0.646301 )
 transform/rot = 5.37896e-07
 transform/scale = Vector2( 3.18409, 3.17449 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -609,7 +620,7 @@ margin/left = 21.0
 margin/top = -31.0
 margin/right = 120.0
 margin/bottom = 62.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "000"
@@ -721,7 +732,7 @@ margin/left = -60.0
 margin/top = -83.0
 margin/right = 69.0
 margin/bottom = -28.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Points"
@@ -741,7 +752,7 @@ margin/left = -60.0
 margin/top = 4.0
 margin/right = 1185.0
 margin/bottom = 1331.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "8"
@@ -761,7 +772,7 @@ margin/left = -14.0
 margin/top = 4.0
 margin/right = 1231.0
 margin/bottom = 1331.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "8"
@@ -781,7 +792,7 @@ margin/left = 34.0
 margin/top = 4.0
 margin/right = 1279.0
 margin/bottom = 1331.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "8"
@@ -825,7 +836,7 @@ margin/left = -14.0
 margin/top = -22.0
 margin/right = 118.0
 margin/bottom = 83.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sound"
@@ -877,7 +888,7 @@ margin/left = -19.0
 margin/top = -11.0
 margin/right = 288.0
 margin/bottom = 36.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -896,7 +907,7 @@ margin/left = -20.0
 margin/top = -2.0
 margin/right = 303.0
 margin/bottom = 45.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -939,7 +950,7 @@ margin/left = -23.0
 margin/top = -19.0
 margin/right = 300.0
 margin/bottom = 293.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to go back to the Endless Menu mode?"
@@ -957,7 +968,7 @@ margin/left = -8.0
 margin/top = -3.0
 margin/right = 79.0
 margin/bottom = 44.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -976,7 +987,7 @@ margin/left = -20.0
 margin/top = -3.0
 margin/right = 39.0
 margin/bottom = 44.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1013,7 +1024,7 @@ margin/left = -10.0
 margin/top = -11.0
 margin/right = 113.0
 margin/bottom = 115.0
-custom_fonts/normal_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "GAME OVER!"
@@ -1035,7 +1046,7 @@ margin/left = 3.0
 margin/top = 7.0
 margin/right = 46.0
 margin/bottom = 47.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0

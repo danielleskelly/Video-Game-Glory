@@ -1,21 +1,21 @@
-[gd_scene load_steps=21 format=1]
+[gd_scene load_steps=25 format=1]
 
 [ext_resource path="res://story_piece_six.gd" type="Script" id=1]
 [ext_resource path="res://sam_back.png" type="Texture" id=2]
 [ext_resource path="res://sam_front.png" type="Texture" id=3]
-[ext_resource path="res://Screen Shot 2017-10-27 at 4.36.54 PM.png" type="Texture" id=4]
+[ext_resource path="res://Screen Shot 2018-02-06 at 10.23.29 AM.png" type="Texture" id=4]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=5]
-[ext_resource path="res://office.png" type="Texture" id=6]
+[ext_resource path="res://inner_office.png" type="Texture" id=6]
 [ext_resource path="res://window.png" type="Texture" id=7]
 [ext_resource path="res://chair.png" type="Texture" id=8]
 [ext_resource path="res://desk.png" type="Texture" id=9]
 [ext_resource path="res://computer.png" type="Texture" id=10]
 [ext_resource path="res://lamp.png" type="Texture" id=11]
 [ext_resource path="res://pixel_front.png" type="Texture" id=12]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=13]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=14]
-[ext_resource path="res://bubble_green.png" type="Texture" id=15]
-[ext_resource path="res://purple_bubble.png" type="Texture" id=16]
+[ext_resource path="res://dialogue_box.png" type="Texture" id=13]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://dialogue_box_two.png" type="Texture" id=15]
+[ext_resource path="res://dialogue_box_three.png" type="Texture" id=16]
 [ext_resource path="res://storyline_two.ogg" type="AudioStream" id=17]
 [ext_resource path="res://music_icon_on.png" type="Texture" id=18]
 [ext_resource path="res://music_icon_off.png" type="Texture" id=19]
@@ -196,6 +196,34 @@ tracks/16/keys = {
 "values": [ "Pixel, I need to speak with you!", "I have heard you have been asking around about me. You are making people think I am the saboteur!", "Buh..no...what! You are the saboteur! I know it!", "I don't know! Hey, you! Liason, what do you think? Why would Pixel do such a horrible thing?", "See! Right there! They were just about to tell us something important! But you couldn't...." ]
 }
 
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 14 )
+
 [node name="story_piece_five" type="Node2D"]
 
 transform/pos = Vector2( 514.994, 303.814 )
@@ -224,30 +252,31 @@ texture = ExtResource( 4 )
 
 [node name="crtv" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 20.1988, -162.461 )
+transform/pos = Vector2( 20.1988, -138.595 )
 transform/scale = Vector2( 2.80987, 1.21 )
 texture = ExtResource( 5 )
 
 [node name="crtv1" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 40.5704, 213.805 )
+transform/pos = Vector2( 38.4653, 140.222 )
 transform/scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
 [node name="crtv2" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 40.8005, 345.003 )
+transform/pos = Vector2( 46.8207, 305.645 )
 transform/scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
 [node name="crtv3" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 40.9496, 728.824 )
+transform/pos = Vector2( 61.8713, 404.748 )
 transform/scale = Vector2( 2.80987, 1.64743 )
 texture = ExtResource( 5 )
 
 [node name="inner_office" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 0.835938, 0.548452 )
 transform/scale = Vector2( 0.997054, 1.03856 )
 __meta__ = {
@@ -256,8 +285,8 @@ __meta__ = {
 
 [node name="door_plug" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -1.05319, -0.356661 )
-transform/scale = Vector2( 0.0532517, 0.0760253 )
+transform/pos = Vector2( -1.36518, -0.26089 )
+transform/scale = Vector2( 0.0804171, 0.0669604 )
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
@@ -313,6 +342,7 @@ __meta__ = {
 
 [node name="pixel" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( -20.6054, 6.38172 )
 transform/scale = Vector2( 0.884005, 0.718394 )
 
@@ -328,8 +358,8 @@ visibility/visible = false
 
 [node name="bubble" type="Sprite" parent="speech_bubble"]
 
-transform/pos = Vector2( -2.48767, 16.884 )
-transform/scale = Vector2( 0.02817, 0.0152025 )
+transform/pos = Vector2( -2.49632, 15.4256 )
+transform/scale = Vector2( 0.0309429, 0.0350822 )
 texture = ExtResource( 13 )
 flip_h = true
 flip_v = true
@@ -345,7 +375,7 @@ margin/left = -16.0
 margin/top = 9.0
 margin/right = 254.0
 margin/bottom = 145.0
-custom_fonts/normal_font = ExtResource( 14 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "er...um...well..."
@@ -360,9 +390,9 @@ transform/scale = Vector2( 0.610145, 0.504589 )
 
 [node name="bubble" type="Sprite" parent="other_bubble"]
 
-transform/pos = Vector2( -27.2496, 17.6459 )
+transform/pos = Vector2( -24.7929, 16.8285 )
 transform/rot = 90.0
-transform/scale = Vector2( 0.0362315, 0.028268 )
+transform/scale = Vector2( 0.0476649, 0.0768718 )
 texture = ExtResource( 15 )
 
 [node name="yes" type="RichTextLabel" parent="other_bubble"]
@@ -376,7 +406,7 @@ margin/left = -41.0
 margin/top = -3.0
 margin/right = 273.0
 margin/bottom = 252.0
-custom_fonts/normal_font = ExtResource( 14 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I am going to send you to the next town and Sam and I will sort this out by ourselves."
@@ -385,14 +415,15 @@ percent_visible = 1.0
 
 [node name="other_other_bubble" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 17.7667, -11.6668 )
 transform/scale = Vector2( 0.641126, 0.524294 )
 
 [node name="bubble" type="Sprite" parent="other_other_bubble"]
 
-transform/pos = Vector2( -28.0682, 1.74075 )
+transform/pos = Vector2( -29.7426, 3.04134 )
 transform/rot = 90.0
-transform/scale = Vector2( 0.0362315, 0.028268 )
+transform/scale = Vector2( 0.0444938, 0.0748506 )
 texture = ExtResource( 16 )
 flip_v = true
 
@@ -407,15 +438,16 @@ margin/left = -45.0
 margin/top = -16.0
 margin/right = 263.0
 margin/bottom = 234.0
-custom_fonts/normal_font = ExtResource( 14 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Pixel, I need to speak with you!"
+bbcode/bbcode = "See! Right there! They were just about to tell us something important! But you couldn't...."
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="sam" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 33.9015, -0.226297 )
 transform/scale = Vector2( 0.884005, 0.718394 )
 
@@ -438,6 +470,7 @@ stream/buffering_ms = 500
 
 [node name="skip_button" type="LinkButton" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.1, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -447,8 +480,8 @@ margin/left = -26.0
 margin/top = 26.0
 margin/right = 47.0
 margin/bottom = 66.0
-custom_fonts/font = ExtResource( 14 )
-custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.941176, 0.929412, 0.894118, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -458,6 +491,8 @@ underline = 2
 
 [node name="mute_button" type="TextureButton" parent="."]
 
+visibility/visible = false
+visibility/blend_mode = 1
 rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true

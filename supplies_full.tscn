@@ -5,11 +5,11 @@
 [ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://button.png" type="Texture" id=4]
 [ext_resource path="res://potential_background.png" type="Texture" id=5]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=6]
-[ext_resource path="res://soda.gd" type="Script" id=7]
-[ext_resource path="res://lower.png" type="Texture" id=8]
-[ext_resource path="res://raise.png" type="Texture" id=9]
-[ext_resource path="res://popcorn.gd" type="Script" id=10]
+[ext_resource path="res://soda.gd" type="Script" id=6]
+[ext_resource path="res://lower.png" type="Texture" id=7]
+[ext_resource path="res://raise.png" type="Texture" id=8]
+[ext_resource path="res://popcorn.gd" type="Script" id=9]
+[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=10]
 
 [node name="supplies_full" type="Node2D"]
 
@@ -157,11 +157,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -29.0
+margin/left = -28.0
 margin/top = 21.0
-margin/right = 108.0
+margin/right = 109.0
 margin/bottom = 71.0
-custom_fonts/normal_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Total:"
@@ -175,11 +175,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -13.0
+margin/left = -12.0
 margin/top = 21.0
-margin/right = 110.0
+margin/right = 111.0
 margin/bottom = 78.0
-custom_fonts/normal_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "00000"
@@ -190,7 +190,7 @@ percent_visible = 1.0
 
 transform/pos = Vector2( -0.240572, -10.8116 )
 transform/scale = Vector2( 0.957029, 0.161967 )
-script/script = ExtResource( 7 )
+script/script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -220,11 +220,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -14.0
+margin/left = -17.0
 margin/top = -25.0
-margin/right = 47.0
-margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 6 )
+margin/right = 117.0
+margin/bottom = 70.0
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.211765, 0.858824, 0.121569, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
@@ -238,11 +238,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -14.0
+margin/left = -17.0
 margin/top = -25.0
-margin/right = 59.0
-margin/bottom = 76.0
-custom_fonts/normal_font = ExtResource( 6 )
+margin/right = 113.0
+margin/bottom = 74.0
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 1, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
@@ -256,14 +256,14 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -15.0
+margin/left = -17.0
 margin/top = -19.0
-margin/right = 136.0
-margin/bottom = 88.0
+margin/right = 125.0
+margin/bottom = 38.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "000"
+bbcode/bbcode = "$207"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -300,7 +300,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 8 )
+textures/normal = ExtResource( 7 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.2 )
 params/stretch_mode = 0
@@ -326,11 +326,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 13.0
+margin/left = 12.0
 margin/top = -24.0
-margin/right = 84.0
+margin/right = 83.0
 margin/bottom = 35.0
-custom_fonts/normal_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.8, 0.8, 0.870588, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "000"
@@ -352,7 +352,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 9 )
+textures/normal = ExtResource( 8 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.2 )
 params/stretch_mode = 0
@@ -379,7 +379,7 @@ percent_visible = 1.0
 
 transform/pos = Vector2( -0.226358, 9.11046 )
 transform/scale = Vector2( 0.957029, 0.161967 )
-script/script = ExtResource( 10 )
+script/script = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -409,11 +409,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -14.0
+margin/left = -17.0
 margin/top = -40.0
-margin/right = 61.0
+margin/right = 92.0
 margin/bottom = 47.0
-custom_fonts/normal_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 10 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
@@ -427,11 +427,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -14.0
+margin/left = -17.0
 margin/top = -40.0
-margin/right = 63.0
+margin/right = 87.0
 margin/bottom = 56.0
-custom_fonts/normal_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 10 )
 custom_colors/default_color = Color( 1, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
@@ -445,9 +445,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -14.0
+margin/left = -17.0
 margin/top = -35.0
-margin/right = 94.0
+margin/right = 91.0
 margin/bottom = 25.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
@@ -489,7 +489,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 8 )
+textures/normal = ExtResource( 7 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.2 )
 params/stretch_mode = 0
@@ -501,11 +501,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 13.0
+margin/left = 12.0
 margin/top = -40.0
-margin/right = 86.0
+margin/right = 85.0
 margin/bottom = 25.0
-custom_fonts/normal_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.8, 0.8, 0.870588, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "000"
@@ -527,7 +527,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 9 )
+textures/normal = ExtResource( 8 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.2 )
 params/stretch_mode = 0

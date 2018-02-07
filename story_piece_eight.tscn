@@ -1,8 +1,8 @@
-[gd_scene load_steps=36 format=1]
+[gd_scene load_steps=43 format=1]
 
 [ext_resource path="res://story_piece_eight.gd" type="Script" id=1]
-[ext_resource path="res://Screen Shot 2017-10-27 at 4.36.54 PM.png" type="Texture" id=2]
-[ext_resource path="res://office.png" type="Texture" id=3]
+[ext_resource path="res://Screen Shot 2018-02-06 at 10.23.29 AM.png" type="Texture" id=2]
+[ext_resource path="res://inner_office.png" type="Texture" id=3]
 [ext_resource path="res://window.png" type="Texture" id=4]
 [ext_resource path="res://chair.png" type="Texture" id=5]
 [ext_resource path="res://ceo.png" type="Texture" id=6]
@@ -15,23 +15,24 @@
 [ext_resource path="res://pixel_torso.png" type="Texture" id=13]
 [ext_resource path="res://pixel.png" type="Texture" id=14]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=15]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=16]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=17]
+[ext_resource path="res://dialogue_box.png" type="Texture" id=16]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://bubble_green.png" type="Texture" id=18]
-[ext_resource path="res://purple_bubble.png" type="Texture" id=19]
-[ext_resource path="res://bubble_yellow.png" type="Texture" id=20]
-[ext_resource path="res://sam_top_arm.png" type="Texture" id=21]
-[ext_resource path="res://sam_lower_arm.png" type="Texture" id=22]
-[ext_resource path="res://sam_bottom_leg.png" type="Texture" id=23]
-[ext_resource path="res://sam_back_of_crotch.png" type="Texture" id=24]
-[ext_resource path="res://sam_torso.png" type="Texture" id=25]
-[ext_resource path="res://sam_back_of_head.png" type="Texture" id=26]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=27]
-[ext_resource path="res://music_icon_on.png" type="Texture" id=28]
-[ext_resource path="res://music_icon_off.png" type="Texture" id=29]
-[ext_resource path="res://error_box.png" type="Texture" id=30]
-[ext_resource path="res://button.png" type="Texture" id=31]
-[ext_resource path="res://sam_head.png" type="Texture" id=32]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=19]
+[ext_resource path="res://purple_bubble.png" type="Texture" id=20]
+[ext_resource path="res://dialogue_box_four.png" type="Texture" id=21]
+[ext_resource path="res://sam_top_arm.png" type="Texture" id=22]
+[ext_resource path="res://sam_lower_arm.png" type="Texture" id=23]
+[ext_resource path="res://sam_bottom_leg.png" type="Texture" id=24]
+[ext_resource path="res://sam_back_of_crotch.png" type="Texture" id=25]
+[ext_resource path="res://sam_torso.png" type="Texture" id=26]
+[ext_resource path="res://sam_back_of_head.png" type="Texture" id=27]
+[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=28]
+[ext_resource path="res://music_icon_on.png" type="Texture" id=29]
+[ext_resource path="res://music_icon_off.png" type="Texture" id=30]
+[ext_resource path="res://error_box.png" type="Texture" id=31]
+[ext_resource path="res://button.png" type="Texture" id=32]
+[ext_resource path="res://sam_head.png" type="Texture" id=33]
 
 [sub_resource type="Animation" id=1]
 
@@ -503,6 +504,48 @@ tracks/8/keys = {
 "values": [ Vector2( 1.04565, 52.8317 ), Vector2( 1.04565, 59.3517 ), Vector2( 1.66374, 41.8507 ), Vector2( 1.66374, 31.5559 ) ]
 }
 
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=6]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=7]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=8]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=9]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 17 )
+
 [node name="story_piece_five" type="Node2D"]
 
 transform/pos = Vector2( 514.994, 303.814 )
@@ -542,12 +585,9 @@ __meta__ = {
 
 [node name="door_plug" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -1.05319, -0.356661 )
-transform/scale = Vector2( 0.0532517, 0.0760253 )
+transform/pos = Vector2( 2.00612, 0.429583 )
+transform/scale = Vector2( 0.0748324, 0.0683486 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="window" type="Sprite" parent="inner_office"]
 
@@ -681,6 +721,8 @@ __meta__ = {
 
 [node name="crtv" type="Node2D" parent="."]
 
+visibility/visible = false
+
 [node name="crtv" type="Sprite" parent="crtv"]
 
 transform/pos = Vector2( -1.33893, -17.9561 )
@@ -689,19 +731,19 @@ texture = ExtResource( 15 )
 
 [node name="crtv1" type="Sprite" parent="crtv"]
 
-transform/pos = Vector2( 1.9904, -3.54254 )
+transform/pos = Vector2( 40.471, 218.779 )
 transform/scale = Vector2( 0.125882, 0.0133824 )
 texture = ExtResource( 15 )
 
 [node name="crtv2" type="Sprite" parent="crtv"]
 
-transform/pos = Vector2( 0.844475, 3.19747 )
+transform/pos = Vector2( 40.8005, 350.395 )
 transform/scale = Vector2( 0.125882, 0.0315401 )
 texture = ExtResource( 15 )
 
 [node name="crtv3" type="Sprite" parent="crtv"]
 
-transform/pos = Vector2( 1.66374, 31.5559 )
+transform/pos = Vector2( 40.8006, 729.932 )
 transform/scale = Vector2( 0.125882, 0.124031 )
 texture = ExtResource( 15 )
 
@@ -711,8 +753,8 @@ visibility/visible = false
 
 [node name="bubble" type="Sprite" parent="speech_bubble"]
 
-transform/pos = Vector2( -2.48767, 16.884 )
-transform/scale = Vector2( 0.02817, 0.0152025 )
+transform/pos = Vector2( -2.40393, 16.5443 )
+transform/scale = Vector2( 0.0311628, 0.039141 )
 texture = ExtResource( 16 )
 flip_h = true
 flip_v = true
@@ -728,7 +770,7 @@ margin/left = -16.0
 margin/top = 9.0
 margin/right = 254.0
 margin/bottom = 145.0
-custom_fonts/normal_font = ExtResource( 17 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "er...um...well..."
@@ -759,7 +801,7 @@ margin/left = -41.0
 margin/top = -3.0
 margin/right = 273.0
 margin/bottom = 252.0
-custom_fonts/normal_font = ExtResource( 17 )
+custom_fonts/normal_font = ExtResource( 19 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I have an idea! I think I can safely send you to the next city while I fix the program!"
@@ -777,7 +819,7 @@ transform/scale = Vector2( 0.641126, 0.524294 )
 transform/pos = Vector2( -28.0682, 1.74075 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0362315, 0.028268 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 flip_v = true
 
 [node name="yes" type="RichTextLabel" parent="other_other_bubble"]
@@ -791,7 +833,7 @@ margin/left = -45.0
 margin/top = -16.0
 margin/right = 263.0
 margin/bottom = 234.0
-custom_fonts/normal_font = ExtResource( 17 )
+custom_fonts/normal_font = ExtResource( 19 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "You have no chance! You are trapped!"
@@ -800,20 +842,16 @@ percent_visible = 1.0
 
 [node name="other_other_other_bubble" type="Node2D" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 19.2877, 18.1491 )
 transform/scale = Vector2( 0.641126, 0.524294 )
 
 [node name="bubble" type="Sprite" parent="other_other_other_bubble"]
 
-transform/pos = Vector2( -28.0682, 1.74075 )
+transform/pos = Vector2( -29.8366, 3.90757 )
 transform/rot = 180.0
-transform/scale = Vector2( 0.0362315, 0.028268 )
-texture = ExtResource( 20 )
+transform/scale = Vector2( 0.0401973, 0.0745445 )
+texture = ExtResource( 21 )
 flip_v = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="yes" type="RichTextLabel" parent="other_other_other_bubble"]
 
@@ -826,10 +864,10 @@ margin/left = -47.0
 margin/top = -11.0
 margin/right = 301.0
 margin/bottom = 184.0
-custom_fonts/normal_font = ExtResource( 17 )
+custom_fonts/normal_font = ExtResource( 19 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Complete the final city, and there is a big bonus waiting for you!"
+bbcode/bbcode = "So is it Sam or Pixel?"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -843,7 +881,7 @@ transform/scale = Vector2( 0.884005, 0.718394 )
 
 transform/pos = Vector2( -17.4362, 2.07494 )
 transform/scale = Vector2( 0.268766, 0.329765 )
-texture = ExtResource( 21 )
+texture = ExtResource( 22 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -852,7 +890,7 @@ __meta__ = {
 
 transform/pos = Vector2( -21.0046, 2.56828 )
 transform/scale = Vector2( 0.246029, 0.329765 )
-texture = ExtResource( 21 )
+texture = ExtResource( 22 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -862,7 +900,7 @@ __meta__ = {
 
 transform/pos = Vector2( -21.0023, 1.99836 )
 transform/scale = Vector2( 0.240393, 0.306038 )
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -872,7 +910,7 @@ __meta__ = {
 
 transform/pos = Vector2( -19.175, 1.58156 )
 transform/scale = Vector2( 0.209892, 0.314374 )
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -881,7 +919,7 @@ __meta__ = {
 
 transform/pos = Vector2( -17.9753, 32.0163 )
 transform/scale = Vector2( 0.185859, 0.25514 )
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -891,7 +929,7 @@ __meta__ = {
 
 transform/pos = Vector2( -21.761, 31.9805 )
 transform/scale = Vector2( 0.190989, 0.25514 )
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -900,7 +938,7 @@ __meta__ = {
 
 transform/pos = Vector2( -18.656, 19.1697 )
 transform/scale = Vector2( 0.158266, 0.25514 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -910,7 +948,7 @@ __meta__ = {
 
 transform/pos = Vector2( -19.716, 1.04348 )
 transform/scale = Vector2( 0.168754, 0.272936 )
-texture = ExtResource( 25 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -919,14 +957,14 @@ __meta__ = {
 
 transform/pos = Vector2( -19.247, -12.1867 )
 transform/scale = Vector2( 0.124356, 0.251262 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 27 )
+stream/stream = ExtResource( 28 )
 stream/play = false
 stream/loop = true
 stream/volume_db = -10.0
@@ -947,8 +985,8 @@ margin/left = -26.0
 margin/top = 26.0
 margin/right = 47.0
 margin/bottom = 66.0
-custom_fonts/font = ExtResource( 17 )
-custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.941176, 0.929412, 0.894118, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -959,6 +997,7 @@ underline = 2
 [node name="mute_button" type="TextureButton" parent="."]
 
 process/pause_mode = 2
+visibility/blend_mode = 1
 rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -972,21 +1011,19 @@ toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 28 )
-textures/pressed = ExtResource( 29 )
+textures/normal = ExtResource( 29 )
+textures/pressed = ExtResource( 30 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.15 )
 params/stretch_mode = 0
 
 [node name="the_question" type="Node2D" parent="."]
 
-visibility/visible = false
-
 [node name="Sprite" type="Sprite" parent="the_question"]
 
-transform/pos = Vector2( -18.1839, -6.50152 )
-transform/scale = Vector2( 0.0308891, 0.0492057 )
-texture = ExtResource( 30 )
+transform/pos = Vector2( -18.3945, -6.50152 )
+transform/scale = Vector2( 0.0319419, 0.0492057 )
+texture = ExtResource( 31 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1004,7 +1041,7 @@ __meta__ = {
 
 transform/pos = Vector2( -17.6967, -3.20485 )
 transform/scale = Vector2( 0.0266691, 0.0435654 )
-texture = ExtResource( 31 )
+texture = ExtResource( 32 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1020,7 +1057,7 @@ margin/left = -21.0
 margin/top = -11.0
 margin/right = 73.0
 margin/bottom = 64.0
-custom_fonts/normal_font = ExtResource( 17 )
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Pixel"
@@ -1041,7 +1078,7 @@ margin/left = -20.0
 margin/top = -5.0
 margin/right = 23.0
 margin/bottom = 35.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1054,14 +1091,13 @@ __meta__ = {
 
 [node name="the_question1" type="Node2D" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 36.758, -1.00307 )
 
 [node name="Sprite" type="Sprite" parent="the_question1"]
 
-transform/pos = Vector2( -18.1839, -6.50152 )
-transform/scale = Vector2( 0.0308891, 0.0492057 )
-texture = ExtResource( 30 )
+transform/pos = Vector2( -18.7743, -6.50152 )
+transform/scale = Vector2( 0.033841, 0.0492057 )
+texture = ExtResource( 31 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1070,13 +1106,13 @@ __meta__ = {
 
 transform/pos = Vector2( -22.4855, -5.98936 )
 transform/scale = Vector2( 0.0308891, 0.0492057 )
-texture = ExtResource( 32 )
+texture = ExtResource( 33 )
 
 [node name="Sprite2" type="Sprite" parent="the_question1"]
 
 transform/pos = Vector2( -17.6967, -3.20485 )
 transform/scale = Vector2( 0.0266691, 0.0435654 )
-texture = ExtResource( 31 )
+texture = ExtResource( 32 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1092,7 +1128,7 @@ margin/left = -21.0
 margin/top = -11.0
 margin/right = 73.0
 margin/bottom = 64.0
-custom_fonts/normal_font = ExtResource( 17 )
+custom_fonts/normal_font = SubResource( 8 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sam"
@@ -1113,7 +1149,7 @@ margin/left = -20.0
 margin/top = -5.0
 margin/right = 23.0
 margin/bottom = 35.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0

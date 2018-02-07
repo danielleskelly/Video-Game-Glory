@@ -12,7 +12,7 @@ func _process(delta):
 		get_node("rewards/unseen_badge").show()
 		get_node("rewards/unseen_badge/unseen_number").clear()
 		get_node("rewards/unseen_badge/unseen_number").add_text(str(rewards_globals.unseen))
-	endless_button = get_node("endless")
+	endless_button = get_node("endless_mode")
 	var file = File.new()
 	file.open("user://savegame.save", file.READ)
 	if file.file_exists("user://savegame.save") == true:
@@ -59,13 +59,13 @@ func _on_new_button_button_up():
 		get_tree().change_scene_to("res://story_piece_one.tscn")
 
 func _on_quit_button_button_down():
-	get_node("quit_game").set_hidden(false)
+	get_node("quit_game_popup").set_hidden(false)
 
 func _on_yes_quit_button_down():
 	get_tree().quit()
 
 func _on_no_quit_button_down():
-	get_node("quit_game").set_hidden(true)
+	get_node("quit_game_popup").set_hidden(true)
 
 func _on_endless_button_button_up():
 	get_tree().change_scene("res://endless_mode.tscn")

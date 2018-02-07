@@ -63,6 +63,7 @@ texture = ExtResource( 2 )
 
 [node name="frog" type="RigidBody2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 27.4582, 27.5923 )
 transform/scale = Vector2( 0.0587697, 0.0943734 )
 input/pickable = false
@@ -139,6 +140,7 @@ percent_visible = 1.0
 
 [node name="Path2D" type="Path2D" parent="."]
 
+editor/display_folded = true
 curve = SubResource( 2 )
 __meta__ = {
 "_edit_lock_": true
@@ -276,6 +278,7 @@ __meta__ = {
 
 [node name="Path2D1" type="Path2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 1.92957, -29.2332 )
 curve = SubResource( 2 )
 
@@ -623,6 +626,7 @@ percent_visible = 1.0
 
 [node name="pixel" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 7.26181, -11.9426 )
 transform/scale = Vector2( 1.20381, 1.49125 )
 
@@ -694,6 +698,7 @@ shortcut = null
 
 [node name="success_background" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -0.879974, -28.118 )
 transform/scale = Vector2( 0.0324119, 0.0341188 )
 texture = ExtResource( 10 )
@@ -810,6 +815,7 @@ stream/buffering_ms = 500
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 8.2048, 6.84428 )
 
@@ -937,6 +943,7 @@ underline = 2
 [node name="are_you_sure" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 11.1338, 9.26327 )
 
@@ -1020,6 +1027,7 @@ underline = 2
 [node name="are_you_sure_2" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 10.9749, 9.50113 )
 
@@ -1102,6 +1110,7 @@ underline = 2
 
 [node name="customer_display" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -6.91701, 3.06403 )
 transform/scale = Vector2( 1.05251, 1.05499 )
 
@@ -1162,6 +1171,8 @@ color/color = Color( 0.288992, 0.703125, 0.173035, 1 )
 [node name="tutorial" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
 transform/pos = Vector2( -0.138579, -0.115897 )
 transform/scale = Vector2( 0.989292, 1.00238 )
 
