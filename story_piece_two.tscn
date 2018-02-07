@@ -1,21 +1,21 @@
-[gd_scene load_steps=21 format=1]
+[gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://story_piece_two.gd" type="Script" id=1]
 [ext_resource path="res://pixel_front.png" type="Texture" id=2]
 [ext_resource path="res://pixel_back.png" type="Texture" id=3]
-[ext_resource path="res://Screen Shot 2017-10-27 at 4.36.54 PM.png" type="Texture" id=4]
+[ext_resource path="res://Screen Shot 2018-02-06 at 10.23.29 AM.png" type="Texture" id=4]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=5]
-[ext_resource path="res://office.png" type="Texture" id=6]
+[ext_resource path="res://inner_office.png" type="Texture" id=6]
 [ext_resource path="res://window.png" type="Texture" id=7]
 [ext_resource path="res://chair.png" type="Texture" id=8]
 [ext_resource path="res://desk.png" type="Texture" id=9]
 [ext_resource path="res://computer.png" type="Texture" id=10]
 [ext_resource path="res://lamp.png" type="Texture" id=11]
-[ext_resource path="res://hallway.png" type="Texture" id=12]
-[ext_resource path="res://hallway_door.png" type="Texture" id=13]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=14]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=15]
-[ext_resource path="res://bubble_green.png" type="Texture" id=16]
+[ext_resource path="res://office.png" type="Texture" id=12]
+[ext_resource path="res://door.png" type="Texture" id=13]
+[ext_resource path="res://dialogue_box.png" type="Texture" id=14]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://dialogue_box_two.png" type="Texture" id=16]
 [ext_resource path="res://storyline_two.ogg" type="AudioStream" id=17]
 [ext_resource path="res://music_icon_on.png" type="Texture" id=18]
 [ext_resource path="res://music_icon_off.png" type="Texture" id=19]
@@ -248,6 +248,27 @@ tracks/21/keys = {
 "values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ]
 }
 
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 15 )
+
 [node name="story_piece_two" type="Node2D"]
 
 transform/pos = Vector2( 514.994, 303.814 )
@@ -301,18 +322,12 @@ texture = ExtResource( 5 )
 
 transform/pos = Vector2( 0.546793, -2.38416 )
 transform/scale = Vector2( 1.08923, 1.1302 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Sprite" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -0.886196, 0.188874 )
-transform/scale = Vector2( 0.0549797, 0.0791224 )
+transform/pos = Vector2( -1.03239, 2.71427 )
+transform/scale = Vector2( 0.0700722, 0.0619792 )
 texture = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="window" type="Sprite" parent="inner_office"]
 
@@ -366,7 +381,6 @@ texture = ExtResource( 2 )
 
 [node name="outside_office" type="Node2D" parent="."]
 
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 0.212709, -5.55474 )
 transform/scale = Vector2( 1.60774, 1.65711 )
@@ -374,24 +388,18 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="outside_office"]
+[node name="walls" type="Sprite" parent="outside_office"]
 
-transform/pos = Vector2( -0.357955, -0.681422 )
-transform/scale = Vector2( 0.0553747, 0.0864132 )
+transform/pos = Vector2( -0.193185, -0.990216 )
+transform/scale = Vector2( 0.0658585, 0.0660327 )
 texture = ExtResource( 12 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="door" type="Sprite" parent="outside_office"]
 
 transform/pos = Vector2( -16.5636, -0.884731 )
-transform/scale = Vector2( 0.0589716, 0.0878755 )
+transform/scale = Vector2( 0.0589716, 0.0767605 )
 texture = ExtResource( 13 )
 flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="speech_bubble" type="Node2D" parent="."]
 
@@ -403,8 +411,8 @@ __meta__ = {
 
 [node name="bubble" type="Sprite" parent="speech_bubble"]
 
-transform/pos = Vector2( -12.2206, 13.7753 )
-transform/scale = Vector2( 0.0253465, 0.0183162 )
+transform/pos = Vector2( -10.3762, 13.7967 )
+transform/scale = Vector2( 0.0271605, 0.0393754 )
 texture = ExtResource( 14 )
 flip_h = true
 flip_v = true
@@ -420,7 +428,7 @@ margin/left = -21.0
 margin/top = 7.0
 margin/right = 190.0
 margin/bottom = 150.0
-custom_fonts/normal_font = ExtResource( 15 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "I've got nothing better to do."
@@ -436,9 +444,9 @@ transform/pos = Vector2( -2.30912, -1.68264 )
 
 [node name="bubble" type="Sprite" parent="other_bubble"]
 
-transform/pos = Vector2( 19.2281, -0.906036 )
+transform/pos = Vector2( 20.4304, 0.952179 )
 transform/rot = 90.0
-transform/scale = Vector2( 0.0277045, 0.0193962 )
+transform/scale = Vector2( 0.0439458, 0.0494063 )
 texture = ExtResource( 16 )
 
 [node name="speech" type="RichTextLabel" parent="other_bubble"]
@@ -452,7 +460,7 @@ margin/left = 10.0
 margin/top = -17.0
 margin/right = 220.0
 margin/bottom = 340.0
-custom_fonts/normal_font = ExtResource( 15 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "We can complete a little training session while we wait for Sam."
@@ -481,8 +489,8 @@ margin/left = -27.0
 margin/top = 27.0
 margin/right = 46.0
 margin/bottom = 67.0
-custom_fonts/font = ExtResource( 15 )
-custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.941176, 0.929412, 0.894118, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -492,6 +500,7 @@ underline = 2
 
 [node name="mute_button" type="TextureButton" parent="."]
 
+visibility/blend_mode = 1
 rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true

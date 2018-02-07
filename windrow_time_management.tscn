@@ -53,6 +53,7 @@ script/script = ExtResource( 1 )
 "a",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -27.932, -24.4959 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -85,6 +86,7 @@ __meta__ = {
 "b",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -27.932, -19.3942 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -117,6 +119,7 @@ __meta__ = {
 "c",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -27.932, -14.709 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -149,6 +152,7 @@ __meta__ = {
 "d",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -27.932, -9.91957 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -181,6 +185,7 @@ __meta__ = {
 "d",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 3.96946, -9.91957 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -218,6 +223,7 @@ __meta__ = {
 "d",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -11.95, -9.91957 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -255,6 +261,7 @@ __meta__ = {
 "d",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 19.9514, -9.91957 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -292,6 +299,7 @@ __meta__ = {
 "d",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -19.941, -9.91957 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -329,6 +337,7 @@ __meta__ = {
 "d",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 11.9604, -9.91957 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -366,6 +375,7 @@ __meta__ = {
 "d",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -3.95907, -9.91957 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -403,6 +413,7 @@ __meta__ = {
 "d",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 27.9424, -9.91957 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -440,6 +451,7 @@ __meta__ = {
 "c",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 4.03189, -14.5007 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -477,6 +489,7 @@ __meta__ = {
 "c",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -11.95, -14.709 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -514,6 +527,7 @@ __meta__ = {
 "c",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 19.9514, -14.709 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -551,6 +565,7 @@ __meta__ = {
 "c",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -19.941, -14.709 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -588,6 +603,7 @@ __meta__ = {
 "c",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 11.9604, -14.709 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -625,6 +641,7 @@ __meta__ = {
 "c",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -3.95908, -14.709 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -662,6 +679,7 @@ __meta__ = {
 "c",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 28.0048, -14.709 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -699,6 +717,7 @@ __meta__ = {
 "b",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 3.96946, -19.7066 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -736,6 +755,7 @@ __meta__ = {
 "b",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -11.95, -19.7066 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -773,6 +793,7 @@ __meta__ = {
 "b",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 19.9514, -19.7066 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -810,6 +831,7 @@ __meta__ = {
 "b",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -20.0034, -19.7066 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -847,6 +869,7 @@ __meta__ = {
 "b",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 11.898, -19.7066 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -884,6 +907,7 @@ __meta__ = {
 "b",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -3.95907, -19.7066 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -921,6 +945,7 @@ __meta__ = {
 "b",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 27.9424, -19.7066 )
 transform/scale = Vector2( 0.12595, 0.0756455 )
 input/pickable = true
@@ -958,6 +983,7 @@ __meta__ = {
 "a",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -20.0144, -24.3806 )
 transform/scale = Vector2( 0.12595, 0.075646 )
 input/pickable = true
@@ -995,6 +1021,7 @@ __meta__ = {
 "a",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -11.961, -24.3806 )
 transform/scale = Vector2( 0.12595, 0.075646 )
 input/pickable = true
@@ -1032,6 +1059,7 @@ __meta__ = {
 "a",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -3.97002, -24.3806 )
 transform/scale = Vector2( 0.12595, 0.075646 )
 input/pickable = true
@@ -1069,6 +1097,7 @@ __meta__ = {
 "a",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 4.02094, -24.3806 )
 transform/scale = Vector2( 0.12595, 0.075646 )
 input/pickable = true
@@ -1106,6 +1135,7 @@ __meta__ = {
 "a",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 11.9495, -24.3806 )
 transform/scale = Vector2( 0.12595, 0.075646 )
 input/pickable = true
@@ -1143,6 +1173,7 @@ __meta__ = {
 "a",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 19.9404, -24.3806 )
 transform/scale = Vector2( 0.12595, 0.075646 )
 input/pickable = true
@@ -1180,6 +1211,7 @@ __meta__ = {
 "a",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 27.869, -24.3806 )
 transform/scale = Vector2( 0.12595, 0.075646 )
 input/pickable = true
@@ -1215,6 +1247,7 @@ __meta__ = {
 
 [node name="ball" type="RigidBody2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -1.72338, -8.34917 )
 transform/scale = Vector2( 0.0399274, 0.0687594 )
 input/pickable = false
@@ -1271,6 +1304,7 @@ autostart = false
 "wall",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -0.00899504, 2.44959 )
 transform/scale = Vector2( 1.00028, 1.4486 )
 input/pickable = false
@@ -1311,6 +1345,7 @@ __meta__ = {
 "buffer",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 132.332, 17.4878 )
 transform/scale = Vector2( 5.17826, 4.77451 )
 input/pickable = false
@@ -1348,6 +1383,7 @@ __meta__ = {
 "buffer",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 210.44, 9.38622 )
 transform/scale = Vector2( 5.17826, 4.77451 )
 input/pickable = false
@@ -1386,6 +1422,7 @@ __meta__ = {
 "wall",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( 66.0332, -14.393 )
 transform/scale = Vector2( 1, 2.91152 )
 input/pickable = false
@@ -1423,6 +1460,7 @@ __meta__ = {
 "floor",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -0.703997, 0 )
 transform/scale = Vector2( 1.32976, 1 )
 input/pickable = false
@@ -1500,6 +1538,7 @@ __meta__ = {
 "buffer",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -10.1565, -144.685 )
 transform/scale = Vector2( 2.37068, 2.66015 )
 input/pickable = false
@@ -1537,6 +1576,7 @@ __meta__ = {
 "buffer",
 ]]
 
+editor/display_folded = true
 transform/pos = Vector2( -0.459641, -49.6815 )
 transform/scale = Vector2( 2.37068, 2.66015 )
 input/pickable = false
@@ -1572,6 +1612,7 @@ __meta__ = {
 
 [node name="paddle" type="RigidBody2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -1.35386, 25.3453 )
 transform/scale = Vector2( 0.0500545, 0.0397513 )
 input/pickable = false
@@ -1626,6 +1667,7 @@ autostart = false
 
 [node name="pixel" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -1.02444, 2.10931 )
 transform/scale = Vector2( 1.10856, 1.0199 )
 
@@ -1719,6 +1761,7 @@ percent_visible = 1.0
 
 [node name="success_background" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -28.0528, 26.3836 )
 transform/scale = Vector2( 0.0317127, 0.0304382 )
 texture = ExtResource( 10 )
@@ -1823,6 +1866,7 @@ stream/buffering_ms = 500
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 11.6878, 3.37865 )
 
@@ -1950,6 +1994,7 @@ underline = 2
 [node name="are_you_sure" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 13.2059, 3.47749 )
 
@@ -2033,6 +2078,7 @@ underline = 2
 [node name="are_you_sure_2" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 12.5647, 2.45415 )
 
@@ -2125,7 +2171,7 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="customer_pop_timer" type="Timer" parent="customer_display"]
+[node name="pop_timer" type="Timer" parent="customer_display"]
 
 process_mode = 1
 wait_time = 1.0
@@ -2175,6 +2221,8 @@ color/color = Color( 0.288992, 0.703125, 0.173035, 1 )
 [node name="tutorial" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
 transform/pos = Vector2( -0.138579, -0.115897 )
 transform/scale = Vector2( 0.989292, 1.00238 )
 
@@ -2524,6 +2572,7 @@ underline = 2
 [node name="in" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 511.98, 302.557 )
 transform/scale = Vector2( 16.0518, 9.58532 )
@@ -2579,7 +2628,7 @@ autostart = false
 
 [connection signal="timeout" from="customer_display/customer" to="." method="_on_customer_timeout"]
 
-[connection signal="timeout" from="customer_display/customer_pop_timer" to="." method="_on_customer_pop_timer_timeout"]
+[connection signal="timeout" from="customer_display/pop_timer" to="." method="_on_customer_pop_timer_timeout"]
 
 [connection signal="button_down" from="tutorial/tutorial_button" to="." method="_on_tutorial_button_button_down"]
 

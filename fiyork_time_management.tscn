@@ -105,6 +105,7 @@ percent_visible = 1.0
 
 [node name="success_background" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 127.595, 5.26128 )
 transform/scale = Vector2( 0.67839, 0.328205 )
 texture = ExtResource( 4 )
@@ -201,6 +202,7 @@ percent_visible = 1.0
 
 [node name="pixel" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 976.749, 9.25339 )
 transform/scale = Vector2( 0.865529, 0.951183 )
 
@@ -281,6 +283,7 @@ stream/buffering_ms = 500
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="menu"]
@@ -402,6 +405,7 @@ underline = 2
 [node name="are_you_sure" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="are_you_sure"]
@@ -481,6 +485,7 @@ underline = 2
 [node name="are_you_sure_2" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="are_you_sure_2"]
@@ -559,6 +564,7 @@ underline = 2
 
 [node name="customer_display" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 512.638, 259.361 )
 transform/scale = Vector2( 16.0066, 9.64338 )
 __meta__ = {
@@ -622,6 +628,8 @@ color/color = Color( 0.288992, 0.703125, 0.173035, 1 )
 [node name="tutorial" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
+visibility/visible = false
 transform/pos = Vector2( 512.264, 259.128 )
 transform/scale = Vector2( 16.048, 9.67647 )
 
@@ -940,6 +948,7 @@ underline = 2
 [node name="in" type="Node2D" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 514.17, 258.175 )
 transform/scale = Vector2( 16.048, 9.58715 )

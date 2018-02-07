@@ -27,8 +27,8 @@ func _ready():
 		get_node("customer_display/customer").start()
 	else:
 		pass
-	if tutorial.tutorial == false:
-		tutorial.tutorial = true
+	if tutorial.slatten_tutorial == false:
+		tutorial.slatten_tutorial = true
 		get_node("tutorial").show()
 		get_tree().set_pause(true)
 	else:

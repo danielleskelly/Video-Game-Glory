@@ -1,20 +1,20 @@
-[gd_scene load_steps=21 format=1]
+[gd_scene load_steps=25 format=1]
 
 [ext_resource path="res://story_piece_four.gd" type="Script" id=1]
 [ext_resource path="res://pixel_front.png" type="Texture" id=2]
 [ext_resource path="res://pixel_back.png" type="Texture" id=3]
-[ext_resource path="res://Screen Shot 2017-10-27 at 4.36.54 PM.png" type="Texture" id=4]
+[ext_resource path="res://Screen Shot 2018-02-06 at 10.23.29 AM.png" type="Texture" id=4]
 [ext_resource path="res://blacker_than_night.png" type="Texture" id=5]
-[ext_resource path="res://office.png" type="Texture" id=6]
+[ext_resource path="res://inner_office.png" type="Texture" id=6]
 [ext_resource path="res://window.png" type="Texture" id=7]
 [ext_resource path="res://chair.png" type="Texture" id=8]
 [ext_resource path="res://desk.png" type="Texture" id=9]
 [ext_resource path="res://computer.png" type="Texture" id=10]
 [ext_resource path="res://lamp.png" type="Texture" id=11]
-[ext_resource path="res://genre_bubble.png" type="Texture" id=12]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=13]
-[ext_resource path="res://bubble_green.png" type="Texture" id=14]
-[ext_resource path="res://purple_bubble.png" type="Texture" id=15]
+[ext_resource path="res://dialogue_box.png" type="Texture" id=12]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://dialogue_box_two.png" type="Texture" id=14]
+[ext_resource path="res://dialogue_box_three.png" type="Texture" id=15]
 [ext_resource path="res://sam_front.png" type="Texture" id=16]
 [ext_resource path="res://storyline_two.ogg" type="AudioStream" id=17]
 [ext_resource path="res://music_icon_on.png" type="Texture" id=18]
@@ -24,7 +24,7 @@
 
 length = 246.2
 loop = false
-step = 0.1
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("strategy:visibility/visible")
 tracks/0/interp = 1
@@ -210,10 +210,10 @@ tracks/18/path = NodePath("sam:transform/pos")
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
-"times": FloatArray( 0, 194.4, 194.4, 196.5, 199.2, 200.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 194.4, 196.5, 199.2, 200.6 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 22.2011, 5.61807 ), Vector2( 34.3419, 0.103073 ), Vector2( 21.5063, 5.44783 ), Vector2( 20.9179, 10.4083 ), Vector2( 5.4421, 17.68 ), Vector2( 5.32114, 29.1975 ) ]
+"values": [ Vector2( 22.2011, 5.61807 ), Vector2( 22.2011, 5.61807 ), Vector2( 20.9179, 10.4083 ), Vector2( 5.4421, 17.68 ), Vector2( 5.32114, 29.1975 ) ]
 }
 tracks/19/type = "value"
 tracks/19/path = NodePath("sam:visibility/visible")
@@ -235,6 +235,34 @@ tracks/20/keys = {
 "update": 1,
 "values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ]
 }
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 13 )
 
 [node name="story_piece_four" type="Node2D"]
 
@@ -297,12 +325,9 @@ __meta__ = {
 
 [node name="door_plug" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -1.05319, -0.356661 )
-transform/scale = Vector2( 0.0532517, 0.0760253 )
+transform/pos = Vector2( -2.60806, 0.649213 )
+transform/scale = Vector2( 0.0764102, 0.0664774 )
 texture = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="window" type="Sprite" parent="inner_office"]
 
@@ -369,8 +394,8 @@ visibility/visible = false
 
 [node name="bubble" type="Sprite" parent="speech_bubble"]
 
-transform/pos = Vector2( -2.48767, 16.884 )
-transform/scale = Vector2( 0.02817, 0.0152025 )
+transform/pos = Vector2( -3.1458, 15.8502 )
+transform/scale = Vector2( 0.0327531, 0.0358287 )
 texture = ExtResource( 12 )
 flip_h = true
 flip_v = true
@@ -386,7 +411,7 @@ margin/left = -16.0
 margin/top = 9.0
 margin/right = 254.0
 margin/bottom = 145.0
-custom_fonts/normal_font = ExtResource( 13 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Um.... hi?"
@@ -401,9 +426,9 @@ transform/scale = Vector2( 0.610145, 0.504589 )
 
 [node name="bubble" type="Sprite" parent="other_bubble"]
 
-transform/pos = Vector2( -27.2496, 17.6459 )
+transform/pos = Vector2( -24.8845, 15.5264 )
 transform/rot = 90.0
-transform/scale = Vector2( 0.0362315, 0.028268 )
+transform/scale = Vector2( 0.0404705, 0.0703228 )
 texture = ExtResource( 14 )
 
 [node name="yes" type="RichTextLabel" parent="other_bubble"]
@@ -417,7 +442,7 @@ margin/left = -40.0
 margin/top = -1.0
 margin/right = 266.0
 margin/bottom = 219.0
-custom_fonts/normal_font = ExtResource( 13 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Wow wow! Bits and bytes that was fantastic!"
@@ -426,15 +451,14 @@ percent_visible = 1.0
 
 [node name="other_other_bubble" type="Node2D" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 17.7667, -11.6668 )
 transform/scale = Vector2( 0.641126, 0.524294 )
 
 [node name="bubble" type="Sprite" parent="other_other_bubble"]
 
-transform/pos = Vector2( -28.0682, 1.74075 )
+transform/pos = Vector2( -30.0204, 2.73623 )
 transform/rot = 90.0
-transform/scale = Vector2( 0.0362315, 0.028268 )
+transform/scale = Vector2( 0.0446277, 0.0735933 )
 texture = ExtResource( 15 )
 flip_v = true
 
@@ -449,7 +473,7 @@ margin/left = -45.0
 margin/top = -16.0
 margin/right = 263.0
 margin/bottom = 234.0
-custom_fonts/normal_font = ExtResource( 13 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Yes... wow. You dealt with those sabotages like they were nothing."
@@ -492,8 +516,8 @@ margin/left = -26.0
 margin/top = 26.0
 margin/right = 47.0
 margin/bottom = 66.0
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.941176, 0.929412, 0.894118, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
@@ -503,6 +527,7 @@ underline = 2
 
 [node name="mute_button" type="TextureButton" parent="."]
 
+visibility/blend_mode = 1
 rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true

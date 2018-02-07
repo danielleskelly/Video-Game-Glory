@@ -3,9 +3,6 @@ extends Node2D
 var strategy = load("res://strategy.tscn")
 
 #display nodes
-onready var genre_one = get_node("genre_one")
-onready var genre_two = get_node("genre_two")
-onready var genre_three = get_node("genre_three")
 onready var supply_one = get_tree().get_current_scene().get_node("supply_one")
 onready var supply_two = get_tree().get_current_scene().get_node("supply_two")
 onready var town_banner = get_tree().get_current_scene().get_node("town_banner")
@@ -33,7 +30,6 @@ var new_volume
 
 func _ready():
 	set_sound()
-	tutorial_start()
 	research_countdown_trigger()
 	set_process(true)
 	
@@ -175,51 +171,9 @@ func _process(delta):
 	supply_two.get_child(1).clear()
 	supply_two.get_child(1).add_text(str(set_displays.supply_two_name))
 	supply_two.get_child(5).set_texture(set_displays.supply_two_icon)
-	genre_one.get_child(3).get_child(0).clear()
-	genre_one.get_child(4).get_child(0).clear()
-	genre_one.get_child(5).get_child(0).clear()
 	var one_ones_digit = int(set_displays.genre_one_count * 100) % 10
 	var one_tens_digit = int(set_displays.genre_one_count * 10) % 10
 	var one_hunds_digit = int(set_displays.genre_one_count) % 10
-	genre_one.get_child(5).get_child(0).add_text(str(one_ones_digit))
-	genre_one.get_child(4).get_child(0).add_text(str(one_tens_digit))
-	genre_one.get_child(3).get_child(0).add_text(str(one_hunds_digit))
-	genre_one.get_child(1).clear()
-	genre_one.get_child(1).add_text(str(set_displays.genre_one_name))
-	genre_one.get_child(6).set_texture(set_displays.genre_one_icon)
-	if (set_displays.genre_two_key == true):
-		genre_two.show()
-		genre_two.get_child(3).get_child(0).clear()
-		genre_two.get_child(4).get_child(0).clear()
-		genre_two.get_child(5).get_child(0).clear()
-		var two_ones_digit = int(set_displays.genre_two_count * 100) % 10
-		var two_tens_digit = int(set_displays.genre_two_count * 10) % 10
-		var two_hunds_digit = int(set_displays.genre_two_count) % 10
-		genre_two.get_child(5).get_child(0).add_text(str(two_ones_digit))
-		genre_two.get_child(4).get_child(0).add_text(str(two_tens_digit))
-		genre_two.get_child(3).get_child(0).add_text(str(two_hunds_digit))
-		genre_two.get_child(1).clear()
-		genre_two.get_child(1).add_text(str(set_displays.genre_two_name))
-		genre_two.get_child(6).set_texture(set_displays.genre_two_icon)
-	elif (set_displays.genre_two_key == false):
-		genre_two.set_hidden(true)
-	
-	if (set_displays.genre_three_key == true):
-		genre_three.show()
-		genre_three.get_child(3).get_child(0).clear()
-		genre_three.get_child(4).get_child(0).clear()
-		genre_three.get_child(5).get_child(0).clear()
-		var three_ones_digit = int(set_displays.genre_three_count * 100) % 10
-		var three_tens_digit = int(set_displays.genre_three_count * 10) % 10
-		var three_hunds_digit = int(set_displays.genre_three_count) % 10
-		genre_three.get_child(5).get_child(0).add_text(str(three_ones_digit))
-		genre_three.get_child(4).get_child(0).add_text(str(three_tens_digit))
-		genre_three.get_child(3).get_child(0).add_text(str(three_hunds_digit))
-		genre_three.get_child(1).clear()
-		genre_three.get_child(1).add_text(str(set_displays.genre_three_name))
-		genre_three.get_child(6).set_texture(set_displays.genre_three_icon)
-	elif (set_displays.genre_three_key == false):
-		genre_three.set_hidden(true)
 
 func _on_start_day_button_up():
 	game_over.game_over_check()
@@ -256,13 +210,13 @@ func _on_genre_discover_ok_button_down():
 func _on_continue_ok_button_down():
 	if (towns.town_select == "hollyhock"):
 		hollyhock_complete.set_hidden(true)
-		endless.endless_unlocked == "true"
+		endless.endless_unlocked = "true"
 		rewards_globals.complete_hollyhock = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_three.tscn")
 	elif (towns.town_select == "fiyork"):
 		fiyork_complete.set_hidden(true)
-		endless.shoot_that_rock == true
+		endless.shoot_that_rock = true
 		rewards_globals.complete_fiyork = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_four.tscn")
@@ -448,13 +402,6 @@ func _on_no_main_menu_button_down():
 
 func set_sound():
 	get_node("StreamPlayer").set_volume(sound.volume)
-
-func tutorial_start():
-	if (tutorial.tutorial_start == false):
-		tutorial_start.show()
-		pixel.show()
-	if (tutorial.tutorial_start == true):
-		pass
 
 func research_countdown_trigger():
 	research_countdown.research_counting()

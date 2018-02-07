@@ -1,12 +1,12 @@
 extends Node
 
-var tutorial = false
-
-var tutorial_start = true
-var tutorial_title_box = true
-var tutorial_prediction_box = true
-var tutorial_supplies_box = true
-var tutorial_finances_box = true
+var hollyhock_tutorial = false
+var fiyork_tutorial = false
+var untilly_tutorial = false
+var plansey_tutorial = false
+var windrow_tutorial = false
+var banlon_tutorial = false
+var slatten_tutorial = false
 
 func _ready():
 	pass
