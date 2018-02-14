@@ -1,8 +1,8 @@
-[gd_scene load_steps=19 format=1]
+[gd_scene load_steps=27 format=1]
 
 [ext_resource path="res://plansey_time_management.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://pixel_arm.png" type="Texture" id=4]
 [ext_resource path="res://pixel_torso.png" type="Texture" id=5]
 [ext_resource path="res://pixel_leg.png" type="Texture" id=6]
@@ -19,6 +19,62 @@
 [ext_resource path="res://wasd.png" type="Texture" id=17]
 [ext_resource path="res://shift.png" type="Texture" id=18]
 
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
 [node name="time_management" type="Node2D"]
 
 transform/pos = Vector2( 513.144, 309.168 )
@@ -27,7 +83,6 @@ script/script = ExtResource( 1 )
 
 [node name="a_one" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -27.3873, -25.3789 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -43,8 +98,8 @@ margin/left = -384.0
 margin/top = -219.0
 margin/right = -327.0
 margin/bottom = -170.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -52,7 +107,6 @@ percent_visible = 1.0
 
 [node name="b_one" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -27.3873, -11.97 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -68,8 +122,8 @@ margin/left = -384.0
 margin/top = -213.0
 margin/right = -325.0
 margin/bottom = -162.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -77,7 +131,6 @@ percent_visible = 1.0
 
 [node name="c_one" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -27.3873, 1.23094 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -93,8 +146,8 @@ margin/left = -417.0
 margin/top = -212.0
 margin/right = -358.0
 margin/bottom = -164.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -102,7 +155,6 @@ percent_visible = 1.0
 
 [node name="d_one" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -27.3873, 14.6398 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -118,8 +170,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -357.0
 margin/bottom = -164.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -127,7 +179,6 @@ percent_visible = 1.0
 
 [node name="a_two" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -18.2921, -25.3789 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -143,8 +194,8 @@ margin/left = -481.0
 margin/top = -242.0
 margin/right = -411.0
 margin/bottom = -182.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -152,7 +203,6 @@ percent_visible = 1.0
 
 [node name="b_two" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -18.2921, -11.97 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -168,8 +218,8 @@ margin/left = -465.0
 margin/top = -227.0
 margin/right = -403.0
 margin/bottom = -174.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -177,7 +227,6 @@ percent_visible = 1.0
 
 [node name="c_two" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -18.2921, 1.23094 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -193,8 +242,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -354.0
 margin/bottom = -158.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -202,7 +251,6 @@ percent_visible = 1.0
 
 [node name="d_two" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -18.2921, 14.6398 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -218,8 +266,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -346.0
 margin/bottom = -156.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -227,7 +275,6 @@ percent_visible = 1.0
 
 [node name="a_three" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -9.19696, -25.3789 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -243,8 +290,8 @@ margin/left = -482.0
 margin/top = -228.0
 margin/right = -417.0
 margin/bottom = -172.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -252,7 +299,6 @@ percent_visible = 1.0
 
 [node name="b_three" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -9.19696, -11.97 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -268,8 +314,8 @@ margin/left = -482.0
 margin/top = -242.0
 margin/right = -422.0
 margin/bottom = -192.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -277,7 +323,6 @@ percent_visible = 1.0
 
 [node name="c_three" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -9.19696, 1.23094 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -293,8 +338,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -356.0
 margin/bottom = -161.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -302,7 +347,6 @@ percent_visible = 1.0
 
 [node name="d_three" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -9.19696, 14.6398 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -318,8 +362,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -361.0
 margin/bottom = -159.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -327,7 +371,6 @@ percent_visible = 1.0
 
 [node name="a_four" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -0.101853, -25.3789 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -343,8 +386,8 @@ margin/left = -498.0
 margin/top = -213.0
 margin/right = -437.0
 margin/bottom = -165.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -352,7 +395,6 @@ percent_visible = 1.0
 
 [node name="b_four" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -0.101853, -11.97 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -368,8 +410,8 @@ margin/left = -465.0
 margin/top = -227.0
 margin/right = -413.0
 margin/bottom = -169.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -377,7 +419,6 @@ percent_visible = 1.0
 
 [node name="c_four" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -0.101853, 1.23094 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -393,8 +434,8 @@ margin/left = -433.0
 margin/top = -213.0
 margin/right = -368.0
 margin/bottom = -157.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -402,7 +443,6 @@ percent_visible = 1.0
 
 [node name="d_four" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -0.101853, 14.6398 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -418,8 +458,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -352.0
 margin/bottom = -165.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -427,7 +467,6 @@ percent_visible = 1.0
 
 [node name="a_five" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 8.99326, -25.3789 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -443,8 +482,8 @@ margin/left = -482.0
 margin/top = -227.0
 margin/right = -421.0
 margin/bottom = -176.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -452,7 +491,6 @@ percent_visible = 1.0
 
 [node name="b_five" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 8.99326, -11.97 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -468,8 +506,8 @@ margin/left = -482.0
 margin/top = -242.0
 margin/right = -417.0
 margin/bottom = -189.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -477,7 +515,6 @@ percent_visible = 1.0
 
 [node name="c_five" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 8.99326, 1.23094 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -493,8 +530,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -355.0
 margin/bottom = -158.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -502,7 +539,6 @@ percent_visible = 1.0
 
 [node name="d_five" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 8.99326, 14.6398 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -518,8 +554,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -360.0
 margin/bottom = -165.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -527,7 +563,6 @@ percent_visible = 1.0
 
 [node name="a_six" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 18.0261, -25.3789 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -543,8 +578,8 @@ margin/left = -465.0
 margin/top = -227.0
 margin/right = -407.0
 margin/bottom = -174.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -552,7 +587,6 @@ percent_visible = 1.0
 
 [node name="b_six" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 18.0261, -11.97 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -568,8 +602,8 @@ margin/left = -449.0
 margin/top = -213.0
 margin/right = -395.0
 margin/bottom = -148.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -577,7 +611,6 @@ percent_visible = 1.0
 
 [node name="c_six" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 18.0261, 1.23094 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -593,8 +626,8 @@ margin/left = -417.0
 margin/top = -227.0
 margin/right = -359.0
 margin/bottom = -169.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -602,7 +635,6 @@ percent_visible = 1.0
 
 [node name="d_six" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 18.0261, 14.6398 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -618,8 +650,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -354.0
 margin/bottom = -162.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -627,7 +659,6 @@ percent_visible = 1.0
 
 [node name="a_seven" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 27.1213, -25.3789 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -643,8 +674,8 @@ margin/left = -449.0
 margin/top = -227.0
 margin/right = -389.0
 margin/bottom = -163.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -652,7 +683,6 @@ percent_visible = 1.0
 
 [node name="b_seven" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 27.1213, -11.97 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -668,8 +698,8 @@ margin/left = -465.0
 margin/top = -227.0
 margin/right = -397.0
 margin/bottom = -168.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -677,7 +707,6 @@ percent_visible = 1.0
 
 [node name="c_seven" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 27.1213, 1.23094 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -693,8 +722,8 @@ margin/left = -417.0
 margin/top = -198.0
 margin/right = -350.0
 margin/bottom = -136.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -702,7 +731,6 @@ percent_visible = 1.0
 
 [node name="d_seven" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 27.1213, 14.6398 )
 transform/scale = Vector2( 0.00712402, 0.0130253 )
 texture = ExtResource( 2 )
@@ -718,8 +746,8 @@ margin/left = -417.0
 margin/top = -213.0
 margin/right = -349.0
 margin/bottom = -155.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -736,8 +764,8 @@ margin/left = -14.0
 margin/top = 25.0
 margin/right = 302.0
 margin/bottom = 78.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.701961, 0.901961, 0.992157, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -752,7 +780,6 @@ autostart = false
 
 [node name="number_muncher" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -27.5524, 14.6544 )
 transform/scale = Vector2( 0.0523198, 0.150002 )
 
@@ -830,7 +857,6 @@ __meta__ = {
 
 [node name="success_background" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -26.7925, 26.5292 )
 transform/scale = Vector2( 0.050856, 0.0417198 )
 texture = ExtResource( 9 )
@@ -845,7 +871,7 @@ margin/left = -58.0
 margin/top = -92.0
 margin/right = 78.0
 margin/bottom = -38.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Points"
@@ -880,7 +906,7 @@ margin/left = -56.0
 margin/top = 0.0
 margin/right = -15.0
 margin/bottom = 85.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -897,7 +923,7 @@ margin/left = -9.0
 margin/top = -2.0
 margin/right = 64.0
 margin/bottom = 129.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -914,7 +940,7 @@ margin/left = 37.0
 margin/top = -3.0
 margin/right = 92.0
 margin/bottom = 138.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -939,7 +965,7 @@ margin/left = 21.0
 margin/top = 25.0
 margin/right = 116.0
 margin/bottom = 78.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -956,7 +982,6 @@ autostart = false
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 4.40099, -5.11874 )
 transform/scale = Vector2( 1.10705, 1 )
@@ -999,7 +1024,7 @@ margin/left = -9.0
 margin/top = -11.0
 margin/right = 135.0
 margin/bottom = 50.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sound"
@@ -1039,7 +1064,7 @@ margin/left = -10.0
 margin/top = -3.0
 margin/right = 297.0
 margin/bottom = 44.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1058,7 +1083,7 @@ margin/left = -10.0
 margin/top = 3.0
 margin/right = 313.0
 margin/bottom = 50.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1077,7 +1102,7 @@ margin/left = -12.0
 margin/top = 9.0
 margin/right = 385.0
 margin/bottom = 56.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1088,7 +1113,6 @@ underline = 2
 [node name="are_you_sure" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 11.1096, 6.10635 )
 
@@ -1121,7 +1145,7 @@ margin/left = -20.0
 margin/top = -20.0
 margin/right = 242.0
 margin/bottom = 183.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to go back to the village?"
@@ -1139,7 +1163,7 @@ margin/left = -10.0
 margin/top = -5.0
 margin/right = 61.0
 margin/bottom = 42.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1158,7 +1182,7 @@ margin/left = -19.0
 margin/top = -5.0
 margin/right = 52.0
 margin/bottom = 42.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1169,7 +1193,6 @@ underline = 2
 [node name="are_you_sure_2" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 12.7894, -1.24071 )
 
@@ -1202,7 +1225,7 @@ margin/left = -21.0
 margin/top = -13.0
 margin/right = 216.0
 margin/bottom = 202.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to go back to the main menu?"
@@ -1220,7 +1243,7 @@ margin/left = -11.0
 margin/top = 3.0
 margin/right = 60.0
 margin/bottom = 50.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1239,7 +1262,7 @@ margin/left = -20.0
 margin/top = 3.0
 margin/right = 51.0
 margin/bottom = 50.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1400,7 +1423,6 @@ color/color = Color( 0.288992, 0.703125, 0.173035, 1 )
 [node name="tutorial" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( -0.138579, -0.115897 )
 transform/scale = Vector2( 0.989292, 1.00238 )
@@ -1423,7 +1445,7 @@ margin/left = -32.0
 margin/top = -63.0
 margin/right = 43.0
 margin/bottom = -19.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "you"
@@ -1448,7 +1470,7 @@ margin/left = -32.0
 margin/top = -63.0
 margin/right = 43.0
 margin/bottom = -19.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "you"
@@ -1473,7 +1495,7 @@ margin/left = -32.0
 margin/top = -63.0
 margin/right = 79.0
 margin/bottom = -19.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "points"
@@ -1498,7 +1520,7 @@ margin/left = 9.0
 margin/top = -29.0
 margin/right = 238.0
 margin/bottom = 15.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Current goal"
@@ -1526,7 +1548,7 @@ margin/left = 21.0
 margin/top = 96.0
 margin/right = 382.0
 margin/bottom = 190.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Seconds left"
@@ -1554,7 +1576,7 @@ margin/left = 25.0
 margin/top = 65.0
 margin/right = 386.0
 margin/bottom = 159.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Pixel"
@@ -1581,7 +1603,7 @@ margin/left = 22.0
 margin/top = -81.0
 margin/right = 121.0
 margin/bottom = -24.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "left"
@@ -1606,7 +1628,7 @@ margin/left = -166.0
 margin/top = -26.0
 margin/right = -10.0
 margin/bottom = 26.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Customer"
@@ -1632,7 +1654,7 @@ margin/left = 21.0
 margin/top = 36.0
 margin/right = 120.0
 margin/bottom = 93.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "right"
@@ -1658,7 +1680,7 @@ margin/left = 21.0
 margin/top = 36.0
 margin/right = 120.0
 margin/bottom = 93.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "fire"
@@ -1682,7 +1704,7 @@ margin/left = -41.0
 margin/top = 25.0
 margin/right = 58.0
 margin/bottom = 82.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "down"
@@ -1707,7 +1729,7 @@ margin/left = -20.0
 margin/top = -72.0
 margin/right = 79.0
 margin/bottom = -15.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "up"
@@ -1726,7 +1748,7 @@ margin/left = -18.0
 margin/top = -12.0
 margin/right = 142.0
 margin/bottom = 48.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Movement"
@@ -1745,7 +1767,7 @@ margin/left = -14.0
 margin/top = 10.0
 margin/right = 606.0
 margin/bottom = 184.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "The rules are simple:
@@ -1766,7 +1788,7 @@ margin/left = 1.0
 margin/top = 5.0
 margin/right = 566.0
 margin/bottom = 125.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Welcome to Mathmatic Mastication!"
@@ -1808,7 +1830,7 @@ margin/left = 24.0
 margin/top = -19.0
 margin/right = 67.0
 margin/bottom = 21.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1819,7 +1841,6 @@ underline = 2
 [node name="in" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 511.98, 302.557 )
 transform/scale = Vector2( 16.0518, 9.58532 )
@@ -1835,7 +1856,7 @@ margin/left = -33.0
 margin/top = -34.0
 margin/right = 15.0
 margin/bottom = 19.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "3"

@@ -23,254 +23,254 @@
 [ext_resource path="res://ghostie_tag.png" type="Texture" id=21]
 [ext_resource path="res://wasd.png" type="Texture" id=22]
 
-[sub_resource type="DynamicFont" id=35]
+[sub_resource type="DynamicFont" id=1]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="DynamicFont" id=36]
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="DynamicFont" id=4]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=37]
+[sub_resource type="DynamicFont" id=5]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="ConvexPolygonShape2D" id=70]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 29.3001, -29.0451, 32.0455, -29.1104, 32.0455, 29.4983, 29.3883, 29.3417 )
 
-[sub_resource type="ConvexPolygonShape2D" id=71]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 11.6734, -12.6112, 13.0492, -12.6112, 13.0551, 31.3148, 11.6734, 31.3148 )
 
-[sub_resource type="ConvexPolygonShape2D" id=72]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 14.6669, -16.244, 16.1347, -16.244, 16.1567, 23.4772, 14.6806, 23.5538 )
 
-[sub_resource type="ConvexPolygonShape2D" id=73]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 16.1409, -16.4944, 16.1634, 17.3008, 14.2305, 17.3008, 14.2529, -16.4924 )
 
-[sub_resource type="ConvexPolygonShape2D" id=74]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 28.1845, -30.3704, 32.792, -30.3932, 32.792, 31.9271, 28.1506, 31.8851 )
 
-[sub_resource type="ConvexPolygonShape2D" id=75]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 14.941, -20.6928, 16.6701, -20.6928, 16.6701, 18.663, 14.941, 18.663 )
 
-[sub_resource type="ConvexPolygonShape2D" id=76]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 15.0439, -17.8645, 16.8933, -17.8645, 16.8933, 21.8708, 15.0439, 21.8708 )
 
-[sub_resource type="ConvexPolygonShape2D" id=77]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 14.5831, -16.9756, 16.1247, -16.9756, 16.1247, 16.8683, 14.5831, 16.8683 )
 
-[sub_resource type="ConvexPolygonShape2D" id=78]
+[sub_resource type="ConvexPolygonShape2D" id=14]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 29.3091, -31.747, 93.9413, -31.5991, 93.9413, -25.7346, 29.3109, -25.6854 )
 
-[sub_resource type="ConvexPolygonShape2D" id=79]
+[sub_resource type="ConvexPolygonShape2D" id=15]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 17.6844, 14.4911, 3.70555, 14.6178, 3.70555, 6.76231, 17.6844, 6.76231 )
 
-[sub_resource type="ConvexPolygonShape2D" id=80]
+[sub_resource type="ConvexPolygonShape2D" id=16]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 4.48321, 6.69955, 18.3694, 6.69955, 18.3694, 16.1464, 4.48321, 16.1845 )
 
-[sub_resource type="ConvexPolygonShape2D" id=81]
+[sub_resource type="ConvexPolygonShape2D" id=17]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 14.4566, 33.35, 24.5863, 33.35, 24.5863, 35.8117, 14.4566, 35.8117 )
 
-[sub_resource type="ConvexPolygonShape2D" id=82]
+[sub_resource type="ConvexPolygonShape2D" id=18]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 29.7273, -32.6177, 92.4126, -32.7057, 92.5756, -25.6067, 29.5567, -25.4692 )
 
-[sub_resource type="ConvexPolygonShape2D" id=83]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 20.0623, 15.1466, 5.92773, 15.1611, 5.92773, 6.61972, 20.0659, 6.6795 )
 
-[sub_resource type="ConvexPolygonShape2D" id=84]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 4.27751, 5.7673, 18.1652, 5.7673, 18.1652, 15.3157, 4.27751, 15.5327 )
 
-[sub_resource type="ConvexPolygonShape2D" id=85]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 10.5831, 39.6392, 20.6555, 39.6392, 20.6555, 42.4865, 10.5831, 42.453 )
 
-[sub_resource type="ConvexPolygonShape2D" id=86]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32.7584, -51.4543, 32.7584, -47.6596, 31.0768, -51.4543 )
 
-[sub_resource type="ConvexPolygonShape2D" id=87]
+[sub_resource type="ConvexPolygonShape2D" id=23]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 6.51396, 32.5878, 6.55466, 23.1854, 8.2644, 32.5878 )
 
-[sub_resource type="ConvexPolygonShape2D" id=88]
+[sub_resource type="ConvexPolygonShape2D" id=24]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 13.6596, -3.0365, 15.2714, -3.03649, 15.2714, 6.56019 )
 
-[sub_resource type="ConvexPolygonShape2D" id=89]
+[sub_resource type="ConvexPolygonShape2D" id=25]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 19.2338, 33.3435, 21.3129, 33.3435, 21.3129, 36.878 )
 
-[sub_resource type="ConvexPolygonShape2D" id=58]
+[sub_resource type="ConvexPolygonShape2D" id=26]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 43.2526, -50.7771, 41.2346, -46.9824, 41.2652, -50.7771 )
 
-[sub_resource type="ConvexPolygonShape2D" id=59]
+[sub_resource type="ConvexPolygonShape2D" id=27]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 5.37943, 47.6518, 5.37943, 36.4105, 7.47684, 47.6518 )
 
-[sub_resource type="ConvexPolygonShape2D" id=60]
+[sub_resource type="ConvexPolygonShape2D" id=28]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 13.8495, 4.85916, 17.0691, 4.81851, 17.0691, 18.1901 )
 
-[sub_resource type="ConvexPolygonShape2D" id=61]
+[sub_resource type="ConvexPolygonShape2D" id=29]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 21.3736, 33.8901, 23.6733, 33.8901, 23.6733, 36.7177 )
 
-[sub_resource type="ConvexPolygonShape2D" id=90]
+[sub_resource type="ConvexPolygonShape2D" id=30]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 41.9782, -48.8508, 41.9849, -51.8649, 43.4165, -51.8439 )
 
-[sub_resource type="ConvexPolygonShape2D" id=91]
+[sub_resource type="ConvexPolygonShape2D" id=31]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 5.35615, 29.4178, 5.35615, 21.8474, 6.4672, 29.4178 )
 
-[sub_resource type="ConvexPolygonShape2D" id=92]
+[sub_resource type="ConvexPolygonShape2D" id=32]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 15.2731, 1.22087, 17.0689, 1.22087, 17.0689, 10.3624 )
 
-[sub_resource type="ConvexPolygonShape2D" id=93]
+[sub_resource type="ConvexPolygonShape2D" id=33]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 26.1012, 34.6256, 28.2043, 34.6256, 28.2323, 37.5741 )
 
-[sub_resource type="ConvexPolygonShape2D" id=94]
+[sub_resource type="ConvexPolygonShape2D" id=34]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 41.9755, -51.1417, 40.9036, -48.1917, 40.8955, -51.1378 )
 
-[sub_resource type="ConvexPolygonShape2D" id=95]
+[sub_resource type="ConvexPolygonShape2D" id=35]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 5.36613, 42.3024, 5.36613, 34.0321, 6.47491, 42.3024 )
 
-[sub_resource type="ConvexPolygonShape2D" id=96]
+[sub_resource type="ConvexPolygonShape2D" id=36]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 17.8467, 2.3591, 19.9156, 2.3591, 19.9156, 11.0244 )
 
-[sub_resource type="ConvexPolygonShape2D" id=97]
+[sub_resource type="ConvexPolygonShape2D" id=37]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 19.1079, 36.0479, 20.5698, 36.0479, 20.5698, 38.4547 )
 
-[sub_resource type="DynamicFont" id=98]
+[sub_resource type="DynamicFont" id=38]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=99]
+[sub_resource type="DynamicFont" id=39]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=101]
+[sub_resource type="DynamicFont" id=40]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=100]
+[sub_resource type="DynamicFont" id=41]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=102]
+[sub_resource type="DynamicFont" id=42]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=103]
+[sub_resource type="DynamicFont" id=43]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=104]
+[sub_resource type="DynamicFont" id=44]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=105]
+[sub_resource type="DynamicFont" id=45]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=106]
+[sub_resource type="DynamicFont" id=46]
 
 font/size = 45
 font/use_mipmaps = false
@@ -337,7 +337,7 @@ margin/left = -6.0
 margin/top = 9.0
 margin/right = 66.0
 margin/bottom = 58.0
-custom_fonts/normal_font = SubResource( 35 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "000"
@@ -356,7 +356,7 @@ visibility/visible = false
 transform/pos = Vector2( 16.3205, 6.98175 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -379,7 +379,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -395,7 +395,7 @@ visibility/visible = false
 transform/pos = Vector2( 26.8285, -11.3575 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -418,7 +418,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -434,7 +434,7 @@ visibility/visible = false
 transform/pos = Vector2( 27.2063, 9.52879 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -457,7 +457,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -473,7 +473,7 @@ visibility/visible = false
 transform/pos = Vector2( 17.764, 24.344 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -496,7 +496,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -512,7 +512,7 @@ visibility/visible = false
 transform/pos = Vector2( -27.5089, -0.404003 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -535,7 +535,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -551,7 +551,7 @@ visibility/visible = false
 transform/pos = Vector2( 2.56046, -19.4237 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -574,7 +574,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -590,7 +590,7 @@ visibility/visible = false
 transform/pos = Vector2( 6.60383, 3.62276 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -613,7 +613,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -629,7 +629,7 @@ visibility/visible = false
 transform/pos = Vector2( -6.34295, -14.034 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -652,7 +652,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -668,7 +668,7 @@ visibility/visible = false
 transform/pos = Vector2( -28.3376, -13.9598 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -691,7 +691,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -707,7 +707,7 @@ visibility/visible = false
 transform/pos = Vector2( 26.7881, 19.5325 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -730,7 +730,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -746,7 +746,7 @@ visibility/visible = false
 transform/pos = Vector2( -7.10331, 24.2307 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -769,7 +769,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -785,7 +785,7 @@ visibility/visible = false
 transform/pos = Vector2( -28.0334, 22.6563 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -808,7 +808,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -824,7 +824,7 @@ visibility/visible = false
 transform/pos = Vector2( -18.1038, 25.5286 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -847,7 +847,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -863,7 +863,7 @@ visibility/visible = false
 transform/pos = Vector2( -27.8024, -24.553 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -886,7 +886,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -902,7 +902,7 @@ visibility/visible = false
 transform/pos = Vector2( -5.3758, -21.7167 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -925,7 +925,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -941,7 +941,7 @@ visibility/visible = false
 transform/pos = Vector2( -1.16527, -15.0031 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -964,7 +964,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -980,7 +980,7 @@ visibility/visible = false
 transform/pos = Vector2( 13.0696, -2.32979 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1003,7 +1003,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1019,7 +1019,7 @@ visibility/visible = false
 transform/pos = Vector2( -5.57275, 0.919338 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1042,7 +1042,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1058,7 +1058,7 @@ visibility/visible = false
 transform/pos = Vector2( 21.9321, 10.9212 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1081,7 +1081,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1097,7 +1097,7 @@ visibility/visible = false
 transform/pos = Vector2( 21.5944, 21.2425 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1120,7 +1120,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1136,7 +1136,7 @@ visibility/visible = false
 transform/pos = Vector2( -12.8818, 23.9787 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1159,7 +1159,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1175,7 +1175,7 @@ visibility/visible = false
 transform/pos = Vector2( -17.5007, -0.545834 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1198,7 +1198,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1214,7 +1214,7 @@ visibility/visible = false
 transform/pos = Vector2( -22.1592, -16.7406 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1237,7 +1237,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1253,7 +1253,7 @@ visibility/visible = false
 transform/pos = Vector2( -25.4868, -6.5186 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1276,7 +1276,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1292,7 +1292,7 @@ visibility/visible = false
 transform/pos = Vector2( -23.3419, 5.59431 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1315,7 +1315,7 @@ __meta__ = {
 
 transform/pos = Vector2( -3.09483, -4.16792 )
 transform/scale = Vector2( 1.23806, 1.58514 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1331,7 +1331,7 @@ visibility/visible = false
 transform/pos = Vector2( -20.4813, 3.37358 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1354,7 +1354,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1370,7 +1370,7 @@ visibility/visible = false
 transform/pos = Vector2( 26.1939, -23.4894 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1393,7 +1393,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1409,7 +1409,7 @@ visibility/visible = false
 transform/pos = Vector2( 7.10053, -3.67908 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1432,7 +1432,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1448,7 +1448,7 @@ visibility/visible = false
 transform/pos = Vector2( 22.2956, -13.9114 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1471,7 +1471,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1487,7 +1487,7 @@ visibility/visible = false
 transform/pos = Vector2( 1.8174, -13.3007 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1510,7 +1510,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1526,7 +1526,7 @@ visibility/visible = false
 transform/pos = Vector2( 16.0766, 14.6911 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1549,7 +1549,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1565,7 +1565,7 @@ visibility/visible = false
 transform/pos = Vector2( -14.6562, 2.14195 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1588,7 +1588,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1604,7 +1604,7 @@ visibility/visible = false
 transform/pos = Vector2( -28.175, 6.60139 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1627,7 +1627,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1643,7 +1643,7 @@ visibility/visible = false
 transform/pos = Vector2( -20.0356, -24.9151 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1666,7 +1666,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1682,7 +1682,7 @@ visibility/visible = false
 transform/pos = Vector2( 20.0332, -24.7978 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1705,7 +1705,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1721,7 +1721,7 @@ visibility/visible = false
 transform/pos = Vector2( 27.3611, -5.8319 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1744,7 +1744,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1760,7 +1760,7 @@ visibility/visible = false
 transform/pos = Vector2( 24.781, 0.983475 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1783,7 +1783,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1799,7 +1799,7 @@ visibility/visible = false
 transform/pos = Vector2( 18.7995, -1.44569 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1822,7 +1822,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1838,7 +1838,7 @@ visibility/visible = false
 transform/pos = Vector2( 6.87793, 24.7633 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1861,7 +1861,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1877,7 +1877,7 @@ visibility/visible = false
 transform/pos = Vector2( 1.89082, 24.3516 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1900,7 +1900,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1916,7 +1916,7 @@ visibility/visible = false
 transform/pos = Vector2( -13.0449, 16.1124 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1939,7 +1939,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1955,7 +1955,7 @@ visibility/visible = false
 transform/pos = Vector2( -19.9467, 13.6165 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1978,7 +1978,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1994,7 +1994,7 @@ visibility/visible = false
 transform/pos = Vector2( -3.02204, 23.5307 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2017,7 +2017,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2033,7 +2033,7 @@ visibility/visible = false
 transform/pos = Vector2( 11.3978, 7.03374 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2056,7 +2056,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2072,7 +2072,7 @@ visibility/visible = false
 transform/pos = Vector2( -2.00679, -22.2061 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2095,7 +2095,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2111,7 +2111,7 @@ visibility/visible = false
 transform/pos = Vector2( 13.9092, -24.1715 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2134,7 +2134,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2150,7 +2150,7 @@ visibility/visible = false
 transform/pos = Vector2( 5.88521, -22.1558 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2173,7 +2173,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2189,7 +2189,7 @@ visibility/visible = false
 transform/pos = Vector2( 13.4496, 23.1827 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2212,7 +2212,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2228,7 +2228,7 @@ visibility/visible = false
 transform/pos = Vector2( -22.3691, -4.74664 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2251,7 +2251,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2267,7 +2267,7 @@ visibility/visible = false
 transform/pos = Vector2( -23.3692, 20.1528 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2290,7 +2290,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2306,7 +2306,7 @@ visibility/visible = false
 transform/pos = Vector2( -12.2005, 7.33861 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2329,7 +2329,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2345,7 +2345,7 @@ visibility/visible = false
 transform/pos = Vector2( -3.93722, -6.79087 )
 transform/scale = Vector2( 0.052938, 0.0828079 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2368,7 +2368,7 @@ __meta__ = {
 
 transform/pos = Vector2( 6.90341, -7.21846 )
 transform/scale = Vector2( 2.14142, 2.70253 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2418,7 +2418,7 @@ margin/left = -57.0
 margin/top = -93.0
 margin/right = 86.0
 margin/bottom = -34.0
-custom_fonts/normal_font = SubResource( 36 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Points"
@@ -2439,7 +2439,7 @@ margin/left = -66.0
 margin/top = -21.0
 margin/right = 21.0
 margin/bottom = 121.0
-custom_fonts/normal_font = SubResource( 37 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -2460,7 +2460,7 @@ margin/left = -19.0
 margin/top = -20.0
 margin/right = 71.0
 margin/bottom = 200.0
-custom_fonts/normal_font = SubResource( 37 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -2481,7 +2481,7 @@ margin/left = 30.0
 margin/top = -21.0
 margin/right = 114.0
 margin/bottom = 153.0
-custom_fonts/normal_font = SubResource( 37 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -2502,16 +2502,16 @@ transform/scale = Vector2( 0.0554587, 0.10134 )
 
 editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 70 )
+shapes/0/shape = SubResource( 6 )
 shapes/0/transform = Matrix32( 0.739589, 0, 0, 1.07616, 8.80436, -0.484108 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 71 )
+shapes/1/shape = SubResource( 7 )
 shapes/1/transform = Matrix32( 0.84084, 0, 0, 0.187964, -17.332, 9.97706 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 72 )
+shapes/2/shape = SubResource( 8 )
 shapes/2/transform = Matrix32( 0.831164, 0, 0, 0.305964, -31.0177, -16.8329 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 73 )
+shapes/3/shape = SubResource( 9 )
 shapes/3/transform = Matrix32( 0.896022, 0, 0, 0.245715, -6.87244, -15.8449 )
 shapes/3/trigger = false
 collision/layers = 1
@@ -2579,16 +2579,16 @@ __meta__ = {
 editor/display_folded = true
 transform/pos = Vector2( 0, -0.0968113 )
 input/pickable = true
-shapes/0/shape = SubResource( 74 )
+shapes/0/shape = SubResource( 10 )
 shapes/0/transform = Matrix32( 0.312477, 0, 0, 1.02458, -40.9238, -0.854475 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 75 )
+shapes/1/shape = SubResource( 11 )
 shapes/1/transform = Matrix32( 0.895534, 0, 0, 0.213878, -13.2928, 11.9885 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 76 )
+shapes/2/shape = SubResource( 12 )
 shapes/2/transform = Matrix32( 0.66405, 0, 0, 0.304918, -23.1771, -16.1919 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 77 )
+shapes/3/shape = SubResource( 13 )
 shapes/3/transform = Matrix32( 1.16925, 0, 0, 0.242903, -3.84784, -15.6908 )
 shapes/3/trigger = false
 collision/layers = 1
@@ -2655,16 +2655,16 @@ __meta__ = {
 
 editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 78 )
+shapes/0/shape = SubResource( 14 )
 shapes/0/transform = Matrix32( 1, 0, 0, 0.549699, -61.6196, -14.3052 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 79 )
+shapes/1/shape = SubResource( 15 )
 shapes/1/transform = Matrix32( 0.660253, 0, 0, 0.301934, -10.0269, 11.3973 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 80 )
+shapes/2/shape = SubResource( 16 )
 shapes/2/transform = Matrix32( 0.499719, 0, 0, 0.235943, -21.0698, -13.5149 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 81 )
+shapes/3/shape = SubResource( 17 )
 shapes/3/transform = Matrix32( 0.904635, 0, 0, 1.16185, -7.25606, -53.239 )
 shapes/3/trigger = false
 collision/layers = 1
@@ -2731,16 +2731,16 @@ __meta__ = {
 
 editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 82 )
+shapes/0/shape = SubResource( 18 )
 shapes/0/transform = Matrix32( 1.03193, 0, 0, 0.541215, -62.8247, 45.6202 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 83 )
+shapes/1/shape = SubResource( 19 )
 shapes/1/transform = Matrix32( 0.647474, 0, 0, 0.272408, -11.3425, 5.73495 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 84 )
+shapes/2/shape = SubResource( 20 )
 shapes/2/transform = Matrix32( 0.500493, 0, 0, 0.244988, -20.938, -23.2622 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 85 )
+shapes/3/shape = SubResource( 21 )
 shapes/3/transform = Matrix32( 0.912326, 0, 0, 1.16946, -3.83193, -66.1934 )
 shapes/3/trigger = false
 collision/layers = 1
@@ -2808,16 +2808,16 @@ __meta__ = {
 
 editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 86 )
+shapes/0/shape = SubResource( 22 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1.02458, -63.3595, 80.584 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 87 )
+shapes/1/shape = SubResource( 23 )
 shapes/1/transform = Matrix32( -0.922138, 0, 0, -0.243946, 7.67141, 15.4766 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 88 )
+shapes/2/shape = SubResource( 24 )
 shapes/2/transform = Matrix32( 0.833502, 0, 0, 0.248933, -24.6692, -21.0772 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 89 )
+shapes/3/shape = SubResource( 25 )
 shapes/3/transform = Matrix32( 0.950369, 0, 0, 1.02679, -5.21555, -54.1007 )
 shapes/3/trigger = false
 collision/layers = 1
@@ -2885,16 +2885,16 @@ __meta__ = {
 
 editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 58 )
+shapes/0/shape = SubResource( 26 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1.02458, -10.7033, 79.8902 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 59 )
+shapes/1/shape = SubResource( 27 )
 shapes/1/transform = Matrix32( 0.96623, 0, 0, -0.243946, -12.6873, 19.1609 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 60 )
+shapes/2/shape = SubResource( 28 )
 shapes/2/transform = Matrix32( -0.616403, 0, 0, 0.257812, -8.15877, -23.0185 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 61 )
+shapes/3/shape = SubResource( 29 )
 shapes/3/transform = Matrix32( -0.864196, 0, 0, 1.16394, 26.34, -59.2695 )
 shapes/3/trigger = false
 collision/layers = 1
@@ -2962,16 +2962,16 @@ __meta__ = {
 
 editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 90 )
+shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.36435, 0, 0, -1.17312, -26.8755, -89.1789 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 91 )
+shapes/1/shape = SubResource( 31 )
 shapes/1/transform = Matrix32( 1.12489, 0, 0, 0.274435, -13.5684, 7.69736 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 92 )
+shapes/2/shape = SubResource( 32 )
 shapes/2/transform = Matrix32( -0.735297, 0, 0, -0.243614, -6.27049, -9.36475 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 93 )
+shapes/3/shape = SubResource( 33 )
 shapes/3/transform = Matrix32( -0.843166, 0, 0, -0.993174, 29.6772, 22.7169 )
 shapes/3/trigger = false
 collision/layers = 1
@@ -3039,16 +3039,16 @@ __meta__ = {
 
 editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 94 )
+shapes/0/shape = SubResource( 34 )
 shapes/0/transform = Matrix32( -1.35728, 0, 0, -1.20866, 24.8351, -90.1662 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 95 )
+shapes/1/shape = SubResource( 35 )
 shapes/1/transform = Matrix32( -1.46092, 0, 0, 0.269131, 9.4755, 4.43183 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 96 )
+shapes/2/shape = SubResource( 36 )
 shapes/2/transform = Matrix32( 0.606911, 0, 0, -0.271557, -24.027, -9.13491 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 97 )
+shapes/3/shape = SubResource( 37 )
 shapes/3/transform = Matrix32( 1.26826, 0, 0, -1.24946, -11.0974, 33.3518 )
 shapes/3/trigger = false
 collision/layers = 1
@@ -3256,7 +3256,7 @@ margin/left = -17.0
 margin/top = -19.0
 margin/right = 118.0
 margin/bottom = 30.0
-custom_fonts/normal_font = SubResource( 98 )
+custom_fonts/normal_font = SubResource( 38 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sound"
@@ -3296,7 +3296,7 @@ margin/left = -21.0
 margin/top = -9.0
 margin/right = 286.0
 margin/bottom = 38.0
-custom_fonts/font = SubResource( 99 )
+custom_fonts/font = SubResource( 39 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
@@ -3316,7 +3316,7 @@ margin/left = -21.0
 margin/top = -1.0
 margin/right = 302.0
 margin/bottom = 46.0
-custom_fonts/font = SubResource( 99 )
+custom_fonts/font = SubResource( 39 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
@@ -3336,7 +3336,7 @@ margin/left = -21.0
 margin/top = 7.0
 margin/right = 376.0
 margin/bottom = 54.0
-custom_fonts/font = SubResource( 99 )
+custom_fonts/font = SubResource( 39 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
@@ -3368,7 +3368,7 @@ margin/left = -10.0
 margin/top = -15.0
 margin/right = 290.0
 margin/bottom = 198.0
-custom_fonts/normal_font = SubResource( 101 )
+custom_fonts/normal_font = SubResource( 40 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to go back to the village?"
@@ -3392,7 +3392,7 @@ margin/left = 2.0
 margin/top = 2.0
 margin/right = 76.0
 margin/bottom = 49.0
-custom_fonts/font = SubResource( 100 )
+custom_fonts/font = SubResource( 41 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
@@ -3418,7 +3418,7 @@ margin/left = -8.0
 margin/top = 2.0
 margin/right = 46.0
 margin/bottom = 49.0
-custom_fonts/font = SubResource( 100 )
+custom_fonts/font = SubResource( 41 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
@@ -3451,7 +3451,7 @@ margin/left = -23.0
 margin/top = -10.0
 margin/right = 281.0
 margin/bottom = 206.0
-custom_fonts/normal_font = SubResource( 102 )
+custom_fonts/normal_font = SubResource( 42 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to go to the main menu?"
@@ -3475,7 +3475,7 @@ margin/left = -10.0
 margin/top = 7.0
 margin/right = 64.0
 margin/bottom = 54.0
-custom_fonts/font = SubResource( 103 )
+custom_fonts/font = SubResource( 43 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
@@ -3501,7 +3501,7 @@ margin/left = -21.0
 margin/top = 7.0
 margin/right = 33.0
 margin/bottom = 54.0
-custom_fonts/font = SubResource( 103 )
+custom_fonts/font = SubResource( 43 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
@@ -3592,7 +3592,7 @@ margin/left = -57.0
 margin/top = 24.0
 margin/right = 88.0
 margin/bottom = 82.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "ghostie"
@@ -3616,7 +3616,7 @@ margin/left = -32.0
 margin/top = -63.0
 margin/right = 43.0
 margin/bottom = -19.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "you"
@@ -3640,7 +3640,7 @@ margin/left = -130.0
 margin/top = -62.0
 margin/right = 191.0
 margin/bottom = -4.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Click Pixel for help!"
@@ -3666,7 +3666,7 @@ margin/left = 17.0
 margin/top = 139.0
 margin/right = 378.0
 margin/bottom = 233.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Seconds left in the day"
@@ -3691,7 +3691,7 @@ margin/left = 17.0
 margin/top = 34.0
 margin/right = 162.0
 margin/bottom = 90.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "points"
@@ -3717,7 +3717,7 @@ margin/left = 21.0
 margin/top = -83.0
 margin/right = 120.0
 margin/bottom = -26.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "left"
@@ -3743,7 +3743,7 @@ margin/left = 137.0
 margin/top = -765.0
 margin/right = 969.0
 margin/bottom = -548.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "This is your customer, and they will give you an idea of how business is going in the arcade. Look out for a sparkly money bag during the minigame, it means you have a happy customer in the arcade."
@@ -3768,7 +3768,7 @@ margin/left = 21.0
 margin/top = 36.0
 margin/right = 120.0
 margin/bottom = 93.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "right"
@@ -3791,7 +3791,7 @@ margin/left = -41.0
 margin/top = 25.0
 margin/right = 58.0
 margin/bottom = 82.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "down"
@@ -3815,7 +3815,7 @@ margin/left = -20.0
 margin/top = -72.0
 margin/right = 79.0
 margin/bottom = -15.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "up"
@@ -3833,7 +3833,7 @@ margin/left = -27.0
 margin/top = -15.0
 margin/right = 133.0
 margin/bottom = 45.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Movement"
@@ -3851,7 +3851,7 @@ margin/left = 8.0
 margin/top = -27.0
 margin/right = 451.0
 margin/bottom = 286.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "The rules are simple:
@@ -3871,7 +3871,7 @@ margin/left = 3.0
 margin/top = 2.0
 margin/right = 527.0
 margin/bottom = 315.0
-custom_fonts/normal_font = SubResource( 104 )
+custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Welcome to Yellow Eating Dot!"
@@ -3910,7 +3910,7 @@ margin/left = 24.0
 margin/top = -19.0
 margin/right = 67.0
 margin/bottom = 21.0
-custom_fonts/font = SubResource( 105 )
+custom_fonts/font = SubResource( 45 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -3933,7 +3933,7 @@ margin/left = -11.0
 margin/top = -21.0
 margin/right = 27.0
 margin/bottom = 23.0
-custom_fonts/normal_font = SubResource( 106 )
+custom_fonts/normal_font = SubResource( 46 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "3"

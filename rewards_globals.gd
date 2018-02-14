@@ -70,25 +70,25 @@ func _process(delta):
 	if fifty_days_unlocked == false and fifty_business_days > 50:
 		fifty_days_unlocked = true
 		unseen += 1
-	if customer_math.hollyhock_player_marketshare >= 1 and hundred_per_hollyhock == false:
+	if int(arcade_day.playershare) >= 1 and hundred_per_hollyhock == false:
 		hundred_per_hollyhock = true
 		total_player_satisfaction.append(0)
-	if customer_math.fiyork_player_marketshare >= 1 and hundred_per_fiyork == false:
+	if arcade_day.playershare >= 1 and hundred_per_fiyork == false:
 		hundred_per_fiyork = true
 		total_player_satisfaction.append(0)
-	if customer_math.untilly_player_marketshare >= 1 and hundred_per_untilly == false:
+	if arcade_day.playershare >= 1 and hundred_per_untilly == false:
 		hundred_per_untilly = true
 		total_player_satisfaction.append(0)
-	if customer_math.plansey_player_marketshare >= 1 and hundred_per_plansey == false:
+	if arcade_day.playershare >= 1 and hundred_per_plansey == false:
 		hundred_per_plansey = true
 		total_player_satisfaction.append(0)
-	if customer_math.windrow_player_marketshare >= 1 and hundred_per_windrow == false:
+	if arcade_day.playershare >= 1 and hundred_per_windrow == false:
 		hundred_per_windrow = true
 		total_player_satisfaction.append(0)
-	if customer_math.banlon_player_marketshare >= 1 and hundred_per_banlon == false:
+	if arcade_day.playershare >= 1 and hundred_per_banlon == false:
 		hundred_per_banlon = true
 		total_player_satisfaction.append(0)
-	if customer_math.slatten_player_marketshare >= 1 and hundred_per_slatten == false:
+	if arcade_day.playershare >= 1 and hundred_per_slatten == false:
 		hundred_per_slatten = true
 		total_player_satisfaction.append(0)
 		

@@ -11,12 +11,14 @@ func _process(delta):
 func _on_AnimationPlayer_finished():
 	var current_animation = get_node("AnimationPlayer").get_current_animation()
 	if current_animation == "pixel" or current_animation == "sam":
-		towns.town_select = "slatten"
+		global.town_select = "slatten"
+		global.level_reset()
 		get_tree().change_scene("res://strategy.tscn")
 
 
 func _on_skip_button_button_down():
-	towns.town_select = "slatten"
+	global.town_select = "slatten"
+	global.level_reset()
 	get_tree().change_scene("res://strategy.tscn")
 
 

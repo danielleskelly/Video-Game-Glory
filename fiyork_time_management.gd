@@ -31,14 +31,14 @@ const BULLET_SPEED = 500
 
 
 func _ready():
-	if customer_globals.sales_made != 0:
-		var time = 120/customer_globals.sales_made
+	if global.sales_made != 0:
+		var time = 120/global.sales_made
 		get_node("customer_display/customer").set_wait_time(time)
 		get_node("customer_display/customer").start()
 	else:
 		pass
-	if tutorial.fiyork_tutorial == false:
-		tutorial.fiyork_tutorial = true
+	if global.fiyork_tutorial == false:
+		global.fiyork_tutorial = true
 		get_node("tutorial").show()
 		get_tree().set_pause(true)
 	else:
@@ -207,40 +207,8 @@ func point_display():
 		ones.add_text(str(one_ones_digit))
 
 func _on_day_timer_timeout():
-	perk_check()
+	perks.perk_check()
 	get_tree().change_scene("res://strategy.tscn")
-
-
-func perk_check():
-	if (towns.town_select == "fiyork"):
-		if perks.success > rewards_globals.points_in_one_minigame:
-			rewards_globals.points_in_one_minigame = perks.success
-			rewards_globals.million_total_minigame_points += perks.success
-		if (int(perks.perk_goal) <= int(perks.success)):
-			if (perks.perk_num == 1):
-				supplies.fiyork_freezie_count = supplies.fiyork_freezie_count + 5
-				supplies.fiyork_pizza_count = supplies.fiyork_pizza_count + 5
-			elif (perks.perk_num == 2):
-				customer_math.fiyork_player_marketshare = int(customer_math.fiyork_player_marketshare) + .1
-			elif (perks.perk_num == 3):
-				money.fiyork_balance = money.fiyork_balance + 50
-			elif (perks.perk_num == 4):
-				supplies.fiyork_freezie_count = supplies.fiyork_freezie_count + 10
-				supplies.fiyork_pizza_count = supplies.fiyork_pizza_count + 10
-			elif (perks.perk_num == 5):
-				supplies.fiyork_freezie_count = supplies.fiyork_freezie_count + 20
-				supplies.fiyork_pizza_count = supplies.fiyork_pizza_count + 20
-			elif (perks.perk_num == 6):
-				money.fiyork_balance = money.fiyork_balance + 25
-			elif (perks.perk_num == 7):
-				fiyork.fiyork_arcade_sabatoge_key = false
-			elif (perks.perk_num == 8):
-				fiyork.fiyork_entertainment_sabatoge_key = false
-			elif (perks.perk_num == 9):
-				fiyork.fiyork_storefront_sabatoge_key = false
-			elif (perks.perk_num == 10):
-				fiyork.fiyork_advertising_sabatoge_key = false
-
 
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=1]
+[gd_scene load_steps=23 format=1]
 
 [ext_resource path="res://story_piece_two.gd" type="Script" id=1]
 [ext_resource path="res://pixel_front.png" type="Texture" id=2]
@@ -10,15 +10,14 @@
 [ext_resource path="res://chair.png" type="Texture" id=8]
 [ext_resource path="res://desk.png" type="Texture" id=9]
 [ext_resource path="res://computer.png" type="Texture" id=10]
-[ext_resource path="res://lamp.png" type="Texture" id=11]
-[ext_resource path="res://office.png" type="Texture" id=12]
-[ext_resource path="res://door.png" type="Texture" id=13]
-[ext_resource path="res://dialogue_box.png" type="Texture" id=14]
-[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=15]
-[ext_resource path="res://dialogue_box_two.png" type="Texture" id=16]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=17]
-[ext_resource path="res://music_icon_on.png" type="Texture" id=18]
-[ext_resource path="res://music_icon_off.png" type="Texture" id=19]
+[ext_resource path="res://office.png" type="Texture" id=11]
+[ext_resource path="res://door.png" type="Texture" id=12]
+[ext_resource path="res://dialogue_box.png" type="Texture" id=13]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://dialogue_box_two.png" type="Texture" id=15]
+[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=16]
+[ext_resource path="res://music_icon_on.png" type="Texture" id=17]
+[ext_resource path="res://music_icon_off.png" type="Texture" id=18]
 
 [sub_resource type="Animation" id=1]
 
@@ -253,21 +252,21 @@ tracks/21/keys = {
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 15 )
+font/font = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=3]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 15 )
+font/font = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=4]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 15 )
+font/font = ExtResource( 14 )
 
 [node name="story_piece_two" type="Node2D"]
 
@@ -296,25 +295,25 @@ texture = ExtResource( 4 )
 
 [node name="crtv" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( -3.3481, -500.739 )
+transform/pos = Vector2( 14.1786, -390.091 )
 transform/scale = Vector2( 2.80987, 1.32809 )
 texture = ExtResource( 5 )
 
 [node name="crtv1" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 26.9669, -149.233 )
+transform/pos = Vector2( 42.2312, -19.5261 )
 transform/scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
 [node name="crtv2" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 26.9669, -63.745 )
+transform/pos = Vector2( 42.2312, 65.9621 )
 transform/scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
 [node name="crtv3" type="Sprite" parent="strategy"]
 
-transform/pos = Vector2( 26.967, 315.792 )
+transform/pos = Vector2( 42.2314, 445.499 )
 transform/scale = Vector2( 2.80987, 1.64743 )
 texture = ExtResource( 5 )
 
@@ -355,15 +354,15 @@ flip_h = true
 
 [node name="computer" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( 1.45889, 10.5681 )
+transform/pos = Vector2( 2.81787, 6.92998 )
 transform/scale = Vector2( 0.0337077, 0.0503777 )
 texture = ExtResource( 10 )
 
 [node name="lamp" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -5.63167, 9.87837 )
-transform/scale = Vector2( 0.0103429, 0.0153723 )
-texture = ExtResource( 11 )
+transform/pos = Vector2( -5.65436, 10.7776 )
+transform/scale = Vector2( 0.0103429, 0.00899488 )
+texture = ExtResource( 10 )
 
 [node name="pixel" type="Node2D" parent="."]
 
@@ -378,6 +377,9 @@ __meta__ = {
 transform/pos = Vector2( 3.16718, 7.19054 )
 transform/scale = Vector2( 0.0654626, 0.105712 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="outside_office" type="Node2D" parent="."]
 
@@ -392,13 +394,13 @@ __meta__ = {
 
 transform/pos = Vector2( -0.193185, -0.990216 )
 transform/scale = Vector2( 0.0658585, 0.0660327 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="door" type="Sprite" parent="outside_office"]
 
 transform/pos = Vector2( -16.5636, -0.884731 )
 transform/scale = Vector2( 0.0589716, 0.0767605 )
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 flip_h = true
 
 [node name="speech_bubble" type="Node2D" parent="."]
@@ -413,7 +415,7 @@ __meta__ = {
 
 transform/pos = Vector2( -10.3762, 13.7967 )
 transform/scale = Vector2( 0.0271605, 0.0393754 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 flip_h = true
 flip_v = true
 
@@ -431,7 +433,7 @@ margin/bottom = 150.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "I've got nothing better to do."
+bbcode/bbcode = "Oh! Um... hi."
 visible_characters = -1
 percent_visible = 1.0
 __meta__ = {
@@ -440,6 +442,7 @@ __meta__ = {
 
 [node name="other_bubble" type="Node2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( -2.30912, -1.68264 )
 
 [node name="bubble" type="Sprite" parent="other_bubble"]
@@ -447,7 +450,7 @@ transform/pos = Vector2( -2.30912, -1.68264 )
 transform/pos = Vector2( 20.4304, 0.952179 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0439458, 0.0494063 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="speech" type="RichTextLabel" parent="other_bubble"]
 
@@ -463,13 +466,13 @@ margin/bottom = 340.0
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "We can complete a little training session while we wait for Sam."
+bbcode/bbcode = "I appreciate you taking this job on such short notice."
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 17 )
+stream/stream = ExtResource( 16 )
 stream/play = false
 stream/loop = true
 stream/volume_db = -10.0
@@ -514,8 +517,8 @@ toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 18 )
-textures/pressed = ExtResource( 19 )
+textures/normal = ExtResource( 17 )
+textures/pressed = ExtResource( 18 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.15 )
 params/stretch_mode = 0

@@ -25,14 +25,14 @@ var spaces
 var goal_choice
 
 func _ready():
-	if customer_globals.sales_made != 0:
-		var time = 120/customer_globals.sales_made
+	if global.sales_made != 0:
+		var time = 120/global.sales_made
 		get_node("customer_display/customer").set_wait_time(time)
 		get_node("customer_display/customer").start()
 	else:
 		pass
-	if tutorial.plansey_tutorial == false:
-		tutorial.plansey_tutorial = true
+	if global.plansey_tutorial == false:
+		global.plansey_tutorial = true
 		get_node("tutorial").show()
 		get_tree().set_pause(true)
 	else:
@@ -319,31 +319,9 @@ func check_board():
 		load_stuff()
 
 func _on_day_timer_timeout():
-	perk_check()
+	perks.perk_check()
 	get_tree().change_scene("res://strategy.tscn")
-	
 
-func perk_check():
-	if (towns.town_select == "plansey"):
-		if perks.success > rewards_globals.points_in_one_minigame:
-			rewards_globals.points_in_one_minigame = perks.success
-			rewards_globals.million_total_minigame_points += perks.success
-		if (int(perks.perk_goal) <= int(perks.success)):
-			if (perks.perk_num == 1):
-				supplies.plansey_energy_count = supplies.plansey_energy_count + 5
-				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 5
-			elif (perks.perk_num == 2):
-				customer_math.plansey_player_marketshare = int(customer_math.plansey_player_marketshare) + .1
-			elif (perks.perk_num == 3):
-				money.plansey_balance = money.plansey_balance + 50
-			elif (perks.perk_num == 4):
-				supplies.plansey_energy_count = supplies.plansey_energy_count + 10
-				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 10
-			elif (perks.perk_num == 5):
-				supplies.plansey_energy_count = supplies.plansey_energy_count + 20
-				supplies.plansey_nachos_count = supplies.plansey_nachos_count + 20
-			elif (perks.perk_num == 6):
-				money.plansey_balance = money.plansey_balance + 25
 
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)

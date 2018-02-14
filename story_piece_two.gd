@@ -14,12 +14,14 @@ func _process(delta):
 	get_node("mute_button").set_global_pos(Vector2(920, 526))
 
 func _on_AnimationPlayer_finished():
-	towns.town_select = "hollyhock"
+	global.town_select = "hollyhock"
+	global.level_reset()
 	get_tree().change_scene_to(strategy_node)
 
 
 func _on_skip_button_button_down():
-	towns.town_select = "hollyhock"
+	global.town_select = "hollyhock"
+	global.level_reset()
 	get_tree().change_scene("res://strategy.tscn")
 
 

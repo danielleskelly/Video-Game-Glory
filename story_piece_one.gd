@@ -12,6 +12,7 @@ func _process(delta):
 	pass
 
 func _on_skip_button_button_down():
+	global.level_reset()
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_mute_button_toggled( pressed ):
