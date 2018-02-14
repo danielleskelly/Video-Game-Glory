@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=1]
+[gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://story_piece_four.gd" type="Script" id=1]
 [ext_resource path="res://pixel_front.png" type="Texture" id=2]
@@ -10,15 +10,14 @@
 [ext_resource path="res://chair.png" type="Texture" id=8]
 [ext_resource path="res://desk.png" type="Texture" id=9]
 [ext_resource path="res://computer.png" type="Texture" id=10]
-[ext_resource path="res://lamp.png" type="Texture" id=11]
-[ext_resource path="res://dialogue_box.png" type="Texture" id=12]
-[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=13]
-[ext_resource path="res://dialogue_box_two.png" type="Texture" id=14]
-[ext_resource path="res://dialogue_box_three.png" type="Texture" id=15]
-[ext_resource path="res://sam_front.png" type="Texture" id=16]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=17]
-[ext_resource path="res://music_icon_on.png" type="Texture" id=18]
-[ext_resource path="res://music_icon_off.png" type="Texture" id=19]
+[ext_resource path="res://dialogue_box.png" type="Texture" id=11]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://dialogue_box_two.png" type="Texture" id=13]
+[ext_resource path="res://dialogue_box_three.png" type="Texture" id=14]
+[ext_resource path="res://sam_front.png" type="Texture" id=15]
+[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=16]
+[ext_resource path="res://music_icon_on.png" type="Texture" id=17]
+[ext_resource path="res://music_icon_off.png" type="Texture" id=18]
 
 [sub_resource type="Animation" id=1]
 
@@ -241,28 +240,28 @@ tracks/20/keys = {
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 13 )
+font/font = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=3]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 13 )
+font/font = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=4]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 13 )
+font/font = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=5]
 
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 13 )
+font/font = ExtResource( 12 )
 
 [node name="story_piece_four" type="Node2D"]
 
@@ -328,6 +327,9 @@ __meta__ = {
 transform/pos = Vector2( -2.60806, 0.649213 )
 transform/scale = Vector2( 0.0764102, 0.0664774 )
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="window" type="Sprite" parent="inner_office"]
 
@@ -351,8 +353,8 @@ __meta__ = {
 
 [node name="desk" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -0.438004, 18.1301 )
-transform/scale = Vector2( 0.0647611, 0.109688 )
+transform/pos = Vector2( -0.539115, 17.2174 )
+transform/scale = Vector2( 0.0652543, 0.100375 )
 texture = ExtResource( 9 )
 flip_h = true
 __meta__ = {
@@ -361,8 +363,8 @@ __meta__ = {
 
 [node name="computer" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( 1.45889, 10.5681 )
-transform/scale = Vector2( 0.033708, 0.050378 )
+transform/pos = Vector2( 4.87458, 2.06434 )
+transform/scale = Vector2( 0.03923, 0.0542756 )
 texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
@@ -370,9 +372,9 @@ __meta__ = {
 
 [node name="lamp" type="Sprite" parent="inner_office"]
 
-transform/pos = Vector2( -5.63167, 9.87837 )
-transform/scale = Vector2( 0.0103429, 0.0153723 )
-texture = ExtResource( 11 )
+transform/pos = Vector2( -7.00001, 6.23026 )
+transform/scale = Vector2( 0.013439, 0.0113117 )
+texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -381,6 +383,9 @@ __meta__ = {
 
 transform/pos = Vector2( -19.6193, 5.91246 )
 transform/scale = Vector2( 0.884005, 0.718394 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="left_arm" type="Sprite" parent="pixel"]
 
@@ -396,7 +401,7 @@ visibility/visible = false
 
 transform/pos = Vector2( -3.1458, 15.8502 )
 transform/scale = Vector2( 0.0327531, 0.0358287 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 flip_h = true
 flip_v = true
 
@@ -429,7 +434,7 @@ transform/scale = Vector2( 0.610145, 0.504589 )
 transform/pos = Vector2( -24.8845, 15.5264 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0404705, 0.0703228 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="yes" type="RichTextLabel" parent="other_bubble"]
 
@@ -453,13 +458,16 @@ percent_visible = 1.0
 
 transform/pos = Vector2( 17.7667, -11.6668 )
 transform/scale = Vector2( 0.641126, 0.524294 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bubble" type="Sprite" parent="other_other_bubble"]
 
 transform/pos = Vector2( -30.0204, 2.73623 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0446277, 0.0735933 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 flip_v = true
 
 [node name="yes" type="RichTextLabel" parent="other_other_bubble"]
@@ -489,14 +497,14 @@ transform/scale = Vector2( 0.264602, 0.251323 )
 
 transform/pos = Vector2( -17.4362, 2.07494 )
 transform/scale = Vector2( 0.268766, 0.329765 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 17 )
+stream/stream = ExtResource( 16 )
 stream/play = false
 stream/loop = true
 stream/volume_db = -10.0
@@ -541,8 +549,8 @@ toggle_mode = true
 click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 18 )
-textures/pressed = ExtResource( 19 )
+textures/normal = ExtResource( 17 )
+textures/pressed = ExtResource( 18 )
 params/resize_mode = 0
 params/scale = Vector2( 0.1, 0.15 )
 params/stretch_mode = 0

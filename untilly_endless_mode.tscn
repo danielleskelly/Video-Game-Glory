@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=16 format=1]
 
 [ext_resource path="res://untilly_endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://inner_box.png" type="Texture" id=2]
@@ -8,11 +8,25 @@
 [ext_resource path="res://pixel_crotch.png" type="Texture" id=6]
 [ext_resource path="res://pixel_torso.png" type="Texture" id=7]
 [ext_resource path="res://pixel.png" type="Texture" id=8]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=9]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://outer_box.png" type="Texture" id=10]
 [ext_resource path="res://untilly.ogg" type="AudioStream" id=11]
 [ext_resource path="res://error_box.png" type="Texture" id=12]
 [ext_resource path="res://button.png" type="Texture" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 9 )
 
 [node name="endless_mode" type="Node2D"]
 
@@ -1569,7 +1583,7 @@ margin/left = 163.0
 margin/top = 239.0
 margin/right = 254.0
 margin/bottom = 293.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "000"
@@ -1617,7 +1631,7 @@ margin/left = -52.0
 margin/top = -89.0
 margin/right = 88.0
 margin/bottom = -15.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Points"
@@ -1634,7 +1648,7 @@ margin/left = -58.0
 margin/top = 6.0
 margin/right = -20.0
 margin/bottom = 80.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "8"
@@ -1651,7 +1665,7 @@ margin/left = -12.0
 margin/top = 6.0
 margin/right = 26.0
 margin/bottom = 80.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "8"
@@ -1668,7 +1682,7 @@ margin/left = 34.0
 margin/top = 6.0
 margin/right = 72.0
 margin/bottom = 80.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "8"
@@ -1689,6 +1703,7 @@ stream/buffering_ms = 500
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
+visibility/visible = false
 transform/pos = Vector2( 188.156, 59.9559 )
 
 [node name="background" type="Sprite" parent="menu"]
@@ -1727,7 +1742,7 @@ margin/left = 256.0
 margin/top = 83.0
 margin/right = 391.0
 margin/bottom = 135.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sound"
@@ -1771,7 +1786,7 @@ margin/left = 191.0
 margin/top = 168.0
 margin/right = 507.0
 margin/bottom = 215.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1792,7 +1807,7 @@ margin/left = 191.0
 margin/top = 249.0
 margin/right = 523.0
 margin/bottom = 296.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1837,7 +1852,7 @@ margin/left = 358.0
 margin/top = 173.0
 margin/right = 712.0
 margin/bottom = 366.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to return to the village?"
@@ -1857,7 +1872,7 @@ margin/left = 562.0
 margin/top = 335.0
 margin/right = 659.0
 margin/bottom = 390.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1875,7 +1890,7 @@ margin/left = 381.0
 margin/top = 338.0
 margin/right = 478.0
 margin/bottom = 393.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1913,7 +1928,7 @@ margin/left = 416.0
 margin/top = 178.0
 margin/right = 607.0
 margin/bottom = 311.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "GAME OVER!"
@@ -1933,7 +1948,7 @@ margin/left = 585.0
 margin/top = 354.0
 margin/right = 628.0
 margin/bottom = 394.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0

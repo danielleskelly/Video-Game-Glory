@@ -9,67 +9,54 @@ var fiyork_array = []
 var windrow_array = []
 var slatten_array = []
 
-func _ready():
-	pass
 
 func perks():
 	success = 000
-	if (towns.town_select == "fiyork"):
-		if (fiyork.fiyork_arcade_sabatoge_key == true):
+	if (global.town_select == "fiyork"):
+		if (global.arcade_sabotage_key == true):
 			fiyork_array.append(7)
 			fiyork_array.append(7)
-		elif (fiyork.fiyork_arcade_sabatoge_key == false):
+		elif (global.arcade_sabotage_key == false):
 			pass
-		if (fiyork.fiyork_entertainment_sabatoge_key == true):
+		if (global.entertainment_sabotage_key == true):
 			fiyork_array.append(8)
 			fiyork_array.append(8)
-		elif (fiyork.fiyork_entertainment_sabatoge_key == false):
+		elif (global.entertainment_sabotage_key == false):
 			pass
-		if (fiyork.fiyork_storefront_sabatoge_key == true):
+		if (global.storefront_sabotage_key == true):
 			fiyork_array.append(9)
 			fiyork_array.append(9)
-		elif (fiyork.fiyork_storefront_sabatoge_key == false):
+		elif (global.storefront_sabotage_key == false):
 			pass
-		if (fiyork.fiyork_advertising_sabatoge_key == true):
-			fiyork_array.append(10)
-			fiyork_array.append(10)
-		elif (fiyork.fiyork_arcade_sabatoge_key == false):
-			pass
-		if (fiyork.fiyork_arcade_sabatoge_key == false) and (fiyork.fiyork_entertainment_sabatoge_key == false) and (fiyork.fiyork_storefront_sabatoge_key == false) and (fiyork.fiyork_advertising_sabatoge_key == false):
+		if (global.arcade_sabotage_key == false) and (global.entertainment_sabotage_key == false) and (global.storefront_sabotage_key == false):
 			fiyork_array = [1,2,3,4,5,6]
 		randomize()
 		perk_num = fiyork_array[randi() % fiyork_array.size()]
-	elif (towns.town_select == "windrow"):
-		if (windrow.windrow_arcade_sabatoge_key == true):
+	elif (global.town_select == "windrow"):
+		if (global.arcade_sabotage_key == true):
 			windrow_array.append(7)
 			windrow_array.append(7)
-		if (windrow.windrow_entertainment_sabatoge_key == true):
+		if (global.entertainment_sabotage_key == true):
 			windrow_array.append(8)
 			windrow_array.append(8)
-		if (windrow.windrow_storefront_sabatoge_key == true):
+		if (global.storefront_sabotage_key == true):
 			windrow_array.append(9)
 			windrow_array.append(9)
-		if (windrow.windrow_advertising_sabatoge_key == true):
-			windrow_array.append(10)
-			windrow_array.append(10)
-		elif (windrow.windrow_arcade_sabatoge_key == false) and (windrow.windrow_entertainment_sabatoge_key == false) and (windrow.windrow_storefront_sabatoge_key == false) and (windrow.windrow_advertising_sabatoge_key == false):
+		elif (global.arcade_sabotage_key == false) and (global.entertainment_sabotage_key == false) and (global.storefront_sabotage_key == false):
 			windrow_array = [1,2,3,4,5,6]
 		randomize()
 		perk_num = windrow_array[randi() % windrow_array.size()]
-	elif (towns.town_select == "slatten"):
-		if (slatten.slatten_arcade_sabatoge_key == true):
+	elif (global.town_select == "slatten"):
+		if (global.arcade_sabotage_key == true):
 			slatten_array.append(7)
 			slatten_array.append(7)
-		if (slatten.slatten_entertainment_sabatoge_key == true):
+		if (global.entertainment_sabotage_key == true):
 			slatten_array.append(8)
 			slatten_array.append(8)
-		if (slatten.slatten_storefront_sabatoge_key == true):
+		if (global.storefront_sabotage_key == true):
 			slatten_array.append(9)
 			slatten_array.append(9)
-		if (slatten.slatten_advertising_sabatoge_key == true):
-			slatten_array.append(10)
-			slatten_array.append(10)
-		elif (slatten.slatten_arcade_sabatoge_key == false) and (slatten.slatten_entertainment_sabatoge_key == false) and (slatten.slatten_storefront_sabatoge_key == false) and (slatten.slatten_advertising_sabatoge_key == false):
+		elif (global.arcade_sabotage_key == false) and (global.entertainment_sabotage_key == false) and (global.storefront_sabotage_key == false):
 			slatten_array = [1,2,3,4,5,6]
 		randomize()
 		perk_num = slatten_array[randi() % slatten_array.size()]
@@ -82,8 +69,8 @@ func perks():
 	
 func perk_assign():
 	if (perk_num == 1):
-		perk = "Five of each supply!"
-		perk_goal = 20
+		perk = "Random Free Upgrade"
+		perk_goal = 60
 	elif (perk_num == 2):
 		perk = "Free 10% player satisfaction!"
 		perk_goal = 60
@@ -91,23 +78,65 @@ func perk_assign():
 		perk = "$50"
 		perk_goal = 50
 	elif (perk_num == 4):
-		perk = "Ten of each supply!"
+		perk = "$50 Off Any Loans"
 		perk_goal = 40
 	elif (perk_num == 5):
-		perk = "20 of each supply!"
+		perk = "$100"
 		perk_goal = 80
 	elif (perk_num == 6):
 		perk = "$25"
-		perk_goal = 50
+		perk_goal = 25
 	elif (perk_num == 7):
-		perk = "Restore sabatoged arcade upgrades."
-		perk_goal = 50
+		perk = "Restore sabotaged arcade upgrades."
+		perk_goal = 40
 	elif (perk_num == 8):
-		perk = "Restore sabatoged entertainment upgrades."
-		perk_goal = 50
+		perk = "Restore sabotaged entertainment upgrades."
+		perk_goal = 40
 	elif (perk_num == 9):
-		perk = "Restore sabatoged storefront upgrades."
-		perk_goal = 50
-	elif (perk_num == 10):
-		perk = "Restore sabatoged advertising."
-		perk_goal = 50
+		perk = "Restore sabotaged storefront upgrades."
+		perk_goal = 40
+		
+func perk_check():
+	if perks.success > rewards_globals.points_in_one_minigame:
+		rewards_globals.points_in_one_minigame = perks.success
+		rewards_globals.million_total_minigame_points += perks.success
+	if (int(perks.perk_goal) <= int(perks.success)):
+			if (perks.perk_num == 1):
+				perk_one_fulfill()
+			elif (perks.perk_num == 2):
+				arcade_day.playershare = int(arcade_day.playershare) + .1
+			elif (perks.perk_num == 3):
+				global.cash += 50
+			elif (perks.perk_num == 4):
+				global.current_loan -= 50
+			elif (perks.perk_num == 5):
+				global.cash += 100
+			elif (perks.perk_num == 6):
+				global.cash += 25
+			elif (perks.perk_num == 7):
+				global.arcade_sabotage_key = false
+			elif (perks.perk_num == 8):
+				global.entertainment_sabotage_key = false
+			elif (perks.perk_num == 9):
+				global.storefront_sabotage_key = false
+
+				
+func perk_one_fulfill():
+	if global.arcade_good_key == false:
+		global.arcade_good_key = true
+	elif global.entertainment_good_key == false:
+		global.arcade_good_key = true
+	elif global.storefront_good_key == false:
+		global.storefront_good_key = true
+	elif global.arcade_great_key == false:
+		global.arcade_great_key = true
+	elif global.storefront_great_key == false:
+		global.storefront_great_key = true
+	elif global.entertainment_great_key == false:
+		global.entertainment_great_key = true
+	elif global.arcade_best_key == false:
+		global.arcade_best_key = true
+	elif global.entertainment_best_key == false:
+		global.entertainment_best_key = true
+	elif global.storefront_best_key == false:
+		global.storefront_best_key = true

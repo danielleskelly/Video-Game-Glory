@@ -120,7 +120,7 @@ func _process(delta):
 		get_node("three_min_jad/tooltip").set_tooltip("You are the best at Jump and Dodge! Good job!")
 	elif rewards_globals.three_min_jad < 180:
 		get_node("three_min_jad").set_texture(load("res://road_greyscale.png"))
-		get_node("three_min_jad/Sprite").set_texture(load("res://ship_greyscale.png"))
+		get_node("three_min_jad/Sprite").set_texture(load("res://sam_head_greyscale.png"))
 		get_node("three_min_jad/tooltip").set_tooltip("Jump and Dodge Current High Score " + str(rewards_globals.three_min_jad) + " / 180")
 	if rewards_globals.three_min_lo >= 180:
 		get_node("three_min_lo").set_texture(load("res://pixel.png"))

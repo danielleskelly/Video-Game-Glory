@@ -1,8 +1,8 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=29 format=1]
 
 [ext_resource path="res://fiyork_time_management.gd" type="Script" id=1]
 [ext_resource path="res://spaceship.scn" type="PackedScene" id=2]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://outer_box.png" type="Texture" id=4]
 [ext_resource path="res://inner_box.png" type="Texture" id=5]
 [ext_resource path="res://pixel_arm.png" type="Texture" id=6]
@@ -17,6 +17,83 @@
 [ext_resource path="res://ghostie_tag.png" type="Texture" id=15]
 [ext_resource path="res://shift.png" type="Texture" id=16]
 [ext_resource path="res://wasd.png" type="Texture" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=11]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 3 )
 
 [node name="time_management" type="Node2D"]
 
@@ -96,8 +173,8 @@ margin/left = 97.0
 margin/top = 430.0
 margin/right = 253.0
 margin/bottom = 486.0
-custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.498039, 0.94902, 0.0705882, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
 visible_characters = -1
@@ -105,7 +182,6 @@ percent_visible = 1.0
 
 [node name="success_background" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 127.595, 5.26128 )
 transform/scale = Vector2( 0.67839, 0.328205 )
 texture = ExtResource( 4 )
@@ -139,7 +215,7 @@ margin/left = -46.0
 margin/top = -92.0
 margin/right = 87.0
 margin/bottom = -36.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Points"
@@ -157,7 +233,7 @@ margin/left = -62.0
 margin/top = -8.0
 margin/right = -22.0
 margin/bottom = 63.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -175,7 +251,7 @@ margin/left = -17.0
 margin/top = -8.0
 margin/right = 18.0
 margin/bottom = 48.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -193,7 +269,7 @@ margin/left = 28.0
 margin/top = -9.0
 margin/right = 64.0
 margin/bottom = 44.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "0"
@@ -283,7 +359,6 @@ stream/buffering_ms = 500
 [node name="menu" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 
 [node name="background" type="Sprite" parent="menu"]
@@ -320,7 +395,7 @@ margin/left = 454.0
 margin/top = 76.0
 margin/right = 724.0
 margin/bottom = 146.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Sound"
@@ -358,7 +433,7 @@ margin/left = 379.0
 margin/top = 169.0
 margin/right = 695.0
 margin/bottom = 216.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -376,7 +451,7 @@ margin/left = 384.0
 margin/top = 242.0
 margin/right = 716.0
 margin/bottom = 289.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -394,7 +469,7 @@ margin/left = 352.0
 margin/top = 317.0
 margin/right = 686.0
 margin/bottom = 364.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -436,7 +511,7 @@ margin/left = 364.0
 margin/top = 138.0
 margin/right = 661.0
 margin/bottom = 269.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to go back to the village?"
@@ -456,7 +531,7 @@ margin/left = 550.0
 margin/top = 312.0
 margin/right = 644.0
 margin/bottom = 359.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -474,7 +549,7 @@ margin/left = 404.0
 margin/top = 312.0
 margin/right = 498.0
 margin/bottom = 359.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -516,7 +591,7 @@ margin/left = 375.0
 margin/top = 125.0
 margin/right = 672.0
 margin/bottom = 341.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Are you sure you want to go back to the main menu?"
@@ -536,7 +611,7 @@ margin/left = 559.0
 margin/top = 277.0
 margin/right = 653.0
 margin/bottom = 324.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -554,7 +629,7 @@ margin/left = 413.0
 margin/top = 277.0
 margin/right = 507.0
 margin/bottom = 324.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -650,7 +725,7 @@ margin/left = -32.0
 margin/top = -63.0
 margin/right = 43.0
 margin/bottom = -19.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "you"
@@ -676,7 +751,7 @@ margin/left = -19.0
 margin/top = 356.0
 margin/right = 367.0
 margin/bottom = 407.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Still click Pixel for help!"
@@ -703,7 +778,7 @@ margin/left = -18.0
 margin/top = -34.0
 margin/right = 343.0
 margin/bottom = 60.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Seconds left in the day"
@@ -728,7 +803,7 @@ margin/left = 17.0
 margin/top = 34.0
 margin/right = 173.0
 margin/bottom = 167.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "points moved to here"
@@ -755,7 +830,7 @@ margin/left = 21.0
 margin/top = -83.0
 margin/right = 120.0
 margin/bottom = -26.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "left"
@@ -781,7 +856,7 @@ margin/left = 90.0
 margin/top = -805.0
 margin/right = 922.0
 margin/bottom = -588.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "A lot of things will stay the same from minigame to minigame. This is still your customer, and it works exactly the same way to tell you how business is going."
@@ -807,7 +882,7 @@ margin/left = 21.0
 margin/top = 36.0
 margin/right = 120.0
 margin/bottom = 93.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "right"
@@ -833,7 +908,7 @@ margin/left = 21.0
 margin/top = 36.0
 margin/right = 120.0
 margin/bottom = 93.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "fire"
@@ -857,7 +932,7 @@ margin/left = -27.0
 margin/top = -15.0
 margin/right = 133.0
 margin/bottom = 45.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Movement"
@@ -875,7 +950,7 @@ margin/left = 8.0
 margin/top = -11.0
 margin/right = 451.0
 margin/bottom = 302.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "The rules are simple:
@@ -895,7 +970,7 @@ margin/left = -14.0
 margin/top = 8.0
 margin/right = 510.0
 margin/bottom = 321.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Welcome to Shoot That Rock!"
@@ -937,7 +1012,7 @@ margin/left = 24.0
 margin/top = -19.0
 margin/right = 67.0
 margin/bottom = 21.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -948,7 +1023,6 @@ underline = 2
 [node name="in" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 514.17, 258.175 )
 transform/scale = Vector2( 16.048, 9.58715 )
@@ -963,7 +1037,7 @@ margin/left = -11.0
 margin/top = -21.0
 margin/right = 27.0
 margin/bottom = 23.0
-custom_fonts/normal_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "3"
