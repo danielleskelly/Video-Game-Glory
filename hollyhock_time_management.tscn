@@ -3126,7 +3126,7 @@ transform/scale = Vector2( 0.030515, 0.0681183 )
 
 [node name="blue_ghostie1" parent="." instance=ExtResource( 11 )]
 
-transform/pos = Vector2( -17.1931, 5.97435 )
+transform/pos = Vector2( 25.9089, -9.43051 )
 transform/scale = Vector2( 0.030515, 0.0681183 )
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
@@ -3218,43 +3218,43 @@ __meta__ = {
 
 process/pause_mode = 2
 visibility/visible = false
-transform/pos = Vector2( 11.5831, 4.17375 )
+transform/pos = Vector2( 11.5831, 5.9054 )
 transform/scale = Vector2( 1.08517, 1.01932 )
 
 [node name="background" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -11.3306, -4.30554 )
-transform/scale = Vector2( 0.0630713, 0.130568 )
+transform/pos = Vector2( -11.0653, -5.63495 )
+transform/scale = Vector2( 0.0630713, 0.122483 )
 texture = ExtResource( 17 )
 
 [node name="button" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -11.3306, -7.17244 )
-transform/scale = Vector2( 0.102842, 0.0610348 )
+transform/pos = Vector2( -11.0652, -7.19806 )
+transform/scale = Vector2( 0.0865617, 0.0535254 )
 texture = ExtResource( 18 )
 
 [node name="button 2" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -11.0494, 1.18668 )
-transform/scale = Vector2( 0.110475, 0.0610349 )
+transform/pos = Vector2( -11.1587, -0.0804813 )
+transform/scale = Vector2( 0.0845717, 0.0550644 )
 texture = ExtResource( 18 )
 
 [node name="button 3" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( -11.3708, 9.41311 )
-transform/scale = Vector2( 0.106458, 0.0610349 )
+transform/pos = Vector2( -11.2142, 6.84755 )
+transform/scale = Vector2( 0.0991645, 0.0610349 )
 texture = ExtResource( 18 )
 
 [node name="notification" type="RichTextLabel" parent="menu"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -17.0
+margin/left = -15.0
 margin/top = -19.0
-margin/right = 118.0
+margin/right = 120.0
 margin/bottom = 30.0
 custom_fonts/normal_font = SubResource( 38 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
@@ -3292,9 +3292,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -21.0
+margin/left = -19.0
 margin/top = -9.0
-margin/right = 286.0
+margin/right = 195.0
 margin/bottom = 38.0
 custom_fonts/font = SubResource( 39 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -3302,7 +3302,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "Return to Game"
+text = "Back to Game"
 underline = 2
 
 [node name="return_to_village" type="LinkButton" parent="menu"]
@@ -3312,44 +3312,44 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -21.0
-margin/top = -1.0
-margin/right = 302.0
-margin/bottom = 46.0
+margin/left = -19.0
+margin/top = -2.0
+margin/right = 188.0
+margin/bottom = 45.0
 custom_fonts/font = SubResource( 39 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "Return to Village"
+text = "Go to Village"
 underline = 2
 
 [node name="return_to_main" type="LinkButton" parent="menu"]
 
-rect/scale = Vector2( 0.06, 0.1 )
+rect/scale = Vector2( 0.07, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -21.0
-margin/top = 7.0
-margin/right = 376.0
-margin/bottom = 54.0
+margin/left = -20.0
+margin/top = 5.0
+margin/right = 244.0
+margin/bottom = 52.0
 custom_fonts/font = SubResource( 39 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "Return to Main Menu"
+text = "Go to Main Menu"
 underline = 2
 
 [node name="are_you_sure" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
+transform/pos = Vector2( -0.867098, 7.8757 )
 
 [node name="background" type="Sprite" parent="are_you_sure"]
 
@@ -3377,21 +3377,21 @@ percent_visible = 1.0
 
 [node name="background2" type="Sprite" parent="are_you_sure"]
 
-transform/pos = Vector2( 5.48762, 3.57191 )
-transform/scale = Vector2( 0.0427519, 0.0587461 )
+transform/pos = Vector2( 5.56144, 3.57191 )
+transform/scale = Vector2( 0.0342556, 0.0587461 )
 texture = ExtResource( 18 )
 
 [node name="yes_village" type="LinkButton" parent="are_you_sure"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2.0
+margin/left = 3.0
 margin/top = 2.0
-margin/right = 76.0
-margin/bottom = 49.0
+margin/right = 77.0
+margin/bottom = 43.0
 custom_fonts/font = SubResource( 41 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3403,21 +3403,21 @@ underline = 2
 
 [node name="background1" type="Sprite" parent="are_you_sure"]
 
-transform/pos = Vector2( -5.62276, 3.57191 )
-transform/scale = Vector2( 0.0309759, 0.0553641 )
+transform/pos = Vector2( -5.32616, 3.57191 )
+transform/scale = Vector2( 0.0246643, 0.0553641 )
 texture = ExtResource( 18 )
 
 [node name="no_village" type="LinkButton" parent="are_you_sure"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -8.0
+margin/left = -7.0
 margin/top = 2.0
-margin/right = 46.0
-margin/bottom = 49.0
+margin/right = 44.0
+margin/bottom = 42.0
 custom_fonts/font = SubResource( 41 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3430,9 +3430,8 @@ underline = 2
 [node name="are_you_sure_2" type="Node2D" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 12.5952, -2.19837 )
+transform/pos = Vector2( 11.9009, 2.57871 )
 
 [node name="background" type="Sprite" parent="are_you_sure_2"]
 
@@ -3460,21 +3459,21 @@ percent_visible = 1.0
 
 [node name="background2" type="Sprite" parent="are_you_sure_2"]
 
-transform/pos = Vector2( -6.65643, 8.5367 )
-transform/scale = Vector2( 0.0423164, 0.0647372 )
+transform/pos = Vector2( -6.40552, 8.79333 )
+transform/scale = Vector2( 0.031443, 0.0596047 )
 texture = ExtResource( 18 )
 
 [node name="yes_main" type="LinkButton" parent="are_you_sure_2"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -10.0
+margin/left = -9.0
 margin/top = 7.0
-margin/right = 64.0
-margin/bottom = 54.0
+margin/right = 65.0
+margin/bottom = 51.0
 custom_fonts/font = SubResource( 43 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3486,21 +3485,21 @@ underline = 2
 
 [node name="background1" type="Sprite" parent="are_you_sure_2"]
 
-transform/pos = Vector2( -17.926, 8.46314 )
-transform/scale = Vector2( 0.0302896, 0.0573813 )
+transform/pos = Vector2( -18.2269, 8.6725 )
+transform/scale = Vector2( 0.0238846, 0.053194 )
 texture = ExtResource( 18 )
 
 [node name="no_main" type="LinkButton" parent="are_you_sure_2"]
 
-rect/scale = Vector2( 0.1, 0.1 )
+rect/scale = Vector2( 0.075, 0.1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -21.0
+margin/left = -20.0
 margin/top = 7.0
-margin/right = 33.0
-margin/bottom = 54.0
+margin/right = 29.0
+margin/bottom = 47.0
 custom_fonts/font = SubResource( 43 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -3575,10 +3574,13 @@ color/color = Color( 0.288992, 0.703125, 0.173035, 1 )
 
 process/pause_mode = 2
 visibility/visible = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite2" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( -3.37491, -18.1402 )
+transform/pos = Vector2( -2.25236, -17.9928 )
 transform/scale = Vector2( 0.0374524, 0.0683183 )
 texture = ExtResource( 21 )
 
@@ -3625,7 +3627,7 @@ percent_visible = 1.0
 
 [node name="Sprite5" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( -11.6298, -23.2493 )
+transform/pos = Vector2( -14.0813, -25.5117 )
 transform/scale = Vector2( 0.0374524, 0.0683183 )
 texture = ExtResource( 21 )
 flip_v = true
@@ -3636,10 +3638,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -130.0
-margin/top = -62.0
-margin/right = 191.0
-margin/bottom = -4.0
+margin/left = -321.0
+margin/top = -24.0
+margin/right = 0.0
+margin/bottom = 34.0
 custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
@@ -3649,7 +3651,7 @@ percent_visible = 1.0
 
 [node name="Sprite6" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( -19.9103, 15.8339 )
+transform/pos = Vector2( -11.6854, 11.4598 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0915925, 0.0764046 )
 texture = ExtResource( 21 )
@@ -3675,7 +3677,7 @@ percent_visible = 1.0
 
 [node name="Sprite4" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( 20.9745, -12.4668 )
+transform/pos = Vector2( 18.0183, -15.9199 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0745852, 0.0449206 )
 texture = ExtResource( 21 )
@@ -3700,7 +3702,7 @@ percent_visible = 1.0
 
 [node name="Sprite10" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( -27.8048, -1.68977 )
+transform/pos = Vector2( -27.8665, 3.70895 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0636586, 0.028042 )
 texture = ExtResource( 21 )
@@ -3726,7 +3728,7 @@ percent_visible = 1.0
 
 [node name="Sprite14" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( 24.7524, 23.7369 )
+transform/pos = Vector2( 25.2638, 22.1886 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0636586, 0.028042 )
 texture = ExtResource( 21 )
@@ -3739,10 +3741,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 137.0
-margin/top = -765.0
-margin/right = 969.0
-margin/bottom = -548.0
+margin/left = 35.0
+margin/top = -1162.0
+margin/right = 1221.0
+margin/bottom = -1016.0
 custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
@@ -3752,7 +3754,7 @@ percent_visible = 1.0
 
 [node name="Sprite11" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( -18.0804, -1.81723 )
+transform/pos = Vector2( -18.2038, 3.58149 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.0636586, 0.028042 )
 texture = ExtResource( 21 )
@@ -3777,7 +3779,7 @@ percent_visible = 1.0
 
 [node name="Sprite12" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( -22.9346, 1.66051 )
+transform/pos = Vector2( -23.1113, 6.91282 )
 transform/scale = Vector2( 0.0504109, 0.0422474 )
 texture = ExtResource( 21 )
 
@@ -3800,7 +3802,7 @@ percent_visible = 1.0
 
 [node name="Sprite13" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( -22.896, -8.40828 )
+transform/pos = Vector2( -23.2661, -3.41701 )
 transform/scale = Vector2( 0.0504109, 0.0422474 )
 texture = ExtResource( 21 )
 flip_v = true
@@ -3829,10 +3831,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
-margin/top = -15.0
-margin/right = 133.0
-margin/bottom = 45.0
+margin/left = -29.0
+margin/top = -9.0
+margin/right = 131.0
+margin/bottom = 51.0
 custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
@@ -3847,10 +3849,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 8.0
-margin/top = -27.0
-margin/right = 451.0
-margin/bottom = 286.0
+margin/left = 4.0
+margin/top = -2.0
+margin/right = 447.0
+margin/bottom = 311.0
 custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
@@ -3867,10 +3869,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 3.0
-margin/top = 2.0
-margin/right = 527.0
-margin/bottom = 315.0
+margin/left = 4.0
+margin/top = 7.0
+margin/right = 528.0
+margin/bottom = 320.0
 custom_fonts/normal_font = SubResource( 44 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
@@ -3880,19 +3882,19 @@ percent_visible = 1.0
 
 [node name="Sprite3" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( 26.19, -17.2923 )
+transform/pos = Vector2( 26.911, -24.3176 )
 transform/scale = Vector2( 0.0233709, 0.0450107 )
 texture = ExtResource( 18 )
 
 [node name="Sprite8" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( -23.2769, -12.5022 )
+transform/pos = Vector2( -24.7573, -6.89975 )
 transform/scale = Vector2( 0.0612173, 0.00208607 )
 texture = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( -22.969, -3.32461 )
+transform/pos = Vector2( -23.1274, 2.08791 )
 transform/scale = Vector2( 0.0168183, 0.0253723 )
 texture = ExtResource( 22 )
 __meta__ = {
@@ -3906,10 +3908,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 24.0
-margin/top = -19.0
-margin/right = 67.0
-margin/bottom = 21.0
+margin/left = 25.0
+margin/top = -26.0
+margin/right = 68.0
+margin/bottom = 14.0
 custom_fonts/font = SubResource( 45 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false

@@ -17,12 +17,12 @@ func _process(delta):
 	file.open("user://savegame.save", file.READ)
 	if file.file_exists("user://savegame.save") == true:
 		file.get_line()
-		var endless_mode = file.get_line()
-		endless.endless_unlocked = endless_mode
+		var global_mode = file.get_line()
+		global.endless_unlocked = "true"
 		file.close()
-		if endless.endless_unlocked == "true":
+		if global.endless_unlocked == "true":
 			endless_button.show()
-		elif endless.endless_unlocked == "false":
+		elif global.endless_unlocked == "false":
 			endless_button.hide()
 	elif file.file_exists("user://savegame.save") == false:
 			endless_button.hide()
@@ -43,7 +43,7 @@ func load_game():
 	file.open("user://savegame.save", file.READ)
 	if file.file_exists("user://savegame.save") == true:
 		var town_load = file.get_line()
-		towns.town_select = town_load
+		global.town_select = town_load
 		file.close()
 		get_tree().change_scene("res://strategy.tscn")
 
@@ -67,19 +67,23 @@ func _on_yes_quit_button_down():
 func _on_no_quit_button_down():
 	get_node("quit_game_popup").set_hidden(true)
 
-func _on_endless_button_button_up():
-	get_tree().change_scene("res://endless_mode.tscn")
+func _on_global_button_button_up():
+	get_tree().change_scene("res://global_mode.tscn")
 
 func _on_no_overwrite_button_up():
 	get_node("new_game_overwrite").set_hidden(true)
 
 func _on_yes_overwrite_button_up():
 	get_tree().set_pause(false)
-	towns.town_select == "hollyhock"
-	endless.endless_unlocked == "false"
+	global.town_select == "hollyhock"
+	global.endless_unlocked == "false"
 	get_node("new_game_overwrite").set_hidden(true)
 	get_tree().change_scene("res://story_piece_one.tscn")
 
 func _on_reward_button_button_down():
 	rewards_globals.unseen = 0
 	get_tree().change_scene("res://rewards.tscn")
+
+
+func _on_endless_button_button_up():
+	get_tree().change_scene("res://endless_mode.tscn")
