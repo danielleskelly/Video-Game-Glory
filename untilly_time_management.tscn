@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=1]
+[gd_scene load_steps=27 format=1]
 
 [ext_resource path="res://untilly_time_management.gd" type="Script" id=1]
 [ext_resource path="res://inner_box.png" type="Texture" id=2]
@@ -60,6 +60,13 @@ font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 9 )
 
+[sub_resource type="DynamicFont" id=9]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 9 )
+
 [sub_resource type="DynamicFont" id=7]
 
 font/size = 45
@@ -94,6 +101,12 @@ texture = ExtResource( 2 )
 [node name="floor" type="Sprite" parent="."]
 
 transform/pos = Vector2( 533.045, 714.062 )
+transform/scale = Vector2( 9.47773, 1.4334 )
+texture = ExtResource( 2 )
+
+[node name="floor1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 502.431, 2.74252 )
 transform/scale = Vector2( 9.47773, 1.4334 )
 texture = ExtResource( 2 )
 
@@ -2107,17 +2120,23 @@ color/color = Color( 0.288992, 0.703125, 0.173035, 1 )
 [node name="tutorial" type="Node2D" parent="."]
 
 process/pause_mode = 2
-visibility/visible = false
 visibility/blend_mode = 1
 transform/pos = Vector2( 511.98, 301.641 )
 transform/scale = Vector2( 15.9374, 9.49948 )
 
 [node name="Sprite5" type="Sprite" parent="tutorial"]
 
-transform/pos = Vector2( 20.717, -22.2147 )
+transform/pos = Vector2( 20.4033, -22.2147 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.0769144, 0.0542936 )
 texture = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="tutorial/Sprite5"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -6.28893, 44.199 )
+transform/scale = Vector2( 0.063428, 0.148847 )
+texture = ExtResource( 3 )
 
 [node name="RichTextLabel 3" type="RichTextLabel" parent="tutorial/Sprite5"]
 
@@ -2127,11 +2146,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -27.0
-margin/top = 123.0
-margin/right = 51.0
-margin/bottom = 181.0
-custom_fonts/normal_font = SubResource( 7 )
+margin/left = -24.0
+margin/top = 98.0
+margin/right = 54.0
+margin/bottom = 156.0
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Pixel"

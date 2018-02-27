@@ -15,7 +15,7 @@ var storefront_sabotage_key = true
 var game_over = false
 
 #town
-var town_select = "banlon"
+var town_select = "untilly"
 
 #money
 var hollyhock_cash = 400
@@ -63,11 +63,11 @@ var sabatoge_loss = 0
 var income = 0
 
 #endless mode
-var endless_unlocked = "false"
-var yellow_eating_dot = false
-var shoot_that_rock = false
-var falling_shapes_organization = false
-var mathmatic_mastication = false
+var endless_unlocked = "true"
+var yellow_eating_dot = true
+var shoot_that_rock = true
+var falling_shapes_organization = true
+var mathmatic_mastication = true
 var tall_wall_fall_ball = false
 var jump_and_dodge = false
 var lights_off = false

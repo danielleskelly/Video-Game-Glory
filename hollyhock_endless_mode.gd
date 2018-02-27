@@ -83,3 +83,5 @@ func _on_yes_endless_button_down():
 func _on_no_endless_button_down():
 	get_tree().set_pause(false)
 	get_node("are_you_sure").hide()
+
+
