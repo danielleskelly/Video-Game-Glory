@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=1]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://fiyork_endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://spaceship.scn" type="PackedScene" id=2]
@@ -15,32 +15,32 @@
 
 [sub_resource type="DynamicFont" id=1]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [node name="endless_mode" type="Node2D"]
 
-transform/pos = Vector2( 0, 50 )
-script/script = ExtResource( 1 )
+position = Vector2( 0, 50 )
+script = ExtResource( 1 )
 
 [node name="spaceship" parent="." instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 549.546, 244.015 )
+position = Vector2( 549.546, 244.015 )
 
-[node name="rock" parent="." instance_placeholder="res://rock.scn"]
+[node name="rock" parent="."]
 
-transform/pos = Vector2( 2.51349, 183.6 )
+position = Vector2( 2.51349, 183.6 )
 contacts_reported = 13
-script/script = null
+script = null
 
 [node name="rock_timer" type="Timer" parent="."]
 
@@ -58,7 +58,7 @@ autostart = true
 
 [node name="explosion" type="Particles2D" parent="."]
 
-visibility/visible = false
+visible = false
 config/amount = 50
 config/lifetime = 1.0
 config/process_mode = 1
@@ -96,127 +96,127 @@ autostart = true
 
 [node name="countdown_timer" type="RichTextLabel" parent="."]
 
-rect/scale = Vector2( 0.75, 1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 97.0
-margin/top = 430.0
-margin/right = 253.0
-margin/bottom = 486.0
+rect_scale = Vector2( 0.75, 1 )
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 97.0
+margin_top = 430.0
+margin_right = 253.0
+margin_bottom = 486.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
+bbcode_enabled = false
+bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="success_background" type="Sprite" parent="."]
 
-transform/pos = Vector2( 127.595, 5.26128 )
-transform/scale = Vector2( 0.67839, 0.328205 )
+position = Vector2( 127.595, 5.26128 )
+scale = Vector2( 0.67839, 0.328205 )
 texture = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="success_background"]
 
-transform/pos = Vector2( -45.6074, 21.1853 )
-transform/scale = Vector2( 0.295924, 0.61932 )
+position = Vector2( -45.6074, 21.1853 )
+scale = Vector2( 0.295924, 0.61932 )
 texture = ExtResource( 5 )
 
 [node name="Sprite1" type="Sprite" parent="success_background"]
 
-transform/pos = Vector2( -0.366186, 21.1853 )
-transform/scale = Vector2( 0.291602, 0.61932 )
+position = Vector2( -0.366186, 21.1853 )
+scale = Vector2( 0.291602, 0.61932 )
 texture = ExtResource( 5 )
 
 [node name="Sprite2" type="Sprite" parent="success_background"]
 
-transform/pos = Vector2( 44.5839, 20.3824 )
-transform/scale = Vector2( 0.291161, 0.61932 )
+position = Vector2( 44.5839, 20.3824 )
+scale = Vector2( 0.291161, 0.61932 )
 texture = ExtResource( 5 )
 
 [node name="points" type="RichTextLabel" parent="success_background"]
 
-rect/scale = Vector2( 0.75, 1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -46.0
-margin/top = -92.0
-margin/right = 87.0
-margin/bottom = -36.0
+rect_scale = Vector2( 0.75, 1 )
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -46.0
+margin_top = -92.0
+margin_right = 87.0
+margin_bottom = -36.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Points"
+bbcode_enabled = false
+bbcode_text = "Points"
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="hundreths" type="RichTextLabel" parent="success_background"]
 
-rect/scale = Vector2( 1, 1.5 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -62.0
-margin/top = -8.0
-margin/right = -22.0
-margin/bottom = 63.0
+rect_scale = Vector2( 1, 1.5 )
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -62.0
+margin_top = -8.0
+margin_right = -22.0
+margin_bottom = 63.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
+bbcode_enabled = false
+bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="tens" type="RichTextLabel" parent="success_background"]
 
-rect/scale = Vector2( 1, 1.5 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -17.0
-margin/top = -8.0
-margin/right = 18.0
-margin/bottom = 48.0
+rect_scale = Vector2( 1, 1.5 )
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -17.0
+margin_top = -8.0
+margin_right = 18.0
+margin_bottom = 48.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
+bbcode_enabled = false
+bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="ones" type="RichTextLabel" parent="success_background"]
 
-rect/scale = Vector2( 1, 1.5 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 28.0
-margin/top = -9.0
-margin/right = 64.0
-margin/bottom = 44.0
+rect_scale = Vector2( 1, 1.5 )
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 28.0
+margin_top = -9.0
+margin_right = 64.0
+margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
+bbcode_enabled = false
+bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="pixel" type="Node2D" parent="."]
 
-transform/pos = Vector2( 933.627, 468.88 )
-transform/scale = Vector2( 1.49367, 1.70997 )
+position = Vector2( 933.627, 468.88 )
+scale = Vector2( 1.49367, 1.70997 )
 
 [node name="right_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( 13.5239, 0.532171 )
-transform/scale = Vector2( 0.505258, 0.493858 )
+position = Vector2( 13.5239, 0.532171 )
+scale = Vector2( 0.505258, 0.493858 )
 texture = ExtResource( 6 )
 flip_h = true
 __meta__ = {
@@ -225,8 +225,8 @@ __meta__ = {
 
 [node name="hips" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( -0.34053, 23.6607 )
-transform/scale = Vector2( 0.397194, 0.33372 )
+position = Vector2( -0.34053, 23.6607 )
+scale = Vector2( 0.397194, 0.33372 )
 texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
@@ -234,8 +234,8 @@ __meta__ = {
 
 [node name="left_arm" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( -10.5564, 0.77133 )
-transform/scale = Vector2( 0.652304, 0.49551 )
+position = Vector2( -10.5564, 0.77133 )
+scale = Vector2( 0.652304, 0.49551 )
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
@@ -243,8 +243,8 @@ __meta__ = {
 
 [node name="torso" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( -0.167745, -2.25622 )
-transform/scale = Vector2( 0.604909, 0.530322 )
+position = Vector2( -0.167745, -2.25622 )
+scale = Vector2( 0.604909, 0.530322 )
 texture = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
@@ -252,8 +252,8 @@ __meta__ = {
 
 [node name="head" type="Sprite" parent="pixel"]
 
-transform/pos = Vector2( -0.140442, -34.3577 )
-transform/scale = Vector2( 0.533973, 0.468504 )
+position = Vector2( -0.140442, -34.3577 )
+scale = Vector2( 0.533973, 0.468504 )
 texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
@@ -261,14 +261,14 @@ __meta__ = {
 
 [node name="pixel_button" type="LinkButton" parent="pixel"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -36.0
-margin/top = -54.0
-margin/right = 40.0
-margin/bottom = 45.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -36.0
+margin_top = -54.0
+margin_right = 40.0
+margin_bottom = 45.0
 custom_fonts/font = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -277,88 +277,88 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StreamPlayer" type="StreamPlayer" parent="."]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="."]
 
-stream/stream = ExtResource( 10 )
-stream/play = false
-stream/loop = true
-stream/volume_db = 10.0
-stream/autoplay = true
-stream/paused = false
-stream/loop_restart_time = 0.0
-stream/buffering_ms = 500
+stream = ExtResource( 10 )
+playing = false
+loop = true
+volume_db = 10.0
+stream_autoplay = true
+stream_paused = false
+loop_restart_time = 0.0
+buffering_ms = 500
 
 [node name="menu" type="Node2D" parent="."]
 
-process/pause_mode = 2
-visibility/visible = false
+pause_mode = 2
+visible = false
 
 [node name="background" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( 511.694, 171.322 )
-transform/scale = Vector2( 1.06834, 1.10247 )
+position = Vector2( 511.694, 171.322 )
+scale = Vector2( 1.06834, 1.10247 )
 texture = ExtResource( 11 )
 
 [node name="button" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( 516.995, 184.675 )
-transform/scale = Vector2( 1.52067, 0.420472 )
+position = Vector2( 516.995, 184.675 )
+scale = Vector2( 1.52067, 0.420472 )
 texture = ExtResource( 12 )
 
 [node name="button1" type="Sprite" parent="menu"]
 
-transform/pos = Vector2( 518.975, 260.32 )
-transform/scale = Vector2( 1.51963, 0.420472 )
+position = Vector2( 518.975, 260.32 )
+scale = Vector2( 1.51963, 0.420472 )
 texture = ExtResource( 12 )
 
 [node name="sound" type="RichTextLabel" parent="menu"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 454.0
-margin/top = 76.0
-margin/right = 724.0
-margin/bottom = 146.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 454.0
+margin_top = 76.0
+margin_right = 724.0
+margin_bottom = 146.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Sound"
+bbcode_enabled = false
+bbcode_text = "Sound"
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="sound_slider" type="HSlider" parent="menu"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 352.0
-margin/top = 125.0
-margin/right = 670.0
-margin/bottom = 141.0
-range/min = 0.0
-range/max = 100.0
-range/step = 1.0
-range/page = 0.0
-range/value = 1.0
-range/exp_edit = false
-range/rounded = false
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 0
+margin_left = 352.0
+margin_top = 125.0
+margin_right = 670.0
+margin_bottom = 141.0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 1.0
+exp_edit = false
+rounded = false
 tick_count = 0
 ticks_on_borders = true
 focus_mode = 2
 
 [node name="return_to_game" type="LinkButton" parent="menu"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 379.0
-margin/top = 169.0
-margin/right = 695.0
-margin/bottom = 216.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 379.0
+margin_top = 169.0
+margin_right = 695.0
+margin_bottom = 216.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -369,14 +369,14 @@ underline = 2
 
 [node name="return_to_endless" type="LinkButton" parent="menu"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 384.0
-margin/top = 242.0
-margin/right = 716.0
-margin/bottom = 289.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 384.0
+margin_top = 242.0
+margin_right = 716.0
+margin_bottom = 289.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -387,55 +387,55 @@ underline = 2
 
 [node name="are_you_sure" type="Node2D" parent="."]
 
-process/pause_mode = 2
-visibility/visible = false
-transform/pos = Vector2( 7.69165, -61.5332 )
+pause_mode = 2
+visible = false
+position = Vector2( 7.69165, -61.5332 )
 
 [node name="background" type="Sprite" parent="are_you_sure"]
 
-transform/pos = Vector2( 505.792, 230.951 )
-transform/scale = Vector2( 0.863263, 0.944586 )
+position = Vector2( 505.792, 230.951 )
+scale = Vector2( 0.863263, 0.944586 )
 texture = ExtResource( 11 )
 
 [node name="background1" type="Sprite" parent="are_you_sure"]
 
-transform/pos = Vector2( 587.427, 327.912 )
-transform/scale = Vector2( 0.516082, 0.556742 )
+position = Vector2( 587.427, 327.912 )
+scale = Vector2( 0.516082, 0.556742 )
 texture = ExtResource( 12 )
 
 [node name="background2" type="Sprite" parent="are_you_sure"]
 
-transform/pos = Vector2( 430.726, 327.912 )
-transform/scale = Vector2( 0.431632, 0.519208 )
+position = Vector2( 430.726, 327.912 )
+scale = Vector2( 0.431632, 0.519208 )
 texture = ExtResource( 12 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 347.0
-margin/top = 130.0
-margin/right = 664.0
-margin/bottom = 346.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 347.0
+margin_top = 130.0
+margin_right = 664.0
+margin_bottom = 346.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Are you sure you want to go back to the Endless Mode menu?"
+bbcode_enabled = false
+bbcode_text = "Are you sure you want to go back to the Endless Mode menu?"
 visible_characters = -1
 percent_visible = 1.0
 
 [node name="yes_village" type="LinkButton" parent="are_you_sure"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 550.0
-margin/top = 312.0
-margin/right = 644.0
-margin/bottom = 359.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 550.0
+margin_top = 312.0
+margin_right = 644.0
+margin_bottom = 359.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -446,14 +446,14 @@ underline = 2
 
 [node name="no_village" type="LinkButton" parent="are_you_sure"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 404.0
-margin/top = 312.0
-margin/right = 498.0
-margin/bottom = 359.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 404.0
+margin_top = 312.0
+margin_right = 498.0
+margin_bottom = 359.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -466,36 +466,36 @@ underline = 2
 "game_over",
 ]]
 
-process/pause_mode = 2
-visibility/visible = false
+pause_mode = 2
+visible = false
 
 [node name="Sprite" type="Sprite" parent="game_over"]
 
-transform/pos = Vector2( 509.632, 214.129 )
-transform/scale = Vector2( 0.697904, 1.00087 )
+position = Vector2( 509.632, 214.129 )
+scale = Vector2( 0.697904, 1.00087 )
 texture = ExtResource( 11 )
 
 [node name="Sprite1" type="Sprite" parent="game_over"]
 
-transform/pos = Vector2( 564.945, 305.842 )
-transform/scale = Vector2( 0.393449, 0.654944 )
+position = Vector2( 564.945, 305.842 )
+scale = Vector2( 0.393449, 0.654944 )
 texture = ExtResource( 12 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="game_over"]
 
-rect/scale = Vector2( 2, 2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 412.0
-margin/top = 111.0
-margin/right = 562.0
-margin/bottom = 215.0
+rect_scale = Vector2( 2, 2 )
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 412.0
+margin_top = 111.0
+margin_right = 562.0
+margin_bottom = 215.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "GAME OVER!"
+bbcode_enabled = false
+bbcode_text = "GAME OVER!"
 visible_characters = -1
 percent_visible = 1.0
 __meta__ = {
@@ -504,14 +504,14 @@ __meta__ = {
 
 [node name="game_over_button" type="LinkButton" parent="game_over"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 546.0
-margin/top = 289.0
-margin/right = 589.0
-margin/bottom = 329.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 546.0
+margin_top = 289.0
+margin_right = 589.0
+margin_bottom = 329.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
@@ -520,22 +520,20 @@ shortcut = null
 text = "OK"
 underline = 2
 
-[connection signal="timeout" from="pop_timer" to="." method="_on_pop_timer_timeout"]
+[connection signal="timeout"  from="pop_timer"  to="." method="_on_pop_timer_timeout" binds=[  ]]
 
-[connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
+[connection signal="timeout"  from="day_timer"  to="." method="_on_day_timer_timeout" binds=[  ]]
 
-[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
+[connection signal="button_down"  from="pixel/pixel_button"  to="." method="_on_pixel_button_button_down" binds=[  ]]
 
-[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
+[connection signal="value_changed"  from="menu/sound_slider"  to="." method="_on_sound_slider_value_changed" binds=[  ]]
 
-[connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
+[connection signal="button_down"  from="menu/return_to_game"  to="." method="_on_return_to_game_button_down" binds=[  ]]
 
-[connection signal="button_down" from="menu/return_to_endless" to="." method="_on_return_to_endless_button_down"]
+[connection signal="button_down"  from="menu/return_to_endless"  to="." method="_on_return_to_endless_button_down" binds=[  ]]
 
-[connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
+[connection signal="button_down"  from="are_you_sure/yes_village"  to="." method="_on_yes_village_button_down" binds=[  ]]
 
-[connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
+[connection signal="button_down"  from="are_you_sure/no_village"  to="." method="_on_no_village_button_down" binds=[  ]]
 
-[connection signal="button_up" from="game_over/game_over_button" to="." method="_on_game_over_button_button_up"]
-
-
+[connection signal="button_up"  from="game_over/game_over_button"  to="." method="_on_game_over_button_button_up" binds=[  ]]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=1]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://rewards.gd" type="Script" id=1]
 [ext_resource path="res://collander_64.png" type="Texture" id=2]
@@ -33,115 +33,115 @@
 
 [node name="rewards" type="Node2D"]
 
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
 
 [node name="background" type="Sprite" parent="."]
 
-transform/pos = Vector2( 512.047, 306.042 )
-transform/scale = Vector2( 1.60137, 1.53312 )
+position = Vector2( 512.047, 306.042 )
+scale = Vector2( 1.60137, 1.53312 )
 texture = ExtResource( 2 )
 
 [node name="background1" type="Sprite" parent="."]
 
-transform/pos = Vector2( 511.456, 304.795 )
-transform/scale = Vector2( 0.828538, 0.420994 )
+position = Vector2( 511.456, 304.795 )
+scale = Vector2( 0.828538, 0.420994 )
 texture = ExtResource( 3 )
 
 [node name="back_arrow" type="Sprite" parent="."]
 
-transform/pos = Vector2( 140.465, 127.827 )
-transform/scale = Vector2( 0.674914, 0.556974 )
+position = Vector2( 140.465, 127.827 )
+scale = Vector2( 0.674914, 0.556974 )
 texture = ExtResource( 4 )
 
 [node name="back_button" type="LinkButton" parent="back_arrow"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -36.0
-margin/top = -27.0
-margin/right = 31.0
-margin/bottom = 22.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -36.0
+margin_top = -27.0
+margin_right = 31.0
+margin_bottom = 22.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 
-[node name="StreamPlayer" type="StreamPlayer" parent="."]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="."]
 
-stream/stream = ExtResource( 5 )
-stream/play = false
-stream/loop = true
-stream/volume_db = 0.0
-stream/autoplay = true
-stream/paused = false
-stream/loop_restart_time = 0.0
-stream/buffering_ms = 500
+stream = ExtResource( 5 )
+playing = false
+loop = true
+volume_db = 0.0
+stream_autoplay = true
+stream_paused = false
+loop_restart_time = 0.0
+buffering_ms = 500
 
 [node name="find_saboteur" type="Sprite" parent="."]
 
-transform/pos = Vector2( 643.78, 202.432 )
-transform/scale = Vector2( 0.440119, 0.32746 )
+position = Vector2( 643.78, 202.432 )
+scale = Vector2( 0.440119, 0.32746 )
 texture = ExtResource( 6 )
 
 [node name="tooltip" type="Control" parent="find_saboteur"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -143.0
-margin/top = -152.0
-margin/right = 133.0
-margin/bottom = 153.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -143.0
+margin_top = -152.0
+margin_right = 133.0
+margin_bottom = 153.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="complete_all_levels" type="Sprite" parent="."]
 
-transform/pos = Vector2( 529.336, 332.244 )
-transform/scale = Vector2( 0.430317, 0.312621 )
+position = Vector2( 529.336, 332.244 )
+scale = Vector2( 0.430317, 0.312621 )
 texture = ExtResource( 7 )
 
 [node name="tooltip" type="Control" parent="complete_all_levels"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -143.0
-margin/top = -152.0
-margin/right = 133.0
-margin/bottom = 153.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -143.0
+margin_top = -152.0
+margin_right = 133.0
+margin_bottom = 153.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="earn_thousand" type="Sprite" parent="."]
 
-transform/pos = Vector2( 262.091, 423.703 )
-transform/scale = Vector2( 0.812651, 0.703212 )
+position = Vector2( 262.091, 423.703 )
+scale = Vector2( 0.812651, 0.703212 )
 texture = ExtResource( 8 )
 
 [node name="tooltip" type="Control" parent="earn_thousand"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -143.0
-margin/top = -152.0
-margin/right = 133.0
-margin/bottom = 153.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -143.0
+margin_top = -152.0
+margin_right = 133.0
+margin_bottom = 153.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="complete_hollyhock" type="Sprite" parent="."]
 
-transform/pos = Vector2( 682.546, 442.227 )
-transform/scale = Vector2( 0.226404, 0.21236 )
+position = Vector2( 682.546, 442.227 )
+scale = Vector2( 0.226404, 0.21236 )
 texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
@@ -149,259 +149,259 @@ __meta__ = {
 
 [node name="tooltip" type="Control" parent="complete_hollyhock"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -143.0
-margin/top = -152.0
-margin/right = 133.0
-margin/bottom = 153.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -143.0
+margin_top = -152.0
+margin_right = 133.0
+margin_bottom = 153.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="complete_fiyork" type="Sprite" parent="."]
 
-transform/pos = Vector2( 722.114, 445.007 )
-transform/scale = Vector2( 0.226404, 0.21236 )
+position = Vector2( 722.114, 445.007 )
+scale = Vector2( 0.226404, 0.21236 )
 texture = ExtResource( 10 )
 
 [node name="tooltip" type="Control" parent="complete_fiyork"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -143.0
-margin/top = -152.0
-margin/right = 133.0
-margin/bottom = 153.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -143.0
+margin_top = -152.0
+margin_right = 133.0
+margin_bottom = 153.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="complete_untilly" type="Sprite" parent="."]
 
-transform/pos = Vector2( 665.5, 419.531 )
-transform/scale = Vector2( 0.226404, 0.21236 )
+position = Vector2( 665.5, 419.531 )
+scale = Vector2( 0.226404, 0.21236 )
 texture = ExtResource( 11 )
 
 [node name="tooltip" type="Control" parent="complete_untilly"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -106.0
-margin/top = -126.0
-margin/right = 107.0
-margin/bottom = 129.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -106.0
+margin_top = -126.0
+margin_right = 107.0
+margin_bottom = 129.0
 
 [node name="complete_plansey" type="Sprite" parent="."]
 
-transform/pos = Vector2( 706.392, 400.222 )
-transform/scale = Vector2( 0.225526, 0.21371 )
+position = Vector2( 706.392, 400.222 )
+scale = Vector2( 0.225526, 0.21371 )
 texture = ExtResource( 12 )
 
 [node name="tooltip" type="Control" parent="complete_plansey"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -141.0
-margin/top = -129.0
-margin/right = 135.0
-margin/bottom = 120.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -141.0
+margin_top = -129.0
+margin_right = 135.0
+margin_bottom = 120.0
 
 [node name="complete_windrow" type="Sprite" parent="."]
 
-transform/pos = Vector2( 755.96, 454.207 )
-transform/scale = Vector2( 0.175703, 0.21236 )
+position = Vector2( 755.96, 454.207 )
+scale = Vector2( 0.175703, 0.21236 )
 texture = ExtResource( 13 )
 
 [node name="tooltip" type="Control" parent="complete_windrow"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -137.0
-margin/top = -105.0
-margin/right = 137.0
-margin/bottom = 108.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -137.0
+margin_top = -105.0
+margin_right = 137.0
+margin_bottom = 108.0
 
 [node name="complete_banlon" type="Sprite" parent="."]
 
-transform/pos = Vector2( 735.899, 379.797 )
-transform/scale = Vector2( 0.246936, 0.221773 )
+position = Vector2( 735.899, 379.797 )
+scale = Vector2( 0.246936, 0.221773 )
 texture = ExtResource( 14 )
 
 [node name="tooltip" type="Control" parent="complete_banlon"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -143.0
-margin/top = -152.0
-margin/right = 133.0
-margin/bottom = 153.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -143.0
+margin_top = -152.0
+margin_right = 133.0
+margin_bottom = 153.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="complete_slatten" type="Sprite" parent="."]
 
-transform/pos = Vector2( 751.182, 419.627 )
-transform/scale = Vector2( 0.181925, 0.222279 )
+position = Vector2( 751.182, 419.627 )
+scale = Vector2( 0.181925, 0.222279 )
 texture = ExtResource( 15 )
 
 [node name="tooltip" type="Control" parent="complete_slatten"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -139.0
-margin/top = -98.0
-margin/right = 133.0
-margin/bottom = 96.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -139.0
+margin_top = -98.0
+margin_right = 133.0
+margin_bottom = 96.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="minigames_played" type="Sprite" parent="."]
 
-transform/pos = Vector2( 204.456, 237.073 )
-transform/scale = Vector2( 0.893117, 0.861991 )
+position = Vector2( 204.456, 237.073 )
+scale = Vector2( 0.893117, 0.861991 )
 texture = ExtResource( 16 )
 
 [node name="tooltip" type="Control" parent="minigames_played"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -61.0
-margin/top = -55.0
-margin/right = 56.0
-margin/bottom = 27.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -61.0
+margin_top = -55.0
+margin_right = 56.0
+margin_bottom = 27.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="points_in_one_minigame" type="Sprite" parent="."]
 
-transform/pos = Vector2( 854.778, 168.036 )
-transform/scale = Vector2( 0.893117, 0.861991 )
+position = Vector2( 854.778, 168.036 )
+scale = Vector2( 0.893117, 0.861991 )
 texture = ExtResource( 17 )
 
 [node name="tooltip" type="Control" parent="points_in_one_minigame"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -39.0
-margin/top = -49.0
-margin/right = 45.0
-margin/bottom = 44.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -39.0
+margin_top = -49.0
+margin_right = 45.0
+margin_bottom = 44.0
 
 [node name="million_total_points" type="Sprite" parent="."]
 
-transform/pos = Vector2( 267.69, 326.593 )
-transform/scale = Vector2( 1.09976, 1.07237 )
+position = Vector2( 267.69, 326.593 )
+scale = Vector2( 1.09976, 1.07237 )
 texture = ExtResource( 18 )
 
 [node name="tooltip" type="Control" parent="million_total_points"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -31.0
-margin/top = -41.0
-margin/right = 20.0
-margin/bottom = 24.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -31.0
+margin_top = -41.0
+margin_right = 20.0
+margin_bottom = 24.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="fifty_business_days" type="Sprite" parent="."]
 
-transform/pos = Vector2( 521.668, 171.869 )
-transform/scale = Vector2( 0.659845, 0.624997 )
+position = Vector2( 521.668, 171.869 )
+scale = Vector2( 0.659845, 0.624997 )
 texture = ExtResource( 19 )
 
 [node name="tooltip" type="Control" parent="fifty_business_days"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -50.0
-margin/top = -49.0
-margin/right = 49.0
-margin/bottom = 46.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -50.0
+margin_top = -49.0
+margin_right = 49.0
+margin_bottom = 46.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="total_player_satisfaction" type="Sprite" parent="."]
 
-transform/pos = Vector2( 753.946, 155.025 )
-transform/scale = Vector2( 0.320995, 0.292073 )
+position = Vector2( 753.946, 155.025 )
+scale = Vector2( 0.320995, 0.292073 )
 texture = ExtResource( 20 )
 
 [node name="tooltip" type="Control" parent="total_player_satisfaction"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -75.0
-margin/top = -110.0
-margin/right = 91.0
-margin/bottom = 102.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -75.0
+margin_top = -110.0
+margin_right = 91.0
+margin_bottom = 102.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="three_min_yed" type="Sprite" parent="."]
 
-transform/pos = Vector2( 867.829, 406.888 )
-transform/scale = Vector2( 3.62853, 2.99222 )
+position = Vector2( 867.829, 406.888 )
+scale = Vector2( 3.62853, 2.99222 )
 texture = ExtResource( 21 )
 
 [node name="tooltip" type="Control" parent="three_min_yed"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -13.0
-margin/top = -18.0
-margin/right = 9.0
-margin/bottom = 10.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -13.0
+margin_top = -18.0
+margin_right = 9.0
+margin_bottom = 10.0
 
 [node name="three_min_str" type="Sprite" parent="."]
 
-transform/pos = Vector2( 396.651, 430.566 )
-transform/scale = Vector2( 1.27507, 1.27081 )
+position = Vector2( 396.651, 430.566 )
+scale = Vector2( 1.27507, 1.27081 )
 texture = ExtResource( 22 )
 
 [node name="tooltip" type="Control" parent="three_min_str"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -42.0
-margin/top = -37.0
-margin/right = 39.0
-margin/bottom = 31.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -42.0
+margin_top = -37.0
+margin_right = 39.0
+margin_bottom = 31.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -409,27 +409,27 @@ __meta__ = {
 [node name="three_min_fso" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 143.633, 357.703 )
-transform/scale = Vector2( 0.223362, 0.281117 )
+position = Vector2( 143.633, 357.703 )
+scale = Vector2( 0.223362, 0.281117 )
 texture = ExtResource( 23 )
 
 [node name="tooltip" type="Control" parent="three_min_fso"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -118.0
-margin/top = -108.0
-margin/right = 124.0
-margin/bottom = 549.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -118.0
+margin_top = -108.0
+margin_right = 124.0
+margin_bottom = 549.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Sprite" type="Sprite" parent="three_min_fso"]
 
-transform/pos = Vector2( 0, 151.891 )
+position = Vector2( 0, 151.891 )
 texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
@@ -437,7 +437,7 @@ __meta__ = {
 
 [node name="Sprite1" type="Sprite" parent="three_min_fso"]
 
-transform/pos = Vector2( 0, 303.782 )
+position = Vector2( 0, 303.782 )
 texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
@@ -445,7 +445,7 @@ __meta__ = {
 
 [node name="Sprite2" type="Sprite" parent="three_min_fso"]
 
-transform/pos = Vector2( 0, 451.61 )
+position = Vector2( 0, 451.61 )
 texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
@@ -453,97 +453,95 @@ __meta__ = {
 
 [node name="three_min_math_mast" type="Sprite" parent="."]
 
-transform/pos = Vector2( 392.122, 282.882 )
-transform/scale = Vector2( 0.491999, 0.382819 )
+position = Vector2( 392.122, 282.882 )
+scale = Vector2( 0.491999, 0.382819 )
 texture = ExtResource( 24 )
 
 [node name="tooltip" type="Control" parent="three_min_math_mast"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -143.0
-margin/top = -152.0
-margin/right = 133.0
-margin/bottom = 153.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -143.0
+margin_top = -152.0
+margin_right = 133.0
+margin_bottom = 153.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="three_min_twfb" type="Sprite" parent="."]
 
-transform/pos = Vector2( 777.408, 257.742 )
-transform/scale = Vector2( 1.59315, 1.5061 )
+position = Vector2( 777.408, 257.742 )
+scale = Vector2( 1.59315, 1.5061 )
 texture = ExtResource( 25 )
 
 [node name="tooltip" type="Control" parent="three_min_twfb"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -22.0
-margin/top = -23.0
-margin/right = 59.0
-margin/bottom = 40.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -22.0
+margin_top = -23.0
+margin_right = 59.0
+margin_bottom = 40.0
 
 [node name="Sprite" type="Sprite" parent="three_min_twfb"]
 
-transform/pos = Vector2( 17.9565, 26.8703 )
-transform/scale = Vector2( 0.668189, 0.205372 )
+position = Vector2( 17.9565, 26.8703 )
+scale = Vector2( 0.668189, 0.205372 )
 texture = ExtResource( 26 )
 
 [node name="three_min_jad" type="Sprite" parent="."]
 
-transform/pos = Vector2( 326.322, 140.209 )
-transform/scale = Vector2( 0.305889, 0.339169 )
+position = Vector2( 326.322, 140.209 )
+scale = Vector2( 0.305889, 0.339169 )
 texture = ExtResource( 27 )
 
 [node name="tooltip" type="Control" parent="three_min_jad"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -143.0
-margin/top = -152.0
-margin/right = 133.0
-margin/bottom = 153.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -143.0
+margin_top = -152.0
+margin_right = 133.0
+margin_bottom = 153.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Sprite" type="Sprite" parent="three_min_jad"]
 
-transform/pos = Vector2( 15.2754, 8.60266 )
-transform/rot = 90.0
-transform/scale = Vector2( 1.93812, 3.48676 )
+position = Vector2( 15.2754, 8.60266 )
+rotation_deg = -90.0
+scale = Vector2( 1.93812, 3.48676 )
 texture = ExtResource( 28 )
 
 [node name="three_min_lo" type="Sprite" parent="."]
 
-transform/pos = Vector2( 507.95, 472.071 )
-transform/scale = Vector2( 0.791684, 0.669259 )
+position = Vector2( 507.95, 472.071 )
+scale = Vector2( 0.791684, 0.669259 )
 texture = ExtResource( 29 )
 
 [node name="tooltip" type="Control" parent="three_min_lo"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -30.0
-margin/top = -55.0
-margin/right = 117.0
-margin/bottom = 45.0
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = -30.0
+margin_top = -55.0
+margin_right = 117.0
+margin_bottom = 45.0
 
 [node name="Sprite 2" type="Sprite" parent="three_min_lo"]
 
-transform/pos = Vector2( 70.5542, -0.325928 )
-transform/scale = Vector2( 0.597072, 0.631434 )
+position = Vector2( 70.5542, -0.325928 )
+scale = Vector2( 0.597072, 0.631434 )
 texture = ExtResource( 30 )
 
-[connection signal="button_down" from="back_arrow/back_button" to="." method="_on_back_button_button_down"]
-
-
+[connection signal="button_down"  from="back_arrow/back_button"  to="." method="_on_back_button_button_down" binds=[  ]]

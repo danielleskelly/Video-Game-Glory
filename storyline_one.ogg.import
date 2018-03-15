@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/storyline_one.ogg-b74c638ad7b23f505fd4d6485995a124.oggstr"
+
+[deps]
+
+source_file="res://storyline_one.ogg"
+source_md5="a8429514c33babc075c8588d8380dca9"
+
+dest_files=[ "res://.import/storyline_one.ogg-b74c638ad7b23f505fd4d6485995a124.oggstr" ]
+dest_md5="7fdb20242b52e41ae59e9857054d641a"
+
+[params]
+
+loop=true
+loop_offset=0.0

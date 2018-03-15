@@ -56,28 +56,28 @@ func _on_new_button_button_up():
 		file.close()
 	else:
 		file.close()
-		get_tree().change_scene_to("res://story_piece_one.tscn")
+		get_tree().change_scene("res://story_piece_one.tscn")
 
 func _on_quit_button_button_down():
-	get_node("quit_game_popup").set_hidden(false)
+	get_node("quit_game_popup").show()
 
 func _on_yes_quit_button_down():
 	get_tree().quit()
 
 func _on_no_quit_button_down():
-	get_node("quit_game_popup").set_hidden(true)
+	get_node("quit_game_popup").hide()
 
 func _on_global_button_button_up():
 	get_tree().change_scene("res://global_mode.tscn")
 
 func _on_no_overwrite_button_up():
-	get_node("new_game_overwrite").set_hidden(true)
+	get_node("new_game_overwrite").hide()
 
 func _on_yes_overwrite_button_up():
 	get_tree().set_pause(false)
 	global.town_select == "hollyhock"
 	global.endless_unlocked == "false"
-	get_node("new_game_overwrite").set_hidden(true)
+	get_node("new_game_overwrite").hide()
 	get_tree().change_scene("res://story_piece_one.tscn")
 
 func _on_reward_button_button_down():

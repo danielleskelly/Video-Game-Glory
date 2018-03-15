@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/strategy.ogg-81ea6d4017530f3de75bd83d03a184d2.oggstr"
+
+[deps]
+
+source_file="res://strategy.ogg"
+source_md5="eca558919feaf2dde775e02cfa8ec7e6"
+
+dest_files=[ "res://.import/strategy.ogg-81ea6d4017530f3de75bd83d03a184d2.oggstr" ]
+dest_md5="9bc1011f46ec8ffce6448f518ae7a7c7"
+
+[params]
+
+loop=true
+loop_offset=0

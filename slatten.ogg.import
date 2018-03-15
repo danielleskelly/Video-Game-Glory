@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/slatten.ogg-4c0cd653597b75c64d8f426ce40d897b.oggstr"
+
+[deps]
+
+source_file="res://slatten.ogg"
+source_md5="6e6c5bebfeda7983bdb854d7bb0f43c0"
+
+dest_files=[ "res://.import/slatten.ogg-4c0cd653597b75c64d8f426ce40d897b.oggstr" ]
+dest_md5="091dad6c81aa80e144e8cf57b0aa74b0"
+
+[params]
+
+loop=true
+loop_offset=0

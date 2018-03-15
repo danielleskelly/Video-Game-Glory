@@ -33,5 +33,5 @@ func set_sound():
 		get_node("mute_button").set_normal_texture(texture_on)
 		get_node("mute_button").set_pressed_texture(texture_off)
 
-func _on_AnimationPlayer_finished():
+func _on_AnimationPlayer_animation_finished( anim_name ):
 	get_tree().change_scene("res://story_piece_two.tscn")

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/town_select.ogg-521c52c4a86db52484896a935fdb3d00.oggstr"
+
+[deps]
+
+source_file="res://town_select.ogg"
+source_md5="7e0cccbbdf5bbab199844c82ce52ff83"
+
+dest_files=[ "res://.import/town_select.ogg-521c52c4a86db52484896a935fdb3d00.oggstr" ]
+dest_md5="708fbbb258e31b7e82b97dd9a7c46f79"
+
+[params]
+
+loop=true
+loop_offset=0

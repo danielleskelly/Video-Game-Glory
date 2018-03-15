@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/banlon.ogg-54e038057d1c6d5a1fdca823d2bd2ff2.oggstr"
+
+[deps]
+
+source_file="res://banlon.ogg"
+source_md5="00ace0fe3a5fd1853872d07533db47ea"
+
+dest_files=[ "res://.import/banlon.ogg-54e038057d1c6d5a1fdca823d2bd2ff2.oggstr" ]
+dest_md5="154d362f68060c71d7c91163d42294f0"
+
+[params]
+
+loop=true
+loop_offset=0
