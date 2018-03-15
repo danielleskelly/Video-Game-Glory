@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/windrow.ogg-5433ee1b244d5460c502995fa2ebf8ef.oggstr"
+
+[deps]
+
+source_file="res://windrow.ogg"
+source_md5="4e880adcf40ca0b0a54d2e42262cb40f"
+
+dest_files=[ "res://.import/windrow.ogg-5433ee1b244d5460c502995fa2ebf8ef.oggstr" ]
+dest_md5="b95414313871bcc27e586858ddada904"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Screen Shot 2017-11-09 at 9.44.33 PM.png-181ccad5187488498a2fa70436091c41.stex"
+
+[deps]
+
+source_file="res://Screen Shot 2017-11-09 at 9.44.33 PM.png"
+source_md5="ec42dde975de258f917a7461c57f6ca5"
+
+dest_files=[ "res://.import/Screen Shot 2017-11-09 at 9.44.33 PM.png-181ccad5187488498a2fa70436091c41.stex" ]
+dest_md5="c7077958e44349fc518466735b7e82ce"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://story_piece_two.gd" type="Script" id=1]
 [ext_resource path="res://pixel_front.png" type="Texture" id=2]
@@ -21,509 +21,604 @@
 
 [sub_resource type="Animation" id=1]
 
-resource/name = "two_one"
+resource_name = "two_one"
 length = 340.0
 loop = false
-step = 0.1
+step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("strategy/crtv:transform/pos")
+tracks/0/path = NodePath("strategy/crtv:position")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 329, 329.1, 329.2, 329.3, 329.5, 329.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 329, 329.1, 329.2, 329.3, 329.5, 329.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 14.1786, -476.419 ), Vector2( 14.1786, -208.906 ), Vector2( 7.16791, -132.474 ), Vector2( 7.16791, -149.845 ), Vector2( 7.16791, -264.493 ), Vector2( 3.66252, -149.845 ), Vector2( -3.3481, -500.739 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("strategy/crtv:transform/scale")
+tracks/1/path = NodePath("strategy/crtv:scale")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 329, 329.1, 329.2, 329.3, 329.5, 329.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 329, 329.1, 329.2, 329.3, 329.5, 329.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ), Vector2( 2.80987, 1.32809 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("strategy/crtv1:transform/pos")
+tracks/2/path = NodePath("strategy/crtv1:position")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 329, 329.3, 329.5, 329.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 44.4936, -124.914 ), Vector2( 37.483, 201.661 ), Vector2( 37.483, 87.0123 ), Vector2( 33.9775, 201.661 ), Vector2( 26.9669, -149.233 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("strategy/crtv1:transform/scale")
+tracks/3/path = NodePath("strategy/crtv1:scale")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 329, 329.3, 329.5, 329.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("strategy/crtv2:transform/pos")
+tracks/4/path = NodePath("strategy/crtv2:position")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 329, 329.3, 329.5, 329.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 44.4936, -39.4257 ), Vector2( 37.483, 287.149 ), Vector2( 37.483, 172.5 ), Vector2( 33.9775, 287.149 ), Vector2( 26.9669, -63.745 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("strategy/crtv3:transform/scale")
+tracks/5/path = NodePath("strategy/crtv3:scale")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 329, 329.3, 329.5, 329.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2.80987, 1.64743 ), Vector2( 2.80987, 1.64743 ), Vector2( 2.80987, 1.64743 ), Vector2( 2.80987, 1.64743 ), Vector2( 2.80987, 1.64743 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("strategy/crtv2:transform/scale")
+tracks/6/path = NodePath("strategy/crtv2:scale")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 329, 329.3, 329.5, 329.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ), Vector2( 2.80987, 0.141569 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("strategy/crtv3:transform/pos")
+tracks/7/path = NodePath("strategy/crtv3:position")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0, 329, 329.3, 329.5, 329.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 329, 329.3, 329.5, 329.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 44.4938, 340.111 ), Vector2( 37.483, 666.686 ), Vector2( 37.483, 552.037 ), Vector2( 33.9776, 666.686 ), Vector2( 26.967, 315.792 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("outside_office:transform/pos")
+tracks/8/path = NodePath("outside_office:position")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0, 0.4, 0.8, 1.4, 2, 2.5, 6.5, 6.6, 7.1, 44.8, 45.1, 45.2, 45.4, 45.7, 45.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.8, 1.4, 2, 2.5, 6.5, 6.6, 7.1, 44.53, 44.8, 45.2, 45.4, 45.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.00170135, 1.32025 ), Vector2( 1.00074, -0.901395 ), Vector2( 0.263593, -2.39567 ), Vector2( -1.90452, -0.0428965 ), Vector2( 1.2355, 1.70044 ), Vector2( -0.409272, 1.94949 ), Vector2( -0.409272, 1.94949 ), Vector2( -1.92377, 2.72808 ), Vector2( -1.1931, 2.72808 ), Vector2( -0.409272, 1.94949 ), Vector2( 2.14371, -0.988402 ), Vector2( -2.46826, -3.38868 ), Vector2( -0.0664275, 0.587399 ), Vector2( -2.4869, -2.77257 ), Vector2( 0.212709, -5.55474 ) ]
+"values": [ Vector2( -0.00170135, 1.32025 ), Vector2( 1.00074, -0.901395 ), Vector2( 0.263593, -2.39567 ), Vector2( -1.90452, -0.0428965 ), Vector2( 1.2355, 1.70044 ), Vector2( -0.409272, 1.94949 ), Vector2( -0.409272, 1.94949 ), Vector2( -1.92377, 2.72808 ), Vector2( -1.1931, 2.72808 ), Vector2( -1.1931, 2.72808 ), Vector2( -0.409272, 1.94949 ), Vector2( -2.46826, -3.38868 ), Vector2( -0.0664275, 0.587399 ), Vector2( 0.212709, -5.55474 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("outside_office:transform/scale")
+tracks/9/path = NodePath("outside_office:scale")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
-"times": FloatArray( 0, 0.4, 0.8, 1.4, 2, 2.5, 6.5, 6.6, 7.1, 44.8, 45.1, 45.2, 45.4, 45.7, 45.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.8, 1.4, 2, 2.5, 6.5, 6.6, 7.09, 44.52, 44.8, 45.2, 45.4, 45.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.985302, 0.97776 ), Vector2( 1.01663, 1.04719 ), Vector2( 1.03966, 1.09388 ), Vector2( 1.10742, 1.16741 ), Vector2( 1.20554, 1.22189 ), Vector2( 1.15414, 1.2141 ), Vector2( 1.15414, 1.2141 ), Vector2( 1.10112, 1.18977 ), Vector2( 1.07855, 1.18977 ), Vector2( 1.15414, 1.2141 ), Vector2( 1.23392, 1.30591 ), Vector2( 1.37805, 1.38092 ), Vector2( 1.45311, 1.50517 ), Vector2( 1.52875, 1.57017 ), Vector2( 1.60774, 1.65711 ) ]
+"values": [ Vector2( 0.985302, 0.97776 ), Vector2( 1.01663, 1.04719 ), Vector2( 1.03966, 1.09388 ), Vector2( 1.10742, 1.16741 ), Vector2( 1.20554, 1.22189 ), Vector2( 1.15414, 1.2141 ), Vector2( 1.15414, 1.2141 ), Vector2( 1.10112, 1.18977 ), Vector2( 1.07855, 1.18977 ), Vector2( 1.07855, 1.18977 ), Vector2( 1.15414, 1.2141 ), Vector2( 1.37805, 1.38092 ), Vector2( 1.45311, 1.50517 ), Vector2( 1.60774, 1.65711 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("speech_bubble:visibility/visible")
+tracks/10/path = NodePath("speech_bubble:visible")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
-"times": FloatArray( 0, 0.9, 16.2, 187.8, 195.8, 211.6, 218.6, 267.9, 290.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.9, 16.2, 187.8, 195.8, 211.6, 218.6, 267.9, 290.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false, true, false, true, false, true, false ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("speech_bubble/speech:bbcode/bbcode")
+tracks/11/path = NodePath("speech_bubble/speech:bbcode_text")
 tracks/11/interp = 1
+tracks/11/loop_wrap = true
 tracks/11/imported = false
+tracks/11/enabled = true
 tracks/11/keys = {
-"times": FloatArray( 0, 6.4, 10.7, 187.8, 211.6, 267.9, 269.9, 279.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 6.4, 10.7, 187.8, 211.6, 267.9, 269.9, 279.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "Whew! I made it!", "Whoa! Watch out!", "Oh! Um... hi.", "Um... *most*?", "Wait, what did you say?", "...", "You know what? Yeah, sure.", "I've got nothing better to do." ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("outside_office/door:transform/pos")
+tracks/12/path = NodePath("outside_office/door:position")
 tracks/12/interp = 1
+tracks/12/loop_wrap = true
 tracks/12/imported = false
+tracks/12/enabled = true
 tracks/12/keys = {
-"times": FloatArray( 6, 6.2 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 6, 6.03, 6.17, 6.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.498777, -0.679602 ), Vector2( -16.5636, -0.884731 ) ]
+"values": [ Vector2( -0.401108, -1.93941 ), Vector2( 0.324291, -1.91625 ), Vector2( -0.209154, -2.19165 ), Vector2( -11.6475, -0.900297 ), Vector2( -14.0986, -0.884731 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("outside_office/door:flip_h")
 tracks/13/interp = 1
+tracks/13/loop_wrap = true
 tracks/13/imported = false
+tracks/13/enabled = true
 tracks/13/keys = {
-"times": FloatArray( 6, 6.2 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 6, 6.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ false, false, true ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("outside_office/door:visibility/visible")
+tracks/14/path = NodePath("outside_office/door:visible")
 tracks/14/interp = 1
+tracks/14/loop_wrap = true
 tracks/14/imported = false
+tracks/14/enabled = true
 tracks/14/keys = {
-"times": FloatArray( 6, 6.1, 6.2 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 6, 6.03, 6.17, 6.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ true, true, false, true, true ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("pixel:transform/pos")
+tracks/15/path = NodePath("pixel:position")
 tracks/15/interp = 1
+tracks/15/loop_wrap = true
 tracks/15/imported = false
+tracks/15/enabled = true
 tracks/15/keys = {
-"times": FloatArray( 44.8, 46.2 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 3.53, 44.76, 46.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -5.75828, 5.77512 ), Vector2( -19.0301, 2.60686 ) ]
+"values": [ Vector2( -2.68928, 3.99428 ), Vector2( -2.68912, 3.99513 ), Vector2( -1.9562, 6.54378 ), Vector2( -19.6795, 3.77883 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("other_bubble:visibility/visible")
+tracks/16/path = NodePath("pixel:scale")
 tracks/16/interp = 1
+tracks/16/loop_wrap = true
 tracks/16/imported = false
+tracks/16/enabled = true
 tracks/16/keys = {
-"times": FloatArray( 0, 16.8, 44.1, 46.6, 187.8, 195.8, 211.6, 218.6, 254.1, 255.1, 267.9, 290.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( -0.14, 0.01, 44.52, 44.64, 45.01, 45.71, 46.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.66331, 0.647665 ), Vector2( 0.663302, 0.647649 ), Vector2( 0.663302, 0.647649 ), Vector2( 0.69255, 0.628923 ), Vector2( 0.730153, 0.75862 ), Vector2( 0.767353, 0.755241 ), Vector2( 0.767353, 0.755241 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("pixel/left_arm:texture")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 44.2, 46.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("other_bubble:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 16.8, 44.1, 46.6, 187.8, 195.8, 211.6, 218.6, 254.1, 255.1, 267.9, 290.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false, true, false, true, false, true, false, true, false, true ]
 }
-tracks/17/type = "value"
-tracks/17/path = NodePath("other_bubble/speech:bbcode/bbcode")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 16.8, 36.2, 46.6, 56, 66.4, 85.5, 102.1, 117.5, 127.4, 142.3, 154.8, 168.6, 195.8, 218.6, 237.1, 255.1, 290.9, 300.9, 312.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+tracks/19/type = "value"
+tracks/19/path = NodePath("other_bubble/speech:bbcode_text")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 16.8, 36.2, 46.6, 56, 66.4, 85.5, 102.1, 117.5, 127.4, 142.3, 154.8, 168.6, 195.8, 218.6, 237.1, 255.1, 290.9, 300.9, 312.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "Oh, yes! You must be the new liason! You are just in time.", "Please, won't you come inside?", "It is so nice to meet you.", "My name is Pixel and I will be your assistant.", "I am in charge of the Pixels who design the games, and maintain the arcades.", "Sam will be here soon. He is in charge of the Players.", "I appreciate you taking this job on such short notice.", "It really is a totally normal job. ", "The people of this kingdom love video games.", "But they are very specific about what they play.", "*Most* of your job will be visiting the different kingdoms.", "Just to make sure everything is smooth between the pixels and players.", "Erm... well yes legally you should be informed there have been some deaths....", "Recently someone has been sabotaging the Pixel and Player relations.", "We don't know who it is, but they are very... well...
 effective.", "Do you still think you can take the job?", "...! *whew* Great! Alright then!", "Well you should come and sit before you change your mind.", "We can complete a little training session while we wait for Sam." ]
 }
-tracks/18/type = "value"
-tracks/18/path = NodePath("outside_office:visibility/visible")
-tracks/18/interp = 1
-tracks/18/imported = false
-tracks/18/keys = {
-"times": FloatArray( 0, 45.5, 45.8 ),
-"transitions": FloatArray( 1, 1, 1 ),
+tracks/20/type = "value"
+tracks/20/path = NodePath("outside_office:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 45.5, 45.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, true, false ]
 }
-tracks/19/type = "value"
-tracks/19/path = NodePath("inner_office:transform/pos")
-tracks/19/interp = 1
-tracks/19/imported = false
-tracks/19/keys = {
-"times": FloatArray( 45.8, 46.2 ),
-"transitions": FloatArray( 1, 1 ),
+tracks/21/type = "value"
+tracks/21/path = NodePath("inner_office:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 45.8, 46.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.835938, 0.548452 ), Vector2( 0.546793, -2.38416 ) ]
 }
-tracks/20/type = "value"
-tracks/20/path = NodePath("inner_office:transform/scale")
-tracks/20/interp = 1
-tracks/20/imported = false
-tracks/20/keys = {
-"times": FloatArray( 45.8, 45.9 ),
-"transitions": FloatArray( 1, 1 ),
+tracks/22/type = "value"
+tracks/22/path = NodePath("inner_office:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 45.8, 45.9 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.997054, 1.03856 ), Vector2( 1.08923, 1.1302 ) ]
-}
-tracks/21/type = "value"
-tracks/21/path = NodePath("pixel/left_arm:texture")
-tracks/21/interp = 1
-tracks/21/imported = false
-tracks/21/keys = {
-"times": FloatArray( 0, 44.2, 46.4 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ]
 }
 
 [sub_resource type="DynamicFont" id=2]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 14 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=3]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 14 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=4]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 14 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 14 )
 
 [node name="story_piece_two" type="Node2D"]
 
-transform/pos = Vector2( 514.994, 303.814 )
-transform/scale = Vector2( 16.0311, 9.62488 )
-script/script = ExtResource( 1 )
+position = Vector2( 514.994, 303.814 )
+scale = Vector2( 16.0311, 9.62488 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/two_one = SubResource( 1 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = "two_one"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/two_one = SubResource( 1 )
+blend_times = [  ]
 
-[node name="strategy" type="Sprite" parent="."]
+[node name="strategy" type="Sprite" parent="." index="1"]
 
 editor/display_folded = true
-visibility/visible = false
-transform/pos = Vector2( -0.37561, 0.0704174 )
-transform/scale = Vector2( 0.0448001, 0.0752878 )
+visible = false
+position = Vector2( -0.37561, 0.0704174 )
+scale = Vector2( 0.0448001, 0.0752878 )
 texture = ExtResource( 4 )
 
-[node name="crtv" type="Sprite" parent="strategy"]
+[node name="crtv" type="Sprite" parent="strategy" index="0"]
 
-transform/pos = Vector2( 14.1786, -390.091 )
-transform/scale = Vector2( 2.80987, 1.32809 )
+position = Vector2( 14.1786, -341.105 )
+scale = Vector2( 2.80987, 1.32809 )
 texture = ExtResource( 5 )
 
-[node name="crtv1" type="Sprite" parent="strategy"]
+[node name="crtv1" type="Sprite" parent="strategy" index="1"]
 
-transform/pos = Vector2( 42.2312, -19.5261 )
-transform/scale = Vector2( 2.80987, 0.141569 )
+position = Vector2( 40.9475, 40.2752 )
+scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
-[node name="crtv2" type="Sprite" parent="strategy"]
+[node name="crtv2" type="Sprite" parent="strategy" index="2"]
 
-transform/pos = Vector2( 42.2312, 65.9621 )
-transform/scale = Vector2( 2.80987, 0.141569 )
+position = Vector2( 40.9475, 125.763 )
+scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
-[node name="crtv3" type="Sprite" parent="strategy"]
+[node name="crtv3" type="Sprite" parent="strategy" index="3"]
 
-transform/pos = Vector2( 42.2314, 445.499 )
-transform/scale = Vector2( 2.80987, 1.64743 )
+position = Vector2( 40.9476, 505.3 )
+scale = Vector2( 2.80987, 1.64743 )
 texture = ExtResource( 5 )
 
-[node name="inner_office" type="Node2D" parent="."]
+[node name="inner_office" type="Node2D" parent="." index="2"]
 
-transform/pos = Vector2( 0.546793, -2.38416 )
-transform/scale = Vector2( 1.08923, 1.1302 )
+position = Vector2( 0.546793, -2.38416 )
+scale = Vector2( 1.08923, 1.1302 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Sprite" type="Sprite" parent="inner_office"]
+[node name="Sprite" type="Sprite" parent="inner_office" index="0"]
 
-transform/pos = Vector2( -1.03239, 2.71427 )
-transform/scale = Vector2( 0.0700722, 0.0619792 )
+position = Vector2( -1.03239, 2.71427 )
+scale = Vector2( 0.0700722, 0.0619792 )
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="window" type="Sprite" parent="inner_office"]
+[node name="window" type="Sprite" parent="inner_office" index="1"]
 
-transform/pos = Vector2( -0.894562, 1.02959 )
-transform/scale = Vector2( 0.0688434, 0.0859832 )
+position = Vector2( -0.894562, 1.02959 )
+scale = Vector2( 0.0688434, 0.0859832 )
 texture = ExtResource( 7 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="chair" type="Sprite" parent="inner_office"]
+[node name="chair" type="Sprite" parent="inner_office" index="2"]
 
-transform/pos = Vector2( -1.03533, 15.618 )
-transform/scale = Vector2( 0.0316858, 0.0376473 )
+position = Vector2( -1.03533, 15.618 )
+scale = Vector2( 0.0316858, 0.0376473 )
 texture = ExtResource( 8 )
 flip_h = true
 
-[node name="desk" type="Sprite" parent="inner_office"]
+[node name="desk" type="Sprite" parent="inner_office" index="3"]
 
-transform/pos = Vector2( -0.438004, 18.1301 )
-transform/scale = Vector2( 0.0415765, 0.0653465 )
+position = Vector2( -0.438004, 18.1301 )
+scale = Vector2( 0.0415765, 0.0653465 )
 texture = ExtResource( 9 )
 flip_h = true
 
-[node name="computer" type="Sprite" parent="inner_office"]
+[node name="computer" type="Sprite" parent="inner_office" index="4"]
 
-transform/pos = Vector2( 2.81787, 6.92998 )
-transform/scale = Vector2( 0.0337077, 0.0503777 )
+position = Vector2( 2.81787, 6.92998 )
+scale = Vector2( 0.0337077, 0.0503777 )
 texture = ExtResource( 10 )
 
-[node name="lamp" type="Sprite" parent="inner_office"]
+[node name="lamp" type="Sprite" parent="inner_office" index="5"]
 
-transform/pos = Vector2( -5.65436, 10.7776 )
-transform/scale = Vector2( 0.0103429, 0.00899488 )
+position = Vector2( -5.65436, 10.7776 )
+scale = Vector2( 0.0103429, 0.00899488 )
 texture = ExtResource( 10 )
 
-[node name="pixel" type="Node2D" parent="."]
+[node name="pixel" type="Node2D" parent="." index="3"]
 
-transform/pos = Vector2( -19.0301, 2.60686 )
-transform/scale = Vector2( 0.907402, 0.824811 )
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( -19.6795, 3.77883 )
+scale = Vector2( 0.767353, 0.755241 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="left_arm" type="Sprite" parent="pixel"]
+[node name="left_arm" type="Sprite" parent="pixel" index="0"]
 
-transform/pos = Vector2( 3.16718, 7.19054 )
-transform/scale = Vector2( 0.0654626, 0.105712 )
+position = Vector2( 3.16718, 7.19054 )
+scale = Vector2( 0.0654626, 0.105712 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="outside_office" type="Node2D" parent="."]
+[node name="outside_office" type="Node2D" parent="." index="4"]
 
-visibility/visible = false
-transform/pos = Vector2( 0.212709, -5.55474 )
-transform/scale = Vector2( 1.60774, 1.65711 )
+visible = false
+position = Vector2( 0.212709, -5.55474 )
+scale = Vector2( 1.60774, 1.65711 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="walls" type="Sprite" parent="outside_office"]
+[node name="walls" type="Sprite" parent="outside_office" index="0"]
 
-transform/pos = Vector2( -0.193185, -0.990216 )
-transform/scale = Vector2( 0.0658585, 0.0660327 )
+position = Vector2( -0.193185, -0.990216 )
+scale = Vector2( 0.0658585, 0.0660327 )
 texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="door" type="Sprite" parent="outside_office"]
+[node name="door" type="Sprite" parent="outside_office" index="1"]
 
-transform/pos = Vector2( -16.5636, -0.884731 )
-transform/scale = Vector2( 0.0589716, 0.0767605 )
+position = Vector2( -14.0986, -0.884731 )
+scale = Vector2( 0.070356, 0.0697976 )
 texture = ExtResource( 12 )
 flip_h = true
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
-[node name="speech_bubble" type="Node2D" parent="."]
+[node name="speech_bubble" type="Node2D" parent="." index="5"]
 
-visibility/visible = false
-transform/pos = Vector2( 0.108246, 0 )
+visible = false
+position = Vector2( 0.108246, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="bubble" type="Sprite" parent="speech_bubble"]
+[node name="bubble" type="Sprite" parent="speech_bubble" index="0"]
 
-transform/pos = Vector2( -10.3762, 13.7967 )
-transform/scale = Vector2( 0.0271605, 0.0393754 )
+position = Vector2( -10.3762, 13.7967 )
+scale = Vector2( 0.0271605, 0.0393754 )
 texture = ExtResource( 13 )
 flip_h = true
 flip_v = true
 
-[node name="speech" type="RichTextLabel" parent="speech_bubble"]
+[node name="speech" type="RichTextLabel" parent="speech_bubble" index="1"]
 
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -21.0
-margin/top = 7.0
-margin/right = 190.0
-margin/bottom = 150.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -21.0
+margin_top = 7.0
+margin_right = 190.0
+margin_bottom = 150.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Oh! Um... hi."
+bbcode_enabled = false
+bbcode_text = "Oh! Um... hi."
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Oh! Um... hi."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="other_bubble" type="Node2D" parent="."]
+[node name="other_bubble" type="Node2D" parent="." index="6"]
 
-visibility/visible = false
-transform/pos = Vector2( -2.30912, -1.68264 )
+position = Vector2( -2.30912, -1.68264 )
 
-[node name="bubble" type="Sprite" parent="other_bubble"]
+[node name="bubble" type="Sprite" parent="other_bubble" index="0"]
 
-transform/pos = Vector2( 20.4304, 0.952179 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.0439458, 0.0494063 )
+position = Vector2( 20.2647, -2.6085 )
+scale = Vector2( 0.0237433, 0.0724929 )
 texture = ExtResource( 15 )
 
-[node name="speech" type="RichTextLabel" parent="other_bubble"]
+[node name="speech" type="RichTextLabel" parent="other_bubble" index="1"]
 
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 10.0
-margin/top = -17.0
-margin/right = 220.0
-margin/bottom = 340.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = -17.0
+margin_right = 220.0
+margin_bottom = 340.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "I appreciate you taking this job on such short notice."
+bbcode_enabled = false
+bbcode_text = "*Most* of your job will be visiting the different kingdoms."
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "*Most* of your job will be visiting the different kingdoms."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="StreamPlayer" type="StreamPlayer" parent="."]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
 
-stream/stream = ExtResource( 16 )
-stream/play = false
-stream/loop = true
-stream/volume_db = -10.0
-stream/autoplay = true
-stream/paused = false
-stream/loop_restart_time = 0.0
-stream/buffering_ms = 500
+stream = ExtResource( 16 )
+volume_db = -10.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
-[node name="skip_button" type="LinkButton" parent="."]
+[node name="skip_button" type="LinkButton" parent="." index="8"]
 
-rect/scale = Vector2( 0.1, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -27.0
-margin/top = 27.0
-margin/right = 46.0
-margin/bottom = 67.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -30.0
+margin_top = 25.0
+margin_right = 43.0
+margin_bottom = 65.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.941176, 0.929412, 0.894118, 1 )
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "SKIP"
 underline = 2
 
-[node name="mute_button" type="TextureButton" parent="."]
+[node name="mute_button" type="TextureButton" parent="." index="9"]
 
-visibility/blend_mode = 1
-rect/scale = Vector2( 0.5, 0.5 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 19.0
-margin/top = 25.0
-margin/right = 29.0
-margin/bottom = 40.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 27.0
+margin_top = 24.0
+margin_right = 127.0
+margin_bottom = 124.0
+rect_scale = Vector2( 0.03, 0.05 )
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = true
-click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 17 )
-textures/pressed = ExtResource( 18 )
-params/resize_mode = 0
-params/scale = Vector2( 0.1, 0.15 )
-params/stretch_mode = 0
+group = null
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 18 )
+_sections_unfolded = [ "Rect" ]
 
-[connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 

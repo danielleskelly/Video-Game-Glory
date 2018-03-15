@@ -23,7 +23,7 @@ var storefront_decent = load("res://storefront_decent.png")
 var storefront_worst = load("res://storefront_worst.png")
 
 #display nodes
-onready var town_banner = get_tree().get_current_scene().get_node("town_banner")
+onready var town_banner = get_node("town_name")
 onready var game_over_alert = get_tree().get_current_scene().get_node("game_over_alert")
 onready var hollyhock_complete = get_node("hollyhock_complete")
 onready var fiyork_complete = get_node("fiyork_complete")
@@ -52,7 +52,7 @@ var credit_limit = 1000
 func _ready():
 	set_sound()
 	set_process(true)
-	
+
 func _process(delta):
 	#all town displays
 	cash.clear()
@@ -83,38 +83,56 @@ func _process(delta):
 		pass
 	
 	#upgrades
+	var arcade_ok = get_node("upgrades/arcades/arcade_upgrade")
 	if global.arcade_best_key == true:
 		get_node("upgrades/arcades/image").set_texture(arcade_best)
+		arcade_ok.hide()
 	elif global.arcade_best_key == false and global.arcade_great_key == true:
 		get_node("upgrades/arcades/image").set_texture(arcade_great)
+		arcade_ok.show()
 	elif global.arcade_great_key == false and global.arcade_good_key == true:
 		get_node("upgrades/arcades/image").set_texture(arcade_good)
+		arcade_ok.show()
 	elif global.arcade_good_key == false and global.arcade_decent_key == true:
 		get_node("upgrades/arcades/image").set_texture(arcade_decent)
+		arcade_ok.show()
 	elif global.arcade_decent_key == false and global.arcade_worst_key == true:
 		get_node("upgrades/arcades/image").set_texture(arcade_worst)
+		arcade_ok.show()
 			
+	var entertainment_ok = get_node("upgrades/entertainment/entertainment_upgrade")
 	if global.entertainment_best_key == true:
 		get_node("upgrades/entertainment/image").set_texture(entertainment_best)
+		entertainment_ok.hide()
 	elif global.entertainment_best_key == false and global.entertainment_great_key == true:
 		get_node("upgrades/entertainment/image").set_texture(entertainment_great)
+		entertainment_ok.show()
 	elif global.entertainment_great_key == false and global.entertainment_good_key == true:
 		get_node("upgrades/entertainment/image").set_texture(entertainment_good)
+		entertainment_ok.show()
 	elif global.entertainment_good_key == false and global.entertainment_decent_key == true:
 		get_node("upgrades/entertainment/image").set_texture(entertainment_decent)
+		entertainment_ok.show()
 	elif global.entertainment_decent_key == false and global.entertainment_worst_key == true:
 		get_node("upgrades/entertainment/image").set_texture(entertainment_worst)
+		entertainment_ok.show()
 	
+	var storefront_ok = get_node("upgrades/storefront/storefront_upgrade")
 	if global.storefront_best_key == true:
 		get_node("upgrades/storefront/image").set_texture(storefront_best)
+		storefront_ok.hide()
 	elif global.storefront_best_key == false and global.storefront_great_key == true:
 		get_node("upgrades/storefront/image").set_texture(storefront_great)
+		storefront_ok.show()
 	elif global.storefront_great_key == false and global.storefront_good_key == true:
 		get_node("upgrades/storefront/image").set_texture(storefront_good)
+		storefront_ok.show()
 	elif global.storefront_good_key == false and global.storefront_decent_key == true:
 		get_node("upgrades/storefront/image").set_texture(storefront_decent)
+		storefront_ok.show()
 	elif global.storefront_decent_key == false and global.storefront_worst_key == true:
 		get_node("upgrades/storefront/image").set_texture(storefront_worst)
+		storefront_ok.show()
 		
 	if (arcade_day.playershare > 1):
 		marketshare_output.clear()
@@ -130,7 +148,7 @@ func _process(delta):
 	if (global.town_select == "hollyhock"):
 		#level win and/or win requirements
 		if (arcade_day.playershare >= .75):
-			hollyhock_complete.set_hidden(false)
+			hollyhock_complete.show()
 			get_tree().set_pause(true)
 		else:
 			get_node("town_business/to_do_list/one/check_box").set_texture(uncheck)
@@ -144,18 +162,18 @@ func _process(delta):
 			
 		#town blink cursor
 		if (get_node("cursor_blink").get_time_left() > 1):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Hollyhock...")
+			town_banner.clear()
+			town_banner.add_text("Hollyhock...")
 		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Hollyhock...^")
+			town_banner.clear()
+			town_banner.add_text("Hollyhock...^")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 	
 	
 	elif (global.town_select == "fiyork"):
 		if (global.storefront_sabotage_key == false) and (global.entertainment_sabotage_key == false) and (global.arcade_sabotage_key == false):
-			fiyork_complete.set_hidden(false)
+			fiyork_complete.show()
 			get_tree().set_pause(true)
 		else:
 			get_node("town_business/to_do_list/one/task").clear()
@@ -186,17 +204,17 @@ func _process(delta):
 			get_node("town_business/to_do_list/five").hide()
 			get_node("town_business/to_do_list/six").hide()
 		if (get_node("cursor_blink").get_time_left() > 1):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Fiyork...")
+			town_banner.clear()
+			town_banner.add_text("Fiyork...")
 		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Fiyork...l")
+			town_banner.clear()
+			town_banner.add_text("Fiyork...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 	
 	elif (global.town_select == "untilly"):
 		if (int(global.cash) >= 500) and (int(global.current_loan) <= 0):
-			untilly_complete.set_hidden(false)
+			untilly_complete.show()
 			get_tree().set_pause(true)
 		else:
 			get_node("town_business/to_do_list/one/task").clear()
@@ -217,17 +235,17 @@ func _process(delta):
 			get_node("town_business/to_do_list/five").hide()
 			get_node("town_business/to_do_list/six").hide()
 		if (get_node("cursor_blink").get_time_left() > 1):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Untilly...")
+			town_banner.clear()
+			town_banner.add_text("Untilly...")
 		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Untilly...l")
+			town_banner.clear()
+			town_banner.add_text("Untilly...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 	
 	elif (global.town_select == "plansey"):
 		if (arcade_day.playershare >= .75) and (global.current_loan == 0) and (global.genre_two_key == true):
-			plansey_complete.set_hidden(false)
+			plansey_complete.show()
 			get_tree().set_pause(true)
 		else:
 			get_node("town_business/to_do_list/one/task").clear()
@@ -258,17 +276,17 @@ func _process(delta):
 			get_node("town_business/to_do_list/five").hide()
 			get_node("town_business/to_do_list/six").hide()
 		if (get_node("cursor_blink").get_time_left() > 1):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Plansey...")
+			town_banner.clear()
+			town_banner.add_text("Plansey...")
 		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Plansey...l")
+			town_banner.clear()
+			town_banner.add_text("Plansey...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 	
 	elif (global.town_select == "windrow"):
 		if (global.entertainment_sabotage_key == false) and (global.storefront_sabotage_key == false) and (global.arcade_sabotage_key == false) and (global.genre_two_key == true) and (global.genre_three_key == true):
-			windrow_complete.set_hidden(false)
+			windrow_complete.show()
 			get_tree().set_pause(true)
 		else:
 			get_node("town_business/to_do_list/one/task").clear()
@@ -313,17 +331,17 @@ func _process(delta):
 				get_node("town_business/to_do_list/five/line").hide()
 			get_node("town_business/to_do_list/six").hide()
 		if (get_node("cursor_blink").get_time_left() > 1):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Windrow...")
+			town_banner.clear()
+			town_banner.add_text("Windrow...")
 		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Windrow...l")
+			town_banner.clear()
+			town_banner.add_text("Windrow...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 	
 	elif (global.town_select == "banlon"):
 		if (int(global.cash) >= 1000) and (global.current_loan == 0) and (global.genre_two_key == true) and (global.genre_three_key == true):
-			banlon_complete.set_hidden(false)
+			banlon_complete.show()
 			get_tree().set_pause(true)
 		else:
 			get_node("town_business/to_do_list/one/task").clear()
@@ -361,17 +379,17 @@ func _process(delta):
 			get_node("town_business/to_do_list/five").hide()
 			get_node("town_business/to_do_list/six").hide()
 		if (get_node("cursor_blink").get_time_left() > 1):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Banlon...")
+			town_banner.clear()
+			town_banner.add_text("Banlon...")
 		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Banlon...l")
+			town_banner.clear()
+			town_banner.add_text("Banlon...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 	
 	elif (global.town_select == "slatten"):
 		if (global.storefront_sabotage_key == false) and (global.entertainment_sabotage_key == false) and (global.arcade_sabotage_key == false) and (int(global.cash) >= 500) and (global.current_loan == 0) and (global.genre_two_key == true) and (global.genre_three_key == true):
-			slatten_complete.set_hidden(false)
+			slatten_complete.show()
 			get_tree().set_pause(true)
 		else:
 			get_node("town_business/to_do_list/one/task").clear()
@@ -423,18 +441,18 @@ func _process(delta):
 				get_node("town_business/to_do_list/six/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/six/line").hide()
 		if (get_node("cursor_blink").get_time_left() > 1):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Slatten...")
+			town_banner.clear()
+			town_banner.add_text("Slatten...")
 		elif ((get_node("cursor_blink").get_time_left() < 1) and (get_node("cursor_blink").get_time_left() != 0)):
-			town_banner.get_child(0).clear()
-			town_banner.get_child(0).add_text("Slatten...l")
+			town_banner.clear()
+			town_banner.add_text("Slatten...l")
 		elif (get_node("cursor_blink").get_time_left() == 0):
 			get_node("cursor_blink").start()
 
 func _on_start_day_button_up():
 	global.game_over_check()
 	if global.game_over == true:
-		game_over_alert.set_hidden(false)
+		game_over_alert.show()
 		get_tree().set_pause(true)
 	elif global.game_over == false:
 		perks.perks()
@@ -443,53 +461,52 @@ func _on_start_day_button_up():
 		get_node("skip_or_play/perk_goal_output").clear()
 		get_node("skip_or_play/perk_goal_output").add_text(str(perks.perk_goal))
 		get_node("skip_or_play").show()
-	
+
 func _on_continue_ok_button_down():
 	if (global.town_select == "hollyhock"):
-		hollyhock_complete.set_hidden(true)
+		hollyhock_complete.hide()
 		global.endless_unlocked = "true"
 		rewards_globals.complete_hollyhock = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_three.tscn")
 	elif (global.town_select == "fiyork"):
-		fiyork_complete.set_hidden(true)
+		fiyork_complete.hide()
 		global.shoot_that_rock = true
 		rewards_globals.complete_fiyork = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_four.tscn")
 	elif (global.town_select == "untilly"):
-		plansey_complete.set_hidden(true)
+		plansey_complete.hide()
 		global.falling_shapes_organization = true
 		rewards_globals.complete_plansey = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_five.tscn")
 	elif (global.town_select == "plansey"):
-		untilly_complete.set_hidden(true)
+		untilly_complete.hide()
 		global.mathmatic_mastication = true
 		rewards_globals.complete_untilly = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_six.tscn")
 	elif (global.town_select == "windrow"):
-		windrow_complete.set_hidden(true)
+		windrow_complete.hide()
 		global.tall_wall_fall_ball = true
 		rewards_globals.complete_windrow = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_seven.tscn")
 	elif (global.town_select == "banlon"):
-		banlon_complete.set_hidden(true)
+		banlon_complete.hide()
 		global.jump_and_dodge = true
 		rewards_globals.complete_banlon = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_eight.tscn")
 	elif (global.town_select == "slatten"):
-		slatten_complete.set_hidden(true)
+		slatten_complete.hide()
 		global.lights_off = true
 		rewards_globals.complete_slatten = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_nine.tscn")
 	global.daily_reset()
 	get_tree().set_pause(false)
-	
 
 func _on_game_over_ok_button_down():
 	global.daily_reset()
@@ -498,7 +515,7 @@ func _on_game_over_ok_button_down():
 func _on_skip_button_down():
 	rewards_globals.fifty_business_days += 1
 	global.daily_reset()
-	get_node("skip_or_play").set_hidden(true)
+	get_node("skip_or_play").hide()
 	arcade_day.business_day()
 	get_tree().change_scene("res://strategy.tscn")
 
@@ -508,7 +525,7 @@ func _on_play_button_down():
 	if global.income > rewards_globals.earn_thousand:
 		rewards_globals.earn_thousand = global.income
 	global.daily_reset()
-	get_node("skip_or_play").set_hidden(true)
+	get_node("skip_or_play").hide()
 	arcade_day.business_day()
 	if (global.town_select == "hollyhock"):
 		get_tree().change_scene("res://hollyhock_time_management.tscn")
@@ -527,48 +544,45 @@ func _on_play_button_down():
 
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
-	get_node("menu").set_hidden(false)
+	get_node("menu").show()
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume(new_volume)
+	AudioServer.set_bus_volume_db(0,value-50)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
-	get_node("menu").set_hidden(true)
+	get_node("menu").hide()
 
 func _on_restart_village_button_down():
-	get_node("menu").set_hidden(true)
-	get_node("are_you_sure").set_hidden(false)
+	get_node("menu").hide()
+	get_node("are_you_sure").show()
 
 
 func _on_yes_restart_button_down():
 	get_tree().set_pause(false)
 	global.daily_reset()
 	global.level_reset()
-	
 
 func _on_no_restart_button_down():
-	get_node("are_you_sure").set_hidden(true)
-	get_node("menu").set_hidden(false)
+	get_node("are_you_sure").hide()
+	get_node("menu").show()
 
 func _on_quit_to_main_button_down():
-	get_node("menu").set_hidden(true)
-	get_node("are_you_sure_2").set_hidden(false)
-
+	get_node("menu").hide()
+	get_node("are_you_sure_2").show()
 
 func _on_yes_main_menu_button_down():
 	get_tree().set_pause(false)
 	get_tree().change_scene("res://player_selection.tscn")
 
 func _on_no_main_menu_button_down():
-	get_node("are_you_sure_2").set_hidden(true)
-	get_node("menu").set_hidden(false)
+	get_node("are_you_sure_2").hide()
+	get_node("menu").show()
 
 func set_sound():
-	get_node("StreamPlayer").set_volume(sound.volume)
+	var music = get_node("StreamPlayer")
+	music.set_volume_db(sound.volume)
 
 func save_game():
 	var savegame = File.new()
@@ -577,15 +591,13 @@ func save_game():
 	savegame.store_line(str(global.endless_unlocked))
 	savegame.close()
 
-
 func _on_autosave_timeout():
-	get_node("autosaved").set_hidden(false)
+	get_node("autosaved").show()
 	get_node("timer_notify").start()
 	save_game()
 
-
 func _on_timer_notify_timeout():
-	get_node("autosaved").set_hidden(true)
+	get_node("autosaved").hide()
 
 func _on_borrow_button_down():
 	if int(global.current_loan) + 10 <= credit_limit:
@@ -596,7 +608,6 @@ func _on_payback_button_down():
 	if int(global.cash) >= 10 and int(global.current_loan) >= 10:
 		global.current_loan = int(global.current_loan) - 10
 		global.cash = int(global.cash) - 10
-
 
 func _on_loan_button_button_down():
 	get_node("loans").show()
@@ -624,18 +635,38 @@ func _on_arcade_upgrade_button_down():
 		if global.cash >= 500:
 			global.cash = int(global.cash) - 500
 			global.arcade_best_key = true
-	elif global.arcade_great_key == false and global.arcade_great_key == true:
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
+	elif global.arcade_great_key == false and global.arcade_good_key == true:
 		if global.cash >= 400:
 			global.cash = int(global.cash) - 400
 			global.arcade_great_key = true
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
 	elif global.arcade_good_key == false and global.arcade_decent_key == true:
 		if global.cash >= 300:
 			global.cash = int(global.cash) - 300
 			global.arcade_good_key = true
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
 	elif global.arcade_decent_key == false and global.arcade_worst_key == true:
 		if global.cash >= 200:
 			global.cash = int(global.cash) - 200
 			global.arcade_decent_key = true
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
 
 func _on_entertainment_upgrade_button_down():
 	if global.entertainment_best_key == true:
@@ -644,20 +675,38 @@ func _on_entertainment_upgrade_button_down():
 		if global.cash >= 500:
 			global.cash = int(global.cash) - 500
 			global.entertainment_best_key = true
-	elif global.entertainment_great_key == false and global.entertainment_great_key == true:
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
+	elif global.entertainment_great_key == false and global.entertainment_good_key == true:
 		if global.cash >= 400:
 			global.cash = int(global.cash) - 400
 			global.entertainment_great_key = true
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
 	elif global.entertainment_good_key == false and global.entertainment_decent_key == true:
 		if global.cash >= 300:
 			global.cash = int(global.cash) - 300
 			global.entertainment_good_key = true
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
 	elif global.entertainment_decent_key == false and global.entertainment_worst_key == true:
 		if global.cash >= 200:
 			global.cash = int(global.cash) - 200
 			global.entertainment_decent_key = true
-
-
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
 
 func _on_storefront_upgrade_button_down():
 	if global.storefront_best_key == true:
@@ -666,15 +715,38 @@ func _on_storefront_upgrade_button_down():
 		if global.cash >= 500:
 			global.cash = int(global.cash) - 500
 			global.storefront_best_key = true
-	elif global.storefront_great_key == false and global.storefront_great_key == true:
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
+	elif global.storefront_great_key == false and global.storefront_good_key == true:
 		if global.cash >= 400:
 			global.cash = int(global.cash) - 400
 			global.storefront_great_key = true
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
 	elif global.storefront_good_key == false and global.storefront_decent_key == true:
 		if global.cash >= 300:
 			global.cash = int(global.cash) - 300
 			global.storefront_good_key = true
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
 	elif global.storefront_decent_key == false and global.storefront_worst_key == true:
 		if global.cash >= 200:
 			global.cash = int(global.cash) - 200
 			global.storefront_decent_key = true
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
+
+func _on_notify2_timeout():
+	get_node("notify").hide()

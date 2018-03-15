@@ -2,23 +2,17 @@ extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
 
-var customer_choice
-var price_choice
-var randomness
-var rand_arcade_price
-var concession_choice
-var concessions_desire
-var concessions_price_check
-
 var new_volume
 
 var hundreds
 var tens
 var ones
-
-onready var pixel = get_node("pixel")
+var pixel
+var customer
 
 func _ready():
+	pixel = get_node("pixel")
+	customer = get_node("KinematicBody2D")
 	if global.sales_made != 0:
 		var time = 120/global.sales_made
 		get_node("customer_display/customer").set_wait_time(time)
@@ -32,8 +26,21 @@ func _ready():
 	else:
 		get_tree().set_pause(true)
 		countin()
-	get_node("StreamPlayer").set_volume(sound.volume)
+	get_node("StreamPlayer").set_volume_db(sound.volume)
+	set_physics_process(true)
 	set_process(true)
+
+func _physics_process(delta):
+	var direction = Vector2(0,0)
+	if (Input.is_action_pressed("move_up")):
+		direction+= Vector2(0,-1)
+	if (Input.is_action_pressed("move_down")):
+		direction+= Vector2(0,1)
+	if (Input.is_action_pressed("move_left")):
+		direction+= Vector2(-1,0)
+	if (Input.is_action_pressed("move_right")):
+		direction+= Vector2(1,0)
+	customer.move_and_collide(direction*delta*150)
 
 func _process(delta):
 	if Input.is_action_pressed("ui_cancel"):
@@ -53,13 +60,12 @@ func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
 	get_node("menu").set_hidden(false)
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
-	
 
 func _on_sound_slider_value_changed( value ):
 	new_volume = value / 100
 	sound.volume = new_volume
 	get_node("StreamPlayer").set_volume(new_volume)
-	
+
 func point_display():
 		var one_ones_digit = ((perks.success + perks.perk_final_count)) % 10
 		var one_tens_digit = ((perks.success + perks.perk_final_count) / 10) % 10
@@ -122,7 +128,7 @@ func _on_pop_timer_timeout():
 func _on_tutorial_button_button_down():
 	get_node("tutorial").hide()
 	countin()
-	
+
 func countin():
 	get_node("in").show()
 	get_node("in/count_timer").start()

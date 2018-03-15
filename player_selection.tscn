@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=1]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://player_selection.gd" type="Script" id=1]
 [ext_resource path="res://main_background.png" type="Texture" id=2]
@@ -13,636 +13,845 @@
 
 [sub_resource type="Animation" id=1]
 
-resource/name = "title_page"
+resource_name = "title_page"
 length = 20.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("title_card:bbcode/bbcode")
+tracks/0/path = NodePath("title_card:bbcode_text")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.3, 3.5, 3.7, 3.9, 4.1, 4.3, 4.5, 4.8, 5, 5.4, 5.6, 5.8, 6, 6.2, 6.2, 6.6, 6.8, 7, 7.2, 7.2, 7.4, 7.6, 7.8, 8, 8.2, 8.4, 8.4, 8.8, 9.2, 9.4, 9.4, 9.6, 10, 10.3, 10.4, 10.6, 10.8, 10.9, 10.9, 11.2, 11.6, 12, 12.4, 12.4, 12.8, 13.2, 13.6, 14, 14.4, 14.8, 15.2, 15.6, 16, 16.4, 16.8, 17.2, 17.6, 18, 18.4, 18.8, 18.8, 19.2, 19.6, 20 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.3, 3.5, 3.7, 3.9, 4.1, 4.3, 4.5, 4.8, 5, 5.4, 5.6, 5.8, 6, 6.2, 6.2, 6.6, 6.8, 7, 7.2, 7.2, 7.4, 7.6, 7.8, 8, 8.2, 8.4, 8.4, 8.8, 9.2, 9.4, 9.4, 9.6, 10, 10.3, 10.4, 10.6, 10.8, 10.9, 10.9, 11.2, 11.6, 12, 12.4, 12.4, 12.8, 13.2, 13.6, 14, 14.4, 14.8, 15.2, 15.6, 16, 16.4, 16.8, 17.2, 17.6, 18, 18.4, 18.8, 18.8, 19.2, 19.6, 20 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "", "^", "", "^", "V", "V^", "Vi^", "Vi", "Vid", "Vid^", "Vidy^", "Vidye", "Vidyea", "Vidye", "Vidy^", "Vid^", "Vide^", "Video", "Video ^", "Video G^", "Video G", "Video Ga", "Video Gal", "Video Ga^", "Video Gam", "Video Game", "Video Game^", "Video Game l", "Video Game ^", "Video Game G", "Video Game GL", "Video Game GLO^", "Video Game GLOR^", "Video Game GLORY", "Video Game GLORYl", "Video Game GLORY^", "Video Game GLOR", "Video Game GL^", "Video Game Gl", "Video Game G^", "Video Game G", "Video Game Gl^", "Video Game Glo^", "Video Game Glo", "Video Game Glor", "Video Game Glory", "Video Game Gloryl", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Gloryl", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory", "Video Game Gloryl", "Video Game Glory^", "Video Game Glory", "Video Game Glory^", "Video Game Glory" ]
 }
 
 [sub_resource type="DynamicFont" id=2]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=5]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=6]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=7]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=8]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=9]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=10]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=11]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=12]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=13]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=14]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=15]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=16]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=17]
 
-font/size = 45
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 3 )
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
-[node name="player_selection" type="Node2D"]
+[node name="player_selection" type="Node2D" index="0"]
 
-process/pause_mode = 2
-transform/pos = Vector2( 514.234, 304.858 )
-transform/scale = Vector2( 16.058, 9.58248 )
-script/script = ExtResource( 1 )
+pause_mode = 2
+position = Vector2( 514.234, 304.858 )
+scale = Vector2( 16.058, 9.58248 )
+script = ExtResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/title_page = SubResource( 1 )
-playback/active = true
-playback/speed = 0.5
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = "title_page"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/title_page = SubResource( 1 )
+blend_times = [  ]
 
-[node name="main_background" type="Sprite" parent="."]
+[node name="main_background" type="Sprite" parent="." index="1"]
 
-transform/pos = Vector2( -0.208847, 0.204338 )
-transform/scale = Vector2( 0.0645061, 0.0648666 )
+position = Vector2( -0.208847, 0.204338 )
+scale = Vector2( 0.0645061, 0.0648666 )
 texture = ExtResource( 2 )
 
-[node name="collander_display" type="RichTextLabel" parent="."]
+[node name="collander_display" type="RichTextLabel" parent="." index="2"]
 
-rect/scale = Vector2( 0.06, 0.1 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -18.0
-margin/top = -29.0
-margin/right = 605.0
-margin/bottom = 125.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -18.0
+margin_top = -29.0
+margin_right = 605.0
+margin_bottom = 125.0
+rect_scale = Vector2( 0.06, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0.945098, 0.933333, 0.898039, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "*** Collander 64 Extended Edition ***
+bbcode_enabled = true
+bbcode_text = "*** Collander 64 Extended Edition ***
 64K RAM 39205 BYTES FREE
 READY."
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "*** Collander 64 Extended Edition ***
+64K RAM 39205 BYTES FREE
+READY."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="title_card" type="RichTextLabel" parent="."]
+[node name="title_card" type="RichTextLabel" parent="." index="3"]
 
-rect/scale = Vector2( 0.125, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -18.0
-margin/top = -11.0
-margin/right = 350.0
-margin/bottom = 46.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -18.0
+margin_top = -11.0
+margin_right = 350.0
+margin_bottom = 46.0
+rect_scale = Vector2( 0.125, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0.945098, 0.933333, 0.898039, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "Video Game Glory"
+bbcode_enabled = true
+bbcode_text = "Video Game Glory"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Video Game Glory"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="new_file" type="RichTextLabel" parent="."]
+[node name="new_file" type="RichTextLabel" parent="." index="4"]
 
 editor/display_folded = true
-rect/scale = Vector2( 0.1, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -8.0
-margin/top = 1.0
-margin/right = 166.0
-margin/bottom = 44.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -8.0
+margin_top = 1.0
+margin_right = 166.0
+margin_bottom = 44.0
+rect_scale = Vector2( 0.1, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0.941176, 0.929412, 0.894118, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "NEW FILE"
+bbcode_enabled = true
+bbcode_text = "NEW FILE"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "NEW FILE"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="new_button" type="LinkButton" parent="new_file"]
+[node name="new_button" type="LinkButton" parent="new_file" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -4.0
-margin/top = 0.0
-margin/right = 158.0
-margin/bottom = 34.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -4.0
+margin_right = 158.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="load_file" type="RichTextLabel" parent="."]
+[node name="load_file" type="RichTextLabel" parent="." index="5"]
 
 editor/display_folded = true
-rect/scale = Vector2( 0.1, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -9.0
-margin/top = 7.0
-margin/right = 162.0
-margin/bottom = 50.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -8.0
+margin_top = 7.0
+margin_right = 163.0
+margin_bottom = 50.0
+rect_scale = Vector2( 0.1, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0.941176, 0.929412, 0.894118, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "LOAD FILE"
+bbcode_enabled = true
+bbcode_text = "LOAD FILE"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "LOAD FILE"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="load_button" type="LinkButton" parent="load_file"]
+[node name="load_button" type="LinkButton" parent="load_file" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -6.0
-margin/top = -1.0
-margin/right = 166.0
-margin/bottom = 36.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -6.0
+margin_top = -1.0
+margin_right = 166.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="quit_game" type="RichTextLabel" parent="."]
+[node name="quit_game" type="RichTextLabel" parent="." index="6"]
 
-rect/scale = Vector2( 0.1, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -10.0
-margin/top = 14.0
-margin/right = 197.0
-margin/bottom = 56.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -9.0
+margin_top = 14.0
+margin_right = 198.0
+margin_bottom = 56.0
+rect_scale = Vector2( 0.1, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0.941176, 0.929412, 0.894118, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "QUIT GAME"
+bbcode_enabled = true
+bbcode_text = "QUIT GAME"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "QUIT GAME"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="quit_button" type="LinkButton" parent="quit_game"]
+[node name="quit_button" type="LinkButton" parent="quit_game" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -23.0
-margin/top = -9.0
-margin/right = 219.0
-margin/bottom = 49.0
-toggle_mode = false
-click_on_press = true
-enabled_focus_mode = 0
-shortcut = null
-
-[node name="endless_mode" type="RichTextLabel" parent="."]
-
-rect/scale = Vector2( 0.1, 0.15 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -12.0
-margin/top = 23.0
-margin/right = 232.0
-margin/bottom = 68.0
-custom_fonts/normal_font = SubResource( 7 )
-custom_colors/default_color = Color( 0.941176, 0.929412, 0.894118, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "ENDLESS MODE"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="endless_button" type="LinkButton" parent="endless_mode"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1.0
-margin/top = -2.0
-margin/right = 227.0
-margin/bottom = 36.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -23.0
+margin_top = -9.0
+margin_right = 219.0
+margin_bottom = 49.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StreamPlayer" type="StreamPlayer" parent="."]
+[node name="endless_mode" type="RichTextLabel" parent="." index="7"]
 
-stream/stream = ExtResource( 4 )
-stream/play = false
-stream/loop = true
-stream/volume_db = 0.0
-stream/autoplay = true
-stream/paused = false
-stream/loop_restart_time = 0.0
-stream/buffering_ms = 500
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -11.0
+margin_top = 23.0
+margin_right = 233.0
+margin_bottom = 68.0
+rect_scale = Vector2( 0.1, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 7 )
+custom_colors/default_color = Color( 0.941176, 0.929412, 0.894118, 1 )
+bbcode_enabled = true
+bbcode_text = "ENDLESS MODE"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "ENDLESS MODE"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="music_button" type="TextureButton" parent="."]
+[node name="endless_button" type="LinkButton" parent="endless_mode" index="1"]
 
-visibility/blend_mode = 1
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -28.0
-margin/top = -25.0
-margin/right = 72.0
-margin/bottom = 75.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1.0
+margin_top = -2.0
+margin_right = 227.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="music_button" type="TextureButton" parent="." index="9"]
+
+self_modulate = Color( 0.945098, 0.933333, 0.898039, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -28.0
+margin_top = -25.0
+margin_right = 72.0
+margin_bottom = 75.0
+rect_scale = Vector2( 0.05, 0.05 )
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = true
-click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
-textures/pressed = ExtResource( 6 )
-params/resize_mode = 0
-params/stretch_mode = 0
-params/modulate = Color( 0.945098, 0.933333, 0.898039, 1 )
+group = null
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
 
-[node name="quit_game_popup" type="Node2D" parent="."]
+[node name="quit_game_popup" type="Node2D" parent="." index="10"]
 
-visibility/visible = false
+visible = false
 
-[node name="background" type="Sprite" parent="quit_game_popup"]
+[node name="background" type="Sprite" parent="quit_game_popup" index="0"]
 
-transform/pos = Vector2( 0.226585, -0.189409 )
-transform/scale = Vector2( 0.0661152, 0.0814358 )
+position = Vector2( 0.226585, -0.189409 )
+scale = Vector2( 0.0661152, 0.0814358 )
 texture = ExtResource( 7 )
 
-[node name="notification" type="RichTextLabel" parent="quit_game_popup"]
+[node name="notification" type="RichTextLabel" parent="quit_game_popup" index="1"]
 
-rect/scale = Vector2( 0.07, 0.07 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -9.0
-margin/top = -7.0
-margin/right = 258.0
-margin/bottom = 97.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -9.0
+margin_top = -7.0
+margin_right = 258.0
+margin_bottom = 97.0
+rect_scale = Vector2( 0.07, 0.07 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 8 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "Do you want to quit the game?"
+bbcode_enabled = true
+bbcode_text = "Do you want to quit the game?"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Do you want to quit the game?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="error" type="RichTextLabel" parent="quit_game_popup"]
+[node name="error" type="RichTextLabel" parent="quit_game_popup" index="2"]
 
-rect/scale = Vector2( 0.06, 0.06 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -11.0
-margin/top = -12.0
-margin/right = 84.0
-margin/bottom = 34.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -11.0
+margin_top = -12.0
+margin_right = 84.0
+margin_bottom = 34.0
+rect_scale = Vector2( 0.06, 0.06 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "error"
+bbcode_enabled = true
+bbcode_text = "error"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "error"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="behind_button_one" type="Sprite" parent="quit_game_popup"]
+[node name="behind_button_one" type="Sprite" parent="quit_game_popup" index="3"]
 
-transform/pos = Vector2( -6.14473, 5.2915 )
-transform/scale = Vector2( 0.0371544, 0.0390076 )
+position = Vector2( -6.14473, 5.2915 )
+scale = Vector2( 0.0371544, 0.0390076 )
 texture = ExtResource( 8 )
 
-[node name="yes_quit" type="LinkButton" parent="quit_game_popup"]
+[node name="yes_quit" type="LinkButton" parent="quit_game_popup" index="4"]
 
-rect/scale = Vector2( 0.075, 0.075 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -8.0
-margin/top = 4.0
-margin/right = 66.0
-margin/bottom = 51.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -8.0
+margin_top = 4.0
+margin_right = 66.0
+margin_bottom = 51.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "OK"
 underline = 2
 
-[node name="behind_button_two" type="Sprite" parent="quit_game_popup"]
+[node name="behind_button_two" type="Sprite" parent="quit_game_popup" index="5"]
 
-transform/pos = Vector2( 6.64547, 5.52334 )
-transform/scale = Vector2( 0.0528731, 0.0390076 )
+position = Vector2( 6.64547, 5.52334 )
+scale = Vector2( 0.0528731, 0.0390076 )
 texture = ExtResource( 8 )
 
-[node name="no_quit" type="LinkButton" parent="quit_game_popup"]
+[node name="no_quit" type="LinkButton" parent="quit_game_popup" index="6"]
 
-rect/scale = Vector2( 0.075, 0.075 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 2.0
-margin/top = 4.0
-margin/right = 154.0
-margin/bottom = 51.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2.0
+margin_top = 4.0
+margin_right = 154.0
+margin_bottom = 51.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "CANCEL"
 underline = 2
 
-[node name="new_game_overwrite" type="Node2D" parent="."]
+[node name="new_game_overwrite" type="Node2D" parent="." index="11"]
 
-process/pause_mode = 2
+pause_mode = 2
 editor/display_folded = true
-visibility/visible = false
-transform/pos = Vector2( -0.548746, 0.691612 )
-transform/scale = Vector2( 1.04839, 1.08263 )
+visible = false
+position = Vector2( -0.548746, 0.691612 )
+scale = Vector2( 1.04839, 1.08263 )
 
-[node name="background" type="Sprite" parent="new_game_overwrite"]
+[node name="background" type="Sprite" parent="new_game_overwrite" index="0"]
 
-transform/pos = Vector2( 0.226585, -0.189409 )
-transform/scale = Vector2( 0.0661152, 0.0814358 )
+position = Vector2( 0.226585, -0.189409 )
+scale = Vector2( 0.0661152, 0.0814358 )
 texture = ExtResource( 7 )
 
-[node name="notification" type="RichTextLabel" parent="new_game_overwrite"]
+[node name="notification" type="RichTextLabel" parent="new_game_overwrite" index="1"]
 
-rect/scale = Vector2( 0.07, 0.07 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -10.0
-margin/top = -8.0
-margin/right = 300.0
-margin/bottom = 166.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -10.0
+margin_top = -8.0
+margin_right = 300.0
+margin_bottom = 166.0
+rect_scale = Vector2( 0.07, 0.07 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 12 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "Doing this will overwrite your old saved game data. Continue?"
+bbcode_enabled = true
+bbcode_text = "Doing this will overwrite your old saved game data. Continue?"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Doing this will overwrite your old saved game data. Continue?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="error" type="RichTextLabel" parent="new_game_overwrite"]
+[node name="error" type="RichTextLabel" parent="new_game_overwrite" index="2"]
 
-rect/scale = Vector2( 0.05, 0.05 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -11.0
-margin/top = -12.0
-margin/right = 84.0
-margin/bottom = 34.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -11.0
+margin_top = -12.0
+margin_right = 84.0
+margin_bottom = 34.0
+rect_scale = Vector2( 0.05, 0.05 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 13 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "error"
+bbcode_enabled = true
+bbcode_text = "error"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "error"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="background1" type="Sprite" parent="new_game_overwrite"]
+[node name="background1" type="Sprite" parent="new_game_overwrite" index="3"]
 
-transform/pos = Vector2( -6.27582, 7.20939 )
-transform/scale = Vector2( 0.0371544, 0.0390076 )
+position = Vector2( -6.27582, 7.20939 )
+scale = Vector2( 0.0371544, 0.0390076 )
 texture = ExtResource( 8 )
 
-[node name="yes_overwrite" type="LinkButton" parent="new_game_overwrite"]
+[node name="yes_overwrite" type="LinkButton" parent="new_game_overwrite" index="4"]
 
-rect/scale = Vector2( 0.075, 0.075 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -8.0
-margin/top = 6.0
-margin/right = 66.0
-margin/bottom = 53.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -8.0
+margin_top = 6.0
+margin_right = 66.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 14 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "OK"
 underline = 2
 
-[node name="background2" type="Sprite" parent="new_game_overwrite"]
+[node name="background2" type="Sprite" parent="new_game_overwrite" index="5"]
 
-transform/pos = Vector2( 6.64253, 7.15543 )
-transform/scale = Vector2( 0.0510057, 0.0390076 )
+position = Vector2( 6.64253, 7.15543 )
+scale = Vector2( 0.0510057, 0.0390076 )
 texture = ExtResource( 8 )
 
-[node name="no_overwrite" type="LinkButton" parent="new_game_overwrite"]
+[node name="no_overwrite" type="LinkButton" parent="new_game_overwrite" index="6"]
 
-rect/scale = Vector2( 0.075, 0.075 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 2.0
-margin/top = 6.0
-margin/right = 154.0
-margin/bottom = 53.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2.0
+margin_top = 6.0
+margin_right = 154.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "CANCEL"
 underline = 2
 
-[node name="rewards" type="Node2D" parent="."]
+[node name="rewards" type="Node2D" parent="." index="12"]
 
-transform/pos = Vector2( 52.0638, -7.65134 )
-transform/scale = Vector2( 1.24005, 1.34577 )
+position = Vector2( 52.0638, -7.65134 )
+scale = Vector2( 1.24005, 1.34577 )
 
-[node name="star" type="Sprite" parent="rewards"]
+[node name="star" type="Sprite" parent="rewards" index="0"]
 
-transform/pos = Vector2( -22.5083, -12.0203 )
-transform/scale = Vector2( 0.0226503, 0.027159 )
+position = Vector2( -22.5083, -12.0203 )
+scale = Vector2( 0.0226503, 0.027159 )
 texture = ExtResource( 9 )
 
-[node name="reward_label" type="RichTextLabel" parent="rewards"]
+[node name="reward_label" type="RichTextLabel" parent="rewards" index="1"]
 
-rect/scale = Vector2( 0.04, 0.04 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -25.0
-margin/top = -10.0
-margin/right = 124.0
-margin/bottom = 67.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -25.0
+margin_top = -10.0
+margin_right = 124.0
+margin_bottom = 67.0
+rect_scale = Vector2( 0.04, 0.04 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 16 )
 custom_colors/default_color = Color( 0.945098, 0.933333, 0.898039, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Rewards"
+bbcode_enabled = false
+bbcode_text = "Rewards"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Rewards"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="reward_button" type="LinkButton" parent="rewards"]
+[node name="reward_button" type="LinkButton" parent="rewards" index="2"]
 
-rect/scale = Vector2( 1, 0.5 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -25.0
-margin/top = -16.0
-margin/right = -19.0
-margin/bottom = -1.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -25.0
+margin_top = -16.0
+margin_right = -19.0
+margin_bottom = -1.0
+rect_scale = Vector2( 1, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 
-[node name="unseen_badge" type="Sprite" parent="rewards"]
+[node name="unseen_badge" type="Sprite" parent="rewards" index="3"]
 
-transform/pos = Vector2( -20.5356, -14.1776 )
-transform/scale = Vector2( 0.018665, 0.026037 )
+position = Vector2( -20.5356, -14.1776 )
+scale = Vector2( 0.018665, 0.026037 )
 texture = ExtResource( 10 )
 
-[node name="unseen_number" type="RichTextLabel" parent="rewards/unseen_badge"]
+[node name="unseen_number" type="RichTextLabel" parent="rewards/unseen_badge" index="0"]
 
-rect/scale = Vector2( 2, 2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -23.0
-margin/top = -39.0
-margin/right = 9.0
-margin/bottom = 5.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -23.0
+margin_top = -39.0
+margin_right = 9.0
+margin_bottom = 5.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 17 )
 custom_colors/default_color = Color( 0.027451, 0.0901961, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "0"
+bbcode_enabled = false
+bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
 [connection signal="button_up" from="new_file/new_button" to="." method="_on_new_button_button_up"]
 

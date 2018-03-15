@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/plansey.ogg-21570f2f7a3f5af3233c3626543dce41.oggstr"
+
+[deps]
+
+source_file="res://plansey.ogg"
+source_md5="1da2918dfbc06ee755cc9162e868bbe7"
+
+dest_files=[ "res://.import/plansey.ogg-21570f2f7a3f5af3233c3626543dce41.oggstr" ]
+dest_md5="7cb66c7291de6de60dadd2b8128a7c88"
+
+[params]
+
+loop=true
+loop_offset=0

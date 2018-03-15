@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/time_management_hollyhock.ogg-3be64e8ef58181e49d7078a8d739b6a0.oggstr"
+
+[deps]
+
+source_file="res://time_management_hollyhock.ogg"
+source_md5="9b1ed40cbc35c8db841c88c58216a34b"
+
+dest_files=[ "res://.import/time_management_hollyhock.ogg-3be64e8ef58181e49d7078a8d739b6a0.oggstr" ]
+dest_md5="bfd18fd6a1521feb99fc901805a4fe9c"
+
+[params]
+
+loop=true
+loop_offset=0

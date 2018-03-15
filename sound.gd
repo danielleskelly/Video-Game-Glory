@@ -1,7 +1,7 @@
 extends Node
 
 var music_mute = false
-var volume = 1
+var volume
 
 func _ready():
-	pass
+	volume = AudioServer.get_bus_volume_db(0)

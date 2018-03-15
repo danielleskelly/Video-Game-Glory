@@ -92,7 +92,7 @@ func _process(delta):
 		hundred_per_slatten = true
 		total_player_satisfaction.append(0)
 		
-	if total_player_satisfaction == 7 and total_player_unlocked == false:
+	if total_player_satisfaction.size() == 7 and total_player_unlocked == false:
 		total_player_unlocked = true
 		unseen += 1
 		

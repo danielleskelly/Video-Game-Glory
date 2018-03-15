@@ -15,7 +15,6 @@ var right_move = true
 
 func _ready():
 	show_a_few()
-	reset_pos = get_pos()
 	set_process(true)
 	
 func _process(delta):
@@ -75,6 +74,6 @@ func show_a_few():
 	for x in range(0,4):
 		randomize()
 		var called = potentials[randi() % potentials.size()]
-		called.set_hidden(false)
+		called.show()
 		called.remove_from_group("hidden")
 		called.add_to_group("shown")

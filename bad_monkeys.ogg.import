@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bad_monkeys.ogg-cfc9bf03d6e02db09a8573020f409696.oggstr"
+
+[deps]
+
+source_file="res://bad_monkeys.ogg"
+source_md5="434d5d5fbafe8680dd2da0206df63b8f"
+
+dest_files=[ "res://.import/bad_monkeys.ogg-cfc9bf03d6e02db09a8573020f409696.oggstr" ]
+dest_md5="03ac83d0c3ecf32464e08b515a18fb3c"
+
+[params]
+
+loop=false
+loop_offset=0
