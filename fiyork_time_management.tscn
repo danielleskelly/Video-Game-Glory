@@ -1,7 +1,7 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://fiyork_time_management.gd" type="Script" id=1]
-[ext_resource path="res://spaceship.scn" type="PackedScene" id=2]
+[ext_resource path="res://ship.png" type="Texture" id=2]
 [ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://outer_box.png" type="Texture" id=4]
 [ext_resource path="res://inner_box.png" type="Texture" id=5]
@@ -17,13 +17,47 @@
 [ext_resource path="res://ghostie_tag.png" type="Texture" id=15]
 [ext_resource path="res://shift.png" type="Texture" id=16]
 [ext_resource path="res://wasd.png" type="Texture" id=17]
+[ext_resource path="res://blacker_than_night.png" type="Texture" id=18]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="ParticlesMaterial" id=1]
 
-size = 45
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 3 )
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 50.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 0.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 0.0
+angular_velocity = 4.57916e-41
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 100.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+color = Color( 1, 1, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Spread", "Trail" ]
 
 [sub_resource type="DynamicFont" id=2]
 
@@ -81,12 +115,45 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="ParticlesMaterial" id=10]
 
-size = 45
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 3 )
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 10.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 1.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+color = Color( 1, 1, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Emission Shape", "Spread", "Trail" ]
 
 [sub_resource type="DynamicFont" id=11]
 
@@ -95,194 +162,287 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
 
-[node name="time_management" type="Node2D"]
+[sub_resource type="DynamicFont" id=12]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=13]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="time_management" type="Node2D" index="0"]
 
 position = Vector2( 0, 50 )
 script = ExtResource( 1 )
 
-[node name="spaceship" parent="." instance=ExtResource( 2 )]
+[node name="spaceship" type="Sprite" parent="." index="0"]
 
-position = Vector2( 549.546, 244.015 )
+editor/display_folded = true
+position = Vector2( 508.593, 255.992 )
+texture = ExtResource( 2 )
 
-[node name="rock" parent="."]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="spaceship" index="0"]
 
-position = Vector2( 2.51349, 183.6 )
-contacts_reported = 13
-script = null
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
 
-[node name="rock_timer" type="Timer" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="spaceship/KinematicBody2D" index="0"]
+
+position = Vector2( 0.0826488, 2.88452 )
+scale = Vector2( 0.956355, 0.90867 )
+build_mode = 0
+polygon = PoolVector2Array( 0.405792, -42.8909, -35.796, 27.7132, -21.7175, 27.7132, -17.801, 20.0918, 19.0359, 20.3035, 22.8467, 28.9834, 37.1368, 28.8776 )
+
+[node name="rock_timer" type="Timer" parent="." index="1"]
 
 process_mode = 0
-wait_time = 3.5
+wait_time = 2.0
 one_shot = true
 autostart = true
 
-[node name="bullet_timer" type="Timer" parent="."]
+[node name="bullet_timer" type="Timer" parent="." index="2"]
 
 process_mode = 1
-wait_time = 0.15
+wait_time = 0.2
 one_shot = true
 autostart = true
 
-[node name="explosion" type="Particles2D" parent="."]
+[node name="explosion" type="Particles2D" parent="." index="3"]
 
 visible = false
-config/amount = 50
-config/lifetime = 1.0
-config/process_mode = 1
-config/explosiveness = 0.2
-params/direction = 0.0
-params/spread = 180.0
-params/linear_velocity = 20.0
-params/spin_velocity = 0.0
-params/orbit_velocity = 0.0
-params/gravity_direction = 0.0
-params/gravity_strength = 9.8
-params/radial_accel = 0.0
-params/tangential_accel = 0.0
-params/damping = 0.0
-params/initial_angle = 0.0
-params/initial_size = 1.0
-params/final_size = 1.0
-params/hue_variation = 0.0
-params/anim_speed_scale = 1.0
-params/anim_initial_pos = 0.0
+position = Vector2( 18.9756, 21.3399 )
+scale = Vector2( 0.407012, 0.333129 )
+emitting = true
+amount = 30
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 1 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
-[node name="pop_timer" type="Timer" parent="."]
+[node name="pop_timer" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 0.4
 one_shot = false
 autostart = false
 
-[node name="day_timer" type="Timer" parent="."]
+[node name="day_timer" type="Timer" parent="." index="5"]
 
 process_mode = 1
 wait_time = 120.0
 one_shot = true
 autostart = true
 
-[node name="countdown_timer" type="RichTextLabel" parent="."]
+[node name="countdown_timer" type="RichTextLabel" parent="." index="6"]
 
-rect_scale = Vector2( 0.75, 1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 97.0
 margin_top = 430.0
 margin_right = 253.0
 margin_bottom = 486.0
-custom_fonts/normal_font = SubResource( 1 )
+rect_scale = Vector2( 0.75, 1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0.498039, 0.94902, 0.0705882, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="success_background" type="Sprite" parent="."]
+[node name="success_background" type="Sprite" parent="." index="7"]
 
 position = Vector2( 127.595, 5.26128 )
 scale = Vector2( 0.67839, 0.328205 )
 texture = ExtResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="success_background"]
+[node name="Sprite" type="Sprite" parent="success_background" index="0"]
 
 position = Vector2( -45.6074, 21.1853 )
 scale = Vector2( 0.295924, 0.61932 )
 texture = ExtResource( 5 )
 
-[node name="Sprite1" type="Sprite" parent="success_background"]
+[node name="Sprite1" type="Sprite" parent="success_background" index="1"]
 
 position = Vector2( -0.366186, 21.1853 )
 scale = Vector2( 0.291602, 0.61932 )
 texture = ExtResource( 5 )
 
-[node name="Sprite2" type="Sprite" parent="success_background"]
+[node name="Sprite2" type="Sprite" parent="success_background" index="2"]
 
 position = Vector2( 44.5839, 20.3824 )
 scale = Vector2( 0.291161, 0.61932 )
 texture = ExtResource( 5 )
 
-[node name="points" type="RichTextLabel" parent="success_background"]
+[node name="points" type="RichTextLabel" parent="success_background" index="3"]
 
-rect_scale = Vector2( 0.75, 1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -46.0
 margin_top = -92.0
 margin_right = 87.0
 margin_bottom = -36.0
-custom_fonts/normal_font = SubResource( 2 )
+rect_scale = Vector2( 0.75, 1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Points"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Points"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="hundreths" type="RichTextLabel" parent="success_background"]
+[node name="hundreths" type="RichTextLabel" parent="success_background" index="4"]
 
-rect_scale = Vector2( 1, 1.5 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -62.0
 margin_top = -8.0
 margin_right = -22.0
 margin_bottom = 63.0
-custom_fonts/normal_font = SubResource( 2 )
+rect_scale = Vector2( 1, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="tens" type="RichTextLabel" parent="success_background"]
+[node name="tens" type="RichTextLabel" parent="success_background" index="5"]
 
-rect_scale = Vector2( 1, 1.5 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -17.0
 margin_top = -8.0
 margin_right = 18.0
 margin_bottom = 48.0
-custom_fonts/normal_font = SubResource( 2 )
+rect_scale = Vector2( 1, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="ones" type="RichTextLabel" parent="success_background"]
+[node name="ones" type="RichTextLabel" parent="success_background" index="6"]
 
-rect_scale = Vector2( 1, 1.5 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 28.0
 margin_top = -9.0
 margin_right = 64.0
 margin_bottom = 44.0
-custom_fonts/normal_font = SubResource( 2 )
+rect_scale = Vector2( 1, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="pixel" type="Node2D" parent="."]
+[node name="pixel" type="Node2D" parent="." index="8"]
 
 editor/display_folded = true
 position = Vector2( 976.749, 9.25339 )
 scale = Vector2( 0.865529, 0.951183 )
 
-[node name="right_arm" type="Sprite" parent="pixel"]
+[node name="right_arm" type="Sprite" parent="pixel" index="0"]
 
 position = Vector2( 13.5239, 0.532171 )
 scale = Vector2( 0.505258, 0.493858 )
@@ -292,7 +452,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="hips" type="Sprite" parent="pixel"]
+[node name="hips" type="Sprite" parent="pixel" index="1"]
 
 position = Vector2( -0.34053, 23.6607 )
 scale = Vector2( 0.397194, 0.33372 )
@@ -301,7 +461,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="left_arm" type="Sprite" parent="pixel"]
+[node name="left_arm" type="Sprite" parent="pixel" index="2"]
 
 position = Vector2( -10.5564, 0.77133 )
 scale = Vector2( 0.652304, 0.49551 )
@@ -310,7 +470,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="torso" type="Sprite" parent="pixel"]
+[node name="torso" type="Sprite" parent="pixel" index="3"]
 
 position = Vector2( -0.167745, -2.25622 )
 scale = Vector2( 0.604909, 0.530322 )
@@ -319,7 +479,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="head" type="Sprite" parent="pixel"]
+[node name="head" type="Sprite" parent="pixel" index="4"]
 
 position = Vector2( -0.140442, -34.3577 )
 scale = Vector2( 0.533973, 0.468504 )
@@ -328,90 +488,114 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="pixel_button" type="LinkButton" parent="pixel"]
+[node name="pixel_button" type="LinkButton" parent="pixel" index="5"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -36.0
 margin_top = -54.0
 margin_right = 40.0
 margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="9"]
 
 stream = ExtResource( 10 )
-playing = false
-loop = true
 volume_db = 10.0
-stream_autoplay = true
-stream_paused = false
-loop_restart_time = 0.0
-buffering_ms = 500
+autoplay = true
+mix_target = 0
+bus = "Master"
 
-[node name="menu" type="Node2D" parent="."]
+[node name="menu" type="Node2D" parent="." index="10"]
 
 pause_mode = 2
 visible = false
 
-[node name="background" type="Sprite" parent="menu"]
+[node name="background" type="Sprite" parent="menu" index="0"]
 
 position = Vector2( 511.694, 214.999 )
 scale = Vector2( 1.06834, 1.26362 )
 texture = ExtResource( 11 )
 
-[node name="button" type="Sprite" parent="menu"]
+[node name="button" type="Sprite" parent="menu" index="1"]
 
 position = Vector2( 516.995, 184.675 )
 scale = Vector2( 1.52067, 0.420472 )
 texture = ExtResource( 12 )
 
-[node name="button1" type="Sprite" parent="menu"]
+[node name="button1" type="Sprite" parent="menu" index="2"]
 
 position = Vector2( 518.975, 260.32 )
 scale = Vector2( 1.51963, 0.420472 )
 texture = ExtResource( 12 )
 
-[node name="button2" type="Sprite" parent="menu"]
+[node name="button2" type="Sprite" parent="menu" index="3"]
 
 position = Vector2( 517.991, 333.951 )
 scale = Vector2( 1.73591, 0.539907 )
 texture = ExtResource( 12 )
 
-[node name="sound" type="RichTextLabel" parent="menu"]
+[node name="sound" type="RichTextLabel" parent="menu" index="4"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 454.0
 margin_top = 76.0
 margin_right = 724.0
 margin_bottom = 146.0
-custom_fonts/normal_font = SubResource( 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Sound"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Sound"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="sound_slider" type="HSlider" parent="menu"]
+[node name="sound_slider" type="HSlider" parent="menu" index="5"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 352.0
 margin_top = 125.0
 margin_right = 670.0
 margin_bottom = 141.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 min_value = 0.0
 max_value = 100.0
 step = 1.0
@@ -419,538 +603,751 @@ page = 0.0
 value = 1.0
 exp_edit = false
 rounded = false
+editable = true
 tick_count = 0
 ticks_on_borders = true
 focus_mode = 2
 
-[node name="return_to_game" type="LinkButton" parent="menu"]
+[node name="return_to_game" type="LinkButton" parent="menu" index="6"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 379.0
 margin_top = 169.0
 margin_right = 695.0
 margin_bottom = 216.0
-custom_fonts/font = SubResource( 4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Return To Game"
 underline = 2
 
-[node name="return_to_village" type="LinkButton" parent="menu"]
+[node name="return_to_village" type="LinkButton" parent="menu" index="7"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 384.0
 margin_top = 242.0
 margin_right = 716.0
 margin_bottom = 289.0
-custom_fonts/font = SubResource( 4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Return To Village"
 underline = 2
 
-[node name="return_to_main_menu" type="LinkButton" parent="menu"]
+[node name="return_to_main_menu" type="LinkButton" parent="menu" index="8"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 352.0
 margin_top = 317.0
 margin_right = 686.0
 margin_bottom = 364.0
-custom_fonts/font = SubResource( 4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Return To Main Menu"
 underline = 2
 
-[node name="are_you_sure" type="Node2D" parent="."]
+[node name="are_you_sure" type="Node2D" parent="." index="11"]
 
 pause_mode = 2
 editor/display_folded = true
 visible = false
 
-[node name="background" type="Sprite" parent="are_you_sure"]
+[node name="background" type="Sprite" parent="are_you_sure" index="0"]
 
 position = Vector2( 505.792, 230.951 )
 scale = Vector2( 0.863263, 0.944586 )
 texture = ExtResource( 11 )
 
-[node name="background1" type="Sprite" parent="are_you_sure"]
+[node name="background1" type="Sprite" parent="are_you_sure" index="1"]
 
 position = Vector2( 587.427, 327.912 )
 scale = Vector2( 0.516082, 0.556742 )
 texture = ExtResource( 12 )
 
-[node name="background2" type="Sprite" parent="are_you_sure"]
+[node name="background2" type="Sprite" parent="are_you_sure" index="2"]
 
 position = Vector2( 430.726, 327.912 )
 scale = Vector2( 0.431632, 0.519208 )
 texture = ExtResource( 12 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure"]
+[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure" index="3"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 364.0
 margin_top = 138.0
 margin_right = 661.0
 margin_bottom = 269.0
-custom_fonts/normal_font = SubResource( 5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Are you sure you want to go back to the village?"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Are you sure you want to go back to the village?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="yes_village" type="LinkButton" parent="are_you_sure"]
+[node name="yes_village" type="LinkButton" parent="are_you_sure" index="4"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 550.0
 margin_top = 312.0
 margin_right = 644.0
 margin_bottom = 359.0
-custom_fonts/font = SubResource( 6 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Yes"
 underline = 2
 
-[node name="no_village" type="LinkButton" parent="are_you_sure"]
+[node name="no_village" type="LinkButton" parent="are_you_sure" index="5"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 404.0
 margin_top = 312.0
 margin_right = 498.0
 margin_bottom = 359.0
-custom_fonts/font = SubResource( 6 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "No"
 underline = 2
 
-[node name="are_you_sure_2" type="Node2D" parent="."]
+[node name="are_you_sure_2" type="Node2D" parent="." index="12"]
 
 pause_mode = 2
 editor/display_folded = true
 visible = false
 
-[node name="background" type="Sprite" parent="are_you_sure_2"]
+[node name="background" type="Sprite" parent="are_you_sure_2" index="0"]
 
 position = Vector2( 518.929, 208.431 )
 scale = Vector2( 0.835114, 0.806964 )
 texture = ExtResource( 11 )
 
-[node name="background1" type="Sprite" parent="are_you_sure_2"]
+[node name="background1" type="Sprite" parent="are_you_sure_2" index="1"]
 
 position = Vector2( 590.711, 291.942 )
 scale = Vector2( 0.464473, 0.487932 )
 texture = ExtResource( 12 )
 
-[node name="background2" type="Sprite" parent="are_you_sure_2"]
+[node name="background2" type="Sprite" parent="are_you_sure_2" index="2"]
 
 position = Vector2( 438.702, 291.004 )
 scale = Vector2( 0.351874, 0.506699 )
 texture = ExtResource( 12 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure_2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure_2" index="3"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 375.0
 margin_top = 125.0
 margin_right = 672.0
 margin_bottom = 341.0
-custom_fonts/normal_font = SubResource( 7 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 8 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Are you sure you want to go back to the main menu?"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Are you sure you want to go back to the main menu?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="yes_main" type="LinkButton" parent="are_you_sure_2"]
+[node name="yes_main" type="LinkButton" parent="are_you_sure_2" index="4"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 559.0
 margin_top = 277.0
 margin_right = 653.0
 margin_bottom = 324.0
-custom_fonts/font = SubResource( 8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Yes"
 underline = 2
 
-[node name="no_main" type="LinkButton" parent="are_you_sure_2"]
+[node name="no_main" type="LinkButton" parent="are_you_sure_2" index="5"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 413.0
 margin_top = 277.0
 margin_right = 507.0
 margin_bottom = 324.0
-custom_fonts/font = SubResource( 8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "No"
 underline = 2
 
-[node name="customer_display" type="Node2D" parent="."]
+[node name="customer_display" type="Node2D" parent="." index="13"]
 
-editor/display_folded = true
-position = Vector2( 512.638, 259.361 )
+position = Vector2( 510.582, 268.334 )
 scale = Vector2( 16.0066, 9.64338 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="customer" type="Timer" parent="customer_display"]
+[node name="customer" type="Timer" parent="customer_display" index="0"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="customer_pop_timer" type="Timer" parent="customer_display"]
+[node name="customer_pop_timer" type="Timer" parent="customer_display" index="1"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
 
-[node name="customer_pic" type="Sprite" parent="customer_display"]
+[node name="customer_pic" type="Sprite" parent="customer_display" index="2"]
 
 position = Vector2( 27.6143, 23.8742 )
 scale = Vector2( 0.0172057, 0.0222086 )
 texture = ExtResource( 13 )
 
-[node name="moneybag" type="Sprite" parent="customer_display"]
+[node name="moneybag" type="Sprite" parent="customer_display" index="3"]
 
 visible = false
 position = Vector2( 28.8934, 20.3003 )
 scale = Vector2( 0.0229, 0.0328711 )
 texture = ExtResource( 14 )
 
-[node name="explosion" type="Particles2D" parent="customer_display"]
+[node name="explosion" type="Particles2D" parent="customer_display" index="4"]
 
 visible = false
-position = Vector2( 28.9001, 20.3583 )
+position = Vector2( 27.6349, 20.5615 )
+rotation = 3.14159
 scale = Vector2( 0.110664, 0.16403 )
-config/amount = 50
-config/lifetime = 1.0
-config/process_mode = 1
-config/explosiveness = 0.2
-params/direction = 0.0
-params/spread = 180.0
-params/linear_velocity = 20.0
-params/spin_velocity = 0.0
-params/orbit_velocity = 0.0
-params/gravity_direction = 0.0
-params/gravity_strength = 9.8
-params/radial_accel = 0.0
-params/tangential_accel = 0.0
-params/damping = 0.0
-params/initial_angle = 0.0
-params/initial_size = 1.0
-params/final_size = 1.0
-params/hue_variation = 0.0
-params/anim_speed_scale = 1.0
-params/anim_initial_pos = 0.0
-color/color = Color( 0.288992, 0.703125, 0.173035, 1 )
+emitting = true
+amount = 12
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 1.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 10 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Textures", "Time", "Transform", "Visibility", "Z Index" ]
 
-[node name="tutorial" type="Node2D" parent="."]
+[node name="tutorial" type="Node2D" parent="." index="14"]
 
 pause_mode = 2
 editor/display_folded = true
 visible = false
 position = Vector2( 512.264, 259.128 )
 scale = Vector2( 16.048, 9.67647 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Sprite7" type="Sprite" parent="tutorial"]
+[node name="Sprite7" type="Sprite" parent="tutorial" index="0"]
 
-position = Vector2( 2.1561, -9.68284 )
+position = Vector2( -0.211797, -7.61598 )
 scale = Vector2( 0.0374524, 0.0683183 )
 texture = ExtResource( 15 )
 flip_v = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite7"]
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite7" index="0"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -32.0
 margin_top = -63.0
 margin_right = 43.0
 margin_bottom = -19.0
-custom_fonts/normal_font = SubResource( 9 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "you"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "you"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Sprite5" type="Sprite" parent="tutorial"]
+[node name="Sprite5" type="Sprite" parent="tutorial" index="1"]
 
-position = Vector2( 24.2093, -26.1357 )
-rotation_deg = 90.0
+position = Vector2( 25.312, -28.6 )
+rotation = 1.5708
 scale = Vector2( 0.0834082, 0.0572739 )
 texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="RichTextLabel 3" type="RichTextLabel" parent="tutorial/Sprite5"]
+[node name="RichTextLabel 3" type="RichTextLabel" parent="tutorial/Sprite5" index="0"]
 
-rect_rotation = 90.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 14.0
+margin_top = 295.0
+margin_right = 400.0
+margin_bottom = 346.0
+rect_rotation = -90.0
 rect_scale = Vector2( 0.9, 0.9 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = -19.0
-margin_top = 356.0
-margin_right = 367.0
-margin_bottom = 407.0
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "Still click Pixel for help!"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Still click Pixel for help!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Rect" ]
 
-[node name="Sprite6" type="Sprite" parent="tutorial"]
+[node name="Sprite6" type="Sprite" parent="tutorial" index="2"]
 
-position = Vector2( -21.6296, 19.925 )
-rotation_deg = 90.0
+position = Vector2( -28.1423, 19.5625 )
+rotation = -1.5708
 scale = Vector2( 0.0915925, 0.0764046 )
 texture = ExtResource( 15 )
 flip_v = true
+_sections_unfolded = [ "Transform" ]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite6"]
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite6" index="0"]
 
-rect_rotation = 90.0
-rect_scale = Vector2( 0.5, 0.5 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -18.0
 margin_top = -34.0
 margin_right = 343.0
 margin_bottom = 60.0
-custom_fonts/normal_font = SubResource( 9 )
+rect_rotation = 90.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "Seconds left in the day"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Seconds left in the day"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Sprite4" type="Sprite" parent="tutorial"]
+[node name="Sprite4" type="Sprite" parent="tutorial" index="3"]
 
 position = Vector2( -18.0622, -27.0615 )
-rotation_deg = -90.0
+rotation = -1.5708
 scale = Vector2( 0.0745852, 0.0449206 )
 texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial/Sprite4"]
+[node name="RichTextLabel 3" type="RichTextLabel" parent="tutorial/Sprite4" index="0"]
 
-rect_rotation = -90.0
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 42.0
+margin_top = 36.0
+margin_right = 198.0
+margin_bottom = 169.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 17.0
-margin_top = 34.0
-margin_right = 173.0
-margin_bottom = 167.0
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "points moved to here"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "points moved to here"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Rect" ]
 
-[node name="Sprite10" type="Sprite" parent="tutorial"]
+[node name="Sprite10" type="Sprite" parent="tutorial" index="4"]
 
 position = Vector2( -27.8048, -1.68977 )
-rotation_deg = -90.0
+rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
 texture = ExtResource( 15 )
 flip_v = true
+_sections_unfolded = [ "Transform" ]
 
-[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite10"]
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite10" index="0"]
 
-rect_rotation = -90.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 21.0
+margin_top = -91.0
+margin_right = 120.0
+margin_bottom = -34.0
+rect_rotation = 90.0
 rect_scale = Vector2( 1.1, 1.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 21.0
-margin_top = -83.0
-margin_right = 120.0
-margin_bottom = -26.0
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "left"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "left"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Rect" ]
 
-[node name="Sprite14" type="Sprite" parent="tutorial"]
+[node name="Sprite14" type="Sprite" parent="tutorial" index="5"]
 
 position = Vector2( 24.7524, 23.7369 )
-rotation_deg = -90.0
+rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
 texture = ExtResource( 15 )
 flip_v = true
+_sections_unfolded = [ "Transform" ]
 
-[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite14"]
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite14" index="0"]
 
-rect_rotation = -90.0
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 64.0
+margin_top = -841.0
+margin_right = 896.0
+margin_bottom = -670.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 90.0
-margin_top = -805.0
-margin_right = 922.0
-margin_bottom = -588.0
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "A lot of things will stay the same from minigame to minigame. This is still your customer, and it works exactly the same way to tell you how business is going."
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "A lot of things will stay the same from minigame to minigame. This is still your customer, and it works exactly the same way to tell you how business is going."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Rect" ]
 
-[node name="Sprite11" type="Sprite" parent="tutorial"]
+[node name="Sprite11" type="Sprite" parent="tutorial" index="6"]
 
 position = Vector2( -18.0804, -1.81723 )
-rotation_deg = -90.0
+rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
 texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite11"]
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite11" index="0"]
 
-rect_rotation = -90.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 21.0
+margin_top = 26.0
+margin_right = 120.0
+margin_bottom = 83.0
+rect_rotation = 90.0
 rect_scale = Vector2( 1.1, 1.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 21.0
-margin_top = 36.0
-margin_right = 120.0
-margin_bottom = 93.0
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "right"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "right"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Rect" ]
 
-[node name="Sprite13" type="Sprite" parent="tutorial"]
+[node name="Sprite13" type="Sprite" parent="tutorial" index="7"]
 
-position = Vector2( -11.5163, -8.20701 )
-rotation_deg = -90.0
+position = Vector2( -11.7032, -8.20701 )
+rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
 texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite13"]
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite13" index="0"]
 
-rect_rotation = -90.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 21.0
+margin_top = 30.0
+margin_right = 120.0
+margin_bottom = 87.0
+rect_rotation = 90.0
 rect_scale = Vector2( 1.1, 1.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 21.0
-margin_top = 36.0
-margin_right = 120.0
-margin_bottom = 93.0
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "fire"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "fire"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Rect" ]
 
-[node name="Sprite12" type="Sprite" parent="tutorial"]
+[node name="Sprite12" type="Sprite" parent="tutorial" index="8"]
 
 position = Vector2( -16.0771, -9.85807 )
 scale = Vector2( 0.0158651, 0.0268405 )
 texture = ExtResource( 16 )
 
-[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial"]
+[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial" index="9"]
 
-rect_scale = Vector2( 0.05, 0.05 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -27.0
 margin_top = -15.0
 margin_right = 133.0
 margin_bottom = 45.0
-custom_fonts/normal_font = SubResource( 9 )
+rect_scale = Vector2( 0.05, 0.05 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "Movement"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Movement"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="RichTextLabel" type="RichTextLabel" parent="tutorial"]
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial" index="10"]
 
-rect_scale = Vector2( 0.05, 0.05 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 8.0
 margin_top = -11.0
 margin_right = 451.0
 margin_bottom = 302.0
-custom_fonts/normal_font = SubResource( 9 )
+rect_scale = Vector2( 0.05, 0.05 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "The rules are simple:
@@ -958,41 +1355,60 @@ bbcode_text = "The rules are simple:
 -Shoot concessions to earn points!"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "The rules are simple:
+-Don't get hit by the flying concessions!
+-Shoot concessions to earn points!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="RichTextLabel1" type="RichTextLabel" parent="tutorial"]
+[node name="RichTextLabel1" type="RichTextLabel" parent="tutorial" index="11"]
 
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -12.0
+margin_top = 6.0
+margin_right = 512.0
+margin_bottom = 319.0
 rect_scale = Vector2( 0.05, 0.05 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = -14.0
-margin_top = 8.0
-margin_right = 510.0
-margin_bottom = 321.0
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "Welcome to Shoot That Rock!"
 visible_characters = -1
 percent_visible = 1.0
-__meta__ = {
-"_edit_lock_": true
-}
+meta_underlined = true
+tab_size = 4
+text = "Welcome to Shoot That Rock!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Sprite3" type="Sprite" parent="tutorial"]
+[node name="Sprite3" type="Sprite" parent="tutorial" index="12"]
 
 position = Vector2( 26.19, -17.2923 )
 scale = Vector2( 0.0233709, 0.0450107 )
 texture = ExtResource( 12 )
 
-[node name="Sprite8" type="Sprite" parent="tutorial"]
+[node name="Sprite8" type="Sprite" parent="tutorial" index="13"]
 
 position = Vector2( -23.2769, -12.5022 )
 scale = Vector2( 0.0612173, 0.00208607 )
 texture = ExtResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="tutorial"]
+[node name="Sprite" type="Sprite" parent="tutorial" index="14"]
 
 position = Vector2( -22.969, -3.32461 )
 scale = Vector2( 0.0168183, 0.0253723 )
@@ -1001,82 +1417,111 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tutorial_button" type="LinkButton" parent="tutorial"]
+[node name="tutorial_button" type="LinkButton" parent="tutorial" index="15"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 24.0
 margin_top = -19.0
 margin_right = 67.0
 margin_bottom = 21.0
-custom_fonts/font = SubResource( 10 )
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "OK"
 underline = 2
 
-[node name="in" type="Node2D" parent="."]
+[node name="Sprite2" type="Sprite" parent="tutorial" index="16"]
+
+position = Vector2( -23.0945, -5.56129 )
+rotation = -1.5708
+scale = Vector2( 0.0172827, 0.00622966 )
+texture = ExtResource( 18 )
+
+[node name="in" type="Node2D" parent="." index="15"]
 
 pause_mode = 2
 visible = false
 position = Vector2( 514.17, 258.175 )
 scale = Vector2( 16.048, 9.58715 )
 
-[node name="in_number" type="RichTextLabel" parent="in"]
+[node name="in_number" type="RichTextLabel" parent="in" index="0"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -11.0
 margin_top = -21.0
 margin_right = 27.0
 margin_bottom = 23.0
-custom_fonts/normal_font = SubResource( 11 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 13 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "3"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "3"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="count_timer" type="Timer" parent="in"]
+[node name="count_timer" type="Timer" parent="in" index="1"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[connection signal="timeout"  from="pop_timer"  to="." method="_on_pop_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="pop_timer" to="." method="_on_pop_timer_timeout"]
 
-[connection signal="timeout"  from="day_timer"  to="." method="_on_day_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 
-[connection signal="button_down"  from="pixel/pixel_button"  to="." method="_on_pixel_button_button_down" binds=[  ]]
+[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 
-[connection signal="value_changed"  from="menu/sound_slider"  to="." method="_on_sound_slider_value_changed" binds=[  ]]
+[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
 
-[connection signal="button_down"  from="menu/return_to_game"  to="." method="_on_return_to_game_button_down" binds=[  ]]
+[connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
 
-[connection signal="button_down"  from="menu/return_to_village"  to="." method="_on_return_to_village_button_down" binds=[  ]]
+[connection signal="button_down" from="menu/return_to_village" to="." method="_on_return_to_village_button_down"]
 
-[connection signal="button_down"  from="menu/return_to_main_menu"  to="." method="_on_return_to_main_menu_button_down" binds=[  ]]
+[connection signal="button_down" from="menu/return_to_main_menu" to="." method="_on_return_to_main_menu_button_down"]
 
-[connection signal="button_down"  from="are_you_sure/yes_village"  to="." method="_on_yes_village_button_down" binds=[  ]]
+[connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
 
-[connection signal="button_down"  from="are_you_sure/no_village"  to="." method="_on_no_village_button_down" binds=[  ]]
+[connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
 
-[connection signal="button_down"  from="are_you_sure_2/yes_main"  to="." method="_on_yes_main_button_down" binds=[  ]]
+[connection signal="button_down" from="are_you_sure_2/yes_main" to="." method="_on_yes_main_button_down"]
 
-[connection signal="button_down"  from="are_you_sure_2/no_main"  to="." method="_on_no_main_button_down" binds=[  ]]
+[connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
 
-[connection signal="timeout"  from="customer_display/customer"  to="." method="_on_customer_timeout" binds=[  ]]
+[connection signal="timeout" from="customer_display/customer" to="." method="_on_customer_timeout"]
 
-[connection signal="timeout"  from="customer_display/customer_pop_timer"  to="." method="_on_customer_pop_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="customer_display/customer_pop_timer" to="." method="_on_customer_pop_timer_timeout"]
 
-[connection signal="button_down"  from="tutorial/tutorial_button"  to="." method="_on_tutorial_button_button_down" binds=[  ]]
+[connection signal="button_down" from="tutorial/tutorial_button" to="." method="_on_tutorial_button_button_down"]
 
-[connection signal="timeout"  from="in/count_timer"  to="." method="_on_count_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="in/count_timer" to="." method="_on_count_timer_timeout"]
+
+

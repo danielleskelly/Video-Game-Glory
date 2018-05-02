@@ -8,14 +8,6 @@ var hundreds
 var tens
 var ones
 
-var customer_choice
-var price_choice
-var randomness
-var rand_arcade_price
-var concession_choice
-var concessions_desire
-var concessions_price_check
-
 onready var pixel = get_node("pixel")
 
 var five_texture = preload("res://tetris_s.png")
@@ -29,7 +21,7 @@ var ball
 
 var ball_where
 var ball_dir = Vector2(0.5, 1.0)
-var ball_speed = 30
+var ball_speed = 400
 
 var left_move
 var right_move
@@ -50,11 +42,12 @@ func _ready():
 	else:
 		get_tree().set_pause(true)
 		countin()
-	get_node("StreamPlayer").set_volume(sound.volume)
+	get_node("StreamPlayer").set_volume_db(sound.volume)
 	paddle = get_node("paddle")
 	ball = get_node("ball")
 	set_about()
 	set_process(true)
+	set_physics_process(true)
 	
 func _process(delta):
 	hundreds = get_node("success_background/hundreths")
@@ -63,10 +56,13 @@ func _process(delta):
 	point_display()
 	countdown_timer.clear()
 	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
+	
+	
+func _physics_process(delta):
 	set_stuff()
-	ball_where = ball.get_pos()
+	ball_where = ball.get_global_position()
 	ball_where += delta * ball_dir * ball_speed
-	ball.set_pos(ball_where)
+	ball.set_global_position(ball_where)
 	var paddle_colliders = paddle.get_colliding_bodies()
 	left_move = true
 	right_move = true
@@ -79,7 +75,7 @@ func _process(delta):
 	var ball_colliders = ball.get_colliding_bodies()
 	for x in ball_colliders:
 		if x.is_in_group("buffer") == true:
-			ball.set_pos(Vector2(-1.72338, -8.34917))
+			ball.set_global_position(Vector2(-1.72338, -8.34917))
 		if x.get_name() == "paddle" and get_node("bounce_timer").get_time_left() == 0:
 			get_node("bounce_timer").start()
 			ball_dir.y = -ball_dir.y
@@ -449,18 +445,18 @@ func _process(delta):
 			get_node("bounce_timer").start()
 	if (Input.is_action_pressed("move_left")):
 		if left_move == true:
-			var where = paddle.get_pos()
+			var where = paddle.get_global_position()
 			var direction = Vector2(-1.0, 0.0)
-			var speed = 50
+			var speed = 500
 			where += delta * direction * speed
-			paddle.set_pos(where)
+			paddle.set_global_position(where)
 	if (Input.is_action_pressed("move_right")):
 		if right_move == true:
-			var where = paddle.get_pos()
+			var where = paddle.get_global_position()
 			var direction = Vector2(1.0, 0.0)
-			var speed = 50
+			var speed = 500
 			where += delta * direction * speed
-			paddle.set_pos(where)
+			paddle.set_global_position(where)
 	
 func set_stuff():
 	if matrix[0][0] == 5:

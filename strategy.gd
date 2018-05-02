@@ -76,11 +76,13 @@ func _process(delta):
 	
 	ads.clear()
 	if global.genre_two_key == false:
+		get_node("ads/research_purchase").show()
 		ads.add_text("The Masses \n $500")
 	elif global.genre_two_key == true and global.genre_three_key == false:
+		get_node("ads/research_purchase").show()
 		ads.add_text("The Last Holdouts \n $800")
 	elif global.genre_two_key == true and global.genre_three_key == true:
-		pass
+		get_node("ads/research_purchase").hide()
 	
 	#upgrades
 	var arcade_ok = get_node("upgrades/arcades/arcade_upgrade")
@@ -618,13 +620,23 @@ func _on_ads_button_button_down():
 	get_node("ads").show()
 
 func _on_research_purchase_button_down():
-	if global.genre_two_key == false and global.cash >= 700:
+	if global.genre_two_key == false and global.cash >= 500:
 		global.cash = int(global.cash) - 500
 		global.genre_two_key = true
+	elif global.genre_two_key == false and global.cash < 500:
+		get_node("notify").clear()
+		get_node("notify").set_text("You can't afford that!")
+		get_node("notify").show()
+		get_node("notify2").start()
 	elif global.genre_two_key == true and global.genre_three_key == false:
-		if global.cash >= 1000:
+		if global.cash >= 800:
 			global.cash = int(global.cash) - 800
 			global.genre_three_key = true
+		else:
+			get_node("notify").clear()
+			get_node("notify").set_text("You can't afford that!")
+			get_node("notify").show()
+			get_node("notify2").start()
 	elif global.genre_two_key == true and global.genre_three_key == true:
 		pass
 

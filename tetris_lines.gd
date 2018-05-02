@@ -1837,121 +1837,12 @@ func check_down():
 	if current_loc_vert_d == 10 and current_loc_hoz_d == 15:
 		down_move = false
 		
+
 func line_check():
-	line_one_clear = true
-	for x in matrix[0]:
-		if x == 0:
-			line_one_clear = false
-	line_two_clear = true
-	for x in matrix[1]:
-		if x == 0:
-			line_two_clear = false
-	line_three_clear = true
-	for x in matrix[2]:
-		if x == 0:
-			line_three_clear = false
-	line_four_clear = true
-	for x in matrix[3]:
-		if x == 0:
-			line_four_clear = false
-	line_five_clear = true
-	for x in matrix[4]:
-		if x == 0:
-			line_five_clear = false
-	line_six_clear = true
-	for x in matrix[5]:
-		if x == 0:
-			line_six_clear = false
-	line_seven_clear = true
-	for x in matrix[6]:
-		if x == 0:
-			line_seven_clear = false
-	line_eight_clear = true
-	for x in matrix[7]:
-		if x == 0:
-			line_eight_clear = false
-	line_nine_clear = true
-	for x in matrix[8]:
-		if x == 0:
-			line_nine_clear = false
 	line_ten_clear = true
 	for x in matrix[9]:
 		if x == 0:
 			line_ten_clear = false
-			
-			
-	if line_one_clear == true:
-		for y in range(0,15):
-			matrix[0][y] = 0
-		var one = get_tree().get_nodes_in_group("one")
-		for x in one:
-			x.queue_free()
-		move_everything_down()
-		perks.success = perks.success + 15
-	if line_two_clear == true:
-		for y in range(0,15):
-			matrix[1][y] = 0
-		var two = get_tree().get_nodes_in_group("two")
-		for x in two:
-			x.queue_free()
-		move_everything_down()
-		perks.success = perks.success + 15
-	if line_three_clear == true:
-		for y in range(0,15):
-			matrix[2][y] = 0
-		var three = get_tree().get_nodes_in_group("three")
-		for x in three:
-			x.queue_free()
-		move_everything_down()
-		perks.success = perks.success + 15
-	if line_four_clear == true:
-		for y in range(0,15):
-			matrix[3][y] = 0
-		var four = get_tree().get_nodes_in_group("four")
-		for x in four:
-			x.queue_free()
-		move_everything_down()
-		perks.success = perks.success + 15
-	if line_five_clear == true:
-		for y in range(0,15):
-			matrix[4][y] = 0
-		var five = get_tree().get_nodes_in_group("five")
-		for x in five:
-			x.queue_free()
-		move_everything_down()
-		perks.success = perks.success + 15
-	if line_six_clear == true:
-		for y in range(0,15):
-			matrix[5][y] = 0
-		var six = get_tree().get_nodes_in_group("six")
-		for x in six:
-			x.queue_free()
-		perks.success = perks.success + 15
-		move_everything_down()
-	if line_seven_clear == true:
-		for y in range(0,15):
-			matrix[6][y] = 0
-		var seven = get_tree().get_nodes_in_group("seven")
-		for x in seven:
-			x.queue_free()
-		perks.success = perks.success + 15
-		move_everything_down()
-	if line_eight_clear == true:
-		for y in range(0,15):
-			matrix[7][y] = 0
-		var eight = get_tree().get_nodes_in_group("eight")
-		for x in eight:
-			x.queue_free()
-		perks.success = perks.success + 15
-		move_everything_down()
-	if line_nine_clear == true:
-		for y in range(0,15):
-			matrix[8][y] = 0
-		var nine = get_tree().get_nodes_in_group("nine")
-		for x in nine:
-			x.queue_free()
-		perks.success = perks.success + 15
-		move_everything_down()
 	if line_ten_clear == true:
 		for y in range(0,15):
 			matrix[9][y] = 0
@@ -1959,89 +1850,536 @@ func line_check():
 		for x in ten:
 			x.queue_free()
 		perks.success = perks.success + 15
-		move_everything_down()
-	
-	
-func move_everything_down():
-	var nine = get_tree().get_nodes_in_group("nine")
-	for x in nine:
-		var pos = x.get_pos()
-		x.set_pos(Vector2(pos.x, pos.y + 160))
-		x.remove_from_group("nine")
-		x.add_to_group("ten")
-	var eight = get_tree().get_nodes_in_group("eight")
-	for x in eight:
-		var pos = x.get_pos()
-		x.set_pos(Vector2(pos.x, pos.y + 160))
-		x.remove_from_group("eight")
-		x.add_to_group("nine")
-	var seven = get_tree().get_nodes_in_group("seven")
-	for x in seven:
-		var pos = x.get_pos()
-		x.set_pos(Vector2(pos.x, pos.y + 160))
-		x.remove_from_group("seven")
-		x.add_to_group("eight")
-	var six = get_tree().get_nodes_in_group("six")
-	for x in six:
-		var pos = x.get_pos()
-		x.set_pos(Vector2(pos.x, pos.y + 160))
-		x.remove_from_group("six")
-		x.add_to_group("seven")
-	var five = get_tree().get_nodes_in_group("five")
-	for x in five:
-		var pos = x.get_pos()
-		x.set_pos(Vector2(pos.x, pos.y + 160))
-		x.remove_from_group("five")
-		x.add_to_group("six")
-	var four = get_tree().get_nodes_in_group("four")
-	for x in four:
-		var pos = x.get_pos()
-		x.set_pos(Vector2(pos.x, pos.y + 160))
-		x.remove_from_group("four")
-		x.add_to_group("five")
-	var three = get_tree().get_nodes_in_group("three")
-	for x in three:
-		var pos = x.get_pos()
-		x.set_pos(Vector2(pos.x, pos.y + 160))
-		x.remove_from_group("three")
-		x.add_to_group("four")
-	var two = get_tree().get_nodes_in_group("two")
-	for x in two:
-		var pos = x.get_pos()
-		x.set_pos(Vector2(pos.x, pos.y + 160))
-		x.remove_from_group("two")
-		x.add_to_group("three")
-	var one = get_tree().get_nodes_in_group("one")
-	for x in one:
-		var pos = x.get_pos()
-		x.set_pos(Vector2(pos.x, pos.y + 160))
-		x.remove_from_group("one")
-		x.add_to_group("two")
-	for y in range(0,15):
-		if matrix[8][y] == 1:
+		var nine = get_tree().get_nodes_in_group("nine")
+		for x in nine:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("1_10").get_global_position().y))
+			x.remove_from_group("nine")
+			x.add_to_group("ten")
+		var eight = get_tree().get_nodes_in_group("eight")
+		for x in eight:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("19").get_global_position().y))
+			x.remove_from_group("eight")
+			x.add_to_group("nine")
+		var seven = get_tree().get_nodes_in_group("seven")
+		for x in seven:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("18").get_global_position().y))
+			x.remove_from_group("seven")
+			x.add_to_group("eight")
+		var six = get_tree().get_nodes_in_group("six")
+		for x in six:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("17").get_global_position().y))
+			x.remove_from_group("six")
+			x.add_to_group("seven")
+		var five = get_tree().get_nodes_in_group("five")
+		for x in five:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("16").get_global_position().y))
+			x.remove_from_group("five")
+			x.add_to_group("six")
+		var four = get_tree().get_nodes_in_group("four")
+		for x in four:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("15").get_global_position().y))
+			x.remove_from_group("four")
+			x.add_to_group("five")
+		var three = get_tree().get_nodes_in_group("three")
+		for x in three:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("14").get_global_position().y))
+			x.remove_from_group("three")
+			x.add_to_group("four")
+		var two = get_tree().get_nodes_in_group("two")
+		for x in two:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("13").get_global_position().y))
+			x.remove_from_group("two")
+			x.add_to_group("three")
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("12").get_global_position().y))
+			x.remove_from_group("one")
+			x.add_to_group("two")
+		for y in range(0,15):
+			if matrix[8][y] == 1:
+				matrix[8][y] = 0
+				matrix[9][y] = 1
+			if matrix[7][y] == 1:
+				matrix[7][y] = 0
+				matrix[8][y] = 1
+			if matrix[6][y] == 1:
+				matrix[6][y] = 0
+				matrix[7][y] = 1
+			if matrix[5][y] == 1:
+				matrix[5][y] = 0
+				matrix[6][y] = 1
+			if matrix[4][y] == 1:
+				matrix[4][y] = 0
+				matrix[5][y] = 1
+			if matrix[3][y] == 1:
+				matrix[3][y] = 0
+				matrix[4][y] = 1
+			if matrix[2][y] == 1:
+				matrix[2][y] = 0
+				matrix[3][y] = 1
+			if matrix[1][y] == 1:
+				matrix[1][y] = 0
+				matrix[2][y] = 1
+			if matrix[0][y] == 1:
+				matrix[0][y] = 0
+				matrix[1][y] = 1
+		line_check()
+	line_nine_clear = true
+	for x in matrix[8]:
+		if x == 0:
+			line_nine_clear = false
+	if line_nine_clear == true:
+		for y in range(0,15):
 			matrix[8][y] = 0
-			matrix[9][y] = 1
-		if matrix[7][y] == 1:
+		var nine = get_tree().get_nodes_in_group("nine")
+		for x in nine:
+			x.queue_free()
+		perks.success = perks.success + 15
+		var eight = get_tree().get_nodes_in_group("eight")
+		for x in eight:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("19").get_global_position().y))
+			x.remove_from_group("eight")
+			x.add_to_group("nine")
+		var seven = get_tree().get_nodes_in_group("seven")
+		for x in seven:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("18").get_global_position().y))
+			x.remove_from_group("seven")
+			x.add_to_group("eight")
+		var six = get_tree().get_nodes_in_group("six")
+		for x in six:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("17").get_global_position().y))
+			x.remove_from_group("six")
+			x.add_to_group("seven")
+		var five = get_tree().get_nodes_in_group("five")
+		for x in five:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("16").get_global_position().y))
+			x.remove_from_group("five")
+			x.add_to_group("six")
+		var four = get_tree().get_nodes_in_group("four")
+		for x in four:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("15").get_global_position().y))
+			x.remove_from_group("four")
+			x.add_to_group("five")
+		var three = get_tree().get_nodes_in_group("three")
+		for x in three:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("14").get_global_position().y))
+			x.remove_from_group("three")
+			x.add_to_group("four")
+		var two = get_tree().get_nodes_in_group("two")
+		for x in two:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("13").get_global_position().y))
+			x.remove_from_group("two")
+			x.add_to_group("three")
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("12").get_global_position().y))
+			x.remove_from_group("one")
+			x.add_to_group("two")
+		for y in range(0,15):
+			if matrix[7][y] == 1:
+				matrix[7][y] = 0
+				matrix[8][y] = 1
+			if matrix[6][y] == 1:
+				matrix[6][y] = 0
+				matrix[7][y] = 1
+			if matrix[5][y] == 1:
+				matrix[5][y] = 0
+				matrix[6][y] = 1
+			if matrix[4][y] == 1:
+				matrix[4][y] = 0
+				matrix[5][y] = 1
+			if matrix[3][y] == 1:
+				matrix[3][y] = 0
+				matrix[4][y] = 1
+			if matrix[2][y] == 1:
+				matrix[2][y] = 0
+				matrix[3][y] = 1
+			if matrix[1][y] == 1:
+				matrix[1][y] = 0
+				matrix[2][y] = 1
+			if matrix[0][y] == 1:
+				matrix[0][y] = 0
+				matrix[1][y] = 1
+		line_check()
+	line_eight_clear = true
+	for x in matrix[7]:
+		if x == 0:
+			line_eight_clear = false
+	if line_eight_clear == true:
+		for y in range(0,15):
 			matrix[7][y] = 0
-			matrix[8][y] = 1
-		if matrix[6][y] == 1:
+		var eight = get_tree().get_nodes_in_group("eight")
+		for x in eight:
+			x.queue_free()
+		perks.success = perks.success + 15
+		var seven = get_tree().get_nodes_in_group("seven")
+		for x in seven:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("18").get_global_position().y))
+			x.remove_from_group("seven")
+			x.add_to_group("eight")
+		var six = get_tree().get_nodes_in_group("six")
+		for x in six:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("17").get_global_position().y))
+			x.remove_from_group("six")
+			x.add_to_group("seven")
+		var five = get_tree().get_nodes_in_group("five")
+		for x in five:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("16").get_global_position().y))
+			x.remove_from_group("five")
+			x.add_to_group("six")
+		var four = get_tree().get_nodes_in_group("four")
+		for x in four:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("15").get_global_position().y))
+			x.remove_from_group("four")
+			x.add_to_group("five")
+		var three = get_tree().get_nodes_in_group("three")
+		for x in three:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("14").get_global_position().y))
+			x.remove_from_group("three")
+			x.add_to_group("four")
+		var two = get_tree().get_nodes_in_group("two")
+		for x in two:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("13").get_global_position().y))
+			x.remove_from_group("two")
+			x.add_to_group("three")
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("12").get_global_position().y))
+			x.remove_from_group("one")
+			x.add_to_group("two")
+		for y in range(0,15):
+			if matrix[6][y] == 1:
+				matrix[6][y] = 0
+				matrix[7][y] = 1
+			if matrix[5][y] == 1:
+				matrix[5][y] = 0
+				matrix[6][y] = 1
+			if matrix[4][y] == 1:
+				matrix[4][y] = 0
+				matrix[5][y] = 1
+			if matrix[3][y] == 1:
+				matrix[3][y] = 0
+				matrix[4][y] = 1
+			if matrix[2][y] == 1:
+				matrix[2][y] = 0
+				matrix[3][y] = 1
+			if matrix[1][y] == 1:
+				matrix[1][y] = 0
+				matrix[2][y] = 1
+			if matrix[0][y] == 1:
+				matrix[0][y] = 0
+				matrix[1][y] = 1
+		line_check()
+	line_seven_clear = true
+	for x in matrix[6]:
+		if x == 0:
+			line_seven_clear = false
+	if line_seven_clear == true:
+		for y in range(0,15):
 			matrix[6][y] = 0
-			matrix[7][y] = 1
-		if matrix[5][y] == 1:
+		var seven = get_tree().get_nodes_in_group("seven")
+		for x in seven:
+			x.queue_free()
+		perks.success = perks.success + 15
+		var six = get_tree().get_nodes_in_group("six")
+		for x in six:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("17").get_global_position().y))
+			x.remove_from_group("six")
+			x.add_to_group("seven")
+		var five = get_tree().get_nodes_in_group("five")
+		for x in five:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("16").get_global_position().y))
+			x.remove_from_group("five")
+			x.add_to_group("six")
+		var four = get_tree().get_nodes_in_group("four")
+		for x in four:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("15").get_global_position().y))
+			x.remove_from_group("four")
+			x.add_to_group("five")
+		var three = get_tree().get_nodes_in_group("three")
+		for x in three:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("14").get_global_position().y))
+			x.remove_from_group("three")
+			x.add_to_group("four")
+		var two = get_tree().get_nodes_in_group("two")
+		for x in two:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("13").get_global_position().y))
+			x.remove_from_group("two")
+			x.add_to_group("three")
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("12").get_global_position().y))
+			x.remove_from_group("one")
+			x.add_to_group("two")
+		for y in range(0,15):
+			if matrix[5][y] == 1:
+				matrix[5][y] = 0
+				matrix[6][y] = 1
+			if matrix[4][y] == 1:
+				matrix[4][y] = 0
+				matrix[5][y] = 1
+			if matrix[3][y] == 1:
+				matrix[3][y] = 0
+				matrix[4][y] = 1
+			if matrix[2][y] == 1:
+				matrix[2][y] = 0
+				matrix[3][y] = 1
+			if matrix[1][y] == 1:
+				matrix[1][y] = 0
+				matrix[2][y] = 1
+			if matrix[0][y] == 1:
+				matrix[0][y] = 0
+				matrix[1][y] = 1
+		line_check()
+	line_six_clear = true
+	for x in matrix[5]:
+		if x == 0:
+			line_six_clear = false
+	if line_six_clear == true:
+		for y in range(0,15):
 			matrix[5][y] = 0
-			matrix[6][y] = 1
-		if matrix[4][y] == 1:
+		var six = get_tree().get_nodes_in_group("six")
+		for x in six:
+			x.queue_free()
+		perks.success = perks.success + 15
+		var five = get_tree().get_nodes_in_group("five")
+		for x in five:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("16").get_global_position().y))
+			x.remove_from_group("five")
+			x.add_to_group("six")
+		var four = get_tree().get_nodes_in_group("four")
+		for x in four:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("15").get_global_position().y))
+			x.remove_from_group("four")
+			x.add_to_group("five")
+		var three = get_tree().get_nodes_in_group("three")
+		for x in three:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("14").get_global_position().y))
+			x.remove_from_group("three")
+			x.add_to_group("four")
+		var two = get_tree().get_nodes_in_group("two")
+		for x in two:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("13").get_global_position().y))
+			x.remove_from_group("two")
+			x.add_to_group("three")
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("12").get_global_position().y))
+			x.remove_from_group("one")
+			x.add_to_group("two")
+		for y in range(0,15):
+			if matrix[4][y] == 1:
+				matrix[4][y] = 0
+				matrix[5][y] = 1
+			if matrix[3][y] == 1:
+				matrix[3][y] = 0
+				matrix[4][y] = 1
+			if matrix[2][y] == 1:
+				matrix[2][y] = 0
+				matrix[3][y] = 1
+			if matrix[1][y] == 1:
+				matrix[1][y] = 0
+				matrix[2][y] = 1
+			if matrix[0][y] == 1:
+				matrix[0][y] = 0
+				matrix[1][y] = 1
+		line_check()
+	line_five_clear = true
+	for x in matrix[4]:
+		if x == 0:
+			line_five_clear = false
+	if line_five_clear == true:
+		for y in range(0,15):
 			matrix[4][y] = 0
-			matrix[5][y] = 1
-		if matrix[3][y] == 1:
+		var five = get_tree().get_nodes_in_group("five")
+		for x in five:
+			x.queue_free()
+		perks.success = perks.success + 15
+		var four = get_tree().get_nodes_in_group("four")
+		for x in four:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("15").get_global_position().y))
+			x.remove_from_group("four")
+			x.add_to_group("five")
+		var three = get_tree().get_nodes_in_group("three")
+		for x in three:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("14").get_global_position().y))
+			x.remove_from_group("three")
+			x.add_to_group("four")
+		var two = get_tree().get_nodes_in_group("two")
+		for x in two:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("13").get_global_position().y))
+			x.remove_from_group("two")
+			x.add_to_group("three")
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("12").get_global_position().y))
+			x.remove_from_group("one")
+			x.add_to_group("two")
+		for y in range(0,15):
+			if matrix[3][y] == 1:
+				matrix[3][y] = 0
+				matrix[4][y] = 1
+			if matrix[2][y] == 1:
+				matrix[2][y] = 0
+				matrix[3][y] = 1
+			if matrix[1][y] == 1:
+				matrix[1][y] = 0
+				matrix[2][y] = 1
+			if matrix[0][y] == 1:
+				matrix[0][y] = 0
+				matrix[1][y] = 1
+		line_check()
+	line_four_clear = true
+	for x in matrix[3]:
+		if x == 0:
+			line_four_clear = false
+	if line_four_clear == true:
+		for y in range(0,15):
 			matrix[3][y] = 0
-			matrix[4][y] = 1
-		if matrix[2][y] == 1:
+		var four = get_tree().get_nodes_in_group("four")
+		for x in four:
+			x.queue_free()
+		perks.success = perks.success + 15
+		var three = get_tree().get_nodes_in_group("three")
+		for x in three:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("14").get_global_position().y))
+			x.remove_from_group("three")
+			x.add_to_group("four")
+		var two = get_tree().get_nodes_in_group("two")
+		for x in two:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("13").get_global_position().y))
+			x.remove_from_group("two")
+			x.add_to_group("three")
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("12").get_global_position().y))
+			x.remove_from_group("one")
+			x.add_to_group("two")
+		for y in range(0,15):
+			if matrix[2][y] == 1:
+				matrix[2][y] = 0
+				matrix[3][y] = 1
+			if matrix[1][y] == 1:
+				matrix[1][y] = 0
+				matrix[2][y] = 1
+			if matrix[0][y] == 1:
+				matrix[0][y] = 0
+				matrix[1][y] = 1
+		line_check()
+	line_three_clear = true
+	for x in matrix[2]:
+		if x == 0:
+			line_three_clear = false
+	if line_three_clear == true:
+		for y in range(0,15):
 			matrix[2][y] = 0
-			matrix[3][y] = 1
-		if matrix[1][y] == 1:
+		var three = get_tree().get_nodes_in_group("three")
+		for x in three:
+			x.queue_free()
+		perks.success = perks.success + 15
+		var two = get_tree().get_nodes_in_group("two")
+		for x in two:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("13").get_global_position().y))
+			x.remove_from_group("two")
+			x.add_to_group("three")
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("12").get_global_position().y))
+			x.remove_from_group("one")
+			x.add_to_group("two")
+		for y in range(0,15):
+			if matrix[1][y] == 1:
+				matrix[1][y] = 0
+				matrix[2][y] = 1
+			if matrix[0][y] == 1:
+				matrix[0][y] = 0
+				matrix[1][y] = 1
+		line_check()
+	line_two_clear = true
+	for x in matrix[1]:
+		if x == 0:
+			line_two_clear = false
+	if line_two_clear == true:
+		for y in range(0,15):
 			matrix[1][y] = 0
-			matrix[2][y] = 1
-		if matrix[0][y] == 1:
+		var two = get_tree().get_nodes_in_group("two")
+		for x in two:
+			x.queue_free()
+		perks.success = perks.success + 15
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			var pos = x.get_global_position()
+			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("12").get_global_position().y))
+			x.remove_from_group("one")
+			x.add_to_group("two")
+		for y in range(0,15):
+			if matrix[0][y] == 1:
+				matrix[0][y] = 0
+				matrix[1][y] = 1
+		line_check()
+	line_one_clear = true
+	for x in matrix[0]:
+		if x == 0:
+			line_one_clear = false
+	if line_one_clear == true:
+		for y in range(0,15):
 			matrix[0][y] = 0
-			matrix[1][y] = 1
+		var one = get_tree().get_nodes_in_group("one")
+		for x in one:
+			x.queue_free()
+		perks.success = perks.success + 15
+		line_check()
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
