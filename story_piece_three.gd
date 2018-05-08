@@ -21,7 +21,7 @@ func _on_skip_button_button_down():
 
 
 func set_sound():
-	get_node("StreamPlayer").set_volume(sound.volume)
+	get_node("StreamPlayer").set_volume_db(sound.volume)
 
 func _on_mute_button_button_down():
 	if (get_node("StreamPlayer").is_playing() == true):

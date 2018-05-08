@@ -1,23 +1,42 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://hollyhock_time_management.gd" type="Script" id=1]
-[ext_resource path="res://hollyhock_tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://asset.png" type="Texture" id=2]
 [ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://outer_box.png" type="Texture" id=4]
-[ext_resource path="res://inner_box.png" type="Texture" id=5]
-[ext_resource path="res://pixel.png" type="Texture" id=6]
-[ext_resource path="res://strategy.ogg" type="AudioStream" id=7]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=8]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=9]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=10]
-[ext_resource path="res://error_box.png" type="Texture" id=11]
-[ext_resource path="res://button.png" type="Texture" id=12]
-[ext_resource path="res://customer_four.png" type="Texture" id=13]
-[ext_resource path="res://moneybag.png" type="Texture" id=14]
-[ext_resource path="res://ghostie_tag.png" type="Texture" id=15]
-[ext_resource path="res://wasd.png" type="Texture" id=16]
+[ext_resource path="res://soda.png" type="Texture" id=4]
+[ext_resource path="res://popcorn.png" type="Texture" id=5]
+[ext_resource path="res://outer_box.png" type="Texture" id=6]
+[ext_resource path="res://inner_box.png" type="Texture" id=7]
+[ext_resource path="res://pixel.png" type="Texture" id=8]
+[ext_resource path="res://ghostie.gd" type="Script" id=9]
+[ext_resource path="res://greenie_ghostie.png" type="Texture" id=10]
+[ext_resource path="res://bluie_ghostie.png" type="Texture" id=11]
+[ext_resource path="res://strategy.ogg" type="AudioStream" id=12]
+[ext_resource path="res://pixel_arm.png" type="Texture" id=13]
+[ext_resource path="res://pixel_crotch.png" type="Texture" id=14]
+[ext_resource path="res://pixel_torso.png" type="Texture" id=15]
+[ext_resource path="res://error_box.png" type="Texture" id=16]
+[ext_resource path="res://button.png" type="Texture" id=17]
+[ext_resource path="res://customer_four.png" type="Texture" id=18]
+[ext_resource path="res://moneybag.png" type="Texture" id=19]
+[ext_resource path="res://ghostie_tag.png" type="Texture" id=20]
+[ext_resource path="res://wasd.png" type="Texture" id=21]
 
 [sub_resource type="DynamicFont" id=1]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
 
 size = 45
 use_mipmaps = false
@@ -66,34 +85,21 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=10]
-
-size = 45
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=11]
-
-size = 45
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 3 )
-
-[sub_resource type="ParticlesMaterial" id=12]
+[sub_resource type="ParticlesMaterial" id=10]
 
 render_priority = 0
 trail_divisor = 1
-emission_shape = 0
+emission_shape = 1
+emission_sphere_radius = 10.0
 flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
-spread = 45.0
-flatness = 0.0
+spread = 180.0
+flatness = 1.0
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 1.0
 initial_velocity_random = 0.0
-angular_velocity = 79.0
+angular_velocity = 0.0
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -117,22 +123,23 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
+_sections_unfolded = [ "Emission Shape", "Spread", "Trail" ]
+
+[sub_resource type="DynamicFont" id=11]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=12]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=13]
-
-size = 45
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=14]
-
-size = 45
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=15]
 
 size = 45
 use_mipmaps = false
@@ -148,80 +155,110 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="border" type="TileMap" parent="." index="0"]
+[node name="behind_assets" type="Node2D" parent="." index="0"]
 
-scale = Vector2( 0.1, 0.1 )
-mode = 0
-tile_set = ExtResource( 2 )
-cell_size = Vector2( 1, 1 )
-cell_quadrant_size = 16
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = true
-collision_friction = 1.0
-collision_bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pixel" type="Sprite" parent="behind_assets" index="0"]
+
+editor/display_folded = true
+position = Vector2( -15.7776, -15.8388 )
+scale = Vector2( 0.0869443, 0.22691 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="behind_assets/pixel" index="0"]
+
+position = Vector2( -0.22258, -0.255728 )
+scale = Vector2( 0.815264, 0.865002 )
+input_pickable = false
 collision_layer = 1
 collision_mask = 1
-occluder_light_mask = 1
-format = 1
-tile_data = PoolIntArray( -28966607, -1610612736, 0, -21298876, 1610612736, 0, -19792205, -1610612736, 0, 19267176, 0, 0 )
-_sections_unfolded = [ "Cell", "Collision", "Transform" ]
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="behind_objects" type="TileMap" parent="." index="1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="behind_assets/pixel/StaticBody2D" index="0"]
 
-scale = Vector2( 0.1, 0.1 )
-mode = 0
-tile_set = ExtResource( 2 )
-cell_size = Vector2( 1, 1 )
-cell_quadrant_size = 16
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
+build_mode = 0
+polygon = PoolVector2Array( -29.3353, -28.7776, -29.422, 28.364, 30.0778, 28.364, 30.2513, -28.7776 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="perks" type="Sprite" parent="behind_assets" index="1"]
+
+editor/display_folded = true
+position = Vector2( 10.5332, -15.9966 )
+scale = Vector2( 0.210013, 0.221399 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="behind_assets/perks" index="0"]
+
+position = Vector2( -0.22258, -0.255728 )
+scale = Vector2( 0.815264, 0.865002 )
+input_pickable = false
 collision_layer = 1
 collision_mask = 1
-occluder_light_mask = 1
-format = 1
-tile_data = PoolIntArray( -13959354, 1, 0, -13959345, 3, 0, -13762503, 1610612740, 0, -13762454, 3, 0, -12648625, 5, 0, -11272378, 6, 0, -10485703, 2, 0, -10485654, 4, 0, -9896122, 2, 0, -9896113, 4, 0, 5636024, 1, 0, 5636061, 3, 0, 6291384, 2, 0, 6291421, 4, 0 )
-_sections_unfolded = [ "Cell", "Transform" ]
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="concessions" type="TileMap" parent="." index="2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="behind_assets/perks/StaticBody2D" index="0"]
 
-scale = Vector2( 0.025, 0.05 )
-mode = 0
-tile_set = ExtResource( 2 )
-cell_size = Vector2( 1, 1 )
-cell_quadrant_size = 16
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
+build_mode = 0
+polygon = PoolVector2Array( -29.3353, -28.7776, -29.422, 28.364, 30.0778, 28.364, 30.2513, -28.7776 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="countdown" type="Sprite" parent="behind_assets" index="2"]
+
+editor/display_folded = true
+position = Vector2( -2.80208, 11.3237 )
+scale = Vector2( 0.156205, 0.107172 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="behind_assets/countdown" index="0"]
+
+position = Vector2( -0.22258, -0.255728 )
+scale = Vector2( 0.815264, 0.865002 )
+input_pickable = false
 collision_layer = 1
 collision_mask = 1
-occluder_light_mask = 1
-format = 1
-tile_data = PoolIntArray( -36242206, 7, 0, -36306727, 7, 0, -35914883, 7, 0, -35914711, 8, 0, -35783160, 7, 0, -35520104, 8, 0, -34537477, 8, 0, -34143500, 8, 0, -33947811, 7, 0, -33619357, 7, 0, -32440606, 8, 0, -31849565, 8, 0, -31521759, 7, 0, -30278042, 8, 0, -26215538, 8, 0, -25560068, 7, 0, -23331015, 8, 0, -23396298, 7, 0, -23067950, 7, 0, -22215844, 7, 0, -20644274, 7, 0, -17499191, 8, 0, -13958479, 8, 0, -13107304, 8, 0, -12910563, 7, 0, -11992275, 7, 0, -11403036, 7, 0, -10682828, 8, 0, -9699585, 7, 0, -9044732, 7, 0, -8979553, 8, 0, -8584817, 8, 0, -7798234, 7, 0, -6945891, 8, 0, -6554569, 7, 0, -6357546, 7, 0, -4062502, 7, 0, -1704264, 8, 0, -918594, 8, 0, -328278, 8, 0, -261980, 7, 0, 1704276, 8, 0, 2949671, 8, 0, 3932970, 7, 0, 4193557, 8, 0, 4848659, 7, 0, 5111331, 8, 0, 5374028, 8, 0, 6161345, 8, 0, 11731241, 7, 0, 11927727, 8, 0, 12386917, 8, 0, 13368257, 8, 0, 13499787, 8, 0, 13630713, 8, 0, 14613547, 7, 0, 15139600, 8, 0, 18744206, 7, 0, 19267118, 8, 0, 19530274, 8, 0, 19988548, 8, 0, 21233368, 7, 0, 21560241, 7, 0, 22086304, 7, 0, 23657804, 7, 0, 23919776, 7, 0, 25558999, 7, 0, 25821360, 7, 0, 27919249, 7, 0, 29295061, 7, 0, 29753165, 7, 0, 30080573, 7, 0 )
-_sections_unfolded = [ "Cell", "Transform" ]
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="day_timer" type="Timer" parent="." index="3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="behind_assets/countdown/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -29.3353, -28.7776, -29.422, 28.364, 30.0778, 28.364, 30.2513, -28.7776 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="day_timer" type="Timer" parent="." index="1"]
 
 process_mode = 1
 wait_time = 120.0
 one_shot = false
 autostart = true
 
-[node name="countdown_timer" type="RichTextLabel" parent="." index="4"]
+[node name="countdown_timer" type="RichTextLabel" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -252,24 +289,211 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 
-[node name="success_background" type="Sprite" parent="." index="5"]
+[node name="concessions" type="Node2D" parent="." index="3"]
+
+position = Vector2( 3.92411, -0.484295 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="soda" type="Sprite" parent="concessions" index="0"]
+
+editor/display_folded = true
+position = Vector2( -35.8669, -30.7948 )
+scale = Vector2( 0.0278208, 0.0479294 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="concessions/soda" index="0"]
+
+position = Vector2( 0, -9.31448 )
+scale = Vector2( 1, 1.29108 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="concessions/soda/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -3.89819, -28.1614, -3.89819, -17.4132, -26.0875, -17.0293, -18.8518, 26.3474, 19.7382, 26.3474, 28.9032, -14.7261, 4.30212, -16.6454, 4.30212, -27.7775 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="soda2" type="Sprite" parent="concessions" index="1"]
+
+editor/display_folded = true
+position = Vector2( -35.8669, -30.7948 )
+scale = Vector2( 0.0278208, 0.0479294 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="concessions/soda2" index="0"]
+
+position = Vector2( 0, -9.31448 )
+scale = Vector2( 1, 1.29108 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="concessions/soda2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -3.89819, -28.1614, -3.89819, -17.4132, -26.0875, -17.0293, -18.8518, 26.3474, 19.7382, 26.3474, 28.9032, -14.7261, 4.30212, -16.6454, 4.30212, -27.7775 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="soda3" type="Sprite" parent="concessions" index="2"]
+
+editor/display_folded = true
+position = Vector2( -35.8669, -30.7948 )
+scale = Vector2( 0.0278208, 0.0479294 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="concessions/soda3" index="0"]
+
+position = Vector2( 0, -9.31448 )
+scale = Vector2( 1, 1.29108 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="concessions/soda3/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -3.89819, -28.1614, -3.89819, -17.4132, -26.0875, -17.0293, -18.8518, 26.3474, 19.7382, 26.3474, 28.9032, -14.7261, 4.30212, -16.6454, 4.30212, -27.7775 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="popcorn" type="Sprite" parent="concessions" index="3"]
+
+editor/display_folded = true
+position = Vector2( -36.0794, -31.2072 )
+scale = Vector2( 0.0278208, 0.0479294 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="concessions/popcorn" index="0"]
+
+position = Vector2( 0, -9.31448 )
+scale = Vector2( 1, 1.29108 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="concessions/popcorn/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -14.0398, -18.1809, -13.7746, -14.4393, -25.7102, -12.6669, -23.0578, -6.56219, -16.9574, 33.0201, 13.0142, 33.2171, 22.2975, 29.0816, 28.9284, -8.72839, 27.3369, -16.9993, 15.6666, -20.3471, 0.282898, -23.301 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="popcorn2" type="Sprite" parent="concessions" index="4"]
+
+editor/display_folded = true
+position = Vector2( -9.66266, -8.81379 )
+scale = Vector2( 0.0278208, 0.0479294 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="concessions/popcorn2" index="0"]
+
+position = Vector2( 0, -9.31448 )
+scale = Vector2( 1, 1.29108 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="concessions/popcorn2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -14.0398, -18.1809, -13.7746, -14.4393, -25.7102, -12.6669, -23.0578, -6.56219, -16.9574, 33.0201, 13.0142, 33.2171, 22.2975, 29.0816, 28.9284, -8.72839, 27.3369, -16.9993, 15.6666, -20.3471, 0.282898, -23.301 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="popcorn3" type="Sprite" parent="concessions" index="5"]
+
+editor/display_folded = true
+position = Vector2( 16.562, -3.53966 )
+scale = Vector2( 0.0278208, 0.0479294 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="concessions/popcorn3" index="0"]
+
+position = Vector2( 0, -9.31448 )
+scale = Vector2( 1, 1.29108 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="concessions/popcorn3/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -14.0398, -18.1809, -13.7746, -14.4393, -25.7102, -12.6669, -23.0578, -6.56219, -16.9574, 33.0201, 13.0142, 33.2171, 22.2975, 29.0816, 28.9284, -8.72839, 27.3369, -16.9993, 15.6666, -20.3471, 0.282898, -23.301 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="success_background" type="Sprite" parent="." index="4"]
 
 editor/display_folded = true
 position = Vector2( 10.5644, -15.9155 )
 scale = Vector2( 0.0564269, 0.0401874 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 
 [node name="Sprite2" type="Sprite" parent="success_background" index="0"]
 
 position = Vector2( 46.9165, 16.7267 )
 scale = Vector2( 0.316313, 0.721777 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 
 [node name="Sprite1" type="Sprite" parent="success_background" index="1"]
 
 position = Vector2( -0.233916, 17.4176 )
 scale = Vector2( 0.312359, 0.728686 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -278,7 +502,7 @@ __meta__ = {
 
 position = Vector2( -47.3844, 17.4176 )
 scale = Vector2( 0.308405, 0.728686 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -299,7 +523,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Points"
@@ -333,7 +557,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
@@ -367,7 +591,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
@@ -401,7 +625,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
@@ -418,7 +642,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="6"]
+[node name="customer" type="KinematicBody2D" parent="." index="5"]
 
 position = Vector2( -1.46586, 1.29625 )
 scale = Vector2( 0.0430164, 0.064567 )
@@ -426,9 +650,9 @@ input_pickable = true
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-_sections_unfolded = [ "Pickable" ]
+_sections_unfolded = [ "Collision", "Pause", "Pickable", "Visibility", "collision" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="customer" index="0"]
 
 build_mode = 0
 polygon = PoolVector2Array( -20.683, -28.2521, -20.6309, 23.4319, 24.002, 23.4655, 24.002, -28.2521 )
@@ -436,24 +660,323 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="customer" type="Sprite" parent="KinematicBody2D" index="1"]
+[node name="customer" type="Sprite" parent="customer" index="1"]
 
-scale = Vector2( 1, 1 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Offset" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
+[node name="collision_timer" type="Timer" parent="customer" index="2"]
 
-stream = ExtResource( 7 )
+process_mode = 1
+wait_time = 0.5
+one_shot = true
+autostart = false
+
+[node name="ghostie_one" type="KinematicBody2D" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 25.9234, -12.5522 )
+scale = Vector2( 0.038675, 0.0607872 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ghostie_one" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20.683, -28.2521, -20.6309, 23.4319, 24.002, 23.4655, 24.002, -28.2521 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="customer2" type="Sprite" parent="ghostie_one" index="1"]
+
+position = Vector2( 5.59631, 4.04483 )
+scale = Vector2( 2.25612, 2.21535 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="ghost_timer" type="Timer" parent="ghostie_one" index="2"]
+
+process_mode = 1
+wait_time = 3.5
+one_shot = false
+autostart = true
+
+[node name="ghostie_two" type="KinematicBody2D" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( -10.5926, -1.12931 )
+scale = Vector2( 0.038675, 0.0607872 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ghostie_two" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20.683, -28.2521, -20.6309, 23.4319, 24.002, 23.4655, 24.002, -28.2521 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="customer2" type="Sprite" parent="ghostie_two" index="1"]
+
+position = Vector2( 5.59631, 4.04483 )
+scale = Vector2( 2.25612, 2.21535 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ghost_timer" type="Timer" parent="ghostie_two" index="2"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[node name="ghostie_two2" type="KinematicBody2D" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 12.0256, -27.6489 )
+scale = Vector2( 0.038675, 0.0607872 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ghostie_two2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20.683, -28.2521, -20.6309, 23.4319, 24.002, 23.4655, 24.002, -28.2521 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="customer2" type="Sprite" parent="ghostie_two2" index="1"]
+
+position = Vector2( 5.59631, 4.04483 )
+scale = Vector2( 2.25612, 2.21535 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ghost_timer" type="Timer" parent="ghostie_two2" index="2"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[node name="ghostie_two3" type="KinematicBody2D" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( -16.3807, 21.9419 )
+scale = Vector2( 0.038675, 0.0607872 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ghostie_two3" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20.683, -28.2521, -20.6309, 23.4319, 24.002, 23.4655, 24.002, -28.2521 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="customer2" type="Sprite" parent="ghostie_two3" index="1"]
+
+position = Vector2( 5.59631, 4.04483 )
+scale = Vector2( 2.25612, 2.21535 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ghost_timer" type="Timer" parent="ghostie_two3" index="2"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[node name="ghostie_three" type="KinematicBody2D" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( -25.9157, -15.637 )
+scale = Vector2( 0.038675, 0.0607872 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ghostie_three" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20.683, -28.2521, -20.6309, 23.4319, 24.002, 23.4655, 24.002, -28.2521 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="customer2" type="Sprite" parent="ghostie_three" index="1"]
+
+position = Vector2( 5.59631, 4.04483 )
+scale = Vector2( 2.25612, 2.21535 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ghost_timer" type="Timer" parent="ghostie_three" index="2"]
+
+process_mode = 1
+wait_time = 4.0
+one_shot = false
+autostart = true
+
+[node name="ghostie_four" type="KinematicBody2D" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( -26.1678, 14.5688 )
+scale = Vector2( 0.038675, 0.0607872 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ghostie_four" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20.683, -28.2521, -20.6309, 23.4319, 24.002, 23.4655, 24.002, -28.2521 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="customer2" type="Sprite" parent="ghostie_four" index="1"]
+
+position = Vector2( 5.59631, 4.04483 )
+scale = Vector2( 2.25612, 2.21535 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ghost_timer" type="Timer" parent="ghostie_four" index="2"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = true
+
+[node name="ghostie_four2" type="KinematicBody2D" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( -7.34596, -24.194 )
+scale = Vector2( 0.038675, 0.0607872 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ghostie_four2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20.683, -28.2521, -20.6309, 23.4319, 24.002, 23.4655, 24.002, -28.2521 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="customer2" type="Sprite" parent="ghostie_four2" index="1"]
+
+position = Vector2( 5.59631, 4.04483 )
+scale = Vector2( 2.25612, 2.21535 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ghost_timer" type="Timer" parent="ghostie_four2" index="2"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = true
+
+[node name="ghostie_four3" type="KinematicBody2D" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( -10.7483, 10.73 )
+scale = Vector2( 0.038675, 0.0607872 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ghostie_four3" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20.683, -28.2521, -20.6309, 23.4319, 24.002, 23.4655, 24.002, -28.2521 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="customer2" type="Sprite" parent="ghostie_four3" index="1"]
+
+position = Vector2( 5.59631, 4.04483 )
+scale = Vector2( 2.25612, 2.21535 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ghost_timer" type="Timer" parent="ghostie_four3" index="2"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = true
+
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="14"]
+
+stream = ExtResource( 12 )
 volume_db = -10.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="pixel" type="Node2D" parent="." index="8"]
+[node name="pixel" type="Node2D" parent="." index="15"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -467,7 +990,7 @@ __meta__ = {
 
 position = Vector2( 1.51461, -21.9795 )
 scale = Vector2( 0.0525097, 0.0839613 )
-texture = ExtResource( 8 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -476,7 +999,7 @@ __meta__ = {
 
 position = Vector2( 3.44501, -21.9471 )
 scale = Vector2( 0.0525097, 0.0845101 )
-texture = ExtResource( 8 )
+texture = ExtResource( 13 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -486,7 +1009,7 @@ __meta__ = {
 
 position = Vector2( 2.39866, -17.4225 )
 scale = Vector2( 0.0370912, 0.0646075 )
-texture = ExtResource( 9 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -495,7 +1018,7 @@ __meta__ = {
 
 position = Vector2( 2.41146, -21.7639 )
 scale = Vector2( 0.0573211, 0.0818684 )
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -504,7 +1027,7 @@ __meta__ = {
 
 position = Vector2( 2.41815, -27.1596 )
 scale = Vector2( 0.0482248, 0.0768474 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -520,6 +1043,7 @@ margin_top = -30.0
 margin_right = 6.0
 margin_bottom = -15.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
@@ -532,7 +1056,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="menu" type="Node2D" parent="." index="9"]
+[node name="menu" type="Node2D" parent="." index="16"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -544,25 +1068,25 @@ scale = Vector2( 1.08517, 1.01932 )
 
 position = Vector2( -11.0653, -5.63495 )
 scale = Vector2( 0.0630713, 0.122483 )
-texture = ExtResource( 11 )
+texture = ExtResource( 16 )
 
 [node name="button" type="Sprite" parent="menu" index="1"]
 
 position = Vector2( -11.0652, -7.19806 )
 scale = Vector2( 0.0865617, 0.0535254 )
-texture = ExtResource( 12 )
+texture = ExtResource( 17 )
 
 [node name="button 2" type="Sprite" parent="menu" index="2"]
 
 position = Vector2( -11.1587, -0.0804813 )
 scale = Vector2( 0.0845717, 0.0550644 )
-texture = ExtResource( 12 )
+texture = ExtResource( 17 )
 
 [node name="button 3" type="Sprite" parent="menu" index="3"]
 
 position = Vector2( -11.2142, 6.84755 )
 scale = Vector2( 0.0991645, 0.0610349 )
-texture = ExtResource( 12 )
+texture = ExtResource( 17 )
 
 [node name="notification" type="RichTextLabel" parent="menu" index="4"]
 
@@ -581,7 +1105,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Sound"
@@ -607,6 +1131,7 @@ margin_right = 89.0
 margin_bottom = 1.0
 rect_scale = Vector2( 0.2, 0.2 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -636,11 +1161,12 @@ margin_right = 195.0
 margin_bottom = 38.0
 rect_scale = Vector2( 0.075, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -661,11 +1187,12 @@ margin_right = 188.0
 margin_bottom = 45.0
 rect_scale = Vector2( 0.075, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -686,11 +1213,12 @@ margin_right = 244.0
 margin_bottom = 52.0
 rect_scale = Vector2( 0.07, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -699,7 +1227,7 @@ group = null
 text = "Go to Main Menu"
 underline = 2
 
-[node name="are_you_sure" type="Node2D" parent="." index="10"]
+[node name="are_you_sure" type="Node2D" parent="." index="17"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -710,7 +1238,7 @@ position = Vector2( -0.867098, 7.8757 )
 
 position = Vector2( 0.546828, -6.05607 )
 scale = Vector2( 0.0568319, 0.0995517 )
-texture = ExtResource( 11 )
+texture = ExtResource( 16 )
 
 [node name="notification1" type="RichTextLabel" parent="are_you_sure" index="1"]
 
@@ -729,7 +1257,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Are you sure you want to go back to the village?"
@@ -747,7 +1275,7 @@ override_selected_font_color = false
 
 position = Vector2( 5.56144, 3.57191 )
 scale = Vector2( 0.0342556, 0.0587461 )
-texture = ExtResource( 12 )
+texture = ExtResource( 17 )
 
 [node name="yes_village" type="LinkButton" parent="are_you_sure" index="3"]
 
@@ -761,11 +1289,12 @@ margin_right = 77.0
 margin_bottom = 43.0
 rect_scale = Vector2( 0.075, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -778,7 +1307,7 @@ underline = 2
 
 position = Vector2( -5.32616, 3.57191 )
 scale = Vector2( 0.0246643, 0.0553641 )
-texture = ExtResource( 12 )
+texture = ExtResource( 17 )
 
 [node name="no_village" type="LinkButton" parent="are_you_sure" index="5"]
 
@@ -792,11 +1321,12 @@ margin_right = 44.0
 margin_bottom = 42.0
 rect_scale = Vector2( 0.075, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -805,7 +1335,7 @@ group = null
 text = "NO"
 underline = 2
 
-[node name="are_you_sure_2" type="Node2D" parent="." index="11"]
+[node name="are_you_sure_2" type="Node2D" parent="." index="18"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -816,7 +1346,7 @@ position = Vector2( 11.9009, 2.57871 )
 
 position = Vector2( -12.1353, -0.73198 )
 scale = Vector2( 0.0574612, 0.0971016 )
-texture = ExtResource( 11 )
+texture = ExtResource( 16 )
 
 [node name="notification1" type="RichTextLabel" parent="are_you_sure_2" index="1"]
 
@@ -835,7 +1365,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 8 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Are you sure you want to go to the main menu?"
@@ -853,7 +1383,7 @@ override_selected_font_color = false
 
 position = Vector2( -6.40552, 8.79333 )
 scale = Vector2( 0.031443, 0.0596047 )
-texture = ExtResource( 12 )
+texture = ExtResource( 17 )
 
 [node name="yes_main" type="LinkButton" parent="are_you_sure_2" index="3"]
 
@@ -867,11 +1397,12 @@ margin_right = 65.0
 margin_bottom = 51.0
 rect_scale = Vector2( 0.075, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -884,7 +1415,7 @@ underline = 2
 
 position = Vector2( -18.2269, 8.6725 )
 scale = Vector2( 0.0238846, 0.053194 )
-texture = ExtResource( 12 )
+texture = ExtResource( 17 )
 
 [node name="no_main" type="LinkButton" parent="are_you_sure_2" index="5"]
 
@@ -898,11 +1429,12 @@ margin_right = 29.0
 margin_bottom = 47.0
 rect_scale = Vector2( 0.075, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -911,9 +1443,8 @@ group = null
 text = "NO"
 underline = 2
 
-[node name="customer_display" type="Node2D" parent="." index="12"]
+[node name="customer_display" type="Node2D" parent="." index="19"]
 
-editor/display_folded = true
 position = Vector2( -0.121908, -1.40928 )
 __meta__ = {
 "_edit_lock_": true
@@ -937,54 +1468,55 @@ autostart = false
 
 position = Vector2( 27.6143, 23.8742 )
 scale = Vector2( 0.0172057, 0.0222086 )
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="moneybag" type="Sprite" parent="customer_display" index="3"]
 
 visible = false
 position = Vector2( 28.8934, 20.3003 )
 scale = Vector2( 0.0229, 0.0328711 )
-texture = ExtResource( 14 )
+texture = ExtResource( 19 )
 
 [node name="explosion" type="Particles2D" parent="customer_display" index="4"]
 
 visible = false
-position = Vector2( 28.9001, 20.3583 )
+position = Vector2( 27.6349, 20.5615 )
+rotation = 3.14159
 scale = Vector2( 0.110664, 0.16403 )
 emitting = true
-amount = 8
+amount = 12
 lifetime = 1.0
 one_shot = false
 preprocess = 0.0
 speed_scale = 1.0
 explosiveness = 0.0
-randomness = 0.0
+randomness = 1.0
 fixed_fps = 0
 fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 12 )
+process_material = SubResource( 10 )
 texture = null
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material" ]
+_sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Textures", "Time", "Transform", "Visibility", "Z Index" ]
 
-[node name="tutorial" type="Node2D" parent="." index="13"]
+[node name="tutorial" type="Node2D" parent="." index="20"]
 
 pause_mode = 2
 editor/display_folded = true
-visible = false
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Sprite2" type="Sprite" parent="tutorial" index="0"]
 
-position = Vector2( -2.25236, -17.9928 )
+editor/display_folded = true
+position = Vector2( -7.24759, -20.6473 )
 scale = Vector2( 0.0374524, 0.0683183 )
-texture = ExtResource( 15 )
+texture = ExtResource( 20 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite2" index="0"]
 
@@ -992,17 +1524,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -57.0
-margin_top = 24.0
-margin_right = 88.0
-margin_bottom = 82.0
+margin_left = -56.0
+margin_top = 25.0
+margin_right = 89.0
+margin_bottom = 83.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "ghostie"
@@ -1015,12 +1547,14 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
+_sections_unfolded = [ "custom_fonts" ]
 
 [node name="Sprite7" type="Sprite" parent="tutorial" index="1"]
 
-position = Vector2( -1.64354, -3.97207 )
+editor/display_folded = true
+position = Vector2( -1.40328, -2.65844 )
 scale = Vector2( 0.0374524, 0.0683183 )
-texture = ExtResource( 15 )
+texture = ExtResource( 20 )
 flip_v = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite7" index="0"]
@@ -1030,16 +1564,16 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -32.0
-margin_top = -63.0
+margin_top = -60.0
 margin_right = 43.0
-margin_bottom = -19.0
+margin_bottom = -16.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "you"
@@ -1055,10 +1589,14 @@ override_selected_font_color = false
 
 [node name="Sprite5" type="Sprite" parent="tutorial" index="2"]
 
-position = Vector2( -14.0813, -25.5117 )
+editor/display_folded = true
+position = Vector2( -15.9289, -24.449 )
 scale = Vector2( 0.0374524, 0.0683183 )
-texture = ExtResource( 15 )
+texture = ExtResource( 20 )
 flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite5" index="0"]
 
@@ -1066,16 +1604,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -321.0
-margin_top = -24.0
-margin_bottom = 34.0
+margin_left = -340.0
+margin_top = -21.0
+margin_right = -19.0
+margin_bottom = 37.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "Click Pixel for help!"
@@ -1091,9 +1630,10 @@ override_selected_font_color = false
 
 [node name="Sprite6" type="Sprite" parent="tutorial" index="3"]
 
-position = Vector2( -11.6854, 11.4598 )
-scale = Vector2( 0.0915925, 0.0764046 )
-texture = ExtResource( 15 )
+editor/display_folded = true
+position = Vector2( -2.43902, 15.9085 )
+scale = Vector2( 0.073451, 0.057829 )
+texture = ExtResource( 20 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite6" index="0"]
 
@@ -1101,19 +1641,18 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 17.0
-margin_top = 139.0
-margin_right = 378.0
-margin_bottom = 233.0
-rect_rotation = 90.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = -109.0
+margin_top = 26.0
+margin_right = 275.0
+margin_bottom = 112.0
+rect_scale = Vector2( 0.6, 0.6 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "Seconds left in the day"
@@ -1126,12 +1665,16 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
+_sections_unfolded = [ "Rect" ]
 
 [node name="Sprite4" type="Sprite" parent="tutorial" index="4"]
 
-position = Vector2( 18.0183, -15.9199 )
+editor/display_folded = true
+position = Vector2( 3.65042, -16.3222 )
+rotation = 1.5708
 scale = Vector2( 0.0745852, 0.0449206 )
-texture = ExtResource( 15 )
+texture = ExtResource( 20 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial/Sprite4" index="0"]
 
@@ -1139,10 +1682,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 17.0
-margin_top = 34.0
-margin_right = 162.0
-margin_bottom = 90.0
+margin_left = 16.0
+margin_top = 79.0
+margin_right = 161.0
+margin_bottom = 135.0
 rect_rotation = -90.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -1150,7 +1693,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "points"
@@ -1164,23 +1707,25 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 
-[node name="Sprite10" type="Sprite" parent="tutorial" index="5"]
+[node name="Sprite9" type="Sprite" parent="tutorial" index="5"]
 
-position = Vector2( -27.8665, 3.70895 )
-scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
-flip_v = true
+editor/display_folded = true
+position = Vector2( 18.3016, -4.56553 )
+rotation = 1.5708
+scale = Vector2( 0.0745852, 0.0449206 )
+texture = ExtResource( 20 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite10" index="0"]
+[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial/Sprite9" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 21.0
-margin_top = -83.0
-margin_right = 120.0
-margin_bottom = -26.0
+margin_left = 11.0
+margin_top = 147.0
+margin_right = 195.0
+margin_bottom = 203.0
 rect_rotation = -90.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -1188,7 +1733,49 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = false
+bbcode_text = "concession"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "concession"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode" ]
+
+[node name="Sprite10" type="Sprite" parent="tutorial" index="6"]
+
+editor/display_folded = true
+position = Vector2( -27.6157, 3.70895 )
+rotation = -1.5708
+scale = Vector2( 0.0636586, 0.028042 )
+texture = ExtResource( 20 )
+flip_v = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite10" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = -87.0
+margin_right = 89.0
+margin_bottom = -30.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "left"
@@ -1201,13 +1788,17 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
+_sections_unfolded = [ "Rect" ]
 
-[node name="Sprite14" type="Sprite" parent="tutorial" index="6"]
+[node name="Sprite14" type="Sprite" parent="tutorial" index="7"]
 
+editor/display_folded = true
 position = Vector2( 25.2638, 22.1886 )
+rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
+texture = ExtResource( 20 )
 flip_v = true
+_sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite14" index="0"]
 
@@ -1215,18 +1806,18 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 35.0
-margin_top = -1162.0
-margin_right = 1221.0
-margin_bottom = -1016.0
-rect_rotation = -90.0
+margin_left = 19.0
+margin_top = -1343.0
+margin_right = 1448.0
+margin_bottom = -1197.0
+rect_rotation = 90.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "This is your customer, and they will give you an idea of how business is going in the arcade. Look out for a sparkly money bag during the minigame, it means you have a happy customer in the arcade."
@@ -1239,12 +1830,19 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Rect" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Sprite11" type="Sprite" parent="tutorial" index="7"]
+[node name="Sprite11" type="Sprite" parent="tutorial" index="8"]
 
-position = Vector2( -18.2038, 3.58149 )
+editor/display_folded = true
+position = Vector2( -18.6929, 3.53046 )
+rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
+texture = ExtResource( 20 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite11" index="0"]
 
@@ -1253,17 +1851,17 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 21.0
-margin_top = 36.0
+margin_top = 27.0
 margin_right = 120.0
-margin_bottom = 93.0
-rect_rotation = -90.0
+margin_bottom = 84.0
+rect_rotation = 90.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "right"
@@ -1276,12 +1874,14 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
+_sections_unfolded = [ "Rect" ]
 
-[node name="Sprite12" type="Sprite" parent="tutorial" index="8"]
+[node name="Sprite12" type="Sprite" parent="tutorial" index="9"]
 
-position = Vector2( -23.1113, 6.91282 )
+editor/display_folded = true
+position = Vector2( -23.174, 6.49867 )
 scale = Vector2( 0.0504109, 0.0422474 )
-texture = ExtResource( 15 )
+texture = ExtResource( 20 )
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite12" index="0"]
 
@@ -1299,7 +1899,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "down"
@@ -1313,11 +1913,12 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 
-[node name="Sprite13" type="Sprite" parent="tutorial" index="9"]
+[node name="Sprite13" type="Sprite" parent="tutorial" index="10"]
 
-position = Vector2( -23.2661, -3.41701 )
+editor/display_folded = true
+position = Vector2( -23.1407, -2.58871 )
 scale = Vector2( 0.0504109, 0.0422474 )
-texture = ExtResource( 15 )
+texture = ExtResource( 20 )
 flip_v = true
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite13" index="0"]
@@ -1336,7 +1937,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "up"
@@ -1350,15 +1951,15 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 
-[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial" index="10"]
+[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial" index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -29.0
+margin_left = -27.0
 margin_top = -9.0
-margin_right = 131.0
+margin_right = 133.0
 margin_bottom = 51.0
 rect_scale = Vector2( 0.05, 0.05 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -1367,7 +1968,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "Movement"
@@ -1381,16 +1982,16 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 
-[node name="RichTextLabel" type="RichTextLabel" parent="tutorial" index="11"]
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial" index="12"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 4.0
-margin_top = -2.0
-margin_right = 447.0
-margin_bottom = 311.0
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 516.0
+margin_bottom = 185.0
 rect_scale = Vector2( 0.05, 0.05 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -1398,7 +1999,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "The rules are simple:
@@ -1416,16 +2017,16 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 
-[node name="RichTextLabel1" type="RichTextLabel" parent="tutorial" index="12"]
+[node name="RichTextLabel1" type="RichTextLabel" parent="tutorial" index="13"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 4.0
-margin_top = 7.0
-margin_right = 528.0
-margin_bottom = 320.0
+margin_left = 6.0
+margin_top = 14.0
+margin_right = 530.0
+margin_bottom = 87.0
 rect_scale = Vector2( 0.05, 0.05 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -1433,7 +2034,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "Welcome to Yellow Eating Dot!"
@@ -1447,28 +2048,28 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 
-[node name="Sprite3" type="Sprite" parent="tutorial" index="13"]
+[node name="Sprite3" type="Sprite" parent="tutorial" index="14"]
 
 position = Vector2( 26.911, -24.3176 )
 scale = Vector2( 0.0233709, 0.0450107 )
-texture = ExtResource( 12 )
+texture = ExtResource( 17 )
 
-[node name="Sprite8" type="Sprite" parent="tutorial" index="14"]
+[node name="Sprite8" type="Sprite" parent="tutorial" index="15"]
 
-position = Vector2( -24.7573, -6.89975 )
+position = Vector2( -23.1513, -6.89975 )
 scale = Vector2( 0.0612173, 0.00208607 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 
-[node name="Sprite" type="Sprite" parent="tutorial" index="15"]
+[node name="Sprite" type="Sprite" parent="tutorial" index="16"]
 
 position = Vector2( -23.1274, 2.08791 )
 scale = Vector2( 0.0168183, 0.0253723 )
-texture = ExtResource( 16 )
+texture = ExtResource( 21 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tutorial_button" type="LinkButton" parent="tutorial" index="16"]
+[node name="tutorial_button" type="LinkButton" parent="tutorial" index="17"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1480,11 +2081,12 @@ margin_right = 68.0
 margin_bottom = 14.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1493,7 +2095,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="in" type="Node2D" parent="." index="14"]
+[node name="in" type="Node2D" parent="." index="21"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -1515,7 +2117,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 15 )
+custom_fonts/normal_font = SubResource( 13 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "3"
@@ -1537,6 +2139,22 @@ one_shot = false
 autostart = false
 
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
+
+[connection signal="timeout" from="ghostie_one/ghost_timer" to="ghostie_one" method="_on_ghost_timer_timeout"]
+
+[connection signal="timeout" from="ghostie_two/ghost_timer" to="ghostie_two" method="_on_ghost_timer_timeout"]
+
+[connection signal="timeout" from="ghostie_two2/ghost_timer" to="ghostie_two2" method="_on_ghost_timer_timeout"]
+
+[connection signal="timeout" from="ghostie_two3/ghost_timer" to="ghostie_two3" method="_on_ghost_timer_timeout"]
+
+[connection signal="timeout" from="ghostie_three/ghost_timer" to="ghostie_three" method="_on_ghost_timer_timeout"]
+
+[connection signal="timeout" from="ghostie_four/ghost_timer" to="ghostie_four" method="_on_ghost_timer_timeout"]
+
+[connection signal="timeout" from="ghostie_four2/ghost_timer" to="ghostie_four2" method="_on_ghost_timer_timeout"]
+
+[connection signal="timeout" from="ghostie_four3/ghost_timer" to="ghostie_four3" method="_on_ghost_timer_timeout"]
 
 [connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 

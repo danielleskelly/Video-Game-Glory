@@ -7,10 +7,10 @@ path="res://.import/fiyork_music.ogg-e22b277980ab18ee0da60ab7f23df039.oggstr"
 [deps]
 
 source_file="res://fiyork_music.ogg"
-source_md5="bd30fa6e49e751bde93f42dfbfc79d72"
+source_md5="921def957d5026dcbb9cf74c70f0e1ff"
 
 dest_files=[ "res://.import/fiyork_music.ogg-e22b277980ab18ee0da60ab7f23df039.oggstr" ]
-dest_md5="0c2d1dea2cc94690cfb69639311f9a79"
+dest_md5="cc9713eaaeac70d6a180dbbdd236d5e8"
 
 [params]
 

@@ -10,17 +10,12 @@ radius = 10.0
 
 [node name="bullet" type="RigidBody2D"]
 
-position = Vector2( 0.0791088, -0.0671827 )
-scale = Vector2( 0.0244835, 0.0277082 )
 input_pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Transform2D( 1.30746, 0, 0, 1.47977, -0.499336, -1.20797 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 mode = 0
 mass = 1.0
-friction = 1.0
+friction = 0.0
 bounce = 0.0
 gravity_scale = 0.0
 custom_integrator = false
@@ -30,25 +25,22 @@ contact_monitor = false
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.0
 angular_velocity = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
+angular_damp = -1.0
 script = ExtResource( 1 )
+_sections_unfolded = [ "Applied Forces", "Linear" ]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
+scale = Vector2( 0.075, 0.075 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
+_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -0.499336, -1.20797 )
-scale = Vector2( 1.30746, 1.47977 )
+position = Vector2( -0.0595211, -0.0822836 )
+scale = Vector2( 0.104995, 0.112892 )
 shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
+
+

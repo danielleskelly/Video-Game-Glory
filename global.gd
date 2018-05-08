@@ -15,7 +15,7 @@ var storefront_sabotage_key = true
 var game_over = false
 
 #town
-var town_select = "hollyhock"
+var town_select = "banlon"
 
 #money
 var hollyhock_cash = 400

@@ -8,6 +8,8 @@ var hundreds
 var tens
 var ones
 
+var car_mover
+
 var customer_choice
 var price_choice
 var randomness
@@ -38,9 +40,11 @@ func _ready():
 	else:
 		get_tree().set_pause(true)
 		countin()
-	get_node("StreamPlayer").set_volume(sound.volume)
+	get_node("StreamPlayer").set_volume_db(sound.volume)
 	current_pos = "a"
+	get_node("frog").set_global_position(Vector2(953, 565.073608))
 	set_process(true)
+	set_physics_process(true)
 
 func _process(delta):
 	hundreds = get_node("success_background/hundreths")
@@ -49,60 +53,77 @@ func _process(delta):
 	point_display()
 	countdown_timer.clear()
 	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
+	
+func _physics_process(delta):
+	var frog_pos = get_node("frog").get_global_position()
+	if current_pos == "a":
+		get_node("frog").set_global_position(Vector2(frog_pos.x, 565.073608))
+	elif current_pos == "b":
+		get_node("frog").set_global_position(Vector2(frog_pos.x, 436.073127))
+	elif current_pos == "c":
+		get_node("frog").set_global_position(Vector2(frog_pos.x, 287.072815))
+	elif current_pos == "d":
+		get_node("frog").set_global_position(Vector2(frog_pos.x, 138.073074))
+	elif current_pos == "e":
+		get_node("frog").set_global_position(Vector2(frog_pos.x, 37.071869))
+	
+	car_mover = get_tree().get_nodes_in_group("car")
+	for x in car_mover:
+		if x.is_in_group("road_one"):
+			x.set_unit_offset(get_node("Path2D/road_one").car_loc)
+			get_node("Path2D/road_one").car_loc += get_node("Path2D/road_one").car_speed
+		elif x.is_in_group("road_two"):
+			x.set_unit_offset(get_node("Path2D2/road_two").car_loc)
+			get_node("Path2D2/road_two").car_loc += get_node("Path2D2/road_two").car_speed
+		elif x.is_in_group("road_three"):
+			x.set_unit_offset(get_node("Path2D3/road_three").car_loc)
+			get_node("Path2D3/road_three").car_loc += get_node("Path2D3/road_three").car_speed
 	frog_colliders = get_node("frog").get_colliding_bodies()
 	for x in frog_colliders:
-		if (x.is_in_group("car") == true):
-			reset_frog()
-	var frog_pos = get_node("frog").get_pos()
+		if get_node("frog/collision_timer").get_time_left() == 0 and perks.success > 5:
+			perks.success -= 5
+			get_node("frog/collision_timer").start()
+		reset_frog()
 	if (Input.is_action_pressed("move_left")):
 		direction = Vector2(-1.0, 0.0)
-		frog_pos += direction * 25 * delta
-		get_node("frog").set_pos(frog_pos)
+		frog_pos += direction * 250 * delta
+		get_node("frog").set_global_position(frog_pos)
 	if (Input.is_action_pressed("move_right")):
 		direction = Vector2(1.0, 0.0)
-		frog_pos += direction * 25 * delta
-		get_node("frog").set_pos(frog_pos)
+		frog_pos += direction * 250 * delta
+		get_node("frog").set_global_position(frog_pos)
 	if (Input.is_action_pressed("move_up")) and (get_node("jump_timer").get_time_left() == 0):
 		if (current_pos == "a"):
 			current_pos = "b"
-			get_node("frog").set_pos(Vector2(frog_pos.x, 13.569057))
 		elif (current_pos == "b"):
 			current_pos = "c"
-			get_node("frog").set_pos(Vector2(frog_pos.x, -1.493553))
 		elif (current_pos == "c"):
 			current_pos = "d"
-			get_node("frog").set_pos(Vector2(frog_pos.x, -16.731302))
 		elif (current_pos == "d"):
-			get_node("frog").set_pos(Vector2(frog_pos.x, -27.590385))
-			get_node("notification").set_hidden(false)
+			current_pos = "e"
+			get_node("notification").show()
 			get_node("note_timer").start()
 		get_node("jump_timer").start()
 	if (Input.is_action_pressed("move_down")) and (get_node("jump_timer").get_time_left() == 0):
 		if (current_pos == "e"):
 			current_pos = "d"
-			get_node("frog").set_pos(Vector2(frog_pos.x, -16.731302))
 		elif (current_pos == "d"):
 			current_pos = "c"
-			get_node("frog").set_pos(Vector2(frog_pos.x, -1.493553))
 		elif (current_pos == "c"):
 			current_pos = "b"
-			get_node("frog").set_pos(Vector2(frog_pos.x, 13.569057))
 		elif (current_pos == "b"):
 			current_pos = "a"
-			get_node("frog").set_pos(Vector2(frog_pos.x, 27.931084))
 		get_node("jump_timer").start()
-	
+
 
 func _on_note_timer_timeout():
-	get_node("notification").set_hidden(true)
+	get_node("notification").hide()
 	perks.success = perks.success + 10
 	reset_frog()
 	
 func reset_frog():
-	if perks.success > 5:
-		perks.success = perks.success - 5
-	get_node("frog").set_pos(Vector2(27.389816, 27.931084))
 	current_pos = "a"
+	get_node("frog").rotation = 0
 	
 func point_display():
 		var one_ones_digit = ((perks.success)) % 10
@@ -121,41 +142,41 @@ func _on_day_timer_timeout():
 
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
-	get_node("menu").set_hidden(false)
+	get_node("menu").show()
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
 	new_volume = value / 100
 	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume(new_volume)
+	get_node("StreamPlayer").set_volume_db(new_volume)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
-	get_node("menu").set_hidden(true)
+	get_node("menu").hide()
 
 func _on_return_to_village_button_down():
-	get_node("are_you_sure").set_hidden(false)
+	get_node("are_you_sure").show()
 
 func _on_return_to_main_menu_button_down():
-	get_node("are_you_sure_2").set_hidden(false)
+	get_node("are_you_sure_2").show()
 
 func _on_yes_village_button_down():
-	get_node("menu").set_hidden(true)
+	get_node("menu").hide()
 	get_tree().set_pause(false)
-	perk_check()
+	perks.perk_check()
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_no_village_button_down():
-	get_node("are_you_sure").set_hidden(true)
-	get_node("menu").set_hidden(false)
+	get_node("are_you_sure").hide()
+	get_node("menu").show()
 
 func _on_yes_main_button_down():
 	get_tree().set_pause(false)
 	get_tree().change_scene("res://player_selection.tscn")
 
 func _on_no_main_button_down():
-	get_node("are_you_sure_2").set_hidden(true)
-	get_node("menu").set_hidden(false)
+	get_node("are_you_sure_2").hide()
+	get_node("menu").show()
 	
 func _on_customer_timeout():
 	get_node("customer_display/moneybag").show()
