@@ -21,7 +21,7 @@ var ball
 
 var ball_where
 var ball_dir = Vector2(0.5, 1.0)
-var ball_speed = 400
+var ball_speed = 300
 
 var left_move
 var right_move

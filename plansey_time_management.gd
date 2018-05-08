@@ -325,40 +325,40 @@ func _on_day_timer_timeout():
 
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
-	get_node("menu").set_hidden(false)
+	get_node("menu").show()
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 	
 
 func _on_sound_slider_value_changed( value ):
 	new_volume = value / 100
 	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume(new_volume)
+	get_node("StreamPlayer").set_volume_db(new_volume)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
-	get_node("menu").set_hidden(true)
+	get_node("menu").hide()
 
 
 func _on_return_to_village_button_down():
-	get_node("menu").set_hidden(true)
-	get_node("are_you_sure").set_hidden(false)
+	get_node("menu").hide()
+	get_node("are_you_sure").show()
 
 
 func _on_yes_village_button_down():
-	get_node("menu").set_hidden(true)
-	perk_check()
+	get_node("menu").hide()
+	perks.perk_check()
 	get_tree().set_pause(false)
 	get_tree().change_scene("res://strategy.tscn")
 
 
 func _on_no_village_button_down():
-	get_node("are_you_sure").set_hidden(true)
-	get_node("menu").set_hidden(false)
+	get_node("are_you_sure").hide()
+	get_node("menu").show()
 
 
 func _on_return_to_main_button_down():
-	get_node("menu").set_hidden(true)
-	get_node("are_you_sure_2").set_hidden(false)
+	get_node("menu").hide()
+	get_node("are_you_sure_2").show()
 	
 	
 func _on_yes_main_button_down():
@@ -367,8 +367,8 @@ func _on_yes_main_button_down():
 
 
 func _on_no_main_button_down():
-	get_node("are_you_sure_2").set_hidden(true)
-	get_node("menu").set_hidden(false)
+	get_node("are_you_sure_2").hide()
+	get_node("menu").show()
 
 
 	

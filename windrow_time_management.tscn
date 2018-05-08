@@ -118,12 +118,16 @@ _sections_unfolded = [ "Emission Shape", "Spread", "Trail" ]
 position = Vector2( 512.596, 306.065 )
 scale = Vector2( 16.0181, 9.60467 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="zerozero" type="StaticBody2D" parent="." index="0" groups=[
 "d",
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -28.0687, -24.4414 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -157,6 +161,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -28.0687, -19.6521 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -190,6 +195,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -28.0687, -14.6545 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -223,6 +229,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -28.0687, -9.96922 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -256,6 +263,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 3.96946, -9.91957 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -289,6 +297,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -11.95, -9.91957 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -322,6 +331,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 19.9514, -9.91957 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -355,6 +365,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -19.941, -9.91957 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -388,6 +399,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 11.9604, -9.91957 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -421,6 +433,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -3.95907, -9.91957 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -454,6 +467,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 27.9424, -9.91957 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -487,6 +501,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 4.03189, -14.5007 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -520,6 +535,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -11.95, -14.709 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -553,6 +569,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 19.9514, -14.709 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -586,6 +603,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -19.941, -14.709 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -619,6 +637,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 11.9604, -14.709 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -652,6 +671,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -3.95908, -14.709 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -685,6 +705,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 28.0048, -14.709 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -718,6 +739,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 3.96946, -19.7066 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -751,6 +773,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -11.95, -19.7066 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -784,6 +807,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 19.9514, -19.7066 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -817,6 +841,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -20.0034, -19.7066 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -850,6 +875,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 11.898, -19.7066 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -883,6 +909,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -3.95907, -19.7066 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -916,6 +943,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 27.9424, -19.7066 )
 scale = Vector2( 0.12595, 0.0756455 )
 input_pickable = true
@@ -949,6 +977,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -20.0144, -24.3806 )
 scale = Vector2( 0.12595, 0.075646 )
 input_pickable = true
@@ -982,6 +1011,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -11.961, -24.3806 )
 scale = Vector2( 0.12595, 0.075646 )
 input_pickable = true
@@ -1015,6 +1045,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -3.97002, -24.3806 )
 scale = Vector2( 0.12595, 0.075646 )
 input_pickable = true
@@ -1048,6 +1079,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 4.02094, -24.3806 )
 scale = Vector2( 0.12595, 0.075646 )
 input_pickable = true
@@ -1081,6 +1113,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 11.9495, -24.3806 )
 scale = Vector2( 0.12595, 0.075646 )
 input_pickable = true
@@ -1114,6 +1147,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 19.9404, -24.3806 )
 scale = Vector2( 0.12595, 0.075646 )
 input_pickable = true
@@ -1147,6 +1181,7 @@ __meta__ = {
 ]]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 27.869, -24.3806 )
 scale = Vector2( 0.12595, 0.075646 )
 input_pickable = true
@@ -1177,8 +1212,7 @@ __meta__ = {
 
 [node name="ball" type="RigidBody2D" parent="." index="32"]
 
-editor/display_folded = true
-position = Vector2( -1.72338, -8.34917 )
+position = Vector2( -0.966135, 10.19 )
 scale = Vector2( 0.0399274, 0.0687594 )
 input_pickable = false
 collision_layer = 1
@@ -1198,6 +1232,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Angular", "Applied Forces", "Linear" ]
 
 [node name="Sprite3" type="Sprite" parent="ball" index="0"]
 
@@ -1220,13 +1255,13 @@ __meta__ = {
 [node name="block_timer" type="Timer" parent="ball" index="2"]
 
 process_mode = 1
-wait_time = 0.2
+wait_time = 0.1
 one_shot = true
 autostart = false
 
 [node name="left_wall" type="StaticBody2D" parent="." index="33" groups=[
-"left",
 "wall",
+"left",
 ]]
 
 editor/display_folded = true
@@ -1275,6 +1310,9 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite" type="Sprite" parent="left_wall1" index="0"]
 
@@ -1328,8 +1366,8 @@ __meta__ = {
 }
 
 [node name="right_wall" type="StaticBody2D" parent="." index="36" groups=[
-"right",
 "wall",
+"right",
 ]]
 
 editor/display_folded = true
@@ -1401,6 +1439,7 @@ __meta__ = {
 "roof",
 ]]
 
+editor/display_folded = true
 position = Vector2( -10.1565, -71.8193 )
 scale = Vector2( 2.37068, 1 )
 input_pickable = false
@@ -1476,6 +1515,9 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite" type="Sprite" parent="buffer1" index="0"]
 
@@ -1497,6 +1539,7 @@ __meta__ = {
 
 [node name="paddle" type="RigidBody2D" parent="." index="41"]
 
+editor/display_folded = true
 position = Vector2( -1.35386, 25.3453 )
 scale = Vector2( 0.0500545, 0.0397513 )
 input_pickable = false
@@ -1549,6 +1592,9 @@ autostart = false
 editor/display_folded = true
 position = Vector2( -1.02444, 2.10931 )
 scale = Vector2( 1.10856, 1.0199 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite2" type="Sprite" parent="pixel" index="0"]
 
@@ -1814,6 +1860,7 @@ bus = "Master"
 [node name="menu" type="Node2D" parent="." index="49"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( 11.6878, 3.37865 )
 
@@ -1983,6 +2030,7 @@ underline = 2
 [node name="are_you_sure" type="Node2D" parent="." index="50"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( 13.2059, 3.47749 )
 
@@ -2093,6 +2141,7 @@ underline = 2
 [node name="are_you_sure_2" type="Node2D" parent="." index="51"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( 12.5647, 2.45415 )
 
@@ -2202,8 +2251,12 @@ underline = 2
 
 [node name="customer_display" type="Node2D" parent="." index="52"]
 
+editor/display_folded = true
 position = Vector2( -6.86872, 3.08506 )
 scale = Vector2( 1.05251, 1.05499 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="customer" type="Timer" parent="customer_display" index="0"]
 
@@ -2261,6 +2314,7 @@ _sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Text
 [node name="tutorial" type="Node2D" parent="." index="53"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( -0.138579, -0.115897 )
 scale = Vector2( 0.989292, 1.00238 )
@@ -2747,6 +2801,7 @@ underline = 2
 [node name="in" type="Node2D" parent="." index="54"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( 511.98, 302.557 )
 scale = Vector2( 16.0518, 9.58532 )
