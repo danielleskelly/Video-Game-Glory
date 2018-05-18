@@ -5,8 +5,8 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	get_node("skip_button").set_global_pos(Vector2(20,526))
-	get_node("mute_button").set_global_pos(Vector2(920, 526))
+	get_node("skip_button").set_global_position(Vector2(20,526))
+	get_node("mute_button").set_global_position(Vector2(920, 526))
 
 func _on_AnimationPlayer_finished():
 	global.town_select = "fiyork"

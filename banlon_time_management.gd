@@ -184,11 +184,6 @@ func _on_customer_timeout():
 	get_node("customer_display/pop_timer").start()
 
 
-func _on_customer_pop_timer_timeout():
-	get_node("customer_display/moneybag").hide()
-	get_node("customer_display/explosion").hide()
-
-
 func _on_tutorial_button_button_down():
 	get_node("tutorial").hide()
 	countin()
@@ -208,3 +203,8 @@ func _on_count_timer_timeout():
 		get_node("in").hide()
 		get_node("in/count_timer").stop()
 		get_tree().set_pause(false)
+
+func _on_pop_timer_timeout():
+	get_node("customer_display/moneybag").hide()
+	get_node("customer_display/explosion").hide()
+
