@@ -284,6 +284,7 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
+_sections_unfolded = [ "custom_colors" ]
 __meta__ = {
 "_edit_lock_": true
 }

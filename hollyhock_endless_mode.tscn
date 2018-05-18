@@ -1,4 +1,4 @@
-[gd_scene load_steps=284 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://hollyhock_endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://hollyhock_background.png" type="Texture" id=2]
@@ -50,202 +50,42 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 29.3001, -29.0451, 32.0455, -29.1104, 32.0455, 29.4983, 29.3883, 29.3417 )
-
-[sub_resource type="ConvexPolygonShape2D" id=7]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 11.6734, -12.6112, 13.0492, -12.6112, 13.0551, 31.3148, 11.6734, 31.3148 )
-
-[sub_resource type="ConvexPolygonShape2D" id=8]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 14.6669, -16.244, 16.1347, -16.244, 16.1567, 23.4772, 14.6806, 23.5538 )
-
-[sub_resource type="ConvexPolygonShape2D" id=9]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 16.1409, -16.4944, 16.1634, 17.3008, 14.2305, 17.3008, 14.2529, -16.4924 )
-
-[sub_resource type="ConvexPolygonShape2D" id=10]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 28.1845, -30.3704, 32.792, -30.3932, 32.792, 31.9271, 28.1506, 31.8851 )
-
-[sub_resource type="ConvexPolygonShape2D" id=11]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 14.941, -20.6928, 16.6701, -20.6928, 16.6701, 18.663, 14.941, 18.663 )
-
-[sub_resource type="ConvexPolygonShape2D" id=12]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 15.0439, -17.8645, 16.8933, -17.8645, 16.8933, 21.8708, 15.0439, 21.8708 )
-
-[sub_resource type="ConvexPolygonShape2D" id=13]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 14.5831, -16.9756, 16.1247, -16.9756, 16.1247, 16.8683, 14.5831, 16.8683 )
-
-[sub_resource type="ConvexPolygonShape2D" id=14]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 29.3091, -31.747, 93.9413, -31.5991, 93.9413, -25.7346, 29.3109, -25.6854 )
-
-[sub_resource type="ConvexPolygonShape2D" id=15]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 17.6844, 14.4911, 3.70555, 14.6178, 3.70555, 6.76231, 17.6844, 6.76231 )
-
-[sub_resource type="ConvexPolygonShape2D" id=16]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 4.48321, 6.69955, 18.3694, 6.69955, 18.3694, 16.1464, 4.48321, 16.1845 )
-
-[sub_resource type="ConvexPolygonShape2D" id=17]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 14.4566, 33.35, 24.5863, 33.35, 24.5863, 35.8117, 14.4566, 35.8117 )
-
-[sub_resource type="ConvexPolygonShape2D" id=18]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 29.7273, -32.6177, 92.4126, -32.7057, 92.5756, -25.6067, 29.5567, -25.4692 )
-
-[sub_resource type="ConvexPolygonShape2D" id=19]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 20.0623, 15.1466, 5.92773, 15.1611, 5.92773, 6.61972, 20.0659, 6.6795 )
-
-[sub_resource type="ConvexPolygonShape2D" id=20]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 4.27751, 5.7673, 18.1652, 5.7673, 18.1652, 15.3157, 4.27751, 15.5327 )
-
-[sub_resource type="ConvexPolygonShape2D" id=21]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 10.5831, 39.6392, 20.6555, 39.6392, 20.6555, 42.4865, 10.5831, 42.453 )
-
-[sub_resource type="ConvexPolygonShape2D" id=22]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 32.7584, -51.4543, 32.7584, -47.6596, 31.0768, -51.4543 )
-
-[sub_resource type="ConvexPolygonShape2D" id=23]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 6.51396, 32.5878, 6.55466, 23.1854, 8.2644, 32.5878 )
-
-[sub_resource type="ConvexPolygonShape2D" id=24]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 13.6596, -3.0365, 15.2714, -3.03649, 15.2714, 6.56019 )
-
-[sub_resource type="ConvexPolygonShape2D" id=25]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 19.2338, 33.3435, 21.3129, 33.3435, 21.3129, 36.878 )
-
-[sub_resource type="ConvexPolygonShape2D" id=26]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 43.2526, -50.7771, 41.2346, -46.9824, 41.2652, -50.7771 )
-
-[sub_resource type="ConvexPolygonShape2D" id=27]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 5.37943, 47.6518, 5.37943, 36.4105, 7.47684, 47.6518 )
-
-[sub_resource type="ConvexPolygonShape2D" id=28]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 13.8495, 4.85916, 17.0691, 4.81851, 17.0691, 18.1901 )
-
-[sub_resource type="ConvexPolygonShape2D" id=29]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 21.3736, 33.8901, 23.6733, 33.8901, 23.6733, 36.7177 )
-
-[sub_resource type="ConvexPolygonShape2D" id=30]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 41.9782, -48.8508, 41.9849, -51.8649, 43.4165, -51.8439 )
-
-[sub_resource type="ConvexPolygonShape2D" id=31]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 5.35615, 29.4178, 5.35615, 21.8474, 6.4672, 29.4178 )
-
-[sub_resource type="ConvexPolygonShape2D" id=32]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 15.2731, 1.22087, 17.0689, 1.22087, 17.0689, 10.3624 )
-
-[sub_resource type="ConvexPolygonShape2D" id=33]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 26.1012, 34.6256, 28.2043, 34.6256, 28.2323, 37.5741 )
-
-[sub_resource type="ConvexPolygonShape2D" id=34]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 41.9755, -51.1417, 40.9036, -48.1917, 40.8955, -51.1378 )
-
-[sub_resource type="ConvexPolygonShape2D" id=35]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 5.36613, 42.3024, 5.36613, 34.0321, 6.47491, 42.3024 )
-
-[sub_resource type="ConvexPolygonShape2D" id=36]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 17.8467, 2.3591, 19.9156, 2.3591, 19.9156, 11.0244 )
-
-[sub_resource type="ConvexPolygonShape2D" id=37]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 19.1079, 36.0479, 20.5698, 36.0479, 20.5698, 38.4547 )
-
-[sub_resource type="DynamicFont" id=47]
+[sub_resource type="DynamicFont" id=6]
 
 size = 45
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=48]
+[sub_resource type="DynamicFont" id=7]
 
 size = 45
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=40]
+[sub_resource type="DynamicFont" id=8]
 
 size = 45
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=41]
+[sub_resource type="DynamicFont" id=9]
 
 size = 45
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=46]
+[sub_resource type="DynamicFont" id=10]
 
 size = 45
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
 
-[node name="time_management" type="Node2D"]
+[node name="endless_mode" type="Node2D" index="0"]
 
 position = Vector2( 511.872, 307.75 )
 scale = Vector2( 15.9499, 9.65829 )
@@ -254,7 +94,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="level_background" type="Sprite" parent="."]
+[node name="level_background" type="Sprite" parent="." index="0"]
 
 position = Vector2( 0.12505, -0.147467 )
 scale = Vector2( 0.0449427, 0.078695 )
@@ -263,7 +103,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="asset" type="Sprite" parent="."]
+[node name="asset" type="Sprite" parent="." index="1"]
 
 position = Vector2( -15.2938, -15.6028 )
 scale = Vector2( 0.169399, 0.29307 )
@@ -272,7 +112,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="asset1" type="Sprite" parent="."]
+[node name="asset1" type="Sprite" parent="." index="2"]
 
 position = Vector2( 10.4788, -15.7139 )
 scale = Vector2( 0.218471, 0.199821 )
@@ -281,41 +121,54 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="asset2" type="Sprite" parent="."]
+[node name="asset2" type="Sprite" parent="." index="3"]
 
 position = Vector2( -2.92465, 11.7456 )
 scale = Vector2( 0.216185, 0.196904 )
 texture = ExtResource( 3 )
 
-[node name="stopwatch" type="Timer" parent="."]
+[node name="stopwatch" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = true
 
-[node name="countdown_timer" type="RichTextLabel" parent="."]
+[node name="countdown_timer" type="RichTextLabel" parent="." index="5"]
 
-rect_scale = Vector2( 0.1, 0.125 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -6.0
 margin_top = 9.0
 margin_right = 66.0
 margin_bottom = 58.0
+rect_scale = Vector2( 0.1, 0.125 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "000"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "000"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda" type="StaticBody2D" parent="." groups=[
+[node name="soda" type="StaticBody2D" parent="." index="6" groups=[
 "hidden",
 ]]
 
@@ -324,9 +177,6 @@ visible = false
 position = Vector2( 16.3205, 6.98175 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -334,7 +184,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda"]
+[node name="Sprite" type="Sprite" parent="soda" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -343,18 +193,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda9" type="StaticBody2D" parent="." groups=[
+[node name="soda9" type="StaticBody2D" parent="." index="7" groups=[
 "hidden",
 ]]
 
@@ -363,9 +211,6 @@ visible = false
 position = Vector2( 26.8285, -11.3575 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -373,7 +218,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda9"]
+[node name="Sprite" type="Sprite" parent="soda9" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -382,18 +227,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda9"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda9" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda10" type="StaticBody2D" parent="." groups=[
+[node name="soda10" type="StaticBody2D" parent="." index="8" groups=[
 "hidden",
 ]]
 
@@ -402,9 +245,6 @@ visible = false
 position = Vector2( 27.2063, 9.52879 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -412,7 +252,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda10"]
+[node name="Sprite" type="Sprite" parent="soda10" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -421,18 +261,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda10" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda7" type="StaticBody2D" parent="." groups=[
+[node name="soda7" type="StaticBody2D" parent="." index="9" groups=[
 "hidden",
 ]]
 
@@ -441,9 +279,6 @@ visible = false
 position = Vector2( 17.764, 24.344 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -451,7 +286,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda7"]
+[node name="Sprite" type="Sprite" parent="soda7" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -460,18 +295,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda7" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda8" type="StaticBody2D" parent="." groups=[
+[node name="soda8" type="StaticBody2D" parent="." index="10" groups=[
 "hidden",
 ]]
 
@@ -480,9 +313,6 @@ visible = false
 position = Vector2( -27.5089, -0.404003 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -490,7 +320,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda8"]
+[node name="Sprite" type="Sprite" parent="soda8" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -499,18 +329,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda8" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda1" type="StaticBody2D" parent="." groups=[
+[node name="soda1" type="StaticBody2D" parent="." index="11" groups=[
 "hidden",
 ]]
 
@@ -519,9 +347,6 @@ visible = false
 position = Vector2( 2.56046, -19.4237 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -529,7 +354,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda1"]
+[node name="Sprite" type="Sprite" parent="soda1" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -538,18 +363,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda1" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda5" type="StaticBody2D" parent="." groups=[
+[node name="soda5" type="StaticBody2D" parent="." index="12" groups=[
 "hidden",
 ]]
 
@@ -558,9 +381,6 @@ visible = false
 position = Vector2( 6.60383, 3.62276 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -568,7 +388,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda5"]
+[node name="Sprite" type="Sprite" parent="soda5" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -577,18 +397,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda5" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda6" type="StaticBody2D" parent="." groups=[
+[node name="soda6" type="StaticBody2D" parent="." index="13" groups=[
 "hidden",
 ]]
 
@@ -597,9 +415,6 @@ visible = false
 position = Vector2( -6.34295, -14.034 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -607,7 +422,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda6"]
+[node name="Sprite" type="Sprite" parent="soda6" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -616,18 +431,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda6" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda11" type="StaticBody2D" parent="." groups=[
+[node name="soda11" type="StaticBody2D" parent="." index="14" groups=[
 "hidden",
 ]]
 
@@ -636,9 +449,6 @@ visible = false
 position = Vector2( -28.3376, -13.9598 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -646,7 +456,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda11"]
+[node name="Sprite" type="Sprite" parent="soda11" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -655,18 +465,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda11"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda11" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda2" type="StaticBody2D" parent="." groups=[
+[node name="soda2" type="StaticBody2D" parent="." index="15" groups=[
 "hidden",
 ]]
 
@@ -675,9 +483,6 @@ visible = false
 position = Vector2( 26.7881, 19.5325 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -685,7 +490,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda2"]
+[node name="Sprite" type="Sprite" parent="soda2" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -694,18 +499,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda2" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda3" type="StaticBody2D" parent="." groups=[
+[node name="soda3" type="StaticBody2D" parent="." index="16" groups=[
 "hidden",
 ]]
 
@@ -714,9 +517,6 @@ visible = false
 position = Vector2( -7.10331, 24.2307 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -724,7 +524,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda3"]
+[node name="Sprite" type="Sprite" parent="soda3" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -733,18 +533,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda3" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda12" type="StaticBody2D" parent="." groups=[
+[node name="soda12" type="StaticBody2D" parent="." index="17" groups=[
 "hidden",
 ]]
 
@@ -753,9 +551,6 @@ visible = false
 position = Vector2( -28.0334, 22.6563 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -763,7 +558,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda12"]
+[node name="Sprite" type="Sprite" parent="soda12" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -772,18 +567,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda12"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda12" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda13" type="StaticBody2D" parent="." groups=[
+[node name="soda13" type="StaticBody2D" parent="." index="18" groups=[
 "hidden",
 ]]
 
@@ -792,9 +585,6 @@ visible = false
 position = Vector2( -18.1038, 25.5286 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -802,7 +592,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda13"]
+[node name="Sprite" type="Sprite" parent="soda13" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -811,18 +601,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda13"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda13" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda4" type="StaticBody2D" parent="." groups=[
+[node name="soda4" type="StaticBody2D" parent="." index="19" groups=[
 "hidden",
 ]]
 
@@ -831,9 +619,6 @@ visible = false
 position = Vector2( -27.8024, -24.553 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -841,7 +626,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda4"]
+[node name="Sprite" type="Sprite" parent="soda4" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -850,18 +635,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda4" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda14" type="StaticBody2D" parent="." groups=[
+[node name="soda14" type="StaticBody2D" parent="." index="20" groups=[
 "hidden",
 ]]
 
@@ -870,9 +653,6 @@ visible = false
 position = Vector2( -5.3758, -21.7167 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -880,7 +660,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda14"]
+[node name="Sprite" type="Sprite" parent="soda14" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -889,18 +669,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda14"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda14" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda24" type="StaticBody2D" parent="." groups=[
+[node name="soda24" type="StaticBody2D" parent="." index="21" groups=[
 "hidden",
 ]]
 
@@ -909,9 +687,6 @@ visible = false
 position = Vector2( -1.16527, -15.0031 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -919,7 +694,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda24"]
+[node name="Sprite" type="Sprite" parent="soda24" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -928,18 +703,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda24"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda24" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda15" type="StaticBody2D" parent="." groups=[
+[node name="soda15" type="StaticBody2D" parent="." index="22" groups=[
 "hidden",
 ]]
 
@@ -948,9 +721,6 @@ visible = false
 position = Vector2( 13.0696, -2.32979 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -958,7 +728,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda15"]
+[node name="Sprite" type="Sprite" parent="soda15" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -967,18 +737,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda15"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda15" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda16" type="StaticBody2D" parent="." groups=[
+[node name="soda16" type="StaticBody2D" parent="." index="23" groups=[
 "hidden",
 ]]
 
@@ -987,9 +755,6 @@ visible = false
 position = Vector2( -5.57275, 0.919338 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -997,7 +762,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda16"]
+[node name="Sprite" type="Sprite" parent="soda16" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1006,18 +771,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda16"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda16" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda17" type="StaticBody2D" parent="." groups=[
+[node name="soda17" type="StaticBody2D" parent="." index="24" groups=[
 "hidden",
 ]]
 
@@ -1026,9 +789,6 @@ visible = false
 position = Vector2( 21.9321, 10.9212 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1036,7 +796,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda17"]
+[node name="Sprite" type="Sprite" parent="soda17" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1045,18 +805,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda17"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda17" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda18" type="StaticBody2D" parent="." groups=[
+[node name="soda18" type="StaticBody2D" parent="." index="25" groups=[
 "hidden",
 ]]
 
@@ -1065,9 +823,6 @@ visible = false
 position = Vector2( 21.5944, 21.2425 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1075,7 +830,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda18"]
+[node name="Sprite" type="Sprite" parent="soda18" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1084,18 +839,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda18"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda18" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda19" type="StaticBody2D" parent="." groups=[
+[node name="soda19" type="StaticBody2D" parent="." index="26" groups=[
 "hidden",
 ]]
 
@@ -1104,9 +857,6 @@ visible = false
 position = Vector2( -12.8818, 23.9787 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1114,7 +864,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda19"]
+[node name="Sprite" type="Sprite" parent="soda19" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1123,18 +873,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda19"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda19" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda20" type="StaticBody2D" parent="." groups=[
+[node name="soda20" type="StaticBody2D" parent="." index="27" groups=[
 "hidden",
 ]]
 
@@ -1143,9 +891,6 @@ visible = false
 position = Vector2( -17.5007, -0.545834 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1153,7 +898,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda20"]
+[node name="Sprite" type="Sprite" parent="soda20" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1162,18 +907,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda20"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda20" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda21" type="StaticBody2D" parent="." groups=[
+[node name="soda21" type="StaticBody2D" parent="." index="28" groups=[
 "hidden",
 ]]
 
@@ -1182,9 +925,6 @@ visible = false
 position = Vector2( -22.1592, -16.7406 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1192,7 +932,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda21"]
+[node name="Sprite" type="Sprite" parent="soda21" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1201,18 +941,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda21"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda21" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda22" type="StaticBody2D" parent="." groups=[
+[node name="soda22" type="StaticBody2D" parent="." index="29" groups=[
 "hidden",
 ]]
 
@@ -1221,9 +959,6 @@ visible = false
 position = Vector2( -25.4868, -6.5186 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1231,7 +966,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda22"]
+[node name="Sprite" type="Sprite" parent="soda22" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1240,18 +975,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda22"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda22" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="soda23" type="StaticBody2D" parent="." groups=[
+[node name="soda23" type="StaticBody2D" parent="." index="30" groups=[
 "hidden",
 ]]
 
@@ -1260,9 +993,6 @@ visible = false
 position = Vector2( -23.3419, 5.59431 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1.23806, 0, 0, 1.58514, -3.09483, -4.16792 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1270,7 +1000,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="soda23"]
+[node name="Sprite" type="Sprite" parent="soda23" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1279,18 +1009,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="soda23"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soda23" index="1"]
 
 position = Vector2( -3.09483, -4.16792 )
 scale = Vector2( 1.23806, 1.58514 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn" type="StaticBody2D" parent="." groups=[
+[node name="popcorn" type="StaticBody2D" parent="." index="31" groups=[
 "hidden",
 ]]
 
@@ -1299,9 +1027,6 @@ visible = false
 position = Vector2( -20.4813, 3.37358 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1309,7 +1034,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn"]
+[node name="Sprite" type="Sprite" parent="popcorn" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1318,18 +1043,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn1" type="StaticBody2D" parent="." groups=[
+[node name="popcorn1" type="StaticBody2D" parent="." index="32" groups=[
 "hidden",
 ]]
 
@@ -1338,9 +1061,6 @@ visible = false
 position = Vector2( 26.1939, -23.4894 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1348,7 +1068,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn1"]
+[node name="Sprite" type="Sprite" parent="popcorn1" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1357,18 +1077,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn1" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn2" type="StaticBody2D" parent="." groups=[
+[node name="popcorn2" type="StaticBody2D" parent="." index="33" groups=[
 "hidden",
 ]]
 
@@ -1377,9 +1095,6 @@ visible = false
 position = Vector2( 7.10053, -3.67908 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1387,7 +1102,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn2"]
+[node name="Sprite" type="Sprite" parent="popcorn2" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1396,18 +1111,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn2" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn3" type="StaticBody2D" parent="." groups=[
+[node name="popcorn3" type="StaticBody2D" parent="." index="34" groups=[
 "hidden",
 ]]
 
@@ -1416,9 +1129,6 @@ visible = false
 position = Vector2( 22.2956, -13.9114 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1426,7 +1136,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn3"]
+[node name="Sprite" type="Sprite" parent="popcorn3" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1435,18 +1145,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn3" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn11" type="StaticBody2D" parent="." groups=[
+[node name="popcorn11" type="StaticBody2D" parent="." index="35" groups=[
 "hidden",
 ]]
 
@@ -1455,9 +1163,6 @@ visible = false
 position = Vector2( 1.8174, -13.3007 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1465,7 +1170,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn11"]
+[node name="Sprite" type="Sprite" parent="popcorn11" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1474,18 +1179,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn11"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn11" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn12" type="StaticBody2D" parent="." groups=[
+[node name="popcorn12" type="StaticBody2D" parent="." index="36" groups=[
 "hidden",
 ]]
 
@@ -1494,9 +1197,6 @@ visible = false
 position = Vector2( 16.0766, 14.6911 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1504,7 +1204,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn12"]
+[node name="Sprite" type="Sprite" parent="popcorn12" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1513,18 +1213,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn12"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn12" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn5" type="StaticBody2D" parent="." groups=[
+[node name="popcorn5" type="StaticBody2D" parent="." index="37" groups=[
 "hidden",
 ]]
 
@@ -1533,9 +1231,6 @@ visible = false
 position = Vector2( -14.6562, 2.14195 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1543,7 +1238,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn5"]
+[node name="Sprite" type="Sprite" parent="popcorn5" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1552,18 +1247,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn5" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn9" type="StaticBody2D" parent="." groups=[
+[node name="popcorn9" type="StaticBody2D" parent="." index="38" groups=[
 "hidden",
 ]]
 
@@ -1572,9 +1265,6 @@ visible = false
 position = Vector2( -28.175, 6.60139 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1582,7 +1272,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn9"]
+[node name="Sprite" type="Sprite" parent="popcorn9" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1591,18 +1281,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn9"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn9" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn10" type="StaticBody2D" parent="." groups=[
+[node name="popcorn10" type="StaticBody2D" parent="." index="39" groups=[
 "hidden",
 ]]
 
@@ -1611,9 +1299,6 @@ visible = false
 position = Vector2( -20.0356, -24.9151 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1621,7 +1306,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn10"]
+[node name="Sprite" type="Sprite" parent="popcorn10" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1630,18 +1315,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn10" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn6" type="StaticBody2D" parent="." groups=[
+[node name="popcorn6" type="StaticBody2D" parent="." index="40" groups=[
 "hidden",
 ]]
 
@@ -1650,9 +1333,6 @@ visible = false
 position = Vector2( 20.0332, -24.7978 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1660,7 +1340,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn6"]
+[node name="Sprite" type="Sprite" parent="popcorn6" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1669,18 +1349,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn6" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn7" type="StaticBody2D" parent="." groups=[
+[node name="popcorn7" type="StaticBody2D" parent="." index="41" groups=[
 "hidden",
 ]]
 
@@ -1689,9 +1367,6 @@ visible = false
 position = Vector2( 27.3611, -5.8319 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1699,7 +1374,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn7"]
+[node name="Sprite" type="Sprite" parent="popcorn7" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1708,18 +1383,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn7" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn8" type="StaticBody2D" parent="." groups=[
+[node name="popcorn8" type="StaticBody2D" parent="." index="42" groups=[
 "hidden",
 ]]
 
@@ -1728,9 +1401,6 @@ visible = false
 position = Vector2( 24.781, 0.983475 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1738,7 +1408,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn8"]
+[node name="Sprite" type="Sprite" parent="popcorn8" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1747,18 +1417,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn8" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn4" type="StaticBody2D" parent="." groups=[
+[node name="popcorn4" type="StaticBody2D" parent="." index="43" groups=[
 "hidden",
 ]]
 
@@ -1767,9 +1435,6 @@ visible = false
 position = Vector2( 18.7995, -1.44569 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1777,7 +1442,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn4"]
+[node name="Sprite" type="Sprite" parent="popcorn4" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1786,18 +1451,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn4" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn13" type="StaticBody2D" parent="." groups=[
+[node name="popcorn13" type="StaticBody2D" parent="." index="44" groups=[
 "hidden",
 ]]
 
@@ -1806,9 +1469,6 @@ visible = false
 position = Vector2( 6.87793, 24.7633 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1816,7 +1476,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn13"]
+[node name="Sprite" type="Sprite" parent="popcorn13" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1825,18 +1485,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn13"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn13" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn14" type="StaticBody2D" parent="." groups=[
+[node name="popcorn14" type="StaticBody2D" parent="." index="45" groups=[
 "hidden",
 ]]
 
@@ -1845,9 +1503,6 @@ visible = false
 position = Vector2( 1.89082, 24.3516 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1855,7 +1510,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn14"]
+[node name="Sprite" type="Sprite" parent="popcorn14" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1864,18 +1519,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn14"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn14" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn15" type="StaticBody2D" parent="." groups=[
+[node name="popcorn15" type="StaticBody2D" parent="." index="46" groups=[
 "hidden",
 ]]
 
@@ -1884,9 +1537,6 @@ visible = false
 position = Vector2( -13.0449, 16.1124 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1894,7 +1544,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn15"]
+[node name="Sprite" type="Sprite" parent="popcorn15" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1903,18 +1553,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn15"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn15" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn16" type="StaticBody2D" parent="." groups=[
+[node name="popcorn16" type="StaticBody2D" parent="." index="47" groups=[
 "hidden",
 ]]
 
@@ -1923,9 +1571,6 @@ visible = false
 position = Vector2( -19.9467, 13.6165 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1933,7 +1578,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn16"]
+[node name="Sprite" type="Sprite" parent="popcorn16" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1942,18 +1587,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn16"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn16" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn17" type="StaticBody2D" parent="." groups=[
+[node name="popcorn17" type="StaticBody2D" parent="." index="48" groups=[
 "hidden",
 ]]
 
@@ -1962,9 +1605,6 @@ visible = false
 position = Vector2( -3.02204, 23.5307 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -1972,7 +1612,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn17"]
+[node name="Sprite" type="Sprite" parent="popcorn17" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -1981,18 +1621,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn17"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn17" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn18" type="StaticBody2D" parent="." groups=[
+[node name="popcorn18" type="StaticBody2D" parent="." index="49" groups=[
 "hidden",
 ]]
 
@@ -2001,9 +1639,6 @@ visible = false
 position = Vector2( 11.3978, 7.03374 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2011,7 +1646,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn18"]
+[node name="Sprite" type="Sprite" parent="popcorn18" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -2020,18 +1655,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn18"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn18" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn19" type="StaticBody2D" parent="." groups=[
+[node name="popcorn19" type="StaticBody2D" parent="." index="50" groups=[
 "hidden",
 ]]
 
@@ -2040,9 +1673,6 @@ visible = false
 position = Vector2( -2.00679, -22.2061 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2050,7 +1680,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn19"]
+[node name="Sprite" type="Sprite" parent="popcorn19" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -2059,18 +1689,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn19"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn19" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn20" type="StaticBody2D" parent="." groups=[
+[node name="popcorn20" type="StaticBody2D" parent="." index="51" groups=[
 "hidden",
 ]]
 
@@ -2079,9 +1707,6 @@ visible = false
 position = Vector2( 13.9092, -24.1715 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2089,7 +1714,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn20"]
+[node name="Sprite" type="Sprite" parent="popcorn20" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -2098,18 +1723,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn20"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn20" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn21" type="StaticBody2D" parent="." groups=[
+[node name="popcorn21" type="StaticBody2D" parent="." index="52" groups=[
 "hidden",
 ]]
 
@@ -2118,9 +1741,6 @@ visible = false
 position = Vector2( 5.88521, -22.1558 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2128,7 +1748,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn21"]
+[node name="Sprite" type="Sprite" parent="popcorn21" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -2137,18 +1757,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn21"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn21" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn22" type="StaticBody2D" parent="." groups=[
+[node name="popcorn22" type="StaticBody2D" parent="." index="53" groups=[
 "hidden",
 ]]
 
@@ -2157,9 +1775,6 @@ visible = false
 position = Vector2( 13.4496, 23.1827 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2167,7 +1782,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn22"]
+[node name="Sprite" type="Sprite" parent="popcorn22" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -2176,18 +1791,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn22"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn22" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn23" type="StaticBody2D" parent="." groups=[
+[node name="popcorn23" type="StaticBody2D" parent="." index="54" groups=[
 "hidden",
 ]]
 
@@ -2196,9 +1809,6 @@ visible = false
 position = Vector2( -22.3691, -4.74664 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2206,7 +1816,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn23"]
+[node name="Sprite" type="Sprite" parent="popcorn23" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -2215,18 +1825,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn23"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn23" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn24" type="StaticBody2D" parent="." groups=[
+[node name="popcorn24" type="StaticBody2D" parent="." index="55" groups=[
 "hidden",
 ]]
 
@@ -2235,9 +1843,6 @@ visible = false
 position = Vector2( -23.3692, 20.1528 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2245,7 +1850,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn24"]
+[node name="Sprite" type="Sprite" parent="popcorn24" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -2254,18 +1859,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn24"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn24" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn25" type="StaticBody2D" parent="." groups=[
+[node name="popcorn25" type="StaticBody2D" parent="." index="56" groups=[
 "hidden",
 ]]
 
@@ -2274,9 +1877,6 @@ visible = false
 position = Vector2( -12.2005, 7.33861 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2284,7 +1884,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn25"]
+[node name="Sprite" type="Sprite" parent="popcorn25" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -2293,18 +1893,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn25"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn25" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="popcorn26" type="StaticBody2D" parent="." groups=[
+[node name="popcorn26" type="StaticBody2D" parent="." index="57" groups=[
 "hidden",
 ]]
 
@@ -2313,9 +1911,6 @@ visible = false
 position = Vector2( -3.93722, -6.79087 )
 scale = Vector2( 0.052938, 0.0828079 )
 input_pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Transform2D( 2.14142, 0, 0, 2.70253, 6.90341, -7.21846 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2323,7 +1918,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="popcorn26"]
+[node name="Sprite" type="Sprite" parent="popcorn26" index="0"]
 
 position = Vector2( 1.30512, 0.202548 )
 scale = Vector2( 0.606596, 0.644874 )
@@ -2332,19 +1927,18 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn26"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="popcorn26" index="1"]
 
 position = Vector2( 6.90341, -7.21846 )
 scale = Vector2( 2.14142, 2.70253 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="success_background" type="Sprite" parent="."]
+[node name="success_background" type="Sprite" parent="." index="58"]
 
+editor/display_folded = true
 position = Vector2( 10.4462, -15.8576 )
 scale = Vector2( 0.0465265, 0.0295693 )
 texture = ExtResource( 7 )
@@ -2352,13 +1946,13 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite2" type="Sprite" parent="success_background"]
+[node name="Sprite2" type="Sprite" parent="success_background" index="0"]
 
 position = Vector2( 46.9165, 16.7267 )
 scale = Vector2( 0.316313, 0.721777 )
 texture = ExtResource( 8 )
 
-[node name="Sprite1" type="Sprite" parent="success_background"]
+[node name="Sprite1" type="Sprite" parent="success_background" index="1"]
 
 position = Vector2( -0.233916, 17.4176 )
 scale = Vector2( 0.312359, 0.728686 )
@@ -2367,7 +1961,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="success_background"]
+[node name="Sprite" type="Sprite" parent="success_background" index="2"]
 
 position = Vector2( -47.3844, 17.4176 )
 scale = Vector2( 0.308405, 0.728686 )
@@ -2376,112 +1970,152 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="points" type="RichTextLabel" parent="success_background"]
+[node name="points" type="RichTextLabel" parent="success_background" index="3"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -57.0
 margin_top = -93.0
 margin_right = 86.0
 margin_bottom = -34.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Points"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Points"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="hundreths" type="RichTextLabel" parent="success_background"]
+[node name="hundreths" type="RichTextLabel" parent="success_background" index="4"]
 
-rect_scale = Vector2( 1.5, 1.75 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -66.0
 margin_top = -21.0
 margin_right = 21.0
 margin_bottom = 121.0
+rect_scale = Vector2( 1.5, 1.75 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tens" type="RichTextLabel" parent="success_background"]
+[node name="tens" type="RichTextLabel" parent="success_background" index="5"]
 
-rect_scale = Vector2( 1.5, 1.75 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -19.0
 margin_top = -20.0
 margin_right = 71.0
 margin_bottom = 200.0
+rect_scale = Vector2( 1.5, 1.75 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ones" type="RichTextLabel" parent="success_background"]
+[node name="ones" type="RichTextLabel" parent="success_background" index="6"]
 
-rect_scale = Vector2( 1.5, 1.75 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 30.0
 margin_top = -21.0
 margin_right = 114.0
 margin_bottom = 153.0
+rect_scale = Vector2( 1.5, 1.75 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="customer" parent="." instance=ExtResource( 9 )]
+[node name="customer" parent="." index="59" instance=ExtResource( 9 )]
 
 position = Vector2( -1.73072, 0.652534 )
 scale = Vector2( 0.0554587, 0.10134 )
 
-[node name="right_stop" type="StaticBody2D" parent="." groups=[
+[node name="right_stop" type="StaticBody2D" parent="." index="60" groups=[
 "right",
 ]]
 
 editor/display_folded = true
 input_pickable = true
-shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Transform2D( 0.739589, 0, 0, 1.07616, 8.80436, -0.484108 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 7 )
-shapes/1/transform = Transform2D( 0.84084, 0, 0, 0.187964, -17.332, 9.97706 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 8 )
-shapes/2/transform = Transform2D( 0.831164, 0, 0, 0.305964, -31.0177, -16.8329 )
-shapes/2/trigger = false
-shapes/3/shape = SubResource( 9 )
-shapes/3/transform = Transform2D( 0.896022, 0, 0, 0.245715, -6.87244, -15.8449 )
-shapes/3/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2492,73 +2126,53 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="right_stop"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="right_stop" index="0"]
 
 position = Vector2( 8.80436, -0.484108 )
 scale = Vector2( 0.739589, 1.07616 )
 build_mode = 0
 polygon = PoolVector2Array( 29.3001, -29.0451, 32.0455, -29.1104, 32.0455, 29.4983, 29.3883, 29.3417 )
-shape_range = Vector2( 0, 0 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="right_stop"]
+[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="right_stop" index="1"]
 
 position = Vector2( -17.332, 9.97706 )
 scale = Vector2( 0.84084, 0.187964 )
 build_mode = 0
 polygon = PoolVector2Array( 11.6734, -12.6112, 13.0492, -12.6112, 13.0551, 31.3148, 11.6734, 31.3148 )
-shape_range = Vector2( 1, 1 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="right_stop"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="right_stop" index="2"]
 
 position = Vector2( -31.0177, -16.8329 )
 scale = Vector2( 0.831164, 0.305964 )
 build_mode = 0
 polygon = PoolVector2Array( 14.6669, -16.244, 16.1347, -16.244, 16.1567, 23.4772, 14.6806, 23.5538 )
-shape_range = Vector2( 2, 2 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="right_stop"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="right_stop" index="3"]
 
 position = Vector2( -6.87244, -15.8449 )
 scale = Vector2( 0.896022, 0.245715 )
 build_mode = 0
 polygon = PoolVector2Array( 14.2529, -16.4924, 14.2305, 17.3008, 16.1634, 17.3008, 16.1409, -16.4944 )
-shape_range = Vector2( 3, 3 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="left_stop" type="StaticBody2D" parent="." groups=[
+[node name="left_stop" type="StaticBody2D" parent="." index="61" groups=[
 "left",
 ]]
 
 editor/display_folded = true
 position = Vector2( 0, -0.0968113 )
 input_pickable = true
-shapes/0/shape = SubResource( 10 )
-shapes/0/transform = Transform2D( 0.312477, 0, 0, 1.02458, -40.9238, -0.854475 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 11 )
-shapes/1/transform = Transform2D( 0.895534, 0, 0, 0.213878, -13.2928, 11.9885 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 12 )
-shapes/2/transform = Transform2D( 0.66405, 0, 0, 0.304918, -23.1771, -16.1919 )
-shapes/2/trigger = false
-shapes/3/shape = SubResource( 13 )
-shapes/3/transform = Transform2D( 1.16925, 0, 0, 0.242903, -3.84784, -15.6908 )
-shapes/3/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2569,72 +2183,52 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="left_stop"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="left_stop" index="0"]
 
 position = Vector2( -40.9238, -0.854475 )
 scale = Vector2( 0.312477, 1.02458 )
 build_mode = 0
 polygon = PoolVector2Array( 28.1845, -30.3704, 32.792, -30.3932, 32.792, 31.9271, 28.1506, 31.8851 )
-shape_range = Vector2( 0, 0 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="left_stop"]
+[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="left_stop" index="1"]
 
 position = Vector2( -13.2928, 11.9885 )
 scale = Vector2( 0.895534, 0.213878 )
 build_mode = 0
 polygon = PoolVector2Array( 14.941, -20.6928, 16.6701, -20.6928, 16.6701, 18.663, 14.941, 18.663 )
-shape_range = Vector2( 1, 1 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="left_stop"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="left_stop" index="2"]
 
 position = Vector2( -23.1771, -16.1919 )
 scale = Vector2( 0.66405, 0.304918 )
 build_mode = 0
 polygon = PoolVector2Array( 15.0439, -17.8645, 16.8933, -17.8645, 16.8933, 21.8708, 15.0439, 21.8708 )
-shape_range = Vector2( 2, 2 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="left_stop"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="left_stop" index="3"]
 
 position = Vector2( -3.84784, -15.6908 )
 scale = Vector2( 1.16925, 0.242903 )
 build_mode = 0
 polygon = PoolVector2Array( 14.5831, -16.9756, 16.1247, -16.9756, 16.1247, 16.8683, 14.5831, 16.8683 )
-shape_range = Vector2( 3, 3 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="up_stop" type="StaticBody2D" parent="." groups=[
+[node name="up_stop" type="StaticBody2D" parent="." index="62" groups=[
 "up",
 ]]
 
 editor/display_folded = true
 input_pickable = true
-shapes/0/shape = SubResource( 14 )
-shapes/0/transform = Transform2D( 1, 0, 0, 0.549699, -61.6196, -14.3052 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 15 )
-shapes/1/transform = Transform2D( 0.660253, 0, 0, 0.301934, -10.0269, 11.3973 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 16 )
-shapes/2/transform = Transform2D( 0.499719, 0, 0, 0.235943, -21.0698, -13.5149 )
-shapes/2/trigger = false
-shapes/3/shape = SubResource( 17 )
-shapes/3/transform = Transform2D( 0.904635, 0, 0, 1.16185, -7.25606, -53.239 )
-shapes/3/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2645,72 +2239,52 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="up_stop"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="up_stop" index="0"]
 
 position = Vector2( -61.6196, -14.3052 )
 scale = Vector2( 1, 0.549699 )
 build_mode = 0
 polygon = PoolVector2Array( 29.3109, -25.6854, 93.9413, -25.7346, 93.9413, -31.5991, 29.3091, -31.747 )
-shape_range = Vector2( 0, 0 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="up_stop"]
+[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="up_stop" index="1"]
 
 position = Vector2( -10.0269, 11.3973 )
 scale = Vector2( 0.660253, 0.301934 )
 build_mode = 0
 polygon = PoolVector2Array( 17.6844, 6.76231, 3.70555, 6.76231, 3.70555, 14.6178, 17.6844, 14.4911 )
-shape_range = Vector2( 1, 1 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="up_stop"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="up_stop" index="2"]
 
 position = Vector2( -21.0698, -13.5149 )
 scale = Vector2( 0.499719, 0.235943 )
 build_mode = 0
 polygon = PoolVector2Array( 4.48321, 16.1845, 18.3694, 16.1464, 18.3694, 6.69955, 4.48321, 6.69955 )
-shape_range = Vector2( 2, 2 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="up_stop"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="up_stop" index="3"]
 
 position = Vector2( -7.25606, -53.239 )
 scale = Vector2( 0.904635, 1.16185 )
 build_mode = 0
 polygon = PoolVector2Array( 14.4566, 35.8117, 24.5863, 35.8117, 24.5863, 33.35, 14.4566, 33.35 )
-shape_range = Vector2( 3, 3 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="down_stop" type="StaticBody2D" parent="." groups=[
+[node name="down_stop" type="StaticBody2D" parent="." index="63" groups=[
 "down",
 ]]
 
 editor/display_folded = true
 input_pickable = true
-shapes/0/shape = SubResource( 18 )
-shapes/0/transform = Transform2D( 1.03193, 0, 0, 0.541215, -62.8247, 45.6202 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 19 )
-shapes/1/transform = Transform2D( 0.647474, 0, 0, 0.272408, -11.3425, 5.73495 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 20 )
-shapes/2/transform = Transform2D( 0.500493, 0, 0, 0.244988, -20.938, -23.2622 )
-shapes/2/trigger = false
-shapes/3/shape = SubResource( 21 )
-shapes/3/transform = Transform2D( 0.912326, 0, 0, 1.16946, -3.83193, -66.1934 )
-shapes/3/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2721,73 +2295,53 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="down_stop"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="down_stop" index="0"]
 
 position = Vector2( -62.8247, 45.6202 )
 scale = Vector2( 1.03193, 0.541215 )
 build_mode = 0
 polygon = PoolVector2Array( 29.5567, -25.4692, 92.5756, -25.6067, 92.4126, -32.7057, 29.7273, -32.6177 )
-shape_range = Vector2( 0, 0 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="down_stop"]
+[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="down_stop" index="1"]
 
 position = Vector2( -11.3425, 5.73495 )
 scale = Vector2( 0.647474, 0.272408 )
 build_mode = 0
 polygon = PoolVector2Array( 20.0659, 6.6795, 5.92773, 6.61972, 5.92773, 15.1611, 20.0623, 15.1466 )
-shape_range = Vector2( 1, 1 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="down_stop"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="down_stop" index="2"]
 
 position = Vector2( -20.938, -23.2622 )
 scale = Vector2( 0.500493, 0.244988 )
 build_mode = 0
 polygon = PoolVector2Array( 4.27751, 15.5327, 18.1652, 15.3157, 18.1652, 5.7673, 4.27751, 5.7673 )
-shape_range = Vector2( 2, 2 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="down_stop"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="down_stop" index="3"]
 
 position = Vector2( -3.83193, -66.1934 )
 scale = Vector2( 0.912326, 1.16946 )
 build_mode = 0
 polygon = PoolVector2Array( 10.5831, 42.453, 20.6555, 42.4865, 20.6555, 39.6392, 10.5831, 39.6392 )
-shape_range = Vector2( 3, 3 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="down_left" type="StaticBody2D" parent="." groups=[
+[node name="down_left" type="StaticBody2D" parent="." index="64" groups=[
 "left",
 "down",
 ]]
 
 editor/display_folded = true
 input_pickable = true
-shapes/0/shape = SubResource( 22 )
-shapes/0/transform = Transform2D( 1, 0, 0, 1.02458, -63.3595, 80.584 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 23 )
-shapes/1/transform = Transform2D( -0.922138, 0, 0, -0.243946, 7.67141, 15.4766 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 24 )
-shapes/2/transform = Transform2D( 0.833502, 0, 0, 0.248933, -24.6692, -21.0772 )
-shapes/2/trigger = false
-shapes/3/shape = SubResource( 25 )
-shapes/3/transform = Transform2D( 0.950369, 0, 0, 1.02679, -5.21555, -54.1007 )
-shapes/3/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2798,73 +2352,53 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="down_left"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="down_left" index="0"]
 
 position = Vector2( -63.3595, 80.584 )
 scale = Vector2( 1, 1.02458 )
 build_mode = 0
 polygon = PoolVector2Array( 31.0768, -51.4543, 32.7584, -47.6596, 32.7584, -51.4543 )
-shape_range = Vector2( 0, 0 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="down_left"]
+[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="down_left" index="1"]
 
 position = Vector2( 7.67141, 15.4766 )
 scale = Vector2( -0.922138, -0.243946 )
 build_mode = 0
 polygon = PoolVector2Array( 8.2644, 32.5878, 6.55466, 23.1854, 6.51396, 32.5878 )
-shape_range = Vector2( 1, 1 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="down_left"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="down_left" index="2"]
 
 position = Vector2( -24.6692, -21.0772 )
 scale = Vector2( 0.833502, 0.248933 )
 build_mode = 0
 polygon = PoolVector2Array( 15.2714, 6.56019, 15.2714, -3.03649, 13.6596, -3.0365 )
-shape_range = Vector2( 2, 2 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="down_left"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="down_left" index="3"]
 
 position = Vector2( -5.21555, -54.1007 )
 scale = Vector2( 0.950369, 1.02679 )
 build_mode = 0
 polygon = PoolVector2Array( 21.3129, 36.878, 21.3129, 33.3435, 19.2338, 33.3435 )
-shape_range = Vector2( 3, 3 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="down_right" type="StaticBody2D" parent="." groups=[
+[node name="down_right" type="StaticBody2D" parent="." index="65" groups=[
 "right",
 "down",
 ]]
 
 editor/display_folded = true
 input_pickable = true
-shapes/0/shape = SubResource( 26 )
-shapes/0/transform = Transform2D( 1, 0, 0, 1.02458, -10.7033, 79.8902 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 27 )
-shapes/1/transform = Transform2D( 0.96623, 0, 0, -0.243946, -12.6873, 19.1609 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 28 )
-shapes/2/transform = Transform2D( -0.616403, 0, 0, 0.257812, -8.15877, -23.0185 )
-shapes/2/trigger = false
-shapes/3/shape = SubResource( 29 )
-shapes/3/transform = Transform2D( -0.864196, 0, 0, 1.16394, 26.34, -59.2695 )
-shapes/3/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2875,73 +2409,53 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="down_right"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="down_right" index="0"]
 
 position = Vector2( -10.7033, 79.8902 )
 scale = Vector2( 1, 1.02458 )
 build_mode = 0
 polygon = PoolVector2Array( 43.2526, -50.7771, 41.2346, -46.9824, 41.2652, -50.7771 )
-shape_range = Vector2( 0, 0 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="down_right"]
+[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="down_right" index="1"]
 
 position = Vector2( -12.6873, 19.1609 )
 scale = Vector2( 0.96623, -0.243946 )
 build_mode = 0
 polygon = PoolVector2Array( 7.47684, 47.6518, 5.37943, 36.4105, 5.37943, 47.6518 )
-shape_range = Vector2( 1, 1 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="down_right"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="down_right" index="2"]
 
 position = Vector2( -8.15877, -23.0185 )
 scale = Vector2( -0.616403, 0.257812 )
 build_mode = 0
 polygon = PoolVector2Array( 17.0691, 18.1901, 17.0691, 4.81851, 13.8495, 4.85916 )
-shape_range = Vector2( 2, 2 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="down_right"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="down_right" index="3"]
 
 position = Vector2( 26.34, -59.2695 )
 scale = Vector2( -0.864196, 1.16394 )
 build_mode = 0
 polygon = PoolVector2Array( 23.6733, 36.7177, 23.6733, 33.8901, 21.3736, 33.8901 )
-shape_range = Vector2( 3, 3 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="up_right" type="StaticBody2D" parent="." groups=[
+[node name="up_right" type="StaticBody2D" parent="." index="66" groups=[
 "right",
 "up",
 ]]
 
 editor/display_folded = true
 input_pickable = true
-shapes/0/shape = SubResource( 30 )
-shapes/0/transform = Transform2D( 1.36435, 0, 0, -1.17312, -26.8755, -89.1789 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 31 )
-shapes/1/transform = Transform2D( 1.12489, 0, 0, 0.274435, -13.5684, 7.69736 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 32 )
-shapes/2/transform = Transform2D( -0.735297, 0, 0, -0.243614, -6.27049, -9.36475 )
-shapes/2/trigger = false
-shapes/3/shape = SubResource( 33 )
-shapes/3/transform = Transform2D( -0.843166, 0, 0, -0.993174, 29.6772, 22.7169 )
-shapes/3/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -2952,73 +2466,53 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="up_right"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="up_right" index="0"]
 
 position = Vector2( -26.8755, -89.1789 )
 scale = Vector2( 1.36435, -1.17312 )
 build_mode = 0
 polygon = PoolVector2Array( 41.9782, -48.8508, 41.9849, -51.8649, 43.4165, -51.8439 )
-shape_range = Vector2( 0, 0 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="up_right"]
+[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="up_right" index="1"]
 
 position = Vector2( -13.5684, 7.69736 )
 scale = Vector2( 1.12489, 0.274435 )
 build_mode = 0
 polygon = PoolVector2Array( 6.4672, 29.4178, 5.35615, 21.8474, 5.35615, 29.4178 )
-shape_range = Vector2( 1, 1 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="up_right"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="up_right" index="2"]
 
 position = Vector2( -6.27049, -9.36475 )
 scale = Vector2( -0.735297, -0.243614 )
 build_mode = 0
 polygon = PoolVector2Array( 17.0689, 10.3624, 17.0689, 1.22087, 15.2731, 1.22087 )
-shape_range = Vector2( 2, 2 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="up_right"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="up_right" index="3"]
 
 position = Vector2( 29.6772, 22.7169 )
 scale = Vector2( -0.843166, -0.993174 )
 build_mode = 0
 polygon = PoolVector2Array( 28.2323, 37.5741, 28.2043, 34.6256, 26.1012, 34.6256 )
-shape_range = Vector2( 3, 3 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="up_left" type="StaticBody2D" parent="." groups=[
+[node name="up_left" type="StaticBody2D" parent="." index="67" groups=[
 "left",
 "up",
 ]]
 
 editor/display_folded = true
 input_pickable = true
-shapes/0/shape = SubResource( 34 )
-shapes/0/transform = Transform2D( -1.35728, 0, 0, -1.20866, 24.8351, -90.1662 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 35 )
-shapes/1/transform = Transform2D( -1.46092, 0, 0, 0.269131, 9.4755, 4.43183 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 36 )
-shapes/2/transform = Transform2D( 0.606911, 0, 0, -0.271557, -24.027, -9.13491 )
-shapes/2/trigger = false
-shapes/3/shape = SubResource( 37 )
-shapes/3/transform = Transform2D( 1.26826, 0, 0, -1.24946, -11.0974, 33.3518 )
-shapes/3/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -3029,86 +2523,83 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="up_left"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="up_left" index="0"]
 
 position = Vector2( 24.8351, -90.1662 )
 scale = Vector2( -1.35728, -1.20866 )
 build_mode = 0
 polygon = PoolVector2Array( 41.9755, -51.1417, 40.9036, -48.1917, 40.8955, -51.1378 )
-shape_range = Vector2( 0, 0 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="up_left"]
+[node name="CollisionPolygon2D1" type="CollisionPolygon2D" parent="up_left" index="1"]
 
 position = Vector2( 9.4755, 4.43183 )
 scale = Vector2( -1.46092, 0.269131 )
 build_mode = 0
 polygon = PoolVector2Array( 6.47491, 42.3024, 5.36613, 34.0321, 5.36613, 42.3024 )
-shape_range = Vector2( 1, 1 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="up_left"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="up_left" index="2"]
 
 position = Vector2( -24.027, -9.13491 )
 scale = Vector2( 0.606911, -0.271557 )
 build_mode = 0
 polygon = PoolVector2Array( 19.9156, 11.0244, 19.9156, 2.3591, 17.8467, 2.3591 )
-shape_range = Vector2( 2, 2 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="up_left"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="up_left" index="3"]
 
 position = Vector2( -11.0974, 33.3518 )
 scale = Vector2( 1.26826, -1.24946 )
 build_mode = 0
 polygon = PoolVector2Array( 20.5698, 38.4547, 20.5698, 36.0479, 19.1079, 36.0479 )
-shape_range = Vector2( 3, 3 )
-trigger = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="green_ghostie" parent="." instance=ExtResource( 10 )]
+[node name="green_ghostie" parent="." index="68" instance=ExtResource( 10 )]
 
 position = Vector2( 11.2247, 16.4682 )
 scale = Vector2( 0.0269757, 0.0551421 )
+linear_damp = -1.0
+angular_damp = -1.0
 
-[node name="green_ghostie1" parent="." instance=ExtResource( 10 )]
+[node name="green_ghostie1" parent="." index="69" instance=ExtResource( 10 )]
 
 position = Vector2( 27.1247, 12.3778 )
 scale = Vector2( 0.0269757, 0.0551421 )
+linear_damp = -1.0
+angular_damp = -1.0
 
-[node name="blue_ghostie" parent="." instance=ExtResource( 11 )]
+[node name="blue_ghostie" parent="." index="70" instance=ExtResource( 11 )]
 
 position = Vector2( -2.20914, -22.8469 )
 scale = Vector2( 0.030515, 0.0681183 )
+linear_damp = -1.0
+angular_damp = -1.0
 
-[node name="blue_ghostie1" parent="." instance=ExtResource( 11 )]
+[node name="blue_ghostie1" parent="." index="71" instance=ExtResource( 11 )]
 
 position = Vector2( 25.9089, -9.43051 )
 scale = Vector2( 0.030515, 0.0681183 )
+linear_damp = -1.0
+angular_damp = -1.0
 
-[node name="StreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="72"]
 
 stream = ExtResource( 12 )
-playing = false
-loop = true
 volume_db = -10.0
-stream_autoplay = true
-stream_paused = false
-loop_restart_time = 0.0
-buffering_ms = 500
+autoplay = false
+mix_target = 0
+bus = "Master"
 
-[node name="pixel" type="Node2D" parent="."]
+[node name="pixel" type="Node2D" parent="." index="73"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -3118,7 +2609,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="left_arm" type="Sprite" parent="pixel"]
+[node name="left_arm" type="Sprite" parent="pixel" index="0"]
 
 position = Vector2( 1.51461, -21.9795 )
 scale = Vector2( 0.0525097, 0.0839613 )
@@ -3127,7 +2618,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="right_arm" type="Sprite" parent="pixel"]
+[node name="right_arm" type="Sprite" parent="pixel" index="1"]
 
 position = Vector2( 3.44501, -21.9471 )
 scale = Vector2( 0.0525097, 0.0845101 )
@@ -3137,7 +2628,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="hips" type="Sprite" parent="pixel"]
+[node name="hips" type="Sprite" parent="pixel" index="2"]
 
 position = Vector2( 2.39866, -17.4225 )
 scale = Vector2( 0.0370912, 0.0646075 )
@@ -3146,7 +2637,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="torso" type="Sprite" parent="pixel"]
+[node name="torso" type="Sprite" parent="pixel" index="3"]
 
 position = Vector2( 2.41146, -21.7639 )
 scale = Vector2( 0.0573211, 0.0818684 )
@@ -3155,7 +2646,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="head" type="Sprite" parent="pixel"]
+[node name="head" type="Sprite" parent="pixel" index="4"]
 
 position = Vector2( 2.41815, -27.1596 )
 scale = Vector2( 0.0482248, 0.0768474 )
@@ -3164,65 +2655,91 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="pixel_button" type="LinkButton" parent="pixel"]
+[node name="pixel_button" type="LinkButton" parent="pixel" index="5"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -1.0
 margin_top = -30.0
 margin_right = 6.0
 margin_bottom = -15.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="menu" type="Node2D" parent="."]
+[node name="menu" type="Node2D" parent="." index="74"]
 
 pause_mode = 2
 visible = false
 position = Vector2( 8.2048, 6.84428 )
 
-[node name="Sprite" type="Sprite" parent="menu"]
+[node name="Sprite" type="Sprite" parent="menu" index="0"]
 
 position = Vector2( -8.39558, -9.98084 )
 scale = Vector2( 0.0873445, 0.116672 )
 texture = ExtResource( 17 )
 
-[node name="points1" type="RichTextLabel" parent="menu"]
+[node name="points1" type="RichTextLabel" parent="menu" index="1"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -14.0
 margin_top = -22.0
 margin_right = 118.0
 margin_bottom = 83.0
-custom_fonts/normal_font = SubResource( 47 )
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Sound"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Sound"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="sound_slider" type="HSlider" parent="menu"]
+[node name="sound_slider" type="HSlider" parent="menu" index="2"]
 
-rect_scale = Vector2( 0.2, 0.2 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -23.0
 margin_top = -18.0
 margin_right = 120.0
 margin_bottom = -2.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 min_value = 0.0
 max_value = 100.0
 step = 1.0
@@ -3230,181 +2747,236 @@ page = 0.0
 value = 1.0
 exp_edit = false
 rounded = false
+editable = true
 tick_count = 0
 ticks_on_borders = true
 focus_mode = 2
 
-[node name="Sprite 2" type="Sprite" parent="menu"]
+[node name="Sprite 2" type="Sprite" parent="menu" index="3"]
 
 position = Vector2( -8.64352, -9.40746 )
 scale = Vector2( 0.141758, 0.0624442 )
 texture = ExtResource( 18 )
 
-[node name="Sprite3" type="Sprite" parent="menu"]
+[node name="Sprite3" type="Sprite" parent="menu" index="4"]
 
 position = Vector2( -8.39625, -0.385284 )
 scale = Vector2( 0.147057, 0.060214 )
 texture = ExtResource( 18 )
 
-[node name="return_to_game" type="LinkButton" parent="menu"]
+[node name="return_to_game" type="LinkButton" parent="menu" index="5"]
 
-rect_scale = Vector2( 0.08, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -19.0
 margin_top = -11.0
 margin_right = 288.0
 margin_bottom = 36.0
-custom_fonts/font = SubResource( 48 )
+rect_scale = Vector2( 0.08, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Return to Game"
 underline = 2
 
-[node name="return_to_endless" type="LinkButton" parent="menu"]
+[node name="return_to_endless" type="LinkButton" parent="menu" index="6"]
 
-rect_scale = Vector2( 0.08, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -20.0
 margin_top = -2.0
 margin_right = 303.0
 margin_bottom = 45.0
-custom_fonts/font = SubResource( 48 )
+rect_scale = Vector2( 0.08, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Return to Endless"
 underline = 2
 
-[node name="are_you_sure" type="Node2D" parent="."]
+[node name="are_you_sure" type="Node2D" parent="." index="75"]
 
 pause_mode = 2
 visible = false
 position = Vector2( -0.867098, 3.07172 )
 
-[node name="background" type="Sprite" parent="are_you_sure"]
+[node name="background" type="Sprite" parent="are_you_sure" index="0"]
 
 position = Vector2( 0.546828, -6.05607 )
 scale = Vector2( 0.0568319, 0.0995517 )
 texture = ExtResource( 17 )
 
-[node name="notification1" type="RichTextLabel" parent="are_you_sure"]
+[node name="notification1" type="RichTextLabel" parent="are_you_sure" index="1"]
 
-rect_scale = Vector2( 0.075, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -10.0
 margin_top = -17.0
 margin_right = 290.0
 margin_bottom = 196.0
-custom_fonts/normal_font = SubResource( 40 )
+rect_scale = Vector2( 0.075, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 8 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Are you sure you want to go back to the Endless Mode screen?"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Are you sure you want to go back to the Endless Mode screen?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="background2" type="Sprite" parent="are_you_sure"]
+[node name="background2" type="Sprite" parent="are_you_sure" index="2"]
 
 position = Vector2( 5.56144, 3.57191 )
 scale = Vector2( 0.0342556, 0.0587461 )
 texture = ExtResource( 18 )
 
-[node name="yes_endless" type="LinkButton" parent="are_you_sure"]
+[node name="yes_endless" type="LinkButton" parent="are_you_sure" index="3"]
 
-rect_scale = Vector2( 0.075, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 3.0
 margin_top = 2.0
 margin_right = 77.0
 margin_bottom = 43.0
-custom_fonts/font = SubResource( 41 )
+rect_scale = Vector2( 0.075, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "YES"
 underline = 2
 
-[node name="background1" type="Sprite" parent="are_you_sure"]
+[node name="background1" type="Sprite" parent="are_you_sure" index="4"]
 
 position = Vector2( -5.32616, 3.57191 )
 scale = Vector2( 0.0246643, 0.0553641 )
 texture = ExtResource( 18 )
 
-[node name="no_endless" type="LinkButton" parent="are_you_sure"]
+[node name="no_endless" type="LinkButton" parent="are_you_sure" index="5"]
 
-rect_scale = Vector2( 0.075, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -7.0
 margin_top = 2.0
 margin_right = 44.0
 margin_bottom = 42.0
-custom_fonts/font = SubResource( 41 )
+rect_scale = Vector2( 0.075, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "NO"
 underline = 2
 
-[node name="in" type="Node2D" parent="."]
+[node name="in" type="Node2D" parent="." index="76"]
 
 pause_mode = 2
 visible = false
 
-[node name="in_number" type="RichTextLabel" parent="in"]
+[node name="in_number" type="RichTextLabel" parent="in" index="0"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -11.0
 margin_top = -21.0
 margin_right = 27.0
 margin_bottom = 23.0
-custom_fonts/normal_font = SubResource( 46 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 10 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "3"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "3"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="count_timer" type="Timer" parent="in"]
+[node name="count_timer" type="Timer" parent="in" index="1"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[connection signal="timeout"  from="stopwatch"  to="." method="_on_day_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="stopwatch" to="." method="_on_day_timer_timeout"]
 
-[connection signal="button_down"  from="pixel/pixel_button"  to="." method="_on_pixel_button_button_down" binds=[  ]]
+[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 
-[connection signal="button_down"  from="menu/return_to_game"  to="." method="_on_return_to_game_button_down" binds=[  ]]
+[connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
 
-[connection signal="button_down"  from="menu/return_to_endless"  to="." method="_on_return_to_endless_button_down" binds=[  ]]
+[connection signal="button_down" from="menu/return_to_endless" to="." method="_on_return_to_endless_button_down"]
 
-[connection signal="button_down"  from="are_you_sure/yes_endless"  to="." method="_on_yes_endless_button_down" binds=[  ]]
+[connection signal="button_down" from="are_you_sure/yes_endless" to="." method="_on_yes_endless_button_down"]
 
-[connection signal="button_down"  from="are_you_sure/no_endless"  to="." method="_on_no_endless_button_down" binds=[  ]]
+[connection signal="button_down" from="are_you_sure/no_endless" to="." method="_on_no_endless_button_down"]
 
-[connection signal="timeout"  from="in/count_timer"  to="." method="_on_count_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="in/count_timer" to="." method="_on_count_timer_timeout"]
+
+

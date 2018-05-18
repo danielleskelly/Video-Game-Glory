@@ -13,9 +13,9 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
-	where = get_pos()
+	where = get_global_position()
 	where += direction * move_speed * delta
-	set_pos(where)
+	set_global_position(where)
 	colliders = get_colliding_bodies()
 	for x in colliders:
 		if (x.is_in_group("left")):

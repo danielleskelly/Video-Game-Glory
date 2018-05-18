@@ -51,7 +51,7 @@ func _process(delta):
 			called.remove_from_group("hidden")
 			called.add_to_group("shown")
 			perks.success = perks.success + 1
-	where = get_pos()
+	where = get_global_position()
 	if ((Input.is_action_pressed("move_up")) and (up_move == true)):
 		direction = Vector2(0.0, -1.0)
 		where += direction * move_speed * delta

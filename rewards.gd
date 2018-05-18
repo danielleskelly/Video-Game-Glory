@@ -142,10 +142,10 @@ func _process(delta):
 	elif rewards_globals.complete_all_levels == false:
 		get_node("complete_all_levels").set_texture(load("res://ceo_greyscale.png"))
 		get_node("complete_all_levels/tooltip").set_tooltip("Complete All Levels")
-	if rewards_globals.earn_thousand == true:
+	if rewards_globals.earn_thousand_unlocked == true:
 		get_node("earn_thousand").set_texture(load("res://moneybag.png"))
 		get_node("earn_thousand/tooltip").set_tooltip("You have earned $1000 in one day. Way to exceed goals!")
-	elif rewards_globals.earn_thousand == false:
+	elif rewards_globals.earn_thousand_unlocked == false:
 		get_node("earn_thousand").set_texture(load("res://moneybag_greyscale.png"))
 		get_node("earn_thousand/tooltip").set_tooltip("Earn $1000 in one Day " + str(rewards_globals.earn_thousand) + " / 1000")
 
