@@ -7,10 +7,6 @@ var new_volume
 var hundreds
 var tens
 var ones
-var sam_hundreds
-var sam_tens = 0
-var sam_ones = 0
-var sam_points = 0
 
 var sam_updown = 9
 var sam_leftright = 11
@@ -49,9 +45,6 @@ func _process(delta):
 	hundreds = get_node("success_background/hundreths")
 	tens = get_node("success_background/tens")
 	ones = get_node("success_background/ones")
-	sam_hundreds = get_node("sam_points/hundreths")
-	sam_tens = get_node("sam_points/tens")
-	sam_ones = get_node("sam_points/ones")
 	point_display()
 	countdown_timer.clear()
 	countdown_timer.add_text(str(int(get_node("day_timer").get_time_left())))
@@ -94,22 +87,19 @@ func _physics_process(delta):
 
 
 	if sam_pos == bert_pos and get_node("both_timer").get_time_left() == 0:
-		sam_points += 5
 		get_node("both_timer").start()
-		if perks.success > 5:
-			perks.success -= 5
+		if perks.success > 10:
+			perks.success -= 10
 	
 	var sams_block = get_node(sam_pos)
 	if sams_block.brick_num == 0:
 		sams_block.brick_num = 1
-		sam_points += 2
 		if perks.success > 2:
 			perks.success -= 2
 	elif sams_block.brick_num == 1:
 		pass
 	elif sams_block.brick_num == 2:
 		sams_block.brick_num = 1
-		sam_points += 1
 		if perks.success > 2:
 			perks.success -= 1
 		
@@ -135,15 +125,6 @@ func point_display():
 	tens.add_text(str(one_tens_digit))
 	ones.clear()
 	ones.add_text(str(one_ones_digit))
-	var sam_one_ones_digit = ((sam_points)) % 10
-	var sam_one_tens_digit = ((sam_points) / 10) % 10
-	var sam_one_hunds_digit = ((sam_points) / 100) % 10
-	sam_hundreds.clear()
-	sam_hundreds.add_text(str(sam_one_hunds_digit))
-	sam_tens.clear()
-	sam_tens.add_text(str(sam_one_tens_digit))
-	sam_ones.clear()
-	sam_ones.add_text(str(sam_one_ones_digit))
 
 
 func _on_day_timer_timeout():
@@ -201,12 +182,6 @@ func _on_customer_timeout():
 	get_node("customer_display/explosion").show()
 	get_node("customer_display/pop_timer").start()
 
-
-func _on_customer_pop_timer_timeout():
-	get_node("customer_display/moneybag").hide()
-	get_node("customer_display/explosion").hide()
-
-
 func _on_tutorial_button_button_down():
 	print(true)
 	get_node("tutorial").hide()
@@ -253,3 +228,7 @@ func _on_sam_timer_timeout():
 			get_node("right_timer").start()
 		else:
 			pass
+
+func _on_pop_timer_timeout():
+	get_node("customer_display/moneybag").hide()
+	get_node("customer_display/explosion").hide()

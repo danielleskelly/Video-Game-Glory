@@ -13,6 +13,7 @@ var customer
 var size
 
 func _ready():
+	set_sound()
 	size = get_viewport_rect()
 	pixel = get_node("pixel")
 	customer = get_node("customer")
@@ -61,7 +62,7 @@ func _physics_process(delta):
 		direction+= Vector2(1,0)
 	var collision_info = customer.move_and_collide(direction*delta*200)
 	if collision_info:
-		if collision_info.collider_id == get_node("ghostie_one").get_instance_id() or collision_info.collider_id == get_node("ghostie_two").get_instance_id() or collision_info.collider_id == get_node("ghostie_three").get_instance_id() or collision_info.collider_id == get_node("ghostie_four").get_instance_id():
+		if collision_info.collider_id == get_node("ghostie_one").get_instance_id() or collision_info.collider_id == get_node("ghostie_two").get_instance_id() or collision_info.collider_id == get_node("ghostie_three").get_instance_id() or collision_info.collider_id == get_node("ghostie_four").get_instance_id() or collision_info.collider_id == get_node("ghostie_four").get_instance_id() or collision_info.collider_id == get_node("ghostie_two2").get_instance_id() or collision_info.collider_id == get_node("ghostie_two3").get_instance_id() or collision_info.collider_id == get_node("ghostie_four2").get_instance_id() or collision_info.collider_id == get_node("ghostie_four3").get_instance_id():
 			if get_node("customer/collision_timer").get_time_left() == 0:
 				if perks.success >= 5:
 					perks.success -= 5
@@ -91,9 +92,7 @@ func _on_pixel_button_button_down():
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume_db(new_volume)
+	AudioServer.set_bus_volume_db(0,value-50)
 
 func point_display():
 		var one_ones_digit = ((perks.success + perks.perk_final_count)) % 10
@@ -174,6 +173,6 @@ func _on_count_timer_timeout():
 		get_node("in/count_timer").stop()
 		get_tree().set_pause(false)
 
-
-func _on_Area2D_area_entered(area):
-	print(true)
+func set_sound():
+	var music = get_node("StreamPlayer")
+	music.set_volume_db(sound.volume)

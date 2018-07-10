@@ -1,7 +1,7 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://fiyork_endless_mode.gd" type="Script" id=1]
-[ext_resource path="res://spaceship.scn" type="PackedScene" id=2]
+[ext_resource path="res://ship.png" type="Texture" id=2]
 [ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://outer_box.png" type="Texture" id=4]
 [ext_resource path="res://inner_box.png" type="Texture" id=5]
@@ -13,14 +13,103 @@
 [ext_resource path="res://error_box.png" type="Texture" id=11]
 [ext_resource path="res://button.png" type="Texture" id=12]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="ParticlesMaterial" id=1]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 50.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 0.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 0.0
+angular_velocity = 4.57916e-41
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 100.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+color = Color( 1, 1, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Spread", "Trail" ]
+
+[sub_resource type="DynamicFont" id=2]
 
 size = 45
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
 
 size = 45
 use_mipmaps = false
@@ -31,189 +120,274 @@ font_data = ExtResource( 3 )
 
 position = Vector2( 0, 50 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spaceship" parent="." instance=ExtResource( 2 )]
+[node name="spaceship" type="Sprite" parent="." index="0"]
 
-position = Vector2( 549.546, 244.015 )
+position = Vector2( 508.593, 255.992 )
+texture = ExtResource( 2 )
 
-[node name="rock" parent="."]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="spaceship" index="0" groups=[
+"ship",
+]]
 
-position = Vector2( 2.51349, 183.6 )
-contacts_reported = 13
-script = null
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
 
-[node name="rock_timer" type="Timer" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="spaceship/KinematicBody2D" index="0"]
+
+position = Vector2( 0.0826488, 2.88452 )
+scale = Vector2( 0.956355, 0.90867 )
+build_mode = 0
+polygon = PoolVector2Array( 0.405792, -42.8909, -35.796, 27.7132, -21.7175, 27.7132, -17.801, 20.0918, 19.0359, 20.3035, 22.8467, 28.9834, 37.1368, 28.8776 )
+
+[node name="rock_timer" type="Timer" parent="." index="1"]
 
 process_mode = 0
-wait_time = 3.5
+wait_time = 2.0
 one_shot = true
 autostart = true
 
-[node name="bullet_timer" type="Timer" parent="."]
+[node name="bullet_timer" type="Timer" parent="." index="2"]
 
 process_mode = 1
-wait_time = 0.15
+wait_time = 0.2
 one_shot = true
 autostart = true
 
-[node name="explosion" type="Particles2D" parent="."]
+[node name="explosion" type="Particles2D" parent="." index="3"]
 
 visible = false
-config/amount = 50
-config/lifetime = 1.0
-config/process_mode = 1
-config/explosiveness = 0.2
-params/direction = 0.0
-params/spread = 180.0
-params/linear_velocity = 20.0
-params/spin_velocity = 0.0
-params/orbit_velocity = 0.0
-params/gravity_direction = 0.0
-params/gravity_strength = 9.8
-params/radial_accel = 0.0
-params/tangential_accel = 0.0
-params/damping = 0.0
-params/initial_angle = 0.0
-params/initial_size = 1.0
-params/final_size = 1.0
-params/hue_variation = 0.0
-params/anim_speed_scale = 1.0
-params/anim_initial_pos = 0.0
+position = Vector2( 18.9756, 21.3399 )
+scale = Vector2( 0.407012, 0.333129 )
+emitting = true
+amount = 30
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 1 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
-[node name="pop_timer" type="Timer" parent="."]
+[node name="pop_timer" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 0.4
 one_shot = false
 autostart = false
 
-[node name="day_timer" type="Timer" parent="."]
+[node name="day_timer" type="Timer" parent="." index="5"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = true
 
-[node name="countdown_timer" type="RichTextLabel" parent="."]
+[node name="countdown_timer" type="RichTextLabel" parent="." index="6"]
 
-rect_scale = Vector2( 0.75, 1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 97.0
 margin_top = 430.0
 margin_right = 253.0
 margin_bottom = 486.0
-custom_fonts/normal_font = SubResource( 1 )
-custom_colors/default_color = Color( 0.121569, 1, 0.0901961, 1 )
+rect_scale = Vector2( 0.75, 1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.498039, 0.94902, 0.0705882, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "custom_colors" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="success_background" type="Sprite" parent="."]
+[node name="success_background" type="Sprite" parent="." index="7"]
 
 position = Vector2( 127.595, 5.26128 )
 scale = Vector2( 0.67839, 0.328205 )
 texture = ExtResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="success_background"]
+[node name="Sprite" type="Sprite" parent="success_background" index="0"]
 
 position = Vector2( -45.6074, 21.1853 )
 scale = Vector2( 0.295924, 0.61932 )
 texture = ExtResource( 5 )
 
-[node name="Sprite1" type="Sprite" parent="success_background"]
+[node name="Sprite1" type="Sprite" parent="success_background" index="1"]
 
 position = Vector2( -0.366186, 21.1853 )
 scale = Vector2( 0.291602, 0.61932 )
 texture = ExtResource( 5 )
 
-[node name="Sprite2" type="Sprite" parent="success_background"]
+[node name="Sprite2" type="Sprite" parent="success_background" index="2"]
 
 position = Vector2( 44.5839, 20.3824 )
 scale = Vector2( 0.291161, 0.61932 )
 texture = ExtResource( 5 )
 
-[node name="points" type="RichTextLabel" parent="success_background"]
+[node name="points" type="RichTextLabel" parent="success_background" index="3"]
 
-rect_scale = Vector2( 0.75, 1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -46.0
 margin_top = -92.0
 margin_right = 87.0
 margin_bottom = -36.0
-custom_fonts/normal_font = SubResource( 1 )
+rect_scale = Vector2( 0.75, 1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Points"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Points"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="hundreths" type="RichTextLabel" parent="success_background"]
+[node name="hundreths" type="RichTextLabel" parent="success_background" index="4"]
 
-rect_scale = Vector2( 1, 1.5 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -62.0
 margin_top = -8.0
 margin_right = -22.0
 margin_bottom = 63.0
-custom_fonts/normal_font = SubResource( 1 )
+rect_scale = Vector2( 1, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="tens" type="RichTextLabel" parent="success_background"]
+[node name="tens" type="RichTextLabel" parent="success_background" index="5"]
 
-rect_scale = Vector2( 1, 1.5 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -17.0
 margin_top = -8.0
 margin_right = 18.0
 margin_bottom = 48.0
-custom_fonts/normal_font = SubResource( 1 )
+rect_scale = Vector2( 1, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="ones" type="RichTextLabel" parent="success_background"]
+[node name="ones" type="RichTextLabel" parent="success_background" index="6"]
 
-rect_scale = Vector2( 1, 1.5 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 28.0
 margin_top = -9.0
 margin_right = 64.0
 margin_bottom = 44.0
-custom_fonts/normal_font = SubResource( 1 )
+rect_scale = Vector2( 1, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="pixel" type="Node2D" parent="."]
+[node name="pixel" type="Node2D" parent="." index="8"]
 
-position = Vector2( 933.627, 468.88 )
-scale = Vector2( 1.49367, 1.70997 )
+editor/display_folded = true
+position = Vector2( 976.749, 9.25339 )
+scale = Vector2( 0.865529, 0.951183 )
 
-[node name="right_arm" type="Sprite" parent="pixel"]
+[node name="right_arm" type="Sprite" parent="pixel" index="0"]
 
 position = Vector2( 13.5239, 0.532171 )
 scale = Vector2( 0.505258, 0.493858 )
@@ -223,7 +397,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="hips" type="Sprite" parent="pixel"]
+[node name="hips" type="Sprite" parent="pixel" index="1"]
 
 position = Vector2( -0.34053, 23.6607 )
 scale = Vector2( 0.397194, 0.33372 )
@@ -232,7 +406,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="left_arm" type="Sprite" parent="pixel"]
+[node name="left_arm" type="Sprite" parent="pixel" index="2"]
 
 position = Vector2( -10.5564, 0.77133 )
 scale = Vector2( 0.652304, 0.49551 )
@@ -241,7 +415,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="torso" type="Sprite" parent="pixel"]
+[node name="torso" type="Sprite" parent="pixel" index="3"]
 
 position = Vector2( -0.167745, -2.25622 )
 scale = Vector2( 0.604909, 0.530322 )
@@ -250,7 +424,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="head" type="Sprite" parent="pixel"]
+[node name="head" type="Sprite" parent="pixel" index="4"]
 
 position = Vector2( -0.140442, -34.3577 )
 scale = Vector2( 0.533973, 0.468504 )
@@ -259,85 +433,145 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="pixel_button" type="LinkButton" parent="pixel"]
+[node name="pixel_button" type="LinkButton" parent="pixel" index="5"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -36.0
 margin_top = -54.0
 margin_right = 40.0
 margin_bottom = 45.0
-custom_fonts/font = SubResource( 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="9"]
 
 stream = ExtResource( 10 )
-playing = false
-loop = true
 volume_db = 10.0
-stream_autoplay = true
-stream_paused = false
-loop_restart_time = 0.0
-buffering_ms = 500
+autoplay = true
+mix_target = 0
+bus = "Master"
 
-[node name="menu" type="Node2D" parent="."]
+[node name="in" type="Node2D" parent="." index="10"]
 
 pause_mode = 2
 visible = false
+position = Vector2( 514.17, 258.175 )
+scale = Vector2( 16.048, 9.58715 )
 
-[node name="background" type="Sprite" parent="menu"]
+[node name="in_number" type="RichTextLabel" parent="in" index="0"]
 
-position = Vector2( 511.694, 171.322 )
-scale = Vector2( 1.06834, 1.10247 )
-texture = ExtResource( 11 )
-
-[node name="button" type="Sprite" parent="menu"]
-
-position = Vector2( 516.995, 184.675 )
-scale = Vector2( 1.52067, 0.420472 )
-texture = ExtResource( 12 )
-
-[node name="button1" type="Sprite" parent="menu"]
-
-position = Vector2( 518.975, 260.32 )
-scale = Vector2( 1.51963, 0.420472 )
-texture = ExtResource( 12 )
-
-[node name="sound" type="RichTextLabel" parent="menu"]
-
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -11.0
+margin_top = -21.0
+margin_right = 27.0
+margin_bottom = 23.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 454.0
-margin_top = 76.0
-margin_right = 724.0
-margin_bottom = 146.0
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = false
+bbcode_text = "3"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "3"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="count_timer" type="Timer" parent="in" index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="menu" type="Node2D" parent="." index="11"]
+
+pause_mode = 2
+editor/display_folded = true
+visible = false
+position = Vector2( 741.632, 324.622 )
+scale = Vector2( 17.0982, 10.0443 )
+
+[node name="Sprite" type="Sprite" parent="menu" index="0"]
+
+position = Vector2( -13.0013, -7.90895 )
+scale = Vector2( 0.0672568, 0.102103 )
+texture = ExtResource( 11 )
+
+[node name="ones1" type="RichTextLabel" parent="menu" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -17.0
+margin_top = -18.0
+margin_right = 127.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Sound"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Sound"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="sound_slider" type="HSlider" parent="menu"]
+[node name="sound_slider" type="HSlider" parent="menu" index="2"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = -14.0
+margin_right = 182.0
+margin_bottom = 2.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 0
-margin_left = 352.0
-margin_top = 125.0
-margin_right = 670.0
-margin_bottom = 141.0
 min_value = 0.0
 max_value = 100.0
 step = 1.0
@@ -345,195 +579,287 @@ page = 0.0
 value = 1.0
 exp_edit = false
 rounded = false
+editable = true
 tick_count = 0
 ticks_on_borders = true
 focus_mode = 2
 
-[node name="return_to_game" type="LinkButton" parent="menu"]
+[node name="Sprite 2" type="Sprite" parent="menu" index="3"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
+position = Vector2( -12.7459, -7.53517 )
+scale = Vector2( 0.0945, 0.0496942 )
+texture = ExtResource( 12 )
+
+[node name="Sprite3" type="Sprite" parent="menu" index="4"]
+
+position = Vector2( -12.5757, -1.14591 )
+scale = Vector2( 0.0910946, 0.0468545 )
+texture = ExtResource( 12 )
+
+[node name="return_to_game" type="LinkButton" parent="menu" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -21.0
+margin_top = -9.0
+margin_right = 342.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.06, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 379.0
-margin_top = 169.0
-margin_right = 695.0
-margin_bottom = 216.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Return To Game"
 underline = 2
 
-[node name="return_to_endless" type="LinkButton" parent="menu"]
+[node name="return_to_village" type="LinkButton" parent="menu" index="6"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -21.0
+margin_top = -2.0
+margin_right = 358.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.06, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 384.0
-margin_top = 242.0
-margin_right = 716.0
-margin_bottom = 289.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Return to Endless"
 underline = 2
 
-[node name="are_you_sure" type="Node2D" parent="."]
+[node name="are_you_sure" type="Node2D" parent="." index="12"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
-position = Vector2( 7.69165, -61.5332 )
+position = Vector2( 776.769, 280.642 )
+scale = Vector2( 17.0982, 10.0443 )
 
-[node name="background" type="Sprite" parent="are_you_sure"]
+[node name="Sprite" type="Sprite" parent="are_you_sure" index="0"]
 
-position = Vector2( 505.792, 230.951 )
-scale = Vector2( 0.863263, 0.944586 )
+position = Vector2( -14.8002, -3.95206 )
+scale = Vector2( 0.054543, 0.0893921 )
 texture = ExtResource( 11 )
 
-[node name="background1" type="Sprite" parent="are_you_sure"]
+[node name="Sprite1" type="Sprite" parent="are_you_sure" index="1"]
 
-position = Vector2( 587.427, 327.912 )
-scale = Vector2( 0.516082, 0.556742 )
+position = Vector2( -10.9057, 5.15818 )
+scale = Vector2( 0.0289604, 0.0502303 )
 texture = ExtResource( 12 )
 
-[node name="background2" type="Sprite" parent="are_you_sure"]
+[node name="Sprite2" type="Sprite" parent="are_you_sure" index="2"]
 
-position = Vector2( 430.726, 327.912 )
-scale = Vector2( 0.431632, 0.519208 )
+position = Vector2( -21.4301, 5.17384 )
+scale = Vector2( 0.0241548, 0.0576448 )
 texture = ExtResource( 12 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure"]
+[node name="ones2" type="RichTextLabel" parent="are_you_sure" index="3"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -25.0
+margin_top = -14.0
+margin_right = 246.0
+margin_bottom = 194.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 347.0
-margin_top = 130.0
-margin_right = 664.0
-margin_bottom = 346.0
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Are you sure you want to go back to the Endless Mode menu?"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Are you sure you want to go back to the Endless Mode menu?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="yes_village" type="LinkButton" parent="are_you_sure"]
+[node name="yes_village" type="LinkButton" parent="are_you_sure" index="4"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -13.0
+margin_top = 4.0
+margin_right = 68.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 550.0
-margin_top = 312.0
-margin_right = 644.0
-margin_bottom = 359.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Yes"
 underline = 2
 
-[node name="no_village" type="LinkButton" parent="are_you_sure"]
+[node name="no_village" type="LinkButton" parent="are_you_sure" index="5"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -23.0
+margin_top = 4.0
+margin_right = 58.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 404.0
-margin_top = 312.0
-margin_right = 498.0
-margin_bottom = 359.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "No"
 underline = 2
 
-[node name="game_over" type="Node2D" parent="." groups=[
+[node name="game_over" type="Node2D" parent="." index="13" groups=[
 "game_over",
 ]]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
+position = Vector2( 513.205, 258.641 )
+scale = Vector2( 16.1095, 9.59817 )
 
-[node name="Sprite" type="Sprite" parent="game_over"]
+[node name="Sprite" type="Sprite" parent="game_over" index="0"]
 
-position = Vector2( 509.632, 214.129 )
-scale = Vector2( 0.697904, 1.00087 )
+position = Vector2( 2.21299, -3.52248 )
+scale = Vector2( 0.068988, 0.113228 )
 texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Sprite1" type="Sprite" parent="game_over"]
+[node name="Sprite1" type="Sprite" parent="game_over" index="1"]
 
-position = Vector2( 564.945, 305.842 )
-scale = Vector2( 0.393449, 0.654944 )
+position = Vector2( 11.1612, 7.61414 )
+scale = Vector2( 0.0281529, 0.0501816 )
 texture = ExtResource( 12 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="game_over"]
+[node name="RichTextLabel" type="RichTextLabel" parent="game_over" index="2"]
 
-rect_scale = Vector2( 2, 2 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -10.0
+margin_top = -16.0
+margin_right = 108.0
+margin_bottom = 152.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 412.0
-margin_top = 111.0
-margin_right = 562.0
-margin_bottom = 215.0
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "GAME OVER!"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "GAME OVER!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="game_over_button" type="LinkButton" parent="game_over"]
+[node name="game_over_button" type="LinkButton" parent="game_over" index="3"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 9.0
+margin_top = 6.0
+margin_right = 55.0
+margin_bottom = 46.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 546.0
-margin_top = 289.0
-margin_right = 589.0
-margin_bottom = 329.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "OK"
 underline = 2
 
-[connection signal="timeout"  from="pop_timer"  to="." method="_on_pop_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="pop_timer" to="." method="_on_pop_timer_timeout"]
 
-[connection signal="timeout"  from="day_timer"  to="." method="_on_day_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 
-[connection signal="button_down"  from="pixel/pixel_button"  to="." method="_on_pixel_button_button_down" binds=[  ]]
+[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 
-[connection signal="value_changed"  from="menu/sound_slider"  to="." method="_on_sound_slider_value_changed" binds=[  ]]
+[connection signal="timeout" from="in/count_timer" to="." method="_on_count_timer_timeout"]
 
-[connection signal="button_down"  from="menu/return_to_game"  to="." method="_on_return_to_game_button_down" binds=[  ]]
+[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
 
-[connection signal="button_down"  from="menu/return_to_endless"  to="." method="_on_return_to_endless_button_down" binds=[  ]]
+[connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
 
-[connection signal="button_down"  from="are_you_sure/yes_village"  to="." method="_on_yes_village_button_down" binds=[  ]]
+[connection signal="button_down" from="menu/return_to_village" to="." method="_on_return_to_village_button_down"]
 
-[connection signal="button_down"  from="are_you_sure/no_village"  to="." method="_on_no_village_button_down" binds=[  ]]
+[connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
 
-[connection signal="button_up"  from="game_over/game_over_button"  to="." method="_on_game_over_button_button_up" binds=[  ]]
+[connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
+
+[connection signal="button_up" from="game_over/game_over_button" to="." method="_on_game_over_button_button_up"]
+
+

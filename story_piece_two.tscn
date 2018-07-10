@@ -353,25 +353,25 @@ texture = ExtResource( 4 )
 
 [node name="crtv" type="Sprite" parent="strategy" index="0"]
 
-position = Vector2( 14.1786, -341.105 )
+position = Vector2( -3.3481, -500.739 )
 scale = Vector2( 2.80987, 1.32809 )
 texture = ExtResource( 5 )
 
 [node name="crtv1" type="Sprite" parent="strategy" index="1"]
 
-position = Vector2( 40.9475, 40.2752 )
+position = Vector2( 26.9669, -149.233 )
 scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
 [node name="crtv2" type="Sprite" parent="strategy" index="2"]
 
-position = Vector2( 40.9475, 125.763 )
+position = Vector2( 26.9669, -63.745 )
 scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
 [node name="crtv3" type="Sprite" parent="strategy" index="3"]
 
-position = Vector2( 40.9476, 505.3 )
+position = Vector2( 26.967, 315.792 )
 scale = Vector2( 2.80987, 1.64743 )
 texture = ExtResource( 5 )
 
@@ -505,12 +505,12 @@ size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
-bbcode_text = "Oh! Um... hi."
+bbcode_text = "I've got nothing better to do."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Oh! Um... hi."
+text = "I've got nothing better to do."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -549,12 +549,12 @@ size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
-bbcode_text = "*Most* of your job will be visiting the different kingdoms."
+bbcode_text = "We can complete a little training session while we wait for Sam."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "*Most* of your job will be visiting the different kingdoms."
+text = "We can complete a little training session while we wait for Sam."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -580,6 +580,7 @@ margin_right = 43.0
 margin_bottom = 65.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
@@ -605,6 +606,7 @@ margin_right = 127.0
 margin_bottom = 124.0
 rect_scale = Vector2( 0.03, 0.05 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0

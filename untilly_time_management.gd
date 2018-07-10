@@ -1,5 +1,7 @@
 extends Node2D
 
+var game_over = false
+
 onready var countdown_timer = get_node("countdown_timer")
 
 var hundreds
@@ -72,6 +74,47 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
+	if game_over == true:
+		if perks.success >= 30:
+			perks.success -= 30
+		for x in range(0,10):
+			for y in range(0,15):
+				tetris_lines.matrix[x][y] = 0
+		var blockeys = block_daddy.get_children()
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("ten")
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("nine")
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("eight")
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("seven")
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("six")
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("five")
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("four")
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("three")
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("two")
+		for x in blockeys:
+			x.queue_free()
+		blockeys = get_tree().get_nodes_in_group("one")
+		for x in blockeys:
+			x.queue_free()
+		random_piece()
+		
 	tetris_lines.line_check()
 	hundreds = get_node("success_background/hundreths")
 	tens = get_node("success_background/tens")
@@ -572,7 +615,10 @@ func random_piece():
 	randomize()
 	current_piece = tetris_array[randi() % tetris_array.size()]
 	get_node("down_timer").start()
+	game_over = false
 	if current_piece == "square":
+		if tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[1][7] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 8
 		tetris_lines.current_loc_hoz_c = 7
@@ -589,7 +635,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "l":
+	elif current_piece == "l":
+		if tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[2][6] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 8
 		tetris_lines.current_loc_hoz_c = 7
@@ -606,7 +654,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "bl":
+	elif current_piece == "bl":
+		if tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[1][7] == 1 or tetris_lines.matrix[2][7] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 8
 		tetris_lines.current_loc_hoz_b = 7
 		tetris_lines.current_loc_hoz_c = 8
@@ -623,7 +673,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "bz":
+	elif current_piece == "bz":
+		if tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[1][7] == 1 or tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[0][8] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 8
 		tetris_lines.current_loc_hoz_c = 8
@@ -640,7 +692,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "threesome":
+	elif current_piece == "threesome":
+		if tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[1][7] == 1 or tetris_lines.matrix[1][8] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 8
 		tetris_lines.current_loc_hoz_b = 7
 		tetris_lines.current_loc_hoz_c = 8
@@ -657,7 +711,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "bar":
+	elif current_piece == "bar":
+		if tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[1][6] == 1 or tetris_lines.matrix[2][6] == 1 or tetris_lines.matrix[3][6] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 7
 		tetris_lines.current_loc_hoz_c = 7
@@ -674,7 +730,9 @@ func random_piece():
 		block_daddy.add_child(block_c)
 		block_d = block_load.instance()
 		block_daddy.add_child(block_d)
-	if current_piece == "z":
+	elif current_piece == "z":
+		if tetris_lines.matrix[0][6] == 1 or tetris_lines.matrix[0][7] == 1 or tetris_lines.matrix[1][7] == 1 or tetris_lines.matrix[1][8] == 1:
+			game_over = true
 		tetris_lines.current_loc_hoz_a = 7
 		tetris_lines.current_loc_hoz_b = 8
 		tetris_lines.current_loc_hoz_c = 8
@@ -2741,41 +2799,41 @@ func _on_day_timer_timeout():
 
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
-	get_node("menu").set_hidden(false)
+	get_node("menu").show()
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
 	new_volume = value / 100
 	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume(new_volume)
+	get_node("StreamPlayer").set_volume_db(new_volume)
 
 func _on_return_to_game_button_down():
-	get_tree().set_pause(false)
-	get_node("menu").set_hidden(true)
+	get_tree().paused = false
+	get_node("menu").hide()
 
 func _on_return_to_village_button_down():
-	get_node("are_you_sure").set_hidden(false)
+	get_node("are_you_sure").show()
 
 func _on_return_to_main_menu_button_down():
-	get_node("are_you_sure_2").set_hidden(false)
+	get_node("are_you_sure_2").show()
 	
 func _on_yes_village_button_down():
-	get_node("menu").set_hidden(true)
-	get_tree().set_pause(false)
-	perk_check()
+	get_node("menu").hide()
+	get_tree().paused = false
+	perks.perk_check()
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_no_village_button_down():
-	get_node("are_you_sure").set_hidden(true)
-	get_node("menu").set_hidden(false)
+	get_node("are_you_sure").hide()
+	get_node("menu").show()
 
 func _on_yes_main_button_down():
-	get_tree().set_pause(false)
+	get_tree().paused = false
 	get_tree().change_scene("res://player_selection.tscn")
 
 func _on_no_main_button_down():
-	get_node("are_you_sure_2").set_hidden(true)
-	get_node("menu").set_hidden(false)
+	get_node("are_you_sure_2").hide()
+	get_node("menu").show()
 	
 func _on_customer_timeout():
 	get_node("customer_display/moneybag").show()

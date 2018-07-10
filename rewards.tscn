@@ -640,6 +640,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
+_sections_unfolded = [ "Hint", "Mouse", "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
 }

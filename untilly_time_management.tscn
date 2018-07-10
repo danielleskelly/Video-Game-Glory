@@ -2318,6 +2318,7 @@ _sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Text
 [node name="tutorial" type="Node2D" parent="." index="175"]
 
 pause_mode = 2
+visible = false
 position = Vector2( 511.98, 301.641 )
 scale = Vector2( 15.9374, 9.49948 )
 __meta__ = {

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://story_piece_six.gd" type="Script" id=1]
 [ext_resource path="res://sam_back.png" type="Texture" id=2]
@@ -27,7 +27,9 @@ step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("other_bubble:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 27.42, 47.9, 57.94, 66.4, 84.9, 105.6, 112.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
@@ -37,7 +39,9 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/path = NodePath("other_bubble/yes:bbcode_text")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 27.42, 37, 57.94, 84.9, 92.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
@@ -47,7 +51,9 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/path = NodePath("speech_bubble:visible")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0, 82.42, 85.4, 112.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
@@ -57,7 +63,9 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/path = NodePath("speech_bubble/whew:bbcode_text")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray(  ),
 "transitions": PoolRealArray(  ),
@@ -67,7 +75,9 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/path = NodePath("inner_office:visible")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0, 112.6 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -77,7 +87,9 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/path = NodePath("pixel:visible")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0, 112.6 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -87,7 +99,9 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/path = NodePath("other_other_bubble:visible")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0, 2.5, 27.4, 47.92, 57.92, 66.42, 82.4, 105.8, 112.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
@@ -97,7 +111,9 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/path = NodePath("sam:visible")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
 "times": PoolRealArray( 0, 1, 112.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
@@ -107,7 +123,9 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/path = NodePath("skip_button:visible")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
 "times": PoolRealArray( 0, 112.6 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -117,7 +135,9 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/path = NodePath("mute_button:visible")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
 "times": PoolRealArray( 0, 112.6 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -127,7 +147,9 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/path = NodePath("strategy/crtv:position")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
 "times": PoolRealArray( 112.63, 112.83, 113.29 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
@@ -137,7 +159,9 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/path = NodePath("strategy/crtv1:position")
 tracks/11/interp = 1
+tracks/11/loop_wrap = true
 tracks/11/imported = false
+tracks/11/enabled = true
 tracks/11/keys = {
 "times": PoolRealArray( 0, 112.6, 112.78, 113.06, 113.29 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
@@ -147,7 +171,9 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/path = NodePath("strategy/crtv2:position")
 tracks/12/interp = 1
+tracks/12/loop_wrap = true
 tracks/12/imported = false
+tracks/12/enabled = true
 tracks/12/keys = {
 "times": PoolRealArray( 0, 112.6, 113.05, 113.29 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
@@ -157,7 +183,9 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/path = NodePath("strategy/crtv3:position")
 tracks/13/interp = 1
+tracks/13/loop_wrap = true
 tracks/13/imported = false
+tracks/13/enabled = true
 tracks/13/keys = {
 "times": PoolRealArray( 0, 112.63, 113.04, 113.29 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
@@ -167,7 +195,9 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/path = NodePath("sam/head:texture")
 tracks/14/interp = 1
+tracks/14/loop_wrap = true
 tracks/14/imported = false
+tracks/14/enabled = true
 tracks/14/keys = {
 "times": PoolRealArray( 1, 2.02, 2.1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
@@ -177,7 +207,9 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/path = NodePath("sam:position")
 tracks/15/interp = 1
+tracks/15/loop_wrap = true
 tracks/15/imported = false
+tracks/15/enabled = true
 tracks/15/keys = {
 "times": PoolRealArray( 1, 1.5, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
@@ -187,7 +219,9 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/path = NodePath("other_other_bubble/yes:bbcode_text")
 tracks/16/interp = 1
+tracks/16/loop_wrap = true
 tracks/16/imported = false
+tracks/16/enabled = true
 tracks/16/keys = {
 "times": PoolRealArray( 2.5, 10.7, 47.92, 66.42, 105.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
@@ -223,7 +257,7 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 13 )
 
-[node name="story_piece_five" type="Node2D"]
+[node name="story_piece_five" type="Node2D" index="0"]
 
 position = Vector2( 514.994, 303.814 )
 scale = Vector2( 16.0311, 9.62488 )
@@ -232,48 +266,47 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
+root_node = NodePath("..")
+autoplay = "piece_one"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
-root_node = NodePath("..")
+playback_speed = 1.0
 anims/piece_one = SubResource( 1 )
-playback/active = true
-playback/speed = 1.0
 blend_times = [  ]
-autoplay = "piece_one"
 
-[node name="strategy" type="Sprite" parent="."]
+[node name="strategy" type="Sprite" parent="." index="1"]
 
 position = Vector2( -0.37561, 0.0704174 )
 scale = Vector2( 0.0448001, 0.0752878 )
 texture = ExtResource( 4 )
 
-[node name="crtv" type="Sprite" parent="strategy"]
+[node name="crtv" type="Sprite" parent="strategy" index="0"]
 
 position = Vector2( 20.1988, -162.461 )
 scale = Vector2( 2.80987, 1.21 )
 texture = ExtResource( 5 )
 
-[node name="crtv1" type="Sprite" parent="strategy"]
+[node name="crtv1" type="Sprite" parent="strategy" index="1"]
 
 position = Vector2( 40.5492, 214.865 )
 scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
-[node name="crtv2" type="Sprite" parent="strategy"]
+[node name="crtv2" type="Sprite" parent="strategy" index="2"]
 
 position = Vector2( 40.8005, 346.151 )
 scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
-[node name="crtv3" type="Sprite" parent="strategy"]
+[node name="crtv3" type="Sprite" parent="strategy" index="3"]
 
 position = Vector2( 40.9179, 729.06 )
 scale = Vector2( 2.80987, 1.64743 )
 texture = ExtResource( 5 )
 
-[node name="inner_office" type="Node2D" parent="."]
+[node name="inner_office" type="Node2D" parent="." index="2"]
 
 position = Vector2( 0.835938, 0.548452 )
 scale = Vector2( 0.997054, 1.03856 )
@@ -281,7 +314,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="door_plug" type="Sprite" parent="inner_office"]
+[node name="door_plug" type="Sprite" parent="inner_office" index="0"]
 
 position = Vector2( -1.36518, -0.26089 )
 scale = Vector2( 0.0804171, 0.0669604 )
@@ -290,7 +323,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="window" type="Sprite" parent="inner_office"]
+[node name="window" type="Sprite" parent="inner_office" index="1"]
 
 position = Vector2( -0.894562, 1.02959 )
 scale = Vector2( 0.0963926, 0.109688 )
@@ -300,7 +333,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="chair" type="Sprite" parent="inner_office"]
+[node name="chair" type="Sprite" parent="inner_office" index="2"]
 
 position = Vector2( -1.03533, 15.618 )
 scale = Vector2( 0.036946, 0.0518165 )
@@ -310,26 +343,26 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="desk" type="Sprite" parent="inner_office"]
+[node name="desk" type="Sprite" parent="inner_office" index="3"]
 
 position = Vector2( -2.07088, 17.0909 )
 scale = Vector2( 0.0647611, 0.0990841 )
 texture = ExtResource( 9 )
 flip_h = true
 
-[node name="computer" type="Sprite" parent="inner_office"]
+[node name="computer" type="Sprite" parent="inner_office" index="4"]
 
 position = Vector2( 4.22044, 2.07518 )
 scale = Vector2( 0.0378395, 0.0556641 )
 texture = ExtResource( 10 )
 
-[node name="lamp" type="Sprite" parent="inner_office"]
+[node name="lamp" type="Sprite" parent="inner_office" index="5"]
 
 position = Vector2( -7.41894, 5.99733 )
 scale = Vector2( 0.0121401, 0.0138543 )
 texture = ExtResource( 10 )
 
-[node name="pixel" type="Node2D" parent="."]
+[node name="pixel" type="Node2D" parent="." index="3"]
 
 position = Vector2( -20.6054, 6.38172 )
 scale = Vector2( 0.884005, 0.718394 )
@@ -337,7 +370,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="left_arm" type="Sprite" parent="pixel"]
+[node name="left_arm" type="Sprite" parent="pixel" index="0"]
 
 position = Vector2( 2.46945, 5.03704 )
 scale = Vector2( 0.0616234, 0.109052 )
@@ -346,11 +379,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="speech_bubble" type="Node2D" parent="."]
+[node name="speech_bubble" type="Node2D" parent="." index="4"]
 
 visible = false
 
-[node name="bubble" type="Sprite" parent="speech_bubble"]
+[node name="bubble" type="Sprite" parent="speech_bubble" index="0"]
 
 position = Vector2( -2.49632, 15.4256 )
 scale = Vector2( 0.0309429, 0.0350822 )
@@ -358,93 +391,130 @@ texture = ExtResource( 12 )
 flip_h = true
 flip_v = true
 
-[node name="whew" type="RichTextLabel" parent="speech_bubble"]
+[node name="whew" type="RichTextLabel" parent="speech_bubble" index="1"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -16.0
 margin_top = 9.0
 margin_right = 254.0
 margin_bottom = 145.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "er...um...well..."
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "er...um...well..."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="other_bubble" type="Node2D" parent="."]
+[node name="other_bubble" type="Node2D" parent="." index="5"]
 
 visible = false
 position = Vector2( 14.3138, -14.0428 )
 scale = Vector2( 0.610145, 0.504589 )
 
-[node name="bubble" type="Sprite" parent="other_bubble"]
+[node name="bubble" type="Sprite" parent="other_bubble" index="0"]
 
 position = Vector2( -24.7929, 16.8285 )
-rotation_deg = -90.0
 scale = Vector2( 0.0476649, 0.0768718 )
 texture = ExtResource( 14 )
 
-[node name="yes" type="RichTextLabel" parent="other_bubble"]
+[node name="yes" type="RichTextLabel" parent="other_bubble" index="1"]
 
-rect_scale = Vector2( 0.1, 0.15 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -41.0
 margin_top = -3.0
 margin_right = 273.0
 margin_bottom = 252.0
+rect_scale = Vector2( 0.1, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "I am going to send you to the next town and Sam and I will sort this out by ourselves."
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "I am going to send you to the next town and Sam and I will sort this out by ourselves."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="other_other_bubble" type="Node2D" parent="."]
+[node name="other_other_bubble" type="Node2D" parent="." index="6"]
 
 visible = false
 position = Vector2( 17.7667, -11.6668 )
 scale = Vector2( 0.641126, 0.524294 )
 
-[node name="bubble" type="Sprite" parent="other_other_bubble"]
+[node name="bubble" type="Sprite" parent="other_other_bubble" index="0"]
 
 position = Vector2( -29.7426, 3.04134 )
-rotation_deg = -90.0
 scale = Vector2( 0.0444938, 0.0748506 )
 texture = ExtResource( 15 )
 flip_v = true
 
-[node name="yes" type="RichTextLabel" parent="other_other_bubble"]
+[node name="yes" type="RichTextLabel" parent="other_other_bubble" index="1"]
 
-rect_scale = Vector2( 0.1, 0.15 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -45.0
 margin_top = -16.0
 margin_right = 263.0
 margin_bottom = 234.0
+rect_scale = Vector2( 0.1, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "See! Right there! They were just about to tell us something important! But you couldn't...."
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "See! Right there! They were just about to tell us something important! But you couldn't...."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="sam" type="Node2D" parent="."]
+[node name="sam" type="Node2D" parent="." index="7"]
 
 position = Vector2( 33.9015, -0.226297 )
 scale = Vector2( 0.884005, 0.718394 )
 
-[node name="head" type="Sprite" parent="sam"]
+[node name="head" type="Sprite" parent="sam" index="0"]
 
 position = Vector2( -19.4567, 7.64789 )
 scale = Vector2( 0.0811621, 0.122074 )
@@ -453,61 +523,70 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
 
 stream = ExtResource( 16 )
-playing = false
-loop = true
 volume_db = -10.0
-stream_autoplay = true
-stream_paused = false
-loop_restart_time = 0.0
-buffering_ms = 500
+autoplay = false
+mix_target = 0
+bus = "Master"
 
-[node name="skip_button" type="LinkButton" parent="."]
+[node name="skip_button" type="LinkButton" parent="." index="9"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -26.0
 margin_top = 26.0
 margin_right = 47.0
 margin_bottom = 66.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.941176, 0.929412, 0.894118, 1 )
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "SKIP"
 underline = 2
 
-[node name="mute_button" type="TextureButton" parent="."]
+[node name="mute_button" type="TextureButton" parent="." index="10"]
 
-visibility/blend_mode = 1
-rect_scale = Vector2( 0.5, 0.5 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 27.0
+margin_top = 24.0
+margin_right = 127.0
+margin_bottom = 124.0
+rect_scale = Vector2( 0.03, 0.05 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-margin_left = 20.0
-margin_top = 24.0
-margin_right = 30.0
-margin_bottom = 39.0
 toggle_mode = true
-click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
+group = null
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 18 )
-params/resize_mode = 0
-texture_scale = Vector2( 0.1, 0.15 )
-params/stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
 
-[connection signal="finished"  from="AnimationPlayer"  to="." method="_on_AnimationPlayer_finished" binds=[  ]]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
-[connection signal="button_down"  from="skip_button"  to="." method="_on_skip_button_button_down" binds=[  ]]
+[connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 
-[connection signal="button_down"  from="mute_button"  to="." method="_on_mute_button_button_down" binds=[  ]]
+[connection signal="button_down" from="mute_button" to="." method="_on_mute_button_button_down"]
+
+

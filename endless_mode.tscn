@@ -10,7 +10,7 @@
 [ext_resource path="res://Screen Shot 2017-11-13 at 10.51.54 PM.png" type="Texture" id=8]
 [ext_resource path="res://Screen Shot 2017-11-14 at 2.35.42 AM.png" type="Texture" id=9]
 [ext_resource path="res://back_arrow.png" type="Texture" id=10]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=11]
+[ext_resource path="res://town_select.ogg" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -536,11 +536,13 @@ group = null
 
 [node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="9"]
 
+pause_mode = 2
 stream = ExtResource( 11 )
 volume_db = 0.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Master"
+_sections_unfolded = [ "Pause" ]
 
 [connection signal="button_up" from="yellow_eating_dot/yellow_eating_button" to="." method="_on_yellow_eating_button_button_up"]
 

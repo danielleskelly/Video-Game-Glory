@@ -14,8 +14,6 @@ var size
 
 var stopwatch = 0
 
-onready var pixel = get_node("pixel")
-
 func _ready():
 	size = get_viewport_rect()
 	pixel = get_node("pixel")
@@ -30,7 +28,13 @@ func _ready():
 	get_node("StreamPlayer").set_volume_db(sound.volume)
 	set_physics_process(true)
 	set_process(true)
+	get_tree().set_pause(true)
+	countin()
 
+
+func countin():
+	get_node("in").show()
+	get_node("in/count_timer").start()
 
 func _process(delta):
 	if Input.is_action_pressed("ui_cancel"):
@@ -63,30 +67,28 @@ func _physics_process(delta):
 		direction+= Vector2(1,0)
 	var collision_info = customer.move_and_collide(direction*delta*200)
 	if collision_info:
-		if collision_info.collider_id == get_node("ghostie_one").get_instance_id() or collision_info.collider_id == get_node("ghostie_two").get_instance_id() or collision_info.collider_id == get_node("ghostie_three").get_instance_id() or collision_info.collider_id == get_node("ghostie_four").get_instance_id():
-			if get_node("customer/collision_timer").get_time_left() == 0:
-				if perks.success >= 5:
-					perks.success -= 5
-					get_node("customer/collision_timer").start()
+		if collision_info.collider_id == get_node("ghostie_one").get_instance_id() or collision_info.collider_id == get_node("ghostie_two").get_instance_id() or collision_info.collider_id == get_node("ghostie_three").get_instance_id() or collision_info.collider_id == get_node("ghostie_four").get_instance_id() or collision_info.collider_id == get_node("ghostie_four").get_instance_id() or collision_info.collider_id == get_node("ghostie_two2").get_instance_id() or collision_info.collider_id == get_node("ghostie_two3").get_instance_id() or collision_info.collider_id == get_node("ghostie_four2").get_instance_id() or collision_info.collider_id == get_node("ghostie_four3").get_instance_id():
+			var game_over = get_tree().get_nodes_in_group("game_over")
+			for x in game_over:
+				x.show()
+				get_tree().set_pause(true)
 		if collision_info.collider.get_parent().get_parent().get_name() == "concessions":
 			collision_info.collider.get_parent().set_global_position(Vector2(rand_range(0,size.size.x),rand_range(0,size.size.y)))
 			perks.success += 1
 
-
 func _on_day_timer_timeout():
 	stopwatch += 1
 
-
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
-	get_node("menu").set_hidden(false)
+	get_node("menu").show()
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 	
 
 func _on_sound_slider_value_changed( value ):
 	new_volume = value / 100
 	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume(new_volume)
+	get_node("StreamPlayer").set_volume_db(new_volume)
 	
 func point_display():
 		var one_ones_digit = ((perks.success + perks.perk_final_count)) % 10
@@ -101,7 +103,7 @@ func point_display():
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
-	get_node("menu").set_hidden(true)
+	get_node("menu").hide()
 
 func _on_game_over_button_button_up():
 	get_tree().set_pause(false)
@@ -120,4 +122,36 @@ func _on_yes_endless_button_down():
 
 func _on_no_endless_button_down():
 	get_tree().set_pause(false)
+	get_node("are_you_sure").hide()
+
+func _on_game_over_button_button_down():
+	get_tree().set_pause(false)
+	rewards_globals.million_total_minigame_points += perks.success
+	if stopwatch > rewards_globals.three_min_yed:
+		rewards_globals.three_min_yed = stopwatch
+	get_tree().change_scene("res://endless_mode.tscn")
+
+func _on_count_timer_timeout():
+	if get_node("in/in_number").get_text() == "3":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("2")
+	elif get_node("in/in_number").get_text() == "2":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("1")
+	elif get_node("in/in_number").get_text() == "1":
+		get_node("in").hide()
+		get_node("in/count_timer").stop()
+		get_tree().set_pause(false)
+
+
+func _on_return_to_village_button_down():
+	get_node("are_you_sure").show()
+
+
+func _on_yes_village_button_down():
+	get_tree().paused = false
+	get_tree().change_scene("res://endless_mode.tscn")
+	
+
+func _on_no_village_button_down():
 	get_node("are_you_sure").hide()

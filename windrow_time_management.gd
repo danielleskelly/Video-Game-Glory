@@ -185,7 +185,6 @@ func _on_customer_pop_timer_timeout():
 
 
 func _on_tutorial_button_button_down():
-	print(true)
 	get_node("tutorial").hide()
 	countin()
 	

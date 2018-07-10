@@ -120,6 +120,7 @@ func _on_pop_timer_timeout():
 func clear_rocks(z):
 	var rock_place = z.get_global_position() 
 	if ((rock_place.x < -100) or (rock_place.x > screen_size.x) or (rock_place.y < -100) or (rock_place.y > screen_size.y)):
+		z.remove_from_group("rocks")
 		z.free()
 
 func point_display():
@@ -178,7 +179,7 @@ func _on_no_main_button_down():
 func _on_customer_timeout():
 	get_node("customer_display/moneybag").show()
 	get_node("customer_display/explosion").show()
-	get_node("customer_display/pop_timer").start()
+	get_node("customer_display/customer_pop_timer").start()
 
 func _on_customer_pop_timer_timeout():
 	get_node("customer_display/moneybag").hide()

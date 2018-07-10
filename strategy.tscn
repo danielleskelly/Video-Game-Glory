@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://collander_64.png" type="Texture" id=2]
@@ -120,11 +120,13 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 8 )
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="DynamicFont" id=15]
 
-length = 1.0
-loop = false
-step = 0.1
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 8 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="Animation" id=16]
 
@@ -200,37 +202,37 @@ step = 0.1
 
 [sub_resource type="Animation" id=28]
 
-length = 90.0
+length = 1.0
 loop = false
 step = 0.1
 
 [sub_resource type="Animation" id=29]
 
-length = 0.1
+length = 90.0
 loop = false
 step = 0.1
 
 [sub_resource type="Animation" id=30]
 
-length = 8.0
+length = 0.1
 loop = false
 step = 0.1
 
 [sub_resource type="Animation" id=31]
 
-length = 15.0
+length = 8.0
 loop = false
 step = 0.1
 
 [sub_resource type="Animation" id=32]
 
-length = 24.0
+length = 15.0
 loop = false
 step = 0.1
 
 [sub_resource type="Animation" id=33]
 
-length = 8.0
+length = 24.0
 loop = false
 step = 0.1
 
@@ -242,17 +244,23 @@ step = 0.1
 
 [sub_resource type="Animation" id=35]
 
-length = 43.0
+length = 8.0
 loop = false
 step = 0.1
 
 [sub_resource type="Animation" id=36]
 
+length = 43.0
+loop = false
+step = 0.1
+
+[sub_resource type="Animation" id=37]
+
 length = 44.0
 loop = false
 step = 0.1
 
-[node name="strategy" type="Node2D" index="0"]
+[node name="strategy" type="Node2D"]
 
 position = Vector2( 510.353, 299.978 )
 scale = Vector2( 16.0667, 9.42247 )
@@ -3459,7 +3467,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = ExtResource( 19 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -3469,6 +3477,7 @@ shortcut = null
 group = null
 text = "YES"
 underline = 2
+_sections_unfolded = [ "custom_fonts" ]
 
 [node name="background2" type="Sprite" parent="are_you_sure_2" index="4"]
 
@@ -3761,28 +3770,28 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/arcade_pricing = SubResource( 15 )
-anims/arcade_upgrades = SubResource( 16 )
-anims/concessions_pricing = SubResource( 17 )
-anims/customers = SubResource( 18 )
-anims/entertainment = SubResource( 19 )
-anims/finances = SubResource( 20 )
-anims/games = SubResource( 21 )
-anims/loans = SubResource( 22 )
-anims/marketing = SubResource( 23 )
-anims/news = SubResource( 24 )
-anims/research = SubResource( 25 )
-anims/storefront = SubResource( 26 )
-anims/supplies = SubResource( 27 )
-anims/tutorial = SubResource( 28 )
-anims/tutorial_finish = SubResource( 29 )
-anims/tutorial_pass = SubResource( 30 )
-anims/tutorial_pt2 = SubResource( 31 )
-anims/tutorial_pt3 = SubResource( 32 )
-anims/tutorial_pt3half = SubResource( 33 )
-anims/tutorial_pt4 = SubResource( 34 )
-anims/tutorial_pt5 = SubResource( 35 )
-anims/tutorial_pt6 = SubResource( 36 )
+anims/arcade_pricing = SubResource( 16 )
+anims/arcade_upgrades = SubResource( 17 )
+anims/concessions_pricing = SubResource( 18 )
+anims/customers = SubResource( 19 )
+anims/entertainment = SubResource( 20 )
+anims/finances = SubResource( 21 )
+anims/games = SubResource( 22 )
+anims/loans = SubResource( 23 )
+anims/marketing = SubResource( 24 )
+anims/news = SubResource( 25 )
+anims/research = SubResource( 26 )
+anims/storefront = SubResource( 27 )
+anims/supplies = SubResource( 28 )
+anims/tutorial = SubResource( 29 )
+anims/tutorial_finish = SubResource( 30 )
+anims/tutorial_pass = SubResource( 31 )
+anims/tutorial_pt2 = SubResource( 32 )
+anims/tutorial_pt3 = SubResource( 33 )
+anims/tutorial_pt3half = SubResource( 34 )
+anims/tutorial_pt4 = SubResource( 35 )
+anims/tutorial_pt5 = SubResource( 36 )
+anims/tutorial_pt6 = SubResource( 37 )
 blend_times = [  ]
 
 [node name="timer_notify" type="Timer" parent="." index="29"]
