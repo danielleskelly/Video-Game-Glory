@@ -1851,11 +1851,14 @@ func line_check():
 			x.queue_free()
 		perks.success = perks.success + 15
 		var nine = get_tree().get_nodes_in_group("nine")
-		for x in nine:
-			var pos = x.get_global_position()
-			x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("1_10").get_global_position().y))
-			x.remove_from_group("nine")
-			x.add_to_group("ten")
+		if nine.empty() == false:
+			for x in nine:
+				var pos = x.get_global_position()
+				print(get_tree().get_root().get_child(6).get_name())
+				print(get_tree().get_root().get_child(6).get_children())
+				x.set_global_position(Vector2(pos.x, get_tree().get_root().get_child(6).get_node("1_10").get_global_position().y))
+				x.remove_from_group("nine")
+				x.add_to_group("ten")
 		var eight = get_tree().get_nodes_in_group("eight")
 		for x in eight:
 			var pos = x.get_global_position()

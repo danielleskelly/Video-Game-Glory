@@ -180,14 +180,18 @@ font_data = ExtResource( 3 )
 
 position = Vector2( 0, 50 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="spaceship" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
 position = Vector2( 508.593, 255.992 )
 texture = ExtResource( 2 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="spaceship" index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="spaceship" index="0" groups=[
+"ship",
+]]
 
 input_pickable = false
 collision_layer = 1

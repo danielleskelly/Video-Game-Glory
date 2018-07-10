@@ -7,15 +7,22 @@ var pizza
 
 func _ready():
 	set_pic()
-	set_process(true)
+	set_physics_process(true)
 	pass
 
-func _process(delta):
-	var bodies = self.get_colliding_bodies()
+func _physics_process(delta):
+	var bodies = get_colliding_bodies()
 	for body in bodies:
-		if (body.is_in_group("ship")):
-			if (perks.success > 5):
-				perks.success = perks.success - 5
+		if (body.is_in_group("ship")) and get_node("collision_timer").get_time_left() == 0:
+			get_node("collision_timer").start()
+			if get_parent().get_name() == "time_management":
+				if (perks.success > 5):
+					perks.success = perks.success - 5
+			elif get_parent().get_name() == "endless_mode":
+				var game_over = get_tree().get_nodes_in_group("game_over")
+				for x in game_over:
+					x.show()
+					get_tree().set_pause(true)
 				
 				
 func set_pic():

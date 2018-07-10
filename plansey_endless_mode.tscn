@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://plansey_endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
@@ -28,13 +28,13 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
 
-[node name="endless_mode" type="Node2D"]
+[node name="endless_mode" type="Node2D" index="0"]
 
 position = Vector2( 513.144, 309.168 )
 scale = Vector2( 16.0526, 9.62054 )
 script = ExtResource( 1 )
 
-[node name="a_one" type="Sprite" parent="."]
+[node name="a_one" type="Sprite" parent="." index="0"]
 
 position = Vector2( -27.3873, -25.3789 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -43,25 +43,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="a_one"]
+[node name="number" type="RichTextLabel" parent="a_one" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -384.0
 margin_top = -219.0
 margin_right = -327.0
 margin_bottom = -170.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="b_one" type="Sprite" parent="."]
+[node name="b_one" type="Sprite" parent="." index="1"]
 
 position = Vector2( -27.3873, -11.97 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -70,25 +83,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="b_one"]
+[node name="number" type="RichTextLabel" parent="b_one" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -384.0
 margin_top = -213.0
 margin_right = -325.0
 margin_bottom = -162.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="c_one" type="Sprite" parent="."]
+[node name="c_one" type="Sprite" parent="." index="2"]
 
 position = Vector2( -27.3873, 1.23094 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -97,25 +123,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="c_one"]
+[node name="number" type="RichTextLabel" parent="c_one" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -212.0
 margin_right = -358.0
 margin_bottom = -164.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="d_one" type="Sprite" parent="."]
+[node name="d_one" type="Sprite" parent="." index="3"]
 
 position = Vector2( -27.3873, 14.6398 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -124,25 +163,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="d_one"]
+[node name="number" type="RichTextLabel" parent="d_one" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -357.0
 margin_bottom = -164.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="a_two" type="Sprite" parent="."]
+[node name="a_two" type="Sprite" parent="." index="4"]
 
 position = Vector2( -18.2921, -25.3789 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -151,25 +203,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="a_two"]
+[node name="number" type="RichTextLabel" parent="a_two" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -481.0
 margin_top = -242.0
 margin_right = -411.0
 margin_bottom = -182.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="b_two" type="Sprite" parent="."]
+[node name="b_two" type="Sprite" parent="." index="5"]
 
 position = Vector2( -18.2921, -11.97 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -178,25 +243,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="b_two"]
+[node name="number" type="RichTextLabel" parent="b_two" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -465.0
 margin_top = -227.0
 margin_right = -403.0
 margin_bottom = -174.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="c_two" type="Sprite" parent="."]
+[node name="c_two" type="Sprite" parent="." index="6"]
 
 position = Vector2( -18.2921, 1.23094 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -205,25 +283,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="c_two"]
+[node name="number" type="RichTextLabel" parent="c_two" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -354.0
 margin_bottom = -158.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="d_two" type="Sprite" parent="."]
+[node name="d_two" type="Sprite" parent="." index="7"]
 
 position = Vector2( -18.2921, 14.6398 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -232,25 +323,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="d_two"]
+[node name="number" type="RichTextLabel" parent="d_two" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -346.0
 margin_bottom = -156.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="a_three" type="Sprite" parent="."]
+[node name="a_three" type="Sprite" parent="." index="8"]
 
 position = Vector2( -9.19696, -25.3789 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -259,25 +363,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="a_three"]
+[node name="number" type="RichTextLabel" parent="a_three" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -482.0
 margin_top = -228.0
 margin_right = -417.0
 margin_bottom = -172.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="b_three" type="Sprite" parent="."]
+[node name="b_three" type="Sprite" parent="." index="9"]
 
 position = Vector2( -9.19696, -11.97 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -286,25 +403,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="b_three"]
+[node name="number" type="RichTextLabel" parent="b_three" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -482.0
 margin_top = -242.0
 margin_right = -422.0
 margin_bottom = -192.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="c_three" type="Sprite" parent="."]
+[node name="c_three" type="Sprite" parent="." index="10"]
 
 position = Vector2( -9.19696, 1.23094 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -313,25 +443,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="c_three"]
+[node name="number" type="RichTextLabel" parent="c_three" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -356.0
 margin_bottom = -161.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="d_three" type="Sprite" parent="."]
+[node name="d_three" type="Sprite" parent="." index="11"]
 
 position = Vector2( -9.19696, 14.6398 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -340,25 +483,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="d_three"]
+[node name="number" type="RichTextLabel" parent="d_three" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -361.0
 margin_bottom = -159.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="a_four" type="Sprite" parent="."]
+[node name="a_four" type="Sprite" parent="." index="12"]
 
 position = Vector2( -0.101853, -25.3789 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -367,25 +523,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="a_four"]
+[node name="number" type="RichTextLabel" parent="a_four" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -498.0
 margin_top = -213.0
 margin_right = -437.0
 margin_bottom = -165.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="b_four" type="Sprite" parent="."]
+[node name="b_four" type="Sprite" parent="." index="13"]
 
 position = Vector2( -0.101853, -11.97 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -394,25 +563,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="b_four"]
+[node name="number" type="RichTextLabel" parent="b_four" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -465.0
 margin_top = -227.0
 margin_right = -413.0
 margin_bottom = -169.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="c_four" type="Sprite" parent="."]
+[node name="c_four" type="Sprite" parent="." index="14"]
 
 position = Vector2( -0.101853, 1.23094 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -421,25 +603,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="c_four"]
+[node name="number" type="RichTextLabel" parent="c_four" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -433.0
 margin_top = -213.0
 margin_right = -368.0
 margin_bottom = -157.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="d_four" type="Sprite" parent="."]
+[node name="d_four" type="Sprite" parent="." index="15"]
 
 position = Vector2( -0.101853, 14.6398 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -448,25 +643,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="d_four"]
+[node name="number" type="RichTextLabel" parent="d_four" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -352.0
 margin_bottom = -165.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="a_five" type="Sprite" parent="."]
+[node name="a_five" type="Sprite" parent="." index="16"]
 
 position = Vector2( 8.99326, -25.3789 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -475,25 +683,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="a_five"]
+[node name="number" type="RichTextLabel" parent="a_five" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -482.0
 margin_top = -227.0
 margin_right = -421.0
 margin_bottom = -176.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="b_five" type="Sprite" parent="."]
+[node name="b_five" type="Sprite" parent="." index="17"]
 
 position = Vector2( 8.99326, -11.97 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -502,25 +723,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="b_five"]
+[node name="number" type="RichTextLabel" parent="b_five" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -482.0
 margin_top = -242.0
 margin_right = -417.0
 margin_bottom = -189.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="c_five" type="Sprite" parent="."]
+[node name="c_five" type="Sprite" parent="." index="18"]
 
 position = Vector2( 8.99326, 1.23094 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -529,25 +763,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="c_five"]
+[node name="number" type="RichTextLabel" parent="c_five" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -355.0
 margin_bottom = -158.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="d_five" type="Sprite" parent="."]
+[node name="d_five" type="Sprite" parent="." index="19"]
 
 position = Vector2( 8.99326, 14.6398 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -556,25 +803,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="d_five"]
+[node name="number" type="RichTextLabel" parent="d_five" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -360.0
 margin_bottom = -165.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="a_six" type="Sprite" parent="."]
+[node name="a_six" type="Sprite" parent="." index="20"]
 
 position = Vector2( 18.0261, -25.3789 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -583,25 +843,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="a_six"]
+[node name="number" type="RichTextLabel" parent="a_six" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -465.0
 margin_top = -227.0
 margin_right = -407.0
 margin_bottom = -174.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="b_six" type="Sprite" parent="."]
+[node name="b_six" type="Sprite" parent="." index="21"]
 
 position = Vector2( 18.0261, -11.97 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -610,25 +883,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="b_six"]
+[node name="number" type="RichTextLabel" parent="b_six" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -449.0
 margin_top = -213.0
 margin_right = -395.0
 margin_bottom = -148.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="c_six" type="Sprite" parent="."]
+[node name="c_six" type="Sprite" parent="." index="22"]
 
 position = Vector2( 18.0261, 1.23094 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -637,25 +923,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="c_six"]
+[node name="number" type="RichTextLabel" parent="c_six" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -227.0
 margin_right = -359.0
 margin_bottom = -169.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="d_six" type="Sprite" parent="."]
+[node name="d_six" type="Sprite" parent="." index="23"]
 
 position = Vector2( 18.0261, 14.6398 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -664,25 +963,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="d_six"]
+[node name="number" type="RichTextLabel" parent="d_six" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -354.0
 margin_bottom = -162.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="a_seven" type="Sprite" parent="."]
+[node name="a_seven" type="Sprite" parent="." index="24"]
 
 position = Vector2( 27.1213, -25.3789 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -691,25 +1003,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="a_seven"]
+[node name="number" type="RichTextLabel" parent="a_seven" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -449.0
 margin_top = -227.0
 margin_right = -389.0
 margin_bottom = -163.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="b_seven" type="Sprite" parent="."]
+[node name="b_seven" type="Sprite" parent="." index="25"]
 
 position = Vector2( 27.1213, -11.97 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -718,25 +1043,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="b_seven"]
+[node name="number" type="RichTextLabel" parent="b_seven" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -465.0
 margin_top = -227.0
 margin_right = -397.0
 margin_bottom = -168.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="c_seven" type="Sprite" parent="."]
+[node name="c_seven" type="Sprite" parent="." index="26"]
 
 position = Vector2( 27.1213, 1.23094 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -745,25 +1083,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="c_seven"]
+[node name="number" type="RichTextLabel" parent="c_seven" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -198.0
 margin_right = -350.0
 margin_bottom = -136.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="d_seven" type="Sprite" parent="."]
+[node name="d_seven" type="Sprite" parent="." index="27"]
 
 position = Vector2( 27.1213, 14.6398 )
 scale = Vector2( 0.00712402, 0.0130253 )
@@ -772,55 +1123,81 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="number" type="RichTextLabel" parent="d_seven"]
+[node name="number" type="RichTextLabel" parent="d_seven" index="0"]
 
-rect_scale = Vector2( 15, 12 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -417.0
 margin_top = -213.0
 margin_right = -349.0
 margin_bottom = -155.0
+rect_scale = Vector2( 15, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="goal" type="RichTextLabel" parent="."]
+[node name="goal" type="RichTextLabel" parent="." index="28"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -17.0
 margin_top = 24.0
 margin_right = 283.0
 margin_bottom = 77.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="move_timer" type="Timer" parent="."]
+[node name="move_timer" type="Timer" parent="." index="29"]
 
 process_mode = 1
 wait_time = 0.08
 one_shot = true
 autostart = false
 
-[node name="number_muncher" type="Node2D" parent="."]
+[node name="number_muncher" type="Node2D" parent="." index="30"]
 
 position = Vector2( -27.5524, 14.6544 )
 scale = Vector2( 0.0523198, 0.150002 )
 
-[node name="left_arm" type="Sprite" parent="number_muncher"]
+[node name="left_arm" type="Sprite" parent="number_muncher" index="0"]
 
 position = Vector2( -27.6347, -25.3647 )
 scale = Vector2( 0.286378, 0.276563 )
@@ -830,7 +1207,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="right_arm" type="Sprite" parent="number_muncher"]
+[node name="right_arm" type="Sprite" parent="number_muncher" index="1"]
 
 position = Vector2( -3.40148, -24.302 )
 scale = Vector2( 0.306327, 0.260848 )
@@ -841,7 +1218,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="torso" type="Sprite" parent="number_muncher"]
+[node name="torso" type="Sprite" parent="number_muncher" index="2"]
 
 position = Vector2( -27.3518, -24.2805 )
 scale = Vector2( 0.534314, 0.301116 )
@@ -851,7 +1228,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="right_leg" type="Sprite" parent="number_muncher"]
+[node name="right_leg" type="Sprite" parent="number_muncher" index="3"]
 
 position = Vector2( -16.8572, -0.751465 )
 scale = Vector2( 0.445602, 0.310242 )
@@ -862,7 +1239,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="left_leg" type="Sprite" parent="number_muncher"]
+[node name="left_leg" type="Sprite" parent="number_muncher" index="4"]
 
 position = Vector2( -27.0329, -2.04309 )
 scale = Vector2( 0.406935, 0.323158 )
@@ -872,7 +1249,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="hips" type="Sprite" parent="number_muncher"]
+[node name="hips" type="Sprite" parent="number_muncher" index="5"]
 
 position = Vector2( -19.1288, -3.43405 )
 scale = Vector2( 0.364509, 0.171724 )
@@ -882,7 +1259,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="head" type="Sprite" parent="number_muncher"]
+[node name="head" type="Sprite" parent="number_muncher" index="6"]
 
 position = Vector2( -25.5401, -40.1432 )
 scale = Vector2( 0.504121, 0.248828 )
@@ -892,211 +1269,308 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="success_background" type="Sprite" parent="."]
+[node name="success_background" type="Sprite" parent="." index="31"]
 
 position = Vector2( -26.7925, 26.5292 )
 scale = Vector2( 0.050856, 0.0417198 )
 texture = ExtResource( 9 )
 
-[node name="points" type="RichTextLabel" parent="success_background"]
+[node name="points" type="RichTextLabel" parent="success_background" index="0"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -58.0
 margin_top = -92.0
 margin_right = 78.0
 margin_bottom = -38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Points"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Points"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Sprite" type="Sprite" parent="success_background"]
+[node name="Sprite" type="Sprite" parent="success_background" index="1"]
 
 position = Vector2( -46.0194, 18.9423 )
 scale = Vector2( 0.299385, 0.659328 )
 texture = ExtResource( 10 )
 
-[node name="Sprite1" type="Sprite" parent="success_background"]
+[node name="Sprite1" type="Sprite" parent="success_background" index="2"]
 
 position = Vector2( -0.320828, 18.9424 )
 scale = Vector2( 0.295403, 0.659328 )
 texture = ExtResource( 10 )
 
-[node name="Sprite2" type="Sprite" parent="success_background"]
+[node name="Sprite2" type="Sprite" parent="success_background" index="3"]
 
 position = Vector2( 45.0791, 18.9424 )
 scale = Vector2( 0.295403, 0.659328 )
 texture = ExtResource( 10 )
 
-[node name="hundreths" type="RichTextLabel" parent="success_background"]
+[node name="hundreths" type="RichTextLabel" parent="success_background" index="4"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -56.0
-margin_top = 0.0
 margin_right = -15.0
 margin_bottom = 85.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="tens" type="RichTextLabel" parent="success_background"]
+[node name="tens" type="RichTextLabel" parent="success_background" index="5"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -9.0
 margin_top = -2.0
 margin_right = 64.0
 margin_bottom = 129.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="ones" type="RichTextLabel" parent="success_background"]
+[node name="ones" type="RichTextLabel" parent="success_background" index="6"]
 
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 37.0
 margin_top = -3.0
 margin_right = 92.0
 margin_bottom = 138.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="day_timer" type="Timer" parent="."]
+[node name="day_timer" type="Timer" parent="." index="32"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = true
 
-[node name="countdown_timer" type="RichTextLabel" parent="."]
+[node name="countdown_timer" type="RichTextLabel" parent="." index="33"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 15.0
 margin_top = 24.0
 margin_right = 80.0
 margin_bottom = 77.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="time_out_timer" type="Timer" parent="."]
+[node name="time_out_timer" type="Timer" parent="." index="34"]
 
 process_mode = 1
 wait_time = 5.0
 one_shot = false
 autostart = true
 
-[node name="time_out" type="RichTextLabel" parent="."]
+[node name="time_out" type="RichTextLabel" parent="." index="35"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 24.0
 margin_top = 24.0
 margin_right = 89.0
 margin_bottom = 77.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.623529, 0.823529, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "0"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="debounce" type="Timer" parent="."]
+[node name="debounce" type="Timer" parent="." index="36"]
 
 process_mode = 1
 wait_time = 0.11
 one_shot = true
 autostart = false
 
-[node name="menu" type="Node2D" parent="."]
+[node name="menu" type="Node2D" parent="." index="37"]
 
 pause_mode = 2
 visible = false
 position = Vector2( 15.701, -7.10743 )
 scale = Vector2( 1.10705, 1 )
 
-[node name="Sprite" type="Sprite" parent="menu"]
+[node name="Sprite" type="Sprite" parent="menu" index="0"]
 
 position = Vector2( -14.6734, -1.71974 )
 scale = Vector2( 0.0636731, 0.0970416 )
 texture = ExtResource( 11 )
 
-[node name="Sprite1" type="Sprite" parent="menu"]
+[node name="Sprite1" type="Sprite" parent="menu" index="1"]
 
 position = Vector2( -14.4848, 0.0844817 )
 scale = Vector2( 0.080181, 0.043214 )
 texture = ExtResource( 12 )
 flip_v = true
 
-[node name="Sprite2" type="Sprite" parent="menu"]
+[node name="Sprite2" type="Sprite" parent="menu" index="2"]
 
 position = Vector2( -14.4018, 6.27719 )
 scale = Vector2( 0.0825266, 0.0446387 )
 texture = ExtResource( 12 )
 flip_v = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="menu"]
+[node name="RichTextLabel" type="RichTextLabel" parent="menu" index="3"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -20.0
 margin_top = -11.0
 margin_right = 124.0
 margin_bottom = 50.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Sound"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Sound"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="sound_slider" type="HSlider" parent="menu"]
+[node name="sound_slider" type="HSlider" parent="menu" index="4"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -24.0
 margin_top = -7.0
 margin_right = 165.0
 margin_bottom = 9.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 min_value = 0.0
 max_value = 100.0
 step = 1.0
@@ -1104,129 +1578,171 @@ page = 0.0
 value = 1.0
 exp_edit = false
 rounded = false
+editable = true
 tick_count = 0
 ticks_on_borders = true
 focus_mode = 2
 
-[node name="return_to_game" type="LinkButton" parent="menu"]
+[node name="return_to_game" type="LinkButton" parent="menu" index="5"]
 
-rect_scale = Vector2( 0.05, 0.075 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -21.0
 margin_top = -1.0
 margin_right = 286.0
 margin_bottom = 46.0
+rect_scale = Vector2( 0.05, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Return to Game"
 underline = 2
 
-[node name="return_to_village" type="LinkButton" parent="menu"]
+[node name="return_to_village" type="LinkButton" parent="menu" index="6"]
 
-rect_scale = Vector2( 0.05, 0.075 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -21.0
 margin_top = 5.0
 margin_right = 302.0
 margin_bottom = 52.0
+rect_scale = Vector2( 0.05, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Return to Endless"
 underline = 2
 
-[node name="are_you_sure" type="Node2D" parent="."]
+[node name="are_you_sure" type="Node2D" parent="." index="38"]
 
 pause_mode = 2
 visible = false
 position = Vector2( 10.7987, 3.01499 )
 
-[node name="Sprite" type="Sprite" parent="are_you_sure"]
+[node name="Sprite" type="Sprite" parent="are_you_sure" index="0"]
 
 position = Vector2( -11.0787, -11.8721 )
 scale = Vector2( 0.0595306, 0.0857615 )
 texture = ExtResource( 11 )
 
-[node name="Sprite1" type="Sprite" parent="are_you_sure"]
+[node name="Sprite1" type="Sprite" parent="are_you_sure" index="1"]
 
 position = Vector2( -5.98817, -4.24256 )
 scale = Vector2( 0.0378576, 0.0600616 )
 texture = ExtResource( 12 )
 
-[node name="Sprite2" type="Sprite" parent="are_you_sure"]
+[node name="Sprite2" type="Sprite" parent="are_you_sure" index="2"]
 
 position = Vector2( -15.7939, -4.03545 )
 scale = Vector2( 0.0316514, 0.0517773 )
 texture = ExtResource( 12 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure"]
+[node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure" index="3"]
 
-rect_scale = Vector2( 0.075, 0.075 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -22.0
 margin_top = -21.0
 margin_right = 272.0
 margin_bottom = 192.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "Are you sure you want to go back to the Endless Mode menu?"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Are you sure you want to go back to the Endless Mode menu?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="yes_village" type="LinkButton" parent="are_you_sure"]
+[node name="yes_village" type="LinkButton" parent="are_you_sure" index="4"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -9.0
 margin_top = -6.0
 margin_right = 54.0
 margin_bottom = 34.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Yes"
 underline = 2
 
-[node name="no_village" type="LinkButton" parent="are_you_sure"]
+[node name="no_village" type="LinkButton" parent="are_you_sure" index="5"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -18.0
 margin_top = -6.0
 margin_right = 34.0
 margin_bottom = 41.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "No"
 underline = 2
 
-[node name="pixel" type="Node2D" parent="."]
+[node name="pixel" type="Node2D" parent="." index="39"]
 
 position = Vector2( 98.5898, -132.469 )
 scale = Vector2( 4.20119, 5.21113 )
@@ -1234,7 +1750,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite2" type="Sprite" parent="pixel"]
+[node name="Sprite2" type="Sprite" parent="pixel" index="0"]
 
 position = Vector2( -28.0718, 30.8271 )
 scale = Vector2( 0.00415483, 0.00499688 )
@@ -1243,7 +1759,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite3" type="Sprite" parent="pixel"]
+[node name="Sprite3" type="Sprite" parent="pixel" index="1"]
 
 position = Vector2( -28.1573, 30.4211 )
 scale = Vector2( 0.00780422, 0.0081673 )
@@ -1252,7 +1768,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite4" type="Sprite" parent="pixel"]
+[node name="Sprite4" type="Sprite" parent="pixel" index="2"]
 
 position = Vector2( -27.948, 30.4205 )
 scale = Vector2( 0.00684801, 0.00824945 )
@@ -1262,7 +1778,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite1" type="Sprite" parent="pixel"]
+[node name="Sprite1" type="Sprite" parent="pixel" index="3"]
 
 position = Vector2( -28.0675, 30.4395 )
 scale = Vector2( 0.0063917, 0.00795515 )
@@ -1271,7 +1787,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="pixel"]
+[node name="Sprite" type="Sprite" parent="pixel" index="4"]
 
 position = Vector2( -28.0643, 29.9312 )
 scale = Vector2( 0.00720998, 0.00677686 )
@@ -1280,44 +1796,43 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="pixel_button" type="LinkButton" parent="pixel"]
+[node name="pixel_button" type="LinkButton" parent="pixel" index="5"]
 
-rect_scale = Vector2( 1, 0.3 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
-margin_left = -20.0
-margin_top = 22.0
-margin_right = -17.0
-margin_bottom = 47.0
-custom_fonts/font = SubResource( 2 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -29.0
+margin_top = 29.0
+margin_right = -27.0
+margin_bottom = 43.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-__meta__ = {
-"_edit_lock_": true
-}
+group = null
 
-[node name="StreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="40"]
 
 stream = ExtResource( 13 )
-playing = false
-loop = true
 volume_db = 0.0
-stream_autoplay = true
-stream_paused = false
-loop_restart_time = 0.0
-buffering_ms = 500
+autoplay = false
+mix_target = 0
+bus = "Master"
 
-[node name="board_check_timer" type="Timer" parent="."]
+[node name="board_check_timer" type="Timer" parent="." index="41"]
 
 process_mode = 1
 wait_time = 0.05
 one_shot = true
 autostart = false
 
-[node name="game_over" type="Node2D" parent="." groups=[
+[node name="game_over" type="Node2D" parent="." index="42" groups=[
 "game_over",
 ]]
 
@@ -1327,72 +1842,94 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="game_over"]
+[node name="Sprite" type="Sprite" parent="game_over" index="0"]
 
 position = Vector2( -0.661798, -5.29632 )
 scale = Vector2( 0.0583685, 0.101568 )
 texture = ExtResource( 11 )
 
-[node name="Sprite1" type="Sprite" parent="game_over"]
+[node name="Sprite1" type="Sprite" parent="game_over" index="1"]
 
 position = Vector2( 5.92, 4.10758 )
 scale = Vector2( 0.031315, 0.0542612 )
 texture = ExtResource( 12 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="game_over"]
+[node name="RichTextLabel" type="RichTextLabel" parent="game_over" index="2"]
 
-rect_scale = Vector2( 0.2, 0.2 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = -10.0
 margin_top = -15.0
 margin_right = 90.0
 margin_bottom = 72.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "GAME OVER!"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "GAME OVER!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="game_over_button" type="LinkButton" parent="game_over"]
+[node name="game_over_button" type="LinkButton" parent="game_over" index="3"]
 
-rect_scale = Vector2( 0.1, 0.1 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 4.0
 margin_top = 2.0
 margin_right = 47.0
 margin_bottom = 42.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "OK"
 underline = 2
 
-[connection signal="timeout"  from="day_timer"  to="." method="_on_day_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 
-[connection signal="timeout"  from="time_out_timer"  to="." method="_on_time_out_timer_timeout" binds=[  ]]
+[connection signal="timeout" from="time_out_timer" to="." method="_on_time_out_timer_timeout"]
 
-[connection signal="value_changed"  from="menu/sound_slider"  to="." method="_on_sound_slider_value_changed" binds=[  ]]
+[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
 
-[connection signal="button_down"  from="menu/return_to_game"  to="." method="_on_return_to_game_button_down" binds=[  ]]
+[connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
 
-[connection signal="button_down"  from="menu/return_to_village"  to="." method="_on_return_to_village_button_down" binds=[  ]]
+[connection signal="button_down" from="menu/return_to_village" to="." method="_on_return_to_village_button_down"]
 
-[connection signal="button_down"  from="are_you_sure/yes_village"  to="." method="_on_yes_village_button_down" binds=[  ]]
+[connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
 
-[connection signal="button_down"  from="are_you_sure/no_village"  to="." method="_on_no_village_button_down" binds=[  ]]
+[connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
 
-[connection signal="button_down"  from="pixel/pixel_button"  to="." method="_on_pixel_button_button_down" binds=[  ]]
+[connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 
-[connection signal="button_up"  from="game_over/game_over_button"  to="." method="_on_game_over_button_button_up" binds=[  ]]
+[connection signal="button_up" from="game_over/game_over_button" to="." method="_on_game_over_button_button_up"]
+
+

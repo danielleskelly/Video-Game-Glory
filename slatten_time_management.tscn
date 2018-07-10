@@ -165,7 +165,7 @@ font_data = ExtResource( 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="slatten_time_management" type="Node2D" index="0"]
+[node name="slatten_time_management" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -6079,7 +6079,6 @@ __meta__ = {
 
 [node name="customer_display" type="Node2D" parent="." index="124"]
 
-editor/display_folded = true
 position = Vector2( 538.017, 347.355 )
 scale = Vector2( 16.0121, 9.54661 )
 __meta__ = {
@@ -6242,6 +6241,8 @@ autostart = false
 [node name="tutorial" type="Node2D" parent="." index="129"]
 
 pause_mode = 2
+editor/display_folded = true
+visible = false
 position = Vector2( 512.893, 313.258 )
 scale = Vector2( 16.048, 9.67647 )
 __meta__ = {
@@ -6456,46 +6457,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="Sprite15" type="Sprite" parent="tutorial" index="6"]
-
-position = Vector2( -19.9633, 18.7535 )
-rotation = -1.5708
-scale = Vector2( 0.0745852, 0.0449206 )
-texture = ExtResource( 14 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="tutorial/Sprite15" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -28.0
-margin_top = -209.0
-margin_right = 210.0
-margin_bottom = -108.0
-rect_rotation = 90.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 13 )
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Sam's points"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "Rect", "custom_fonts" ]
-
-[node name="Sprite10" type="Sprite" parent="tutorial" index="7"]
+[node name="Sprite10" type="Sprite" parent="tutorial" index="6"]
 
 position = Vector2( -29.8615, 0.27201 )
 rotation = -1.5708
@@ -6537,7 +6499,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Rect" ]
 
-[node name="Sprite14" type="Sprite" parent="tutorial" index="8"]
+[node name="Sprite14" type="Sprite" parent="tutorial" index="7"]
 
 position = Vector2( 28.2539, 23.614 )
 scale = Vector2( 0.0636586, 0.028042 )
@@ -6576,7 +6538,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="Sprite11" type="Sprite" parent="tutorial" index="9"]
+[node name="Sprite11" type="Sprite" parent="tutorial" index="8"]
 
 position = Vector2( -19.3669, -0.123139 )
 rotation = -1.5708
@@ -6617,7 +6579,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Rect" ]
 
-[node name="Sprite13" type="Sprite" parent="tutorial" index="10"]
+[node name="Sprite13" type="Sprite" parent="tutorial" index="9"]
 
 position = Vector2( -21.8864, 7.89967 )
 rotation = -1.5708
@@ -6658,13 +6620,13 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Rect" ]
 
-[node name="Sprite12" type="Sprite" parent="tutorial" index="11"]
+[node name="Sprite12" type="Sprite" parent="tutorial" index="10"]
 
 position = Vector2( -26.5981, 6.32846 )
 scale = Vector2( 0.0158651, 0.0268405 )
 texture = ExtResource( 15 )
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="tutorial" index="12"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="tutorial" index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -6700,7 +6662,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "custom_colors", "custom_fonts" ]
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="tutorial" index="13"]
+[node name="RichTextLabel3" type="RichTextLabel" parent="tutorial" index="12"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -6732,7 +6694,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "custom_colors", "custom_fonts" ]
 
-[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial" index="14"]
+[node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial" index="13"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -6763,25 +6725,25 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 
-[node name="Sprite3" type="Sprite" parent="tutorial" index="15"]
+[node name="Sprite3" type="Sprite" parent="tutorial" index="14"]
 
 position = Vector2( 28.1579, -2.10356 )
 scale = Vector2( 0.0233709, 0.0450107 )
 texture = ExtResource( 9 )
 
-[node name="Sprite8" type="Sprite" parent="tutorial" index="16"]
+[node name="Sprite8" type="Sprite" parent="tutorial" index="15"]
 
 position = Vector2( -24.9645, -5.34552 )
 scale = Vector2( 0.0612173, 0.00208607 )
 texture = ExtResource( 16 )
 
-[node name="Sprite" type="Sprite" parent="tutorial" index="17"]
+[node name="Sprite" type="Sprite" parent="tutorial" index="16"]
 
 position = Vector2( -24.7462, -1.47018 )
 scale = Vector2( 0.0168183, 0.0253723 )
 texture = ExtResource( 17 )
 
-[node name="tutorial_button" type="LinkButton" parent="tutorial" index="18"]
+[node name="tutorial_button" type="LinkButton" parent="tutorial" index="17"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -6807,7 +6769,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="Sprite2" type="Sprite" parent="tutorial" index="19"]
+[node name="Sprite2" type="Sprite" parent="tutorial" index="18"]
 
 position = Vector2( -24.8285, 0.482318 )
 rotation = -1.5708
@@ -6987,180 +6949,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="sam_points" type="Sprite" parent="." index="131"]
-
-editor/display_folded = true
-position = Vector2( 110.976, 475.213 )
-scale = Vector2( 0.67839, 0.328205 )
-texture = ExtResource( 19 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite" type="Sprite" parent="sam_points" index="0"]
-
-position = Vector2( -45.6074, 21.1853 )
-scale = Vector2( 0.295924, 0.61932 )
-texture = ExtResource( 16 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite1" type="Sprite" parent="sam_points" index="1"]
-
-position = Vector2( -0.366186, 21.1853 )
-scale = Vector2( 0.291602, 0.61932 )
-texture = ExtResource( 16 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite2" type="Sprite" parent="sam_points" index="2"]
-
-position = Vector2( 44.5839, 20.3824 )
-scale = Vector2( 0.291161, 0.61932 )
-texture = ExtResource( 16 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="points" type="RichTextLabel" parent="sam_points" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -46.0
-margin_top = -92.0
-margin_right = 87.0
-margin_bottom = -36.0
-rect_scale = Vector2( 0.75, 1 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 15 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = false
-bbcode_text = "Points"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Points"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="hundreths" type="RichTextLabel" parent="sam_points" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -62.0
-margin_top = -8.0
-margin_right = -22.0
-margin_bottom = 63.0
-rect_scale = Vector2( 1, 1.5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 15 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = false
-bbcode_text = "0"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "0"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="tens" type="RichTextLabel" parent="sam_points" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -17.0
-margin_top = -8.0
-margin_right = 18.0
-margin_bottom = 48.0
-rect_scale = Vector2( 1, 1.5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 15 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = false
-bbcode_text = "0"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "0"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="ones" type="RichTextLabel" parent="sam_points" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 28.0
-margin_top = -9.0
-margin_right = 64.0
-margin_bottom = 44.0
-rect_scale = Vector2( 1, 1.5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 15 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = false
-bbcode_text = "0"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "0"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="q-bert" type="RigidBody2D" parent="." index="132"]
+[node name="q-bert" type="RigidBody2D" parent="." index="131"]
 
 position = Vector2( 261.701, 51.5472 )
 input_pickable = false
@@ -7201,7 +6990,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="sam" type="RigidBody2D" parent="." index="133"]
+[node name="sam" type="RigidBody2D" parent="." index="132"]
 
 editor/display_folded = true
 position = Vector2( 867.579, 544.814 )
@@ -7243,42 +7032,42 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="up_timer" type="Timer" parent="." index="134"]
+[node name="up_timer" type="Timer" parent="." index="133"]
 
 process_mode = 1
 wait_time = 0.6
 one_shot = true
 autostart = false
 
-[node name="left_timer" type="Timer" parent="." index="135"]
+[node name="left_timer" type="Timer" parent="." index="134"]
 
 process_mode = 1
 wait_time = 0.6
 one_shot = true
 autostart = false
 
-[node name="right_timer" type="Timer" parent="." index="136"]
+[node name="right_timer" type="Timer" parent="." index="135"]
 
 process_mode = 1
 wait_time = 0.6
 one_shot = true
 autostart = false
 
-[node name="down_timer" type="Timer" parent="." index="137"]
+[node name="down_timer" type="Timer" parent="." index="136"]
 
 process_mode = 1
 wait_time = 0.6
 one_shot = true
 autostart = false
 
-[node name="sam_timer" type="Timer" parent="." index="138"]
+[node name="sam_timer" type="Timer" parent="." index="137"]
 
 process_mode = 1
 wait_time = 0.4
 one_shot = false
 autostart = true
 
-[node name="both_timer" type="Timer" parent="." index="139"]
+[node name="both_timer" type="Timer" parent="." index="138"]
 
 process_mode = 1
 wait_time = 1.0

@@ -27,11 +27,11 @@ var spaces
 var goal_choice
 
 func _ready():
-	get_node("StreamPlayer").set_volume(sound.volume)
+	get_node("StreamPlayer").set_volume_db(sound.volume)
 	load_stuff()
-	set_fixed_process(true)
+	set_physics_process(true)
 	
-func _fixed_process(delta):
+func _physics_process(delta):
 	if get_node("board_check_timer").get_time_left() == 0:
 		check_board()
 		get_node("board_check_timer").start()
@@ -131,28 +131,28 @@ func _fixed_process(delta):
 func set_muncher_pos():
 	number_muncher = get_node("number_muncher")
 	if (current_vert == "1"):
-		current_x = -27.341173
+		current_x = get_node("a_one").get_global_position().x
 	if (current_vert == "2"):
-		current_x = -18.246117
+		current_x = get_node("a_two").get_global_position().x
 	if (current_vert == "3"):
-		current_x = -9.088764
+		current_x = get_node("a_three").get_global_position().x
 	if (current_vert == "4"):
-		current_x = -0.056002
+		current_x = get_node("a_four").get_global_position().x
 	if (current_vert == "5"):
-		current_x = 8.789875
+		current_x = get_node("a_five").get_global_position().x
 	if (current_vert == "6"):
-		current_x = 17.822636
+		current_x = get_node("a_six").get_global_position().x
 	if (current_vert == "7"):
-		current_x = 27.16687
+		current_x = get_node("a_seven").get_global_position().x
 	if (current_hoz == "a"):
-		current_y = -25.579504
+		current_y = get_node("a_one").get_global_position().y
 	if (current_hoz == "b"):
-		current_y = -12.052235
+		current_y = get_node("b_one").get_global_position().y
 	if (current_hoz == "c"):
-		current_y = 1.34742
+		current_y = get_node("c_one").get_global_position().y
 	if (current_hoz == "d"):
-		current_y = 15.002304
-	number_muncher.set_pos(Vector2(current_x, current_y))
+		current_y = get_node("d_one").get_global_position().y
+	number_muncher.set_global_position(Vector2(current_x, current_y))
 	get_node("move_timer").start()
 			
 func point_display():
@@ -317,18 +317,18 @@ func _on_day_timer_timeout():
 
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
-	get_node("menu").set_hidden(false)
+	get_node("menu").show()
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 	
 
 func _on_sound_slider_value_changed( value ):
 	new_volume = value / 100
 	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume(new_volume)
+	get_node("StreamPlayer").set_volume_db(new_volume)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
-	get_node("menu").set_hidden(true)
+	get_node("menu").hide()
 
 func _on_time_out_timer_timeout():
 	var game = get_tree().get_nodes_in_group("game_over")
@@ -347,6 +347,7 @@ func _on_return_to_village_button_down():
 	get_node("are_you_sure").show()
 
 func _on_yes_village_button_down():
+	get_tree().paused = false
 	get_tree().change_scene("res://endless_mode.tscn")
 
 func _on_no_village_button_down():

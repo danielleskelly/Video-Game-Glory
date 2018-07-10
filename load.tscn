@@ -2,7 +2,8 @@
 
 [ext_resource path="res://load.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
-[ext_resource path="res://pixels_font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=3]
+
 
 [node name="load" type="Node2D"]
 

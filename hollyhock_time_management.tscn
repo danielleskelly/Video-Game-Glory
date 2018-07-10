@@ -1059,7 +1059,6 @@ __meta__ = {
 [node name="menu" type="Node2D" parent="." index="16"]
 
 pause_mode = 2
-editor/display_folded = true
 visible = false
 position = Vector2( 11.5831, 5.9054 )
 scale = Vector2( 1.08517, 1.01932 )

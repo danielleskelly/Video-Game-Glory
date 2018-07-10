@@ -44,6 +44,8 @@ func load_game():
 	if file.file_exists("user://savegame.save") == true:
 		var town_load = file.get_line()
 		global.town_select = town_load
+		if town_load == "untilly":
+			global.current_loan = 500
 		file.get_line()
 		rewards_globals.complete_hollyhock = file.get_line()
 		rewards_globals.complete_fiyork = file.get_line()
@@ -74,6 +76,14 @@ func load_game():
 		rewards_globals.three_min_twfb = file.get_line()
 		rewards_globals.three_min_jad = file.get_line()
 		rewards_globals.three_min_lo = file.get_line()
+		global.endless_unlocked = file.get_line()
+		global.yellow_eating_dot = file.get_line()
+		global.shoot_that_rock = file.get_line()
+		global.falling_shapes_organization = file.get_line()
+		global.mathmatic_mastication = file.get_line()
+		global.tall_wall_fall_ball = file.get_line()
+		global.jump_and_dodge = file.get_line()
+		global.lights_off = file.get_line()
 		file.close()
 		get_tree().change_scene("res://strategy.tscn")
 
@@ -102,6 +112,7 @@ func _on_global_button_button_up():
 
 func _on_no_overwrite_button_up():
 	get_node("new_game_overwrite").hide()
+	get_tree().paused = false
 
 func _on_yes_overwrite_button_up():
 	get_tree().set_pause(false)
@@ -112,6 +123,7 @@ func _on_yes_overwrite_button_up():
 
 func _on_reward_button_button_down():
 	rewards_globals.unseen = 0
+	load_game()
 	get_tree().change_scene("res://rewards.tscn")
 
 

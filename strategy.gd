@@ -51,6 +51,7 @@ var credit_limit = 1000
 
 func _ready():
 	set_sound()
+	save_game()
 	set_process(true)
 
 func _process(delta):
@@ -467,7 +468,8 @@ func _on_start_day_button_up():
 func _on_continue_ok_button_down():
 	if (global.town_select == "hollyhock"):
 		hollyhock_complete.hide()
-		global.endless_unlocked = "true"
+		global.endless_unlocked = true
+		global.yellow_eating_dot = true
 		rewards_globals.complete_hollyhock = true
 		rewards_globals.unseen += 1
 		get_tree().change_scene("res://story_piece_three.tscn")
@@ -515,16 +517,16 @@ func _on_game_over_ok_button_down():
 	global.level_reset()
 
 func _on_skip_button_down():
-	rewards_globals.fifty_business_days += 1
+	rewards_globals.fifty_business_days = int(rewards_globals.fifty_business_days) + 1
 	global.daily_reset()
 	get_node("skip_or_play").hide()
 	arcade_day.business_day()
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_play_button_down():
-	rewards_globals.minigames_played += 1
-	rewards_globals.fifty_business_days += 1
-	if global.income > rewards_globals.earn_thousand:
+	rewards_globals.minigames_played = int(rewards_globals.minigames_played) + 1
+	rewards_globals.fifty_business_days = int(rewards_globals.fifty_business_days) + 1
+	if global.income > int(rewards_globals.earn_thousand):
 		rewards_globals.earn_thousand = global.income
 	global.daily_reset()
 	get_node("skip_or_play").hide()
@@ -597,6 +599,7 @@ func save_game():
 	savegame.store_line(str(rewards_globals.complete_plansey))
 	savegame.store_line(str(rewards_globals.complete_windrow))
 	savegame.store_line(str(rewards_globals.complete_banlon))
+	savegame.store_line(str(rewards_globals.complete_slatten))
 	savegame.store_line(str(rewards_globals.minigames_played))
 	savegame.store_line(str(rewards_globals.points_in_one_minigame))
 	savegame.store_line(str(rewards_globals.million_total_minigame_points))
@@ -619,6 +622,14 @@ func save_game():
 	savegame.store_line(str(rewards_globals.three_min_twfb))
 	savegame.store_line(str(rewards_globals.three_min_jad))
 	savegame.store_line(str(rewards_globals.three_min_lo))
+	savegame.store_line(str(global.endless_unlocked))
+	savegame.store_line(str(global.yellow_eating_dot))
+	savegame.store_line(str(global.shoot_that_rock))
+	savegame.store_line(str(global.falling_shapes_organization))
+	savegame.store_line(str(global.mathmatic_mastication))
+	savegame.store_line(str(global.tall_wall_fall_ball))
+	savegame.store_line(str(global.jump_and_dodge))
+	savegame.store_line(str(global.lights_off))
 	savegame.close()
 
 func _on_autosave_timeout():

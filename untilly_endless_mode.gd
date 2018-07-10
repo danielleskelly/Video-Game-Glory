@@ -1,8 +1,10 @@
 extends Node2D
 
-onready var countdown_timer = get_node("countdown_timer")
-
 var game_over = false
+
+var stopwatch = 0
+
+onready var countdown_timer = get_node("countdown_timer")
 
 var hundreds
 var tens
@@ -44,10 +46,10 @@ var tetris_array
 
 var rotate = 1
 
-var stopwatch = 0
-
 func _ready():
-	get_node("StreamPlayer").set_volume(sound.volume)
+	get_tree().set_pause(true)
+	countin()
+	get_node("StreamPlayer").set_volume_db(sound.volume)
 	block_load = preload("res://tetris_one.tscn")
 	block_daddy = get_node("blocks")
 	left_timer = get_node("left_timer")
@@ -59,24 +61,25 @@ func _ready():
 			tetris_lines.matrix[x].append([])
 			tetris_lines.matrix[x][y] = 0
 	random_piece()
-	set_fixed_process(true)
+	set_physics_process(true)
 	set_process(true)
 	
 func _process(delta):
+	if game_over == true:
+		var game = get_tree().get_nodes_in_group("game_over")
+		for x in game:
+			x.show()
+		get_tree().set_pause(true)
+		
 	tetris_lines.line_check()
 	hundreds = get_node("success_background/hundreths")
 	tens = get_node("success_background/tens")
 	ones = get_node("success_background/ones")
 	point_display()
 	countdown_timer.clear()
-	countdown_timer.add_text(str(int(stopwatch)))
-	if game_over == true:
-		var game = get_tree().get_nodes_in_group("game_over")
-		for x in game:
-			x.show()
-		get_tree().set_pause(true)
+	countdown_timer.add_text(str(stopwatch))
 	
-func _fixed_process(delta):
+func _physics_process(delta):
 	if (Input.is_action_pressed("fire")) and get_node("rotate_timer").get_time_left() == 0:
 		if current_piece == "threesome":
 			if rotate == 1:
@@ -704,215 +707,95 @@ func random_piece():
 		block_daddy.add_child(block_d)
 	
 func set_position():
-	if tetris_lines.current_loc_hoz_a == 1:
-		a_x = 53.7808
-	if tetris_lines.current_loc_hoz_b == 1:
-		b_x = 53.7808
-	if tetris_lines.current_loc_hoz_c == 1:
-		c_x = 53.7808
-	if tetris_lines.current_loc_hoz_d == 1:
-		d_x = 53.7808
-	if tetris_lines.current_loc_hoz_a == 2:
-		a_x = 118.780998
-	if tetris_lines.current_loc_hoz_b == 2:
-		b_x = 118.780998
-	if tetris_lines.current_loc_hoz_c == 2:
-		c_x = 118.780998
-	if tetris_lines.current_loc_hoz_d == 2:
-		d_x = 118.780998
-	if tetris_lines.current_loc_hoz_a == 3:
-		a_x = 183.781006
-	if tetris_lines.current_loc_hoz_b == 3:
-		b_x = 183.781006
-	if tetris_lines.current_loc_hoz_c == 3:
-		c_x = 183.781006
-	if tetris_lines.current_loc_hoz_d == 3:
-		d_x = 183.781006
-	if tetris_lines.current_loc_hoz_a == 4:
-		a_x = 247.781006
-	if tetris_lines.current_loc_hoz_b == 4:
-		b_x = 247.781006
-	if tetris_lines.current_loc_hoz_c == 4:
-		c_x = 247.781006
-	if tetris_lines.current_loc_hoz_d == 4:
-		d_x = 247.781006
-	if tetris_lines.current_loc_hoz_a == 5:
-		a_x = 312.781006
-	if tetris_lines.current_loc_hoz_b == 5:
-		b_x = 312.781006
-	if tetris_lines.current_loc_hoz_c == 5:
-		c_x = 312.781006
-	if tetris_lines.current_loc_hoz_d == 5:
-		d_x = 312.781006
-	if tetris_lines.current_loc_hoz_a == 6:
-		a_x = 377.781006
-	if tetris_lines.current_loc_hoz_b == 6:
-		b_x = 377.781006
-	if tetris_lines.current_loc_hoz_c == 6:
-		c_x = 377.781006
-	if tetris_lines.current_loc_hoz_d == 6:
-		d_x = 377.781006
-	if tetris_lines.current_loc_hoz_a == 7:
-		a_x = 442.780762
-	if tetris_lines.current_loc_hoz_b == 7:
-		b_x = 442.780762
-	if tetris_lines.current_loc_hoz_c == 7:
-		c_x = 442.780762
-	if tetris_lines.current_loc_hoz_d == 7:
-		d_x = 442.780762
-	if tetris_lines.current_loc_hoz_a == 8:
-		a_x = 506.780762
-	if tetris_lines.current_loc_hoz_b == 8:
-		b_x = 506.780762
-	if tetris_lines.current_loc_hoz_c == 8:
-		c_x = 506.780762
-	if tetris_lines.current_loc_hoz_d == 8:
-		d_x = 506.780762
-	if tetris_lines.current_loc_hoz_a == 9:
-		a_x = 571.781006
-	if tetris_lines.current_loc_hoz_b == 9:
-		b_x = 571.781006
-	if tetris_lines.current_loc_hoz_c == 9:
-		c_x = 571.781006
-	if tetris_lines.current_loc_hoz_d == 9:
-		d_x = 571.781006
-	if tetris_lines.current_loc_hoz_a == 10:
-		a_x = 636.781006
-	if tetris_lines.current_loc_hoz_b == 10:
-		b_x = 636.781006
-	if tetris_lines.current_loc_hoz_c == 10:
-		c_x = 636.781006
-	if tetris_lines.current_loc_hoz_d == 10:
-		d_x = 636.781006
-	if tetris_lines.current_loc_hoz_a == 11:
-		a_x = 701.781006
-	if tetris_lines.current_loc_hoz_b == 11:
-		b_x = 701.781006
-	if tetris_lines.current_loc_hoz_c == 11:
-		c_x = 701.781006
-	if tetris_lines.current_loc_hoz_d == 11:
-		d_x = 701.781006
-	if tetris_lines.current_loc_hoz_a == 12:
-		a_x = 765.781006
-	if tetris_lines.current_loc_hoz_b == 12:
-		b_x = 765.781006
-	if tetris_lines.current_loc_hoz_c == 12:
-		c_x = 765.781006
-	if tetris_lines.current_loc_hoz_d == 12:
-		d_x = 765.781006
-	if tetris_lines.current_loc_hoz_a == 13:
-		a_x = 830.781006
-	if tetris_lines.current_loc_hoz_b == 13:
-		b_x = 830.781006
-	if tetris_lines.current_loc_hoz_c == 13:
-		c_x = 830.781006
-	if tetris_lines.current_loc_hoz_d == 13:
-		d_x = 830.781006
-	if tetris_lines.current_loc_hoz_a == 14:
-		a_x = 895.781006
-	if tetris_lines.current_loc_hoz_b == 14:
-		b_x = 895.781006
-	if tetris_lines.current_loc_hoz_c == 14:
-		c_x = 895.781006
-	if tetris_lines.current_loc_hoz_d == 14:
-		d_x = 895.781006
-	if tetris_lines.current_loc_hoz_a == 15:
-		a_x = 960.781006
-	if tetris_lines.current_loc_hoz_b == 15:
-		b_x = 960.781006
-	if tetris_lines.current_loc_hoz_c == 15:
-		c_x = 960.781006
-	if tetris_lines.current_loc_hoz_d == 15:
-		d_x = 960.781006
-	
+	var four_blocks = ["a","b","c","d"]
+	for x in four_blocks:
+		var blocks = "current_loc_hoz_" + x
+		var block_check = tetris_lines.get(blocks)
+		if block_check == 1:
+			var position = x + "_x"
+			set(position, get_node("11").get_global_position().x)
+		elif block_check == 2:
+			var position = x + "_x"
+			set(position, get_node("21").get_global_position().x)
+		elif block_check == 3:
+			var position = x + "_x"
+			set(position, get_node("31").get_global_position().x)
+		elif block_check == 4:
+			var position = x + "_x"
+			set(position, get_node("41").get_global_position().x)
+		elif block_check == 5:
+			var position = x + "_x"
+			set(position, get_node("51").get_global_position().x)
+		elif block_check == 6:
+			var position = x + "_x"
+			set(position, get_node("61").get_global_position().x)
+		elif block_check == 7:
+			var position = x + "_x"
+			set(position, get_node("71").get_global_position().x)
+		elif block_check == 8:
+			var position = x + "_x"
+			set(position, get_node("81").get_global_position().x)
+		elif block_check == 9:
+			var position = x + "_x"
+			set(position, get_node("91").get_global_position().x)
+		elif block_check == 10:
+			var position = x + "_x"
+			set(position, get_node("10_1").get_global_position().x)
+		elif block_check == 11:
+			var position = x + "_x"
+			set(position, get_node("11_1").get_global_position().x)
+		elif block_check == 12:
+			var position = x + "_x"
+			set(position, get_node("12_1").get_global_position().x)
+		elif block_check == 13:
+			var position = x + "_x"
+			set(position, get_node("13_1").get_global_position().x)
+		elif block_check == 14:
+			var position = x + "_x"
+			set(position, get_node("14_1").get_global_position().x)
+		elif block_check == 15:
+			var position = x + "_x"
+			set(position, get_node("15_1").get_global_position().x)
 		
-
-	if tetris_lines.current_loc_vert_a == 1:
-		a_y = 29.416815
-	if tetris_lines.current_loc_vert_b == 1:
-		b_y = 29.416815
-	if tetris_lines.current_loc_vert_c == 1:
-		c_y = 29.416815
-	if tetris_lines.current_loc_vert_d == 1:
-		d_y = 29.416815
-	if tetris_lines.current_loc_vert_a == 2:
-		a_y = 86.416809
-	if tetris_lines.current_loc_vert_b == 2:
-		b_y = 86.416809
-	if tetris_lines.current_loc_vert_c == 2:
-		c_y = 86.416809
-	if tetris_lines.current_loc_vert_d == 2:
-		d_y = 86.416809
-	if tetris_lines.current_loc_vert_a == 3:
-		a_y = 143.417007
-	if tetris_lines.current_loc_vert_b == 3:
-		b_y = 143.417007
-	if tetris_lines.current_loc_vert_c == 3:
-		c_y = 143.417007
-	if tetris_lines.current_loc_vert_d == 3:
-		d_y = 143.417007
-	if tetris_lines.current_loc_vert_a == 4:
-		a_y = 200.417007
-	if tetris_lines.current_loc_vert_b == 4:
-		b_y = 200.417007
-	if tetris_lines.current_loc_vert_c == 4:
-		c_y = 200.417007
-	if tetris_lines.current_loc_vert_d == 4:
-		d_y = 200.417007
-	if tetris_lines.current_loc_vert_a == 5:
-		a_y = 257.416992
-	if tetris_lines.current_loc_vert_b == 5:
-		b_y = 257.416992
-	if tetris_lines.current_loc_vert_c == 5:
-		c_y = 257.416992
-	if tetris_lines.current_loc_vert_d == 5:
-		d_y = 257.416992
-	if tetris_lines.current_loc_vert_a == 6:
-		a_y = 314.416992
-	if tetris_lines.current_loc_vert_b == 6:
-		b_y = 314.416992
-	if tetris_lines.current_loc_vert_c == 6:
-		c_y = 314.416992
-	if tetris_lines.current_loc_vert_d == 6:
-		d_y = 314.416992
-	if tetris_lines.current_loc_vert_a == 7:
-		a_y = 371.416992
-	if tetris_lines.current_loc_vert_b == 7:
-		b_y = 371.416992
-	if tetris_lines.current_loc_vert_c == 7:
-		c_y = 371.416992
-	if tetris_lines.current_loc_vert_d == 7:
-		d_y = 371.416992
-	if tetris_lines.current_loc_vert_a == 8:
-		a_y = 428.416992
-	if tetris_lines.current_loc_vert_b == 8:
-		b_y = 428.416992
-	if tetris_lines.current_loc_vert_c == 8:
-		c_y = 428.416992
-	if tetris_lines.current_loc_vert_d == 8:
-		d_y = 428.416992
-	if tetris_lines.current_loc_vert_a == 9:
-		a_y = 485.416992
-	if tetris_lines.current_loc_vert_b == 9:
-		b_y = 485.416992
-	if tetris_lines.current_loc_vert_c == 9:
-		c_y = 485.416992
-	if tetris_lines.current_loc_vert_d == 9:
-		d_y = 485.416992
-	if tetris_lines.current_loc_vert_a == 10:
-		a_y = 542.416992
-	if tetris_lines.current_loc_vert_b == 10:
-		b_y = 542.416992
-	if tetris_lines.current_loc_vert_c == 10:
-		c_y = 542.416992
-	if tetris_lines.current_loc_vert_d == 10:
-		d_y = 542.416992
+	for x in four_blocks:
+		var block = "current_loc_vert_" + x
+		var block_check = tetris_lines.get(block)
+		if block_check == 1:
+			var position = x + "_y"
+			set(position, get_node("11").get_global_position().y)
+		elif block_check == 2:
+			var position = x + "_y"
+			set(position, get_node("12").get_global_position().y)
+		elif block_check == 3:
+			var position = x + "_y"
+			set(position, get_node("13").get_global_position().y)
+		elif block_check == 4:
+			var position = x + "_y"
+			set(position, get_node("14").get_global_position().y)
+		elif block_check == 5:
+			var position = x + "_y"
+			set(position, get_node("15").get_global_position().y)
+		elif block_check == 6:
+			var position = x + "_y"
+			set(position, get_node("16").get_global_position().y)
+		elif block_check == 7:
+			var position = x + "_y"
+			set(position, get_node("17").get_global_position().y)
+		elif block_check == 8:
+			var position = x + "_y"
+			set(position, get_node("18").get_global_position().y)
+		elif block_check == 9:
+			var position = x + "_y"
+			set(position, get_node("19").get_global_position().y)
+		elif block_check == 10:
+			var position = x + "_y"
+			set(position, get_node("1_10").get_global_position().y)
 	
 	
-	block_a.set_global_pos(Vector2(a_x, a_y))
-	block_b.set_global_pos(Vector2(b_x, b_y))
-	block_c.set_global_pos(Vector2(c_x, c_y))
-	block_d.set_global_pos(Vector2(d_x, d_y))
+	block_a.set_global_position(Vector2(a_x, a_y))
+	block_b.set_global_position(Vector2(b_x, b_y))
+	block_c.set_global_position(Vector2(c_x, c_y))
+	block_d.set_global_position(Vector2(d_x, d_y))
 	
 
 func _on_down_timer_timeout():
@@ -2869,20 +2752,51 @@ func point_display():
 func _on_day_timer_timeout():
 	stopwatch += 1
 
-
 func _on_pixel_button_button_down():
 	get_tree().set_pause(true)
-	get_node("menu").set_hidden(false)
+	get_node("menu").show()
 	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
 	new_volume = value / 100
 	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume(new_volume)
+	get_node("StreamPlayer").set_volume_db(new_volume)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
-	get_node("menu").set_hidden(true)
+	get_node("menu").hide()
+
+func _on_return_to_village_button_down():
+	get_node("are_you_sure").show()
+
+
+	
+func countin():
+	get_node("in").show()
+	get_node("in/count_timer").start()
+
+func _on_count_timer_timeout():
+	if get_node("in/in_number").get_text() == "3":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("2")
+	elif get_node("in/in_number").get_text() == "2":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("1")
+	elif get_node("in/in_number").get_text() == "1":
+		get_node("in").hide()
+		get_node("in/count_timer").stop()
+		get_tree().set_pause(false)
+
+
+
+func _on_yes_village_button_down():
+	get_tree().paused = false
+	get_tree().change_scene("res://endless_mode.tscn")
+	
+
+func _on_no_village_button_down():
+	get_node("are_you_sure").hide()
+
 
 func _on_game_over_button_button_up():
 	get_tree().set_pause(false)
@@ -2890,12 +2804,3 @@ func _on_game_over_button_button_up():
 	if stopwatch > rewards_globals.three_min_fso:
 		rewards_globals.three_min_fso = stopwatch
 	get_tree().change_scene("res://endless_mode.tscn")
-
-func _on_return_to_village_button_down():
-	get_node("are_you_sure").show()
-
-func _on_yes_village_button_down():
-	get_tree().change_scene("res://endless_mode.tscn")
-
-func _on_no_village_button_down():
-	get_node("are_you_sure").hide()

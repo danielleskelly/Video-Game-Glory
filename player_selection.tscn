@@ -142,7 +142,7 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
 
-[node name="player_selection" type="Node2D" index="0"]
+[node name="player_selection" type="Node2D"]
 
 pause_mode = 2
 position = Vector2( 514.234, 304.858 )
@@ -624,7 +624,6 @@ underline = 2
 [node name="new_game_overwrite" type="Node2D" parent="." index="11"]
 
 pause_mode = 2
-editor/display_folded = true
 visible = false
 position = Vector2( -0.548746, 0.691612 )
 scale = Vector2( 1.04839, 1.08263 )
