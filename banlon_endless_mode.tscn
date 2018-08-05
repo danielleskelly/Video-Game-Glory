@@ -1,21 +1,19 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://banlon_endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://road.png" type="Texture" id=2]
 [ext_resource path="res://pixel.png" type="Texture" id=3]
 [ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=5]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=6]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=7]
-[ext_resource path="res://outer_box.png" type="Texture" id=8]
-[ext_resource path="res://inner_box.png" type="Texture" id=9]
-[ext_resource path="res://banlon.ogg" type="AudioStream" id=10]
-[ext_resource path="res://road1.gd" type="Script" id=11]
-[ext_resource path="res://ship.png" type="Texture" id=12]
-[ext_resource path="res://road2.gd" type="Script" id=13]
-[ext_resource path="res://road3.gd" type="Script" id=14]
-[ext_resource path="res://error_box.png" type="Texture" id=15]
-[ext_resource path="res://button.png" type="Texture" id=16]
+[ext_resource path="res://pixel_front.png" type="Texture" id=5]
+[ext_resource path="res://outer_box.png" type="Texture" id=6]
+[ext_resource path="res://inner_box.png" type="Texture" id=7]
+[ext_resource path="res://banlon.ogg" type="AudioStream" id=8]
+[ext_resource path="res://road1.gd" type="Script" id=9]
+[ext_resource path="res://ship.png" type="Texture" id=10]
+[ext_resource path="res://road2.gd" type="Script" id=11]
+[ext_resource path="res://road3.gd" type="Script" id=12]
+[ext_resource path="res://error_box.png" type="Texture" id=13]
+[ext_resource path="res://button.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -50,12 +48,26 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="Curve2D" id=7]
+[sub_resource type="Curve2D" id=6]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -60.88, 14.8819, 0, 0, 0, 0, 117.587, 14.6436 )
 }
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=9]
 
@@ -79,20 +91,6 @@ use_filter = true
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=12]
-
-size = 45
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=6]
-
-size = 45
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=13]
 
 size = 45
 use_mipmaps = false
@@ -237,9 +235,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 21.0
+margin_left = 24.0
 margin_top = -31.0
-margin_right = 120.0
+margin_right = 123.0
 margin_bottom = 62.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -261,71 +259,47 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="pixel" type="Node2D" parent="." index="9"]
+[node name="keep_moving_disp" type="RichTextLabel" parent="." index="9"]
 
-editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 11.0
+margin_top = -31.0
+margin_right = 110.0
+margin_bottom = 62.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0.498039, 0.94902, 0.0941176, 1 )
+bbcode_enabled = false
+bbcode_text = "000"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "000"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="pixel" type="Node2D" parent="." index="10"]
+
 position = Vector2( 7.0725, -11.9426 )
 scale = Vector2( 1.20381, 1.49125 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite2" type="Sprite" parent="pixel" index="0"]
-
-position = Vector2( -29.7575, 26.9569 )
-scale = Vector2( 0.0122658, 0.0192379 )
-texture = ExtResource( 5 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite3" type="Sprite" parent="pixel" index="1"]
-
-position = Vector2( -30.2296, 25.3588 )
-scale = Vector2( 0.0150664, 0.0240025 )
-texture = ExtResource( 6 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite4" type="Sprite" parent="pixel" index="2"]
-
-position = Vector2( -29.4914, 25.3354 )
-scale = Vector2( 0.0150664, 0.0248898 )
-texture = ExtResource( 6 )
-centered = false
-flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite1" type="Sprite" parent="pixel" index="3"]
-
-position = Vector2( -30.1212, 25.4411 )
-scale = Vector2( 0.0198682, 0.0238828 )
-texture = ExtResource( 7 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite" type="Sprite" parent="pixel" index="4"]
-
-position = Vector2( -30.0405, 23.9862 )
-scale = Vector2( 0.0182784, 0.0219022 )
-texture = ExtResource( 3 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pixel_button" type="LinkButton" parent="pixel" index="5"]
+[node name="pixel_button" type="LinkButton" parent="pixel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -347,29 +321,36 @@ enabled_focus_mode = 0
 shortcut = null
 group = null
 
-[node name="success_background" type="Sprite" parent="." index="10"]
+[node name="Sprite" type="Sprite" parent="pixel" index="1"]
 
+position = Vector2( -29.0233, 26.1831 )
+scale = Vector2( 0.00162321, 0.00206054 )
+texture = ExtResource( 5 )
+
+[node name="success_background" type="Sprite" parent="." index="11"]
+
+editor/display_folded = true
 position = Vector2( -0.879974, -28.118 )
 scale = Vector2( 0.0324119, 0.0341188 )
-texture = ExtResource( 8 )
+texture = ExtResource( 6 )
 
 [node name="success_background5" type="Sprite" parent="success_background" index="0"]
 
 position = Vector2( -46.2464, 30.223 )
 scale = Vector2( 0.284134, 0.599403 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 
 [node name="success_background4" type="Sprite" parent="success_background" index="1"]
 
 position = Vector2( -0.117371, 30.223 )
 scale = Vector2( 0.284134, 0.599403 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 
 [node name="success_background3" type="Sprite" parent="success_background" index="2"]
 
 position = Vector2( 46.0117, 30.223 )
 scale = Vector2( 0.284134, 0.599403 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 
 [node name="points" type="RichTextLabel" parent="success_background" index="3"]
 
@@ -503,17 +484,18 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="11"]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="12"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 8 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="in" type="Node2D" parent="." index="12"]
+[node name="in" type="Node2D" parent="." index="13"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( 511.98, 302.557 )
 scale = Vector2( 16.0518, 9.58532 )
@@ -556,15 +538,16 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="Path2D" type="Path2D" parent="." index="13"]
+[node name="Path2D" type="Path2D" parent="." index="14"]
 
+editor/display_folded = true
 position = Vector2( 1.21115, -9.08323 )
 scale = Vector2( 1.02006, 1.53591 )
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="road_one" type="PathFollow2D" parent="Path2D" index="0" groups=[
-"road_one",
 "car",
+"road_one",
 ]]
 
 position = Vector2( 81.0353, 14.6924 )
@@ -577,7 +560,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script = ExtResource( 11 )
+script = ExtResource( 9 )
 car_speed = 0.0025
 car_loc = 0.007
 
@@ -597,7 +580,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -629,7 +612,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -647,7 +630,7 @@ __meta__ = {
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Path2D/road_one" index="2"]
 
-position = Vector2( -462.123, -0.753937 )
+position = Vector2( -462.124, 0.156616 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -661,7 +644,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -677,15 +660,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Path2D2" type="Path2D" parent="." index="14"]
+[node name="Path2D2" type="Path2D" parent="." index="15"]
 
+editor/display_folded = true
 position = Vector2( 1.231, -24.6034 )
 scale = Vector2( 1.02006, 1.53591 )
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="road_two" type="PathFollow2D" parent="Path2D2" index="0" groups=[
-"car",
 "road_two",
+"car",
 ]]
 
 position = Vector2( 81.0353, 14.6924 )
@@ -698,7 +682,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script = ExtResource( 13 )
+script = ExtResource( 11 )
 car_speed = 0.001
 car_loc = 0
 
@@ -718,7 +702,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -750,7 +734,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -782,7 +766,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -798,18 +782,19 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Path2D3" type="Path2D" parent="." index="15"]
+[node name="Path2D3" type="Path2D" parent="." index="16"]
 
+editor/display_folded = true
 position = Vector2( 1.21115, -40.1236 )
 scale = Vector2( 1.02006, 1.53591 )
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="road_three" type="PathFollow2D" parent="Path2D3" index="0" groups=[
-"road_three",
 "car",
+"road_three",
 ]]
 
 position = Vector2( 81.0353, 14.6924 )
@@ -822,7 +807,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 car_speed = 0.003
 car_loc = 0.004
 
@@ -842,7 +827,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -874,7 +859,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -906,7 +891,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -922,18 +907,269 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="game_over" type="Node2D" parent="." index="16" groups=[
+[node name="menu" type="Node2D" parent="." index="17"]
+
+pause_mode = 2
+editor/display_folded = true
+visible = false
+position = Vector2( 18.3797, 8.37513 )
+scale = Vector2( 1.35162, 1.36421 )
+
+[node name="Sprite" type="Sprite" parent="menu" index="0"]
+
+position = Vector2( -13.0013, -7.90895 )
+scale = Vector2( 0.0672568, 0.102103 )
+texture = ExtResource( 13 )
+
+[node name="ones1" type="RichTextLabel" parent="menu" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -17.0
+margin_top = -18.0
+margin_right = 127.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = "Sound"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Sound"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="sound_slider" type="HSlider" parent="menu" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = -14.0
+margin_right = 182.0
+margin_bottom = 2.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 50.0
+step = 1.0
+page = 0.0
+value = 1.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 50
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="Sprite 2" type="Sprite" parent="menu" index="3"]
+
+position = Vector2( -12.7459, -7.53517 )
+scale = Vector2( 0.0945, 0.0496942 )
+texture = ExtResource( 14 )
+
+[node name="Sprite3" type="Sprite" parent="menu" index="4"]
+
+position = Vector2( -12.5757, -1.14591 )
+scale = Vector2( 0.0910946, 0.0468545 )
+texture = ExtResource( 14 )
+
+[node name="return_to_game" type="LinkButton" parent="menu" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -21.0
+margin_top = -9.0
+margin_right = 342.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.06, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Return To Game"
+underline = 2
+
+[node name="return_to_village" type="LinkButton" parent="menu" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -21.0
+margin_top = -2.0
+margin_right = 358.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.06, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Return to Endless"
+underline = 2
+
+[node name="are_you_sure" type="Node2D" parent="." index="18"]
+
+pause_mode = 2
+editor/display_folded = true
+visible = false
+position = Vector2( 20.7726, 3.7744 )
+scale = Vector2( 1.32901, 1.21843 )
+
+[node name="Sprite" type="Sprite" parent="are_you_sure" index="0"]
+
+position = Vector2( -14.8002, -3.95206 )
+scale = Vector2( 0.054543, 0.0893921 )
+texture = ExtResource( 13 )
+
+[node name="Sprite1" type="Sprite" parent="are_you_sure" index="1"]
+
+position = Vector2( -10.9057, 5.15818 )
+scale = Vector2( 0.0289604, 0.0502303 )
+texture = ExtResource( 14 )
+
+[node name="Sprite2" type="Sprite" parent="are_you_sure" index="2"]
+
+position = Vector2( -21.4301, 5.17384 )
+scale = Vector2( 0.0241548, 0.0576448 )
+texture = ExtResource( 14 )
+
+[node name="ones2" type="RichTextLabel" parent="are_you_sure" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -25.0
+margin_top = -14.0
+margin_right = 246.0
+margin_bottom = 194.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = "Are you sure you want to go back to the Endless Mode menu?"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Are you sure you want to go back to the Endless Mode menu?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="yes_village" type="LinkButton" parent="are_you_sure" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -13.0
+margin_top = 4.0
+margin_right = 68.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Yes"
+underline = 2
+
+[node name="no_village" type="LinkButton" parent="are_you_sure" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -23.0
+margin_top = 4.0
+margin_right = 58.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "No"
+underline = 2
+
+[node name="game_over" type="Node2D" parent="." index="19" groups=[
 "game_over",
 ]]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
+position = Vector2( -3.5944, 4.79647 )
+scale = Vector2( 1.57676, 1.7241 )
 
 [node name="Sprite" type="Sprite" parent="game_over" index="0"]
 
 position = Vector2( 2.21299, -3.52248 )
 scale = Vector2( 0.068988, 0.113228 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -942,7 +1178,7 @@ __meta__ = {
 
 position = Vector2( 11.1612, 7.61414 )
 scale = Vector2( 0.0281529, 0.0501816 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="game_over" index="2"]
 
@@ -961,7 +1197,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 11 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "GAME OVER!"
@@ -995,7 +1231,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -1004,249 +1240,12 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="menu" type="Node2D" parent="." index="17"]
+[node name="keep_moving" type="Timer" parent="." index="20"]
 
-pause_mode = 2
-visible = false
-position = Vector2( 11.6878, 3.37865 )
-
-[node name="Sprite" type="Sprite" parent="menu" index="0"]
-
-position = Vector2( -13.0013, -7.90895 )
-scale = Vector2( 0.0672568, 0.102103 )
-texture = ExtResource( 15 )
-
-[node name="ones1" type="RichTextLabel" parent="menu" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -17.0
-margin_top = -18.0
-margin_right = 127.0
-margin_bottom = 60.0
-rect_scale = Vector2( 0.075, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 11 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = false
-bbcode_text = "Sound"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Sound"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-
-[node name="sound_slider" type="HSlider" parent="menu" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -24.0
-margin_top = -14.0
-margin_right = 182.0
-margin_bottom = 2.0
-rect_scale = Vector2( 0.1, 0.1 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 0
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 1.0
-exp_edit = false
-rounded = false
-editable = true
-tick_count = 0
-ticks_on_borders = true
-focus_mode = 2
-
-[node name="Sprite 2" type="Sprite" parent="menu" index="3"]
-
-position = Vector2( -12.7459, -7.53517 )
-scale = Vector2( 0.0945, 0.0496942 )
-texture = ExtResource( 16 )
-
-[node name="Sprite3" type="Sprite" parent="menu" index="4"]
-
-position = Vector2( -12.5757, -1.14591 )
-scale = Vector2( 0.0910946, 0.0468545 )
-texture = ExtResource( 16 )
-
-[node name="return_to_game" type="LinkButton" parent="menu" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -21.0
-margin_top = -9.0
-margin_right = 342.0
-margin_bottom = 54.0
-rect_scale = Vector2( 0.06, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 12 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "Return To Game"
-underline = 2
-
-[node name="return_to_village" type="LinkButton" parent="menu" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -21.0
-margin_top = -2.0
-margin_right = 358.0
-margin_bottom = 60.0
-rect_scale = Vector2( 0.06, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 12 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "Return to Endless"
-underline = 2
-
-[node name="are_you_sure" type="Node2D" parent="." index="18"]
-
-pause_mode = 2
-visible = false
-position = Vector2( 13.7428, -0.999956 )
-
-[node name="Sprite" type="Sprite" parent="are_you_sure" index="0"]
-
-position = Vector2( -14.8002, -3.95206 )
-scale = Vector2( 0.054543, 0.0893921 )
-texture = ExtResource( 15 )
-
-[node name="Sprite1" type="Sprite" parent="are_you_sure" index="1"]
-
-position = Vector2( -10.9057, 5.15818 )
-scale = Vector2( 0.0289604, 0.0502303 )
-texture = ExtResource( 16 )
-
-[node name="Sprite2" type="Sprite" parent="are_you_sure" index="2"]
-
-position = Vector2( -21.4301, 5.17384 )
-scale = Vector2( 0.0241548, 0.0576448 )
-texture = ExtResource( 16 )
-
-[node name="ones2" type="RichTextLabel" parent="are_you_sure" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -25.0
-margin_top = -14.0
-margin_right = 246.0
-margin_bottom = 194.0
-rect_scale = Vector2( 0.075, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 6 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = false
-bbcode_text = "Are you sure you want to go back to the Endless Mode menu?"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Are you sure you want to go back to the Endless Mode menu?"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-
-[node name="yes_village" type="LinkButton" parent="are_you_sure" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -13.0
-margin_top = 4.0
-margin_right = 68.0
-margin_bottom = 60.0
-rect_scale = Vector2( 0.075, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 13 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "Yes"
-underline = 2
-
-[node name="no_village" type="LinkButton" parent="are_you_sure" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -23.0
-margin_top = 4.0
-margin_right = 58.0
-margin_bottom = 60.0
-rect_scale = Vector2( 0.075, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 13 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "No"
-underline = 2
+process_mode = 1
+wait_time = 20.0
+one_shot = false
+autostart = true
 
 [connection signal="timeout" from="note_timer" to="." method="_on_note_timer_timeout"]
 
@@ -1256,7 +1255,7 @@ underline = 2
 
 [connection signal="timeout" from="in/count_timer" to="." method="_on_count_timer_timeout"]
 
-[connection signal="button_down" from="game_over/game_over_button" to="." method="_on_game_over_button_button_down"]
+[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
 
 [connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
 
@@ -1265,5 +1264,9 @@ underline = 2
 [connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
 
 [connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
+
+[connection signal="button_down" from="game_over/game_over_button" to="." method="_on_game_over_button_button_down"]
+
+[connection signal="timeout" from="keep_moving" to="." method="_on_keep_moving_timeout"]
 
 

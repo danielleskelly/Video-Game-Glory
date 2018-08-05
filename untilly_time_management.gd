@@ -8,8 +8,6 @@ var hundreds
 var tens
 var ones
 
-var new_volume
-
 var customer_choice
 var price_choice
 var randomness
@@ -21,7 +19,6 @@ var concessions_price_check
 onready var pixel = get_node("pixel")
 
 var current_piece
-
 var left_timer
 var right_timer
 
@@ -58,7 +55,6 @@ func _ready():
 	else:
 		get_tree().set_pause(true)
 		countin()
-	get_node("StreamPlayer").set_volume_db(sound.volume)
 	block_load = preload("res://tetris_one.tscn")
 	block_daddy = get_node("blocks")
 	left_timer = get_node("left_timer")
@@ -2798,14 +2794,12 @@ func _on_day_timer_timeout():
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume_db(new_volume)
+	AudioServer.set_bus_volume_db(0,value - 50)
 
 func _on_return_to_game_button_down():
 	get_tree().paused = false

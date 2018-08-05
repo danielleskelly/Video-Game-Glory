@@ -6,8 +6,6 @@ var ones
 
 var something = false
 
-var new_volume
-
 onready var pixel = get_node("pixel")
 
 onready var countdown_timer = get_node("countdown_timer")
@@ -38,7 +36,6 @@ func _ready():
 	else:
 		get_tree().set_pause(true)
 		countin()
-	get_node("StreamPlayer").set_volume_db(sound.volume)
 	load_stuff()
 	set_physics_process(true)
 	
@@ -135,6 +132,7 @@ func _physics_process(delta):
 			if (current_hoz == "a"):
 				current_hoz = "b"
 		set_muncher_pos()
+		get_node("move_timer").start()
 			
 func set_muncher_pos():
 	number_muncher = get_node("number_muncher")
@@ -324,15 +322,12 @@ func _on_day_timer_timeout():
 
 
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
-	
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume_db(new_volume)
+	AudioServer.set_bus_volume_db(0,value - 50)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)

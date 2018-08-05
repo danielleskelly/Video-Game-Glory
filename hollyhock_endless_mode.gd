@@ -2,8 +2,6 @@ extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
 
-var new_volume
-
 var hundreds
 var tens
 var ones
@@ -25,7 +23,6 @@ func _ready():
 	get_node("concessions/popcorn").set_global_position(Vector2(rand_range(0,size.size.x),rand_range(0,size.size.y)))
 	get_node("concessions/popcorn2").set_global_position(Vector2(rand_range(0,size.size.x),rand_range(0,size.size.y)))
 	get_node("concessions/popcorn3").set_global_position(Vector2(rand_range(0,size.size.x),rand_range(0,size.size.y)))
-	get_node("StreamPlayer").set_volume_db(sound.volume)
 	set_physics_process(true)
 	set_process(true)
 	get_tree().set_pause(true)
@@ -33,6 +30,7 @@ func _ready():
 
 
 func countin():
+	get_tree().set_pause(true)
 	get_node("in").show()
 	get_node("in/count_timer").start()
 
@@ -68,6 +66,7 @@ func _physics_process(delta):
 	var collision_info = customer.move_and_collide(direction*delta*200)
 	if collision_info:
 		if collision_info.collider_id == get_node("ghostie_one").get_instance_id() or collision_info.collider_id == get_node("ghostie_two").get_instance_id() or collision_info.collider_id == get_node("ghostie_three").get_instance_id() or collision_info.collider_id == get_node("ghostie_four").get_instance_id() or collision_info.collider_id == get_node("ghostie_four").get_instance_id() or collision_info.collider_id == get_node("ghostie_two2").get_instance_id() or collision_info.collider_id == get_node("ghostie_two3").get_instance_id() or collision_info.collider_id == get_node("ghostie_four2").get_instance_id() or collision_info.collider_id == get_node("ghostie_four3").get_instance_id():
+			
 			var game_over = get_tree().get_nodes_in_group("game_over")
 			for x in game_over:
 				x.show()
@@ -80,15 +79,12 @@ func _on_day_timer_timeout():
 	stopwatch += 1
 
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
-	
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume_db(new_volume)
+	AudioServer.set_bus_volume_db(0,value - 50)
 	
 func point_display():
 		var one_ones_digit = ((perks.success + perks.perk_final_count)) % 10
@@ -105,29 +101,11 @@ func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
 	get_node("menu").hide()
 
-func _on_game_over_button_button_up():
-	get_tree().set_pause(false)
-	rewards_globals.million_total_minigame_points += perks.success
-	if stopwatch > rewards_globals.three_min_yed:
-		rewards_globals.three_min_yed = stopwatch
-	get_tree().change_scene("res://endless_mode.tscn")
-
-
-func _on_return_to_endless_button_down():
-	get_node("are_you_sure").show()
-
-func _on_yes_endless_button_down():
-	get_tree().change_scene("res://endless_mode.tscn")
-
-
-func _on_no_endless_button_down():
-	get_tree().set_pause(false)
-	get_node("are_you_sure").hide()
-
 func _on_game_over_button_button_down():
+	perks.success = 0
 	get_tree().set_pause(false)
-	rewards_globals.million_total_minigame_points += perks.success
-	if stopwatch > rewards_globals.three_min_yed:
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_yed):
 		rewards_globals.three_min_yed = stopwatch
 	get_tree().change_scene("res://endless_mode.tscn")
 
@@ -149,7 +127,11 @@ func _on_return_to_village_button_down():
 
 
 func _on_yes_village_button_down():
-	get_tree().paused = false
+	perks.success = 0
+	get_tree().set_pause(false)
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_yed):
+		rewards_globals.three_min_yed = stopwatch
 	get_tree().change_scene("res://endless_mode.tscn")
 	
 

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/distorted.ogg-bf2ea230da3b00b60916fc582c32bac0.oggstr"
+
+[deps]
+
+source_file="res://distorted.ogg"
+source_md5="ac96c4cb245b10f0d0ffaaca0283fe9f"
+
+dest_files=[ "res://.import/distorted.ogg-bf2ea230da3b00b60916fc582c32bac0.oggstr" ]
+dest_md5="642f1e7c0fa5f5793e57edf00c1056f3"
+
+[params]
+
+loop=true
+loop_offset=0

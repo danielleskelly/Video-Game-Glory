@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://strategy.gd" type="Script" id=1]
 [ext_resource path="res://collander_64.png" type="Texture" id=2]
@@ -13,13 +13,14 @@
 [ext_resource path="res://arcade_worst.png" type="Texture" id=11]
 [ext_resource path="res://entertainment_worst.png" type="Texture" id=12]
 [ext_resource path="res://storefront_worst.png" type="Texture" id=13]
-[ext_resource path="res://orange_tab.png" type="Texture" id=14]
-[ext_resource path="res://green_tab.png" type="Texture" id=15]
-[ext_resource path="res://button_amount.png" type="Texture" id=16]
-[ext_resource path="res://button.png" type="Texture" id=17]
-[ext_resource path="res://error_box.png" type="Texture" id=18]
-[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=19]
-[ext_resource path="res://time_management_hollyhock.ogg" type="AudioStream" id=20]
+[ext_resource path="res://sabotage.png" type="Texture" id=14]
+[ext_resource path="res://orange_tab.png" type="Texture" id=15]
+[ext_resource path="res://green_tab.png" type="Texture" id=16]
+[ext_resource path="res://button_amount.png" type="Texture" id=17]
+[ext_resource path="res://button.png" type="Texture" id=18]
+[ext_resource path="res://error_box.png" type="Texture" id=19]
+[ext_resource path="res://vgg_font.fnt" type="BitmapFont" id=20]
+[ext_resource path="res://time_management_hollyhock.ogg" type="AudioStream" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -48,6 +49,14 @@ size = 45
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=38]
+
+size = 45
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 8 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=5]
 
@@ -1288,7 +1297,6 @@ override_selected_font_color = false
 
 [node name="upgrades" type="Sprite" parent="." index="5"]
 
-editor/display_folded = true
 position = Vector2( 19.8778, 0.6208 )
 scale = Vector2( 0.026735, 0.0680012 )
 texture = ExtResource( 4 )
@@ -1299,6 +1307,9 @@ show_behind_parent = true
 position = Vector2( 3.85352, 0.023468 )
 scale = Vector2( 0.373541, 1.24874 )
 texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="title" type="RichTextLabel" parent="upgrades" index="1"]
 
@@ -1368,9 +1379,12 @@ override_selected_font_color = false
 
 [node name="image" type="Sprite" parent="upgrades/arcades" index="1"]
 
-position = Vector2( 0.461914, -37.0989 )
-scale = Vector2( 0.0872438, 0.0520851 )
+position = Vector2( -1.34671, -36.8298 )
+scale = Vector2( 0.0230306, 0.0125574 )
 texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="arcade_upgrade" type="LinkButton" parent="upgrades/arcades" index="2"]
 
@@ -1436,9 +1450,12 @@ override_selected_font_color = false
 
 [node name="image" type="Sprite" parent="upgrades/entertainment" index="1"]
 
-position = Vector2( 0.461884, -42.0061 )
-scale = Vector2( 0.0872438, 0.0520851 )
+position = Vector2( -1.52573, -42.7456 )
+scale = Vector2( 0.0213502, 0.0116654 )
 texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="entertainment_upgrade" type="LinkButton" parent="upgrades/entertainment" index="2"]
 
@@ -1504,8 +1521,8 @@ override_selected_font_color = false
 
 [node name="image" type="Sprite" parent="upgrades/storefront" index="1"]
 
-position = Vector2( 0.461884, -39.1195 )
-scale = Vector2( 0.0872438, 0.0520851 )
+position = Vector2( -0.710297, -38.9419 )
+scale = Vector2( 0.0240892, 0.0140335 )
 texture = ExtResource( 13 )
 
 [node name="storefront_upgrade" type="LinkButton" parent="upgrades/storefront" index="2"]
@@ -1534,7 +1551,127 @@ group = null
 text = "OK!"
 underline = 2
 
-[node name="bottom_switch" type="Node2D" parent="." index="6"]
+[node name="sabotage1" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 19.7736, -12.7331 )
+scale = Vector2( 0.00369021, 0.00578167 )
+texture = ExtResource( 14 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="sabotage1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -375.0
+margin_top = -100.0
+margin_right = 123.0
+margin_bottom = 24.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 38 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "sabotaged!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="sabotage2" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 19.7736, -1.62268 )
+scale = Vector2( 0.00369021, 0.00578167 )
+texture = ExtResource( 14 )
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="sabotage2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -376.0
+margin_top = -78.0
+margin_right = 122.0
+margin_bottom = 46.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 38 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "sabotaged!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="sabotage3" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 19.9267, 12.0549 )
+scale = Vector2( 0.00369021, 0.00578167 )
+texture = ExtResource( 14 )
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="sabotage3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -401.0
+margin_top = -104.0
+margin_right = 97.0
+margin_bottom = 20.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 38 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "sabotaged!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="bottom_switch" type="Node2D" parent="." index="9"]
 
 editor/display_folded = true
 position = Vector2( -18.8929, 18.554 )
@@ -1551,7 +1688,7 @@ __meta__ = {
 
 position = Vector2( 59.356, -334.594 )
 scale = Vector2( 0.86034, 3.69144 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1560,7 +1697,7 @@ __meta__ = {
 
 position = Vector2( -93.8392, -334.594 )
 scale = Vector2( 0.986233, 3.69144 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1574,7 +1711,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="loan_button" type="LinkButton" parent="." index="7"]
+[node name="loan_button" type="LinkButton" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1600,7 +1737,7 @@ group = null
 text = "Loan"
 underline = 2
 
-[node name="ads_button" type="LinkButton" parent="." index="8"]
+[node name="ads_button" type="LinkButton" parent="." index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1626,7 +1763,7 @@ group = null
 text = "Ads"
 underline = 2
 
-[node name="loans" type="Node2D" parent="." index="9"]
+[node name="loans" type="Node2D" parent="." index="12"]
 
 editor/display_folded = true
 position = Vector2( -19.0126, 18.9639 )
@@ -1716,7 +1853,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 16 )
+texture_normal = ExtResource( 17 )
 
 [node name="payback" type="TextureButton" parent="loans" index="3"]
 
@@ -1741,9 +1878,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 16 )
+texture_normal = ExtResource( 17 )
 
-[node name="ads" type="Node2D" parent="." index="10"]
+[node name="ads" type="Node2D" parent="." index="13"]
 
 editor/display_folded = true
 visible = false
@@ -1840,7 +1977,7 @@ group = null
 text = "OK!"
 underline = 2
 
-[node name="town_name" type="RichTextLabel" parent="." index="11"]
+[node name="town_name" type="RichTextLabel" parent="." index="14"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1872,7 +2009,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
 
-[node name="start_day" type="LinkButton" parent="." index="12"]
+[node name="start_day" type="LinkButton" parent="." index="15"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -1905,12 +2042,12 @@ underline = 2
 show_behind_parent = true
 position = Vector2( 73.5155, 22.051 )
 scale = Vector2( 0.842708, 0.848141 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="pixel_button" type="LinkButton" parent="." index="13"]
+[node name="pixel_button" type="LinkButton" parent="." index="16"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -1943,12 +2080,12 @@ underline = 2
 show_behind_parent = true
 position = Vector2( 64.2862, 22.051 )
 scale = Vector2( 0.709833, 0.848141 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="game_over_alert" type="Node2D" parent="." index="14"]
+[node name="game_over_alert" type="Node2D" parent="." index="17"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -1959,7 +2096,7 @@ position = Vector2( 13.3621, 7.79465 )
 
 position = Vector2( -13.3427, -6.86953 )
 scale = Vector2( 0.0741363, 0.129245 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="warning" type="RichTextLabel" parent="game_over_alert" index="1"]
 
@@ -1996,7 +2133,7 @@ override_selected_font_color = false
 
 position = Vector2( -5.61135, 5.718 )
 scale = Vector2( 0.031107, 0.0600359 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="game_over_ok" type="LinkButton" parent="game_over_alert" index="3"]
 
@@ -2026,7 +2163,86 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="hollyhock_complete" type="Node2D" parent="." index="15"]
+[node name="pre_game_over" type="Node2D" parent="." index="18"]
+
+pause_mode = 2
+editor/display_folded = true
+visible = false
+position = Vector2( 13.3621, 7.79465 )
+
+[node name="background" type="Sprite" parent="pre_game_over" index="0"]
+
+position = Vector2( -13.3427, -6.86953 )
+scale = Vector2( 0.0741363, 0.129245 )
+texture = ExtResource( 19 )
+
+[node name="warning" type="RichTextLabel" parent="pre_game_over" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -25.0
+margin_top = -20.0
+margin_right = 338.0
+margin_bottom = 258.0
+rect_scale = Vector2( 0.075, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = "You are running low on cash. Try taking out a loan to get through this rough patch."
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "You are running low on cash. Try taking out a loan to get through this rough patch."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode" ]
+
+[node name="background1" type="Sprite" parent="pre_game_over" index="2"]
+
+position = Vector2( -5.61135, 5.718 )
+scale = Vector2( 0.031107, 0.0600359 )
+texture = ExtResource( 18 )
+
+[node name="pre_game_over" type="LinkButton" parent="pre_game_over" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -8.0
+margin_top = 4.0
+margin_right = 44.0
+margin_bottom = 51.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "OK"
+underline = 2
+
+[node name="hollyhock_complete" type="Node2D" parent="." index="19"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -2037,14 +2253,14 @@ position = Vector2( 11.6039, 3.99727 )
 
 position = Vector2( 4.32471, -12.4642 )
 scale = Vector2( 0.0817551, 0.10726 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="background2" type="Sprite" parent="hollyhock_complete" index="1"]
 
 position = Vector2( 15.0201, -21.4962 )
 scale = Vector2( 0.0299162, 0.0601328 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="warning" type="RichTextLabel" parent="hollyhock_complete" index="2"]
@@ -2113,7 +2329,7 @@ override_selected_font_color = false
 
 position = Vector2( -26.4244, -20.0624 )
 scale = Vector2( 0.0209402, 0.0466523 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="warning2" type="RichTextLabel" parent="hollyhock_complete" index="5"]
@@ -2151,7 +2367,7 @@ override_selected_font_color = false
 
 position = Vector2( -1.56296, 3.7232 )
 scale = Vector2( 0.0375077, 0.0639562 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="continue_ok" type="LinkButton" parent="hollyhock_complete" index="7"]
 
@@ -2181,7 +2397,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="fiyork_complete" type="Node2D" parent="." index="16"]
+[node name="fiyork_complete" type="Node2D" parent="." index="20"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -2192,19 +2408,19 @@ position = Vector2( -1.31922, -0.346069 )
 
 position = Vector2( 1.79382, 1.20379 )
 scale = Vector2( 0.0744699, 0.0980871 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background2" type="Sprite" parent="fiyork_complete" index="1"]
 
 position = Vector2( 21.1989, -13.0901 )
 scale = Vector2( 0.0322013, 0.0658139 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background1" type="Sprite" parent="fiyork_complete" index="2"]
 
 position = Vector2( 10.1349, 11.3466 )
 scale = Vector2( 0.0285789, 0.0487312 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="warning" type="RichTextLabel" parent="fiyork_complete" index="3"]
 
@@ -2275,7 +2491,7 @@ override_selected_font_color = false
 
 position = Vector2( -13.5013, -15.719 )
 scale = Vector2( 0.0209402, 0.0466523 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="warning3" type="RichTextLabel" parent="fiyork_complete" index="6"]
@@ -2337,7 +2553,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="plansey_complete" type="Node2D" parent="." index="17"]
+[node name="plansey_complete" type="Node2D" parent="." index="21"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -2347,19 +2563,19 @@ visible = false
 
 position = Vector2( -1.61995, -2.24749 )
 scale = Vector2( 0.0653929, 0.119054 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background2" type="Sprite" parent="plansey_complete" index="1"]
 
 position = Vector2( 18.82, -12.2457 )
 scale = Vector2( 0.033965, 0.0731843 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background1" type="Sprite" parent="plansey_complete" index="2"]
 
 position = Vector2( 3.25152, 10.6152 )
 scale = Vector2( 0.0315072, 0.0546669 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="warning" type="RichTextLabel" parent="plansey_complete" index="3"]
 
@@ -2427,7 +2643,7 @@ override_selected_font_color = false
 
 position = Vector2( -16.2943, -16.6036 )
 scale = Vector2( 0.0209402, 0.0466523 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="warning5" type="RichTextLabel" parent="plansey_complete" index="6"]
@@ -2489,7 +2705,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="untilly_complete" type="Node2D" parent="." index="18"]
+[node name="untilly_complete" type="Node2D" parent="." index="22"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -2500,19 +2716,19 @@ position = Vector2( 12.4558, 1.73774 )
 
 position = Vector2( -12.9984, -3.62444 )
 scale = Vector2( 0.0741686, 0.111344 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background2" type="Sprite" parent="untilly_complete" index="1"]
 
 position = Vector2( 8.61457, -13.9198 )
 scale = Vector2( 0.0328056, 0.0806191 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background1" type="Sprite" parent="untilly_complete" index="2"]
 
 position = Vector2( -5.77888, 7.71988 )
 scale = Vector2( 0.0240542, 0.0473207 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="warning" type="RichTextLabel" parent="untilly_complete" index="3"]
 
@@ -2580,7 +2796,7 @@ override_selected_font_color = false
 
 position = Vector2( -28.7501, -18.3413 )
 scale = Vector2( 0.0209402, 0.0466523 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="warning4" type="RichTextLabel" parent="untilly_complete" index="6"]
@@ -2642,7 +2858,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="windrow_complete" type="Node2D" parent="." index="19"]
+[node name="windrow_complete" type="Node2D" parent="." index="23"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -2656,19 +2872,19 @@ __meta__ = {
 
 position = Vector2( -14.8756, -2.32775 )
 scale = Vector2( 0.0686915, 0.107834 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background2" type="Sprite" parent="windrow_complete" index="1"]
 
 position = Vector2( 6.47769, -17.7817 )
 scale = Vector2( 0.0353298, 0.0610957 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background1" type="Sprite" parent="windrow_complete" index="2"]
 
 position = Vector2( -8.00485, 8.66824 )
 scale = Vector2( 0.0285981, 0.0535448 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="warning" type="RichTextLabel" parent="windrow_complete" index="3"]
 
@@ -2736,7 +2952,7 @@ override_selected_font_color = false
 
 position = Vector2( -29.0661, -19.0848 )
 scale = Vector2( 0.0224129, 0.048266 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="warning5" type="RichTextLabel" parent="windrow_complete" index="6"]
@@ -2798,7 +3014,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="banlon_complete" type="Node2D" parent="." index="20"]
+[node name="banlon_complete" type="Node2D" parent="." index="24"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -2808,19 +3024,19 @@ visible = false
 
 position = Vector2( -1.024, -2.86025 )
 scale = Vector2( 0.0800074, 0.111247 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background2" type="Sprite" parent="banlon_complete" index="1"]
 
 position = Vector2( 20.045, -14.2473 )
 scale = Vector2( 0.0328648, 0.0623868 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background1" type="Sprite" parent="banlon_complete" index="2"]
 
 position = Vector2( 7.23992, 7.8274 )
 scale = Vector2( 0.02895, 0.0520567 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="warning" type="RichTextLabel" parent="banlon_complete" index="3"]
 
@@ -2888,7 +3104,7 @@ override_selected_font_color = false
 
 position = Vector2( -15.0474, -16.2163 )
 scale = Vector2( 0.0224129, 0.048266 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="warning6" type="RichTextLabel" parent="banlon_complete" index="6"]
@@ -2950,7 +3166,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="slatten_complete" type="Node2D" parent="." index="21"]
+[node name="slatten_complete" type="Node2D" parent="." index="25"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -2961,19 +3177,19 @@ position = Vector2( 11.4407, 5.77279 )
 
 position = Vector2( -11.61, -7.31219 )
 scale = Vector2( 0.0706286, 0.093559 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background2" type="Sprite" parent="slatten_complete" index="1"]
 
 position = Vector2( 8.76729, -20.5013 )
 scale = Vector2( 0.0299594, 0.0526917 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="background1" type="Sprite" parent="slatten_complete" index="2"]
 
 position = Vector2( -4.75475, 1.8816 )
 scale = Vector2( 0.0303285, 0.0530075 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="warning" type="RichTextLabel" parent="slatten_complete" index="3"]
 
@@ -3044,7 +3260,7 @@ override_selected_font_color = false
 
 position = Vector2( -26.4881, -21.9891 )
 scale = Vector2( 0.0224129, 0.048266 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
 [node name="warning7" type="RichTextLabel" parent="slatten_complete" index="6"]
@@ -3105,7 +3321,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="menu" type="Node2D" parent="." index="22"]
+[node name="menu" type="Node2D" parent="." index="26"]
 
 pause_mode = 2
 visible = false
@@ -3115,7 +3331,7 @@ position = Vector2( 11.4867, 0.59959 )
 
 position = Vector2( -10.8782, -1.45341 )
 scale = Vector2( 0.0622243, 0.135695 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="warning1" type="RichTextLabel" parent="menu" index="1"]
 
@@ -3210,7 +3426,7 @@ underline = 2
 show_behind_parent = true
 position = Vector2( 129.792, 15.6236 )
 scale = Vector2( 1.44936, 0.571649 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3247,7 +3463,7 @@ underline = 2
 show_behind_parent = true
 position = Vector2( 118.491, 15.6228 )
 scale = Vector2( 1.34777, 0.658263 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3284,12 +3500,12 @@ underline = 2
 show_behind_parent = true
 position = Vector2( 146.433, 20.7699 )
 scale = Vector2( 1.61435, 0.750651 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="are_you_sure" type="Node2D" parent="." index="23"]
+[node name="are_you_sure" type="Node2D" parent="." index="27"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -3299,7 +3515,7 @@ visible = false
 
 position = Vector2( 0.760927, 0.618607 )
 scale = Vector2( 0.0573987, 0.0623617 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="warning" type="RichTextLabel" parent="are_you_sure" index="1"]
 
@@ -3336,7 +3552,7 @@ override_selected_font_color = false
 
 position = Vector2( 7.08495, 5.46897 )
 scale = Vector2( 0.0393664, 0.0485036 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="yes_restart" type="LinkButton" parent="are_you_sure" index="3"]
 
@@ -3355,7 +3571,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = ExtResource( 19 )
+custom_fonts/font = ExtResource( 20 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -3370,7 +3586,7 @@ underline = 2
 
 position = Vector2( -5.51229, 5.55558 )
 scale = Vector2( 0.032255, 0.0467713 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="no_restart" type="LinkButton" parent="are_you_sure" index="5"]
 
@@ -3400,7 +3616,7 @@ group = null
 text = "NO"
 underline = 2
 
-[node name="are_you_sure_2" type="Node2D" parent="." index="24"]
+[node name="are_you_sure_2" type="Node2D" parent="." index="28"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -3411,7 +3627,7 @@ position = Vector2( 12.6988, 1.73227 )
 
 position = Vector2( -12.4459, -2.67271 )
 scale = Vector2( 0.0553669, 0.0843038 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="warning" type="RichTextLabel" parent="are_you_sure_2" index="1"]
 
@@ -3448,7 +3664,7 @@ override_selected_font_color = false
 
 position = Vector2( -6.42662, 5.00703 )
 scale = Vector2( 0.0393664, 0.0577423 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="yes_main_menu" type="LinkButton" parent="are_you_sure_2" index="3"]
 
@@ -3483,7 +3699,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 position = Vector2( -17.9064, 4.92042 )
 scale = Vector2( 0.0302232, 0.0525456 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="no_main_menu" type="LinkButton" parent="are_you_sure_2" index="5"]
 
@@ -3513,7 +3729,7 @@ group = null
 text = "NO"
 underline = 2
 
-[node name="skip_or_play" type="Node2D" parent="." index="25"]
+[node name="skip_or_play" type="Node2D" parent="." index="29"]
 
 pause_mode = 2
 visible = false
@@ -3523,7 +3739,7 @@ position = Vector2( 11.175, -0.346451 )
 
 position = Vector2( -9.24576, -0.074303 )
 scale = Vector2( 0.0962571, 0.135117 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="warning" type="RichTextLabel" parent="skip_or_play" index="1"]
 
@@ -3684,7 +3900,7 @@ override_selected_font_color = false
 
 position = Vector2( -1.25119, 15.8958 )
 scale = Vector2( 0.042212, 0.0492478 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="skip" type="LinkButton" parent="skip_or_play" index="7"]
 
@@ -3718,7 +3934,7 @@ underline = 2
 
 position = Vector2( -17.9483, 15.6117 )
 scale = Vector2( 0.048111, 0.0549304 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="play" type="LinkButton" parent="skip_or_play" index="9"]
 
@@ -3748,22 +3964,22 @@ group = null
 text = "PLAY"
 underline = 2
 
-[node name="cursor_blink" type="Timer" parent="." index="26"]
+[node name="cursor_blink" type="Timer" parent="." index="30"]
 
 process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = false
 
-[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="27"]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="31"]
 
-stream = ExtResource( 20 )
-volume_db = -80.0
+stream = ExtResource( 21 )
+volume_db = -10.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="28"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="32"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -3794,28 +4010,28 @@ anims/tutorial_pt5 = SubResource( 36 )
 anims/tutorial_pt6 = SubResource( 37 )
 blend_times = [  ]
 
-[node name="timer_notify" type="Timer" parent="." index="29"]
+[node name="timer_notify" type="Timer" parent="." index="33"]
 
 process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = false
 
-[node name="notify2" type="Timer" parent="." index="30"]
+[node name="notify2" type="Timer" parent="." index="34"]
 
 process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = false
 
-[node name="autosave" type="Timer" parent="." index="31"]
+[node name="autosave" type="Timer" parent="." index="35"]
 
 process_mode = 1
 wait_time = 20.0
 one_shot = false
 autostart = true
 
-[node name="autosaved" type="RichTextLabel" parent="." index="32"]
+[node name="autosaved" type="RichTextLabel" parent="." index="36"]
 
 visible = false
 anchor_left = 0.0
@@ -3847,7 +4063,7 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 
-[node name="notify" type="RichTextLabel" parent="." index="33"]
+[node name="notify" type="RichTextLabel" parent="." index="37"]
 
 visible = false
 anchor_left = 0.0
@@ -3900,6 +4116,8 @@ override_selected_font_color = false
 [connection signal="button_down" from="pixel_button" to="." method="_on_pixel_button_button_down"]
 
 [connection signal="button_down" from="game_over_alert/game_over_ok" to="." method="_on_game_over_ok_button_down"]
+
+[connection signal="button_down" from="pre_game_over/pre_game_over" to="." method="_on_pre_game_over_button_down"]
 
 [connection signal="button_down" from="hollyhock_complete/continue_ok" to="." method="_on_continue_ok_button_down"]
 

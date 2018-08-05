@@ -2,8 +2,6 @@ extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
 
-var new_volume
-
 var hundreds
 var tens
 var ones
@@ -27,10 +25,9 @@ func _ready():
 	paddle = get_node("paddle")
 	ball = get_node("ball")
 	
-
+	
 	get_tree().set_pause(true)
 	countin()
-	get_node("StreamPlayer").set_volume_db(sound.volume)
 	set_process(true)
 	set_physics_process(true)
 	
@@ -43,6 +40,7 @@ func _process(delta):
 	countdown_timer.add_text(str(stopwatch))
 	
 func _physics_process(delta):
+	check_clear_board()
 	get_node("paddle").rotation = 0
 	ball_where = ball.get_global_position()
 	ball_where += delta * ball_dir * ball_speed
@@ -81,7 +79,6 @@ func _physics_process(delta):
 					perks.success += 2
 				
 	
-	
 	var paddle_coll = get_node("paddle").get_colliding_bodies()
 	move_left = true
 	move_right = true
@@ -103,6 +100,30 @@ func _physics_process(delta):
 		where += delta * direction * speed
 		paddle.set_global_position(where)
 
+func check_clear_board():
+	var board_clear = true
+	var bricks = get_tree().get_nodes_in_group("brick")
+	for x in bricks:
+		if x.brick_num > 0:
+			board_clear = false
+	if board_clear == true:
+		perks.success += 100
+		for x in bricks:
+			if x.row_num == 1:
+				x.brick_num = 8
+			elif x.row_num == 2:
+				x.brick_num = 7
+			elif x.row_num == 3:
+				x.brick_num = 6
+			elif x.row_num == 4:
+				x.brick_num = 5
+			elif x.row_num == 5:
+				x.brick_num = 4
+			elif x.row_num == 6:
+				x.brick_num = 3
+			elif x.row_num == 7:
+				x.brick_num = 2
+	
 
 func point_display():
 		var one_ones_digit = ((perks.success)) % 10
@@ -119,18 +140,33 @@ func _on_day_timer_timeout():
 	stopwatch += 1
 
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume_db(new_volume)
-
+	AudioServer.set_bus_volume_db(0,value - 50)
+	
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
 	get_node("menu").hide()
+
+
+func _on_return_to_village_button_down():
+	get_node("are_you_sure").show()
+
+
+func _on_yes_village_button_down():
+	perks.success = 0
+	get_tree().set_pause(false)
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_twfb):
+		rewards_globals.three_min_twfb = stopwatch
+	get_tree().change_scene("res://endless_mode.tscn")
+	
+
+func _on_no_village_button_down():
+	get_node("are_you_sure").hide()
 	
 func countin():
 	get_node("in").show()
@@ -148,22 +184,10 @@ func _on_count_timer_timeout():
 		get_node("in/count_timer").stop()
 		get_tree().set_pause(false)
 
-func _on_game_over_button_button_up():
+func _on_game_over_button_button_down():
+	perks.success = 0
 	get_tree().set_pause(false)
-	rewards_globals.million_total_minigame_points += perks.success
-	if stopwatch > rewards_globals.three_min_twfb:
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_twfb):
 		rewards_globals.three_min_twfb = stopwatch
 	get_tree().change_scene("res://endless_mode.tscn")
-
-
-func _on_return_to_village_button_down():
-	get_node("are_you_sure").show()
-
-
-func _on_yes_village_button_down():
-	get_tree().paused = false
-	get_tree().change_scene("res://endless_mode.tscn")
-	
-
-func _on_no_village_button_down():
-	get_node("are_you_sure").hide()

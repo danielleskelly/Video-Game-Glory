@@ -17,14 +17,14 @@
 [ext_resource path="res://sam_back_of_crotch.png" type="Texture" id=15]
 [ext_resource path="res://sam_torso.png" type="Texture" id=16]
 [ext_resource path="res://sam_back_of_head.png" type="Texture" id=17]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=18]
+[ext_resource path="res://finale.ogg" type="AudioStream" id=18]
 [ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=19]
 [ext_resource path="res://music_icon_on.png" type="Texture" id=20]
 [ext_resource path="res://music_icon_off.png" type="Texture" id=21]
 
 [sub_resource type="Animation" id=1]
 
-length = 20.0
+length = 60.0
 loop = false
 step = 0.01
 tracks/0/type = "value"
@@ -100,28 +100,32 @@ tracks/5/keys = {
 "values": [ false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("confetti:visible")
+tracks/6/path = NodePath("RichTextLabel 2:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 13 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true, true ]
+"values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("credits:rect_position")
+tracks/7/path = NodePath("credits:bbcode_text")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 10 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -6, -97 ), Vector2( -6, 48 ) ]
+"times": PoolRealArray( 0, 11, 27, 45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "      Produced By
+Bad Monkey Games", "Idea, Design, and Creation
+       Danielle E.S Kelly", "With Large Contributions By
+         Michael Kelly", "Thanks for playing!
+      You rock!" ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("confetti:position")
@@ -130,22 +134,22 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 5, 11 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 7.69602, -53.0219 ), Vector2( 3.77508, -48.1092 ), Vector2( 16.9724, -38.9056 ), Vector2( 2.3406, -28.7785 ), Vector2( 18.12, -21.0797 ), Vector2( 5.68774, -18.1067 ), Vector2( 19.6501, -15.7472 ), Vector2( 6.93096, -5.77626 ), Vector2( 20.2239, 1.55084 ), Vector2( 6.4528, 9.99292 ), Vector2( 15.9204, 19.3907 ), Vector2( 6.07027, 27.9921 ), Vector2( 18.7894, 35.797 ), Vector2( -0.528376, 43.2834 ), Vector2( 16.9724, 51.7255 ) ]
+"values": [ Vector2( 25.4381, -29.092 ), Vector2( 21.7414, -1.81808 ), Vector2( 22.8985, 34.3176 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("RichTextLabel 2:visible")
+tracks/9/path = NodePath("confetti:scale")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 13 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"times": PoolRealArray( 0, 10, 16.48 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.294976, 0.293343 ), Vector2( 0.294976, 0.293343 ), Vector2( 0.294976, 0.0250832 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("confetti2:position")
@@ -154,70 +158,118 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 2, 3, 4, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 10, 15, 20 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -39.4628, -72.3572 ), Vector2( -32.8331, -62.3223 ), Vector2( -37.4224, -44.9602 ), Vector2( -25.8019, -27.1204 ), Vector2( -25.9025, -3.54626 ) ]
+"values": [ Vector2( -26.4934, -45.1552 ), Vector2( -24.517, -46.0183 ), Vector2( -15.1639, -5.22508 ), Vector2( -31.1703, 30.9106 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("confetti3:position")
+tracks/11/path = NodePath("confetti2:scale")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 2, 3, 4, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 10, 20, 24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 47.5748, -112.975 ), Vector2( 55.5123, -85.5075 ), Vector2( 42.6019, -63.9745 ), Vector2( 36.9596, -36.8555 ), Vector2( 52.739, -6.54519 ) ]
+"values": [ Vector2( 0.134566, 0.161042 ), Vector2( 0.17644, 0.174178 ), Vector2( 0.17644, 0.174178 ), Vector2( 0.17644, 0.0386261 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("confetti4:position")
+tracks/12/path = NodePath("confetti3:scale")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 2, 3, 4, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 30, 34 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -1.96285, -90.8342 ), Vector2( -2.24975, -69.8923 ), Vector2( 13.8165, -48.2519 ), Vector2( 22.6147, -18.5559 ), Vector2( 7.88731, 11.071 ) ]
+"values": [ Vector2( 0.211465, 0.208538 ), Vector2( 0.211465, 0.208538 ), Vector2( 0.211465, 0.0332467 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("confetti2:visible")
+tracks/13/path = NodePath("confetti3:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0, 25, 30 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -6.22665, -46.413 ), Vector2( -14.8385, -3.20222 ), Vector2( 0.236755, 33.3585 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("confetti3:visible")
+tracks/14/path = NodePath("confetti4:scale")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0, 30, 40, 44 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.193421, 0.271373 ), Vector2( 0.193421, 0.271373 ), Vector2( 0.193421, 0.271373 ), Vector2( 0.193421, 0.0337383 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("confetti4:visible")
+tracks/15/path = NodePath("confetti4:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0, 30, 35, 40 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -16.7512, -54.4387 ), Vector2( -16.7512, -54.4387 ), Vector2( -16.9719, 3.647 ), Vector2( -15.2061, 33.0575 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("confetti5:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 40, 45, 50, 54 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 23.8998, -50.0528 ), Vector2( 23.8998, -50.0528 ), Vector2( 31.6078, 3.23912 ), Vector2( 24.1906, 31.7022 ), Vector2( 24.1906, 31.7022 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("confetti5:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 40, 50, 54 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.164613, 0.204544 ), Vector2( 0.164613, 0.204544 ), Vector2( 0.164613, 0.204544 ), Vector2( 0.164613, 0.0337291 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("confetti6:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 50, 55, 58 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 6.38987, -47.4475 ), Vector2( 6.38987, -47.4475 ), Vector2( 12.5709, -2.3916 ), Vector2( 4.95006, 31.7879 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("confetti6:scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 50, 58, 60 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.155319, 0.169543 ), Vector2( 0.155319, 0.169543 ), Vector2( 0.155319, 0.169543 ), Vector2( 0.155319, 0.0429278 ) ]
 }
 
 [sub_resource type="DynamicFont" id=2]
@@ -337,33 +389,47 @@ __meta__ = {
 
 [node name="confetti" type="Sprite" parent="." index="3"]
 
-position = Vector2( 5.68774, -18.1067 )
-scale = Vector2( 0.773261, 0.529268 )
+position = Vector2( 22.8985, 34.3176 )
+scale = Vector2( 0.294976, 0.0250832 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="confetti2" type="Sprite" parent="." index="4"]
 
-position = Vector2( -25.9025, -3.54626 )
-scale = Vector2( 0.773261, 0.529268 )
+position = Vector2( -31.1703, 30.9106 )
+scale = Vector2( 0.17644, 0.0386261 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="confetti3" type="Sprite" parent="." index="5"]
 
-position = Vector2( 52.739, -6.54519 )
-scale = Vector2( 0.773261, 0.529268 )
+position = Vector2( 0.236755, 33.3585 )
+scale = Vector2( 0.211465, 0.0332467 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="confetti4" type="Sprite" parent="." index="6"]
 
-position = Vector2( 7.88731, 11.071 )
-scale = Vector2( 0.773261, 0.529268 )
+position = Vector2( -15.2061, 33.0575 )
+scale = Vector2( 0.193421, 0.0337383 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="pixel" type="Node2D" parent="." index="7"]
+[node name="confetti5" type="Sprite" parent="." index="7"]
+
+position = Vector2( 24.1906, 31.7022 )
+scale = Vector2( 0.164613, 0.0337291 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="confetti6" type="Sprite" parent="." index="8"]
+
+position = Vector2( 4.95006, 31.7879 )
+scale = Vector2( 0.155319, 0.0429278 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="pixel" type="Node2D" parent="." index="9"]
 
 position = Vector2( -20.6054, 6.38172 )
 scale = Vector2( 0.884005, 0.718394 )
@@ -374,11 +440,11 @@ __meta__ = {
 
 [node name="head" type="Sprite" parent="pixel" index="0"]
 
-position = Vector2( 2.72383, 4.98786 )
-scale = Vector2( 0.0854493, 0.114083 )
+position = Vector2( -2.02981, -5.05574 )
+scale = Vector2( 0.0135145, 0.026512 )
 texture = ExtResource( 10 )
 
-[node name="crtv" type="Node2D" parent="." index="8"]
+[node name="crtv" type="Node2D" parent="." index="10"]
 
 visible = false
 _sections_unfolded = [ "Visibility" ]
@@ -407,7 +473,7 @@ position = Vector2( 40.8006, 729.932 )
 scale = Vector2( 0.125882, 0.124031 )
 texture = ExtResource( 11 )
 
-[node name="sam" type="Node2D" parent="." index="9"]
+[node name="sam" type="Node2D" parent="." index="11"]
 
 visible = false
 position = Vector2( 17.7192, 29.1975 )
@@ -499,15 +565,15 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="10"]
+[node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="12"]
 
 stream = ExtResource( 18 )
 volume_db = -10.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="skip_button" type="LinkButton" parent="." index="11"]
+[node name="skip_button" type="LinkButton" parent="." index="13"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -534,7 +600,7 @@ group = null
 text = "SKIP"
 underline = 2
 
-[node name="mute_button" type="TextureButton" parent="." index="12"]
+[node name="mute_button" type="TextureButton" parent="." index="14"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -561,16 +627,16 @@ texture_normal = ExtResource( 20 )
 texture_pressed = ExtResource( 21 )
 _sections_unfolded = [ "Rect" ]
 
-[node name="credits" type="RichTextLabel" parent="." index="13"]
+[node name="credits" type="RichTextLabel" parent="." index="15"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -6.0
-margin_top = -10.0
-margin_right = 314.0
-margin_bottom = 603.0
+margin_left = -15.0
+margin_top = -6.0
+margin_right = 429.0
+margin_bottom = 220.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -580,42 +646,21 @@ size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = false
-bbcode_text = "Character Art By
-Courtney Barberich
-
-With Large Contributions By
-Michael Kelly
-
-Idea, Design, and Creation
-Danielle E.S Kelly
-
-Produced By
-Bad Monkey Games"
+bbcode_text = "Thanks for playing!
+      You rock!"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Character Art By
-Courtney Barberich
-
-With Large Contributions By
-Michael Kelly
-
-Idea, Design, and Creation
-Danielle E.S Kelly
-
-Produced By
-Bad Monkey Games"
+text = "Thanks for playing!
+      You rock!"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "Visibility", "custom_fonts" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="RichTextLabel 2" type="RichTextLabel" parent="." index="14"]
+[node name="RichTextLabel 2" type="RichTextLabel" parent="." index="16"]
 
 visible = false
 anchor_left = 0.0
@@ -652,6 +697,6 @@ _sections_unfolded = [ "Rect", "Visibility" ]
 
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 
-[connection signal="button_down" from="mute_button" to="." method="_on_mute_button_button_down"]
+[connection signal="toggled" from="mute_button" to="." method="_on_mute_button_toggled"]
 
 

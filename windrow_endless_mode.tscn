@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://windrow_endless_mode.gd" type="Script" id=1]
 [ext_resource path="res://first_row.gd" type="Script" id=2]
@@ -11,16 +11,13 @@
 [ext_resource path="res://seventh_row.gd" type="Script" id=9]
 [ext_resource path="res://paddle.png" type="Texture" id=10]
 [ext_resource path="res://bullet.png" type="Texture" id=11]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=12]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=13]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=14]
-[ext_resource path="res://pixel.png" type="Texture" id=15]
-[ext_resource path="res://windrow.ogg" type="AudioStream" id=16]
-[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=17]
-[ext_resource path="res://outer_box.png" type="Texture" id=18]
-[ext_resource path="res://inner_box.png" type="Texture" id=19]
-[ext_resource path="res://error_box.png" type="Texture" id=20]
-[ext_resource path="res://button.png" type="Texture" id=21]
+[ext_resource path="res://pixel_front.png" type="Texture" id=12]
+[ext_resource path="res://windrow.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://outer_box.png" type="Texture" id=15]
+[ext_resource path="res://inner_box.png" type="Texture" id=16]
+[ext_resource path="res://error_box.png" type="Texture" id=17]
+[ext_resource path="res://button.png" type="Texture" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -42,7 +39,7 @@ radius = 10.0
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 14 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=5]
@@ -50,14 +47,14 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=6]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 14 )
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -69,44 +66,44 @@ extents = Vector2( 10, 10 )
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=9]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=10]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=11]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=12]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=13]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 14 )
 
-[node name="endless_mode" type="Node2D" index="0"]
+[node name="windrow_time_management" type="Node2D"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -117,7 +114,6 @@ __meta__ = {
 "brick",
 ]]
 
-editor/display_folded = true
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
@@ -2846,58 +2842,11 @@ __meta__ = {
 [node name="pixel" type="Node2D" parent="." index="51"]
 
 pause_mode = 2
-editor/display_folded = true
 position = Vector2( 41.4656, 668.209 )
 scale = Vector2( 8.66858, 4.91584 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="left_arm" type="Sprite" parent="pixel" index="0"]
-
-position = Vector2( 1.51461, -21.9795 )
-scale = Vector2( 0.0525097, 0.0839613 )
-texture = ExtResource( 12 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="right_arm" type="Sprite" parent="pixel" index="1"]
-
-position = Vector2( 3.44501, -21.9471 )
-scale = Vector2( 0.0525097, 0.0845101 )
-texture = ExtResource( 12 )
-flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="hips" type="Sprite" parent="pixel" index="2"]
-
-position = Vector2( 2.39866, -17.4225 )
-scale = Vector2( 0.0370912, 0.0646075 )
-texture = ExtResource( 13 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="torso" type="Sprite" parent="pixel" index="3"]
-
-position = Vector2( 2.41146, -21.7639 )
-scale = Vector2( 0.0573211, 0.0818684 )
-texture = ExtResource( 14 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="head" type="Sprite" parent="pixel" index="4"]
-
-position = Vector2( 2.41815, -27.1596 )
-scale = Vector2( 0.0482248, 0.0768474 )
-texture = ExtResource( 15 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pixel_button" type="LinkButton" parent="pixel" index="5"]
+[node name="pixel_button" type="LinkButton" parent="pixel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -2921,10 +2870,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Sprite" type="Sprite" parent="pixel" index="1"]
+
+position = Vector2( 2.56117, -22.2496 )
+scale = Vector2( 0.00522323, 0.0070322 )
+texture = ExtResource( 12 )
+
 [node name="StreamPlayer" type="AudioStreamPlayer2D" parent="." index="52"]
 
 pause_mode = 2
-stream = ExtResource( 16 )
+stream = ExtResource( 13 )
 volume_db = 0.0
 autoplay = true
 max_distance = 2000.0
@@ -3027,13 +2982,13 @@ autostart = false
 editor/display_folded = true
 position = Vector2( 358.289, 557.74 )
 scale = Vector2( 0.67839, 0.328205 )
-texture = ExtResource( 18 )
+texture = ExtResource( 15 )
 
 [node name="Sprite" type="Sprite" parent="success_background" index="0"]
 
 position = Vector2( -45.6074, 21.1853 )
 scale = Vector2( 0.295924, 0.61932 )
-texture = ExtResource( 19 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3042,7 +2997,7 @@ __meta__ = {
 
 position = Vector2( -0.366186, 21.1853 )
 scale = Vector2( 0.291602, 0.61932 )
-texture = ExtResource( 19 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3051,7 +3006,7 @@ __meta__ = {
 
 position = Vector2( 44.5839, 20.3824 )
 scale = Vector2( 0.291161, 0.61932 )
-texture = ExtResource( 19 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3210,7 +3165,7 @@ bounce = 0.0
 
 position = Vector2( 0, -1.51581 )
 scale = Vector2( 1, 4.22963 )
-texture = ExtResource( 19 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3242,7 +3197,7 @@ bounce = 0.0
 
 position = Vector2( 0, -1.51581 )
 scale = Vector2( 1, 4.22963 )
-texture = ExtResource( 19 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3274,7 +3229,7 @@ bounce = 0.0
 
 position = Vector2( -508.603, 327.473 )
 scale = Vector2( 9.22299, 0.412432 )
-texture = ExtResource( 19 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3306,7 +3261,7 @@ bounce = 0.0
 
 position = Vector2( -508.603, 327.473 )
 scale = Vector2( 9.22299, 0.412432 )
-texture = ExtResource( 19 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3341,20 +3296,266 @@ wait_time = 0.6
 one_shot = true
 autostart = false
 
-[node name="game_over" type="Node2D" parent="." index="64" groups=[
+[node name="menu" type="Node2D" parent="." index="64"]
+
+pause_mode = 2
+visible = false
+position = Vector2( 754.141, 333.906 )
+scale = Vector2( 18.3472, 11.4954 )
+
+[node name="Sprite" type="Sprite" parent="menu" index="0"]
+
+position = Vector2( -13.0013, -7.90895 )
+scale = Vector2( 0.0672568, 0.102103 )
+texture = ExtResource( 17 )
+
+[node name="ones1" type="RichTextLabel" parent="menu" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -17.0
+margin_top = -18.0
+margin_right = 127.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = "Sound"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Sound"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="sound_slider" type="HSlider" parent="menu" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = -14.0
+margin_right = 182.0
+margin_bottom = 2.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 50.0
+step = 1.0
+page = 0.0
+value = 1.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 50
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="Sprite 2" type="Sprite" parent="menu" index="3"]
+
+position = Vector2( -12.7459, -7.53517 )
+scale = Vector2( 0.0945, 0.0496942 )
+texture = ExtResource( 18 )
+
+[node name="Sprite3" type="Sprite" parent="menu" index="4"]
+
+position = Vector2( -12.5757, -1.14591 )
+scale = Vector2( 0.0910946, 0.0468545 )
+texture = ExtResource( 18 )
+
+[node name="return_to_game" type="LinkButton" parent="menu" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -21.0
+margin_top = -9.0
+margin_right = 342.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.06, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Return To Game"
+underline = 2
+
+[node name="return_to_village" type="LinkButton" parent="menu" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -21.0
+margin_top = -2.0
+margin_right = 358.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.06, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Return to Endless"
+underline = 2
+
+[node name="are_you_sure" type="Node2D" parent="." index="65"]
+
+pause_mode = 2
+visible = false
+position = Vector2( 774.151, 303.028 )
+scale = Vector2( 17.5772, 10.941 )
+
+[node name="Sprite" type="Sprite" parent="are_you_sure" index="0"]
+
+position = Vector2( -14.8002, -3.95206 )
+scale = Vector2( 0.054543, 0.0893921 )
+texture = ExtResource( 17 )
+
+[node name="Sprite1" type="Sprite" parent="are_you_sure" index="1"]
+
+position = Vector2( -10.9057, 5.15818 )
+scale = Vector2( 0.0289604, 0.0502303 )
+texture = ExtResource( 18 )
+
+[node name="Sprite2" type="Sprite" parent="are_you_sure" index="2"]
+
+position = Vector2( -21.4301, 5.17384 )
+scale = Vector2( 0.0241548, 0.0576448 )
+texture = ExtResource( 18 )
+
+[node name="ones2" type="RichTextLabel" parent="are_you_sure" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -25.0
+margin_top = -14.0
+margin_right = 246.0
+margin_bottom = 194.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/normal_font = SubResource( 10 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = "Are you sure you want to go back to the Endless Mode menu?"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Are you sure you want to go back to the Endless Mode menu?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="yes_village" type="LinkButton" parent="are_you_sure" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -13.0
+margin_top = 4.0
+margin_right = 68.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Yes"
+underline = 2
+
+[node name="no_village" type="LinkButton" parent="are_you_sure" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -23.0
+margin_top = 4.0
+margin_right = 58.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.075, 0.075 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "No"
+underline = 2
+
+[node name="game_over" type="Node2D" parent="." index="66" groups=[
 "game_over",
 ]]
 
 pause_mode = 2
 visible = false
-position = Vector2( 506.038, 335.563 )
-scale = Vector2( 16.8137, 11.4864 )
+position = Vector2( 496.259, 299.344 )
+scale = Vector2( 18.4478, 11.4179 )
 
 [node name="Sprite" type="Sprite" parent="game_over" index="0"]
 
 position = Vector2( 2.21299, -3.52248 )
 scale = Vector2( 0.068988, 0.113228 )
-texture = ExtResource( 20 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3363,7 +3564,7 @@ __meta__ = {
 
 position = Vector2( 11.1612, 7.61414 )
 scale = Vector2( 0.0281529, 0.0501816 )
-texture = ExtResource( 21 )
+texture = ExtResource( 18 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="game_over" index="2"]
 
@@ -3382,7 +3583,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 12 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = "GAME OVER!"
@@ -3416,7 +3617,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -3425,259 +3626,13 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="menu" type="Node2D" parent="." index="65"]
-
-pause_mode = 2
-visible = false
-position = Vector2( 759.92, 390.148 )
-scale = Vector2( 21.2103, 12.7291 )
-
-[node name="Sprite" type="Sprite" parent="menu" index="0"]
-
-position = Vector2( -13.0013, -7.90895 )
-scale = Vector2( 0.0672568, 0.102103 )
-texture = ExtResource( 20 )
-
-[node name="ones1" type="RichTextLabel" parent="menu" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -17.0
-margin_top = -18.0
-margin_right = 127.0
-margin_bottom = 60.0
-rect_scale = Vector2( 0.075, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 10 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = false
-bbcode_text = "Sound"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Sound"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-
-[node name="sound_slider" type="HSlider" parent="menu" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -24.0
-margin_top = -14.0
-margin_right = 182.0
-margin_bottom = 2.0
-rect_scale = Vector2( 0.1, 0.1 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 0
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 1.0
-exp_edit = false
-rounded = false
-editable = true
-tick_count = 0
-ticks_on_borders = true
-focus_mode = 2
-
-[node name="Sprite 2" type="Sprite" parent="menu" index="3"]
-
-position = Vector2( -12.7459, -7.53517 )
-scale = Vector2( 0.0945, 0.0496942 )
-texture = ExtResource( 21 )
-
-[node name="Sprite3" type="Sprite" parent="menu" index="4"]
-
-position = Vector2( -12.5757, -1.14591 )
-scale = Vector2( 0.0910946, 0.0468545 )
-texture = ExtResource( 21 )
-
-[node name="return_to_game" type="LinkButton" parent="menu" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -21.0
-margin_top = -9.0
-margin_right = 342.0
-margin_bottom = 54.0
-rect_scale = Vector2( 0.06, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 11 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "Return To Game"
-underline = 2
-
-[node name="return_to_village" type="LinkButton" parent="menu" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -21.0
-margin_top = -2.0
-margin_right = 358.0
-margin_bottom = 60.0
-rect_scale = Vector2( 0.06, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 11 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "Return to Endless"
-underline = 2
-
-[node name="are_you_sure" type="Node2D" parent="." index="66"]
-
-pause_mode = 2
-visible = false
-position = Vector2( 781.32, 338.637 )
-scale = Vector2( 19.179, 12.0604 )
-
-[node name="Sprite" type="Sprite" parent="are_you_sure" index="0"]
-
-position = Vector2( -14.8002, -3.95206 )
-scale = Vector2( 0.054543, 0.0893921 )
-texture = ExtResource( 20 )
-
-[node name="Sprite1" type="Sprite" parent="are_you_sure" index="1"]
-
-position = Vector2( -10.9057, 5.15818 )
-scale = Vector2( 0.0289604, 0.0502303 )
-texture = ExtResource( 21 )
-
-[node name="Sprite2" type="Sprite" parent="are_you_sure" index="2"]
-
-position = Vector2( -21.4301, 5.17384 )
-scale = Vector2( 0.0241548, 0.0576448 )
-texture = ExtResource( 21 )
-
-[node name="ones2" type="RichTextLabel" parent="are_you_sure" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -25.0
-margin_top = -14.0
-margin_right = 246.0
-margin_bottom = 194.0
-rect_scale = Vector2( 0.075, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/normal_font = SubResource( 12 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = false
-bbcode_text = "Are you sure you want to go back to the Endless Mode menu?"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Are you sure you want to go back to the Endless Mode menu?"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-
-[node name="yes_village" type="LinkButton" parent="are_you_sure" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -13.0
-margin_top = 4.0
-margin_right = 68.0
-margin_bottom = 60.0
-rect_scale = Vector2( 0.075, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 13 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "Yes"
-underline = 2
-
-[node name="no_village" type="LinkButton" parent="are_you_sure" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -23.0
-margin_top = 4.0
-margin_right = 58.0
-margin_bottom = 60.0
-rect_scale = Vector2( 0.075, 0.075 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 13 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "No"
-underline = 2
-
 [connection signal="button_down" from="pixel/pixel_button" to="." method="_on_pixel_button_button_down"]
 
 [connection signal="timeout" from="day_timer" to="." method="_on_day_timer_timeout"]
 
 [connection signal="timeout" from="in/count_timer" to="." method="_on_count_timer_timeout"]
 
-[connection signal="button_up" from="game_over/game_over_button" to="." method="_on_game_over_button_button_up"]
+[connection signal="value_changed" from="menu/sound_slider" to="." method="_on_sound_slider_value_changed"]
 
 [connection signal="button_down" from="menu/return_to_game" to="." method="_on_return_to_game_button_down"]
 
@@ -3686,5 +3641,7 @@ underline = 2
 [connection signal="button_down" from="are_you_sure/yes_village" to="." method="_on_yes_village_button_down"]
 
 [connection signal="button_down" from="are_you_sure/no_village" to="." method="_on_no_village_button_down"]
+
+[connection signal="button_down" from="game_over/game_over_button" to="." method="_on_game_over_button_button_down"]
 
 

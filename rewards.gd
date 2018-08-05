@@ -4,48 +4,46 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
-	print(rewards_globals.complete_hollyhock)
-	print(bool(rewards_globals.complete_hollyhock))
-	if bool(rewards_globals.complete_hollyhock) == true:
+	if (rewards_globals.complete_hollyhock) == str(true):
 		get_node("complete_hollyhock").set_texture(load("res://hollyhock.png"))
 		get_node("complete_hollyhock/tooltip").set_tooltip("Completed Hollyhock! Good job!")
-	elif bool(rewards_globals.complete_hollyhock) == false:
+	elif (rewards_globals.complete_hollyhock) == str(false):
 		get_node("complete_hollyhock").set_texture(load("res://hollyhock_greyscale.png"))
 		get_node("complete_hollyhock/tooltip").set_tooltip("Complete Hollyhock 0/1")
-	if bool(rewards_globals.complete_fiyork) == true:
+	if (rewards_globals.complete_fiyork) == str(true):
 		get_node("complete_fiyork").set_texture(load("res://fiyork.png"))
 		get_node("complete_fiyork/tooltip").set_tooltip("Completed Fiyork! Good job!")
-	elif bool(rewards_globals.complete_fiyork) == false:
+	elif (rewards_globals.complete_fiyork) == str(false):
 		get_node("complete_fiyork").set_texture(load("res://fiyork_greyscale.png"))
 		get_node("complete_fiyork/tooltip").set_tooltip("Complete Fiyork 0/1")
-	if bool(rewards_globals.complete_untilly) == true:
+	if (rewards_globals.complete_untilly) == str(true):
 		get_node("complete_untilly").set_texture(load("res://untilly.png"))
 		get_node("complete_untilly/tooltip").set_tooltip("Completed Untilly! Good job!")
-	elif bool(rewards_globals.complete_untilly) == false:
+	elif (rewards_globals.complete_untilly) == str(false):
 		get_node("complete_untilly").set_texture(load("res://untilly_greyscale.png"))
 		get_node("complete_untilly/tooltip").set_tooltip("Complete Untilly 0/1")
-	if bool(rewards_globals.complete_plansey) == true:
+	if (rewards_globals.complete_plansey) == str(true):
 		get_node("complete_plansey").set_texture(load("res://plansey.png"))
 		get_node("complete_plansey/tooltip").set_tooltip("Completed Plansey! Good job!")
-	elif bool(rewards_globals.complete_plansey) == false:
+	elif (rewards_globals.complete_plansey) == str(false):
 		get_node("complete_plansey").set_texture(load("res://plansey_greyscale.png"))
 		get_node("complete_plansey/tooltip").set_tooltip("Complete Plansey 0/1")
-	if bool(rewards_globals.complete_windrow) == true:
+	if (rewards_globals.complete_windrow) == str(true):
 		get_node("complete_windrow").set_texture(load("res://windrow.png"))
 		get_node("complete_windrow/tooltip").set_tooltip("Completed Windrow! Good job!")
-	elif bool(rewards_globals.complete_windrow) == false:
+	elif (rewards_globals.complete_windrow) == str(false):
 		get_node("complete_windrow").set_texture(load("res://windrow_greyscale.png"))
 		get_node("complete_windrow/tooltip").set_tooltip("Complete Windrow 0/1")
-	if bool(rewards_globals.complete_banlon) == true:
+	if (rewards_globals.complete_banlon) == str(true):
 		get_node("complete_banlon").set_texture(load("res://banlon.png"))
 		get_node("complete_banlon/tooltip").set_tooltip("Completed Banlon! Good job!")
-	elif bool(rewards_globals.complete_banlon) == false:
+	elif (rewards_globals.complete_banlon) == str(false):
 		get_node("complete_banlon").set_texture(load("res://banlon_greyscale.png"))
 		get_node("complete_banlon/tooltip").set_tooltip("Complete Banlon 0/1")
-	if bool(rewards_globals.complete_slatten) == true:
+	if (rewards_globals.complete_slatten) == str(true):
 		get_node("complete_slatten").set_texture(load("res://slatten.png"))
 		get_node("complete_slatten/tooltip").set_tooltip("Completed Slatten! Good job!")
-	elif bool(rewards_globals.complete_slatten) == false:
+	elif (rewards_globals.complete_slatten) == str(false):
 		get_node("complete_slatten").set_texture(load("res://slatten_greyscale.png"))
 		get_node("complete_slatten/tooltip").set_tooltip("Complete Slatten 0/1")
 	if int(rewards_globals.minigames_played) > 30:
@@ -132,22 +130,22 @@ func _process(delta):
 		get_node("three_min_lo").set_texture(load("res://sam_head_greyscale.png"))
 		get_node("three_min_lo/Sprite 2").set_texture(load("res://sam_head_greyscale.png"))
 		get_node("three_min_lo/tooltip").set_tooltip("Lights Off! Current High Score " + str(rewards_globals.three_min_lo) + " / 180")
-	if bool(rewards_globals.find_saboteur) == true:
+	if (rewards_globals.find_saboteur) == str(true):
 		get_node("find_saboteur").set_texture(load("res://sam_front.png"))
 		get_node("find_saboteur/tooltip").set_tooltip("You have uncovered the saboteur and achieved Video Game Glory!!!")
-	elif bool(rewards_globals.find_saboteur) == false:
+	elif (rewards_globals.find_saboteur) == str(false):
 		get_node("find_saboteur").set_texture(load("res://sam_greyscale.png"))
 		get_node("find_saboteur/tooltip").set_tooltip("Uncover the identity of the saboteur!")
-	if bool(rewards_globals.complete_all_levels) == true:
+	if (rewards_globals.complete_all_levels) == str(true):
 		get_node("complete_all_levels").set_texture(load("res://ceo.png"))
 		get_node("complete_all_levels/tooltip").set_tooltip("You have completed all the the levels. Congratulations on surviving!")
-	elif bool(rewards_globals.complete_all_levels) == false:
+	elif (rewards_globals.complete_all_levels) == str(false):
 		get_node("complete_all_levels").set_texture(load("res://ceo_greyscale.png"))
 		get_node("complete_all_levels/tooltip").set_tooltip("Complete All Levels")
-	if bool(rewards_globals.earn_thousand_unlocked) == true:
+	if (rewards_globals.earn_thousand_unlocked) == str(true):
 		get_node("earn_thousand").set_texture(load("res://moneybag.png"))
 		get_node("earn_thousand/tooltip").set_tooltip("You have earned $1000 in one day. Way to exceed goals!")
-	elif bool(rewards_globals.earn_thousand_unlocked) == false:
+	elif (rewards_globals.earn_thousand_unlocked) == str(false):
 		get_node("earn_thousand").set_texture(load("res://moneybag_greyscale.png"))
 		get_node("earn_thousand/tooltip").set_tooltip("Earn $1000 in one Day " + str(rewards_globals.earn_thousand) + " / 1000")
 

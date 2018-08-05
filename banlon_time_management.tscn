@@ -1,25 +1,23 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://banlon_time_management.gd" type="Script" id=1]
 [ext_resource path="res://road.png" type="Texture" id=2]
 [ext_resource path="res://pixel.png" type="Texture" id=3]
 [ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=5]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=6]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=7]
-[ext_resource path="res://outer_box.png" type="Texture" id=8]
-[ext_resource path="res://inner_box.png" type="Texture" id=9]
-[ext_resource path="res://banlon.ogg" type="AudioStream" id=10]
-[ext_resource path="res://error_box.png" type="Texture" id=11]
-[ext_resource path="res://button.png" type="Texture" id=12]
-[ext_resource path="res://customer_four.png" type="Texture" id=13]
-[ext_resource path="res://moneybag.png" type="Texture" id=14]
-[ext_resource path="res://ghostie_tag.png" type="Texture" id=15]
-[ext_resource path="res://wasd.png" type="Texture" id=16]
-[ext_resource path="res://road1.gd" type="Script" id=17]
-[ext_resource path="res://ship.png" type="Texture" id=18]
-[ext_resource path="res://road2.gd" type="Script" id=19]
-[ext_resource path="res://road3.gd" type="Script" id=20]
+[ext_resource path="res://pixel_front.png" type="Texture" id=5]
+[ext_resource path="res://outer_box.png" type="Texture" id=6]
+[ext_resource path="res://inner_box.png" type="Texture" id=7]
+[ext_resource path="res://banlon.ogg" type="AudioStream" id=8]
+[ext_resource path="res://error_box.png" type="Texture" id=9]
+[ext_resource path="res://button.png" type="Texture" id=10]
+[ext_resource path="res://customer_four.png" type="Texture" id=11]
+[ext_resource path="res://moneybag.png" type="Texture" id=12]
+[ext_resource path="res://ghostie_tag.png" type="Texture" id=13]
+[ext_resource path="res://wasd.png" type="Texture" id=14]
+[ext_resource path="res://road1.gd" type="Script" id=15]
+[ext_resource path="res://ship.png" type="Texture" id=16]
+[ext_resource path="res://road2.gd" type="Script" id=17]
+[ext_resource path="res://road3.gd" type="Script" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -236,65 +234,13 @@ __meta__ = {
 
 [node name="pixel" type="Node2D" parent="." index="9"]
 
-editor/display_folded = true
 position = Vector2( 7.0725, -11.9426 )
 scale = Vector2( 1.20381, 1.49125 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite2" type="Sprite" parent="pixel" index="0"]
-
-position = Vector2( -29.7575, 26.9569 )
-scale = Vector2( 0.0122658, 0.0192379 )
-texture = ExtResource( 5 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite3" type="Sprite" parent="pixel" index="1"]
-
-position = Vector2( -30.2296, 25.3588 )
-scale = Vector2( 0.0150664, 0.0240025 )
-texture = ExtResource( 6 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite4" type="Sprite" parent="pixel" index="2"]
-
-position = Vector2( -29.4914, 25.3354 )
-scale = Vector2( 0.0150664, 0.0248898 )
-texture = ExtResource( 6 )
-centered = false
-flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite1" type="Sprite" parent="pixel" index="3"]
-
-position = Vector2( -30.1212, 25.4411 )
-scale = Vector2( 0.0198682, 0.0238828 )
-texture = ExtResource( 7 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite" type="Sprite" parent="pixel" index="4"]
-
-position = Vector2( -30.0405, 23.9862 )
-scale = Vector2( 0.0182784, 0.0219022 )
-texture = ExtResource( 3 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pixel_button" type="LinkButton" parent="pixel" index="5"]
+[node name="pixel_button" type="LinkButton" parent="pixel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -316,29 +262,35 @@ enabled_focus_mode = 0
 shortcut = null
 group = null
 
+[node name="Sprite" type="Sprite" parent="pixel" index="1"]
+
+position = Vector2( -29.0233, 26.1831 )
+scale = Vector2( 0.00162321, 0.00206054 )
+texture = ExtResource( 5 )
+
 [node name="success_background" type="Sprite" parent="." index="10"]
 
 position = Vector2( -0.879974, -28.118 )
 scale = Vector2( 0.0324119, 0.0341188 )
-texture = ExtResource( 8 )
+texture = ExtResource( 6 )
 
 [node name="success_background5" type="Sprite" parent="success_background" index="0"]
 
 position = Vector2( -46.2464, 30.223 )
 scale = Vector2( 0.284134, 0.599403 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 
 [node name="success_background4" type="Sprite" parent="success_background" index="1"]
 
 position = Vector2( -0.117371, 30.223 )
 scale = Vector2( 0.284134, 0.599403 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 
 [node name="success_background3" type="Sprite" parent="success_background" index="2"]
 
 position = Vector2( 46.0117, 30.223 )
 scale = Vector2( 0.284134, 0.599403 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 
 [node name="points" type="RichTextLabel" parent="success_background" index="3"]
 
@@ -474,7 +426,7 @@ __meta__ = {
 
 [node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="11"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 8 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0
@@ -490,7 +442,7 @@ position = Vector2( 8.2048, 6.84428 )
 
 position = Vector2( -8.39558, -6.29518 )
 scale = Vector2( 0.0873445, 0.141243 )
-texture = ExtResource( 11 )
+texture = ExtResource( 9 )
 
 [node name="points1" type="RichTextLabel" parent="menu" index="1"]
 
@@ -542,14 +494,14 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 0
 min_value = 0.0
-max_value = 100.0
+max_value = 50.0
 step = 1.0
 page = 0.0
 value = 1.0
 exp_edit = false
 rounded = false
 editable = true
-tick_count = 0
+tick_count = 50
 ticks_on_borders = true
 focus_mode = 2
 
@@ -557,19 +509,19 @@ focus_mode = 2
 
 position = Vector2( -8.64352, -9.40746 )
 scale = Vector2( 0.141758, 0.0624442 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="Sprite3" type="Sprite" parent="menu" index="4"]
 
 position = Vector2( -8.39625, -0.385284 )
 scale = Vector2( 0.147057, 0.060214 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="Sprite4" type="Sprite" parent="menu" index="5"]
 
 position = Vector2( -8.58546, 8.88527 )
 scale = Vector2( 0.15127, 0.0665302 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="return_to_game" type="LinkButton" parent="menu" index="6"]
 
@@ -659,19 +611,19 @@ position = Vector2( 11.1338, 9.26327 )
 
 position = Vector2( -11.126, -8.58667 )
 scale = Vector2( 0.0676114, 0.100662 )
-texture = ExtResource( 11 )
+texture = ExtResource( 9 )
 
 [node name="Sprite1" type="Sprite" parent="are_you_sure" index="1"]
 
 position = Vector2( -4.64235, -1.24263 )
 scale = Vector2( 0.0383925, 0.060319 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="Sprite2" type="Sprite" parent="are_you_sure" index="2"]
 
 position = Vector2( -17.6635, -1.07617 )
 scale = Vector2( 0.0329504, 0.0612983 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="points2" type="RichTextLabel" parent="are_you_sure" index="3"]
 
@@ -769,19 +721,19 @@ position = Vector2( 10.9749, 9.50113 )
 
 position = Vector2( -10.9286, -8.6089 )
 scale = Vector2( 0.0638487, 0.0909059 )
-texture = ExtResource( 11 )
+texture = ExtResource( 9 )
 
 [node name="Sprite1" type="Sprite" parent="are_you_sure_2" index="1"]
 
 position = Vector2( -6.17164, -1.13116 )
 scale = Vector2( 0.0428543, 0.0598219 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="Sprite2" type="Sprite" parent="are_you_sure_2" index="2"]
 
 position = Vector2( -17.3033, -1.21913 )
 scale = Vector2( 0.0360604, 0.0580625 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="points2" type="RichTextLabel" parent="are_you_sure_2" index="3"]
 
@@ -895,14 +847,14 @@ autostart = false
 
 position = Vector2( 27.6143, 23.8742 )
 scale = Vector2( 0.0172057, 0.0222086 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="moneybag" type="Sprite" parent="customer_display" index="3"]
 
 visible = false
 position = Vector2( 28.8934, 20.3003 )
 scale = Vector2( 0.0229, 0.0328711 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="explosion" type="Particles2D" parent="customer_display" index="4"]
 
@@ -943,7 +895,7 @@ __meta__ = {
 
 position = Vector2( 14.9847, -12.0707 )
 scale = Vector2( 0.0374524, 0.0683183 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite2" index="0"]
 
@@ -979,7 +931,7 @@ override_selected_font_color = false
 
 position = Vector2( 27.9451, 19.6766 )
 scale = Vector2( 0.0374524, 0.0683183 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 flip_v = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite7" index="0"]
@@ -1017,7 +969,7 @@ override_selected_font_color = false
 position = Vector2( -25.5206, 27.1101 )
 rotation = 4.71239
 scale = Vector2( 0.0603765, 0.042666 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite5" index="0"]
@@ -1057,7 +1009,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( 18.9313, -28.7223 )
 rotation = 1.5708
 scale = Vector2( 0.0915925, 0.0764046 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite6" index="0"]
@@ -1098,7 +1050,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -6.5127, -28.7954 )
 rotation = 1.5708
 scale = Vector2( 0.0745852, 0.0449206 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial/Sprite4" index="0"]
@@ -1137,7 +1089,7 @@ override_selected_font_color = false
 position = Vector2( -27.9307, 0.402593 )
 rotation = 4.71239
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 flip_v = true
 _sections_unfolded = [ "Transform" ]
 
@@ -1178,7 +1130,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( 20.2612, 27.8981 )
 rotation = 4.71239
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 flip_v = true
 _sections_unfolded = [ "Transform" ]
 
@@ -1219,7 +1171,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -17.9545, 0.275135 )
 rotation = 4.71239
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite11" index="0"]
@@ -1258,7 +1210,7 @@ _sections_unfolded = [ "Rect" ]
 
 position = Vector2( -22.9346, 3.75539 )
 scale = Vector2( 0.0504109, 0.0422474 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite12" index="0"]
 
@@ -1294,7 +1246,7 @@ override_selected_font_color = false
 
 position = Vector2( -23.0849, -6.00206 )
 scale = Vector2( 0.0504109, 0.0422474 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 flip_v = true
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite13" index="0"]
@@ -1431,19 +1383,19 @@ override_selected_font_color = false
 
 position = Vector2( 26.19, -17.2923 )
 scale = Vector2( 0.0233709, 0.0450107 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="Sprite8" type="Sprite" parent="tutorial" index="14"]
 
 position = Vector2( -23.2368, -10.6359 )
 scale = Vector2( 0.0612173, 0.00208607 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="tutorial" index="15"]
 
 position = Vector2( -23.0185, -1.03046 )
 scale = Vector2( 0.0168183, 0.0253723 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 
 [node name="tutorial_button" type="LinkButton" parent="tutorial" index="16"]
 
@@ -1537,7 +1489,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script = ExtResource( 17 )
+script = ExtResource( 15 )
 car_speed = 0.0025
 car_loc = 0.007
 
@@ -1557,7 +1509,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1589,7 +1541,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1621,7 +1573,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1658,7 +1610,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script = ExtResource( 19 )
+script = ExtResource( 17 )
 car_speed = 0.001
 car_loc = 0
 
@@ -1678,7 +1630,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1710,7 +1662,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1742,7 +1694,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1782,7 +1734,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script = ExtResource( 20 )
+script = ExtResource( 18 )
 car_speed = 0.003
 car_loc = 0.004
 
@@ -1802,7 +1754,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1834,7 +1786,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1866,7 +1818,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true

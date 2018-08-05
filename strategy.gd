@@ -25,6 +25,7 @@ var storefront_worst = load("res://storefront_worst.png")
 #display nodes
 onready var town_banner = get_node("town_name")
 onready var game_over_alert = get_tree().get_current_scene().get_node("game_over_alert")
+onready var pre_game_over = get_tree().get_current_scene().get_node("pre_game_over")
 onready var hollyhock_complete = get_node("hollyhock_complete")
 onready var fiyork_complete = get_node("fiyork_complete")
 onready var plansey_complete = get_node("plansey_complete")
@@ -44,13 +45,15 @@ onready var loans = get_node("loans/current_loan_output")
 onready var ads = get_node("ads/research_output")
 onready var current_loan_output = get_node("loans/current_loan_output")
 onready var overhead_output = get_node("location_overhead/overhead_output")
+onready var sabotage_one = get_node("sabotage1")
+onready var sabotage_two = get_node("sabotage2")
+onready var sabotage_three = get_node("sabotage3")
+
 
 #necessary new variables
-var new_volume
 var credit_limit = 1000
 
 func _ready():
-	set_sound()
 	save_game()
 	set_process(true)
 
@@ -149,6 +152,10 @@ func _process(delta):
 	
 	#town specific displays
 	if (global.town_select == "hollyhock"):
+		#not sabotaged
+		sabotage_one.hide()
+		sabotage_two.hide()
+		sabotage_three.hide()
 		#level win and/or win requirements
 		if (arcade_day.playershare >= .75):
 			hollyhock_complete.show()
@@ -188,21 +195,33 @@ func _process(delta):
 			if (global.storefront_sabotage_key == false):
 				get_node("town_business/to_do_list/one/check_box").set_texture(check)
 				get_node("town_business/to_do_list/one/line").show()
+				sabotage_three.hide()
+				$upgrades/storefront/storefront_upgrade.show()
 			else:
 				get_node("town_business/to_do_list/one/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/one/line").hide()
+				sabotage_three.show()
+				$upgrades/storefront/storefront_upgrade.hide()
 			if (global.entertainment_sabotage_key == false):
 				get_node("town_business/to_do_list/two/check_box").set_texture(check)
 				get_node("town_business/to_do_list/two/line").show()
+				sabotage_two.hide()
+				$upgrades/entertainment/entertainment_upgrade.show()
 			else:
 				get_node("town_business/to_do_list/two/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/two/line").hide()
+				sabotage_two.show()
+				$upgrades/entertainment/entertainment_upgrade.hide()
 			if (global.arcade_sabotage_key == false):
 				get_node("town_business/to_do_list/three/check_box").set_texture(check)
 				get_node("town_business/to_do_list/three/line").show()
+				sabotage_one.hide()
+				$upgrades/arcades/arcade_upgrade.show()
 			else:
 				get_node("town_business/to_do_list/three/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/three/line").hide()
+				sabotage_one.show()
+				$upgrades/arcades/arcade_upgrade.hide()
 			get_node("town_business/to_do_list/four").hide()
 			get_node("town_business/to_do_list/five").hide()
 			get_node("town_business/to_do_list/six").hide()
@@ -216,6 +235,10 @@ func _process(delta):
 			get_node("cursor_blink").start()
 	
 	elif (global.town_select == "untilly"):
+		#not sabotaged
+		sabotage_one.hide()
+		sabotage_two.hide()
+		sabotage_three.hide()
 		if (int(global.cash) >= 500) and (int(global.current_loan) <= 0):
 			untilly_complete.show()
 			get_tree().set_pause(true)
@@ -247,6 +270,10 @@ func _process(delta):
 			get_node("cursor_blink").start()
 	
 	elif (global.town_select == "plansey"):
+		#not sabotaged
+		sabotage_one.hide()
+		sabotage_two.hide()
+		sabotage_three.hide()
 		if (arcade_day.playershare >= .75) and (global.current_loan == 0) and (global.genre_two_key == true):
 			plansey_complete.show()
 			get_tree().set_pause(true)
@@ -305,21 +332,33 @@ func _process(delta):
 			if (global.entertainment_sabotage_key == false):
 				get_node("town_business/to_do_list/one/check_box").set_texture(check)
 				get_node("town_business/to_do_list/one/line").show()
+				sabotage_two.hide()
+				$upgrades/entertainment/entertainment_upgrade.show()
 			else:
 				get_node("town_business/to_do_list/one/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/one/line").hide()
+				sabotage_two.show()
+				$upgrades/entertainment/entertainment_upgrade.hide()
 			if (global.storefront_sabotage_key == false):
 				get_node("town_business/to_do_list/two/check_box").set_texture(check)
 				get_node("town_business/to_do_list/two/line").show()
+				sabotage_three.hide()
+				$upgrades/storefront/storefront_upgrade.show()
 			else:
 				get_node("town_business/to_do_list/two/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/two/line").hide()
+				sabotage_three.show()
+				$upgrades/storefront/storefront_upgrade.hide()
 			if (global.arcade_sabotage_key == false):
 				get_node("town_business/to_do_list/three/check_box").set_texture(check)
 				get_node("town_business/to_do_list/three/line").show()
+				sabotage_one.hide()
+				$upgrades/arcades/arcade_upgrade.show()
 			else:
 				get_node("town_business/to_do_list/three/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/three/line").hide()
+				sabotage_one.show()
+				$upgrades/arcades/arcade_upgrade.hide()
 			if (global.genre_two_key == true):
 				get_node("town_business/to_do_list/four/check_box").set_texture(check)
 				get_node("town_business/to_do_list/four/line").show()
@@ -343,6 +382,10 @@ func _process(delta):
 			get_node("cursor_blink").start()
 	
 	elif (global.town_select == "banlon"):
+		#not sabotaged
+		sabotage_one.hide()
+		sabotage_two.hide()
+		sabotage_three.hide()
 		if (int(global.cash) >= 1000) and (global.current_loan == 0) and (global.genre_two_key == true) and (global.genre_three_key == true):
 			banlon_complete.show()
 			get_tree().set_pause(true)
@@ -410,21 +453,33 @@ func _process(delta):
 			if (global.storefront_sabotage_key == false):
 				get_node("town_business/to_do_list/one/check_box").set_texture(check)
 				get_node("town_business/to_do_list/one/line").show()
+				sabotage_three.hide()
+				$upgrades/storefront/storefront_upgrade.show()
 			else:
 				get_node("town_business/to_do_list/one/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/one/line").hide()
+				sabotage_three.show()
+				$upgrades/storefront/storefront_upgrade.hide()
 			if (global.entertainment_sabotage_key == false):
 				get_node("town_business/to_do_list/two/check_box").set_texture(check)
 				get_node("town_business/to_do_list/two/line").show()
+				sabotage_two.hide()
+				$upgrades/entertainment/entertainment_upgrade.show()
 			else:
 				get_node("town_business/to_do_list/two/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/two/line").hide()
+				sabotage_two.show()
+				$upgrades/entertainment/entertainment_upgrade.hide()
 			if (global.arcade_sabotage_key == false):
 				get_node("town_business/to_do_list/three/check_box").set_texture(check)
 				get_node("town_business/to_do_list/three/line").show()
+				sabotage_one.hide()
+				$upgrades/arcades/arcade_upgrade.show()
 			else:
 				get_node("town_business/to_do_list/three/check_box").set_texture(uncheck)
 				get_node("town_business/to_do_list/three/line").hide()
+				sabotage_one.show()
+				$upgrades/arcades/arcade_upgrade.hide()
 			if (int(global.cash) >= 500):
 				get_node("town_business/to_do_list/four/check_box").set_texture(check)
 				get_node("town_business/to_do_list/four/line").show()
@@ -457,7 +512,10 @@ func _on_start_day_button_up():
 	if global.game_over == true:
 		game_over_alert.show()
 		get_tree().set_pause(true)
-	elif global.game_over == false:
+	elif global.pre_game_over == true:
+		pre_game_over.show()
+		get_tree().set_pause(true)
+	elif global.game_over == false and global.pre_game_over == false:
 		perks.perks()
 		get_node("skip_or_play/perk_output").clear()
 		get_node("skip_or_play/perk_output").add_text(str(perks.perk))
@@ -515,6 +573,14 @@ func _on_continue_ok_button_down():
 func _on_game_over_ok_button_down():
 	global.daily_reset()
 	global.level_reset()
+	game_over_alert.hide()
+	get_tree().set_pause(false)
+
+
+func _on_pre_game_over_button_down():
+	pre_game_over.hide()
+	get_tree().set_pause(false)
+	
 
 func _on_skip_button_down():
 	rewards_globals.fifty_business_days = int(rewards_globals.fifty_business_days) + 1
@@ -547,12 +613,12 @@ func _on_play_button_down():
 		get_tree().change_scene("res://slatten_time_management.tscn")
 
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
-	AudioServer.set_bus_volume_db(0,value-50)
+	AudioServer.set_bus_volume_db(0,value - 50)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
@@ -583,10 +649,6 @@ func _on_yes_main_menu_button_down():
 func _on_no_main_menu_button_down():
 	get_node("are_you_sure_2").hide()
 	get_node("menu").show()
-
-func set_sound():
-	var music = get_node("StreamPlayer")
-	music.set_volume_db(sound.volume)
 
 func save_game():
 	var savegame = File.new()
@@ -622,7 +684,6 @@ func save_game():
 	savegame.store_line(str(rewards_globals.three_min_twfb))
 	savegame.store_line(str(rewards_globals.three_min_jad))
 	savegame.store_line(str(rewards_globals.three_min_lo))
-	savegame.store_line(str(global.endless_unlocked))
 	savegame.store_line(str(global.yellow_eating_dot))
 	savegame.store_line(str(global.shoot_that_rock))
 	savegame.store_line(str(global.falling_shapes_organization))
@@ -801,3 +862,5 @@ func _on_storefront_upgrade_button_down():
 
 func _on_notify2_timeout():
 	get_node("notify").hide()
+
+

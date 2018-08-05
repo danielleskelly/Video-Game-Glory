@@ -1,23 +1,20 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://fiyork_time_management.gd" type="Script" id=1]
 [ext_resource path="res://ship.png" type="Texture" id=2]
 [ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://outer_box.png" type="Texture" id=4]
 [ext_resource path="res://inner_box.png" type="Texture" id=5]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=6]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=7]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=8]
-[ext_resource path="res://pixel.png" type="Texture" id=9]
-[ext_resource path="res://fiyork_music.ogg" type="AudioStream" id=10]
-[ext_resource path="res://error_box.png" type="Texture" id=11]
-[ext_resource path="res://button.png" type="Texture" id=12]
-[ext_resource path="res://customer_four.png" type="Texture" id=13]
-[ext_resource path="res://moneybag.png" type="Texture" id=14]
-[ext_resource path="res://ghostie_tag.png" type="Texture" id=15]
-[ext_resource path="res://shift.png" type="Texture" id=16]
-[ext_resource path="res://wasd.png" type="Texture" id=17]
-[ext_resource path="res://blacker_than_night.png" type="Texture" id=18]
+[ext_resource path="res://pixel_front.png" type="Texture" id=6]
+[ext_resource path="res://fiyork_music.ogg" type="AudioStream" id=7]
+[ext_resource path="res://error_box.png" type="Texture" id=8]
+[ext_resource path="res://button.png" type="Texture" id=9]
+[ext_resource path="res://customer_four.png" type="Texture" id=10]
+[ext_resource path="res://moneybag.png" type="Texture" id=11]
+[ext_resource path="res://ghostie_tag.png" type="Texture" id=12]
+[ext_resource path="res://shift.png" type="Texture" id=13]
+[ext_resource path="res://wasd.png" type="Texture" id=14]
+[ext_resource path="res://blacker_than_night.png" type="Texture" id=15]
 
 [sub_resource type="ParticlesMaterial" id=1]
 
@@ -443,57 +440,17 @@ override_selected_font_color = false
 
 [node name="pixel" type="Node2D" parent="." index="8"]
 
-editor/display_folded = true
-position = Vector2( 976.749, 9.25339 )
+position = Vector2( 970, 10 )
 scale = Vector2( 0.865529, 0.951183 )
 
 [node name="right_arm" type="Sprite" parent="pixel" index="0"]
 
-position = Vector2( 13.5239, 0.532171 )
-scale = Vector2( 0.505258, 0.493858 )
+position = Vector2( 0, -10.5132 )
+scale = Vector2( 0.0577298, 0.0465251 )
 texture = ExtResource( 6 )
 flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="hips" type="Sprite" parent="pixel" index="1"]
-
-position = Vector2( -0.34053, 23.6607 )
-scale = Vector2( 0.397194, 0.33372 )
-texture = ExtResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="left_arm" type="Sprite" parent="pixel" index="2"]
-
-position = Vector2( -10.5564, 0.77133 )
-scale = Vector2( 0.652304, 0.49551 )
-texture = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="torso" type="Sprite" parent="pixel" index="3"]
-
-position = Vector2( -0.167745, -2.25622 )
-scale = Vector2( 0.604909, 0.530322 )
-texture = ExtResource( 8 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="head" type="Sprite" parent="pixel" index="4"]
-
-position = Vector2( -0.140442, -34.3577 )
-scale = Vector2( 0.533973, 0.468504 )
-texture = ExtResource( 9 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pixel_button" type="LinkButton" parent="pixel" index="5"]
+[node name="pixel_button" type="LinkButton" parent="pixel" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -519,8 +476,8 @@ __meta__ = {
 
 [node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="9"]
 
-stream = ExtResource( 10 )
-volume_db = 10.0
+stream = ExtResource( 7 )
+volume_db = 0.0
 autoplay = true
 mix_target = 0
 bus = "Master"
@@ -534,25 +491,25 @@ visible = false
 
 position = Vector2( 511.694, 214.999 )
 scale = Vector2( 1.06834, 1.26362 )
-texture = ExtResource( 11 )
+texture = ExtResource( 8 )
 
 [node name="button" type="Sprite" parent="menu" index="1"]
 
 position = Vector2( 516.995, 184.675 )
 scale = Vector2( 1.52067, 0.420472 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="button1" type="Sprite" parent="menu" index="2"]
 
 position = Vector2( 518.975, 260.32 )
 scale = Vector2( 1.51963, 0.420472 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="button2" type="Sprite" parent="menu" index="3"]
 
 position = Vector2( 517.991, 333.951 )
 scale = Vector2( 1.73591, 0.539907 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="sound" type="RichTextLabel" parent="menu" index="4"]
 
@@ -602,14 +559,14 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 0
 min_value = 0.0
-max_value = 100.0
+max_value = 50.0
 step = 1.0
 page = 0.0
 value = 1.0
 exp_edit = false
 rounded = false
 editable = true
-tick_count = 0
+tick_count = 50
 ticks_on_borders = true
 focus_mode = 2
 
@@ -698,19 +655,19 @@ visible = false
 
 position = Vector2( 505.792, 230.951 )
 scale = Vector2( 0.863263, 0.944586 )
-texture = ExtResource( 11 )
+texture = ExtResource( 8 )
 
 [node name="background1" type="Sprite" parent="are_you_sure" index="1"]
 
 position = Vector2( 587.427, 327.912 )
 scale = Vector2( 0.516082, 0.556742 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="background2" type="Sprite" parent="are_you_sure" index="2"]
 
 position = Vector2( 430.726, 327.912 )
 scale = Vector2( 0.431632, 0.519208 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure" index="3"]
 
@@ -805,19 +762,19 @@ visible = false
 
 position = Vector2( 518.929, 208.431 )
 scale = Vector2( 0.835114, 0.806964 )
-texture = ExtResource( 11 )
+texture = ExtResource( 8 )
 
 [node name="background1" type="Sprite" parent="are_you_sure_2" index="1"]
 
 position = Vector2( 590.711, 291.942 )
 scale = Vector2( 0.464473, 0.487932 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="background2" type="Sprite" parent="are_you_sure_2" index="2"]
 
 position = Vector2( 438.702, 291.004 )
 scale = Vector2( 0.351874, 0.506699 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure_2" index="3"]
 
@@ -928,14 +885,14 @@ autostart = false
 
 position = Vector2( 27.6143, 23.8742 )
 scale = Vector2( 0.0172057, 0.0222086 )
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 
 [node name="moneybag" type="Sprite" parent="customer_display" index="3"]
 
 visible = false
 position = Vector2( 28.8934, 20.3003 )
 scale = Vector2( 0.0229, 0.0328711 )
-texture = ExtResource( 14 )
+texture = ExtResource( 11 )
 
 [node name="explosion" type="Particles2D" parent="customer_display" index="4"]
 
@@ -978,7 +935,7 @@ __meta__ = {
 
 position = Vector2( -0.211797, -7.61598 )
 scale = Vector2( 0.0374524, 0.0683183 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 flip_v = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite7" index="0"]
@@ -1016,7 +973,7 @@ override_selected_font_color = false
 position = Vector2( 25.312, -28.6 )
 rotation = 1.5708
 scale = Vector2( 0.0834082, 0.0572739 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 3" type="RichTextLabel" parent="tutorial/Sprite5" index="0"]
@@ -1057,7 +1014,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -28.1423, 19.5625 )
 rotation = -1.5708
 scale = Vector2( 0.0915925, 0.0764046 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 flip_v = true
 _sections_unfolded = [ "Transform" ]
 
@@ -1098,7 +1055,7 @@ override_selected_font_color = false
 position = Vector2( -18.0622, -27.0615 )
 rotation = -1.5708
 scale = Vector2( 0.0745852, 0.0449206 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 3" type="RichTextLabel" parent="tutorial/Sprite4" index="0"]
@@ -1138,7 +1095,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -27.8048, -1.68977 )
 rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 flip_v = true
 _sections_unfolded = [ "Transform" ]
 
@@ -1180,7 +1137,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( 24.7524, 23.7369 )
 rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 flip_v = true
 _sections_unfolded = [ "Transform" ]
 
@@ -1221,7 +1178,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -18.0804, -1.81723 )
 rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite11" index="0"]
@@ -1262,7 +1219,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -11.7032, -8.20701 )
 rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite13" index="0"]
@@ -1302,7 +1259,7 @@ _sections_unfolded = [ "Rect" ]
 
 position = Vector2( -16.0771, -9.85807 )
 scale = Vector2( 0.0158651, 0.0268405 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 
 [node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial" index="9"]
 
@@ -1405,7 +1362,7 @@ override_selected_font_color = false
 
 position = Vector2( 26.19, -17.2923 )
 scale = Vector2( 0.0233709, 0.0450107 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="Sprite8" type="Sprite" parent="tutorial" index="13"]
 
@@ -1417,7 +1374,7 @@ texture = ExtResource( 5 )
 
 position = Vector2( -22.969, -3.32461 )
 scale = Vector2( 0.0168183, 0.0253723 )
-texture = ExtResource( 17 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1453,7 +1410,7 @@ underline = 2
 position = Vector2( -23.0945, -5.56129 )
 rotation = -1.5708
 scale = Vector2( 0.0172827, 0.00622966 )
-texture = ExtResource( 18 )
+texture = ExtResource( 15 )
 
 [node name="in" type="Node2D" parent="." index="15"]
 

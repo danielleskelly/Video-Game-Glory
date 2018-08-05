@@ -7,10 +7,10 @@ path="res://.import/lamp.png-a09bb450d3eef19f1d08c9cf2f65382f.stex"
 [deps]
 
 source_file="res://lamp.png"
-source_md5="ff2c7da477318b9e43f4774446be536a"
+source_md5="713823940ca967e40c73742be479cc63"
 
 dest_files=[ "res://.import/lamp.png-a09bb450d3eef19f1d08c9cf2f65382f.stex" ]
-dest_md5="63df8ac17612a2bc7558814e857fa319"
+dest_md5="3086c584fd3655c5d3e81e3671a841f6"
 
 [params]
 

@@ -1,8 +1,7 @@
 extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
-
-var new_volume
+onready var keep_moving_disp = get_node("keep_moving_disp")
 
 var hundreds
 var tens
@@ -31,7 +30,6 @@ var stopwatch = 0
 func _ready():
 	get_tree().set_pause(true)
 	countin()
-	get_node("StreamPlayer").set_volume_db(sound.volume)
 	current_pos = "a"
 	get_node("frog").set_global_position(Vector2(953, 565.073608))
 	set_process(true)
@@ -44,6 +42,9 @@ func _process(delta):
 	point_display()
 	countdown_timer.clear()
 	countdown_timer.add_text(str(stopwatch))
+	keep_moving_disp.clear()
+	keep_moving_disp.add_text(str(int(get_node("keep_moving").get_time_left())))
+	
 	
 func _physics_process(delta):
 	var frog_pos = get_node("frog").get_global_position()
@@ -110,6 +111,7 @@ func _physics_process(delta):
 func _on_note_timer_timeout():
 	get_node("notification").hide()
 	perks.success = perks.success + 10
+	get_node("keep_moving").start()
 	reset_frog()
 	
 func reset_frog():
@@ -131,31 +133,34 @@ func _on_day_timer_timeout():
 	stopwatch += 1
 
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume_db(new_volume)
+	AudioServer.set_bus_volume_db(0,value - 50)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
 	get_node("menu").hide()
+
 
 func _on_return_to_village_button_down():
 	get_node("are_you_sure").show()
 
 
 func _on_yes_village_button_down():
-	get_tree().paused = false
+	perks.success = 0
+	get_tree().set_pause(false)
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_jad):
+		rewards_globals.three_min_jad = stopwatch
 	get_tree().change_scene("res://endless_mode.tscn")
 	
 
 func _on_no_village_button_down():
 	get_node("are_you_sure").hide()
-	
+
 func countin():
 	get_node("in").show()
 	get_node("in/count_timer").start()
@@ -172,9 +177,20 @@ func _on_count_timer_timeout():
 		get_node("in/count_timer").stop()
 		get_tree().set_pause(false)
 
+
+
 func _on_game_over_button_button_down():
+	perks.success = 0
 	get_tree().set_pause(false)
-	rewards_globals.million_total_minigame_points += perks.success
-	if stopwatch > rewards_globals.three_min_jad:
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_jad):
 		rewards_globals.three_min_jad = stopwatch
 	get_tree().change_scene("res://endless_mode.tscn")
+
+
+
+func _on_keep_moving_timeout():
+	var game_over = get_tree().get_nodes_in_group("game_over")
+	for x in game_over:
+		x.show()
+		get_tree().set_pause(true)

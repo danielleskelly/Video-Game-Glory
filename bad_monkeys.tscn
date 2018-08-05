@@ -93,21 +93,18 @@ __meta__ = {
 
 visible = false
 position = Vector2( 0.0616013, 14.1685 )
-scale = Vector2( 0.0242505, 0.0347036 )
+scale = Vector2( 0.0498936, 0.0742379 )
 texture = ExtResource( 3 )
 
 [node name="banana_squish" type="Sprite" parent="." index="2"]
 
-position = Vector2( -0.0838413, 6.39006 )
-scale = Vector2( 0.0253728, 0.0405096 )
+position = Vector2( -0.0363066, 14.2024 )
+scale = Vector2( 0.0503571, 0.0722599 )
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="bad_monkeys_splash" type="Sprite" parent="." index="3"]
 
-scale = Vector2( 0.0584516, 0.0761602 )
+scale = Vector2( 0.0243843, 0.0374903 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 

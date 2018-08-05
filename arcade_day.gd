@@ -40,8 +40,6 @@ func business_day():
 			global.waited_loss += 1
 	global.price_loss = int(playershare_effect) - int(reach_in_playershare)
 	global.sales_lost += int(playershare_effect) - int(reach_in_playershare)
-	print(playershare_effect)
-	print(reach_in_playershare)
 	daily_marketshare_adjustment()
 	
 func daily_marketshare_adjustment():

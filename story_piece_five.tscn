@@ -219,7 +219,7 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 11 )
 
-[node name="story_piece_five" type="Node2D"]
+[node name="story_piece_five" type="Node2D" index="0"]
 
 position = Vector2( 514.994, 303.814 )
 scale = Vector2( 16.0311, 9.62488 )
@@ -247,25 +247,25 @@ texture = ExtResource( 2 )
 
 [node name="crtv" type="Sprite" parent="strategy" index="0"]
 
-position = Vector2( 14.1786, -335.495 )
+position = Vector2( 14.1786, -206.198 )
 scale = Vector2( 2.80987, 1.21 )
 texture = ExtResource( 3 )
 
 [node name="crtv1" type="Sprite" parent="strategy" index="1"]
 
-position = Vector2( 44.4855, 17.9047 )
+position = Vector2( 33.4303, 47.1228 )
 scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 3 )
 
 [node name="crtv2" type="Sprite" parent="strategy" index="2"]
 
-position = Vector2( 40.8005, 132.611 )
+position = Vector2( 40.8005, 139.916 )
 scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 3 )
 
 [node name="crtv3" type="Sprite" parent="strategy" index="3"]
 
-position = Vector2( 40.8006, 512.148 )
+position = Vector2( 25.4526, 325.507 )
 scale = Vector2( 2.80987, 1.64743 )
 texture = ExtResource( 3 )
 
@@ -327,16 +327,13 @@ texture = ExtResource( 8 )
 
 [node name="pixel" type="Node2D" parent="." index="3"]
 
-position = Vector2( -20.6054, 6.38172 )
-scale = Vector2( 0.884005, 0.718394 )
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( -42.3444, 22.3268 )
+scale = Vector2( 0.204661, 0.220111 )
 
 [node name="left_arm" type="Sprite" parent="pixel" index="0"]
 
-position = Vector2( 2.33397, 4.73599 )
-scale = Vector2( 0.0690304, 0.109595 )
+position = Vector2( 109.092, -62.7459 )
+scale = Vector2( 0.0549536, 0.0809986 )
 texture = ExtResource( 9 )
 
 [node name="speech_bubble" type="Node2D" parent="." index="4"]
@@ -371,12 +368,12 @@ size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
-bbcode_text = "Um, no that's not what happened."
+bbcode_text = "Nope, I am ready to go."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Um, no that's not what happened."
+text = "Nope, I am ready to go."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -389,8 +386,8 @@ scale = Vector2( 0.610145, 0.504589 )
 
 [node name="bubble" type="Sprite" parent="other_bubble" index="0"]
 
-position = Vector2( -25.662, 16.3451 )
-scale = Vector2( 0.0430632, 0.0739693 )
+position = Vector2( -25.662, 15.7029 )
+scale = Vector2( 0.0430632, 0.0817638 )
 texture = ExtResource( 12 )
 
 [node name="yes" type="RichTextLabel" parent="other_bubble" index="1"]
@@ -413,12 +410,12 @@ size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
-bbcode_text = "I am doing everything I can to keep you safe from any plans he may have."
+bbcode_text = "Another job well done! You are taking care of these towns quicker than I expected."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "I am doing everything I can to keep you safe from any plans he may have."
+text = "Another job well done! You are taking care of these towns quicker than I expected."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -563,7 +560,7 @@ __meta__ = {
 
 stream = ExtResource( 21 )
 volume_db = -10.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Master"
 
@@ -623,6 +620,6 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 
-[connection signal="button_down" from="mute_button" to="." method="_on_mute_button_button_down"]
+[connection signal="toggled" from="mute_button" to="." method="_on_mute_button_toggled"]
 
 

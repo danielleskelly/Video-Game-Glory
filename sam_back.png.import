@@ -7,10 +7,10 @@ path="res://.import/sam_back.png-a922342961e1ba65d3cc9b93d8c85dfe.stex"
 [deps]
 
 source_file="res://sam_back.png"
-source_md5="7b7668236fbe1e9cc3ceaf9859175b3d"
+source_md5="a3d8c0dd333f10c5329968cd5e4a335a"
 
 dest_files=[ "res://.import/sam_back.png-a922342961e1ba65d3cc9b93d8c85dfe.stex" ]
-dest_md5="b4f9700088a9c9a0b6024b22ee086f00"
+dest_md5="b87d20642a7e65f412cdf627c11dc85d"
 
 [params]
 

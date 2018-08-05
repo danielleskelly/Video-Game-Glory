@@ -284,30 +284,31 @@ texture = ExtResource( 4 )
 
 [node name="crtv" type="Sprite" parent="strategy" index="0"]
 
-position = Vector2( 20.1988, -162.461 )
+position = Vector2( 20.1988, -138.595 )
 scale = Vector2( 2.80987, 1.21 )
 texture = ExtResource( 5 )
 
 [node name="crtv1" type="Sprite" parent="strategy" index="1"]
 
-position = Vector2( 40.5492, 214.865 )
+position = Vector2( 38.4653, 140.222 )
 scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
 [node name="crtv2" type="Sprite" parent="strategy" index="2"]
 
-position = Vector2( 40.8005, 346.151 )
+position = Vector2( 46.8207, 305.645 )
 scale = Vector2( 2.80987, 0.141569 )
 texture = ExtResource( 5 )
 
 [node name="crtv3" type="Sprite" parent="strategy" index="3"]
 
-position = Vector2( 40.9179, 729.06 )
+position = Vector2( 61.8713, 404.748 )
 scale = Vector2( 2.80987, 1.64743 )
 texture = ExtResource( 5 )
 
 [node name="inner_office" type="Node2D" parent="." index="2"]
 
+visible = false
 position = Vector2( 0.835938, 0.548452 )
 scale = Vector2( 0.997054, 1.03856 )
 __meta__ = {
@@ -364,11 +365,9 @@ texture = ExtResource( 10 )
 
 [node name="pixel" type="Node2D" parent="." index="3"]
 
-position = Vector2( -20.6054, 6.38172 )
-scale = Vector2( 0.884005, 0.718394 )
-__meta__ = {
-"_edit_lock_": true
-}
+visible = false
+position = Vector2( -21.4574, 9.71348 )
+scale = Vector2( 0.177221, 0.155981 )
 
 [node name="left_arm" type="Sprite" parent="pixel" index="0"]
 
@@ -430,8 +429,8 @@ scale = Vector2( 0.610145, 0.504589 )
 
 [node name="bubble" type="Sprite" parent="other_bubble" index="0"]
 
-position = Vector2( -24.7929, 16.8285 )
-scale = Vector2( 0.0476649, 0.0768718 )
+position = Vector2( -24.7929, 13.9073 )
+scale = Vector2( 0.0476649, 0.0885565 )
 texture = ExtResource( 14 )
 
 [node name="yes" type="RichTextLabel" parent="other_bubble" index="1"]
@@ -473,8 +472,8 @@ scale = Vector2( 0.641126, 0.524294 )
 
 [node name="bubble" type="Sprite" parent="other_other_bubble" index="0"]
 
-position = Vector2( -29.7426, 3.04134 )
-scale = Vector2( 0.0444938, 0.0748506 )
+position = Vector2( -29.7426, 2.25122 )
+scale = Vector2( 0.0444938, 0.0901369 )
 texture = ExtResource( 15 )
 flip_v = true
 
@@ -511,28 +510,27 @@ override_selected_font_color = false
 
 [node name="sam" type="Node2D" parent="." index="7"]
 
+visible = false
 position = Vector2( 33.9015, -0.226297 )
-scale = Vector2( 0.884005, 0.718394 )
+scale = Vector2( 0.251495, 0.212361 )
 
 [node name="head" type="Sprite" parent="sam" index="0"]
 
-position = Vector2( -19.4567, 7.64789 )
+position = Vector2( -51.2366, 15.4837 )
 scale = Vector2( 0.0811621, 0.122074 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
 
 stream = ExtResource( 16 )
 volume_db = -10.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Master"
 
 [node name="skip_button" type="LinkButton" parent="." index="9"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -559,6 +557,7 @@ underline = 2
 
 [node name="mute_button" type="TextureButton" parent="." index="10"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -587,6 +586,6 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 
-[connection signal="button_down" from="mute_button" to="." method="_on_mute_button_button_down"]
+[connection signal="toggled" from="mute_button" to="." method="_on_mute_button_toggled"]
 
 

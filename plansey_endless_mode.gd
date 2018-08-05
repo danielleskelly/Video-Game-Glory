@@ -4,15 +4,12 @@ var hundreds
 var tens
 var ones
 
-var stopwatch = 0
-
 var something = false
-
-var new_volume
 
 onready var pixel = get_node("pixel")
 
 onready var countdown_timer = get_node("countdown_timer")
+onready var keep_moving_disp = get_node("keep_moving_display")
 
 var numbers
 var current_hoz = "d"
@@ -26,8 +23,11 @@ var number_clear
 var spaces
 var goal_choice
 
+var stopwatch = 0
+
 func _ready():
-	get_node("StreamPlayer").set_volume_db(sound.volume)
+	get_tree().set_pause(true)
+	countin()
 	load_stuff()
 	set_physics_process(true)
 	
@@ -40,40 +40,39 @@ func _physics_process(delta):
 	ones = get_node("success_background/ones")
 	point_display()
 	countdown_timer.clear()
-	countdown_timer.add_text(str(int(stopwatch)))
-	get_node("time_out").clear()
-	get_node("time_out").add_text(str(int(get_node("time_out_timer").get_time_left())))
+	countdown_timer.set_text(str(stopwatch))
+	keep_moving_disp.clear()
+	keep_moving_disp.set_text(str(int(get_node("keep_moving").get_time_left())))
 	if ((Input.is_action_pressed("fire")) and (get_node("debounce").get_time_left() == 0)):
-		get_node("time_out_timer").start()
 		which_number()
 		if (goal_choice == "Multiple of 5"):
 			if number_clear.is_in_group("number"):
 				if (int(number) % 5 == 0):
 					perks.success = perks.success + 2
+					get_node("keep_moving").start()
 				else:
-					if (perks.success > 5):
-						perks.success = perks.success - 2
+					game_over()
 		elif (goal_choice == "Multiple of 3"):
 			if number_clear.is_in_group("number"):
 				if (int(number) % 3 == 0):
 					perks.success = perks.success + 2
+					get_node("keep_moving").start()
 				else:
-					if (perks.success > 5):
-						perks.success = perks.success - 2
+					game_over()
 		elif (goal_choice == "Multiple of 2"):
 			if number_clear.is_in_group("number"):
 				if (int(number) % 2 == 0):
 					perks.success = perks.success + 2
+					get_node("keep_moving").start()
 				else:
-					if (perks.success > 5):
-						perks.success = perks.success - 2
+					game_over()
 		elif (goal_choice == "Multiple of 4"):
 			if number_clear.is_in_group("number"):
 				if (int(number) % 4 == 0):
 					perks.success = perks.success + 2
+					get_node("keep_moving").start()
 				else:
-					if (perks.success > 5):
-						perks.success = perks.success - 2
+					game_over()
 		number_clear.remove_from_group("number")
 		number_clear.clear()
 		get_node("debounce").start()
@@ -127,6 +126,7 @@ func _physics_process(delta):
 			if (current_hoz == "a"):
 				current_hoz = "b"
 		set_muncher_pos()
+		get_node("move_timer").start()
 			
 func set_muncher_pos():
 	number_muncher = get_node("number_muncher")
@@ -207,7 +207,7 @@ func load_stuff():
 	for x in numbers:
 		randomize()
 		x.clear()
-		x.add_text(str(int(rand_range(0, 50))))
+		x.add_text(str(int(rand_range(1, 50))))
 		
 func which_number():
 	if (current_vert == "1") and (current_hoz == "a"):
@@ -314,41 +314,70 @@ func _on_day_timer_timeout():
 	stopwatch += 1
 
 
-
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
-	
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume_db(new_volume)
-
+	AudioServer.set_bus_volume_db(0,value - 50)
+	
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
 	get_node("menu").hide()
 
-func _on_time_out_timer_timeout():
-	var game = get_tree().get_nodes_in_group("game_over")
-	for x in game:
-		x.show()
-	get_tree().set_pause(true)
-
-func _on_game_over_button_button_up():
-	get_tree().set_pause(false)
-	rewards_globals.million_total_minigame_points += perks.success
-	if stopwatch > rewards_globals.three_min_math_mast:
-		rewards_globals.three_min_math_mast = stopwatch
-	get_tree().change_scene("res://endless_mode.tscn")
 
 func _on_return_to_village_button_down():
 	get_node("are_you_sure").show()
 
+
 func _on_yes_village_button_down():
-	get_tree().paused = false
+	perks.success = 0
+	get_tree().set_pause(false)
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_math_mast):
+		rewards_globals.three_min_math_mast = stopwatch
 	get_tree().change_scene("res://endless_mode.tscn")
+	
 
 func _on_no_village_button_down():
 	get_node("are_you_sure").hide()
+	
+func countin():
+	get_node("in").show()
+	get_node("in/count_timer").start()
+
+func _on_count_timer_timeout():
+	if get_node("in/in_number").get_text() == "3":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("2")
+	elif get_node("in/in_number").get_text() == "2":
+		get_node("in/in_number").clear()
+		get_node("in/in_number").set_text("1")
+	elif get_node("in/in_number").get_text() == "1":
+		get_node("in").hide()
+		get_node("in/count_timer").stop()
+		get_tree().set_pause(false)
+		
+func game_over():
+	var game_over = get_tree().get_nodes_in_group("game_over")
+	for x in game_over:
+		x.show()
+		get_tree().set_pause(true)
+
+
+
+func _on_game_over_button_button_down():
+	perks.success = 0
+	get_tree().set_pause(false)
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_math_mast):
+		rewards_globals.three_min_math_mast = stopwatch
+	get_tree().change_scene("res://endless_mode.tscn")
+
+
+func _on_keep_moving_timeout():
+	var game_over = get_tree().get_nodes_in_group("game_over")
+	for x in game_over:
+		x.show()
+		get_tree().set_pause(true)
