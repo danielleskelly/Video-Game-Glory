@@ -13,6 +13,7 @@ var entertainment_sabotage_key = true
 var storefront_sabotage_key = true
 
 var game_over = false
+var pre_game_over = false
 
 #town
 var town_select = "hollyhock"
@@ -111,11 +112,14 @@ func _ready():
 		entertainment_sabotage_key = true
 		storefront_sabotage_key = true
 
-
 func game_over_check():
 	game_over = false
+	pre_game_over = false
 	if (global.cash - global.overhead) < 0:
-		game_over = true
+		if current_loan == 1000:
+			game_over = true
+		elif current_loan < 1000:
+			pre_game_over = true
 
 
 func daily_reset():
@@ -191,7 +195,7 @@ func cash_update():
 	
 	
 func game_reset():
-	endless_unlocked = "false"
+	endless_unlocked = false
 	yellow_eating_dot = false
 	shoot_that_rock = false
 	falling_shapes_organization = false

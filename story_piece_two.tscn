@@ -324,7 +324,7 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 14 )
 
-[node name="story_piece_two" type="Node2D"]
+[node name="story_piece_two" type="Node2D" index="0"]
 
 position = Vector2( 514.994, 303.814 )
 scale = Vector2( 16.0311, 9.62488 )
@@ -436,12 +436,9 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="left_arm" type="Sprite" parent="pixel" index="0"]
 
-position = Vector2( 3.16718, 7.19054 )
-scale = Vector2( 0.0654626, 0.105712 )
+position = Vector2( 5.74818, 7.63152 )
+scale = Vector2( 0.011946, 0.0216449 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="outside_office" type="Node2D" parent="." index="4"]
 
@@ -521,7 +518,7 @@ __meta__ = {
 
 [node name="other_bubble" type="Node2D" parent="." index="6"]
 
-position = Vector2( -2.30912, -1.68264 )
+position = Vector2( -2.30912, -1.87462 )
 
 [node name="bubble" type="Sprite" parent="other_bubble" index="0"]
 
@@ -564,7 +561,7 @@ override_selected_font_color = false
 
 stream = ExtResource( 16 )
 volume_db = -10.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Master"
 
@@ -624,6 +621,6 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 
-[connection signal="button_down" from="mute_button" to="." method="_on_mute_button_button_down"]
+[connection signal="toggled" from="mute_button" to="." method="_on_mute_button_toggled"]
 
 

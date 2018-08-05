@@ -31,7 +31,7 @@
 [ext_resource path="res://pixel.png" type="Texture" id=29]
 [ext_resource path="res://sam_head.png" type="Texture" id=30]
 
-[node name="rewards" type="Node2D" index="0"]
+[node name="rewards" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -40,17 +40,23 @@ script = ExtResource( 1 )
 position = Vector2( 512.047, 306.042 )
 scale = Vector2( 1.60137, 1.53312 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="background1" type="Sprite" parent="." index="1"]
 
 position = Vector2( 511.456, 304.795 )
 scale = Vector2( 0.828538, 0.420994 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="back_arrow" type="Sprite" parent="." index="2"]
 
-position = Vector2( 140.465, 127.827 )
-scale = Vector2( 0.674914, 0.556974 )
+position = Vector2( 134.585, 123.54 )
+scale = Vector2( 0.0396061, 0.0366252 )
 texture = ExtResource( 4 )
 
 [node name="back_button" type="LinkButton" parent="back_arrow" index="0"]
@@ -59,10 +65,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -36.0
-margin_top = -27.0
-margin_right = 31.0
-margin_bottom = 22.0
+margin_left = -653.0
+margin_top = -461.0
+margin_right = 578.0
+margin_bottom = 389.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -84,8 +90,8 @@ bus = "Master"
 
 [node name="find_saboteur" type="Sprite" parent="." index="4"]
 
-position = Vector2( 643.78, 202.432 )
-scale = Vector2( 0.440119, 0.32746 )
+position = Vector2( 565.58, 287.8 )
+scale = Vector2( 0.0969156, 0.0659776 )
 texture = ExtResource( 6 )
 
 [node name="tooltip" type="Control" parent="find_saboteur" index="0"]
@@ -110,8 +116,8 @@ __meta__ = {
 
 [node name="complete_all_levels" type="Sprite" parent="." index="5"]
 
-position = Vector2( 529.336, 332.244 )
-scale = Vector2( 0.430317, 0.312621 )
+position = Vector2( 450.726, 287.119 )
+scale = Vector2( 0.0958076, 0.0687918 )
 texture = ExtResource( 7 )
 
 [node name="tooltip" type="Control" parent="complete_all_levels" index="0"]
@@ -565,8 +571,8 @@ __meta__ = {
 
 [node name="three_min_math_mast" type="Sprite" parent="." index="22"]
 
-position = Vector2( 392.122, 282.882 )
-scale = Vector2( 0.491999, 0.382819 )
+position = Vector2( 353.701, 273.515 )
+scale = Vector2( 0.0444976, 0.0368155 )
 texture = ExtResource( 24 )
 
 [node name="tooltip" type="Control" parent="three_min_math_mast" index="0"]

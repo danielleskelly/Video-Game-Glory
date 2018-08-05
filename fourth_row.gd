@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 var brick_num = 5
+var row_num = 4
 var five_texture = preload("res://red_box.png")
 var four_texture = preload("res://blue_box.png")
 var three_texture = preload("res://purple_box.png")

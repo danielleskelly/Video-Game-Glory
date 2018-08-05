@@ -1,64 +1,61 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://untilly_time_management.gd" type="Script" id=1]
 [ext_resource path="res://inner_box.png" type="Texture" id=2]
 [ext_resource path="res://background.png" type="Texture" id=3]
 [ext_resource path="res://tetris_bar.png" type="Texture" id=4]
-[ext_resource path="res://pixel_arm.png" type="Texture" id=5]
-[ext_resource path="res://pixel_crotch.png" type="Texture" id=6]
-[ext_resource path="res://pixel_torso.png" type="Texture" id=7]
-[ext_resource path="res://pixel.png" type="Texture" id=8]
-[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://outer_box.png" type="Texture" id=10]
-[ext_resource path="res://untilly.ogg" type="AudioStream" id=11]
-[ext_resource path="res://error_box.png" type="Texture" id=12]
-[ext_resource path="res://button.png" type="Texture" id=13]
-[ext_resource path="res://customer_four.png" type="Texture" id=14]
-[ext_resource path="res://moneybag.png" type="Texture" id=15]
-[ext_resource path="res://ghostie_tag.png" type="Texture" id=16]
-[ext_resource path="res://wasd.png" type="Texture" id=17]
+[ext_resource path="res://pixel_front.png" type="Texture" id=5]
+[ext_resource path="res://Vgg_font-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://outer_box.png" type="Texture" id=7]
+[ext_resource path="res://untilly.ogg" type="AudioStream" id=8]
+[ext_resource path="res://error_box.png" type="Texture" id=9]
+[ext_resource path="res://button.png" type="Texture" id=10]
+[ext_resource path="res://customer_four.png" type="Texture" id=11]
+[ext_resource path="res://moneybag.png" type="Texture" id=12]
+[ext_resource path="res://ghostie_tag.png" type="Texture" id=13]
+[ext_resource path="res://wasd.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=3]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=5]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=6]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="ParticlesMaterial" id=7]
 
@@ -105,25 +102,25 @@ _sections_unfolded = [ "Emission Shape", "Spread", "Trail" ]
 size = 45
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=9]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=10]
 
 size = 45
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 
 [node name="time_management" type="Node2D" index="0"]
 
-position = Vector2( 0, 3 )
+position = Vector2( 0, 3.68451 )
 script = ExtResource( 1 )
 
 [node name="left_border" type="Sprite" parent="." index="0"]
@@ -1599,53 +1596,7 @@ autostart = false
 position = Vector2( 897.147, 88.3655 )
 scale = Vector2( 1.32376, 1.05336 )
 
-[node name="Sprite3" type="Sprite" parent="pixel" index="0"]
-
-position = Vector2( -6.84082, 0.453949 )
-scale = Vector2( 0.305876, 0.305358 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite4" type="Sprite" parent="pixel" index="1"]
-
-position = Vector2( 3.5896, 0.453962 )
-scale = Vector2( 0.305876, 0.305357 )
-texture = ExtResource( 5 )
-flip_h = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite2" type="Sprite" parent="pixel" index="2"]
-
-position = Vector2( -2.4837, 16.3014 )
-scale = Vector2( 0.191555, 0.206924 )
-texture = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite1" type="Sprite" parent="pixel" index="3"]
-
-position = Vector2( -2.23535, 1.73468 )
-scale = Vector2( 0.275769, 0.304022 )
-texture = ExtResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite" type="Sprite" parent="pixel" index="4"]
-
-position = Vector2( -2.08112, -18.0526 )
-scale = Vector2( 0.237608, 0.295692 )
-texture = ExtResource( 8 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="pixel_button" type="LinkButton" parent="pixel" index="5"]
+[node name="pixel_button" type="LinkButton" parent="pixel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1668,6 +1619,12 @@ group = null
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Sprite" type="Sprite" parent="pixel" index="1"]
+
+position = Vector2( -1.22009, -2.27737 )
+scale = Vector2( 0.0234315, 0.0263539 )
+texture = ExtResource( 5 )
 
 [node name="countdown_timer" type="RichTextLabel" parent="." index="167"]
 
@@ -1712,7 +1669,7 @@ autostart = true
 editor/display_folded = true
 position = Vector2( 701.696, 428.098 )
 scale = Vector2( 0.349416, 0.247503 )
-texture = ExtResource( 10 )
+texture = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="success_background" index="0"]
 
@@ -1854,7 +1811,7 @@ override_selected_font_color = false
 
 [node name="StreamPlayer" type="AudioStreamPlayer" parent="." index="170"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 8 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0
@@ -1863,7 +1820,6 @@ bus = "Master"
 [node name="menu" type="Node2D" parent="." index="171"]
 
 pause_mode = 2
-editor/display_folded = true
 visible = false
 position = Vector2( -44.6239, 24.3403 )
 
@@ -1871,7 +1827,7 @@ position = Vector2( -44.6239, 24.3403 )
 
 position = Vector2( 568.461, 232.222 )
 scale = Vector2( 1.01278, 1.14262 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1880,21 +1836,21 @@ __meta__ = {
 
 position = Vector2( 563.22, 209.458 )
 scale = Vector2( 1.48438, 0.448398 )
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 flip_v = true
 
 [node name="button1" type="Sprite" parent="menu" index="2"]
 
 position = Vector2( 566.645, 284.727 )
 scale = Vector2( 1.46154, 0.469405 )
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 flip_v = true
 
 [node name="button2" type="Sprite" parent="menu" index="3"]
 
 position = Vector2( 567.787, 351.358 )
 scale = Vector2( 1.80409, 0.50034 )
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 flip_v = true
 
 [node name="sound" type="RichTextLabel" parent="menu" index="4"]
@@ -1945,14 +1901,14 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 0
 min_value = 0.0
-max_value = 100.0
+max_value = 50.0
 step = 1.0
 page = 0.0
 value = 1.0
 exp_edit = false
 rounded = false
 editable = true
-tick_count = 0
+tick_count = 50
 ticks_on_borders = true
 focus_mode = 2
 
@@ -2034,6 +1990,7 @@ underline = 2
 [node name="are_you_sure" type="Node2D" parent="." index="172"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( 232.8, 30.5738 )
 
@@ -2041,7 +1998,7 @@ position = Vector2( 232.8, 30.5738 )
 
 position = Vector2( 291.31, 225.837 )
 scale = Vector2( 0.879982, 0.984524 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2050,7 +2007,7 @@ __meta__ = {
 
 position = Vector2( 373.233, 321.385 )
 scale = Vector2( 0.513444, 0.539913 )
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2059,7 +2016,7 @@ __meta__ = {
 
 position = Vector2( 202.947, 325.156 )
 scale = Vector2( 0.356354, 0.565047 )
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2150,6 +2107,7 @@ underline = 2
 [node name="are_you_sure_2" type="Node2D" parent="." index="173"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( 221.182, 12.8971 )
 
@@ -2157,19 +2115,19 @@ position = Vector2( 221.182, 12.8971 )
 
 position = Vector2( 303.37, 244.518 )
 scale = Vector2( 0.891163, 0.864922 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="background1" type="Sprite" parent="are_you_sure_2" index="1"]
 
 position = Vector2( 395.927, 328.521 )
 scale = Vector2( 0.441088, 0.612407 )
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 
 [node name="background2" type="Sprite" parent="are_you_sure_2" index="2"]
 
 position = Vector2( 206.988, 329.781 )
 scale = Vector2( 0.365512, 0.662791 )
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="are_you_sure_2" index="3"]
 
@@ -2256,6 +2214,7 @@ underline = 2
 
 [node name="customer_display" type="Node2D" parent="." index="174"]
 
+editor/display_folded = true
 position = Vector2( 534.657, 333.877 )
 scale = Vector2( 14.9956, 8.58391 )
 __meta__ = {
@@ -2280,14 +2239,14 @@ autostart = false
 
 position = Vector2( 27.6143, 23.8742 )
 scale = Vector2( 0.0172057, 0.0222086 )
-texture = ExtResource( 14 )
+texture = ExtResource( 11 )
 
 [node name="moneybag" type="Sprite" parent="customer_display" index="3"]
 
 visible = false
 position = Vector2( 28.8934, 20.3003 )
 scale = Vector2( 0.0229, 0.0328711 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 
 [node name="explosion" type="Particles2D" parent="customer_display" index="4"]
 
@@ -2318,6 +2277,7 @@ _sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Text
 [node name="tutorial" type="Node2D" parent="." index="175"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( 511.98, 301.641 )
 scale = Vector2( 15.9374, 9.49948 )
@@ -2330,7 +2290,7 @@ __meta__ = {
 position = Vector2( 20.4033, -22.2147 )
 rotation = 1.5708
 scale = Vector2( 0.0769144, 0.0542936 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="tutorial/Sprite5" index="0"]
@@ -2377,7 +2337,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -24.5811, -4.89544 )
 rotation = 1.5708
 scale = Vector2( 0.0891735, 0.0577655 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite2" type="Sprite" parent="tutorial/Sprite6" index="0"]
@@ -2427,7 +2387,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( 15.2813, 13.1511 )
 rotation = -1.5708
 scale = Vector2( 0.0745852, 0.0449206 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite3" type="Sprite" parent="tutorial/Sprite4" index="0"]
@@ -2488,7 +2448,7 @@ __meta__ = {
 position = Vector2( -23.05, 14.1814 )
 rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 flip_v = true
 _sections_unfolded = [ "Transform" ]
 
@@ -2529,7 +2489,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( 24.9772, 24.6291 )
 rotation = -1.5708
 scale = Vector2( 0.0760657, 0.0338758 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 flip_v = true
 _sections_unfolded = [ "Transform" ]
 
@@ -2579,7 +2539,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -13.453, 14.0744 )
 rotation = -1.5708
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite11" index="0"]
@@ -2618,7 +2578,7 @@ _sections_unfolded = [ "Rect" ]
 
 position = Vector2( -18.0885, 17.5431 )
 scale = Vector2( 0.0504109, 0.0422474 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite12" index="0"]
 
@@ -2654,7 +2614,7 @@ override_selected_font_color = false
 
 position = Vector2( -18.2256, 7.73583 )
 scale = Vector2( 0.0504109, 0.0422474 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 flip_v = true
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite13" index="0"]
@@ -2812,7 +2772,7 @@ texture = ExtResource( 2 )
 
 position = Vector2( -18.1262, 12.6484 )
 scale = Vector2( 0.0168183, 0.0253723 )
-texture = ExtResource( 17 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2821,7 +2781,7 @@ __meta__ = {
 
 position = Vector2( 24.2053, -11.227 )
 scale = Vector2( 0.0233709, 0.0450107 )
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 
 [node name="tutorial_button" type="LinkButton" parent="tutorial" index="17"]
 
@@ -2852,6 +2812,7 @@ underline = 2
 [node name="in" type="Node2D" parent="." index="176"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 position = Vector2( 511.98, 302.557 )
 scale = Vector2( 16.0518, 9.58532 )

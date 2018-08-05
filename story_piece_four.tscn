@@ -422,7 +422,8 @@ __meta__ = {
 
 [node name="pixel" type="Node2D" parent="." index="3"]
 
-position = Vector2( -19.6193, 5.91246 )
+visible = false
+position = Vector2( -3.4303, 26.0008 )
 scale = Vector2( 0.884005, 0.718394 )
 __meta__ = {
 "_edit_lock_": true
@@ -430,8 +431,8 @@ __meta__ = {
 
 [node name="left_arm" type="Sprite" parent="pixel" index="0"]
 
-position = Vector2( 2.08511, 5.72281 )
-scale = Vector2( 0.0713122, 0.106459 )
+position = Vector2( -0.216479, 7.50532 )
+scale = Vector2( 0.013292, 0.023547 )
 texture = ExtResource( 2 )
 
 [node name="speech_bubble" type="Node2D" parent="." index="4"]
@@ -509,12 +510,12 @@ size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
-bbcode_text = "Wow wow! Bits and bytes that was fantastic!"
+bbcode_text = "..."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Wow wow! Bits and bytes that was fantastic!"
+text = "..."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -524,14 +525,11 @@ override_selected_font_color = false
 
 position = Vector2( 17.7667, -11.6668 )
 scale = Vector2( 0.641126, 0.524294 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="bubble" type="Sprite" parent="other_other_bubble" index="0"]
 
-position = Vector2( -30.0204, 2.73623 )
-scale = Vector2( 0.0446277, 0.0735933 )
+position = Vector2( -29.74, 1.49399 )
+scale = Vector2( 0.0451885, 0.0865029 )
 texture = ExtResource( 14 )
 flip_v = true
 
@@ -555,12 +553,12 @@ size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
-bbcode_text = "Yes... wow. You dealt with those sabotages like they were nothing."
+bbcode_text = "Lately Pixel has been acting suspiciously. I am starting to worry that he is the saboteur."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Yes... wow. You dealt with those sabotages like they were nothing."
+text = "Lately Pixel has been acting suspiciously. I am starting to worry that he is the saboteur."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -569,7 +567,7 @@ override_selected_font_color = false
 [node name="sam" type="Node2D" parent="." index="7"]
 
 position = Vector2( 22.2011, 5.61807 )
-scale = Vector2( 0.264602, 0.251323 )
+scale = Vector2( 0.0705919, 0.0805952 )
 
 [node name="top arm left" type="Sprite" parent="sam" index="0"]
 
@@ -584,7 +582,7 @@ __meta__ = {
 
 stream = ExtResource( 16 )
 volume_db = -10.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Master"
 
@@ -644,6 +642,6 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 
-[connection signal="button_down" from="mute_button" to="." method="_on_mute_button_button_down"]
+[connection signal="toggled" from="mute_button" to="." method="_on_mute_button_toggled"]
 
 

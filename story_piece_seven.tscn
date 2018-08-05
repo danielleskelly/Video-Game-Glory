@@ -24,7 +24,7 @@
 [ext_resource path="res://sam_back_of_crotch.png" type="Texture" id=22]
 [ext_resource path="res://sam_torso.png" type="Texture" id=23]
 [ext_resource path="res://sam_back_of_head.png" type="Texture" id=24]
-[ext_resource path="res://storyline_two.ogg" type="AudioStream" id=25]
+[ext_resource path="res://distorted.ogg" type="AudioStream" id=25]
 [ext_resource path="res://music_icon_on.png" type="Texture" id=26]
 [ext_resource path="res://music_icon_off.png" type="Texture" id=27]
 
@@ -471,19 +471,19 @@ texture = ExtResource( 14 )
 
 [node name="crtv1" type="Sprite" parent="crtv" index="1"]
 
-position = Vector2( 1.51177, 3.44979 )
+position = Vector2( 0.814888, 4.57045 )
 scale = Vector2( 0.125882, 0.0133824 )
 texture = ExtResource( 14 )
 
 [node name="crtv2" type="Sprite" parent="crtv" index="2"]
 
-position = Vector2( 2.68576, -2.0227 )
+position = Vector2( 1.89417, -0.997667 )
 scale = Vector2( 0.125882, 0.0197666 )
 texture = ExtResource( 14 )
 
 [node name="crtv3" type="Sprite" parent="crtv" index="3"]
 
-position = Vector2( 0.0479088, 29.1254 )
+position = Vector2( -0.793741, 27.2309 )
 scale = Vector2( 0.125882, 0.124031 )
 texture = ExtResource( 14 )
 
@@ -532,14 +532,13 @@ override_selected_font_color = false
 
 [node name="other_bubble" type="Node2D" parent="." index="6"]
 
-visible = false
 position = Vector2( 14.3138, -14.0428 )
 scale = Vector2( 0.610145, 0.504589 )
 
 [node name="bubble" type="Sprite" parent="other_bubble" index="0"]
 
-position = Vector2( -25.7961, 16.2031 )
-scale = Vector2( 0.0452081, 0.0786328 )
+position = Vector2( -25.7961, 15.0886 )
+scale = Vector2( 0.0452081, 0.0830908 )
 texture = ExtResource( 17 )
 
 [node name="yes" type="RichTextLabel" parent="other_bubble" index="1"]
@@ -562,12 +561,12 @@ size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
-bbcode_text = "I don't know what is happening!"
+bbcode_text = "I have an idea! I think I can safely send you to the next city while I fix the program!"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "I don't know what is happening!"
+text = "I have an idea! I think I can safely send you to the next city while I fix the program!"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -575,6 +574,7 @@ override_selected_font_color = false
 
 [node name="other_other_bubble" type="Node2D" parent="." index="7"]
 
+visible = false
 position = Vector2( 17.7667, -11.6668 )
 scale = Vector2( 0.641126, 0.524294 )
 
@@ -605,12 +605,12 @@ size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
-bbcode_text = "You have thwarted my plans for the last time!"
+bbcode_text = "You have no chance! You are trapped!"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "You have thwarted my plans for the last time!"
+text = "You have no chance! You are trapped!"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -711,7 +711,7 @@ __meta__ = {
 
 stream = ExtResource( 25 )
 volume_db = -10.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Master"
 
@@ -771,6 +771,6 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 
-[connection signal="button_down" from="mute_button" to="." method="_on_mute_button_button_down"]
+[connection signal="toggled" from="mute_button" to="." method="_on_mute_button_toggled"]
 
 

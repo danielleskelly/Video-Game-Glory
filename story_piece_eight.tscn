@@ -710,11 +710,8 @@ __meta__ = {
 
 [node name="ceo" type="Node2D" parent="inner_office" index="3"]
 
-position = Vector2( -7.04392, 14.5274 )
-scale = Vector2( 0.434718, 0.413263 )
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( -4.12821, 10.4036 )
+scale = Vector2( 0.11642, 0.115551 )
 
 [node name="left_arm" type="Sprite" parent="inner_office/ceo" index="0"]
 
@@ -820,8 +817,6 @@ __meta__ = {
 
 [node name="crtv" type="Node2D" parent="." index="4"]
 
-visible = false
-
 [node name="crtv" type="Sprite" parent="crtv" index="0"]
 
 position = Vector2( -1.33893, -17.9561 )
@@ -830,19 +825,19 @@ texture = ExtResource( 14 )
 
 [node name="crtv1" type="Sprite" parent="crtv" index="1"]
 
-position = Vector2( 40.471, 218.779 )
+position = Vector2( 1.9904, -3.54254 )
 scale = Vector2( 0.125882, 0.0133824 )
 texture = ExtResource( 14 )
 
 [node name="crtv2" type="Sprite" parent="crtv" index="2"]
 
-position = Vector2( 40.8005, 350.395 )
+position = Vector2( 0.844475, 3.19747 )
 scale = Vector2( 0.125882, 0.0315401 )
 texture = ExtResource( 14 )
 
 [node name="crtv3" type="Sprite" parent="crtv" index="3"]
 
-position = Vector2( 40.8006, 729.932 )
+position = Vector2( 1.66374, 31.5559 )
 scale = Vector2( 0.125882, 0.124031 )
 texture = ExtResource( 14 )
 
@@ -1013,12 +1008,12 @@ size_flags_vertical = 2
 custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
-bbcode_text = "Thank you so much for helping us bring this villian to justice."
+bbcode_text = "Yes, that supports our data as well."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Thank you so much for helping us bring this villian to justice."
+text = "Yes, that supports our data as well."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -1120,7 +1115,7 @@ __meta__ = {
 
 stream = ExtResource( 27 )
 volume_db = -10.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Master"
 
@@ -1275,7 +1270,7 @@ __meta__ = {
 [node name="the_question1" type="Node2D" parent="." index="14"]
 
 visible = false
-position = Vector2( 36.758, -1.00307 )
+position = Vector2( 36.758, -0.932043 )
 
 [node name="Sprite" type="Sprite" parent="the_question1" index="0"]
 
@@ -1368,7 +1363,7 @@ __meta__ = {
 
 [connection signal="button_down" from="skip_button" to="." method="_on_skip_button_button_down"]
 
-[connection signal="button_down" from="mute_button" to="." method="_on_mute_button_button_down"]
+[connection signal="toggled" from="mute_button" to="." method="_on_mute_button_toggled"]
 
 [connection signal="button_down" from="the_question/pixel_accuse" to="." method="_on_pixel_accuse_button_down"]
 

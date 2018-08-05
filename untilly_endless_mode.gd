@@ -2,15 +2,11 @@ extends Node2D
 
 var game_over = false
 
-var stopwatch = 0
-
 onready var countdown_timer = get_node("countdown_timer")
 
 var hundreds
 var tens
 var ones
-
-var new_volume
 
 var customer_choice
 var price_choice
@@ -20,10 +16,11 @@ var concession_choice
 var concessions_desire
 var concessions_price_check
 
+var stopwatch = 0
+
 onready var pixel = get_node("pixel")
 
 var current_piece
-
 var left_timer
 var right_timer
 
@@ -49,7 +46,6 @@ var rotate = 1
 func _ready():
 	get_tree().set_pause(true)
 	countin()
-	get_node("StreamPlayer").set_volume_db(sound.volume)
 	block_load = preload("res://tetris_one.tscn")
 	block_daddy = get_node("blocks")
 	left_timer = get_node("left_timer")
@@ -66,10 +62,10 @@ func _ready():
 	
 func _process(delta):
 	if game_over == true:
-		var game = get_tree().get_nodes_in_group("game_over")
-		for x in game:
+		var game_over = get_tree().get_nodes_in_group("game_over")
+		for x in game_over:
 			x.show()
-		get_tree().set_pause(true)
+			get_tree().set_pause(true)
 		
 	tetris_lines.line_check()
 	hundreds = get_node("success_background/hundreths")
@@ -77,7 +73,7 @@ func _process(delta):
 	ones = get_node("success_background/ones")
 	point_display()
 	countdown_timer.clear()
-	countdown_timer.add_text(str(stopwatch))
+	countdown_timer.set_text(str(stopwatch))
 	
 func _physics_process(delta):
 	if (Input.is_action_pressed("fire")) and get_node("rotate_timer").get_time_left() == 0:
@@ -2753,23 +2749,33 @@ func _on_day_timer_timeout():
 	stopwatch += 1
 
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume_db(new_volume)
+	AudioServer.set_bus_volume_db(0,value - 50)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
 	get_node("menu").hide()
 
+
 func _on_return_to_village_button_down():
 	get_node("are_you_sure").show()
 
 
+func _on_yes_village_button_down():
+	perks.success = 0
+	get_tree().set_pause(false)
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_fso):
+		rewards_globals.three_min_fso = stopwatch
+	get_tree().change_scene("res://endless_mode.tscn")
+	
+
+func _on_no_village_button_down():
+	get_node("are_you_sure").hide()
 	
 func countin():
 	get_node("in").show()
@@ -2789,18 +2795,10 @@ func _on_count_timer_timeout():
 
 
 
-func _on_yes_village_button_down():
-	get_tree().paused = false
-	get_tree().change_scene("res://endless_mode.tscn")
-	
-
-func _on_no_village_button_down():
-	get_node("are_you_sure").hide()
-
-
-func _on_game_over_button_button_up():
+func _on_game_over_button_button_down():
+	perks.success = 0
 	get_tree().set_pause(false)
-	rewards_globals.million_total_minigame_points += perks.success
-	if stopwatch > rewards_globals.three_min_fso:
+	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
+	if int(stopwatch) > int(rewards_globals.three_min_fso):
 		rewards_globals.three_min_fso = stopwatch
 	get_tree().change_scene("res://endless_mode.tscn")

@@ -2,8 +2,6 @@ extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
 
-var new_volume
-
 var hundreds
 var tens
 var ones
@@ -13,7 +11,6 @@ var customer
 var size
 
 func _ready():
-	set_sound()
 	size = get_viewport_rect()
 	pixel = get_node("pixel")
 	customer = get_node("customer")
@@ -87,12 +84,12 @@ func _on_day_timer_timeout():
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
-	AudioServer.set_bus_volume_db(0,value-50)
+	AudioServer.set_bus_volume_db(0,value - 50)
 
 func point_display():
 		var one_ones_digit = ((perks.success + perks.perk_final_count)) % 10
@@ -172,7 +169,3 @@ func _on_count_timer_timeout():
 		get_node("in").hide()
 		get_node("in/count_timer").stop()
 		get_tree().set_pause(false)
-
-func set_sound():
-	var music = get_node("StreamPlayer")
-	music.set_volume_db(sound.volume)

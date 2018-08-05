@@ -7,10 +7,10 @@ path="res://.import/banlon.ogg-54e038057d1c6d5a1fdca823d2bd2ff2.oggstr"
 [deps]
 
 source_file="res://banlon.ogg"
-source_md5="00ace0fe3a5fd1853872d07533db47ea"
+source_md5="61d2966ef868ef7bcf8fe6948483634b"
 
 dest_files=[ "res://.import/banlon.ogg-54e038057d1c6d5a1fdca823d2bd2ff2.oggstr" ]
-dest_md5="154d362f68060c71d7c91163d42294f0"
+dest_md5="5a83f510bc67d5f09017b80ef32d5c68"
 
 [params]
 

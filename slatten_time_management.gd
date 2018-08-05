@@ -2,8 +2,6 @@ extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
 
-var new_volume
-
 var hundreds
 var tens
 var ones
@@ -37,7 +35,6 @@ func _ready():
 	else:
 		get_tree().set_pause(true)
 		countin()
-	get_node("StreamPlayer").set_volume_db(sound.volume)
 	set_process(true)
 	set_physics_process(true)
 	
@@ -100,14 +97,12 @@ func _physics_process(delta):
 		pass
 	elif sams_block.brick_num == 2:
 		sams_block.brick_num = 1
-		if perks.success > 2:
-			perks.success -= 1
 		
 		
 	var berts_block = get_node(bert_pos)
 	if berts_block.brick_num == 0:
 		berts_block.brick_num = 2
-		perks.success += 2
+		perks.success += 1
 	elif berts_block.brick_num == 1:
 		berts_block.brick_num = 2
 	elif berts_block.brick_num == 2:
@@ -132,14 +127,12 @@ func _on_day_timer_timeout():
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_pixel_button_button_down():
+	get_node("menu/sound_slider").set_value(int(sound.volume + 50))
 	get_tree().set_pause(true)
 	get_node("menu").show()
-	get_node("menu/sound_slider").set_value(int(sound.volume * 100))
 
 func _on_sound_slider_value_changed( value ):
-	new_volume = value / 100
-	sound.volume = new_volume
-	get_node("StreamPlayer").set_volume_db(new_volume)
+	AudioServer.set_bus_volume_db(0,value - 50)
 
 func _on_return_to_game_button_down():
 	get_tree().set_pause(false)
@@ -183,7 +176,6 @@ func _on_customer_timeout():
 	get_node("customer_display/pop_timer").start()
 
 func _on_tutorial_button_button_down():
-	print(true)
 	get_node("tutorial").hide()
 	countin()
 	

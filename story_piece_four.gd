@@ -1,28 +1,29 @@
 extends Node2D
 
+var texture_off = load("res://music_icon_off.png")
+var texture_on = load("res://music_icon_on.png")
+
 func _ready():
 	set_sound()
-
+	
+func _on_mute_button_toggled( pressed ):
+	if sound.volume > -25:
+		AudioServer.set_bus_volume_db(0, -50)
+	elif sound.volume < -25:
+		AudioServer.set_bus_volume_db(0, 0)
+		
+func set_sound():
+	if sound.volume > -25:
+		get_node("mute_button").texture_normal = texture_on
+		get_node("mute_button").texture_pressed = texture_off
+	elif sound.volume < -25:
+		get_node("mute_button").texture_normal = texture_off
+		get_node("mute_button").texture_pressed = texture_on
 
 func _on_skip_button_button_down():
 	global.town_select = "untilly"
 	global.level_reset()
 	get_tree().change_scene("res://strategy.tscn")
-
-
-func set_sound():
-	get_node("StreamPlayer").set_volume_db(sound.volume)
-
-func _on_mute_button_button_down():
-	if (get_node("StreamPlayer").is_playing() == true):
-		get_node("StreamPlayer").stop()
-		sound.music_mute = true
-	elif (get_node("StreamPlayer").is_playing() == false):
-		get_node("StreamPlayer").play()
-		sound.music_mute = false
-		sound.volume = .75
-		set_sound()
-
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	global.town_select = "untilly"

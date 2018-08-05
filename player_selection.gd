@@ -2,10 +2,17 @@ extends Node2D
 
 var endless_button
 
-func _ready():
+var texture_off = load("res://music_icon_off.png")
+var texture_on = load("res://music_icon_on.png")
+
+var file
+
+func ready():
 	set_process(true)
 	
+
 func _process(delta):
+	find_file()
 	if rewards_globals.unseen == 0:
 		get_node("rewards/unseen_badge").hide()
 	elif rewards_globals.unseen > 0:
@@ -13,40 +20,17 @@ func _process(delta):
 		get_node("rewards/unseen_badge/unseen_number").clear()
 		get_node("rewards/unseen_badge/unseen_number").add_text(str(rewards_globals.unseen))
 	endless_button = get_node("endless_mode")
-	var file = File.new()
+	if global.endless_unlocked == str(true):
+		endless_button.show()
+	elif global.endless_unlocked == str(false) or file.file_exists("user://savegame.save") == false:
+		endless_button.hide()
+
+func find_file():
+	file = File.new()
 	file.open("user://savegame.save", file.READ)
 	if file.file_exists("user://savegame.save") == true:
-		file.get_line()
-		var global_mode = file.get_line()
-		global.endless_unlocked = "true"
-		file.close()
-		if global.endless_unlocked == "true":
-			endless_button.show()
-		elif global.endless_unlocked == "false":
-			endless_button.hide()
-	elif file.file_exists("user://savegame.save") == false:
-			endless_button.hide()
-
-func _on_music_button_toggled( pressed ):
-	if (get_node("StreamPlayer").is_playing() == true):
-		get_node("StreamPlayer").stop()
-		sound.music_mute = true
-	elif (get_node("StreamPlayer").is_playing() == false):
-		get_node("StreamPlayer").play()
-		sound.music_mute = false
-
-func _on_load_button_button_up():
-	load_game()
-	
-func load_game():
-	var file = File.new()
-	file.open("user://savegame.save", file.READ)
-	if file.file_exists("user://savegame.save") == true:
-		var town_load = file.get_line()
-		global.town_select = town_load
-		if town_load == "untilly":
-			global.current_loan = 500
-		file.get_line()
+		global.town_select = file.get_line()
+		global.endless_unlocked = file.get_line()
 		rewards_globals.complete_hollyhock = file.get_line()
 		rewards_globals.complete_fiyork = file.get_line()
 		rewards_globals.complete_untilly = file.get_line()
@@ -76,7 +60,6 @@ func load_game():
 		rewards_globals.three_min_twfb = file.get_line()
 		rewards_globals.three_min_jad = file.get_line()
 		rewards_globals.three_min_lo = file.get_line()
-		global.endless_unlocked = file.get_line()
 		global.yellow_eating_dot = file.get_line()
 		global.shoot_that_rock = file.get_line()
 		global.falling_shapes_organization = file.get_line()
@@ -85,7 +68,22 @@ func load_game():
 		global.jump_and_dodge = file.get_line()
 		global.lights_off = file.get_line()
 		file.close()
-		get_tree().change_scene("res://strategy.tscn")
+
+func _on_music_button_toggled( pressed ):
+	if sound.music_mute == false:
+		AudioServer.set_bus_volume_db(0, sound.volume - 50)
+		sound.music_mute = true
+	elif sound.music_mute == true:
+		AudioServer.set_bus_volume_db(0, sound.volume + 50)
+		sound.music_mute = false
+
+func _on_load_button_button_up():
+	load_game()
+	
+func load_game():
+	if global.town_select == "untilly" or global.town_select == "banlon" or global.town_select == "slatten":
+		global.current_loan = 500
+	get_tree().change_scene("res://strategy.tscn")
 
 func _on_new_button_button_up():
 	var file = File.new()
@@ -116,8 +114,9 @@ func _on_no_overwrite_button_up():
 
 func _on_yes_overwrite_button_up():
 	get_tree().set_pause(false)
-	global.town_select == "hollyhock"
-	global.endless_unlocked == "false"
+	global.town_select = "hollyhock"
+	global.endless_unlocked = false
+	global.level_reset()
 	get_node("new_game_overwrite").hide()
 	get_tree().change_scene("res://story_piece_one.tscn")
 
