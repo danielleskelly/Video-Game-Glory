@@ -1,18 +1,15 @@
 extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
+onready var bert = get_node("qbert")
 
 var hundreds
 var tens
 var ones
 
-var sam_leftright = 11
 var bert_updown = 0
 var bert_leftright = 0
 
-signal sam_moved
-
-onready var pixel = get_node("pixel")
 var bert_x
 var bert_y
 
