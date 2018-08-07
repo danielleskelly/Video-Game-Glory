@@ -6,33 +6,33 @@ func _ready():
 	pass
 	
 func _process(delta):
-	if global.yellow_eating_dot == str(true):
+	if str(global.yellow_eating_dot) == str(true):
 		get_node("yellow_eating_dot").show()
-	elif global.yellow_eating_dot == str(false):
+	elif str(global.yellow_eating_dot) == str(false):
 		get_node("yellow_eating_dot").hide()
-	if global.shoot_that_rock == str(true):
+	if str(global.shoot_that_rock) == str(true):
 		get_node("shoot_that_rock").show()
-	elif global.shoot_that_rock == str(false):
+	elif str(global.shoot_that_rock) == str(false):
 		get_node("shoot_that_rock").hide()
-	if global.falling_shapes_organization == str(true):
+	if str(global.falling_shapes_organization) == str(true):
 		get_node("falling_shapes_organization").show()
-	elif global.falling_shapes_organization == str(false):
+	elif str(global.falling_shapes_organization) == str(false):
 		get_node("falling_shapes_organization").hide()
-	if global.mathmatic_mastication == str(true):
+	if str(global.mathmatic_mastication) == str(true):
 		get_node("mathmatic_mastication").show()
-	elif global.mathmatic_mastication == str(false):
+	elif str(global.mathmatic_mastication) == str(false):
 		get_node("mathmatic_mastication").hide()
-	if global.tall_wall_fall_ball == str(true):
+	if str(global.tall_wall_fall_ball) == str(true):
 		get_node("tall_wall_fall_ball").show()
-	elif global.tall_wall_fall_ball == str(false):
+	elif str(global.tall_wall_fall_ball) == str(false):
 		get_node("tall_wall_fall_ball").hide()
-	if global.jump_and_dodge == str(true):
+	if str(global.jump_and_dodge) == str(true):
 		get_node("jump_and_dodge").show()
-	elif global.jump_and_dodge == str(false):
+	elif str(global.jump_and_dodge) == str(false):
 		get_node("jump_and_dodge").hide()
-	if global.lights_off == str(true):
+	if str(global.lights_off) == str(true):
 		get_node("lights_off").show()
-	elif global.lights_off == str(false):
+	elif str(global.lights_off) == str(false):
 		get_node("lights_off").hide()
 
 func _on_yellow_eating_button_button_up():

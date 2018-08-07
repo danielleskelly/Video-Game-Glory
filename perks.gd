@@ -100,7 +100,7 @@ func perk_check():
 	if int(perks.success) > int(rewards_globals.points_in_one_minigame):
 		rewards_globals.points_in_one_minigame = int(perks.success)
 		rewards_globals.million_total_minigame_points = int(perks.success) + int(rewards_globals.million_total_minigame_points)
-	if (int(perks.perk_goal) <= int(perks.success)):
+	if int(perks.perk_goal) <= int(perks.success):
 			if (perks.perk_num == 1):
 				perk_one_fulfill()
 			elif (perks.perk_num == 2):

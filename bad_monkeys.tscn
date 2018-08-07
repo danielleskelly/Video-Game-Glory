@@ -74,7 +74,7 @@ tracks/4/keys = {
 "values": [ Vector2( 0.167749, -3.33488 ), Vector2( 0, 0 ) ]
 }
 
-[node name="bad_monkeys" type="Node2D"]
+[node name="bad_monkeys" type="Node2D" index="0"]
 
 position = Vector2( 511.274, 305.2 )
 scale = Vector2( 15.9856, 9.54584 )
