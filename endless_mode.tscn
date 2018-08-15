@@ -26,7 +26,7 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 2 )
 
-[node name="endless_mode" type="Node2D"]
+[node name="endless_mode" type="Node2D" index="0"]
 
 position = Vector2( 509.66, 305.995 )
 scale = Vector2( 15.9492, 9.58466 )

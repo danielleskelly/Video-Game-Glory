@@ -16,6 +16,7 @@ var stopwatch = 0
 onready var pixel = get_node("pixel")
 
 func _ready():
+	perks.success = 0
 	size = get_viewport_rect()
 	get_node("spaceship").set_global_position(Vector2(size.size.x/2, size.size.y/2))
 	countin()
@@ -142,11 +143,12 @@ func _on_return_to_village_button_down():
 
 
 func _on_yes_village_button_down():
-	perks.success = 0
 	get_tree().set_pause(false)
 	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
 	if int(stopwatch) > int(rewards_globals.three_min_str):
 		rewards_globals.three_min_str = stopwatch
+	global.save_game()
+	perks.success = 0
 	get_tree().change_scene("res://endless_mode.tscn")
 	
 
@@ -174,9 +176,10 @@ func _on_count_timer_timeout():
 
 
 func _on_game_over_button_button_down():
-	perks.success = 0
 	get_tree().set_pause(false)
 	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
 	if int(stopwatch) > int(rewards_globals.three_min_str):
 		rewards_globals.three_min_str = stopwatch
+	global.save_game()
+	perks.success = 0
 	get_tree().change_scene("res://endless_mode.tscn")

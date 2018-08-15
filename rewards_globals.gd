@@ -117,3 +117,53 @@ func _process(delta):
 	if int(three_min_lo) > 180 and str(three_min_lo_unlocked) == str(false):
 		three_min_lo_unlocked = true
 		unseen += 1
+		
+		
+func rewards_reset():
+	complete_hollyhock = false
+	complete_fiyork = false
+	complete_untilly = false
+	complete_plansey = false
+	complete_windrow = false
+	complete_banlon = false
+	complete_slatten = false
+
+	minigames_played = 0
+	minigames_unlocked = false
+	points_in_one_minigame = 0
+	points_unlocked = false
+	million_total_minigame_points = 0
+	million_total_unlocked = false
+	fifty_business_days = 0
+	fifty_days_unlocked = false
+	hundred_per_hollyhock = false
+	hundred_per_fiyork = false
+	hundred_per_untilly = false
+	hundred_per_plansey = false
+	hundred_per_windrow = false
+	hundred_per_banlon = false
+	hundred_per_slatten = false
+
+	total_player_satisfaction = []
+	total_player_unlocked = false
+
+	find_saboteur = false
+	complete_all_levels = false
+	earn_thousand_unlocked = false
+	earn_thousand = 0
+
+	three_min_yed = 0
+	three_min_str = 0
+	three_min_fso = 0
+	three_min_math_mast = 0
+	three_min_twfb = 0
+	three_min_jad = 0
+	three_min_lo = 0
+
+	three_min_yed_unlocked = false
+	three_min_str_unlocked = false
+	three_min_fso_unlocked = false
+	three_min_math_mast_unlocked = false
+	three_min_twfb_unlocked = false
+	three_min_jad_unlocked = false
+	three_min_lo_unlocked = false

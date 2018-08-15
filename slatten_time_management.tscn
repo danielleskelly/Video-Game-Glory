@@ -3769,6 +3769,8 @@ _sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Text
 [node name="tutorial" type="Node2D" parent="." index="110"]
 
 pause_mode = 2
+editor/display_folded = true
+visible = false
 position = Vector2( 512.893, 313.258 )
 scale = Vector2( 16.048, 9.67647 )
 __meta__ = {
@@ -3972,7 +3974,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "you"
+text = "left"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -4279,7 +4281,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Welcome to Lights Off!"
+text = "Welcome to Tall Wall Fall Ball!"
 scroll_active = true
 scroll_following = false
 selection_enabled = false

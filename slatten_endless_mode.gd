@@ -17,6 +17,7 @@ var bert_y
 var stopwatch = 0
 
 func _ready():
+	perks.success = 0
 	random_board()
 	get_tree().set_pause(true)
 	countin()
@@ -80,7 +81,7 @@ func check_board():
 			brick_count += 1
 	if brick_count <= 5:
 		random_board()
-		perks.success += 100
+		perks.success += 10
 	brick_count = 0
 
 func point_display():
@@ -116,11 +117,12 @@ func _on_return_to_village_button_down():
 
 
 func _on_yes_village_button_down():
-	perks.success = 0
 	get_tree().set_pause(false)
 	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
 	if int(stopwatch) > int(rewards_globals.three_min_jad):
 		rewards_globals.three_min_jad = stopwatch
+	global.save_game()
+	perks.success = 0
 	get_tree().change_scene("res://endless_mode.tscn")
 	
 
@@ -156,11 +158,12 @@ func random_board():
 			light.pressed = false
 
 func _on_game_over_button_button_down():
-	perks.success = 0
 	get_tree().set_pause(false)
 	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
 	if int(stopwatch) > int(rewards_globals.three_min_lo):
 		rewards_globals.three_min_lo = stopwatch
+	global.save_game()
+	perks.success = 0
 	get_tree().change_scene("res://endless_mode.tscn")
 	
 	
@@ -3168,7 +3171,7 @@ func fire():
 			$"87".pressed = true
 			perks.success += 2
 
-	elif bert_updown == 7 and bert_leftright == 78:
+	elif bert_updown == 7 and bert_leftright == 8:
 		if $"77".pressed == true:
 			$"77".pressed = false
 			if perks.success > 5:

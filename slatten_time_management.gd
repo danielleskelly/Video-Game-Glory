@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var countdown_timer = get_node("countdown_timer")
+onready var bert = get_node("qbert")
 
 var hundreds
 var tens
@@ -12,7 +13,7 @@ var bert_leftright = 0
 
 signal sam_moved
 
-onready var pixel = get_node("pixel")
+onready var pixel = get_node("pixel_button")
 var bert_x
 var bert_y
 
@@ -2930,41 +2931,31 @@ func fire():
 
 	elif bert_updown == 7 and bert_leftright == 8:
 		if $"77".pressed == true:
-			$"77".pressed = false
-			 
-				 
+			$"77".pressed = false 
 		elif $"77".pressed == false:
 			$"77".pressed = true
 			 
 			
 		if $"78".pressed == true:
-			$"78".pressed = false
-			 
-				 
+			$"78".pressed = false 
 		elif $"78".pressed == false:
 			$"78".pressed = true
 			 
 		
 		if $"79".pressed == true:
 			$"79".pressed = false
-			 
-				 
 		elif $"79".pressed == false:
 			$"79".pressed = true
 			 
 			
 		if $"68".pressed == true:
 			$"68".pressed = false
-			 
-				 
 		elif $"68".pressed == false:
 			$"68".pressed = true
 			 
 		
 		if $"88".pressed == true:
 			$"88".pressed = false
-			 
-				 
 		elif $"88".pressed == false:
 			$"88".pressed = true
 			 
@@ -2972,41 +2963,31 @@ func fire():
 	elif bert_updown == 7 and bert_leftright == 9:
 		if $"78".pressed == true:
 			$"78".pressed = false
-			 
-				 
 		elif $"78".pressed == false:
 			$"78".pressed = true
 			 
 			
 		if $"79".pressed == true:
-			$"79".pressed = false
-			 
-				 
+			$"79".pressed = false 
 		elif $"79".pressed == false:
 			$"79".pressed = true
 			 
 			
 		if $"69".pressed == true:
 			$"69".pressed = false
-			 
-				 
 		elif $"69".pressed == false:
 			$"69".pressed = true
 			 
 		
 		if $"89".pressed == true:
-			$"89".pressed = false
-			 
-				 
+			$"89".pressed = false 
 		elif $"89".pressed == false:
 			$"89".pressed = true
 			 
 
 	elif bert_updown == 8 and bert_leftright == 0:
 		if $"81".pressed == true:
-			$"81".pressed = false
-			 
-				 
+			$"81".pressed = false 
 		elif $"81".pressed == false:
 			$"81".pressed = true
 			 

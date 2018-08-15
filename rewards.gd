@@ -64,28 +64,22 @@ func _process(delta):
 	elif int(rewards_globals.fifty_business_days) < 50:
 		get_node("fifty_business_days").set_texture(load("res://file_icon_greyscale.png"))
 		get_node("fifty_business_days/tooltip").set_tooltip("50 Business Days " + str(rewards_globals.fifty_business_days) + " / 50")
-	if int(rewards_globals.million_total_minigame_points) > 1000000:
+	if int(rewards_globals.million_total_minigame_points) > 1000:
 		get_node("million_total_points").set_texture(load("res://soda.png"))
 		get_node("million_total_points/tooltip").set_tooltip("You have recieved the title Master of Minigames! Rock on!")
-	elif int(rewards_globals.million_total_minigame_points) < 1000000:
+	elif int(rewards_globals.million_total_minigame_points) < 1000:
 		get_node("million_total_points").set_texture(load("res://soda_greyscale.png"))
-		get_node("million_total_points/tooltip").set_tooltip("One Million Minigame Points " + str(rewards_globals.million_total_minigame_points) + " / 1000000")
-	if rewards_globals.total_player_satisfaction.size() == 7:
-		get_node("total_player_satisfaction").set_texture(load("res://customer_four.png"))
-		get_node("total_player_satisfaction/tooltip").set_tooltip("You have made every player within our kingdom happy! I don't even know how that is possible!")
-	elif rewards_globals.total_player_satisfaction.size() < 7:
-		get_node("total_player_satisfaction").set_texture(load("res://customer_four_greyscale.png"))
-		get_node("total_player_satisfaction/tooltip").set_tooltip("100% Customer Satisfation in All Towns " + str(rewards_globals.total_player_satisfaction.size()) + " / 7")
+		get_node("million_total_points/tooltip").set_tooltip("One Thousand Minigame Points " + str(rewards_globals.million_total_minigame_points) + " / 1000")
 	if int(rewards_globals.three_min_yed) >= 180:
-		get_node("three_min_yed").set_texture(load("res://green_ghostie.png"))
+		get_node("three_min_yed").set_texture(load("res://greenie_ghostie.png"))
 		get_node("three_min_yed/tooltip").set_tooltip("You are the best at Yellow Eating Dot! Good job!")
-	elif int(rewards_globals.three_min_yed) < 180:
+	elif int(rewards_globals.three_min_yed) <= 180:
 		get_node("three_min_yed").set_texture(load("res://green_ghostie_greyscale.png"))
 		get_node("three_min_yed/tooltip").set_tooltip("Yellow Eating Dot Current High Score " + str(rewards_globals.three_min_yed) + " / 180")
 	if int(rewards_globals.three_min_str) >= 180:
 		get_node("three_min_str").set_texture(load("res://pizza.png"))
 		get_node("three_min_str/tooltip").set_tooltip("You are the best at Shoot that Rock! Good job!")
-	elif int(rewards_globals.three_min_str) < 180:
+	elif int(rewards_globals.three_min_str) <= 180:
 		get_node("three_min_str").set_texture(load("res://pizza_greyscale.png"))
 		get_node("three_min_str/tooltip").set_tooltip("Shoot that Rock! Current High Score " + str(rewards_globals.three_min_str) + " / 180")
 	if int(rewards_globals.three_min_fso) >= 180:
@@ -94,7 +88,7 @@ func _process(delta):
 		get_node("three_min_fso/Sprite1").set_texture(load("res://tetris_bar.png"))
 		get_node("three_min_fso/Sprite2").set_texture(load("res://tetris_bar.png"))
 		get_node("three_min_fso/tooltip").set_tooltip("You are the best at Falling Shapes Organization! Good job!")
-	elif int(rewards_globals.three_min_fso) < 180:
+	elif int(rewards_globals.three_min_fso) <= 180:
 		get_node("three_min_fso").set_texture(load("res://tetris_bar_greyscale.png"))
 		get_node("three_min_fso/Sprite").set_texture(load("res://tetris_bar_greyscale.png"))
 		get_node("three_min_fso/Sprite1").set_texture(load("res://tetris_bar_greyscale.png"))
@@ -103,14 +97,14 @@ func _process(delta):
 	if int(rewards_globals.three_min_math_mast) >= 180:
 		get_node("three_min_math_mast").set_texture(load("res://pixel_front.png"))
 		get_node("three_min_math_mast/tooltip").set_tooltip("You are the best at Mathmatic Mastication! Good job!")
-	elif int(rewards_globals.three_min_math_mast) < 180:
+	elif int(rewards_globals.three_min_math_mast) <= 180:
 		get_node("three_min_math_mast").set_texture(load("res://pixel_greyscale.png"))
 		get_node("three_min_math_mast/tooltip").set_tooltip("Mathmatic Mastication Current High Score " + str(rewards_globals.three_min_math_mast) + " / 180")
 	if int(rewards_globals.three_min_twfb) >= 180:
 		get_node("three_min_twfb").set_texture(load("res://bullet.png"))
-		get_node("three_min_twfb/Sprite").set_texture(load("res://inner_box.png"))
+		get_node("three_min_twfb/Sprite").set_texture(load("res://paddle.png"))
 		get_node("three_min_twfb/tooltip").set_tooltip("You are the best at Tall Wall Fall Ball! Good job!")
-	elif int(rewards_globals.three_min_twfb) < 180:
+	elif int(rewards_globals.three_min_twfb) <= 180:
 		get_node("three_min_twfb").set_texture(load("res://bullet_greyscale.png"))
 		get_node("three_min_twfb/Sprite").set_texture(load("res://inner_box_greyscale.png"))
 		get_node("three_min_twfb/tooltip").set_tooltip("Tall Wall Fall Ball Current High Score " + str(rewards_globals.three_min_twfb) + " / 180")
@@ -118,7 +112,7 @@ func _process(delta):
 		get_node("three_min_jad").set_texture(load("res://road.png"))
 		get_node("three_min_jad/Sprite").set_texture(load("res://ship.png"))
 		get_node("three_min_jad/tooltip").set_tooltip("You are the best at Jump and Dodge! Good job!")
-	elif int(rewards_globals.three_min_jad) < 180:
+	elif int(rewards_globals.three_min_jad) <= 180:
 		get_node("three_min_jad").set_texture(load("res://road_greyscale.png"))
 		get_node("three_min_jad/Sprite").set_texture(load("res://sam_head_greyscale.png"))
 		get_node("three_min_jad/tooltip").set_tooltip("Jump and Dodge Current High Score " + str(rewards_globals.three_min_jad) + " / 180")
@@ -126,7 +120,7 @@ func _process(delta):
 		get_node("three_min_lo").set_texture(load("res://pixel.png"))
 		get_node("three_min_lo/Sprite 2").set_texture(load("res://sam_head.png"))
 		get_node("three_min_lo/tooltip").set_tooltip("You are the best at Lights Off! Good job!")
-	elif int(rewards_globals.three_min_lo) < 180:
+	elif int(rewards_globals.three_min_lo) <= 180:
 		get_node("three_min_lo").set_texture(load("res://sam_head_greyscale.png"))
 		get_node("three_min_lo/Sprite 2").set_texture(load("res://sam_head_greyscale.png"))
 		get_node("three_min_lo/tooltip").set_tooltip("Lights Off! Current High Score " + str(rewards_globals.three_min_lo) + " / 180")
@@ -142,12 +136,6 @@ func _process(delta):
 	elif (rewards_globals.complete_all_levels) == str(false):
 		get_node("complete_all_levels").set_texture(load("res://ceo_greyscale.png"))
 		get_node("complete_all_levels/tooltip").set_tooltip("Complete All Levels")
-	if (rewards_globals.earn_thousand_unlocked) == str(true):
-		get_node("earn_thousand").set_texture(load("res://moneybag.png"))
-		get_node("earn_thousand/tooltip").set_tooltip("You have earned $1000 in one day. Way to exceed goals!")
-	elif (rewards_globals.earn_thousand_unlocked) == str(false):
-		get_node("earn_thousand").set_texture(load("res://moneybag_greyscale.png"))
-		get_node("earn_thousand/tooltip").set_tooltip("Earn $1000 in one Day " + str(rewards_globals.earn_thousand) + " / 1000")
 
 
 func _on_back_button_button_down():

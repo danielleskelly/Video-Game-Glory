@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://banlon_time_management.gd" type="Script" id=1]
 [ext_resource path="res://road.png" type="Texture" id=2]
@@ -10,14 +10,14 @@
 [ext_resource path="res://banlon.ogg" type="AudioStream" id=8]
 [ext_resource path="res://error_box.png" type="Texture" id=9]
 [ext_resource path="res://button.png" type="Texture" id=10]
-[ext_resource path="res://customer_four.png" type="Texture" id=11]
-[ext_resource path="res://moneybag.png" type="Texture" id=12]
-[ext_resource path="res://ghostie_tag.png" type="Texture" id=13]
-[ext_resource path="res://wasd.png" type="Texture" id=14]
-[ext_resource path="res://road1.gd" type="Script" id=15]
-[ext_resource path="res://ship.png" type="Texture" id=16]
-[ext_resource path="res://road2.gd" type="Script" id=17]
-[ext_resource path="res://road3.gd" type="Script" id=18]
+[ext_resource path="res://ghostie_tag.png" type="Texture" id=11]
+[ext_resource path="res://wasd.png" type="Texture" id=12]
+[ext_resource path="res://road1.gd" type="Script" id=13]
+[ext_resource path="res://ship.png" type="Texture" id=14]
+[ext_resource path="res://road2.gd" type="Script" id=15]
+[ext_resource path="res://road3.gd" type="Script" id=16]
+[ext_resource path="res://customer_four.png" type="Texture" id=17]
+[ext_resource path="res://moneybag.png" type="Texture" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -59,12 +59,52 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="Curve2D" id=7]
+[sub_resource type="Curve2D" id=8]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -60.88, 14.8819, 0, 0, 0, 0, 117.587, 14.6436 )
 }
+
+[sub_resource type="ParticlesMaterial" id=9]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 10.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 1.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+color = Color( 1, 1, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Emission Shape", "Spread", "Trail" ]
 
 [node name="banlon_time_management" type="Node2D" index="0"]
 
@@ -821,66 +861,7 @@ group = null
 text = "No"
 underline = 2
 
-[node name="customer_display" type="Node2D" parent="." index="15"]
-
-position = Vector2( -6.91701, 3.06403 )
-scale = Vector2( 1.05251, 1.05499 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="customer" type="Timer" parent="customer_display" index="0"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
-
-[node name="pop_timer" type="Timer" parent="customer_display" index="1"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = true
-autostart = false
-
-[node name="customer_pic" type="Sprite" parent="customer_display" index="2"]
-
-position = Vector2( 27.6143, 23.8742 )
-scale = Vector2( 0.0172057, 0.0222086 )
-texture = ExtResource( 11 )
-
-[node name="moneybag" type="Sprite" parent="customer_display" index="3"]
-
-visible = false
-position = Vector2( 28.8934, 20.3003 )
-scale = Vector2( 0.0229, 0.0328711 )
-texture = ExtResource( 12 )
-
-[node name="explosion" type="Particles2D" parent="customer_display" index="4"]
-
-visible = false
-position = Vector2( 28.9001, 20.3583 )
-scale = Vector2( 0.110664, 0.16403 )
-emitting = true
-amount = 8
-lifetime = 1.0
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
-draw_order = 0
-process_material = null
-texture = null
-normal_map = null
-h_frames = 1
-v_frames = 1
-
-[node name="tutorial" type="Node2D" parent="." index="16"]
+[node name="tutorial" type="Node2D" parent="." index="15"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -895,7 +876,7 @@ __meta__ = {
 
 position = Vector2( 14.9847, -12.0707 )
 scale = Vector2( 0.0374524, 0.0683183 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite2" index="0"]
 
@@ -931,7 +912,7 @@ override_selected_font_color = false
 
 position = Vector2( 27.9451, 19.6766 )
 scale = Vector2( 0.0374524, 0.0683183 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 flip_v = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite7" index="0"]
@@ -969,7 +950,7 @@ override_selected_font_color = false
 position = Vector2( -25.5206, 27.1101 )
 rotation = 4.71239
 scale = Vector2( 0.0603765, 0.042666 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite5" index="0"]
@@ -1009,7 +990,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( 18.9313, -28.7223 )
 rotation = 1.5708
 scale = Vector2( 0.0915925, 0.0764046 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial/Sprite6" index="0"]
@@ -1050,7 +1031,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -6.5127, -28.7954 )
 rotation = 1.5708
 scale = Vector2( 0.0745852, 0.0449206 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2" type="RichTextLabel" parent="tutorial/Sprite4" index="0"]
@@ -1089,7 +1070,7 @@ override_selected_font_color = false
 position = Vector2( -27.9307, 0.402593 )
 rotation = 4.71239
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 flip_v = true
 _sections_unfolded = [ "Transform" ]
 
@@ -1130,7 +1111,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( 20.2612, 27.8981 )
 rotation = 4.71239
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 flip_v = true
 _sections_unfolded = [ "Transform" ]
 
@@ -1171,7 +1152,7 @@ _sections_unfolded = [ "Rect" ]
 position = Vector2( -17.9545, 0.275135 )
 rotation = 4.71239
 scale = Vector2( 0.0636586, 0.028042 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite11" index="0"]
@@ -1210,7 +1191,7 @@ _sections_unfolded = [ "Rect" ]
 
 position = Vector2( -22.9346, 3.75539 )
 scale = Vector2( 0.0504109, 0.0422474 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite12" index="0"]
 
@@ -1246,7 +1227,7 @@ override_selected_font_color = false
 
 position = Vector2( -23.0849, -6.00206 )
 scale = Vector2( 0.0504109, 0.0422474 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 flip_v = true
 
 [node name="RichTextLabel 2 2" type="RichTextLabel" parent="tutorial/Sprite13" index="0"]
@@ -1395,7 +1376,7 @@ texture = ExtResource( 7 )
 
 position = Vector2( -23.0185, -1.03046 )
 scale = Vector2( 0.0168183, 0.0253723 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="tutorial_button" type="LinkButton" parent="tutorial" index="16"]
 
@@ -1423,7 +1404,7 @@ group = null
 text = "OK"
 underline = 2
 
-[node name="in" type="Node2D" parent="." index="17"]
+[node name="in" type="Node2D" parent="." index="16"]
 
 pause_mode = 2
 visible = false
@@ -1468,15 +1449,15 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="Path2D" type="Path2D" parent="." index="18"]
+[node name="Path2D" type="Path2D" parent="." index="17"]
 
 position = Vector2( 1.21115, -9.08323 )
 scale = Vector2( 1.02006, 1.53591 )
-curve = SubResource( 7 )
+curve = SubResource( 8 )
 
 [node name="road_one" type="PathFollow2D" parent="Path2D" index="0" groups=[
-"car",
 "road_one",
+"car",
 ]]
 
 position = Vector2( 81.0353, 14.6924 )
@@ -1489,7 +1470,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script = ExtResource( 15 )
+script = ExtResource( 13 )
 car_speed = 0.0025
 car_loc = 0.007
 
@@ -1509,7 +1490,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1541,7 +1522,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1573,7 +1554,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1589,11 +1570,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Path2D2" type="Path2D" parent="." index="19"]
+[node name="Path2D2" type="Path2D" parent="." index="18"]
 
 position = Vector2( 1.231, -24.6034 )
 scale = Vector2( 1.02006, 1.53591 )
-curve = SubResource( 7 )
+curve = SubResource( 8 )
 
 [node name="road_two" type="PathFollow2D" parent="Path2D2" index="0" groups=[
 "road_two",
@@ -1610,7 +1591,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script = ExtResource( 17 )
+script = ExtResource( 15 )
 car_speed = 0.001
 car_loc = 0
 
@@ -1630,7 +1611,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1662,7 +1643,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1694,7 +1675,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1710,11 +1691,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Path2D3" type="Path2D" parent="." index="20"]
+[node name="Path2D3" type="Path2D" parent="." index="19"]
 
 position = Vector2( 1.21115, -40.1236 )
 scale = Vector2( 1.02006, 1.53591 )
-curve = SubResource( 7 )
+curve = SubResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1734,7 +1715,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
-script = ExtResource( 18 )
+script = ExtResource( 16 )
 car_speed = 0.003
 car_loc = 0.004
 
@@ -1754,7 +1735,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1786,7 +1767,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1818,7 +1799,7 @@ bounce = 0.0
 position = Vector2( 5.43277, 0.349518 )
 rotation = 1.5708
 scale = Vector2( 0.480199, 0.591279 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1833,6 +1814,63 @@ polygon = PoolVector2Array( 41.9629, 0.130035, -28.8994, 37.3039, -29.4399, 23.4
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="customer_display" type="Node2D" parent="." index="20"]
+
+position = Vector2( -5.84561, 3.66859 )
+
+[node name="customer" type="Timer" parent="customer_display" index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="pop_timer" type="Timer" parent="customer_display" index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="customer_pic" type="Sprite" parent="customer_display" index="2"]
+
+position = Vector2( 27.6143, 23.8742 )
+scale = Vector2( 0.0172057, 0.0222086 )
+texture = ExtResource( 17 )
+
+[node name="moneybag" type="Sprite" parent="customer_display" index="3"]
+
+visible = false
+position = Vector2( 28.8934, 20.3003 )
+scale = Vector2( 0.0229, 0.0328711 )
+texture = ExtResource( 18 )
+
+[node name="explosion" type="Particles2D" parent="customer_display" index="4"]
+
+visible = false
+position = Vector2( 27.6349, 20.5615 )
+rotation = 3.14159
+scale = Vector2( 0.110664, 0.16403 )
+emitting = true
+amount = 12
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 1.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 9 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Textures", "Time", "Transform", "Visibility", "Z Index" ]
 
 [connection signal="timeout" from="note_timer" to="." method="_on_note_timer_timeout"]
 
@@ -1856,12 +1894,12 @@ __meta__ = {
 
 [connection signal="button_down" from="are_you_sure_2/no_main" to="." method="_on_no_main_button_down"]
 
-[connection signal="timeout" from="customer_display/customer" to="." method="_on_customer_timeout"]
-
-[connection signal="timeout" from="customer_display/pop_timer" to="." method="_on_pop_timer_timeout"]
-
 [connection signal="button_down" from="tutorial/tutorial_button" to="." method="_on_tutorial_button_button_down"]
 
 [connection signal="timeout" from="in/count_timer" to="." method="_on_count_timer_timeout"]
+
+[connection signal="timeout" from="customer_display/customer" to="." method="_on_customer_timeout"]
+
+[connection signal="timeout" from="customer_display/pop_timer" to="." method="_on_pop_timer_timeout"]
 
 

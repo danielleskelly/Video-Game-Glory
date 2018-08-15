@@ -142,7 +142,7 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
 
-[node name="player_selection" type="Node2D"]
+[node name="player_selection" type="Node2D" index="0"]
 
 pause_mode = 2
 position = Vector2( 514.234, 304.858 )
