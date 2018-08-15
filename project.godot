@@ -10,10 +10,12 @@ config_version=3
 
 [application]
 
+config/name="Video Game Glory!"
 run/main_scene="res://bad_monkeys.tscn"
-icon="res://icon.png"
+config/icon="res://icon.png"
 name="VGG"
-main_scene="res://player_selection.tscn"
+main_scene="res://bad_monkeys.tscn"
+icon="res://icon.png"
 
 [autoload]
 

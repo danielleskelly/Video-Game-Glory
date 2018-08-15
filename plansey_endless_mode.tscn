@@ -73,7 +73,7 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
 
-[node name="time_management" type="Node2D"]
+[node name="time_management" type="Node2D" index="0"]
 
 position = Vector2( 513.144, 309.168 )
 scale = Vector2( 16.0526, 9.62054 )
@@ -1846,7 +1846,7 @@ underline = 2
 [node name="keep_moving" type="Timer" parent="." index="43"]
 
 process_mode = 1
-wait_time = 10.0
+wait_time = 20.0
 one_shot = false
 autostart = true
 

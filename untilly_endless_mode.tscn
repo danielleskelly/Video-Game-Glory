@@ -74,7 +74,7 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 6 )
 
-[node name="endless_mode" type="Node2D" index="0"]
+[node name="endless_mode" type="Node2D"]
 
 position = Vector2( 0, 3.68451 )
 script = ExtResource( 1 )

@@ -20,10 +20,13 @@ func _process(delta):
 		get_node("rewards/unseen_badge/unseen_number").clear()
 		get_node("rewards/unseen_badge/unseen_number").add_text(str(rewards_globals.unseen))
 	endless_button = get_node("endless_mode")
-	if global.endless_unlocked == str(true):
+	if str(global.endless_unlocked) == str(true):
 		endless_button.show()
-	elif global.endless_unlocked == str(false) or file.file_exists("user://savegame.save") == false:
+		$load_file/load_button.show()
+	elif str(global.endless_unlocked) == str(false) or file.file_exists("user://savegame.save") == false:
 		endless_button.hide()
+		$load_file.hide()
+		
 
 func find_file():
 	file = File.new()
@@ -86,15 +89,11 @@ func load_game():
 	get_tree().change_scene("res://strategy.tscn")
 
 func _on_new_button_button_up():
-	var file = File.new()
-	file.open("user://savegame.save", file.READ)
-	if file.file_exists("user://savegame.save") == true:
-		get_tree().set_pause(true)
-		get_node("new_game_overwrite").show()
-		file.close()
-	else:
-		file.close()
-		get_tree().change_scene("res://story_piece_one.tscn")
+	global.daily_reset()
+	global.level_reset()
+	global.game_reset()
+	rewards_globals.rewards_reset()
+	get_tree().change_scene("res://story_piece_one.tscn")
 
 func _on_quit_button_button_down():
 	get_node("quit_game_popup").show()

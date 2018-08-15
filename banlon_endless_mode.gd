@@ -28,6 +28,7 @@ var cars
 var stopwatch = 0
 
 func _ready():
+	perks.success = 0
 	get_tree().set_pause(true)
 	countin()
 	current_pos = "a"
@@ -85,6 +86,7 @@ func _physics_process(delta):
 		frog_pos += direction * 250 * delta
 		get_node("frog").set_global_position(frog_pos)
 	if (Input.is_action_pressed("move_up")) and (get_node("jump_timer").get_time_left() == 0):
+		get_node("keep_moving").start()
 		if (current_pos == "a"):
 			current_pos = "b"
 		elif (current_pos == "b"):
@@ -97,6 +99,7 @@ func _physics_process(delta):
 			get_node("note_timer").start()
 		get_node("jump_timer").start()
 	if (Input.is_action_pressed("move_down")) and (get_node("jump_timer").get_time_left() == 0):
+		get_node("keep_moving").start()
 		if (current_pos == "e"):
 			current_pos = "d"
 		elif (current_pos == "d"):
@@ -111,7 +114,6 @@ func _physics_process(delta):
 func _on_note_timer_timeout():
 	get_node("notification").hide()
 	perks.success = perks.success + 10
-	get_node("keep_moving").start()
 	reset_frog()
 	
 func reset_frog():
@@ -150,11 +152,12 @@ func _on_return_to_village_button_down():
 
 
 func _on_yes_village_button_down():
-	perks.success = 0
 	get_tree().set_pause(false)
 	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
 	if int(stopwatch) > int(rewards_globals.three_min_jad):
 		rewards_globals.three_min_jad = stopwatch
+	global.save_game()
+	perks.success = 0
 	get_tree().change_scene("res://endless_mode.tscn")
 	
 
@@ -180,11 +183,12 @@ func _on_count_timer_timeout():
 
 
 func _on_game_over_button_button_down():
-	perks.success = 0
 	get_tree().set_pause(false)
 	rewards_globals.million_total_minigame_points = perks.success + int(rewards_globals.million_total_minigame_points)
 	if int(stopwatch) > int(rewards_globals.three_min_jad):
 		rewards_globals.three_min_jad = stopwatch
+	global.save_game()
+	perks.success = 0
 	get_tree().change_scene("res://endless_mode.tscn")
 
 

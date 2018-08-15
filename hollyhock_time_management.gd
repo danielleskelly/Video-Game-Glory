@@ -66,7 +66,7 @@ func _physics_process(delta):
 					get_node("customer/collision_timer").start()
 		if collision_info.collider.get_parent().get_parent().get_name() == "concessions":
 			collision_info.collider.get_parent().set_global_position(Vector2(rand_range(0,size.size.x),rand_range(0,size.size.y)))
-			perks.success += 1
+			perks.success += 2
 
 func _process(delta):
 	size = get_viewport_rect()

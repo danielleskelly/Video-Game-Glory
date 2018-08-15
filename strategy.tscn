@@ -269,7 +269,7 @@ length = 44.0
 loop = false
 step = 0.1
 
-[node name="strategy" type="Node2D"]
+[node name="strategy" type="Node2D" index="0"]
 
 position = Vector2( 510.353, 299.978 )
 scale = Vector2( 16.0667, 9.42247 )
@@ -686,7 +686,6 @@ override_selected_font_color = false
 
 [node name="finances" type="Sprite" parent="." index="4"]
 
-editor/display_folded = true
 position = Vector2( -19.03, -4.72456 )
 scale = Vector2( 0.0300344, 0.0512969 )
 texture = ExtResource( 4 )
@@ -1882,7 +1881,6 @@ texture_normal = ExtResource( 17 )
 
 [node name="ads" type="Node2D" parent="." index="13"]
 
-editor/display_folded = true
 visible = false
 position = Vector2( -19.0126, 18.9639 )
 scale = Vector2( 0.0300344, 0.0118823 )
@@ -2405,7 +2403,7 @@ position = Vector2( -1.31922, -0.346069 )
 
 [node name="background" type="Sprite" parent="fiyork_complete" index="0"]
 
-position = Vector2( 1.79382, 1.20379 )
+position = Vector2( 1.71028, -4.06681 )
 scale = Vector2( 0.0744699, 0.0980871 )
 texture = ExtResource( 19 )
 
@@ -2417,7 +2415,7 @@ texture = ExtResource( 19 )
 
 [node name="background1" type="Sprite" parent="fiyork_complete" index="2"]
 
-position = Vector2( 10.1349, 11.3466 )
+position = Vector2( 12.787, 7.17133 )
 scale = Vector2( 0.0285789, 0.0487312 )
 texture = ExtResource( 18 )
 
@@ -2428,9 +2426,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -12.0
-margin_top = -8.0
+margin_top = -13.0
 margin_right = 524.0
-margin_bottom = 362.0
+margin_bottom = 357.0
 rect_scale = Vector2( 0.05, 0.075 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -2451,9 +2449,6 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="warning1" type="RichTextLabel" parent="fiyork_complete" index="4"]
 
@@ -2488,8 +2483,8 @@ override_selected_font_color = false
 
 [node name="background4" type="Sprite" parent="fiyork_complete" index="5"]
 
-position = Vector2( -13.5013, -15.719 )
-scale = Vector2( 0.0209402, 0.0466523 )
+position = Vector2( -13.5419, -15.719 )
+scale = Vector2( 0.0245883, 0.0466523 )
 texture = ExtResource( 19 )
 offset = Vector2( -188.862, 54.9548 )
 
@@ -2530,10 +2525,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 8.0
-margin_top = 10.0
-margin_right = 60.0
-margin_bottom = 57.0
+margin_left = 11.0
+margin_top = 6.0
+margin_right = 63.0
+margin_bottom = 53.0
 rect_scale = Vector2( 0.075, 0.075 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2767,9 +2762,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 3.0
-margin_top = -22.0
+margin_top = -23.0
 margin_right = 205.0
-margin_bottom = 247.0
+margin_bottom = 246.0
 rect_scale = Vector2( 0.06, 0.08 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -2804,10 +2799,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -36.4558
-margin_top = -20.7377
-margin_right = 138.544
-margin_bottom = 145.262
+margin_left = -36.0
+margin_top = -21.0
+margin_right = 114.0
+margin_bottom = 144.0
 rect_scale = Vector2( 0.05, 0.075 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true

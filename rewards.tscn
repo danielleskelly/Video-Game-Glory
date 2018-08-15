@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://rewards.gd" type="Script" id=1]
 [ext_resource path="res://collander_64.png" type="Texture" id=2]
@@ -7,31 +7,29 @@
 [ext_resource path="res://storyline_two.ogg" type="AudioStream" id=5]
 [ext_resource path="res://sam_front.png" type="Texture" id=6]
 [ext_resource path="res://ceo.png" type="Texture" id=7]
-[ext_resource path="res://moneybag.png" type="Texture" id=8]
-[ext_resource path="res://hollyhock.png" type="Texture" id=9]
-[ext_resource path="res://fiyork.png" type="Texture" id=10]
-[ext_resource path="res://untilly.png" type="Texture" id=11]
-[ext_resource path="res://plansey.png" type="Texture" id=12]
-[ext_resource path="res://windrow.png" type="Texture" id=13]
-[ext_resource path="res://banlon.png" type="Texture" id=14]
-[ext_resource path="res://slatten.png" type="Texture" id=15]
-[ext_resource path="res://classic.png" type="Texture" id=16]
-[ext_resource path="res://popcorn.png" type="Texture" id=17]
-[ext_resource path="res://soda.png" type="Texture" id=18]
-[ext_resource path="res://file_icon.png" type="Texture" id=19]
-[ext_resource path="res://customer_four.png" type="Texture" id=20]
-[ext_resource path="res://greenie_ghostie.png" type="Texture" id=21]
-[ext_resource path="res://pizza.png" type="Texture" id=22]
-[ext_resource path="res://tetris_bar.png" type="Texture" id=23]
-[ext_resource path="res://pixel_front.png" type="Texture" id=24]
-[ext_resource path="res://bullet.png" type="Texture" id=25]
-[ext_resource path="res://paddle.png" type="Texture" id=26]
-[ext_resource path="res://road.png" type="Texture" id=27]
-[ext_resource path="res://ship.png" type="Texture" id=28]
-[ext_resource path="res://pixel.png" type="Texture" id=29]
-[ext_resource path="res://sam_head.png" type="Texture" id=30]
+[ext_resource path="res://hollyhock.png" type="Texture" id=8]
+[ext_resource path="res://fiyork.png" type="Texture" id=9]
+[ext_resource path="res://untilly.png" type="Texture" id=10]
+[ext_resource path="res://plansey.png" type="Texture" id=11]
+[ext_resource path="res://windrow.png" type="Texture" id=12]
+[ext_resource path="res://banlon.png" type="Texture" id=13]
+[ext_resource path="res://slatten.png" type="Texture" id=14]
+[ext_resource path="res://classic.png" type="Texture" id=15]
+[ext_resource path="res://popcorn.png" type="Texture" id=16]
+[ext_resource path="res://soda.png" type="Texture" id=17]
+[ext_resource path="res://file_icon.png" type="Texture" id=18]
+[ext_resource path="res://greenie_ghostie.png" type="Texture" id=19]
+[ext_resource path="res://pizza.png" type="Texture" id=20]
+[ext_resource path="res://tetris_bar.png" type="Texture" id=21]
+[ext_resource path="res://pixel_front.png" type="Texture" id=22]
+[ext_resource path="res://bullet.png" type="Texture" id=23]
+[ext_resource path="res://paddle.png" type="Texture" id=24]
+[ext_resource path="res://road.png" type="Texture" id=25]
+[ext_resource path="res://ship.png" type="Texture" id=26]
+[ext_resource path="res://pixel.png" type="Texture" id=27]
+[ext_resource path="res://sam_head.png" type="Texture" id=28]
 
-[node name="rewards" type="Node2D"]
+[node name="rewards" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -140,37 +138,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="earn_thousand" type="Sprite" parent="." index="6"]
-
-position = Vector2( 262.091, 423.703 )
-scale = Vector2( 0.812651, 0.703212 )
-texture = ExtResource( 8 )
-
-[node name="tooltip" type="Control" parent="earn_thousand" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -143.0
-margin_top = -152.0
-margin_right = 133.0
-margin_bottom = 153.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="complete_hollyhock" type="Sprite" parent="." index="7"]
+[node name="complete_hollyhock" type="Sprite" parent="." index="6"]
 
 position = Vector2( 682.546, 442.227 )
 scale = Vector2( 0.226404, 0.21236 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -195,11 +167,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="complete_fiyork" type="Sprite" parent="." index="8"]
+[node name="complete_fiyork" type="Sprite" parent="." index="7"]
 
 position = Vector2( 722.114, 445.007 )
 scale = Vector2( 0.226404, 0.21236 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="tooltip" type="Control" parent="complete_fiyork" index="0"]
 
@@ -221,11 +193,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="complete_untilly" type="Sprite" parent="." index="9"]
+[node name="complete_untilly" type="Sprite" parent="." index="8"]
 
 position = Vector2( 665.5, 419.531 )
 scale = Vector2( 0.226404, 0.21236 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="tooltip" type="Control" parent="complete_untilly" index="0"]
 
@@ -244,11 +216,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 
-[node name="complete_plansey" type="Sprite" parent="." index="10"]
+[node name="complete_plansey" type="Sprite" parent="." index="9"]
 
 position = Vector2( 706.392, 400.222 )
 scale = Vector2( 0.225526, 0.21371 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="tooltip" type="Control" parent="complete_plansey" index="0"]
 
@@ -267,11 +239,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 
-[node name="complete_windrow" type="Sprite" parent="." index="11"]
+[node name="complete_windrow" type="Sprite" parent="." index="10"]
 
 position = Vector2( 755.96, 454.207 )
 scale = Vector2( 0.175703, 0.21236 )
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 
 [node name="tooltip" type="Control" parent="complete_windrow" index="0"]
 
@@ -290,11 +262,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 
-[node name="complete_banlon" type="Sprite" parent="." index="12"]
+[node name="complete_banlon" type="Sprite" parent="." index="11"]
 
 position = Vector2( 735.899, 379.797 )
 scale = Vector2( 0.246936, 0.221773 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="tooltip" type="Control" parent="complete_banlon" index="0"]
 
@@ -316,11 +288,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="complete_slatten" type="Sprite" parent="." index="13"]
+[node name="complete_slatten" type="Sprite" parent="." index="12"]
 
 position = Vector2( 751.182, 419.627 )
 scale = Vector2( 0.181925, 0.222279 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 
 [node name="tooltip" type="Control" parent="complete_slatten" index="0"]
 
@@ -342,11 +314,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="minigames_played" type="Sprite" parent="." index="14"]
+[node name="minigames_played" type="Sprite" parent="." index="13"]
 
 position = Vector2( 204.456, 237.073 )
 scale = Vector2( 0.893117, 0.861991 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="tooltip" type="Control" parent="minigames_played" index="0"]
 
@@ -368,11 +340,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="points_in_one_minigame" type="Sprite" parent="." index="15"]
+[node name="points_in_one_minigame" type="Sprite" parent="." index="14"]
 
 position = Vector2( 854.778, 168.036 )
 scale = Vector2( 0.893117, 0.861991 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="tooltip" type="Control" parent="points_in_one_minigame" index="0"]
 
@@ -391,11 +363,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 
-[node name="million_total_points" type="Sprite" parent="." index="16"]
+[node name="million_total_points" type="Sprite" parent="." index="15"]
 
 position = Vector2( 267.69, 326.593 )
 scale = Vector2( 1.09976, 1.07237 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
 [node name="tooltip" type="Control" parent="million_total_points" index="0"]
 
@@ -417,11 +389,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="fifty_business_days" type="Sprite" parent="." index="17"]
+[node name="fifty_business_days" type="Sprite" parent="." index="16"]
 
 position = Vector2( 521.668, 171.869 )
 scale = Vector2( 0.659845, 0.624997 )
-texture = ExtResource( 19 )
+texture = ExtResource( 18 )
 
 [node name="tooltip" type="Control" parent="fifty_business_days" index="0"]
 
@@ -443,37 +415,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="total_player_satisfaction" type="Sprite" parent="." index="18"]
+[node name="three_min_yed" type="Sprite" parent="." index="17"]
 
-position = Vector2( 753.946, 155.025 )
-scale = Vector2( 0.320995, 0.292073 )
-texture = ExtResource( 20 )
-
-[node name="tooltip" type="Control" parent="total_player_satisfaction" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -75.0
-margin_top = -110.0
-margin_right = 91.0
-margin_bottom = 102.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="three_min_yed" type="Sprite" parent="." index="19"]
-
-position = Vector2( 867.829, 406.888 )
-scale = Vector2( 3.62853, 2.99222 )
-texture = ExtResource( 21 )
+position = Vector2( 838.167, 423.916 )
+scale = Vector2( 2.44205, 2.31111 )
+texture = ExtResource( 19 )
 
 [node name="tooltip" type="Control" parent="three_min_yed" index="0"]
 
@@ -492,11 +438,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 
-[node name="three_min_str" type="Sprite" parent="." index="20"]
+[node name="three_min_str" type="Sprite" parent="." index="18"]
 
 position = Vector2( 396.651, 430.566 )
 scale = Vector2( 1.27507, 1.27081 )
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 
 [node name="tooltip" type="Control" parent="three_min_str" index="0"]
 
@@ -518,12 +464,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="three_min_fso" type="Sprite" parent="." index="21"]
+[node name="three_min_fso" type="Sprite" parent="." index="19"]
 
 editor/display_folded = true
 position = Vector2( 143.633, 357.703 )
 scale = Vector2( 0.223362, 0.281117 )
-texture = ExtResource( 23 )
+texture = ExtResource( 21 )
 
 [node name="tooltip" type="Control" parent="three_min_fso" index="0"]
 
@@ -548,7 +494,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="three_min_fso" index="1"]
 
 position = Vector2( 0, 151.891 )
-texture = ExtResource( 23 )
+texture = ExtResource( 21 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -556,7 +502,7 @@ __meta__ = {
 [node name="Sprite1" type="Sprite" parent="three_min_fso" index="2"]
 
 position = Vector2( 0, 303.782 )
-texture = ExtResource( 23 )
+texture = ExtResource( 21 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -564,16 +510,16 @@ __meta__ = {
 [node name="Sprite2" type="Sprite" parent="three_min_fso" index="3"]
 
 position = Vector2( 0, 451.61 )
-texture = ExtResource( 23 )
+texture = ExtResource( 21 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="three_min_math_mast" type="Sprite" parent="." index="22"]
+[node name="three_min_math_mast" type="Sprite" parent="." index="20"]
 
 position = Vector2( 353.701, 273.515 )
 scale = Vector2( 0.0444976, 0.0368155 )
-texture = ExtResource( 24 )
+texture = ExtResource( 22 )
 
 [node name="tooltip" type="Control" parent="three_min_math_mast" index="0"]
 
@@ -595,11 +541,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="three_min_twfb" type="Sprite" parent="." index="23"]
+[node name="three_min_twfb" type="Sprite" parent="." index="21"]
 
 position = Vector2( 777.408, 257.742 )
 scale = Vector2( 1.59315, 1.5061 )
-texture = ExtResource( 25 )
+texture = ExtResource( 23 )
 
 [node name="tooltip" type="Control" parent="three_min_twfb" index="0"]
 
@@ -622,13 +568,13 @@ size_flags_vertical = 2
 
 position = Vector2( 17.9565, 26.8703 )
 scale = Vector2( 0.668189, 0.205372 )
-texture = ExtResource( 26 )
+texture = ExtResource( 24 )
 
-[node name="three_min_jad" type="Sprite" parent="." index="24"]
+[node name="three_min_jad" type="Sprite" parent="." index="22"]
 
 position = Vector2( 326.322, 140.209 )
 scale = Vector2( 0.305889, 0.339169 )
-texture = ExtResource( 27 )
+texture = ExtResource( 25 )
 
 [node name="tooltip" type="Control" parent="three_min_jad" index="0"]
 
@@ -656,14 +602,14 @@ __meta__ = {
 position = Vector2( -2.22559, 0.917023 )
 rotation = 1.5708
 scale = Vector2( 1.83387, 2.2361 )
-texture = ExtResource( 28 )
+texture = ExtResource( 26 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="three_min_lo" type="Sprite" parent="." index="25"]
+[node name="three_min_lo" type="Sprite" parent="." index="23"]
 
 position = Vector2( 507.95, 472.071 )
 scale = Vector2( 0.791684, 0.669259 )
-texture = ExtResource( 29 )
+texture = ExtResource( 27 )
 
 [node name="tooltip" type="Control" parent="three_min_lo" index="0"]
 
@@ -686,7 +632,7 @@ size_flags_vertical = 2
 
 position = Vector2( 70.5542, -0.325928 )
 scale = Vector2( 0.597072, 0.631434 )
-texture = ExtResource( 30 )
+texture = ExtResource( 28 )
 
 [connection signal="button_down" from="back_arrow/back_button" to="." method="_on_back_button_button_down"]
 

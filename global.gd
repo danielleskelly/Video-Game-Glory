@@ -111,6 +111,8 @@ func _ready():
 		arcade_sabotage_key = true
 		entertainment_sabotage_key = true
 		storefront_sabotage_key = true
+		set_process(true)
+
 
 func game_over_check():
 	game_over = false
@@ -121,6 +123,49 @@ func game_over_check():
 		elif current_loan < 1000:
 			pre_game_over = true
 
+
+func save_game():
+	var savegame = File.new()
+	savegame.open(str("user://savegame.save"), File.WRITE)
+	savegame.store_line(str(global.town_select))
+	savegame.store_line(str(global.endless_unlocked))
+	savegame.store_line(str(rewards_globals.complete_hollyhock))
+	savegame.store_line(str(rewards_globals.complete_fiyork))
+	savegame.store_line(str(rewards_globals.complete_untilly))
+	savegame.store_line(str(rewards_globals.complete_plansey))
+	savegame.store_line(str(rewards_globals.complete_windrow))
+	savegame.store_line(str(rewards_globals.complete_banlon))
+	savegame.store_line(str(rewards_globals.complete_slatten))
+	savegame.store_line(str(rewards_globals.minigames_played))
+	savegame.store_line(str(rewards_globals.points_in_one_minigame))
+	savegame.store_line(str(rewards_globals.million_total_minigame_points))
+	savegame.store_line(str(rewards_globals.fifty_business_days))
+	savegame.store_line(str(rewards_globals.hundred_per_hollyhock))
+	savegame.store_line(str(rewards_globals.hundred_per_fiyork))
+	savegame.store_line(str(rewards_globals.hundred_per_untilly))
+	savegame.store_line(str(rewards_globals.hundred_per_plansey))
+	savegame.store_line(str(rewards_globals.hundred_per_windrow))
+	savegame.store_line(str(rewards_globals.hundred_per_banlon))
+	savegame.store_line(str(rewards_globals.hundred_per_slatten))
+	savegame.store_line(str(rewards_globals.find_saboteur))
+	savegame.store_line(str(rewards_globals.complete_all_levels))
+	savegame.store_line(str(rewards_globals.earn_thousand))
+	savegame.store_line(str(rewards_globals.earn_thousand_unlocked))
+	savegame.store_line(str(rewards_globals.three_min_yed))
+	savegame.store_line(str(rewards_globals.three_min_str))
+	savegame.store_line(str(rewards_globals.three_min_fso))
+	savegame.store_line(str(rewards_globals.three_min_math_mast))
+	savegame.store_line(str(rewards_globals.three_min_twfb))
+	savegame.store_line(str(rewards_globals.three_min_jad))
+	savegame.store_line(str(rewards_globals.three_min_lo))
+	savegame.store_line(str(global.yellow_eating_dot))
+	savegame.store_line(str(global.shoot_that_rock))
+	savegame.store_line(str(global.falling_shapes_organization))
+	savegame.store_line(str(global.mathmatic_mastication))
+	savegame.store_line(str(global.tall_wall_fall_ball))
+	savegame.store_line(str(global.jump_and_dodge))
+	savegame.store_line(str(global.lights_off))
+	savegame.close()
 
 func daily_reset():
 	sales_made = 0
@@ -195,6 +240,17 @@ func cash_update():
 	
 	
 func game_reset():
+	arcade_sabotage_key = true
+	entertainment_sabotage_key = true
+	storefront_sabotage_key = true
+	hollyhock_cash = 400
+	fiyork_cash = 400
+	plansey_cash = 400
+	untilly_cash = 200
+	windrow_cash = 800
+	banlon_cash = 200
+	slatten_cash = 500
+	town_select = "hollyhock"
 	endless_unlocked = false
 	yellow_eating_dot = false
 	shoot_that_rock = false
@@ -203,10 +259,3 @@ func game_reset():
 	tall_wall_fall_ball = false
 	jump_and_dodge = false
 	lights_off = false
-	hollyhock_tutorial = false
-	fiyork_tutorial = false
-	untilly_tutorial = false
-	plansey_tutorial = false
-	windrow_tutorial = false
-	banlon_tutorial = false
-	slatten_tutorial = false

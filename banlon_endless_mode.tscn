@@ -97,7 +97,7 @@ use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
 
-[node name="banlon_time_management" type="Node2D" index="0"]
+[node name="banlon_time_management" type="Node2D"]
 
 position = Vector2( 512.427, 305.957 )
 scale = Vector2( 16.0521, 9.53588 )
@@ -546,8 +546,8 @@ scale = Vector2( 1.02006, 1.53591 )
 curve = SubResource( 6 )
 
 [node name="road_one" type="PathFollow2D" parent="Path2D" index="0" groups=[
-"car",
 "road_one",
+"car",
 ]]
 
 position = Vector2( 81.0353, 14.6924 )
@@ -668,8 +668,8 @@ scale = Vector2( 1.02006, 1.53591 )
 curve = SubResource( 6 )
 
 [node name="road_two" type="PathFollow2D" parent="Path2D2" index="0" groups=[
-"road_two",
 "car",
+"road_two",
 ]]
 
 position = Vector2( 81.0353, 14.6924 )
@@ -793,8 +793,8 @@ __meta__ = {
 }
 
 [node name="road_three" type="PathFollow2D" parent="Path2D3" index="0" groups=[
-"car",
 "road_three",
+"car",
 ]]
 
 position = Vector2( 81.0353, 14.6924 )
@@ -1243,7 +1243,7 @@ underline = 2
 [node name="keep_moving" type="Timer" parent="." index="20"]
 
 process_mode = 1
-wait_time = 20.0
+wait_time = 15.0
 one_shot = false
 autostart = true
 
